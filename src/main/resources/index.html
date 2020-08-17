@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Generated Documentation
+</title>
+<script type="text/javascript">
+    targetPage = "" + window.location.search;
+    if (targetPage != "" && targetPage != "undefined")
+        targetPage = targetPage.substring(1);
+    if (targetPage.indexOf(":") != -1)
+        targetPage = "undefined";
+    function loadFrames() {
+        if (targetPage != "" && targetPage != "undefined")
+             top.classFrame.location = top.targetPage;
+    }
+</script>
+</head>
+<frameset cols="20%,80%" title="" onLoad="top.loadFrames()">
+<frameset rows="30%,70%" title="" onLoad="top.loadFrames()">
+<frame src="projects-frame.html" name="projectListFrame" title="All repository projects">
+<frame src="elements-frame.html" name="elementListFrame" title="All repository elements">
+</frameset>
+<frame src="overview-summary.html" name="elementFrame" title="Ruleset, ruleflow and other repository element descriptions" scrolling="yes">
+</frameset>
+</html>
