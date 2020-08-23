@@ -83,10 +83,22 @@
 			</exclusions>
 		</dependency>
 		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+		<dependency>
+			<groupId>net.objecthunter</groupId>
+			<artifactId>exp4j</artifactId>
+			<version>0.4.8</version>
+		</dependency>
+		<!--
+		<dependency>
 			<groupId>no.nav.preg-layers.domain</groupId>
 			<artifactId>nav-domain-pensjon-regler-java</artifactId>
 			<version>10.9.1</version>
 		</dependency>
+		-->
 		<dependency>
 			<groupId>no.nav.satstabeller-layers.domain</groupId>
 			<artifactId>nav-domain-pensjon-regler-java</artifactId>
