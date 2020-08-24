@@ -10,7 +10,7 @@
 		<dependency>
 			<groupId>no.stelvio</groupId>
 			<artifactId>stelvio-common-java</artifactId>
-			<version>${stelvio.version}</version>
+			<version>6.0.1-f15c7e78acb9</version>
 			<exclusions>
 				<exclusion>
 					<groupId>aopalliance</groupId>
@@ -82,23 +82,21 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
 		<dependency>
-			<groupId>no.nav.preg-layers.domain</groupId>
-			<artifactId>nav-domain-pensjon-regler-java</artifactId>
-			<version>10.9.1</version>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
 		</dependency>
 		<dependency>
-			<groupId>no.nav.satstabeller-layers.domain</groupId>
-			<artifactId>nav-domain-pensjon-regler-java</artifactId>
-			<version>${satstabeller.version}</version>
+			<groupId>net.objecthunter</groupId>
+			<artifactId>exp4j</artifactId>
+			<version>0.4.8</version>
 		</dependency>
 	</dependencies>
 	<properties>
 		<java.jdk.version>1.8</java.jdk.version>
 		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
-
-		<stelvio.version>5.0.4</stelvio.version>
-		<satstabeller.version>7.0.102</satstabeller.version>
 	</properties>
 	<build>
 		<plugins>
@@ -113,6 +111,18 @@
 			</plugin>
 		</plugins>
 	</build>
+	<repositories>
+		<!-- Skal brukes hvis bygget kjøres fra en Github Action -->
+		<repository>
+			<id>github-package-registry</id>
+			<url>https://maven.pkg.github.com/navikt/maven-release</url>
+		</repository>
+		<!-- Skal brukes hvis bygget kjører utenfor NAV (f.eks. en ekstern maskin, eller Circle CI) -->
+		<repository>
+			<id>external-mirror-github-navikt</id>
+			<url>https://github-package-registry-mirror.gc.nav.no/cached/maven-release</url>
+		</repository>
+	</repositories>
 	<distributionManagement>
 		<repository>
 			<id>github</id>
