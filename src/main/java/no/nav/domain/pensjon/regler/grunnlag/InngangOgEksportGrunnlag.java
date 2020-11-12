@@ -1,11 +1,11 @@
 package no.nav.domain.pensjon.regler.grunnlag;
 
+import java.io.Serializable;
+
 import no.nav.domain.pensjon.regler.vedtak.FortsattMedlemskap;
 import no.nav.domain.pensjon.regler.vedtak.ForutgaendeMedlemskap;
 import no.nav.domain.pensjon.regler.vedtak.MedlemskapForUTEtterTrygdeavtaler;
 import no.nav.domain.pensjon.regler.vedtak.RettTilEksportEtterTrygdeavtaler;
-
-import java.io.Serializable;
 
 /**
  * @author Magnus Bakken (Accenture), PK-9695, PKPYTON-923
@@ -18,6 +18,10 @@ public class InngangOgEksportGrunnlag implements Serializable {
      * Minst tre års trygdetid i Norge
      */
     private Boolean treArTrygdetidNorge;
+    /**
+     * Minst fem års trygdetid i Norge
+     */
+    private Boolean femArTrygdetidNorge;
     /**
      * Unntak fra forutgående trygdetid
      */
@@ -68,6 +72,10 @@ public class InngangOgEksportGrunnlag implements Serializable {
      */
     private Boolean minstTreArsFMNorge;
     /**
+     * Minst fem års forutgående medlemskap i Norge med uføretidspunkt FOM 01.01.1994 og førsteKravFremsattdato FOM 01.01.2021
+     */
+    private Boolean minstFemArsFMNorge;
+    /**
      * Minst tre års forutgående medlemskap i Norge med uføretidspunkt før 01.01.1994 og virkningstidspunkt FOM 01.01.1990
      */
     private Boolean minstTreArsFMNorgeVirkdato;
@@ -80,9 +88,13 @@ public class InngangOgEksportGrunnlag implements Serializable {
      */
     private Boolean oppfyltEtterGamleRegler;
     /**
-     * Oppfylt ved sammenlegging
+     * Oppfylt ved sammenlegging tre år
      */
     private OppfyltVedSammenlegging oppfyltVedSammenlegging;
+    /**
+     * Oppfylt ved sammenlegging fem år
+     */
+    private OppfyltVedSammenlegging oppfyltVedSammenleggingFemAr;
     /**
      * Oppfylt ved gjenlevendes forutgående medlemskap
      */
@@ -112,9 +124,17 @@ public class InngangOgEksportGrunnlag implements Serializable {
      */
     private Boolean treArTrygdetidNorgeKap20;
     /**
+     * Minst fem års trygdetid i Norge
+     */
+    private Boolean femArTrygdetidNorgeKap20;
+    /**
      * Oppfylt ved sammenlegging
      */
     private OppfyltVedSammenlegging oppfyltVedSammenleggingKap20;
+    /**
+     * Oppfylt ved sammenlegging fem år
+     */
+    private OppfyltVedSammenlegging oppfyltVedSammenleggingFemArKap20;
     /**
      * PREG variabel for å vite om det finnes trygdeavtale når man er i BestemUngUførRS i Folketrygd flyter.
      * Trygdeavtale objetet nulles før kall til Folketrygd-flyter
@@ -123,12 +143,27 @@ public class InngangOgEksportGrunnlag implements Serializable {
 
     /**
      * Copy Constructor
-     * 
+     *
      * @param inngangOgEksportGrunnlag a <code>InngangOgEksportGrunnlag</code> object
      */
     public InngangOgEksportGrunnlag(InngangOgEksportGrunnlag inngangOgEksportGrunnlag) {
         if (inngangOgEksportGrunnlag.treArTrygdetidNorge != null) {
             treArTrygdetidNorge = new Boolean(inngangOgEksportGrunnlag.treArTrygdetidNorge);
+        }
+        if (inngangOgEksportGrunnlag.femArTrygdetidNorge != null) {
+            femArTrygdetidNorge = new Boolean(inngangOgEksportGrunnlag.femArTrygdetidNorge);
+        }
+        if (inngangOgEksportGrunnlag.femArTrygdetidNorgeKap20 != null) {
+            femArTrygdetidNorgeKap20 = new Boolean(inngangOgEksportGrunnlag.femArTrygdetidNorgeKap20);
+        }
+        if (inngangOgEksportGrunnlag.oppfyltVedSammenleggingFemAr != null) {
+            oppfyltVedSammenleggingFemAr = new OppfyltVedSammenlegging(inngangOgEksportGrunnlag.oppfyltVedSammenleggingFemAr);
+        }
+        if (inngangOgEksportGrunnlag.oppfyltVedSammenleggingFemArKap20 != null) {
+            oppfyltVedSammenleggingFemArKap20 = new OppfyltVedSammenlegging(inngangOgEksportGrunnlag.oppfyltVedSammenleggingFemArKap20);
+        }
+        if (inngangOgEksportGrunnlag.minstFemArsFMNorge != null) {
+            minstFemArsFMNorge = new Boolean(inngangOgEksportGrunnlag.minstFemArsFMNorge);
         }
         if (inngangOgEksportGrunnlag.unntakFraForutgaendeTT != null) {
             unntakFraForutgaendeTT = new Unntak(inngangOgEksportGrunnlag.unntakFraForutgaendeTT);
@@ -272,22 +307,26 @@ public class InngangOgEksportGrunnlag implements Serializable {
                 this.minstTreArsFMNorge = new Boolean(forutgaendeMedlemskap.getMinstTreArsFMNorge());
                 this.minstTreArsFMNorgeVirkdato = new Boolean(forutgaendeMedlemskap.getMinstTreArsFMNorge());
                 this.treArTrygdetidNorge = new Boolean(forutgaendeMedlemskap.getMinstTreArsFMNorge());
-            }
-            else{
+            } else {
                 this.minstTreArsFMNorge = false;
                 this.minstTreArsFMNorgeVirkdato = false;
                 this.treArTrygdetidNorge = false;
             }
+            if (forutgaendeMedlemskap.getMinstFemArsFMNorge() != null) {
+                this.minstFemArsFMNorge = new Boolean(forutgaendeMedlemskap.getMinstFemArsFMNorge());
+                this.femArTrygdetidNorge = new Boolean(forutgaendeMedlemskap.getMinstFemArsFMNorge());
+            } else {
+                this.minstFemArsFMNorge = false;
+                this.femArTrygdetidNorge = false;
+            }
             if (forutgaendeMedlemskap.getMinstEttArFMNorge() != null) {
                 this.minstEttArFMNorge = new Boolean(forutgaendeMedlemskap.getMinstEttArFMNorge());
-            }
-            else{
+            } else {
                 this.minstEttArFMNorge = false;
             }
             if (forutgaendeMedlemskap.getUnntakFraForutgaendeMedlemskap() != null) {
                 this.unntakFraForutgaendeMedlemskap = new Unntak(forutgaendeMedlemskap.getUnntakFraForutgaendeMedlemskap());
-            }
-            else{
+            } else {
                 this.unntakFraForutgaendeMedlemskap = new Unntak(false, null);
             }
             if (forutgaendeMedlemskap.getUnntakFraForutgaendeTT() != null) {
@@ -535,12 +574,52 @@ public class InngangOgEksportGrunnlag implements Serializable {
         PREG_trygdeavtale = preg_trygdeavtale;
     }
 
+    public Boolean getFemArTrygdetidNorge() {
+        return femArTrygdetidNorge;
+    }
+
+    public void setFemArTrygdetidNorge(Boolean femArTrygdetidNorge) {
+        this.femArTrygdetidNorge = femArTrygdetidNorge;
+    }
+
+    public Boolean getMinstFemArsFMNorge() {
+        return minstFemArsFMNorge;
+    }
+
+    public void setMinstFemArsFMNorge(Boolean minstFemArsFMNorge) {
+        this.minstFemArsFMNorge = minstFemArsFMNorge;
+    }
+
+    public OppfyltVedSammenlegging getOppfyltVedSammenleggingFemAr() {
+        return oppfyltVedSammenleggingFemAr;
+    }
+
+    public void setOppfyltVedSammenleggingFemAr(OppfyltVedSammenlegging oppfyltVedSammenleggingFemAr) {
+        this.oppfyltVedSammenleggingFemAr = oppfyltVedSammenleggingFemAr;
+    }
+
+    public Boolean getFemArTrygdetidNorgeKap20() {
+        return femArTrygdetidNorgeKap20;
+    }
+
+    public void setFemArTrygdetidNorgeKap20(Boolean femArTrygdetidNorgeKap20) {
+        this.femArTrygdetidNorgeKap20 = femArTrygdetidNorgeKap20;
+    }
+
+    public OppfyltVedSammenlegging getOppfyltVedSammenleggingFemArKap20() {
+        return oppfyltVedSammenleggingFemArKap20;
+    }
+
+    public void setOppfyltVedSammenleggingFemArKap20(OppfyltVedSammenlegging oppfyltVedSammenleggingFemArKap20) {
+        this.oppfyltVedSammenleggingFemArKap20 = oppfyltVedSammenleggingFemArKap20;
+    }
+
     /**
      * Constructs a <code>String</code> with all attributes
      * in name = value format.
-     * 
+     *
      * @return a <code>String</code> representation
-     *         of this object.
+     * of this object.
      */
     @Override
     public String toString() {

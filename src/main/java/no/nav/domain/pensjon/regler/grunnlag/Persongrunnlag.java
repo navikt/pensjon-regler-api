@@ -239,6 +239,11 @@ public class Persongrunnlag implements Serializable {
     private InngangOgEksportGrunnlag inngangOgEksportGrunnlag;
 
     /**
+     * Grunnlag påkrevd for å kunne behandle inngang og eksport av pensjonssaker mellom Norge og utland.
+     */
+    private List<ForsteVirkningsdatoGrunnlag> forsteVirkningsdatoGrunnlagListe;
+
+    /**
      * Årlig pensjonsgivende inntekt var minst 1G på dødstidspunktet.
      */
     private Boolean arligPGIMinst1G;
@@ -402,6 +407,7 @@ public class Persongrunnlag implements Serializable {
         arbeidsforholdsgrunnlagListe = new ArrayList<Arbeidsforholdsgrunnlag>();
         arbeidsforholdEtterUforgrunnlagListe = new ArrayList<ArbeidsforholdEtterUforgrunnlag>();
         utbetalingsgradUTListe = new ArrayList<UtbetalingsgradUT>();
+        forsteVirkningsdatoGrunnlagListe = new ArrayList<ForsteVirkningsdatoGrunnlag>();
         PREG_vilkarsvedtakEPSListe = new ArrayList<VilkarsVedtak>();
     }
 
@@ -593,6 +599,11 @@ public class Persongrunnlag implements Serializable {
         if (persongrunnlag.trygdetidAlternativ != null) {
             trygdetidAlternativ = new Trygdetid(persongrunnlag.trygdetidAlternativ);
         }
+        if (persongrunnlag.forsteVirkningsdatoGrunnlagListe != null) {
+            for (ForsteVirkningsdatoGrunnlag forsteVirkningsdatoGrunnlag : persongrunnlag.forsteVirkningsdatoGrunnlagListe) {
+                forsteVirkningsdatoGrunnlagListe.add(new ForsteVirkningsdatoGrunnlag(forsteVirkningsdatoGrunnlag));
+            }
+        }
         //PREG_
         if (persongrunnlag.PREG_vilkarsVedtak != null) {
             PREG_vilkarsVedtak = new VilkarsVedtak(persongrunnlag.PREG_vilkarsVedtak);
@@ -649,6 +660,18 @@ public class Persongrunnlag implements Serializable {
                     return ug;
                 }
             }
+        }
+        return null;
+    }
+
+    /**
+     * Returnerer førsteKravFremsattDato utledet fra forsteVirkningsdatoGrunnlagListe. Hvis listen har innhold er førsteKravFremsattDato den tidligste dato blant disse.
+     * @return Date
+     */
+    public Date finnForsteKravFremsattDato() {
+        if (forsteVirkningsdatoGrunnlagListe != null && forsteVirkningsdatoGrunnlagListe.size() >= 1) {
+            forsteVirkningsdatoGrunnlagListe.sort(ForsteVirkningsdatoGrunnlag::compareTo);
+            return forsteVirkningsdatoGrunnlagListe.get(0).getKravFremsattDato();
         }
         return null;
     }
@@ -1491,6 +1514,18 @@ public class Persongrunnlag implements Serializable {
 	
 		this.AfpTpoUpGrunnlag = AfpTpoUpGrunnlag;
 	}
+
+    public List<ForsteVirkningsdatoGrunnlag> getForsteVirkningsdatoGrunnlagListe() {
+        return forsteVirkningsdatoGrunnlagListe;
+    }
+
+    public ForsteVirkningsdatoGrunnlag[] getForsteVirkningsdatoGrunnlagListeAsArray() {
+        return forsteVirkningsdatoGrunnlagListe != null ? forsteVirkningsdatoGrunnlagListe.toArray(new ForsteVirkningsdatoGrunnlag[forsteVirkningsdatoGrunnlagListe.size()]) : new ForsteVirkningsdatoGrunnlag[0];
+    }
+
+    public void setForsteVirkningsdatoGrunnlagListe(List<ForsteVirkningsdatoGrunnlag> forsteVirkningsdatoGrunnlagListe) {
+        this.forsteVirkningsdatoGrunnlagListe = forsteVirkningsdatoGrunnlagListe;
+    }
 
 	public List<VilkarsVedtak> getPREG_vilkarsvedtakEPSListe() {
         return PREG_vilkarsvedtakEPSListe;

@@ -15,6 +15,11 @@ public class ForutgaendeMedlemskap extends AbstraktVilkar {
     private Boolean minstTreArsFMNorge;
 
     /**
+     * Minst fem års forutgående medlemskap i Norge med uføretidspunkt FOM 01.01.1994 (regelprøvd ved førsteKravFremsattDato fom 01.01.2021)
+     */
+    private Boolean minstFemArsFMNorge;
+
+    /**
      * Avdøde har minst ett års forutgående medlemskap i Norge med dødsdato før 01.01.1994 og virkningsdato FOM 01.01.1990
      */
     private Boolean minstEttArFMNorge;
@@ -58,6 +63,14 @@ public class ForutgaendeMedlemskap extends AbstraktVilkar {
 
     public Boolean getMinstTreArsFMNorge() {
         return minstTreArsFMNorge;
+    }
+
+    public Boolean getMinstFemArsFMNorge() {
+        return minstFemArsFMNorge;
+    }
+
+    public void setMinstFemArsFMNorge(Boolean minstFemArsFMNorge) {
+        this.minstFemArsFMNorge = minstFemArsFMNorge;
     }
 
     public void setMinstTreArsFMNorge(Boolean minstTreArsFMNorge) {
