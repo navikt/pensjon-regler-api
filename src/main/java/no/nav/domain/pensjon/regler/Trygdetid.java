@@ -155,6 +155,12 @@ public class Trygdetid implements Serializable {
     private AntallArMndDag tt_fa;
 
     /**
+     * Felt som blir brukt ved trygdetid for nye overgangsreglene for flyktnigner i 2021
+     */
+    @GuiPrompt(prompt = "Faktisk trygdetid etter 2021")
+    private AntallArMndDag tt_fa_F2021;
+
+    /**
      * Trygdetidens virkningsdato fom. Brukes ved fastsettelse av periodisert trygdetid for AP2011/AP2016 og AP2025
      */
     @GuiPrompt(prompt = "Virkningsdato fra og med")
