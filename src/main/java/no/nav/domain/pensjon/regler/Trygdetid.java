@@ -1,18 +1,18 @@
 package no.nav.domain.pensjon.regler;
 
-import no.nav.domain.pensjon.regler.grunnlag.AntallArMndDag;
-import no.nav.domain.pensjon.regler.kode.RegelverkTypeCti;
-import no.nav.domain.pensjon.regler.kode.TrygdetidGarantiTypeCti;
-import no.nav.domain.pensjon.regler.util.ToStringUtil;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import no.nav.domain.pensjon.regler.grunnlag.AntallArMndDag;
+import no.nav.domain.pensjon.regler.kode.RegelverkTypeCti;
+import no.nav.domain.pensjon.regler.kode.TrygdetidGarantiTypeCti;
+import no.nav.domain.pensjon.regler.util.ToStringUtil;
+
 /**
  * Trygdetid - framtidig trygdetid
- * 
+ *
  * @author Lars Hartvigsen (Decisive), PK-12705
  * @author Lars Hartvigsen (Decisive), PK-5610
  * @author Magnus Bakken (Accenture), PK-18583
@@ -106,6 +106,13 @@ public class Trygdetid implements Serializable {
     private int tt_F67;
 
     /**
+     * Faktisk trygdetid i antall år, måneder og dager før 2021.
+     * Innført ifbm overgangsregler for flyktninger.
+     */
+    @GuiPrompt(prompt = "Faktisk trygdetid før 2021")
+    private AntallArMndDag tt_fa_F2021;
+
+    /**
      * Opptjeningstiden er tidsrommet i antall måneder fra og med måneden etter
      * fylte 16 år til og med måneden før stønadstilfellet inntrådte. Brukes til
      * å bestemme 4/5-dels krav til faktisk trygdetid (§3-6 tredje ledd).
@@ -155,12 +162,6 @@ public class Trygdetid implements Serializable {
     private AntallArMndDag tt_fa;
 
     /**
-     * Felt som blir brukt ved trygdetid for nye overgangsreglene for flyktnigner i 2021
-     */
-    @GuiPrompt(prompt = "Faktisk trygdetid etter 2021")
-    private AntallArMndDag tt_fa_F2021;
-
-    /**
      * Trygdetidens virkningsdato fom. Brukes ved fastsettelse av periodisert trygdetid for AP2011/AP2016 og AP2025
      */
     @GuiPrompt(prompt = "Virkningsdato fra og med")
@@ -174,7 +175,7 @@ public class Trygdetid implements Serializable {
 
     /**
      * Copy Constructor
-     * 
+     *
      * @param trygdetid
      * a <code>Trygdetid</code> object
      */
@@ -190,6 +191,9 @@ public class Trygdetid implements Serializable {
         tt_F67 = trygdetid.tt_F67;
         tt_faktisk = trygdetid.tt_faktisk;
 
+        if (trygdetid.getTt_fa_F2021() != null) {
+            tt_fa_F2021 = new AntallArMndDag(trygdetid.getTt_fa_F2021());
+        }
         if (trygdetid.getFtt_fom() != null) {
             ftt_fom = new Date(trygdetid.getFtt_fom().getTime());
         }
@@ -234,7 +238,7 @@ public class Trygdetid implements Serializable {
     }
 
     public Trygdetid(long trygdetidId, int tt, int ftt, boolean ftt_redusert, int tt_etter_UFT, int tt_etter_dod, int tt_overfort, int tt_garanti, int tt_fa_mnd, int tt_67_70,
-                     int tt_E66, int tt_F67, int opptjeningsperiode, TTUtlandEOS ttUtlandEos, TTUtlandKonvensjon ttUtlandKonvensjon) {
+            int tt_E66, int tt_F67, int opptjeningsperiode, TTUtlandEOS ttUtlandEos, TTUtlandKonvensjon ttUtlandKonvensjon) {
         super();
         this.trygdetidId = trygdetidId;
         this.tt = tt;
@@ -292,7 +296,7 @@ public class Trygdetid implements Serializable {
 
     /**
      * Read only property for merknadListe.
-     * 
+     *
      * @return array of Merknad
      */
     public Merknad[] getMerknadListeAsArray() {
@@ -364,6 +368,14 @@ public class Trygdetid implements Serializable {
         this.tt_F67 = tt_F67;
     }
 
+    public AntallArMndDag getTt_fa_F2021() {
+        return tt_fa_F2021;
+    }
+
+    public void setTt_fa_F2021(AntallArMndDag tt_fa_F2021) {
+        this.tt_fa_F2021 = tt_fa_F2021;
+    }
+
     public int getTt_fa_mnd() {
         return tt_fa_mnd;
     }
@@ -415,7 +427,7 @@ public class Trygdetid implements Serializable {
 
     /**
      * Read only property for TTUtlandTrygdeavtaleListe as array.
-     * 
+     *
      * @return array of TTUtlandTrygdeavtale
      */
     public TTUtlandTrygdeavtale[] getTTUtlandTrygdeavtaleListeAsArray() {
