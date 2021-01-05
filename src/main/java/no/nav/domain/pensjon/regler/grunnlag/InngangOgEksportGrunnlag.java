@@ -372,6 +372,10 @@ public class InngangOgEksportGrunnlag implements Serializable {
         if(medlemskapForUTEtterTrygdeavtaler != null &&medlemskapForUTEtterTrygdeavtaler.getOppfyltVedSammenlegging() != null) {
             this.oppfyltVedSammenlegging = new OppfyltVedSammenlegging(medlemskapForUTEtterTrygdeavtaler.getOppfyltVedSammenlegging());
         }
+
+        if (medlemskapForUTEtterTrygdeavtaler != null && medlemskapForUTEtterTrygdeavtaler.getOppfyltVedSammenleggingFemAr() != null) {
+            this.oppfyltVedSammenleggingFemAr = new OppfyltVedSammenlegging(medlemskapForUTEtterTrygdeavtaler.getOppfyltVedSammenleggingFemAr());
+        }
     }
 
     public Eksportforbud getEksportforbud() {
