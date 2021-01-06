@@ -15,6 +15,12 @@ public class MedlemskapForUTEtterTrygdeavtaler extends AbstraktVilkar{
      */
     private OppfyltVedSammenlegging oppfyltVedSammenlegging;
 
+    /**
+     * Inneholder informasjon om bruker har inngang gjennom sammenlegging av trygdetid i avtaleland og Norge på minst 5 år.
+     * Registreres manuelt av saksbehandler.
+     */
+    private OppfyltVedSammenlegging oppfyltVedSammenleggingFemAr;
+
     public MedlemskapForUTEtterTrygdeavtaler() {
         super();
     }
@@ -27,6 +33,9 @@ public class MedlemskapForUTEtterTrygdeavtaler extends AbstraktVilkar{
         super(medlemskapForUTEtterTrygdeavtaler);
         if(medlemskapForUTEtterTrygdeavtaler.oppfyltVedSammenlegging != null) {
             this.oppfyltVedSammenlegging = new OppfyltVedSammenlegging(medlemskapForUTEtterTrygdeavtaler.oppfyltVedSammenlegging);
+        }
+        if(medlemskapForUTEtterTrygdeavtaler.oppfyltVedSammenleggingFemAr != null) {
+            this.oppfyltVedSammenleggingFemAr = new OppfyltVedSammenlegging(medlemskapForUTEtterTrygdeavtaler.oppfyltVedSammenleggingFemAr);
         }
     }
 
@@ -55,5 +64,13 @@ public class MedlemskapForUTEtterTrygdeavtaler extends AbstraktVilkar{
 
     public void setOppfyltVedSammenlegging(OppfyltVedSammenlegging oppfyltVedSammenlegging) {
         this.oppfyltVedSammenlegging = oppfyltVedSammenlegging;
+    }
+
+    public OppfyltVedSammenlegging getOppfyltVedSammenleggingFemAr() {
+        return oppfyltVedSammenleggingFemAr;
+    }
+
+    public void setOppfyltVedSammenleggingFemAr(OppfyltVedSammenlegging oppfyltVedSammenleggingFemAr) {
+        this.oppfyltVedSammenleggingFemAr = oppfyltVedSammenleggingFemAr;
     }
 }
