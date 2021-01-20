@@ -2,7 +2,6 @@ package no.nav.service.pensjon.regler.to;
 
 import no.nav.domain.pensjon.regler.grunnlag.DelingstallUtvalg;
 import no.nav.domain.pensjon.regler.grunnlag.GarantitilleggsbeholdningGrunnlag;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 /**
  * 

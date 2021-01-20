@@ -3,7 +3,6 @@ package no.nav.service.pensjon.regler.to;
 import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.beregning2011.BeregningsResultatAlderspensjon2011;
 import no.nav.domain.pensjon.regler.beregning2011.PensjonUnderUtbetaling;
-import no.stelvio.common.transferobject.ServiceResponse;
 /**
  * 
  * @author Christian Arnesen

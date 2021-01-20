@@ -9,7 +9,6 @@ import no.nav.domain.pensjon.regler.beregning2011.AbstraktBeregningsResultat;
 import no.nav.domain.pensjon.regler.beregning2011.BeregningsResultatAfpPrivat;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class SamletEktefellepensjonRequest extends ServiceRequest {
 	private static final long serialVersionUID = 2620310836634304154L;

@@ -1,7 +1,6 @@
 package no.nav.service.pensjon.regler.to;
 
 import no.nav.domain.pensjon.regler.InstoppholdslisteResultat;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 /**
  * Response objekt for tjenesten bestemInstitusjonsListe

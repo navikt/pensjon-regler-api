@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.Vector;
 
 import no.nav.domain.pensjon.regler.gomregning.KravFaktoromregningGrunnlag;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class FaktoromregnInntektBatchRequest extends ServiceRequest {
 

@@ -2,7 +2,6 @@
 
 import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.beregning2011.BeregningsResultatAlderspensjon2016;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 public class RevurderingOvergangskullResponse extends ServiceResponse {
 	private static final long serialVersionUID = 9161949864613895672L;

@@ -5,7 +5,6 @@ import java.util.List;
 
 import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.grunnlag.Pensjonsbeholdning;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 public class BeregnOpptjeningResponse extends ServiceResponse {
 

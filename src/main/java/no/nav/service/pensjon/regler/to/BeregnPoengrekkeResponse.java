@@ -1,6 +1,5 @@
 package no.nav.service.pensjon.regler.to;
 
-import no.stelvio.common.transferobject.ServiceResponse;
 
 /**
  * @TODO ferdigstill

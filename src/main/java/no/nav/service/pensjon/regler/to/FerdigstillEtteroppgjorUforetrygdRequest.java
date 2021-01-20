@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import no.nav.domain.pensjon.regler.PenPerson;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 import no.nav.domain.pensjon.regler.beregning2011.BeregnetUtbetalingsperiode;
 

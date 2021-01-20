@@ -4,7 +4,7 @@ import no.nav.domain.pensjon.regler.Merknad;
 import no.nav.domain.pensjon.regler.Omsorgsopptjening;
 import no.nav.domain.pensjon.regler.beregning.Poengtall;
 import no.nav.domain.pensjon.regler.beregning2011.OpptjeningUT;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
 
 import java.util.Formatter;
 import java.util.List;

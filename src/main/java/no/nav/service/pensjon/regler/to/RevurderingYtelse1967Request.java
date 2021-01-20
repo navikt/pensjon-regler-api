@@ -7,7 +7,6 @@ import no.nav.domain.pensjon.regler.beregning2011.SisteBeregning1967;
 import no.nav.domain.pensjon.regler.grunnlag.InfoPavirkendeYtelse;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class RevurderingYtelse1967Request extends ServiceRequest {
 	

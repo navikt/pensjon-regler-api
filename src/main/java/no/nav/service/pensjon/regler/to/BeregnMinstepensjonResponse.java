@@ -1,7 +1,5 @@
 package no.nav.service.pensjon.regler.to;
 
-import no.stelvio.common.transferobject.ServiceResponse;;
-
 /**
  * Dataoverføringsobjekt, returdata, for tjenesten beregnMinstepensjon.
  *

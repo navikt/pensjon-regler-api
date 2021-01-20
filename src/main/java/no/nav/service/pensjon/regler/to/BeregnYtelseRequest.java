@@ -6,7 +6,6 @@ import java.util.Vector;
 import no.nav.domain.pensjon.regler.grunnlag.InfoPavirkendeYtelse;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class BeregnYtelseRequest extends ServiceRequest {
 

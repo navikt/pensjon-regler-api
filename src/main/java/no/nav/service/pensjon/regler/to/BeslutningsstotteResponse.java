@@ -3,7 +3,6 @@ package no.nav.service.pensjon.regler.to;
 import java.util.ArrayList;
 import java.util.List;
 
-import no.stelvio.common.transferobject.ServiceResponse;
 
 import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.beregning2011.InntektsberegningsResultat;

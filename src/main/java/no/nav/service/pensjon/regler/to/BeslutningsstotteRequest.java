@@ -1,6 +1,5 @@
 package no.nav.service.pensjon.regler.to;
 
-import no.stelvio.common.transferobject.ServiceRequest;
 
 import no.nav.domain.pensjon.regler.grunnlag.InntektKontrollGrunnlag;
 import no.nav.domain.pensjon.regler.grunnlag.Persongrunnlag;

@@ -4,7 +4,6 @@ import java.util.Date;
 
 import no.nav.domain.pensjon.regler.beregning.Beregning;
 import no.nav.domain.pensjon.regler.beregning2011.AbstraktBeregningsResultat;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class RegulerBeregningMangelfulltGrunnlagRequest extends ServiceRequest  {
 	private static final long serialVersionUID = -1436468885395731897L;

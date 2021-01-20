@@ -8,7 +8,6 @@ import no.nav.domain.pensjon.regler.grunnlag.DelingstallUtvalg;
 import no.nav.domain.pensjon.regler.grunnlag.ForholdstallUtvalg;
 import no.nav.domain.pensjon.regler.grunnlag.GarantitilleggsbeholdningGrunnlag;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
-import no.stelvio.common.transferobject.ServiceRequest;
 /**
  * 
  * @author Christian Arnesen

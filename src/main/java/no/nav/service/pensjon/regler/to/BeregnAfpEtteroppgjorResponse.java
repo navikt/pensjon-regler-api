@@ -3,7 +3,6 @@ package no.nav.service.pensjon.regler.to;
 import java.util.Vector;
 
 import no.nav.domain.pensjon.regler.afpoppgjor.AFPetteroppgjor;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 public class BeregnAfpEtteroppgjorResponse extends ServiceResponse {
 

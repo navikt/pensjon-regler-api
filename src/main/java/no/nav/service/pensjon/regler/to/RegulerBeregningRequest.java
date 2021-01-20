@@ -7,7 +7,6 @@ import no.nav.domain.pensjon.regler.beregning.Beregning;
 import no.nav.domain.pensjon.regler.grunnlag.Persongrunnlag;
 import no.nav.domain.pensjon.regler.grunnlag.Uttaksgrad;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class RegulerBeregningRequest extends ServiceRequest {
 	private static final long serialVersionUID = 4216891788328945353L;

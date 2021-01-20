@@ -6,7 +6,6 @@ import java.util.Vector;
 
 import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.beregning.Beregning;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 /**
  * Klassen representerer hele resultatet fra et kall til en regeltjeneste for ytelsesberegning.

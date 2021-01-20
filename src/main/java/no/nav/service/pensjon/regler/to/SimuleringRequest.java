@@ -3,7 +3,6 @@ package no.nav.service.pensjon.regler.to;
 import java.util.Date;
 
 import no.nav.domain.pensjon.regler.simulering.Simulering;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class SimuleringRequest extends ServiceRequest{
 	/**

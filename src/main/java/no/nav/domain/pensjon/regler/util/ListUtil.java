@@ -9,7 +9,6 @@ import no.nav.domain.pensjon.regler.beregning2011.BeregningsvilkarPeriode;
 import no.nav.domain.pensjon.regler.beregning2011.Regelendring;
 import no.nav.domain.pensjon.regler.grunnlag.*;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.util.DateUtil;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;

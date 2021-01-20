@@ -1,6 +1,5 @@
 package no.nav.service.pensjon.regler.to;
 
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class HentVeietGrunnbelopListeRequest extends ServiceRequest{
 	/**

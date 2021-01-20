@@ -6,7 +6,6 @@ import java.util.List;
 
 import no.nav.domain.pensjon.regler.krav.Kravhode;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 /**
  * Requestobjekt for BEF2001 Identifiser regelendringer.

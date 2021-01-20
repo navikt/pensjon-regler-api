@@ -2,7 +2,6 @@ package no.nav.service.pensjon.regler.to;
 
 import java.util.Date;
 
-import no.stelvio.common.transferobject.ServiceRequest;
 
 /**
  * @TODO - ferdigstill

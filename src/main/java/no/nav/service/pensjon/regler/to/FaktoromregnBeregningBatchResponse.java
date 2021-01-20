@@ -3,7 +3,6 @@ package no.nav.service.pensjon.regler.to;
 import java.util.Vector;
 
 import no.nav.domain.pensjon.regler.gomregning.BeregningerFaktoromregningResultat;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 public class FaktoromregnBeregningBatchResponse extends ServiceResponse {
 	private static final long serialVersionUID = -2759571563519787907L;

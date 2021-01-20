@@ -2,7 +2,6 @@ package no.nav.service.pensjon.regler.to;
 
 import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.beregning2011.BeregningsResultatAfpPrivat;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 public class BeregnAfpPrivatResponse extends ServiceResponse  {
 	private static final long serialVersionUID = -3870329192207845501L;
@@ -39,4 +38,3 @@ public class BeregnAfpPrivatResponse extends ServiceResponse  {
 	}
 	
 }
- 

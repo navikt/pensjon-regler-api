@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.grunnlag.PersonPensjonsbeholdning;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 public class RegulerPensjonsbeholdningResponse extends ServiceResponse  {
 	private static final long serialVersionUID = 1245764083517519824L;

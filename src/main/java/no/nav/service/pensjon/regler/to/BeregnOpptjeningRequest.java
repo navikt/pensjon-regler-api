@@ -4,7 +4,6 @@ import java.util.Date;
 
 import no.nav.domain.pensjon.regler.grunnlag.Pensjonsbeholdning;
 import no.nav.domain.pensjon.regler.grunnlag.Persongrunnlag;
-import no.stelvio.common.transferobject.ServiceRequest;
 /**
  * Dataoverføringsobjekt for tjenesten beregnOpptjening.
  */
