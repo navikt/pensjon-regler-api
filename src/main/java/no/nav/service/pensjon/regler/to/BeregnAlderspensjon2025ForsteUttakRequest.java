@@ -11,7 +11,6 @@ import no.nav.domain.pensjon.regler.grunnlag.GarantitilleggsbeholdningGrunnlag;
 import no.nav.domain.pensjon.regler.grunnlag.InfoPavirkendeYtelse;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class BeregnAlderspensjon2025ForsteUttakRequest extends ServiceRequest {
 	private static final long serialVersionUID = -8565943555158481050L;

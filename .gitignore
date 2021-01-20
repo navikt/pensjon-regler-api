@@ -10,6 +10,7 @@ trash/
 ##################
 .pmd
 /service/nav-service-pensjon-regler-test/Blaze.log
+.DS_Store
 
 # Java #
 ########

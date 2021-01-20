@@ -10,9 +10,9 @@ import no.nav.domain.pensjon.regler.kode.VilkarVurderingCti;
 import no.nav.domain.pensjon.regler.kode.VilkarsvedtakResultatCti;
 import no.nav.domain.pensjon.regler.krav.Kravlinje;
 import no.nav.domain.pensjon.regler.util.DateCompareUtil;
+import no.nav.domain.pensjon.regler.util.DateUtil;
 import no.nav.domain.pensjon.regler.util.ListUtil;
 import no.nav.domain.pensjon.regler.util.ToStringUtil;
-import no.stelvio.common.util.DateUtil;
 
 import java.util.*;
 

@@ -3,7 +3,6 @@ package no.nav.service.pensjon.regler.to;
 import java.util.Date;
 
 import no.nav.domain.pensjon.regler.grunnlag.Opptjeningsgrunnlag;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 public class BeregnPoengtallResponse extends ServiceResponse{
 

@@ -1,7 +1,6 @@
 package no.nav.service.pensjon.regler.to;
 
 import no.nav.domain.pensjon.regler.krav.Kravhode;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class KontrollerInformasjonsgrunnlagRequest extends ServiceRequest {
 

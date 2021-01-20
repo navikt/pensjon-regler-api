@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Vector;
 
 import no.nav.domain.pensjon.regler.grunnlag.InstOpphPeriodegrunnlag;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class InstitusjonsOppholdRequest extends ServiceRequest{
 

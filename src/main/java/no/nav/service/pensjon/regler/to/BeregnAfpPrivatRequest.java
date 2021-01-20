@@ -6,7 +6,6 @@ import java.util.Date;
 import no.nav.domain.pensjon.regler.beregning2011.BeregningsResultatAfpPrivat;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class BeregnAfpPrivatRequest extends ServiceRequest  { 
 	private static final long serialVersionUID = -5519872985990364386L;

@@ -6,7 +6,6 @@ import no.nav.domain.pensjon.regler.kode.GrunnlagsrolleCti;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
 
-import no.stelvio.common.transferobject.ServiceRequest;
 
 /**
  * @author Magnus Bakken (Accenture) PK-10597 Beslutningsstøtte for vilkår

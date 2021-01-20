@@ -8,7 +8,6 @@ import no.nav.domain.pensjon.regler.grunnlag.ForholdstallUtvalg;
 import no.nav.domain.pensjon.regler.grunnlag.InfoPavirkendeYtelse;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class BeregnAlderspensjon2011ForsteUttakRequest extends ServiceRequest {
 	private static final long serialVersionUID = -6939482763082651152L;

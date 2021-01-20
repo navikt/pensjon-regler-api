@@ -8,7 +8,6 @@ import java.util.List;
 import no.nav.domain.pensjon.regler.beregning2011.SisteBeregning;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class VilkarsprovRequest extends ServiceRequest{
 

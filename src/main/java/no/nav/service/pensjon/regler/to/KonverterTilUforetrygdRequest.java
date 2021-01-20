@@ -3,7 +3,6 @@ package no.nav.service.pensjon.regler.to;
 import java.util.Date;
 import java.util.Vector;
 
-import no.stelvio.common.transferobject.ServiceRequest;
 
 import no.nav.domain.pensjon.regler.beregning2011.SisteUforepensjonBeregning;
 import no.nav.domain.pensjon.regler.grunnlag.EtteroppgjorGrunnlag;

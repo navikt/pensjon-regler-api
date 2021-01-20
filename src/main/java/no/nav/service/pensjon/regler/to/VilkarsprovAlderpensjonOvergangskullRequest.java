@@ -7,7 +7,6 @@ import no.nav.domain.pensjon.regler.beregning2011.SisteAldersberegning2011;
 import no.nav.domain.pensjon.regler.grunnlag.DelingstallUtvalg;
 import no.nav.domain.pensjon.regler.grunnlag.ForholdstallUtvalg;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class VilkarsprovAlderpensjonOvergangskullRequest extends ServiceRequest {
 	private static final long serialVersionUID = -4360124186327648054L;

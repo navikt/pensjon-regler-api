@@ -6,7 +6,6 @@ import java.util.Date;
 import no.nav.domain.pensjon.regler.beregning2011.AbstraktBeregningsResultat;
 import no.nav.domain.pensjon.regler.beregning2011.AfpLivsvarig;
 import no.nav.domain.pensjon.regler.grunnlag.Uttaksgrad;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 public class RegulerBeregning2011Request extends ServiceRequest {
 	private static final long serialVersionUID = -5436561080264077829L;

@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Vector;
 
 import no.nav.domain.pensjon.regler.SatsResultat;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 
 public class SatsResponse extends ServiceResponse{

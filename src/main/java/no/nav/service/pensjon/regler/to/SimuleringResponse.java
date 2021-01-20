@@ -2,7 +2,6 @@ package no.nav.service.pensjon.regler.to;
 
 import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.simulering.Simuleringsresultat;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 public class SimuleringResponse extends ServiceResponse{
 	/**

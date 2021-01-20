@@ -4,7 +4,6 @@ import java.util.Vector;
 
 import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.beregning2011.Regelendring;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 /**
  * Responseobjekt for BEF2001 Identifiser regelendringer.

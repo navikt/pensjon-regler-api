@@ -2,7 +2,6 @@ package no.nav.service.pensjon.regler.to;
 
 import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.beregning.Beregning;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 public class RevurderingYtelse1967Response extends ServiceResponse {
 	private static final long serialVersionUID = 375644410497407900L;

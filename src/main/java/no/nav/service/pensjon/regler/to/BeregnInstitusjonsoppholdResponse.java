@@ -4,7 +4,6 @@ import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.beregning.Beregning;
 import no.nav.domain.pensjon.regler.beregning2011.AbstraktBeregningsResultat;
 import no.nav.domain.pensjon.regler.beregning2011.BeregningsresultatUforetrygd;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 /**
  * @author Nabil Safadi (Decisive) - PK-8518

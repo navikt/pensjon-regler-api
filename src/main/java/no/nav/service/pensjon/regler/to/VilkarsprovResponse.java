@@ -5,7 +5,6 @@ import java.util.Vector;
 
 import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 public class VilkarsprovResponse extends ServiceResponse{
 

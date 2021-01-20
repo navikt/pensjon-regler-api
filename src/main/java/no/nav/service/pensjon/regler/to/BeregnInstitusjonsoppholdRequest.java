@@ -11,7 +11,6 @@ import no.nav.domain.pensjon.regler.beregning2011.SisteAldersberegning2011;
 import no.nav.domain.pensjon.regler.grunnlag.ForholdstallUtvalg;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
-import no.stelvio.common.transferobject.ServiceRequest;
 
 /**
  * @author PREG

@@ -5,7 +5,6 @@ import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.beregning.Beregning;
 import no.nav.domain.pensjon.regler.beregning2011.AbstraktBeregningsResultat;
 import no.nav.domain.pensjon.regler.beregning2011.BeregningsResultatAfpPrivat;
-import no.stelvio.common.transferobject.ServiceResponse;
 
 public class SamletEktefellepensjonResponse extends ServiceResponse  {
 	private static final long serialVersionUID = 8139164929316752781L;
