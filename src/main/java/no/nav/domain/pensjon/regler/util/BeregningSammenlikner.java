@@ -4,7 +4,8 @@ import no.nav.domain.pensjon.regler.*;
 import no.nav.domain.pensjon.regler.beregning.*;
 import no.nav.domain.pensjon.regler.beregning.penobjekter.KrigOgGammelYrkesskade;
 import no.nav.domain.pensjon.regler.kode.TypeCti;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -82,7 +83,7 @@ public class BeregningSammenlikner {
     private BeregningSammenlikner() {
     }
 
-    private static final Logger log = Logger.getLogger(BeregningSammenlikner.class);
+    private static final Logger log = LoggerFactory.getLogger(BeregningSammenlikner.class);
 
     /**
      * Entry from outside world. Check if two instances of Beregning may be

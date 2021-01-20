@@ -5,7 +5,8 @@ import no.nav.domain.pensjon.regler.beregning.Poengtall;
 import no.nav.domain.pensjon.regler.beregning2011.OpptjeningUT;
 import no.nav.domain.pensjon.regler.kode.PoengtallTypeCti;
 import no.nav.domain.pensjon.regler.util.OmsorgspoengCompareUtil.SynkendeArstallComparator;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
@@ -22,7 +23,7 @@ import static no.nav.domain.pensjon.regler.util.OmsorgspoengLogUtil.*;
  */
 public class Omsorgspoeng extends AbstractOmsorgspoeng {
     // Logging
-    private static final Logger log = Logger.getLogger(Omsorgspoeng.class);
+    private static final Logger log = LoggerFactory.getLogger(Omsorgspoeng.class);
 
     /*
      * BeregnFPPHalvparten beregner fpp etter alternativ 2 i Gunnar Sletners Beregningsregler, side 91

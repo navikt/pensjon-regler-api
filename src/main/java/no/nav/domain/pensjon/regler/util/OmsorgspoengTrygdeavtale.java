@@ -5,7 +5,8 @@ import no.nav.domain.pensjon.regler.beregning2011.OpptjeningUT;
 import no.nav.domain.pensjon.regler.util.OmsorgspoengCompareUtil.IalRefppComparator;
 import no.nav.domain.pensjon.regler.util.OmsorgspoengCompareUtil.PoengtallComparator;
 import no.nav.domain.pensjon.regler.util.OmsorgspoengCompareUtil.SynkendeArstallComparator;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
@@ -22,7 +23,7 @@ import static no.nav.domain.pensjon.regler.util.OmsorgspoengLogUtil.printRekke;
  */
 public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
     // Logging
-    private static final Logger log = Logger.getLogger(OmsorgspoengTrygdeavtale.class);
+    private static final Logger log = LoggerFactory.getLogger(OmsorgspoengTrygdeavtale.class);
 
     // Rekursiv "ytre løkke"
     /**
