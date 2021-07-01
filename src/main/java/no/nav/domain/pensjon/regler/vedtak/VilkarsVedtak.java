@@ -95,6 +95,7 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
     private boolean vurderSkattefritakET;
     // CR170026
     private boolean unntakHalvMinstepensjon;
+    private boolean epsAvkallEgenPensjon;
 
     /**
      * List av Beregningsvilkarperioder
@@ -157,6 +158,7 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
         avslattGarantipensjon = v.avslattGarantipensjon;
         vurderSkattefritakET = v.vurderSkattefritakET;
         unntakHalvMinstepensjon = v.unntakHalvMinstepensjon;
+        epsAvkallEgenPensjon = v.epsAvkallEgenPensjon;
 
         // Kopierer ikke denne for å unngå Stackoverflow exception!
         //		if (vilkarsVedtak.PREG_persongrunnlag != null) {
@@ -179,7 +181,8 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
 
     public VilkarsVedtak(VilkarsvedtakResultatCti anbefaltResultat, VilkarsvedtakResultatCti vilkarsvedtakResultat, KravlinjeTypeCti kravlinjeType,
                          VilkarVurderingCti anvendtVurdering, Date virkFom, Date virkTom, Date forsteVirk, Kravlinje kravlinje, PenPerson penPerson,
-                         VilkarsprovAlderspensjonResultat vilkarsprovresultat, BegrunnelseTypeCti begrunnelse, boolean avslattKapittel19, List<Merknad> merknadListe) {
+                         VilkarsprovAlderspensjonResultat vilkarsprovresultat, BegrunnelseTypeCti begrunnelse, boolean avslattKapittel19, boolean epsAvkallEgenPensjon,
+                         List<Merknad> merknadListe) {
         this();
         this.anbefaltResultat = anbefaltResultat;
         this.vilkarsvedtakResultat = vilkarsvedtakResultat;
@@ -193,6 +196,7 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
         this.vilkarsprovresultat = vilkarsprovresultat;
         this.begrunnelse = begrunnelse;
         this.avslattKapittel19 = avslattKapittel19;
+        this.epsAvkallEgenPensjon = epsAvkallEgenPensjon;
         this.merknadListe = merknadListe;
     }
 
@@ -368,6 +372,14 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
 
     public boolean isVurderSkattefritakET() {
         return vurderSkattefritakET;
+    }
+
+    public boolean isEpsAvkallEgenPensjon() {
+        return epsAvkallEgenPensjon;
+    }
+
+    public void setEpsAvkallEgenPensjon(boolean epsAvkallEgenPensjon) {
+        this.epsAvkallEgenPensjon = epsAvkallEgenPensjon;
     }
 
     public boolean isUnntakHalvMinstepensjon() {
