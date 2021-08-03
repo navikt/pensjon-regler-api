@@ -24,11 +24,6 @@ public class InstOpphPeriodegrunnlag implements Comparable<InstOpphPeriodegrunnl
     private OppholdTypeCti oppholdType;
 
     /**
-     * Kun brukt i PEN
-     */
-    private String tssEksternId;
-
-    /**
      * Varighetstypen på institusjonsoppholdet.
      */
     private VarighetTypeCti varighetType;
@@ -83,7 +78,6 @@ public class InstOpphPeriodegrunnlag implements Comparable<InstOpphPeriodegrunnl
         if (instOpphPeriodegrunnlag.oppholdType != null) {
             oppholdType = new OppholdTypeCti(instOpphPeriodegrunnlag.oppholdType);
         }
-        tssEksternId = instOpphPeriodegrunnlag.tssEksternId;
         if (instOpphPeriodegrunnlag.varighetType != null) {
             varighetType = new VarighetTypeCti(instOpphPeriodegrunnlag.varighetType);
         }
@@ -115,7 +109,6 @@ public class InstOpphPeriodegrunnlag implements Comparable<InstOpphPeriodegrunnl
         super();
         this.instOppholdId = instOppholdId;
         this.oppholdType = oppholdType;
-        this.tssEksternId = tssEksternId;
         this.varighetType = varighetType;
         this.fom = fom;
         this.tom = tom;
@@ -222,14 +215,6 @@ public class InstOpphPeriodegrunnlag implements Comparable<InstOpphPeriodegrunnl
         this.tom = tom;
     }
 
-    public String getTssEksternId() {
-        return tssEksternId;
-    }
-
-    public void setTssEksternId(String tssEksternId) {
-        this.tssEksternId = tssEksternId;
-    }
-
     public VarighetTypeCti getVarighetType() {
         return varighetType;
     }
@@ -252,7 +237,7 @@ public class InstOpphPeriodegrunnlag implements Comparable<InstOpphPeriodegrunnl
         StringBuilder retValue = new StringBuilder();
 
         retValue.append("InstOpphPeriodegrunnlag ( ").append(super.toString()).append(TAB).append("instOpphPeriodegrunnlagId = ").append(instOppholdId).append(TAB)
-                .append("oppholdType = ").append(oppholdType).append(TAB).append("tssEksternId = ").append(tssEksternId).append(TAB).append("varighetType = ").append(varighetType)
+                .append("oppholdType = ").append(oppholdType).append(TAB).append("varighetType = ").append(varighetType)
                 .append(TAB).append("fom = ").append(fom).append(TAB).append("tom = ").append(tom).append(TAB).append("forventetTom = ").append(forventetTom).append(TAB)
                 .append("registerOpprettetAv = ").append(registerOpprettetAv).append(TAB).append("registerEndretAv = ").append(registerEndretAv).append(TAB)
                 .append("registerOpprettetDato = ").append(registerOpprettetDato).append(TAB).append("registerEndretDato = ").append(registerEndretDato).append(TAB)
