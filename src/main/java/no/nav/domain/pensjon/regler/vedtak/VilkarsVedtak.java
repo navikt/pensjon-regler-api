@@ -96,6 +96,7 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
     // CR170026
     private boolean unntakHalvMinstepensjon;
     private boolean epsAvkallEgenPensjon;
+    private boolean epsRettEgenPensjon;
 
     /**
      * List av Beregningsvilkarperioder
@@ -182,7 +183,7 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
     public VilkarsVedtak(VilkarsvedtakResultatCti anbefaltResultat, VilkarsvedtakResultatCti vilkarsvedtakResultat, KravlinjeTypeCti kravlinjeType,
                          VilkarVurderingCti anvendtVurdering, Date virkFom, Date virkTom, Date forsteVirk, Kravlinje kravlinje, PenPerson penPerson,
                          VilkarsprovAlderspensjonResultat vilkarsprovresultat, BegrunnelseTypeCti begrunnelse, boolean avslattKapittel19, boolean epsAvkallEgenPensjon,
-                         List<Merknad> merknadListe) {
+                         List<Merknad> merknadListe, boolean epsRettEgenPensjon) {
         this();
         this.anbefaltResultat = anbefaltResultat;
         this.vilkarsvedtakResultat = vilkarsvedtakResultat;
@@ -197,6 +198,7 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
         this.begrunnelse = begrunnelse;
         this.avslattKapittel19 = avslattKapittel19;
         this.epsAvkallEgenPensjon = epsAvkallEgenPensjon;
+        this.epsRettEgenPensjon = isEpsRettEgenPensjon;
         this.merknadListe = merknadListe;
     }
 
@@ -380,6 +382,14 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
 
     public void setEpsAvkallEgenPensjon(boolean epsAvkallEgenPensjon) {
         this.epsAvkallEgenPensjon = epsAvkallEgenPensjon;
+    }
+
+    public boolean isEpsRettEgenPensjon() {
+        return epsRettEgenPensjon;
+    }
+
+    public void setEpsRettEgenPensjon(boolean epsRettEgenPensjon) {
+        this.epsRettEgenPensjon = epsRettEgenPensjon;
     }
 
     public boolean isUnntakHalvMinstepensjon() {
