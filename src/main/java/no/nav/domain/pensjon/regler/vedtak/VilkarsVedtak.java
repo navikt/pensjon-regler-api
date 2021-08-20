@@ -198,7 +198,7 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
         this.begrunnelse = begrunnelse;
         this.avslattKapittel19 = avslattKapittel19;
         this.epsAvkallEgenPensjon = epsAvkallEgenPensjon;
-        this.epsRettEgenPensjon = isEpsRettEgenPensjon;
+        this.epsRettEgenPensjon = epsRettEgenPensjon;
         this.merknadListe = merknadListe;
     }
 
