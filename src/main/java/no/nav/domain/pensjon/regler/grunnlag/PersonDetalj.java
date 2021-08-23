@@ -67,6 +67,8 @@ public class PersonDetalj implements Comparable<PersonDetalj>, Serializable {
 
     private Boolean serskiltSatsUtenET;
 
+    private Boolean epsAvkallEgenPensjon;
+
     /**
      * Copy Constructor
      * 
@@ -103,7 +105,7 @@ public class PersonDetalj implements Comparable<PersonDetalj>, Serializable {
     }
 
     public PersonDetalj(GrunnlagsrolleCti grunnlagsrolle, Date rolleFomDato, Date rolleTomDato, SivilstandTypeCti sivilstandType, PenPerson sivilstandRelatertPerson,
-                        BorMedTypeCti borMed, BarnDetalj barnDetalj, boolean tillegg, boolean bruk, GrunnlagKildeCti grunnlagKilde) {
+                        BorMedTypeCti borMed, BarnDetalj barnDetalj, boolean tillegg, boolean bruk, GrunnlagKildeCti grunnlagKilde, boolean epsAvkallEgenPensjon) {
         super();
         this.grunnlagsrolle = grunnlagsrolle;
         this.rolleFomDato = rolleFomDato;
@@ -115,6 +117,7 @@ public class PersonDetalj implements Comparable<PersonDetalj>, Serializable {
         this.tillegg = tillegg;
         this.bruk = bruk;
         this.grunnlagKilde = grunnlagKilde;
+        this.epsAvkallEgenPensjon = epsAvkallEgenPensjon;
     }
 
     public PersonDetalj() {
@@ -184,6 +187,14 @@ public class PersonDetalj implements Comparable<PersonDetalj>, Serializable {
 
     public void setTillegg(boolean tillegg) {
         this.tillegg = tillegg;
+    }
+
+    public Boolean getEpsAvkallEgenPensjon() {
+        return epsAvkallEgenPensjon;
+    }
+
+    public void setEpsAvkallEgenPensjon(Boolean epsAvkallEgenPensjon) {
+        this.epsAvkallEgenPensjon = epsAvkallEgenPensjon;
     }
 
     public Boolean getSerskiltSatsUtenET() {
