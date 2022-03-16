@@ -5,6 +5,8 @@ import java.util.Date;
 
 import no.nav.domain.pensjon.regler.beregning2011.AbstraktBeregningsResultat;
 import no.nav.domain.pensjon.regler.beregning2011.AfpLivsvarig;
+import no.nav.domain.pensjon.regler.grunnlag.DelingstallUtvalg;
+import no.nav.domain.pensjon.regler.grunnlag.ForholdstallUtvalg;
 import no.nav.domain.pensjon.regler.grunnlag.Uttaksgrad;
 
 public class RegulerBeregning2011Request extends ServiceRequest {
@@ -15,6 +17,8 @@ public class RegulerBeregning2011Request extends ServiceRequest {
 	private AfpLivsvarig afpLivsvarig;
 	private ArrayList<Uttaksgrad> uttaksgradListe;
 	private Date fodselsdato;
+	private ForholdstallUtvalg forholdstallUtvalg;
+	private DelingstallUtvalg delingstallUtvalg;
 	
 	public RegulerBeregning2011Request() {
 		super();
@@ -60,5 +64,20 @@ public class RegulerBeregning2011Request extends ServiceRequest {
 	public void setFodselsdato(Date fodselsdato) {
 		this.fodselsdato = fodselsdato;
 	}
-	
+
+	public ForholdstallUtvalg getForholdstallUtvalg() {
+		return forholdstallUtvalg;
+	}
+
+	public void setForholdstallUtvalg(ForholdstallUtvalg forholdstallUtvalg) {
+		this.forholdstallUtvalg = forholdstallUtvalg;
+	}
+
+	public DelingstallUtvalg getDelingstallUtvalg() {
+		return delingstallUtvalg;
+	}
+
+	public void setDelingstallUtvalg(DelingstallUtvalg delingstallUtvalg) {
+		this.delingstallUtvalg = delingstallUtvalg;
+	}
 }
