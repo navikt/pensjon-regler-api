@@ -28,6 +28,9 @@ public class ReguleringsInformasjon implements Serializable {
     @GuiPrompt(prompt = "Reguleringsbeløp")
     private double reguleringsbelop;
 
+    @GuiPrompt(prompt = "Faktor som vil være gjennomsnittet av pris og lønnvekst")
+    private double prisOgLonnsvekst;
+
     public ReguleringsInformasjon() {
         super();
     }
@@ -41,6 +44,7 @@ public class ReguleringsInformasjon implements Serializable {
         reguleringsfaktor = r.reguleringsfaktor;
         gjennomsnittligUttaksgradSisteAr = r.gjennomsnittligUttaksgradSisteAr;
         reguleringsbelop = r.reguleringsbelop;
+        prisOgLonnsvekst = r.prisOgLonnsvekst;
     }
 
     /**
@@ -133,6 +137,14 @@ public class ReguleringsInformasjon implements Serializable {
 
     public double getReguleringsbelop() {
         return reguleringsbelop;
+    }
+
+    public double getPrisOgLonnsvekst() {
+        return prisOgLonnsvekst;
+    }
+
+    public void setPrisOgLonnsvekst(double prisOgLonnsvekst) {
+        this.prisOgLonnsvekst = prisOgLonnsvekst;
     }
 
 }
