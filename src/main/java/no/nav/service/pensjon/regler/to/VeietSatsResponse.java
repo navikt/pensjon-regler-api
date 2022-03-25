@@ -1,5 +1,7 @@
 package no.nav.service.pensjon.regler.to;
 
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
@@ -10,7 +12,7 @@ public class VeietSatsResponse extends ServiceResponse{
 
 	private static final long serialVersionUID = -4188790763450940004L;
 
-	private List<VeietSatsResultat> veietSatsResultater = new Vector<VeietSatsResultat>();
+	private List<VeietSatsResultat> veietSatsResultater = new ArrayList<>();
 
 	public VeietSatsResponse() {
 		super();
