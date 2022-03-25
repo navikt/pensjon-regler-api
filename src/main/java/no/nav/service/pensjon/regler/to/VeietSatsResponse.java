@@ -1,6 +1,5 @@
 package no.nav.service.pensjon.regler.to;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 
@@ -11,18 +10,18 @@ public class VeietSatsResponse extends ServiceResponse{
 
 	private static final long serialVersionUID = -4188790763450940004L;
 
-	private ArrayList<VeietSatsResultat> veietSatsResultater = new ArrayList<>();
+	private List<VeietSatsResultat> veietSatsResultater = new Vector<VeietSatsResultat>();
 
 	public VeietSatsResponse() {
 		super();
 	}
 
-	public VeietSatsResponse(ArrayList<VeietSatsResultat> veietSatsResultater) {
+	public VeietSatsResponse(List<VeietSatsResultat> veietSatsResultater) {
 		super();
 		this.veietSatsResultater = veietSatsResultater;
 	}
 
-	public ArrayList<VeietSatsResultat> getVeietSatsResultater() {
+	public List<VeietSatsResultat> getVeietSatsResultater() {
 		return veietSatsResultater;
 	}
 	
@@ -30,7 +29,7 @@ public class VeietSatsResponse extends ServiceResponse{
 		return (veietSatsResultater != null ? this.veietSatsResultater.toArray(new VeietSatsResultat[this.veietSatsResultater.size()]) : new VeietSatsResultat[0]);
 	}
 	
-	public void setVeietSatsResultater(ArrayList<VeietSatsResultat> satsResultater) {
+	public void setVeietSatsResultater(List<VeietSatsResultat> satsResultater) {
 		this.veietSatsResultater = satsResultater;
 	}
 
