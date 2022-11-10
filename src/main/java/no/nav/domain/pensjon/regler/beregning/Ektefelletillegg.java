@@ -55,7 +55,7 @@ public class Ektefelletillegg extends Ytelseskomponent {
     /**
      * Nedtrappingsgrad brukt ved utfasing av forsørgingstillegg fom 2023.
      */
-    private int nedtrappingsgrad = 100;
+    private int forsorgingstilleggNiva = 100;
 
     /**
      * Telleren i proratabrøken for EØS-avtaleberegnet tillegg
@@ -92,7 +92,7 @@ public class Ektefelletillegg extends Ytelseskomponent {
         avkortet = ektefelletillegg.avkortet;
         mpnSatsFT = ektefelletillegg.mpnSatsFT;
         tt_anv = ektefelletillegg.tt_anv;
-        nedtrappingsgrad = ektefelletillegg.nedtrappingsgrad;
+        forsorgingstilleggNiva = ektefelletillegg.forsorgingstilleggNiva;
         proratanevner = ektefelletillegg.proratanevner;
         proratateller = ektefelletillegg.proratateller;
         skattefritak = ektefelletillegg.skattefritak;
@@ -194,11 +194,12 @@ public class Ektefelletillegg extends Ytelseskomponent {
     public boolean isSkattefritak() {
         return skattefritak;
     }
-    public int getNedtrappingsgrad() {
-        return nedtrappingsgrad;
+
+    public int getForsorgingstilleggNiva() {
+        return forsorgingstilleggNiva;
     }
 
-    public void setNedtrappingsgrad(int nedtrappingsgrad) {
-        this.nedtrappingsgrad = nedtrappingsgrad;
+    public void setForsorgingstilleggNiva(int forsorgingstilleggNiva) {
+        this.forsorgingstilleggNiva = forsorgingstilleggNiva;
     }
 }
