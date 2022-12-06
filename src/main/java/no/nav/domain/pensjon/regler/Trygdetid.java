@@ -8,6 +8,7 @@ import java.util.List;
 import no.nav.domain.pensjon.regler.grunnlag.AntallArMndDag;
 import no.nav.domain.pensjon.regler.kode.RegelverkTypeCti;
 import no.nav.domain.pensjon.regler.kode.TrygdetidGarantiTypeCti;
+import no.nav.domain.pensjon.regler.kode.UtfallTypeCti;
 import no.nav.domain.pensjon.regler.util.ToStringUtil;
 
 /**
@@ -173,6 +174,8 @@ public class Trygdetid implements Serializable {
     @GuiPrompt(prompt = "Virkningsdato til og med")
     private Date virkTom;
 
+    private UtfallTypeCti anvendtFlyktning;
+
     /**
      * Copy Constructor
      *
@@ -234,6 +237,9 @@ public class Trygdetid implements Serializable {
         }
         if (trygdetid.getTt_fa() != null){
             tt_fa = new AntallArMndDag(trygdetid.getTt_fa());
+        }
+        if (trygdetid.anvendtFlyktning != null) {
+            anvendtFlyktning = new UtfallTypeCti(trygdetid.anvendtFlyktning);
         }
     }
 
