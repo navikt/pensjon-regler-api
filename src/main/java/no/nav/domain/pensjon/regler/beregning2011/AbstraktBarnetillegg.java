@@ -57,7 +57,7 @@ public abstract class AbstraktBarnetillegg extends Ytelseskomponent implements S
     /**
      * Nedtrappingsgrad brukt ved utfasing av forsørgingstillegg fom 2023.
      */
-    private int nedtrappingsgrad = 100;
+    private int forsorgingstilleggNiva = 100;
 
     /**
      * Årsaken(e) til avkorting. Satt dersom avkortet er true.
@@ -84,7 +84,7 @@ public abstract class AbstraktBarnetillegg extends Ytelseskomponent implements S
         proratateller = ab.getProratateller();
         samletInntektAvkort = ab.getSamletInntektAvkort();
         tt_anv = ab.getTt_anv();
-        nedtrappingsgrad = ab.nedtrappingsgrad;
+        forsorgingstilleggNiva = ab.forsorgingstilleggNiva;
         if (ab.avkortingsArsakList != null) {
             for (AvkortingsArsakCti arsak : ab.avkortingsArsakList) {
                 avkortingsArsakList.add(new AvkortingsArsakCti(arsak.getKode()));
@@ -171,12 +171,13 @@ public abstract class AbstraktBarnetillegg extends Ytelseskomponent implements S
     public AvkortingsArsakCti[] getArsaksListeAsArray() {
         return avkortingsArsakList != null ? avkortingsArsakList.toArray(new AvkortingsArsakCti[avkortingsArsakList.size()]) : new AvkortingsArsakCti[0];
     }
-    public int getNedtrappingsgrad() {
-        return nedtrappingsgrad;
+
+    public int getForsorgingstilleggNiva() {
+        return forsorgingstilleggNiva;
     }
 
-    public void setNedtrappingsgrad(int nedtrappingsgrad) {
-        this.nedtrappingsgrad = nedtrappingsgrad;
+    public void setForsorgingstilleggNiva(int forsorgingstilleggNiva) {
+        this.forsorgingstilleggNiva = forsorgingstilleggNiva;
     }
 
     public void setAvkortingsArsakList(List<AvkortingsArsakCti> arsaksList) {
