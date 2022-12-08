@@ -3,6 +3,7 @@ package no.nav.domain.pensjon.regler.beregning2011;
 import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.Merknad;
 import no.nav.domain.pensjon.regler.kode.FormelKodeCti;
+import no.nav.domain.pensjon.regler.kode.UtfallTypeCti;
 import no.nav.domain.pensjon.regler.trygdetid.AnvendtTrygdetid;
 
 import java.io.Serializable;
@@ -39,6 +40,8 @@ public class Minsteytelse implements Serializable {
     @GuiPrompt(prompt = "Anvendt trygdetid")
     private AnvendtTrygdetid anvendtTrygdetid;
 
+    private UtfallTypeCti anvendtFlyktning;
+
     public Minsteytelse() {
         super();
         merknadListe = new ArrayList<Merknad>();
@@ -62,9 +65,10 @@ public class Minsteytelse implements Serializable {
         if (minsteytelse.anvendtTrygdetid != null){
             anvendtTrygdetid = new AnvendtTrygdetid(minsteytelse.anvendtTrygdetid);
         }
-		
 		eksportforbud = minsteytelse.eksportforbud;
-		
+        if (minsteytelse.anvendtFlyktning != null){
+            anvendtFlyktning = new UtfallTypeCti(minsteytelse.anvendtFlyktning);
+        }
     }
 	
     public FormelKodeCti getFormelKode() {
@@ -115,4 +119,11 @@ public class Minsteytelse implements Serializable {
         this.eksportforbud = eksportforbud;
     }
 
+    public UtfallTypeCti getAnvendtFlyktning() {
+        return anvendtFlyktning;
+    }
+
+    public void setAnvendtFlyktning(UtfallTypeCti anvendtFlyktning) {
+        this.anvendtFlyktning = anvendtFlyktning;
+    }
 }
