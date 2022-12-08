@@ -10,8 +10,6 @@ import java.util.Date;
  */
 public class InntektEtterUforhet extends AbstraktBeregningsvilkar {
 
-    private static final long serialVersionUID = 1397895334311189056L;
-
     /**
      * Inntekten.
      */
@@ -22,37 +20,4 @@ public class InntektEtterUforhet extends AbstraktBeregningsvilkar {
      */
     private Date ieuDato;
 
-    public InntektEtterUforhet(){
-        super();
-    }
-
-    public InntektEtterUforhet(InntektEtterUforhet inntektEtterUforhet){
-        super(inntektEtterUforhet);
-        this.inntekt = inntektEtterUforhet.inntekt;
-        this.ieuDato = inntektEtterUforhet.ieuDato;
-    }
-
-    public int getInntekt() {
-        return inntekt;
-    }
-
-    public void setInntekt(int inntekt) {
-        this.inntekt = inntekt;
-    }
-
-    public Date getIeuDato() {
-        return ieuDato;
-    }
-
-    public void setIeuDato(Date ieuDato) {
-        this.ieuDato = ieuDato;
-    }
-
-    public AbstraktBeregningsvilkar dypKopi(AbstraktBeregningsvilkar abs) {
-        InntektEtterUforhet ieu = null;
-        if(abs.getClass() == InntektEtterUforhet.class) {
-            ieu = new InntektEtterUforhet((InntektEtterUforhet) abs);
-        }
-        return ieu;
-    }
 }

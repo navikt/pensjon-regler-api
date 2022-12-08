@@ -3,7 +3,7 @@ package no.nav.domain.pensjon.regler.beregning2011;
 import java.io.Serializable;
 
 public class JustertGarantipensjonsniva implements Serializable {
-    private static final long serialVersionUID = -7989051168459470757L;
+
 
     private Garantipensjonsniva garantipensjonsniva;
     private JusteringsInformasjon justeringsInformasjon;

@@ -6,7 +6,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Utenlandsopphold implements Serializable {
-    private static final long serialVersionUID = 2460669269502790696L;
+
     /**
      * Fra og med dato
      */

@@ -6,7 +6,6 @@ import no.nav.domain.pensjon.regler.beregning.Grunnpensjon;
  * Håndterer "gammel" beregning
  */
 public class SisteBeregning1967 extends SisteBeregning {
-    private static final long serialVersionUID = 6789715416347839132L;
 
     private Grunnpensjon gp;
     private Grunnpensjon gpKapittel3;

@@ -16,7 +16,7 @@ public class InntektTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = 208122018661277308L;
+
 
     public InntektTypeCti() {
         super();

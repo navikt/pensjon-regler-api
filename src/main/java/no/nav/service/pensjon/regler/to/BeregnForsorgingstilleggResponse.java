@@ -7,7 +7,6 @@ import no.nav.domain.pensjon.regler.beregning2011.AbstraktBeregningsResultat;
 
 public class BeregnForsorgingstilleggResponse extends ServiceResponse {
 
-    private static final long serialVersionUID = 3391055995042373077L;
 
     /**
      * Pakkseddel for beregningene.
@@ -27,38 +26,4 @@ public class BeregnForsorgingstilleggResponse extends ServiceResponse {
      */
     private AbstraktBeregningsResultat beregningsResultatSoker;
 
-    public BeregnForsorgingstilleggResponse() {
-        super();
-    }
-
-    public BeregnForsorgingstilleggResponse(Pakkseddel pakkseddel, Beregning beregningSoker, AbstraktBeregningsResultat beregningsResultatSoker) {
-        super();
-        this.pakkseddel = pakkseddel;
-        this.beregningSoker = beregningSoker;
-        this.beregningsResultatSoker = beregningsResultatSoker;
-    }
-
-    public Beregning getBeregningSoker() {
-        return beregningSoker;
-    }
-
-    public void setBeregningSoker(Beregning beregningSoker) {
-        this.beregningSoker = beregningSoker;
-    }
-
-    public Pakkseddel getPakkseddel() {
-        return pakkseddel;
-    }
-
-    public void setPakkseddel(Pakkseddel pakkseddel) {
-        this.pakkseddel = pakkseddel;
-    }
-
-    public AbstraktBeregningsResultat getBeregningsResultatSoker() {
-        return beregningsResultatSoker;
-    }
-
-    public void setBeregningsResultatSoker(AbstraktBeregningsResultat beregningsResultatSoker) {
-        this.beregningsResultatSoker = beregningsResultatSoker;
-    }
 }

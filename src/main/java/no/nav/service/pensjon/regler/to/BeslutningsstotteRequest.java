@@ -14,7 +14,6 @@ import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
  */
 public class BeslutningsstotteRequest extends ServiceRequest {
 
-    private static final long serialVersionUID = -5005325432005509170L;
 
     private BeslutningsstotteTypeCti beslutningsstotteType;
 
@@ -29,75 +28,5 @@ public class BeslutningsstotteRequest extends ServiceRequest {
     /** Inneholder nødvendig informasjon for å beregne ny forventet inntekt ifbm løpende inntektskontroll. */
     private InntektKontrollGrunnlag inntektKontrollGrunnlag;
 
-    public BeslutningsstotteRequest() {
-        super();
-    }
 
-    public BeslutningsstotteRequest(Persongrunnlag aPersongrunnlag) {
-        persongrunnlag = aPersongrunnlag;
-    }
-
-    /**
-     * @return the beslutningsstotteType
-     */
-    public BeslutningsstotteTypeCti getBeslutningsstotteType() {
-        return beslutningsstotteType;
-    }
-
-    /**
-     * @param beslutningsstotteType the beslutningsstotteType to set
-     */
-    public void setBeslutningsstotteType(BeslutningsstotteTypeCti beslutningsstotteType) {
-        this.beslutningsstotteType = beslutningsstotteType;
-    }
-
-    /**
-     * @return the vilkarsvedtak
-     */
-    public VilkarsVedtak getVilkarsvedtak() {
-        return vilkarsvedtak;
-    }
-
-    /**
-     * @param vilkarsvedtak the vilkarsvedtak to set
-     */
-    public void setVilkarsvedtak(VilkarsVedtak vilkarsvedtak) {
-        this.vilkarsvedtak = vilkarsvedtak;
-    }
-
-    /**
-     * @return the persongrunnlag
-     */
-    public Persongrunnlag getPersongrunnlag() {
-        return persongrunnlag;
-    }
-
-    /**
-     * @param persongrunnlag the persongrunnlag to set
-     */
-    public void setPersongrunnlag(Persongrunnlag persongrunnlag) {
-        this.persongrunnlag = persongrunnlag;
-    }
-
-    /**
-     * @return the benyttetSivilstand
-     */
-    public BorMedTypeCti getBenyttetSivilstand() {
-        return benyttetSivilstand;
-    }
-
-    /**
-     * @param benyttetSivilstand the benyttetSivilstand to set
-     */
-    public void setBenyttetSivilstand(BorMedTypeCti benyttetSivilstand) {
-        this.benyttetSivilstand = benyttetSivilstand;
-    }
-
-    public InntektKontrollGrunnlag getInntektKontrollGrunnlag() {
-        return inntektKontrollGrunnlag;
-    }
-
-    public void setInntektKontrollGrunnlag(InntektKontrollGrunnlag inntektKontrollGrunnlag) {
-        this.inntektKontrollGrunnlag = inntektKontrollGrunnlag;
-    }
 }

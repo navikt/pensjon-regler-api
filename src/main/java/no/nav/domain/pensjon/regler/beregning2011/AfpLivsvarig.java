@@ -5,8 +5,6 @@ import no.nav.domain.pensjon.regler.kode.FormelKodeCti;
 import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
 
 public class AfpLivsvarig extends Ytelseskomponent {
-    private static final long serialVersionUID = 8482215632698056210L;
-
     private int justeringsbelop;
     private double afpProsentgrad;
     private double afpForholdstall;
@@ -33,19 +31,5 @@ public class AfpLivsvarig extends Ytelseskomponent {
         ytelsekomponentType = new YtelsekomponentTypeCti("AFP_LIVSVARIG");
     }
 
-    public AfpLivsvarig(AfpLivsvarig o) {
-        super(o);
-        afpForholdstall = o.afpForholdstall;
-        afpProsentgrad = o.afpProsentgrad;
-        justeringsbelop = o.justeringsbelop;
-    }
-
-    public int getJusteringsbelop() {
-        return justeringsbelop;
-    }
-
-    public void setJusteringsbelop(int justeringsbelop) {
-        this.justeringsbelop = justeringsbelop;
-    }
 
 }

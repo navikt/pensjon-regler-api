@@ -7,7 +7,7 @@ import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
  * Endre navn fra "SamletEktefellerGarantitillegg" til "MinstenivatilleggPensjonistpar"
  */
 public class MinstenivatilleggPensjonistpar extends Ytelseskomponent {
-    private static final long serialVersionUID = -21825212890064833L;
+
 
     private BeregningsInformasjonMinstenivatilleggPensjonistpar bruker;
     private BeregningsInformasjonMinstenivatilleggPensjonistpar ektefelle;

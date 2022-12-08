@@ -7,7 +7,7 @@ import no.nav.domain.pensjon.regler.grunnlag.OppfyltVedSammenlegging;
  */
 public class MedlemskapForUTEtterTrygdeavtaler extends AbstraktVilkar{
 
-    private static final long serialVersionUID = 397578692098996165L;
+
 
     /**
      * Inneholder informasjon om bruker har inngang gjennom sammenlegging av trygdetid i avtaleland og Norge.

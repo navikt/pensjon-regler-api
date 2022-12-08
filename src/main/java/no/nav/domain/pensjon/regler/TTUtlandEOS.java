@@ -1,7 +1,4 @@
 package no.nav.domain.pensjon.regler;
-
-import no.nav.domain.pensjon.regler.util.ToStringUtil;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +8,7 @@ import java.util.List;
  */
 public class TTUtlandEOS implements Serializable {
 
-    private static final long serialVersionUID = -4225440287502472443L;
+    
 
     /**
      * Framtidig trygdetid EØS i antall måneder.
@@ -72,163 +69,5 @@ public class TTUtlandEOS implements Serializable {
      */
     private List<Merknad> merknadListe;
 
-    /**
-     * Copy Constructor
-     * 
-     * @param tTUtlandEOS a <code>TTUtlandEOS</code> object
-     */
-    public TTUtlandEOS(TTUtlandEOS tTUtlandEOS) {
-        ftt_eos = tTUtlandEOS.ftt_eos;
-        ftt_eos_redusert = tTUtlandEOS.ftt_eos_redusert;
-        tt_eos_anv_mnd = tTUtlandEOS.tt_eos_anv_mnd;
-        tt_eos_anv_ar = tTUtlandEOS.tt_eos_anv_ar;
-        tt_eos_pro_rata_mnd = tTUtlandEOS.tt_eos_pro_rata_mnd;
-        tt_eos_teoretisk_mnd = tTUtlandEOS.tt_eos_teoretisk_mnd;
-        tt_eos_teller = tTUtlandEOS.tt_eos_teller;
-        tt_eos_nevner = tTUtlandEOS.tt_eos_nevner;
-        tt_lik_pa = tTUtlandEOS.tt_lik_pa;
-        tt_konvensjon_ar = tTUtlandEOS.tt_konvensjon_ar;
-        merknadListe = new ArrayList<Merknad>();
-        if (tTUtlandEOS.merknadListe != null) {
-            for (Merknad merknad : tTUtlandEOS.merknadListe) {
-                merknadListe.add(new Merknad(merknad));
-            }
-        }
-    }
-
-    public TTUtlandEOS(int ftt_eos, boolean ftt_eos_redusert, int tt_eos_anv_mnd, int tt_eos_anv_ar, int tt_eos_pro_rata_mnd, int tt_eos_teoretisk_mnd, int tt_eos_teller,
-                       int tt_eos_nevner, boolean tt_lik_pa, int tt_konvensjon_ar) {
-        this();
-        this.ftt_eos = ftt_eos;
-        this.ftt_eos_redusert = ftt_eos_redusert;
-        this.tt_eos_anv_mnd = tt_eos_anv_mnd;
-        this.tt_eos_anv_ar = tt_eos_anv_ar;
-        this.tt_eos_pro_rata_mnd = tt_eos_pro_rata_mnd;
-        this.tt_eos_teoretisk_mnd = tt_eos_teoretisk_mnd;
-        this.tt_eos_teller = tt_eos_teller;
-        this.tt_eos_nevner = tt_eos_nevner;
-        this.tt_lik_pa = tt_lik_pa;
-        this.tt_konvensjon_ar = tt_konvensjon_ar;
-    }
-
-    public TTUtlandEOS() {
-        super();
-        merknadListe = new ArrayList<Merknad>();
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the merknad as array.
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[merknadListe.size()]);
-    }
-
-    /**
-     * Read only property for merknadListe as array.
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
-    /*
-     * Generic version. Uses reflection to print field names and values.
-     * @see java.lang.Object#toString()
-     */
-    @Override
-    public String toString() {
-        return ToStringUtil.toString(this);
-    }
-
-    public int getFtt_eos() {
-        return ftt_eos;
-    }
-
-    public void setFtt_eos(int ftt_eos) {
-        this.ftt_eos = ftt_eos;
-    }
-
-    public boolean isFtt_eos_redusert() {
-        return ftt_eos_redusert;
-    }
-
-    public void setFtt_eos_redusert(boolean ftt_eos_redusert) {
-        this.ftt_eos_redusert = ftt_eos_redusert;
-    }
-
-    public List<Merknad> getMerknadListe() {
-        return merknadListe;
-    }
-
-    public void setMerknadListe(List<Merknad> merknadListe) {
-        this.merknadListe = merknadListe;
-    }
-
-    public int getTt_eos_anv_ar() {
-        return tt_eos_anv_ar;
-    }
-
-    public void setTt_eos_anv_ar(int tt_eos_anv_ar) {
-        this.tt_eos_anv_ar = tt_eos_anv_ar;
-    }
-
-    public int getTt_eos_anv_mnd() {
-        return tt_eos_anv_mnd;
-    }
-
-    public void setTt_eos_anv_mnd(int tt_eos_anv_mnd) {
-        this.tt_eos_anv_mnd = tt_eos_anv_mnd;
-    }
-
-    public int getTt_eos_nevner() {
-        return tt_eos_nevner;
-    }
-
-    public void setTt_eos_nevner(int tt_eos_nevner) {
-        this.tt_eos_nevner = tt_eos_nevner;
-    }
-
-    public int getTt_eos_pro_rata_mnd() {
-        return tt_eos_pro_rata_mnd;
-    }
-
-    public void setTt_eos_pro_rata_mnd(int tt_eos_pro_rata_mnd) {
-        this.tt_eos_pro_rata_mnd = tt_eos_pro_rata_mnd;
-    }
-
-    public int getTt_eos_teller() {
-        return tt_eos_teller;
-    }
-
-    public void setTt_eos_teller(int tt_eos_teller) {
-        this.tt_eos_teller = tt_eos_teller;
-    }
-
-    public int getTt_eos_teoretisk_mnd() {
-        return tt_eos_teoretisk_mnd;
-    }
-
-    public void setTt_eos_teoretisk_mnd(int tt_eos_teoretisk_mnd) {
-        this.tt_eos_teoretisk_mnd = tt_eos_teoretisk_mnd;
-    }
-
-    public int getTt_konvensjon_ar() {
-        return tt_konvensjon_ar;
-    }
-
-    public void setTt_konvensjon_ar(int tt_konvensjon_ar) {
-        this.tt_konvensjon_ar = tt_konvensjon_ar;
-    }
-
-    public boolean isTt_lik_pa() {
-        return tt_lik_pa;
-    }
-
-    public void setTt_lik_pa(boolean tt_lik_pa) {
-        this.tt_lik_pa = tt_lik_pa;
-    }
 
 }

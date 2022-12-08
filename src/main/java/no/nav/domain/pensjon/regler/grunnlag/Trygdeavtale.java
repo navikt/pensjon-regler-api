@@ -10,7 +10,7 @@ import java.util.Date;
 
 public class Trygdeavtale implements Serializable {
 
-    private static final long serialVersionUID = -8708777357649859038L;
+    
     /**
      * Hvilket land personen bor i. Se /2/, arkfane K_AVTALELAND_T
      */

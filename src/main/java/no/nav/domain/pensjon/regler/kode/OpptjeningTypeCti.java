@@ -16,7 +16,7 @@ public class OpptjeningTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = -5412793732437544394L;
+
 
     public OpptjeningTypeCti() {
         super();

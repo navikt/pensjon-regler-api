@@ -7,14 +7,11 @@ import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
  */
 public class Sykepenger extends MotregningYtelseskomponent {
 
-    private static final long serialVersionUID = 715401119582214508L;
+
 
     public Sykepenger() {
         super();
         ytelsekomponentType = new YtelsekomponentTypeCti("SP");
     }
 
-    public Sykepenger(Sykepenger sykepenger) {
-        super(sykepenger);
-    }
 }

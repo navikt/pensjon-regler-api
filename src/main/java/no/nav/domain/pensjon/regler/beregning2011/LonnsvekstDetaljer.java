@@ -5,7 +5,6 @@ import java.util.Date;
 
 public class LonnsvekstDetaljer implements Serializable, ILonnsvekst {
 
-    private static final long serialVersionUID = 3154627167523454725L;
 
     private Date justeringTomDato;
     private double justeringsfaktor;

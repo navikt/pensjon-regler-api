@@ -7,7 +7,7 @@ import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
  */
 public class SkattefriGrunnpensjon extends BeregningYtelseskomponent {
 
-    private static final long serialVersionUID = -5242405294762663752L;
+    
 
     private Integer pensjonsgrad = 0;
 
@@ -16,16 +16,4 @@ public class SkattefriGrunnpensjon extends BeregningYtelseskomponent {
         ytelsekomponentType = new YtelsekomponentTypeCti("SKATT_F_GP");
     }
 
-    public SkattefriGrunnpensjon(SkattefriGrunnpensjon skattefriGrunnpensjon) {
-        super(skattefriGrunnpensjon);
-        setPensjonsgrad(skattefriGrunnpensjon.getPensjonsgrad());
-    }
-
-    public Integer getPensjonsgrad() {
-        return pensjonsgrad;
-    }
-
-    public void setPensjonsgrad(Integer pensjonsgrad) {
-        this.pensjonsgrad = pensjonsgrad;
-    }
 }

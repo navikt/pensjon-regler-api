@@ -1,23 +1,18 @@
 package no.nav.domain.pensjon.regler.beregning2011;
 
-import no.nav.domain.pensjon.regler.GuiPrompt;
-
 import java.io.Serializable;
 
 public class InntektBT implements Serializable {
 
-    private static final long serialVersionUID = 8675592913035533480L;
+    
 
     /** Ny forventet inntekt */
-    @GuiPrompt(prompt = "Ny forventet inntekt")
     private int samletForventetInntekt;
 
     /** Detaljer rundt søkers andel av ny forventet inntekt. */
-    @GuiPrompt(prompt = "Detaljer rundt søkers andel av ny forventet inntekt")
     private BeregnetInntekt soker;
 
     /** Detaljer rundt eps andel av ny forventet inntekt. */
-    @GuiPrompt(prompt = "Detaljer rundt eps andel av ny forventet inntekt")
     private BeregnetInntekt eps;
 
     public InntektBT() {

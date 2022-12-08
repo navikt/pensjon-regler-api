@@ -5,7 +5,7 @@ public class BorMedTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = 4597066548457561498L;
+    
 
     public BorMedTypeCti() {
         super();

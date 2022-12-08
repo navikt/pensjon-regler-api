@@ -16,7 +16,7 @@ public class SivilstandTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = -4524203037046867761L;
+
 
     public SivilstandTypeCti() {
         super();

@@ -2,7 +2,7 @@ package no.nav.domain.pensjon.regler.kode;
 
 public class GPSatsTypeCti extends TypeCti {
 
-    private static final long serialVersionUID = -143021596183424410L;
+    
 
     public GPSatsTypeCti() {
         super();

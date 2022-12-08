@@ -5,7 +5,7 @@ public class ProRataBeregningTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = 1L;
+
 
     public ProRataBeregningTypeCti() {
         super();

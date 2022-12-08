@@ -16,7 +16,7 @@ public class VilkarsvedtakResultatCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = 2882437281139870835L;
+
 
     public VilkarsvedtakResultatCti() {
         super();

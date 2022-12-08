@@ -1,31 +1,24 @@
-package no.nav.domain.pensjon.regler.grunnlag;
+package no.nav.domain.pensjon.regler.grunnlag
 
-import no.nav.domain.pensjon.regler.GuiPrompt;
-import no.nav.domain.pensjon.regler.kode.GrunnlagKildeCti;
-import no.nav.domain.pensjon.regler.kode.InntektTypeCti;
-import no.nav.domain.pensjon.regler.util.Copyable;
-import no.nav.domain.pensjon.regler.util.DateCompareUtil;
-import no.nav.domain.pensjon.regler.util.ToStringUtil;
+import no.nav.domain.pensjon.regler.GuiPrompt
+import no.nav.domain.pensjon.regler.kode.GrunnlagKildeCti
+import no.nav.domain.pensjon.regler.kode.InntektTypeCti
+import java.io.Serializable
+import java.util.*
 
-import java.io.Serializable;
-import java.util.Date;
-
-public class Inntektsgrunnlag implements Comparable<Inntektsgrunnlag>, Serializable, Copyable<Inntektsgrunnlag> {
-
-    private static final long serialVersionUID = 8356887987852527326L;
-
-    /*
+class Inntektsgrunnlag : Serializable {
+    /**
      * Unik identifikator for Inntektsgrunnlag. Endres ikke av regelmotoren,
      * men Inntektsgrunnlag med null id kan opprettes av batchtjenestene,
      * derfor settes den til typen wrapperobjekt Long i stedet for primitiven long.
      */
-    private Long inntektsgrunnlagId;
+    private var inntektsgrunnlagId: Long? = null
 
     /**
      * Inntektens størrelse, i hele kroner.
      */
     @GuiPrompt(prompt = "Inntekt")
-    private int belop;
+    private var belop = 0
 
     /**
      * Kode som angir type inntekt. Se K_INNTEKT_T.
@@ -45,52 +38,52 @@ public class Inntektsgrunnlag implements Comparable<Inntektsgrunnlag>, Serializa
      * KAP Kapitalinntekt
      */
     @GuiPrompt(prompt = "Inntektstype")
-    private InntektTypeCti inntektType;
+    private var inntektType: InntektTypeCti? = null
 
     /**
      * fra-og-med dato for gyldigheten av inntektsgrunnlaget.
      */
     @GuiPrompt(prompt = "Fra og med dato")
-    private Date fom;
+    private var fom: Date? = null
 
     /**
      * til-og-med dato for gyldigheten av inntektsgrunnlaget.
      */
     @GuiPrompt(prompt = "Til og med dato")
-    private Date tom;
+    private var tom: Date? = null
 
     /**
      * Angir om inntektsgrunnlaget brukes som grunnlag på kravet.
      */
-    private boolean bruk;
+    private var bruk: Boolean
 
     /**
      * Kilden til inntektsgrunnlaget.
      */
-    private GrunnlagKildeCti grunnlagKilde;
+    private var grunnlagKilde: GrunnlagKildeCti? = null
 
     /**
      * Copy Constructor
-     * 
-     * @param inntektsgrunnlag a <code>Inntektsgrunnlag</code> object
+     *
+     * @param inntektsgrunnlag a `Inntektsgrunnlag` object
      */
-    public Inntektsgrunnlag(Inntektsgrunnlag inntektsgrunnlag) {
+    constructor(inntektsgrunnlag: Inntektsgrunnlag) {
         if (inntektsgrunnlag.inntektsgrunnlagId != null) {
-            inntektsgrunnlagId = new Long(inntektsgrunnlag.inntektsgrunnlagId);
+            inntektsgrunnlagId = inntektsgrunnlag.inntektsgrunnlagId
         }
-        belop = inntektsgrunnlag.belop;
+        belop = inntektsgrunnlag.belop
         if (inntektsgrunnlag.inntektType != null) {
-            inntektType = new InntektTypeCti(inntektsgrunnlag.inntektType);
+            inntektType = InntektTypeCti(inntektsgrunnlag.inntektType)
         }
         if (inntektsgrunnlag.fom != null) {
-            fom = (Date) inntektsgrunnlag.fom.clone();
+            fom = inntektsgrunnlag.fom!!.clone() as Date
         }
         if (inntektsgrunnlag.tom != null) {
-            tom = (Date) inntektsgrunnlag.tom.clone();
+            tom = inntektsgrunnlag.tom!!.clone() as Date
         }
-        bruk = inntektsgrunnlag.bruk;
+        bruk = inntektsgrunnlag.bruk
         if (inntektsgrunnlag.grunnlagKilde != null) {
-            grunnlagKilde = new GrunnlagKildeCti(inntektsgrunnlag.grunnlagKilde);
+            grunnlagKilde = GrunnlagKildeCti(inntektsgrunnlag.grunnlagKilde)
         }
     }
 
@@ -98,130 +91,38 @@ public class Inntektsgrunnlag implements Comparable<Inntektsgrunnlag>, Serializa
      * Copy constructor
      * Brukes i spesialtilfeller der vi vil opprette et inntektsgrunnlag fra Blaze hvor ID skal være null.
      * Dette brukes i enkelte batchtjenester, og kan ikke gjøres direkte i Blaze fordi Long blir mappet til integer.
-     * 
+     *
      * @param inntektsgrunnlag
      * @param inntektsgrunnlagIdNull
      */
-    public Inntektsgrunnlag(Inntektsgrunnlag inntektsgrunnlag, boolean inntektsgrunnlagIdNull) {
-        this(inntektsgrunnlag);
+    constructor(inntektsgrunnlag: Inntektsgrunnlag, inntektsgrunnlagIdNull: Boolean) : this(inntektsgrunnlag) {
         if (inntektsgrunnlagIdNull) {
-            inntektsgrunnlagId = null;
+            inntektsgrunnlagId = null
         }
-
     }
 
-    public Inntektsgrunnlag(Long inntektsgrunnlagId, int belop, InntektTypeCti inntektType, Date fom, Date tom, boolean bruk, GrunnlagKildeCti grunnlagKilde) {
-        this();
-        this.inntektsgrunnlagId = inntektsgrunnlagId;
-        this.belop = belop;
-        this.inntektType = inntektType;
-        this.fom = fom;
-        this.tom = tom;
-        this.bruk = bruk;
-        this.grunnlagKilde = grunnlagKilde;
+    constructor(
+        inntektsgrunnlagId: Long?,
+        belop: Int,
+        inntektType: InntektTypeCti?,
+        fom: Date?,
+        tom: Date?,
+        bruk: Boolean,
+        grunnlagKilde: GrunnlagKildeCti?
+    ) : this() {
+        this.inntektsgrunnlagId = inntektsgrunnlagId
+        this.belop = belop
+        this.inntektType = inntektType
+        this.fom = fom
+        this.tom = tom
+        this.bruk = bruk
+        this.grunnlagKilde = grunnlagKilde
     }
 
     /**
      * private boolean kopiertFraGammeltKrav;
      */
-
-    public Inntektsgrunnlag() {
-        super();
-        bruk = true;
+    constructor() : super() {
+        bruk = true
     }
-
-    /**
-     * @return Returns the belop.
-     */
-    public int getBelop() {
-        return belop;
-    }
-
-    /**
-     * @param belop The belop to set.
-     */
-    public void setBelop(int belop) {
-        this.belop = belop;
-    }
-
-    /**
-     * @return Returns the type.
-     */
-    public InntektTypeCti getInntektType() {
-        return inntektType;
-    }
-
-    /**
-     * @param type The type to set.
-     */
-    public void setInntektType(InntektTypeCti inntektTypeCti) {
-        inntektType = inntektTypeCti;
-    }
-
-    @Override
-    public String toString() {
-        return ToStringUtil.toString(this);
-    }
-
-    public Date getFom() {
-        return fom;
-    }
-
-    public void setFom(Date fom) {
-        this.fom = fom;
-    }
-
-    public Date getTom() {
-        return tom;
-    }
-
-    public void setTom(Date tom) {
-        this.tom = tom;
-    }
-
-    public boolean isBruk() {
-        return bruk;
-    }
-
-    public void setBruk(boolean bruk) {
-        this.bruk = bruk;
-    }
-
-    public GrunnlagKildeCti getGrunnlagKilde() {
-        return grunnlagKilde;
-    }
-
-    public void setGrunnlagKilde(GrunnlagKildeCti grunnlagKilde) {
-        this.grunnlagKilde = grunnlagKilde;
-    }
-
-    /*
-     * (non-Javadoc)
-     * @see java.lang.Comparable#compareTo(java.lang.Object)
-     */
-    @Override
-    public int compareTo(Inntektsgrunnlag inntektsgrunnlag) {
-        return DateCompareUtil.compareTo(getFom(), inntektsgrunnlag.getFom());
-    }
-
-    public Long getInntektsgrunnlagId() {
-        return inntektsgrunnlagId;
-    }
-
-    public void setInntektsgrunnlagId(Long inntektsgrunnlagId) {
-        this.inntektsgrunnlagId = inntektsgrunnlagId;
-    }
-
-    public boolean isInntektsgrunnlagIdNull() {
-        if (inntektsgrunnlagId == null) {
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public Inntektsgrunnlag deepCopy() {
-        return new Inntektsgrunnlag(this);
-    }
-
 }

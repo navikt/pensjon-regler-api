@@ -2,7 +2,7 @@ package no.nav.domain.pensjon.regler.kode;
 
 public class KravVelgTypeCti extends TypeCti {
 
-    private static final long serialVersionUID = 1L;
+
     /**
      * Kode som angir detaljering av kravet.
      * Se K_KRAV_VELG_T

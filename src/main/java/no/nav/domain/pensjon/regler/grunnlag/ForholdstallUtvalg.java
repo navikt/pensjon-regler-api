@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class ForholdstallUtvalg implements Serializable {
-    private static final long serialVersionUID = 3264788693720512852L;
+
 
     private double ft;
     private double PREG_ft67soker;

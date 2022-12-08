@@ -6,7 +6,7 @@ import java.io.Serializable;
  * @author Lars Hartvigsen (Decisive), PK-5610
  */
 public class AntallArMndDag implements Serializable {
-    private static final long serialVersionUID = -5275510642212265116L;
+    
     /**
      * Antall år som skal beskrives.
      */

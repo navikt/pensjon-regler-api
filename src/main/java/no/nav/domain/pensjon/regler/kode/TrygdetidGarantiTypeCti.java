@@ -7,7 +7,7 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class TrygdetidGarantiTypeCti extends TypeCti {
 
-    private static final long serialVersionUID = 3893598271442970148L;
+    
 
     public TrygdetidGarantiTypeCti() {
         super();

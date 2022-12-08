@@ -12,7 +12,7 @@ import java.io.Serializable;
  */
 public class Mendel extends Ytelseskomponent implements Serializable {
 
-    private static final long serialVersionUID = -6043801067268076589L;
+
 
     public Mendel(Mendel mendel) {
         super(mendel);

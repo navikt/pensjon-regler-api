@@ -15,7 +15,7 @@ import java.util.List;
  */
 
 public class MinstePensjonsniva implements Serializable {
-    private static final long serialVersionUID = 4045032057608587522L;
+    
 
     private double belop;
     private double sats;

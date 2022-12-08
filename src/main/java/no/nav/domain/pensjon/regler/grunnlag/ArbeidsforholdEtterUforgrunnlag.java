@@ -1,7 +1,5 @@
 package no.nav.domain.pensjon.regler.grunnlag;
 
-import no.nav.domain.pensjon.regler.util.DateCompareUtil;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -9,8 +7,8 @@ import java.util.Date;
  * @author Lars Hartviksen (Decisive), PK-6985
  * @author Aasmund Nordstoga (Accenture) - PK-16378, PKPYTON-1754
  */
-public class ArbeidsforholdEtterUforgrunnlag implements Serializable, Comparable<ArbeidsforholdEtterUforgrunnlag> {
-    private static final long serialVersionUID = 6270045905274527907L;
+public class ArbeidsforholdEtterUforgrunnlag implements Serializable {
+
 
     /**
      * Fom date for arbeidsforholdet.
@@ -27,61 +25,4 @@ public class ArbeidsforholdEtterUforgrunnlag implements Serializable, Comparable
      */
     private boolean varigTilrettelagtArbeid;
 
-    public ArbeidsforholdEtterUforgrunnlag() {
-        super();
-    }
-
-    public ArbeidsforholdEtterUforgrunnlag(ArbeidsforholdEtterUforgrunnlag arbeidsforholdEtterUforgrunnlag) {
-        if (arbeidsforholdEtterUforgrunnlag.fomDato != null) {
-            this.fomDato = arbeidsforholdEtterUforgrunnlag.getFomDato();
-        }
-        this.stillingsprosent = arbeidsforholdEtterUforgrunnlag.getStillingsprosent();
-        this.varigTilrettelagtArbeid = arbeidsforholdEtterUforgrunnlag.isVarigTilrettelagtArbeid();
-    }
-
-    /**
-     * @return the start date
-     */
-    public Date getFomDato() {
-        return fomDato;
-    }
-
-    /**
-     * @return fomDato the start date to set
-     */
-    public void setFomDato(Date fomDato) {
-        this.fomDato = fomDato;
-    }
-
-    /**
-     * @return the work load
-     */
-    public int getStillingsprosent() {
-        return stillingsprosent;
-    }
-
-    /**
-     * @param stillingsprosent the work load to set
-     */
-    public void setStillingsprosent(int stillingsprosent) {
-        this.stillingsprosent = stillingsprosent;
-    }
-
-    /**
-     * @return if it is lasting facilitated work
-     */
-    public boolean isVarigTilrettelagtArbeid() {
-        return varigTilrettelagtArbeid;
-    }
-
-    /**
-     * @param varigTilrettelagtArbeid if it is lasting facilitated work
-     */
-    public void setVarigTilrettelagtArbeid(boolean varigTilrettelagtArbeid) {
-        this.varigTilrettelagtArbeid = varigTilrettelagtArbeid;
-    }
-
-    public int compareTo(ArbeidsforholdEtterUforgrunnlag arbeidsforholdEtterUforgrunnlag) {
-        return DateCompareUtil.compareTo(getFomDato(), arbeidsforholdEtterUforgrunnlag.getFomDato());
-    }
 }

@@ -11,37 +11,15 @@ import java.io.Serializable;
  */
 public class BarnetilleggSerkullsbarnUT extends AbstraktBarnetilleggUT implements Serializable {
 
-    private static final long serialVersionUID = -2197770710503560569L;
-	
 	/**
      * Brukers gjenlevendetillegg før justering.
      */
-	// @GuiPrompt(prompt = "Brukers gjenlevendetillegg")
     private int brukersGjenlevendetilleggForJustering;
 
     public BarnetilleggSerkullsbarnUT() {
         super();
         ytelsekomponentType = new YtelsekomponentTypeCti("UT_TSB");
         setFormelKode(new FormelKodeCti("BTx"));
-		
     }
 
-    /**
-     * Copy Constructor
-     * 
-     * @param barnetilleggFellesbarnUT an instance of {@link BarnetilleggSerkullsbarnUT} to copy values from
-     */
-    public BarnetilleggSerkullsbarnUT(BarnetilleggSerkullsbarnUT barnetilleggFellesbarnUT) {
-        super(barnetilleggFellesbarnUT);
-		brukersGjenlevendetilleggForJustering = barnetilleggFellesbarnUT.brukersGjenlevendetilleggForJustering;
-		
-    }
-	
-	public int getBrukersGjenlevendetilleggForJustering() {
-		return brukersGjenlevendetilleggForJustering;
-    }
-	
-	public void setBrukersGjenlevendetilleggForJustering(int brukersGjenlevendetilleggForJustering) {
-       this.brukersGjenlevendetilleggForJustering = brukersGjenlevendetilleggForJustering;
-    }
 }

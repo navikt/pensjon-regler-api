@@ -8,7 +8,7 @@ import no.nav.domain.pensjon.regler.grunnlag.Unntak;
  */
 public class ForutgaendeMedlemskap extends AbstraktVilkar {
 
-    private static final long serialVersionUID = 2858597186833244603L;
+    
     /**
      * Minst tre års forutgående medlemskap i Norge med uføretidspunkt FOM 01.01.1994
      */

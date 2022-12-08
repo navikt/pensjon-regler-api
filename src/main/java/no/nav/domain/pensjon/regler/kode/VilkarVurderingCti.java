@@ -6,7 +6,7 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class VilkarVurderingCti extends TypeCti {
 
-    private static final long serialVersionUID = 8137611801947991746L;
+    
 
     public VilkarVurderingCti() {
         super();

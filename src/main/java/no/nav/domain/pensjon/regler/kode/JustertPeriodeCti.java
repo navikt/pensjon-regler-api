@@ -7,7 +7,7 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class JustertPeriodeCti extends TypeCti {
 
-    private static final long serialVersionUID = -7989873544574196759L;
+
 
     public JustertPeriodeCti() {
         super();

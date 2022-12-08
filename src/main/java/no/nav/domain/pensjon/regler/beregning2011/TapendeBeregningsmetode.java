@@ -11,7 +11,7 @@ import java.io.Serializable;
  */
 public class TapendeBeregningsmetode implements Serializable {
 
-    private static final long serialVersionUID = 5549007092019731842L;
+    
 
     private BeregningMetodeTypeCti beregningMetodeTypeCti;
     private long tapendeBeregningsmetodeId;

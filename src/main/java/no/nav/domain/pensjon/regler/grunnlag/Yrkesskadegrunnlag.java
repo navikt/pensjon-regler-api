@@ -1,7 +1,6 @@
 package no.nav.domain.pensjon.regler.grunnlag;
 
 import no.nav.domain.pensjon.regler.kode.YrkeYrkesskadeCti;
-import no.nav.domain.pensjon.regler.util.ToStringUtil;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -14,7 +13,7 @@ import java.util.Date;
  */
 public class Yrkesskadegrunnlag implements Serializable {
 
-    private static final long serialVersionUID = 5541265776710096836L;
+
 
     /**
      * Dato for skadetidspunkt.
@@ -53,105 +52,4 @@ public class Yrkesskadegrunnlag implements Serializable {
      * Angir om yrkesskadegrunnlaget brukes som grunnlag på kravet.
      */
     private boolean bruk;
-
-    /**
-     * Copy Constructor
-     * 
-     * @param yrkesskadegrunnlag a <code>Yrkesskadegrunnlag</code> object
-     */
-    public Yrkesskadegrunnlag(Yrkesskadegrunnlag yrkesskadegrunnlag) {
-        if (yrkesskadegrunnlag.yst != null) {
-            yst = (Date) yrkesskadegrunnlag.yst.clone();
-        }
-        yug = yrkesskadegrunnlag.yug;
-        yrkessykdom = yrkesskadegrunnlag.yrkessykdom;
-        if (yrkesskadegrunnlag.yrke != null) {
-            yrke = new YrkeYrkesskadeCti(yrkesskadegrunnlag.yrke);
-        }
-        brukerForsorgetAvAvdod = yrkesskadegrunnlag.brukerForsorgetAvAvdod;
-        antattArligInntekt = yrkesskadegrunnlag.antattArligInntekt;
-        bruk = yrkesskadegrunnlag.bruk;
-    }
-
-    public Yrkesskadegrunnlag(Date yst, int yug, boolean yrkessykdom, YrkeYrkesskadeCti yrke, boolean brukerForsorgetAvAvdod, int antattArligInntekt, boolean bruk) {
-        super();
-        this.yst = yst;
-        this.yug = yug;
-        this.yrkessykdom = yrkessykdom;
-        this.yrke = yrke;
-        this.brukerForsorgetAvAvdod = brukerForsorgetAvAvdod;
-        this.antattArligInntekt = antattArligInntekt;
-        this.bruk = bruk;
-    }
-
-    public Yrkesskadegrunnlag() {
-        super();
-        bruk = true;
-    }
-
-    /*
-     * Generic version. Uses reflection to print field names and values.
-     * @see java.lang.Object#toString()
-     */
-    @Override
-    public String toString() {
-        return ToStringUtil.toString(this);
-    }
-
-    public int getAntattArligInntekt() {
-        return antattArligInntekt;
-    }
-
-    public void setAntattArligInntekt(int antattArligInntekt) {
-        this.antattArligInntekt = antattArligInntekt;
-    }
-
-    public boolean isBruk() {
-        return bruk;
-    }
-
-    public void setBruk(boolean bruk) {
-        this.bruk = bruk;
-    }
-
-    public boolean isBrukerForsorgetAvAnnen() {
-        return brukerForsorgetAvAvdod;
-    }
-
-    public void setBrukerForsorgetAvAnnen(boolean brukerForsorgetAvAvdod) {
-        this.brukerForsorgetAvAvdod = brukerForsorgetAvAvdod;
-    }
-
-    public YrkeYrkesskadeCti getYrke() {
-        return yrke;
-    }
-
-    public void setYrke(YrkeYrkesskadeCti yrke) {
-        this.yrke = yrke;
-    }
-
-    public boolean isYrkessykdom() {
-        return yrkessykdom;
-    }
-
-    public void setYrkessykdom(boolean yrkessykdom) {
-        this.yrkessykdom = yrkessykdom;
-    }
-
-    public Date getYst() {
-        return yst;
-    }
-
-    public void setYst(Date yst) {
-        this.yst = yst;
-    }
-
-    public int getYug() {
-        return yug;
-    }
-
-    public void setYug(int yug) {
-        this.yug = yug;
-    }
-
 }

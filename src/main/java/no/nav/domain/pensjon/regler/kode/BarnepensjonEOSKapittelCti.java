@@ -2,7 +2,7 @@ package no.nav.domain.pensjon.regler.kode;
 
 public class BarnepensjonEOSKapittelCti extends TypeCti {
 
-    private static final long serialVersionUID = -7614445817803042321L;
+    
 
     public BarnepensjonEOSKapittelCti() {
         super();

@@ -5,7 +5,7 @@ package no.nav.domain.pensjon.regler.vedtak;
  */
 public class RettTilGjenlevendetillegg extends AbstraktVilkar {
 
-    private static final long serialVersionUID = -6553487037750573784L;
+
     /**
      * Angir om gjenlevendetillegget skal beregnes som konvertert eller ikke.
      */

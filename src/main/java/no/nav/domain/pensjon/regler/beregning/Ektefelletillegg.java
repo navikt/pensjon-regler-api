@@ -1,6 +1,5 @@
 package no.nav.domain.pensjon.regler.beregning;
 
-import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.kode.AvkortingsArsakCti;
 import no.nav.domain.pensjon.regler.kode.FormelKodeCti;
 import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
@@ -14,42 +13,36 @@ import java.util.List;
 
 public class Ektefelletillegg extends Ytelseskomponent {
 
-    private static final long serialVersionUID = -2250297845903930169L;
+    
 
     /**
      * Fribeløpet
      */
-    @GuiPrompt(prompt = "Fribeløp")
     private int fribelop;
 
     /**
      * Summen av inntektene som kan bli lagt til grunn ved avkorting, selv når det ikke fører til avkorting.
      */
-    @GuiPrompt(prompt = "Sum inntekt ved avkorting")
     private int samletInntektAvkort;
 
     /**
      * Angir om tillegget er avkortet.
      */
-    @GuiPrompt(prompt = "Avkortet")
     private boolean avkortet;
 
     /**
      * Årsaken(e) til avkorting. Satt dersom avkortet er true.
      */
-    @GuiPrompt(prompt = "Årsak til avkorting")
     private List<AvkortingsArsakCti> arsaksList = new ArrayList<AvkortingsArsakCti>();
 
     /**
      * Angir minste pensjonsnivåsats for ektefelletillegget
      */
-    @GuiPrompt(prompt = "Minste pensjonsnivå sats for ektefelletillegg")
     private double mpnSatsFT;
 
     /**
      * Den anvendte trygdetiden i beregningen av tillegget. Kan være forskjellig fra Beregningen.tt_anv
      */
-    @GuiPrompt(prompt = "Anvendt trygdetid")
     private int tt_anv;
 
     /**
@@ -60,13 +53,11 @@ public class Ektefelletillegg extends Ytelseskomponent {
     /**
      * Telleren i proratabrøken for EØS-avtaleberegnet tillegg
      */
-    @GuiPrompt(prompt = "Pro rata teller")
     private int proratateller;
 
     /**
      * Telleren i proratabrøken for EØS-avtaleberegnet tillegg
      */
-    @GuiPrompt(prompt = "Pro rata nevner")
     private int proratanevner;
 
     /**
@@ -77,36 +68,7 @@ public class Ektefelletillegg extends Ytelseskomponent {
      * Skattefritaket skal ikke gjelde alderspensjonister som tilstås ektefelletillegg med virkning tidligst
      * 1. januar 2011
      */
-    @GuiPrompt(prompt = "Skattefritak")
     private boolean skattefritak;
-
-    /**
-     * Copy Constructor
-     * 
-     * @param ektefelletillegg a <code>Ektefelletillegg</code> object
-     */
-    public Ektefelletillegg(Ektefelletillegg ektefelletillegg) {
-        super(ektefelletillegg);
-        fribelop = ektefelletillegg.fribelop;
-        samletInntektAvkort = ektefelletillegg.samletInntektAvkort;
-        avkortet = ektefelletillegg.avkortet;
-        mpnSatsFT = ektefelletillegg.mpnSatsFT;
-        tt_anv = ektefelletillegg.tt_anv;
-        forsorgingstilleggNiva = ektefelletillegg.forsorgingstilleggNiva;
-        proratanevner = ektefelletillegg.proratanevner;
-        proratateller = ektefelletillegg.proratateller;
-        skattefritak = ektefelletillegg.skattefritak;
-        arsaksList = new ArrayList<AvkortingsArsakCti>();
-        for (AvkortingsArsakCti arsak : ektefelletillegg.arsaksList) {
-            arsaksList.add(new AvkortingsArsakCti(arsak.getKode()));
-        }
-    }
-
-    public Ektefelletillegg(int fribelop, int samletInntektAvkort) {
-        this();
-        this.fribelop = fribelop;
-        this.samletInntektAvkort = samletInntektAvkort;
-    }
 
     public Ektefelletillegg() {
         super();
@@ -114,92 +76,4 @@ public class Ektefelletillegg extends Ytelseskomponent {
         setFormelKode(new FormelKodeCti("ETx"));
     }
 
-    public int getFribelop() {
-        return fribelop;
-    }
-
-    public void setFribelop(int fribelop) {
-        this.fribelop = fribelop;
-    }
-
-    public int getSamletInntektAvkort() {
-        return samletInntektAvkort;
-    }
-
-    public void setSamletInntektAvkort(int samletInntektAvkort) {
-        this.samletInntektAvkort = samletInntektAvkort;
-    }
-
-    public List<AvkortingsArsakCti> getArsaksList() {
-        return arsaksList;
-    }
-
-    /**
-     * Read only property for arsaksListe as array
-     * 
-     * @return array of AvkortingsArsak
-     */
-    public AvkortingsArsakCti[] getArsaksListeAsArray() {
-        return arsaksList != null ? arsaksList.toArray(new AvkortingsArsakCti[arsaksList.size()]) : new AvkortingsArsakCti[0];
-    }
-
-    public void setArsaksList(List<AvkortingsArsakCti> arsaksList) {
-        this.arsaksList = arsaksList;
-    }
-
-    public boolean isAvkortet() {
-        return avkortet;
-    }
-
-    public void setAvkortet(boolean avkortet) {
-        this.avkortet = avkortet;
-    }
-
-    public double getMpnSatsFT() {
-        return mpnSatsFT;
-    }
-
-    public void setMpnSatsFT(double mpnSatsFT) {
-        this.mpnSatsFT = mpnSatsFT;
-    }
-
-    public int getProratanevner() {
-        return proratanevner;
-    }
-
-    public void setProratanevner(int proratanevner) {
-        this.proratanevner = proratanevner;
-    }
-
-    public int getProratateller() {
-        return proratateller;
-    }
-
-    public void setProratateller(int proratateller) {
-        this.proratateller = proratateller;
-    }
-
-    public int getTt_anv() {
-        return tt_anv;
-    }
-
-    public void setTt_anv(int tt_anv) {
-        this.tt_anv = tt_anv;
-    }
-
-    public void setSkattefritak(boolean skattefritak) {
-        this.skattefritak = skattefritak;
-    }
-
-    public boolean isSkattefritak() {
-        return skattefritak;
-    }
-
-    public int getForsorgingstilleggNiva() {
-        return forsorgingstilleggNiva;
-    }
-
-    public void setForsorgingstilleggNiva(int forsorgingstilleggNiva) {
-        this.forsorgingstilleggNiva = forsorgingstilleggNiva;
-    }
 }

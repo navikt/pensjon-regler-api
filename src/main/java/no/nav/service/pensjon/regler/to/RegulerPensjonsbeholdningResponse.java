@@ -6,8 +6,7 @@ import no.nav.domain.pensjon.regler.Pakkseddel;
 import no.nav.domain.pensjon.regler.grunnlag.PersonPensjonsbeholdning;
 
 public class RegulerPensjonsbeholdningResponse extends ServiceResponse  {
-	private static final long serialVersionUID = 1245764083517519824L;
-	
+
 	private Pakkseddel pakkseddel;
 	private ArrayList<PersonPensjonsbeholdning> regulertBeregningsgrunnlagForPensjonsbeholdning;
 

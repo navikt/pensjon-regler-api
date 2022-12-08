@@ -5,7 +5,7 @@ public class InstReduksjonCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = 5744557000001974195L;
+
 
     public InstReduksjonCti() {
         super();

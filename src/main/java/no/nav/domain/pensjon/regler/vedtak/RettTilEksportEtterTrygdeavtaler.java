@@ -7,7 +7,7 @@ import no.nav.domain.pensjon.regler.grunnlag.Eksportrett;
  */
 public class RettTilEksportEtterTrygdeavtaler extends AbstraktVilkar {
 
-    private static final long serialVersionUID = 1224328629329775826L;
+
     /**
      * Eksportrett etter EØS forordning
      */

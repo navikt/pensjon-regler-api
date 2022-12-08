@@ -7,50 +7,16 @@ import java.io.Serializable;
  */
 public class KonverteringsdataUT implements Serializable {
 
-    private static final long serialVersionUID = 895597202221778381L;
+    
     /**
      * Verdien av tp_up
      */
-    private int tpUfor;
+    private int tpUfor = 0;
 
     /**
      * Verdien av tp_yp
      */
-    private int tpYrke;
+    private int tpYrke = 0;
 
-    public KonverteringsdataUT() {
-        tpUfor = 0;
-        tpYrke = 0;
-    }
 
-    /**
-     * Copy Constructor
-     *
-     * @param konverteringsdata a <code>KonverteringsdataUT</code> object
-     */
-    public KonverteringsdataUT(KonverteringsdataUT konverteringsdata) {
-        tpUfor = konverteringsdata.tpUfor;
-        tpYrke = konverteringsdata.tpYrke;
-    }
-
-    public KonverteringsdataUT(int tpUfor, int tpYrke){
-        this.tpUfor = tpUfor;
-        this.tpYrke = tpYrke;
-    }
-
-    public int getTpUfor() {
-        return tpUfor;
-    }
-
-    public void setTpUfor(int tpUfor) {
-        this.tpUfor = tpUfor;
-    }
-
-    public int getTpYrke() {
-        return tpYrke;
-    }
-
-    public void setTpYrke(int tpYrke) {
-        this.tpYrke = tpYrke;
-    }
 }

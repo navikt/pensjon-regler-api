@@ -7,7 +7,7 @@ import no.nav.domain.pensjon.regler.kode.VilkarOppfyltUTCti;
  */
 public class UngUfor extends AbstraktVilkar {
 
-    private static final long serialVersionUID = -6955449536852020254L;
+    
 
     public UngUfor() {
         super();

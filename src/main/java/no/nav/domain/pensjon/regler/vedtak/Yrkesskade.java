@@ -7,7 +7,7 @@ import no.nav.domain.pensjon.regler.kode.VilkarOppfyltUTCti;
  */
 public class Yrkesskade extends AbstraktVilkar {
 
-    private static final long serialVersionUID = 1492253936130233077L;
+    
 
     public Yrkesskade() {
         super();

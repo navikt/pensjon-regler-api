@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class SatsResultat implements Comparable<SatsResultat>, Serializable {
-    private static final long serialVersionUID = 3870984533437951089L;
+
     private Date fom;
     private Date tom;
     private double verdi;

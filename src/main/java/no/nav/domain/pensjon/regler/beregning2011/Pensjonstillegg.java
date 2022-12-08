@@ -1,24 +1,19 @@
 package no.nav.domain.pensjon.regler.beregning2011;
 
-import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.beregning.Ytelseskomponent;
 import no.nav.domain.pensjon.regler.kode.FormelKodeCti;
 import no.nav.domain.pensjon.regler.kode.MinstepenNivaCti;
 import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
 
 public class Pensjonstillegg extends Ytelseskomponent {
-    private static final long serialVersionUID = 488266051026387363L;
 
-    @GuiPrompt(prompt = "Forholdstall ved 67 år")
+
     protected double forholdstall67 = 0.0;
 
-    @GuiPrompt(prompt = "Minste pensjonsnivå sats")
     protected double minstepensjonsnivaSats;
 
-    @GuiPrompt(prompt = "Minste pensjonsnivå satstype")
     protected MinstepenNivaCti minstepensjonsnivaSatsType;
 
-    @GuiPrompt(prompt = "Justert minste pensjonsnivå")
     protected JustertMinstePensjonsniva justertMinstePensjonsniva;
 
     public Pensjonstillegg() {

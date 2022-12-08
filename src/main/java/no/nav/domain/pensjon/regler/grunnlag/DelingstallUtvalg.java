@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class DelingstallUtvalg implements Serializable {
-    private static final long serialVersionUID = 4727993386155657137L;
+
 
     private double dt;
     private double PREG_dt67soker;

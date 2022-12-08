@@ -11,7 +11,7 @@ import no.nav.domain.pensjon.regler.Trygdetid;
  */
 public class TrygdetidResponse extends ServiceResponse{
 
-	private static final long serialVersionUID = 8672582253263038028L;
+	
 	
 	/**
 	 * Fastsatt trygdetid.
@@ -33,44 +33,5 @@ public class TrygdetidResponse extends ServiceResponse{
 	 */
 	private Pakkseddel pakkseddel  = new Pakkseddel(true, true);
 
-	public TrygdetidResponse(Trygdetid trygdetid) {
-		super();
-		this.trygdetid = trygdetid;
-	}
 
-	public TrygdetidResponse() {
-		super();
-	}
-
-	public Trygdetid getTrygdetid() {
-		return trygdetid;
-	}
-
-	public void setTrygdetid(Trygdetid trygdetid) {
-		this.trygdetid = trygdetid;
-	}
-
-	public Pakkseddel getPakkseddel() {
-		return pakkseddel;
-	}
-
-	public void setPakkseddel(Pakkseddel pakkseddel) {
-		this.pakkseddel = pakkseddel;
-	}
-
-	public Trygdetid getTrygdetidKapittel20() {
-		return trygdetidKapittel20;
-	}
-
-	public void setTrygdetidKapittel20(Trygdetid trygdetidKapittel20) {
-		this.trygdetidKapittel20 = trygdetidKapittel20;
-	}
-
-    public Trygdetid getTrygdetidAlternativ() {
-        return trygdetidAlternativ;
-    }
-
-    public void setTrygdetidAlternativ(Trygdetid trygdetidAlternativ) {
-        this.trygdetidAlternativ = trygdetidAlternativ;
-    }
 }

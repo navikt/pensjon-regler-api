@@ -1,6 +1,5 @@
 package no.nav.domain.pensjon.regler.beregning2011;
 
-import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.Merknad;
 import no.nav.domain.pensjon.regler.kode.FormelKodeCti;
 import no.nav.domain.pensjon.regler.trygdetid.AnvendtTrygdetid;
@@ -17,26 +16,21 @@ import java.util.List;
  */
 public class Minsteytelse implements Serializable {
 
-    private static final long serialVersionUID = -9087470174509317065L;
+    
 
-    @GuiPrompt(prompt = "Formel")
     private FormelKodeCti formelKode;
 
     private List<Merknad> merknadListe;
 
-    @GuiPrompt(prompt = "Sats minsteytelse")
     private SatsMinsteytelse satsMinsteytelse;
 
-    @GuiPrompt(prompt = "Årsbeløp")
     private int arsbelop;
 
-    @GuiPrompt(prompt = "Eksportforbud")
-	private boolean eksportforbud;
+    private boolean eksportforbud;
 
     /**
      * Trygdetid som er brukt ved beregning av minsteytelsen.
      */
-    @GuiPrompt(prompt = "Anvendt trygdetid")
     private AnvendtTrygdetid anvendtTrygdetid;
 
     public Minsteytelse() {

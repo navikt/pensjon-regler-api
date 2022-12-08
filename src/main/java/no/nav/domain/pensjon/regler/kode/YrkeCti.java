@@ -2,7 +2,7 @@ package no.nav.domain.pensjon.regler.kode;
 
 public class YrkeCti extends TypeCti {
 
-    private static final long serialVersionUID = -1359402436242656547L;
+
 
     /**
      * Koder for yrker brukt ved uførepensjon uten yrkesskade.

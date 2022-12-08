@@ -1,6 +1,5 @@
 package no.nav.domain.pensjon.regler.beregning2011;
 
-import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.kode.AvviksjusteringCti;
 
 import java.io.Serializable;
@@ -13,18 +12,14 @@ import java.util.List;
  */
 public class AvkortingsinformasjonBT extends AbstraktAvkortingsinformasjon implements Serializable {
 
-    private static final long serialVersionUID = 4325412034276487756L;
-
     /**
      * Angir liste over fremtidige perioder.
      */
-    @GuiPrompt(prompt = "Fremtidige barnetillegg perioder")
     private List<AbstraktBarnetilleggperiode> barnetilleggPeriodeListe = new ArrayList<AbstraktBarnetilleggperiode>();
 
     /**
      * Fribeløp for antall barn ved virk.
      */
-    @GuiPrompt(prompt = "Fribeløp ved virk")
     private int fribelopVedVirk;
 
     /**
@@ -67,163 +62,4 @@ public class AvkortingsinformasjonBT extends AbstraktAvkortingsinformasjon imple
      */
     private boolean fribelopPeriodisert;
 
-    public AvkortingsinformasjonBT() {
-        super();
-    }
-
-    public AvkortingsinformasjonBT(AvkortingsinformasjonBT avkortingsinformasjonBT) {
-        super(avkortingsinformasjonBT);
-
-        fribelopVedVirk = avkortingsinformasjonBT.fribelopVedVirk;
-        restTilUtbetalingForJustering = avkortingsinformasjonBT.restTilUtbetalingForJustering;
-        avviksbelop = avkortingsinformasjonBT.avviksbelop;
-        justeringsbelopUbegrensetPerAr = avkortingsinformasjonBT.justeringsbelopUbegrensetPerAr;
-        justeringsbelopPerAr = avkortingsinformasjonBT.justeringsbelopPerAr;
-        forventetEtteroppgjor = avkortingsinformasjonBT.forventetEtteroppgjor;
-        inntektPeriodisert = avkortingsinformasjonBT.inntektPeriodisert;
-        fribelopPeriodisert = avkortingsinformasjonBT.fribelopPeriodisert;
-
-        if (avkortingsinformasjonBT.avviksjusteringType != null) {
-            avviksjusteringType = new AvviksjusteringCti(avkortingsinformasjonBT.avviksjusteringType);
-        }
-
-        for (AbstraktBarnetilleggperiode btp : avkortingsinformasjonBT.barnetilleggPeriodeListe) {
-            if ( btp instanceof TidligereBarnetilleggperiode ) {
-                barnetilleggPeriodeListe.add(new TidligereBarnetilleggperiode( (TidligereBarnetilleggperiode)btp));
-            }
-            if ( btp instanceof FremtidigBarnetilleggperiode ) {
-                barnetilleggPeriodeListe.add(new FremtidigBarnetilleggperiode( (FremtidigBarnetilleggperiode)btp));
-            }
-        }
-    }
-
-    public List<AbstraktBarnetilleggperiode> getBarnetilleggPeriodeListe() {
-        return barnetilleggPeriodeListe;
-    }
-
-    public int getFribelopVedVirk() {
-        return fribelopVedVirk;
-    }
-
-    public AbstraktBarnetilleggperiode[] getBarnetilleggPeriodeListeAsArray() {
-        return barnetilleggPeriodeListe != null ? barnetilleggPeriodeListe.toArray(new AbstraktBarnetilleggperiode[barnetilleggPeriodeListe.size()]) : new AbstraktBarnetilleggperiode[0];
-    }
-
-    public AbstraktBarnetilleggperiode[] getSortertBarnetilleggperiodelisteAsArray() {
-        if (barnetilleggPeriodeListe != null) {
-            ArrayList<AbstraktBarnetilleggperiode> sortedList = new ArrayList<AbstraktBarnetilleggperiode>(barnetilleggPeriodeListe);
-            Collections.sort(sortedList);
-            return sortedList.toArray(new AbstraktBarnetilleggperiode[barnetilleggPeriodeListe.size()]);
-        } else {
-            return new AbstraktBarnetilleggperiode[0];
-        }
-    }
-
-    public TidligereBarnetilleggperiode[] getSortertTidligereBarnetilleggperiodelisteAsArray() {
-
-        if (barnetilleggPeriodeListe != null) {
-            ArrayList<TidligereBarnetilleggperiode> sortedTidligereList = new ArrayList<TidligereBarnetilleggperiode>();
-            for (AbstraktBarnetilleggperiode btp : barnetilleggPeriodeListe) {
-                if (btp instanceof TidligereBarnetilleggperiode) {
-                    sortedTidligereList.add((TidligereBarnetilleggperiode) btp);
-                }
-            }
-
-            Collections.sort(sortedTidligereList);
-            return sortedTidligereList.toArray(new TidligereBarnetilleggperiode[sortedTidligereList.size()]);
-
-        } else {
-            return new TidligereBarnetilleggperiode[0];
-        }
-    }
-
-    public FremtidigBarnetilleggperiode[] getSortertFremtidigBarnetilleggperiodelisteAsArray() {
-
-        if (barnetilleggPeriodeListe != null) {
-            ArrayList<FremtidigBarnetilleggperiode> sortedFremtidigList = new ArrayList<FremtidigBarnetilleggperiode>();
-            for (AbstraktBarnetilleggperiode btp : barnetilleggPeriodeListe) {
-                if (btp instanceof FremtidigBarnetilleggperiode) {
-                    sortedFremtidigList.add((FremtidigBarnetilleggperiode) btp);
-                }
-            }
-
-            Collections.sort(sortedFremtidigList);
-            return sortedFremtidigList.toArray(new FremtidigBarnetilleggperiode[sortedFremtidigList.size()]);
-
-        } else {
-            return new FremtidigBarnetilleggperiode[0];
-        }
-    }
-
-    public void setBarnetilleggPeriodeListe(List<AbstraktBarnetilleggperiode> barnetilleggPeriodeListe) {
-        this.barnetilleggPeriodeListe = barnetilleggPeriodeListe;
-    }
-
-    public void setFribelopVedVirk(int fribelopVedVirk) {
-        this.fribelopVedVirk = fribelopVedVirk;
-    }
-
-    public double getRestTilUtbetalingForJustering() {
-        return restTilUtbetalingForJustering;
-    }
-
-    public void setRestTilUtbetalingForJustering(double restTilUtbetalingForJustering) {
-        this.restTilUtbetalingForJustering = restTilUtbetalingForJustering;
-    }
-
-    public double getAvviksbelop() {
-        return avviksbelop;
-    }
-
-    public void setAvviksbelop(double avviksbelop) {
-        this.avviksbelop = avviksbelop;
-    }
-
-    public double getJusteringsbelopUbegrensetPerAr() {
-        return justeringsbelopUbegrensetPerAr;
-    }
-
-    public void setJusteringsbelopUbegrensetPerAr(double justeringsbelopUbegrensetPerAr) {
-        this.justeringsbelopUbegrensetPerAr = justeringsbelopUbegrensetPerAr;
-    }
-
-    public double getJusteringsbelopPerAr() {
-        return justeringsbelopPerAr;
-    }
-
-    public void setJusteringsbelopPerAr(double justeringsbelopPerAr) {
-        this.justeringsbelopPerAr = justeringsbelopPerAr;
-    }
-
-    public double getForventetEtteroppgjor() {
-        return forventetEtteroppgjor;
-    }
-
-    public void setForventetEtteroppgjor(double forventetEtteroppgjor) {
-        this.forventetEtteroppgjor = forventetEtteroppgjor;
-    }
-
-    public AvviksjusteringCti getAvviksjusteringType() {
-        return avviksjusteringType;
-    }
-
-    public void setAvviksjusteringType(AvviksjusteringCti avviksjusteringType) {
-        this.avviksjusteringType = avviksjusteringType;
-    }
-
-    public boolean isFribelopPeriodisert() {
-        return fribelopPeriodisert;
-    }
-
-    public void setFribelopPeriodisert(boolean fribelopPeriodisert) {
-        this.fribelopPeriodisert = fribelopPeriodisert;
-    }
-
-    public boolean isInntektPeriodisert() {
-        return inntektPeriodisert;
-    }
-
-    public void setInntektPeriodisert(boolean inntektPeriodisert) {
-        this.inntektPeriodisert = inntektPeriodisert;
-    }
 }

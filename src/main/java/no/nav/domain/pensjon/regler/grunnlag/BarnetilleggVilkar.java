@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @author Lars Hartvigsen (Decisive) - PK-20946
  */
 public class BarnetilleggVilkar implements Serializable {
-    private static final long serialVersionUID = -8971555764832550652L;
+
     private BarnetilleggVilkarTypeCti btVilkarType;
     private boolean vurdertTil;
 

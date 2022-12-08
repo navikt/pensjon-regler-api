@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class AntallArOgMnd implements Serializable {
 
-    private static final long serialVersionUID = 4015160264567274056L;
+
     /**
      * Antall år som skal beskrives.
      */

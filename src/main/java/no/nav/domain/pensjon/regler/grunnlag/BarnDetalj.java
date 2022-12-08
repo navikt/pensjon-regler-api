@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class BarnDetalj implements Serializable {
 
-    private static final long serialVersionUID = -4696642702156400977L;
+    
     /**
      * Angir barnets andre forelder enn søker.
      */

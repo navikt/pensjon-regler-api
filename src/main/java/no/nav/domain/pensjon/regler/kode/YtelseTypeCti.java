@@ -5,7 +5,7 @@ public class YtelseTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = -7738172551295674253L;
+    
 
     public YtelseTypeCti() {
         super();

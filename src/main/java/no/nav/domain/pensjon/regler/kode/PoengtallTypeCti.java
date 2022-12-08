@@ -13,7 +13,7 @@ public class PoengtallTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = 1089892316959642251L;
+    
 
     public PoengtallTypeCti() {
         super();

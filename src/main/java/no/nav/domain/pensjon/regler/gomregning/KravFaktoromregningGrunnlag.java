@@ -6,7 +6,7 @@ import java.util.List;
 
 public class KravFaktoromregningGrunnlag implements Serializable {
 
-    private static final long serialVersionUID = -4899743941695801179L;
+
     private Long kravId;
     private List<PersongrunnlagOmregningGrunnlag> persongrunnlagOmregningGrunnlagListe;
 

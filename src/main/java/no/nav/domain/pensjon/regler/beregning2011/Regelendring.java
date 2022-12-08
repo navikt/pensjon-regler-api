@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Regelendring implements Serializable, Comparable<Regelendring> {
 
-    private static final long serialVersionUID = -4695527013120848530L;
+
 
     /**
      * Datoen en regel- eller satsendring har virkningsdato.

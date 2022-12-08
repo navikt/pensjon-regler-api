@@ -4,7 +4,7 @@ public class UtdanningTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = -8024285729172166598L;
+
 
     public UtdanningTypeCti() {
         super();

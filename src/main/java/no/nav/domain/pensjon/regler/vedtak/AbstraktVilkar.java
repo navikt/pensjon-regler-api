@@ -13,7 +13,7 @@ public abstract class AbstraktVilkar implements Serializable {
 
     private VilkarOppfyltUTCti resultat;
 
-    private static final long serialVersionUID = -766916007810089735L;
+
 
     protected AbstraktVilkar(AbstraktVilkar abstraktVilkar) {
         if (abstraktVilkar.resultat != null) {

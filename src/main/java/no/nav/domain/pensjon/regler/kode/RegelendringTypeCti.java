@@ -8,7 +8,7 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class RegelendringTypeCti extends TypeCti {
 
-    private static final long serialVersionUID = -1688022988891041840L;
+
 
     public RegelendringTypeCti() {
         super();

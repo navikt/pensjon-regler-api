@@ -11,7 +11,7 @@ import java.util.Date;
  * Felles grensesnitt for Siste beregninger slik som SisteBeregning1967, SisteAldersberegning2011, SisteGjenlevendeberegning
  */
 public abstract class SisteBeregning implements Serializable {
-    private static final long serialVersionUID = 9218448728338191218L;
+    
 
     private Date virkDato;
     private int tt_anv;

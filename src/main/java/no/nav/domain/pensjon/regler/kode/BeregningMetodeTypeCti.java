@@ -5,7 +5,7 @@ public class BeregningMetodeTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = 8921126952034838774L;
+
 
     public BeregningMetodeTypeCti() {
         super();

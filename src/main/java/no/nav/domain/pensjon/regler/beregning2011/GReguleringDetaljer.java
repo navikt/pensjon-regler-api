@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class GReguleringDetaljer implements Serializable, IGRegulering {
 
-    private static final long serialVersionUID = 1L;
+
 
     private Date justeringTomDato;
     private double justeringsfaktor;

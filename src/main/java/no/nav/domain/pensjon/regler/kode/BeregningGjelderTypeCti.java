@@ -5,7 +5,7 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class BeregningGjelderTypeCti extends TypeCti {
 
-    private static final long serialVersionUID = -3297680816990583767L;
+    
 
     public BeregningGjelderTypeCti() {
         super();

@@ -4,7 +4,6 @@ import no.nav.domain.pensjon.regler.beregning.Ytelseskomponent;
 import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
 
 public class MinstenivatilleggIndividuelt extends Ytelseskomponent {
-    private static final long serialVersionUID = -7552803118992528430L;
 
     private MinstePensjonsniva mpn;
     private Garantipensjonsniva garPN;

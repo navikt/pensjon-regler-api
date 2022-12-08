@@ -2,7 +2,7 @@ package no.nav.domain.pensjon.regler.kode;
 
 public class KravlinjeTypeCti extends TypeCti {
 
-    private static final long serialVersionUID = -2393857741445942723L;
+
 
     /**
      * Denne er true dersom kravet er en hovedytelse (AP, UP osv).Default false.

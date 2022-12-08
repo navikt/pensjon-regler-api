@@ -14,7 +14,6 @@ import no.nav.domain.pensjon.regler.beregning2011.OvergangsinfoUPtilUT;
 
 public class KonverterTilUforetrygdResponse extends ServiceResponse {
 
-    private static final long serialVersionUID = -5755180768635179987L;
 
     private BeregningsgrunnlagKonvertert beregningsgrunnlagKonvertertOrdinertHjemme;
 
@@ -25,67 +24,5 @@ public class KonverterTilUforetrygdResponse extends ServiceResponse {
     private Pakkseddel pakkseddel;
 
     private OvergangsinfoUPtilUT overgangsinfoUPtilUT;
-
-    public KonverterTilUforetrygdResponse() {
-        super();
-    }
-
-    public KonverterTilUforetrygdResponse(BeregningsgrunnlagKonvertert beregningsgrunnlagKonvertertOrdinertHjemme,
-            BeregningsgrunnlagKonvertert beregningsgrunnlagKonvertertYrkesskadeHjemme,
-            BeregningsresultatUforetrygd beregningsresultatUforetrygd,
-            Pakkseddel pakkseddel, EktefelletilleggUT konvertertEktefelletillegg, OvergangsinfoUPtilUT overgangsinfoUPtilUT) {
-        super();
-        this.beregningsgrunnlagKonvertertOrdinertHjemme = beregningsgrunnlagKonvertertOrdinertHjemme;
-        this.beregningsgrunnlagKonvertertYrkesskadeHjemme = beregningsgrunnlagKonvertertYrkesskadeHjemme;
-        this.beregningsresultatUforetrygd = beregningsresultatUforetrygd;
-        this.pakkseddel = pakkseddel;
-        this.overgangsinfoUPtilUT = overgangsinfoUPtilUT;
-    }
-
-    public BeregningsgrunnlagKonvertert getBeregningsgrunnlagKonvertertOrdinertHjemme() {
-        return beregningsgrunnlagKonvertertOrdinertHjemme;
-    }
-
-    public void setBeregningsgrunnlagKonvertertOrdinertHjemme(BeregningsgrunnlagKonvertert beregningsgrunnlagKonvertertOrdinertHjemme) {
-        this.beregningsgrunnlagKonvertertOrdinertHjemme = beregningsgrunnlagKonvertertOrdinertHjemme;
-    }
-
-    public BeregningsgrunnlagKonvertert getBeregningsgrunnlagKonvertertYrkesskadeHjemme() {
-        return beregningsgrunnlagKonvertertYrkesskadeHjemme;
-    }
-
-    public void setBeregningsgrunnlagKonvertertYrkesskadeHjemme(BeregningsgrunnlagKonvertert beregningsgrunnlagKonvertertYrkesskadeHjemme) {
-        this.beregningsgrunnlagKonvertertYrkesskadeHjemme = beregningsgrunnlagKonvertertYrkesskadeHjemme;
-    }
-
-    public BeregningsresultatUforetrygd getBeregningsresultatUforetrygd() {
-        return beregningsresultatUforetrygd;
-    }
-
-    public void setBeregningsresultatUforetrygd(BeregningsresultatUforetrygd beregningsresultatUforetrygd) {
-        this.beregningsresultatUforetrygd = beregningsresultatUforetrygd;
-    }
-
-    public Pakkseddel getPakkseddel() {
-        return pakkseddel;
-    }
-
-    public void setPakkseddel(Pakkseddel pakkseddel) {
-        this.pakkseddel = pakkseddel;
-    }
-
-    /**
-     * @return the overgangsinfoUPtilUT
-     */
-    public OvergangsinfoUPtilUT getOvergangsinfoUPtilUT() {
-        return overgangsinfoUPtilUT;
-    }
-
-    /**
-     * @param overgangsinfoUPtilUT the overgangsinfoUPtilUT to set
-     */
-    public void setOvergangsinfoUPtilUT(OvergangsinfoUPtilUT overgangsinfoUPtilUT) {
-        this.overgangsinfoUPtilUT = overgangsinfoUPtilUT;
-    }
 
 }

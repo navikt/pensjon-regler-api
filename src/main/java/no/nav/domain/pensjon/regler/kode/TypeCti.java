@@ -8,7 +8,7 @@ public class TypeCti implements Serializable {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = 7711017918802474490L;
+
 
     protected String kode;
 

@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 public class EosEkstra implements Serializable {
 
-    private static final long serialVersionUID = -3564186802236079931L;
+    
 
     private ProRataBeregningTypeCti proRataBeregningType;
 

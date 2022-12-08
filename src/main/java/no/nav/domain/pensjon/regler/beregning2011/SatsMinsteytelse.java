@@ -1,6 +1,5 @@
 package no.nav.domain.pensjon.regler.beregning2011;
 
-import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.kode.BorMedTypeCti;
 import no.nav.domain.pensjon.regler.kode.MinsteytelseNivaCti;
 
@@ -10,27 +9,21 @@ import java.io.Serializable;
  * @author Steinar Hjellvik (Decisive) - PK-11391
  */
 public class SatsMinsteytelse implements Serializable {
-    private static final long serialVersionUID = -2886963703574975687L;
 
-    @GuiPrompt(prompt = "Sats")
+
     private double sats;
 
-    @GuiPrompt(prompt = "Satstype")
     private MinsteytelseNivaCti satsType;
 
-    @GuiPrompt(prompt = "Benyttet sivilstand")
     private BorMedTypeCti benyttetSivilstand;
 
-    @GuiPrompt(prompt = "Benyttet ung ufør")
     private boolean benyttetUngUfor;
 
-    @GuiPrompt(prompt = "Oppfylt ung ufør")
     private boolean oppfyltUngUfor;
 
     /**
      * Angir om ung uføregaranti ikke er benyttet pga eksportforbud.
      */
-    @GuiPrompt(prompt = "Eksportforbud ung ufør")
     private boolean eksportForbudUngUfor;
 
     public SatsMinsteytelse() {

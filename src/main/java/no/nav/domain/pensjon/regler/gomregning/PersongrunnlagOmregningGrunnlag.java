@@ -8,7 +8,7 @@ import java.util.List;
 
 public class PersongrunnlagOmregningGrunnlag implements Serializable {
 
-    private static final long serialVersionUID = -3980826081798743207L;
+
     private Long persongrunnlagId;
     private List<Inntektsgrunnlag> inntektsgrunnlagGrunnlagListe;
     private boolean lonnsvekstOmregn;

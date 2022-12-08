@@ -5,7 +5,7 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class BarnetilleggVilkarTypeCti extends TypeCti {
 
-    private static final long serialVersionUID = -9081693068574893601L;
+    
 
     public BarnetilleggVilkarTypeCti() {
         super();

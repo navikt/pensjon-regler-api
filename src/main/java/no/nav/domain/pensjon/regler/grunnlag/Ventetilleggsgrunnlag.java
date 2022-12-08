@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Ventetilleggsgrunnlag implements Serializable {
 
-    private static final long serialVersionUID = -2339458615471581628L;
+    
     /**
      * Ventetilleggprosenten.
      */

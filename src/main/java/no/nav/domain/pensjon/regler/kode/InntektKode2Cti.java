@@ -5,7 +5,7 @@ public class InntektKode2Cti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = 152766896378808199L;
+
 
     public InntektKode2Cti() {
         super();

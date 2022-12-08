@@ -12,14 +12,7 @@ import java.io.Serializable;
  */
 public class Hjelpeloshetsbidrag extends Ytelseskomponent implements Serializable {
 
-    private static final long serialVersionUID = -4000631814950605608L;
-
     private int grunnlagForUtbetaling;
-
-    public Hjelpeloshetsbidrag(Hjelpeloshetsbidrag hjelpeloshetsbidrag) {
-        super(hjelpeloshetsbidrag);
-        grunnlagForUtbetaling = hjelpeloshetsbidrag.grunnlagForUtbetaling;
-    }
 
     public Hjelpeloshetsbidrag(int grunnlagForUtbetaling) {
         super();
@@ -27,17 +20,5 @@ public class Hjelpeloshetsbidrag extends Ytelseskomponent implements Serializabl
         ytelsekomponentType = new YtelsekomponentTypeCti("HJELP_BIDRAG");
     }
 
-    public Hjelpeloshetsbidrag() {
-        super();
-        ytelsekomponentType = new YtelsekomponentTypeCti("HJELP_BIDRAG");
-    }
-
-    public int getGrunnlagForUtbetaling() {
-        return grunnlagForUtbetaling;
-    }
-
-    public void setGrunnlagForUtbetaling(int grunnlagForUtbetaling) {
-        this.grunnlagForUtbetaling = grunnlagForUtbetaling;
-    }
 
 }

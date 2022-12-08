@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class FremskrivingsDetaljer implements Serializable, IFremskriving {
 
-    private static final long serialVersionUID = 1574525081526453384L;
+
 
     private Date justeringTomDato;
     private double justeringsfaktor;

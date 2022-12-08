@@ -9,7 +9,7 @@ import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
  */
 public class UforetilleggTilAlderspensjon extends Ytelseskomponent {
 
-    private static final long serialVersionUID = -935432884740134849L;
+
 
     private Beregning beregning;
 
@@ -18,16 +18,4 @@ public class UforetilleggTilAlderspensjon extends Ytelseskomponent {
         ytelsekomponentType = new YtelsekomponentTypeCti("UFORETILLEGG_AP");
     }
 
-    public UforetilleggTilAlderspensjon(UforetilleggTilAlderspensjon src) {
-        super(src);
-        beregning = src.beregning;
-    }
-
-    public Beregning getBeregning() {
-        return beregning;
-    }
-
-    public void setBeregning(Beregning beregning) {
-        this.beregning = beregning;
-    }
 }

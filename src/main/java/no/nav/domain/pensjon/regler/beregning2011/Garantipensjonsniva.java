@@ -6,7 +6,7 @@ import no.nav.domain.pensjon.regler.kode.GarantipenNivaCti;
 import java.io.Serializable;
 
 public class Garantipensjonsniva implements Serializable {
-    private static final long serialVersionUID = 4872799871400507221L;
+
 
     private double belop;
     private double belopIkkeProratisert;

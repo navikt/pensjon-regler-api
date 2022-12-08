@@ -10,7 +10,7 @@ import java.io.Serializable;
  */
 public class FtDtArsak implements Serializable {
 
-    private static final long serialVersionUID = -3357256277849829561L;
+    
 
     // Angir årsaker til at delingstall eller forholdstall er benyttet i beregninger
     private FtDtArsakCti ftDtArsak;

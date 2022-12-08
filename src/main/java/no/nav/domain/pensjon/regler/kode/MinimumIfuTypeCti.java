@@ -7,7 +7,7 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class MinimumIfuTypeCti extends TypeCti {
 
-    private static final long serialVersionUID = -3402648374017362058L;
+    
 
     public MinimumIfuTypeCti() {
         super();

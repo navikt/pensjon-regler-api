@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 public class BarnetilleggFellesbarn extends AbstraktBarnetillegg implements Serializable {
 
-    private static final long serialVersionUID = -6889117943178977664L;
+
 
     public BarnetilleggFellesbarn() {
         super();
@@ -16,21 +16,5 @@ public class BarnetilleggFellesbarn extends AbstraktBarnetillegg implements Seri
         ytelsekomponentType = new YtelsekomponentTypeCti("TFB");
     }
 
-    /**
-     * Copy Constructor
-     * 
-     * @param barnetilleggFellesbarn a <code>BarnetilleggFellesbarn</code> object
-     */
-    public BarnetilleggFellesbarn(BarnetilleggFellesbarn barnetilleggFellesbarn) {
-        super(barnetilleggFellesbarn);
-    }
-
-    public BarnetilleggFellesbarn(int antallBarn, int fribelop, int samletInntektAvkort, int btDiff_eos) {
-        this();
-        setAntallBarn(antallBarn);
-        setFribelop(fribelop);
-        setSamletInntektAvkort(samletInntektAvkort);
-        setBtDiff_eos(btDiff_eos);
-    }
 
 }

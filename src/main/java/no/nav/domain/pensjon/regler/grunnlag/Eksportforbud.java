@@ -1,24 +1,21 @@
 package no.nav.domain.pensjon.regler.grunnlag;
 
-import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.kode.EksportUnntakCti;
 
 import java.io.Serializable;
 
 public class Eksportforbud implements Serializable {
 
-    private static final long serialVersionUID = 5793974025276989318L;
+
 
     /**
      * Angir om personen har eksportforbud eller ikke.
      */
-    @GuiPrompt(prompt = "Eksportforbud")
     boolean forbud;
 
     /**
      * Angir type eksportunntak.
      */
-    @GuiPrompt(prompt = "Eksport unntak")
     EksportUnntakCti unntakType;
 
     /**

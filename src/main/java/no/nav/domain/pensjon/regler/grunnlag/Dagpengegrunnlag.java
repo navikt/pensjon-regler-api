@@ -5,7 +5,7 @@ import no.nav.domain.pensjon.regler.kode.DagpengeTypeCti;
 import java.io.Serializable;
 
 public class Dagpengegrunnlag implements Serializable {
-    private static final long serialVersionUID = -4070319506068017898L;
+
 
     private int ar;
     private DagpengeTypeCti dagpengeType;

@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class GarantitilleggsbeholdningGrunnlag implements Serializable {
 
-    private static final long serialVersionUID = -2246964651803047830L;
+    
 
     /**
      * Delingstall ved fylte 67 år for årskull født 1962.

@@ -13,7 +13,7 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class AFPetteroppgjorBehandlingskodeCti extends TypeCti {
 
-    private static final long serialVersionUID = 492105609537195982L;
+
 
     public AFPetteroppgjorBehandlingskodeCti() {
         super();

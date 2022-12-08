@@ -7,7 +7,7 @@ import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
  */
 public class Ventetillegg extends Ytelseskomponent {
 
-    private static final long serialVersionUID = 8814471014855432827L;
+    
 
     /**
      * Ventetillegget for GP

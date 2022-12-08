@@ -16,7 +16,6 @@ import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
  */
 public class InntektsavkortningUforetrygdRequest extends ServiceRequest {
 
-    private static final long serialVersionUID = 1496199225706828583L;
 
     /**
      * Et beregningsresultat for uføretrygd basert på forventet inntekt som skal inntektsavkortes på nytt.
@@ -56,93 +55,7 @@ public class InntektsavkortningUforetrygdRequest extends ServiceRequest {
     /**
      * Liste over perioder med utbetalt uføretrygd
      */
-    private List<BeregnetUtbetalingsperiode> beregnetUtbetalingsperiodeListe;
+    private List<BeregnetUtbetalingsperiode> beregnetUtbetalingsperiodeListe =new ArrayList<BeregnetUtbetalingsperiode>();
 
-    public InntektsavkortningUforetrygdRequest() {
-        super();
-        beregnetUtbetalingsperiodeListe = new ArrayList<BeregnetUtbetalingsperiode>();
-    }
 
-    public InntektsavkortningUforetrygdRequest(BeregningsresultatUforetrygd res, Persongrunnlag person, VilkarsVedtak vedtak, Date fom, Date tom, boolean etteroppgjor,
-            EtteroppgjorGrunnlag grunnlag) {
-        this();
-        beregningsresultatUforetrygd = res;
-        persongrunnlag = person;
-        vilkarsVedtak = vedtak;
-        virkFom = fom;
-        virkTom = tom;
-        this.etteroppgjor = etteroppgjor;
-        etteroppgjorGrunnlag = grunnlag;
-        beregnetUtbetalingsperiodeListe = new ArrayList<BeregnetUtbetalingsperiode>();
-    }
-
-    public BeregningsresultatUforetrygd getBeregningsresultatUforetrygd() {
-        return beregningsresultatUforetrygd;
-    }
-
-    public void setBeregningsresultatUforetrygd(BeregningsresultatUforetrygd beregningsresultatUforetrygd) {
-        this.beregningsresultatUforetrygd = beregningsresultatUforetrygd;
-    }
-
-    public Persongrunnlag getPersongrunnlag() {
-        return persongrunnlag;
-    }
-
-    public void setPersongrunnlag(Persongrunnlag persongrunnlag) {
-        this.persongrunnlag = persongrunnlag;
-    }
-
-    public VilkarsVedtak getVilkarsVedtak() {
-        return vilkarsVedtak;
-    }
-
-    public void setVilkarsVedtak(VilkarsVedtak vilkarsVedtak) {
-        this.vilkarsVedtak = vilkarsVedtak;
-    }
-
-    public Date getVirkFom() {
-        return virkFom;
-    }
-
-    public void setVirkFom(Date virkFom) {
-        this.virkFom = virkFom;
-    }
-
-    public Date getVirkTom() {
-        return virkTom;
-    }
-
-    public void setVirkTom(Date virkTom) {
-        this.virkTom = virkTom;
-    }
-
-    public boolean isEtteroppgjor() {
-        return etteroppgjor;
-    }
-
-    public void setEtteroppgjor(boolean etteroppgjor) {
-        this.etteroppgjor = etteroppgjor;
-    }
-
-    public EtteroppgjorGrunnlag getEtteroppgjorGrunnlag() {
-        return etteroppgjorGrunnlag;
-    }
-
-    public void setEtteroppgjorGrunnlag(EtteroppgjorGrunnlag etteroppgjorGrunnlag) {
-        this.etteroppgjorGrunnlag = etteroppgjorGrunnlag;
-    }
-
-    public BeregnetUtbetalingsperiode[] getBeregnetUtbetalingsperiodeListeAsArray() {
-        return beregnetUtbetalingsperiodeListe != null ? beregnetUtbetalingsperiodeListe.toArray(
-                new BeregnetUtbetalingsperiode[beregnetUtbetalingsperiodeListe.size()]) :
-                new BeregnetUtbetalingsperiode[0];
-    }
-
-    public List<BeregnetUtbetalingsperiode> getBeregnetUtbetalingsperiodeListe() {
-        return beregnetUtbetalingsperiodeListe;
-    }
-
-    public void setBeregnetUtbetalingPeriodeUTListe(List<BeregnetUtbetalingsperiode> beregnetUtbetalingsperiodeListe) {
-        this.beregnetUtbetalingsperiodeListe = beregnetUtbetalingsperiodeListe;
-    }
 }

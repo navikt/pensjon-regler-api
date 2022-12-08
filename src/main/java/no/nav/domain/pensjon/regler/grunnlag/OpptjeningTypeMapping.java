@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 public class OpptjeningTypeMapping implements Serializable {
 
-    private static final long serialVersionUID = 1962065674443017560L;
+
 
     private OpptjeningPOPPTypeCti opptjeningPOPPTypeCti;
 

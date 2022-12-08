@@ -5,7 +5,7 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class YtelseVedDodCti extends TypeCti {
 
-    private static final long serialVersionUID = -3667214904459658218L;
+
 
     public YtelseVedDodCti() {
         super();

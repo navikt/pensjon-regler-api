@@ -9,7 +9,7 @@ import no.nav.domain.pensjon.regler.grunnlag.Unntak;
  */
 public class FortsattMedlemskap extends AbstraktVilkar {
 
-    private static final long serialVersionUID = -8952373630724401467L;
+
     /**
      * Fortsatt medlem i folketrygden
      */

@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Uforegrunnlag implements java.io.Serializable {
 
-    private static final long serialVersionUID = -512002248652736675L;
+
     /**
      * Uføregrad, 0-100
      */

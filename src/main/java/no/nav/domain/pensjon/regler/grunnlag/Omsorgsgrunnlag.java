@@ -6,7 +6,7 @@ import no.nav.domain.pensjon.regler.kode.OmsorgTypeCti;
 import java.io.Serializable;
 
 public class Omsorgsgrunnlag implements Serializable {
-    private static final long serialVersionUID = 463721142507622210L;
+    
 
     private int ar;
     private OmsorgTypeCti omsorgType;

@@ -3,7 +3,7 @@ package no.nav.domain.pensjon.regler.grunnlag;
 import java.io.Serializable;
 
 public class Delingstall implements Serializable, Comparable<Delingstall> {
-    private static final long serialVersionUID = 5262268261836476326L;
+
     /**
      * Årskull delingstallet gjelder for. Eks. 1964.
      */

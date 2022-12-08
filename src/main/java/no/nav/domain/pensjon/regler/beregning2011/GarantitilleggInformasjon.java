@@ -5,7 +5,7 @@ import no.nav.domain.pensjon.regler.kode.BorMedTypeCti;
 import java.io.Serializable;
 
 public class GarantitilleggInformasjon implements Serializable {
-    private static final long serialVersionUID = 1L;
+
 
     private BorMedTypeCti anvendtSivilstand;
     private double pensjonsbeholdningBelopVed67;

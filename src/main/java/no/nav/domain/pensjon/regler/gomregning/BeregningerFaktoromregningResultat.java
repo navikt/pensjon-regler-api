@@ -9,7 +9,7 @@ import java.util.List;
 
 public class BeregningerFaktoromregningResultat implements Serializable {
 
-    private static final long serialVersionUID = 3474082839949693206L;
+    
     private Long vedtakId;
     private BatchStatus batchStatus;
     private List<Beregning> beregningResultatListe;

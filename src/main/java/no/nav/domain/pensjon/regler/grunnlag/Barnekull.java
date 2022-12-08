@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Barnekull implements Serializable {
 
-    private static final long serialVersionUID = 1952265251225150194L;
+
     /**
      * Antall barn i kullet.
      */

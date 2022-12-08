@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class Pakkseddel implements Serializable {
 
-    private static final long serialVersionUID = -8620468253527033228L;
+
     /**
      * Angir en totalvurdering for innholdet i resultatet som returneres.
      * Dersom <code>resultatOK</code> er <code>true</code> betyr dette at PREG anser resultatet som fullstendig,

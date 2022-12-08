@@ -16,7 +16,7 @@ public class AfpOrdningTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = 7051665987228709399L;
+
 
     public AfpOrdningTypeCti() {
         super();

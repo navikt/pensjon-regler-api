@@ -13,7 +13,7 @@ import no.nav.domain.pensjon.regler.vedtak.RettTilEksportEtterTrygdeavtaler;
  */
 public class InngangOgEksportGrunnlag implements Serializable {
 
-    private static final long serialVersionUID = -7987108737661054863L;
+
     /**
      * Minst tre års trygdetid i Norge
      */

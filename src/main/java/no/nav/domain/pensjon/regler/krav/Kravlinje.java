@@ -11,7 +11,7 @@ import java.lang.reflect.Field;
  * osv.
  */
 public class Kravlinje implements Serializable {
-    private static final long serialVersionUID = -4157386793912444992L;
+    
 
     /**
      * Hvilken type kravlinjen gjelder, spesifisert som VilkarsvedtakType.

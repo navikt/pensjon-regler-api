@@ -8,7 +8,7 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class SoskenTypeCti extends TypeCti {
 
-    private static final long serialVersionUID = -2942632929367735837L;
+
 
     public SoskenTypeCti() {
         super();

@@ -4,7 +4,7 @@ public class OpphorsTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = -1386738345259309128L;
+    
 
     public OpphorsTypeCti() {
         super();

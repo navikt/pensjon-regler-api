@@ -6,7 +6,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public class VilkarsprovAlderspensjonResultat extends AbstraktVilkarsprovResultat {
-    private static final long serialVersionUID = 8758147409387323472L;
+
 
     private AbstraktBeregningsResultat beregningVedUttak;
     private VilkarsprovInformasjon vilkarsprovInformasjon;

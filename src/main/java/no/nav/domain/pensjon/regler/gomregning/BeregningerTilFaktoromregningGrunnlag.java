@@ -8,7 +8,7 @@ import java.util.List;
 
 public class BeregningerTilFaktoromregningGrunnlag implements Serializable {
 
-    private static final long serialVersionUID = 8234322249653707979L;
+    
     private Long vedtakId;
     private List<Beregning> beregningGrunnlagListe;
 

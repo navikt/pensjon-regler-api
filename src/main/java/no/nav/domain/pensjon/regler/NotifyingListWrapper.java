@@ -12,7 +12,7 @@ import java.util.*;
  */
 class NotifyingListWrapper<T> implements List<T>, Serializable {
 
-    private static final long serialVersionUID = 5947001843903026843L;
+
     private String propertyName;
     private String arrayName;
     private List<T> liste;

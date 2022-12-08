@@ -6,7 +6,6 @@ import java.util.Date;
 import no.nav.domain.pensjon.regler.grunnlag.PersonPensjonsbeholdning;
 
 public class RegulerPensjonsbeholdningRequest extends ServiceRequest  {
-	private static final long serialVersionUID = -1436468885395731897L;
 
 	private Date virkFom;
 	private ArrayList<PersonPensjonsbeholdning> beregningsgrunnlagForPensjonsbeholdning;

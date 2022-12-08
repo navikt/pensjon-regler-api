@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class KravFaktoromregningResultat implements Serializable {
-    private static final long serialVersionUID = -2605928824068483914L;
+
 
     private Long kravId;
     private BatchStatus batchStatus;

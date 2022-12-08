@@ -1,8 +1,7 @@
 package no.nav.domain.pensjon.regler.vedtak;
 
-import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.kode.EtteroppgjorResultatCti;
-import no.nav.domain.pensjon.regler.util.ToStringUtil;
+
 
 import java.io.Serializable;
 
@@ -116,194 +115,61 @@ public class EtteroppgjorResultat implements Serializable {
         this.totalBelop = totalBelop;
     }
 
-    private static final long serialVersionUID = -1051052378612998480L;
+    
 
     /**
      * Angir kronebeløp for et helt rettsgebyr
      */
-    @GuiPrompt(prompt = "Rettsgebyr")
     private int rettsgebyr;
 
     /**
      * Resultatet av etteroppgjøret.
      */
-    @GuiPrompt(prompt = "Resultat av etteroppgjør")
     private EtteroppgjorResultatCti etteroppgjorResultatType;
 
     /**
      * Toleransegrense for etterbetaling.
      */
-    @GuiPrompt(prompt = "Toleransegrense for etterbetaling")
     private int toleransegrensePositiv;
 
     /**
      * Toleransegrense for tilbakekreving.
      */
-    @GuiPrompt(prompt = "Toleransegrense for tilbakekreving")
     private int toleransegrenseNegativ;
 
     /**
      * Representerer inntekten som legges til grunn for beregningen av etteroppgjøret for uføretrygden.
      */
-    @GuiPrompt(prompt = "Inntekt brukt i etteroppgjør uføretrygd")
     private int inntektUT;
 
     /**
      * Inntekten som legges til grunn for beregningen av etteroppgjøret for barnetillegget for fellesbarn
      */
-    @GuiPrompt(prompt = "Inntekt brukt i etteroppgjør barnetillegg fellesbarn")
     private int inntektTFB;
 
     /**
      * Inntekten som legges til grunn for beregningen av etteroppgjøret for barnetillegget for særkullsbarn
      */
-    @GuiPrompt(prompt = "Inntekt brukt i etteroppgjør barnetillegg særkullsbarn")
     private int inntektTSB;
 
     /**
      * Det totale avviksbeløpet i UT, TFB og TSB.
      */
-    @GuiPrompt(prompt = "Totalt avviksbeløp")
     private int avviksbelop;
 
     /**
      * Beløpet som utgjør differansen mellom uføretrygd og ev. gjenlevendetillegg basert på forventet og uføretrygd og ev. gjenlevendetillegg basert på lignet inntekt.
      */
-    @GuiPrompt(prompt = "Avviksbeløp uføretrygd")
     private int avviksbelopUT;
 
     /**
      * Beløpet som utgjør differansen mellom barnetillegget for fellesbarn basert på forventet og barnetillegget for fellesbarn basert på lignet inntekt
      */
-    @GuiPrompt(prompt = "Avviksbeløp barnetillegg fellesbarn")
     private int avviksbelopTFB;
 
     /**
      * Beløpet som utgjør differansen mellom barnetillegget for særkullsbarn basert på forventet og barnetillegget for særkullsbarn basert på lignet inntekt
      */
-    @GuiPrompt(prompt = "Avviksbeløp barnetillegg særkullsbarn")
     private int avviksbelopTSB;
 
-    public EtteroppgjorResultat() {
-        super();
-    }
-
-    public EtteroppgjorResultat(EtteroppgjorResultat etteroppgjorResultat) {
-        this();
-        tidligereBelop = etteroppgjorResultat.tidligereBelop;
-        tidligereBelopTFB = etteroppgjorResultat.tidligereBelopTFB;
-        tidligereBelopTSB = etteroppgjorResultat.tidligereBelopTSB;
-        tidligereBelopUT = etteroppgjorResultat.tidligereBelopUT;
-        totalBelop = etteroppgjorResultat.totalBelop;
-        totalBelopTFB = etteroppgjorResultat.totalBelopTFB;
-        totalBelopTSB = etteroppgjorResultat.totalBelopTSB;
-        totalBelopUT = etteroppgjorResultat.totalBelopUT;
-        rettsgebyr = etteroppgjorResultat.rettsgebyr;
-        inntektUT = etteroppgjorResultat.inntektUT;
-        inntektTFB = etteroppgjorResultat.inntektTFB;
-        inntektTSB = etteroppgjorResultat.inntektTSB;
-        avviksbelop = etteroppgjorResultat.avviksbelop;
-        avviksbelopUT = etteroppgjorResultat.avviksbelopUT;
-        avviksbelopTFB = etteroppgjorResultat.avviksbelopTFB;
-        avviksbelopTSB = etteroppgjorResultat.avviksbelopTSB;
-        if (etteroppgjorResultat.etteroppgjorResultatType != null) {
-            etteroppgjorResultatType = new EtteroppgjorResultatCti(etteroppgjorResultat.etteroppgjorResultatType);
-        }
-
-        toleransegrensePositiv = etteroppgjorResultat.toleransegrensePositiv;
-        toleransegrenseNegativ = etteroppgjorResultat.toleransegrenseNegativ;
-    }
-
-    public int getRettsgebyr() {
-        return rettsgebyr;
-    }
-
-    public void setRettsgebyr(int rettsgebyr) {
-        this.rettsgebyr = rettsgebyr;
-    }
-
-    public EtteroppgjorResultatCti getEtteroppgjorResultatType() {
-        return etteroppgjorResultatType;
-    }
-
-    public void setEtteroppgjorResultatType(EtteroppgjorResultatCti etteroppgjorResultatType) {
-        this.etteroppgjorResultatType = etteroppgjorResultatType;
-    }
-
-    public int getToleransegrensePositiv() {
-        return toleransegrensePositiv;
-    }
-
-    public void setToleransegrensePositiv(int toleransegrensePositiv) {
-        this.toleransegrensePositiv = toleransegrensePositiv;
-    }
-
-    public int getToleransegrenseNegativ() {
-        return toleransegrenseNegativ;
-    }
-
-    public void setToleransegrenseNegativ(int toleransegrenseNegativ) {
-        this.toleransegrenseNegativ = toleransegrenseNegativ;
-    }
-
-    public int getInntektUT() {
-        return inntektUT;
-    }
-
-    public void setInntektUT(int inntektUT) {
-        this.inntektUT = inntektUT;
-    }
-
-    public int getInntektTFB() {
-        return inntektTFB;
-    }
-
-    public void setInntektTFB(int inntektTFB) {
-        this.inntektTFB = inntektTFB;
-    }
-
-    public int getInntektTSB() {
-        return inntektTSB;
-    }
-
-    public void setInntektTSB(int inntektTSB) {
-        this.inntektTSB = inntektTSB;
-    }
-
-    public int getAvviksbelop() {
-        return avviksbelop;
-    }
-
-    public void setAvviksbelop(int avviksbelop) {
-        this.avviksbelop = avviksbelop;
-    }
-
-    public int getAvviksbelopUT() {
-        return avviksbelopUT;
-    }
-
-    public void setAvviksbelopUT(int avviksbelopUT) {
-        this.avviksbelopUT = avviksbelopUT;
-    }
-
-    public int getAvviksbelopTFB() {
-        return avviksbelopTFB;
-    }
-
-    public void setAvviksbelopTFB(int avviksbelopTFB) {
-        this.avviksbelopTFB = avviksbelopTFB;
-    }
-
-    public int getAvviksbelopTSB() {
-        return avviksbelopTSB;
-    }
-
-    public void setAvviksbelopTSB(int avviksbelopTSB) {
-        this.avviksbelopTSB = avviksbelopTSB;
-    }
-
-    @Override
-    public String toString() {
-        return ToStringUtil.toString(this);
-    }
 }

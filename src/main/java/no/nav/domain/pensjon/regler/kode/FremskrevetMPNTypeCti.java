@@ -2,7 +2,7 @@ package no.nav.domain.pensjon.regler.kode;
 
 public class FremskrevetMPNTypeCti extends TypeCti {
 
-    private static final long serialVersionUID = 2562762958299802189L;
+
 
     public FremskrevetMPNTypeCti() {
         super();

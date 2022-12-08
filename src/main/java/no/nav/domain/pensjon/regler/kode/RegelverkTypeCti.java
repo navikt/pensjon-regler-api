@@ -5,7 +5,7 @@ public class RegelverkTypeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = -6005972678083475303L;
+    
 
     public RegelverkTypeCti() {
         super();

@@ -8,7 +8,7 @@ package no.nav.domain.pensjon.regler.kode;
 
 public class OpptjeningPOPPTypeCti extends TypeCti {
 
-    private static final long serialVersionUID = 2903516942493488921L;
+
 
     public OpptjeningPOPPTypeCti() {
         super();

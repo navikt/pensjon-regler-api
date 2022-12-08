@@ -5,7 +5,7 @@ public class FppGarantiKodeCti extends TypeCti {
     /**
 	 * 
 	 */
-    private static final long serialVersionUID = -4039328185465900256L;
+    
 
     public FppGarantiKodeCti() {
         super();

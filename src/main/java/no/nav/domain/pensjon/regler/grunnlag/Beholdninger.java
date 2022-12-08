@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Beholdninger implements Serializable {
-    private static final long serialVersionUID = -3795813899633856402L;
+
 
     /**
      * property change variabler

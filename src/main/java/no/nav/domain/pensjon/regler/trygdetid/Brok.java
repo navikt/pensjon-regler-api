@@ -1,7 +1,5 @@
 package no.nav.domain.pensjon.regler.trygdetid;
 
-import no.nav.domain.pensjon.regler.GuiPrompt;
-
 import java.io.Serializable;
 
 /**
@@ -11,18 +9,16 @@ import java.io.Serializable;
  */
 public class Brok implements Serializable {
 
-    private static final long serialVersionUID = -3772670089952086803L;
+
 
     /**
      * Brøkens teller.
      */
-    @GuiPrompt(prompt = "Brøkens teller")
     private int teller;
 
     /**
      * Brøkens nevner.
      */
-    @GuiPrompt(prompt = "Brøkens nevner")
     private int nevner;
 
     public Brok() {

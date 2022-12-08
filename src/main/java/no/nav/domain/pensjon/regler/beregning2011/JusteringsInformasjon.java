@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class JusteringsInformasjon implements Serializable {
-    private static final long serialVersionUID = 2474123061927464485L;
+    
 
     private double totalJusteringsfaktor;
     private JusteringsTypeCti justeringsTypeCti;

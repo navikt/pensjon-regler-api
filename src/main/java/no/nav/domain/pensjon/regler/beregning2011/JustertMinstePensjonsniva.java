@@ -1,7 +1,7 @@
 package no.nav.domain.pensjon.regler.beregning2011;
 
 public class JustertMinstePensjonsniva implements java.io.Serializable {
-    private static final long serialVersionUID = -377818334414250198L;
+
 
     private MinstePensjonsniva minstePensjonsniva;
     private JusteringsInformasjon justeringsInformasjon;

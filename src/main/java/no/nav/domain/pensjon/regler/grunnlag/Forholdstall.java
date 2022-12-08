@@ -3,7 +3,7 @@ package no.nav.domain.pensjon.regler.grunnlag;
 import java.io.Serializable;
 
 public class Forholdstall implements Serializable, Comparable<Forholdstall> {
-    private static final long serialVersionUID = 5262268261836476326L;
+    
     /**
      * Årskull forholdstallet gjelder for. Eks. 1964.
      */

@@ -6,7 +6,6 @@ import no.nav.domain.pensjon.regler.trygdetid.Brok;
 
 public class Inntektspensjon extends Ytelseskomponent {
 
-    private static final long serialVersionUID = -8278641159780687174L;
     /**
      * Brøken angir PenB_EKSPORT / PenB_NORGE som inntektspensjonen er redusert med.
      */
