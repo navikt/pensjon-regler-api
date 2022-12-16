@@ -6,15 +6,5 @@ public class SatsTypeCti extends TypeCti implements Serializable {
 
 
 
-    public SatsTypeCti(TypeCti typeCti) {
-        super(typeCti);
-    }
-
-    public SatsTypeCti() {
-    }
-
-    public SatsTypeCti(String kode) {
-        super(kode);
-    }
 
 }

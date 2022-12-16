@@ -21,10 +21,16 @@ public class Pakkseddel implements Serializable {
     private boolean kontrollTjenesteOk = true;
 
     private boolean annenTjenesteOk = true;
+
     /**
      * Liste av merknader. Beskriver hvordan PREG kom frem til <code>kontrollTjenesteOk</code>.
      */
     protected List<Merknad> merknadListe = new ArrayList<Merknad>();
+
+    public Pakkseddel(boolean kontrollTjenesteOk, boolean annenTjenesteOk) {
+        this.kontrollTjenesteOk = kontrollTjenesteOk;
+        this.annenTjenesteOk = annenTjenesteOk;
+    }
 
     /**
      * Hvilken versjon av PREG som er i bruk.
@@ -41,94 +47,4 @@ public class Pakkseddel implements Serializable {
      */
     private String PREG_satstabellVersion;
 
-
-    public Pakkseddel(boolean kontrollTjenesteOk, boolean annenTjenesteOk) {
-        this();
-        this.kontrollTjenesteOk = kontrollTjenesteOk;
-        this.annenTjenesteOk = annenTjenesteOk;
-    }
-
-    public Pakkseddel() {
-        super();
-    }
-
-    public Pakkseddel(Pakkseddel pakkseddel) {
-        super();
-        kontrollTjenesteOk = pakkseddel.kontrollTjenesteOk;
-        annenTjenesteOk = pakkseddel.annenTjenesteOk;
-        PREG_version = pakkseddel.PREG_version;
-        PREG_TestSatstabellType = pakkseddel.PREG_TestSatstabellType;
-        PREG_satstabellVersion = pakkseddel.PREG_satstabellVersion;
-        if (pakkseddel.merknadListe != null) {
-            for (Merknad merknad : pakkseddel.merknadListe) {
-                merknadListe.add(new Merknad(merknad));
-            }
-        }
-    }
-
-    public List<Merknad> getMerknadListe() {
-        return merknadListe;
-    }
-
-    public void setMerknadListe(List<Merknad> merknadListe) {
-        this.merknadListe = merknadListe;
-    }
-
-    public boolean isAnnenTjenesteOk() {
-        return annenTjenesteOk;
-    }
-
-    public void setAnnenTjenesteOk(boolean annenTjenesteOk) {
-        this.annenTjenesteOk = annenTjenesteOk;
-    }
-
-    public boolean isKontrollTjenesteOk() {
-        return kontrollTjenesteOk;
-    }
-
-    public void setKontrollTjenesteOk(boolean kontrollTjenesteOk) {
-        this.kontrollTjenesteOk = kontrollTjenesteOk;
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the merknad as array.
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[0]);
-    }
-
-    /**
-     * Read only property for merknadListe as array.
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
-    public String getPREG_version() {
-        return PREG_version;
-    }
-
-    public void setPREG_version(String PREG_version) {
-        this.PREG_version = PREG_version;
-    }
-
-    public String getPREG_TestSatstabellType() {
-        return PREG_TestSatstabellType;
-    }
-
-    public void setPREG_TestSatstabellType(String PREG_TestSatstabellType) {
-        this.PREG_TestSatstabellType = PREG_TestSatstabellType;
-    }
-
-    public String getPREG_satstabellVersion() {
-        return PREG_satstabellVersion;
-    }
-
-    public void setPREG_satstabellVersion(String PREG_satstabellVersion) {
-        this.PREG_satstabellVersion = PREG_satstabellVersion;
-    }
 }

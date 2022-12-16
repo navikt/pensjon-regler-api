@@ -7,25 +7,4 @@ import no.nav.domain.pensjon.regler.kode.VilkarOppfyltUTCti;
  */
 public class UngUfor extends AbstraktVilkar {
 
-    
-
-    public UngUfor() {
-        super();
-    }
-
-    public UngUfor(VilkarOppfyltUTCti resultat) {
-        super(resultat);
-    }
-
-    public UngUfor(UngUfor ungUfor) {
-        super(ungUfor);
-    }
-
-    public AbstraktVilkar dypKopi(AbstraktVilkar abs) {
-        UngUfor uu = null;
-        if(abs.getClass() == UngUfor.class) {
-            uu = new UngUfor((UngUfor) abs);
-        }
-        return uu;
-    }
 }

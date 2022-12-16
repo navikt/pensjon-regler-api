@@ -9,16 +9,4 @@ package no.nav.domain.pensjon.regler.kode;
 public class SoskenTypeCti extends TypeCti {
 
 
-
-    public SoskenTypeCti() {
-        super();
-    }
-
-    public SoskenTypeCti(String kode) {
-        super(kode);
-    }
-
-    public SoskenTypeCti(SoskenTypeCti soskenTypeCti) {
-        super(soskenTypeCti);
-    }
 }

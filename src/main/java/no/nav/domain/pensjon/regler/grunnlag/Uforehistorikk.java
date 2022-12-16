@@ -31,12 +31,4 @@ public class Uforehistorikk implements Serializable {
      */
     private Date sistMedlITrygden;
 
-    /**
-     * Ved eksport og ung uføre vil denne listen inneholde uførehistorikk med ung uføre.
-     * Intern PREG variabel
-     */
-    private List<Uforeperiode> PREG_originalUforeperiodeListe;
-
-
-
 }

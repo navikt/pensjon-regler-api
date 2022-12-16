@@ -1,8 +1,6 @@
 package no.nav.domain.pensjon.regler.beregning2011;
 
 import no.nav.domain.pensjon.regler.Merknad;
-import no.nav.domain.pensjon.regler.Omsorgsopptjening;
-import no.nav.domain.pensjon.regler.grunnlag.OpptjeningTypeMapping;
 import no.nav.domain.pensjon.regler.kode.FormelKodeCti;
 
 import java.io.Serializable;

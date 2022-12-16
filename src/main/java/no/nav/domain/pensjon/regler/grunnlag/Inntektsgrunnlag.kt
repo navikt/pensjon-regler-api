@@ -1,6 +1,6 @@
 package no.nav.domain.pensjon.regler.grunnlag
 
-import no.nav.domain.pensjon.regler.GuiPrompt
+
 import no.nav.domain.pensjon.regler.kode.GrunnlagKildeCti
 import no.nav.domain.pensjon.regler.kode.InntektTypeCti
 import java.io.Serializable

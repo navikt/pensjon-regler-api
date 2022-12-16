@@ -18,7 +18,6 @@ import java.util.Date;
 
 public class Uforeperiode implements Serializable {
 
-
     /**
      * Uføregraden, heltall 0-100.
      */

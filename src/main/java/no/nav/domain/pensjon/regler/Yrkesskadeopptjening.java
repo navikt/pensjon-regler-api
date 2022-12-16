@@ -17,8 +17,5 @@ public class Yrkesskadeopptjening implements Serializable {
      * Antatt Inntekt for yrkesskadeopptjeningen.
      */
     private double antattInntektYrke;
-    private double PREG_ai_yp_proRata;
-    private double PREG_ai_yp_gradert;
-    private double PREG_ai_yp_gradert_proRata;
 
 }

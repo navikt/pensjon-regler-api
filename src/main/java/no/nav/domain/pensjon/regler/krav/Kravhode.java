@@ -78,17 +78,6 @@ public class Kravhode implements Serializable {
      */
     private SakTypeCti sisteSakstypeForAP;
 
-    /**
-     * Angir om ektefellen mottar pensjon.
-     * Innført ifm CR140475. BeregnYtelse blir kalt med flagget ektefelleMottarPensjon i Request-objektet.
-     * Det flagget blir overført til PREG_epsMottarPensjon i startBeregnYtelse slik at det blir med inn
-     * til initPREG(kravhode, ..). initPREG utvides til å kalle en ny funksjon settEpsMottarPensjon som
-     * setter flagget tilknyttet.mottarPensjon lik ektefelleMottarPensjon i Request-objektet.
-     * Dermed kan regelsettet TilknyttetHarPensjonRS i støttefunksjoner kun bytte innholdet til å bruke
-     * tilknyttet.mottarPensjon istedet for å se etter PENF inntekt osv.
-     */
-    private boolean PREG_epsMottarPensjon;
-
 	/*
 	* Felt for å tre p_satsGP fra SisteAldersberegning2011.basispensjon.gp.p_satsGP  inn til BestemPsatsGPRS
 	* i forbindelse med kall tilBER 3152 RevurderingOpptjening. Innført ifm PK15267/PEN6372

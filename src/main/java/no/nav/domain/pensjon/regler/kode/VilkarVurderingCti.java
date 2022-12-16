@@ -6,17 +6,4 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class VilkarVurderingCti extends TypeCti {
 
-    
-
-    public VilkarVurderingCti() {
-        super();
-    }
-
-    public VilkarVurderingCti(String kode) {
-        super(kode);
-    }
-
-    public VilkarVurderingCti(VilkarVurderingCti vilkarVurderingCti) {
-        super(vilkarVurderingCti);
-    }
 }

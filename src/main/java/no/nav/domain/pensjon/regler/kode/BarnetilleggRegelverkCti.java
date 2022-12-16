@@ -5,18 +5,5 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class BarnetilleggRegelverkCti extends TypeCti {
 
-    
-
-    public BarnetilleggRegelverkCti() {
-        super();
-    }
-
-    public BarnetilleggRegelverkCti(String kode) {
-        super(kode);
-    }
-
-    public BarnetilleggRegelverkCti(TypeCti typeCti) {
-        super(typeCti);
-    }
 
 }

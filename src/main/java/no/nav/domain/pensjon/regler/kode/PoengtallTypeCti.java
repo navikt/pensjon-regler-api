@@ -6,24 +6,6 @@
  */
 package no.nav.domain.pensjon.regler.kode;
 
-/**
- * @author utvikler
- */
 public class PoengtallTypeCti extends TypeCti {
-    /**
-	 * 
-	 */
-    
 
-    public PoengtallTypeCti() {
-        super();
-    }
-
-    public PoengtallTypeCti(String kode) {
-        super(kode);
-    }
-
-    public PoengtallTypeCti(PoengtallTypeCti poengtallTypeCti) {
-        super(poengtallTypeCti);
-    }
 }

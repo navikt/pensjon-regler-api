@@ -1,17 +1,13 @@
 package no.nav.domain.pensjon.regler.beregning;
 
 import no.nav.domain.pensjon.regler.Merknad;
-import no.nav.domain.pensjon.regler.Omsorgsopptjening;
-import no.nav.domain.pensjon.regler.kode.BeregningMetodeTypeCti;
 import no.nav.domain.pensjon.regler.kode.PoengtallTypeCti;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Poengtall implements Serializable {
 
-    
 
     /**
      * Pensjonspoeng,

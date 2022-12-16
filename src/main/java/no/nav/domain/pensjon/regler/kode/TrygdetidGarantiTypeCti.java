@@ -7,17 +7,4 @@ package no.nav.domain.pensjon.regler.kode;
  */
 public class TrygdetidGarantiTypeCti extends TypeCti {
 
-    
-
-    public TrygdetidGarantiTypeCti() {
-        super();
     }
-
-    public TrygdetidGarantiTypeCti(String kode) {
-        super(kode);
-    }
-
-    public TrygdetidGarantiTypeCti(TypeCti typeCti) {
-        super(typeCti);
-    }
-}

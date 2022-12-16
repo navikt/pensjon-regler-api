@@ -59,13 +59,6 @@ public class Uforeopptjening implements Serializable {
 	* Angir om årets uføreopptjening er relatert til uføreperiode hvor uføretidspunktet er konvertert fra uførepensjon.
 	*/
 	private boolean konvertertUFT;
-	
-    //private double PREG_ai_up;
-    private double PREG_ai_up_gradert;
-    private double PREG_ai_up_gradert_proRata;
-    private double PREG_ai_up_restGradert;
-    private double PREG_ai_up_restGradert_proRata;
-    private double PREG_ai_upyp;
 
 
 }
