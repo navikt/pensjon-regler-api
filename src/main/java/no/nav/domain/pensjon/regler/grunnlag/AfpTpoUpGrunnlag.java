@@ -22,49 +22,7 @@ import java.util.Date;
 	* Dato som beløpet ovenfor var gyldig
 	*/
 	private Date virkFom;
-	
-	
-	
-	public void setBelop (int belop) {
-		this.belop = belop;
-	}
 
-	public int getBelop() {
-	
-		return belop;
-	}
-	
-		
-	public void setVirkFom (Date virkFom) {
-		this.virkFom = virkFom;
-	}
-
-	public Date getVirkFom() {
-	
-		return virkFom;
-	}
-	
-	/**
-	* Default constructor
-	*/
-	public AfpTpoUpGrunnlag() {
-		super();	
-	}
-
-	
-	 /**
-     * Copy Constructor
-     * 
-     * @param AfpTpoUpGrunnlag a <code>AfpTpoUpGrunnlag</code> object
-     */
-	
-	public AfpTpoUpGrunnlag(AfpTpoUpGrunnlag AfpTpoUpGrunnlag) {
-	
-		belop = AfpTpoUpGrunnlag.belop;
-		virkFom = AfpTpoUpGrunnlag.virkFom;
-	
-	}
-	
 
 	
 }

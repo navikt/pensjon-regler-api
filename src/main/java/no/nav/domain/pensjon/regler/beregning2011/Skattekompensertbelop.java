@@ -21,59 +21,5 @@ public class Skattekompensertbelop implements Serializable {
 
     private double tillegg;
 
-    public Skattekompensertbelop() {
-        super();
-    }
 
-    public Skattekompensertbelop(Skattekompensertbelop skattekompensertbelop) {
-        this.faktor = skattekompensertbelop.faktor;
-        if (skattekompensertbelop.formelKode != null) {
-            this.formelKode = new FormelKodeCti(skattekompensertbelop.formelKode);
-        }
-        this.arsbelop = skattekompensertbelop.arsbelop;
-        if (skattekompensertbelop.justertbelop != null){
-            this.justertbelop = new Justertbelop(skattekompensertbelop.justertbelop);
-        }
-        this.tillegg = skattekompensertbelop.tillegg;
-    }
-
-    public double getFaktor() {
-        return faktor;
-    }
-
-    public void setFaktor(double faktor) {
-        this.faktor = faktor;
-    }
-
-    public FormelKodeCti getFormelKode() {
-        return formelKode;
-    }
-
-    public void setFormelKode(FormelKodeCti formelKode) {
-        this.formelKode = formelKode;
-    }
-
-    public double getArsbelop() {
-        return arsbelop;
-    }
-
-    public void setArsbelop(double arsbelop) {
-        this.arsbelop = arsbelop;
-    }
-
-    public Justertbelop getJustertbelop() {
-        return justertbelop;
-    }
-
-    public void setJustertbelop(Justertbelop justertbelop) {
-        this.justertbelop = justertbelop;
-    }
-
-    public double getTillegg() {
-        return tillegg;
-    }
-
-    public void setTillegg(double tillegg) {
-        this.tillegg = tillegg;
-    }
 }

@@ -20,49 +20,4 @@ public class AntallArMndDag implements Serializable {
      */
     private int antallDager;
 
-    /**
-     * Copy Constructor
-     * 
-     * @param antallArOgMnd a <code>AntallArOgMnd</code> object
-     */
-    public AntallArMndDag(AntallArMndDag antallArMndDag) {
-        antallAr = antallArMndDag.antallAr;
-        antallMnd = antallArMndDag.antallMnd;
-        antallDager = antallArMndDag.antallDager;
-    }
-
-    public AntallArMndDag() {
-        super();
-    }
-
-    public AntallArMndDag(int antallAr, int antallMnd, int antallDager) {
-        super();
-        this.antallAr = antallAr;
-        this.antallMnd = antallMnd;
-        this.antallDager = antallDager;
-    }
-
-    public int getAntallAr() {
-        return antallAr;
-    }
-
-    public void setAntallAr(int antallAr) {
-        this.antallAr = antallAr;
-    }
-
-    public int getAntallMnd() {
-        return antallMnd;
-    }
-
-    public void setAntallMnd(int antallMnd) {
-        this.antallMnd = antallMnd;
-    }
-
-    public int getAntallDager() {
-        return antallDager;
-    }
-
-    public void setAntallDager(int antallDager) {
-        this.antallDager = antallDager;
-    }
 }

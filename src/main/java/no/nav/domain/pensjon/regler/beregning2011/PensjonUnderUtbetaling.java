@@ -53,15 +53,4 @@ public class PensjonUnderUtbetaling implements Serializable {
 
     private List<Ytelseskomponent> ytelseskomponenter = new ArrayList<Ytelseskomponent>();
 
-    /**
-     * Metode som benyttes av XStream og Java-serialisering for å
-     * initialisere felt vi hopper over p.g.a sykliske avhengigheter.
-     */
-    private Object readResolve() throws ObjectStreamException {
-        return this;
-    }
-
-    public PensjonUnderUtbetaling() {
-        super();
-    }
 }

@@ -16,19 +16,4 @@ public class Inntektspensjon extends Ytelseskomponent {
         ytelsekomponentType = new YtelsekomponentTypeCti("IP");
     }
 
-    public Inntektspensjon(Inntektspensjon ip) {
-        super(ip);
-        ytelsekomponentType = new YtelsekomponentTypeCti("IP");
-        if ( ip.eksportBrok != null) {
-            eksportBrok = new Brok(ip.eksportBrok);
-        }
-    }
-
-    public Brok getEksportBrok() {
-        return eksportBrok;
-    }
-
-    public void setEksportBrok(Brok eksportBrok) {
-        this.eksportBrok = eksportBrok;
-    }
 }

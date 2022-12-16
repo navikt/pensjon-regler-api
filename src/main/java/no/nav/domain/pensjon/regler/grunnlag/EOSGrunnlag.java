@@ -6,10 +6,6 @@ import java.io.Serializable;
 
 public class EOSGrunnlag implements Serializable {
 
-    /**
-     * Foreløbig - skal ikke brukes
-     */
-
 
     /**
      * Garantibeløp for alderspensjons

@@ -18,33 +18,4 @@ public class UtbetalingsgradUT implements Serializable {
      */
     private int utbetalingsgrad;
 
-    public UtbetalingsgradUT() {
-        super();
-    }
-
-    public UtbetalingsgradUT(UtbetalingsgradUT aUtbetalingsgradUT) {
-        ar = aUtbetalingsgradUT.ar;
-        utbetalingsgrad = aUtbetalingsgradUT.utbetalingsgrad;
-    }
-
-    public UtbetalingsgradUT(int ar, int utbetalingsgrad) {
-        this.ar = ar;
-        this.utbetalingsgrad = utbetalingsgrad;
-    }
-
-    public int getAr() {
-        return ar;
-    }
-
-    public void setAr(int ar) {
-        this.ar = ar;
-    }
-
-    public int getUtbetalingsgrad() {
-        return utbetalingsgrad;
-    }
-
-    public void setUtbetalingsgrad(int utbetalingsgrad) {
-        this.utbetalingsgrad = utbetalingsgrad;
-    }
 }

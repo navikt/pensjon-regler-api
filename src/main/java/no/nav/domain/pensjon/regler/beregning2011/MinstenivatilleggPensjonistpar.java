@@ -17,31 +17,4 @@ public class MinstenivatilleggPensjonistpar extends Ytelseskomponent {
         ytelsekomponentType = new YtelsekomponentTypeCti("MIN_NIVA_TILL_PPAR");
     }
 
-    public MinstenivatilleggPensjonistpar(MinstenivatilleggPensjonistpar mintpp) {
-        super(mintpp);
-        if (mintpp.ektefelle != null) {
-            ektefelle = new BeregningsInformasjonMinstenivatilleggPensjonistpar(mintpp.ektefelle);
-        }
-        if (mintpp.bruker != null) {
-            bruker = new BeregningsInformasjonMinstenivatilleggPensjonistpar(mintpp.bruker);
-        }
-        ytelsekomponentType = new YtelsekomponentTypeCti("MIN_NIVA_TILL_PPAR");
-    }
-
-    public BeregningsInformasjonMinstenivatilleggPensjonistpar getBruker() {
-        return bruker;
-    }
-
-    public void setBruker(BeregningsInformasjonMinstenivatilleggPensjonistpar bruker) {
-        this.bruker = bruker;
-    }
-
-    public BeregningsInformasjonMinstenivatilleggPensjonistpar getEktefelle() {
-        return ektefelle;
-    }
-
-    public void setEktefelle(BeregningsInformasjonMinstenivatilleggPensjonistpar ektefelle) {
-        this.ektefelle = ektefelle;
-    }
-
 }

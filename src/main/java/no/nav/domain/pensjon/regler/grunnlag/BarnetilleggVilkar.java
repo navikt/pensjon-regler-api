@@ -14,28 +14,5 @@ public class BarnetilleggVilkar implements Serializable {
     private BarnetilleggVilkarTypeCti btVilkarType;
     private boolean vurdertTil;
 
-    public BarnetilleggVilkar() {
-    }
-
-    public BarnetilleggVilkar(BarnetilleggVilkar b) {
-        this.setBtVilkarType(b.getBtVilkarType());
-        this.setVurdertTil(b.isVurdertTil());
-    }
-
-    public BarnetilleggVilkarTypeCti getBtVilkarType() {
-        return btVilkarType;
-    }
-
-    public boolean isVurdertTil() {
-        return vurdertTil;
-    }
-
-    public void setBtVilkarType(BarnetilleggVilkarTypeCti btVilkarType) {
-        this.btVilkarType = btVilkarType;
-    }
-
-    public void setVurdertTil(boolean vurdertTil) {
-        this.vurdertTil = vurdertTil;
-    }
 
 }

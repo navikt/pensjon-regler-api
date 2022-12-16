@@ -13,43 +13,6 @@ public class KravFaktoromregningResultat implements Serializable {
     private BatchStatus batchStatus;
     private List<PersongrunnlagOmregningResultat> persongrunnlagOmregningResultatListe;
 
-    public KravFaktoromregningResultat(Long kravId, BatchStatus batchStatus, List<PersongrunnlagOmregningResultat> persongrunnlagOmregningResultatListe) {
-        super();
-        this.kravId = kravId;
-        this.batchStatus = batchStatus;
-        this.persongrunnlagOmregningResultatListe = persongrunnlagOmregningResultatListe;
-    }
 
-    public KravFaktoromregningResultat() {
-        persongrunnlagOmregningResultatListe = new ArrayList<PersongrunnlagOmregningResultat>();
-    }
-
-    public PersongrunnlagOmregningResultat[] beregningResultatListe() {
-        return persongrunnlagOmregningResultatListe.toArray(new PersongrunnlagOmregningResultat[0]);
-    }
-
-    public BatchStatus getBatchStatus() {
-        return batchStatus;
-    }
-
-    public void setBatchStatus(BatchStatus batchStatus) {
-        this.batchStatus = batchStatus;
-    }
-
-    public Long getKravId() {
-        return kravId;
-    }
-
-    public void setKravId(Long kravId) {
-        this.kravId = kravId;
-    }
-
-    public List<PersongrunnlagOmregningResultat> getPersongrunnlagOmregningResultatListe() {
-        return persongrunnlagOmregningResultatListe;
-    }
-
-    public void setPersongrunnlagOmregningResultatListe(List<PersongrunnlagOmregningResultat> persongrunnlagOmregningResultatListe) {
-        this.persongrunnlagOmregningResultatListe = persongrunnlagOmregningResultatListe;
-    }
 
 }
