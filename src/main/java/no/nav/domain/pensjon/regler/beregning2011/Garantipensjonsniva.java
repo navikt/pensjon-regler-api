@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 public class Garantipensjonsniva implements Serializable {
     private static final long serialVersionUID = 4872799871400507221L;
-
+    protected boolean ektefelleInntektOver2G;
     private double belop;
     private double belopIkkeProratisert;
     private double sats;
@@ -17,8 +17,9 @@ public class Garantipensjonsniva implements Serializable {
     private int pro_rata_nevner_mnd;
     private double pro_rata_brok;
     private int tt_anv;
-    protected boolean ektefelleInntektOver2G;
     private int faktisk_tt_avtaleland_mnd;
+
+    private int benyttetYug;
 
     public Garantipensjonsniva() {
         super();
@@ -31,16 +32,17 @@ public class Garantipensjonsniva implements Serializable {
         belopIkkeProratisert = garPN.belopIkkeProratisert;
         if (garPN.satsType != null) {
             satsType = new GarantipenNivaCti(garPN.satsType);
-        } 
-		if (garPN.formelkode != null) {
+        }
+        if (garPN.formelkode != null) {
             this.formelkode = new FormelKodeCti(garPN.formelkode);
-		}
+        }
         pro_rata_teller_mnd = garPN.pro_rata_teller_mnd;
         pro_rata_nevner_mnd = garPN.pro_rata_nevner_mnd;
         pro_rata_brok = garPN.pro_rata_brok;
         tt_anv = garPN.tt_anv;
         ektefelleInntektOver2G = garPN.ektefelleInntektOver2G;
         faktisk_tt_avtaleland_mnd = garPN.faktisk_tt_avtaleland_mnd;
+        benyttetYug = garPN.benyttetYug;
     }
 
     public double getBelop() {
@@ -129,5 +131,13 @@ public class Garantipensjonsniva implements Serializable {
 
     public void setFormelkode(FormelKodeCti formelkode) {
         this.formelkode = formelkode;
+    }
+
+    public int getBenyttetYug() {
+        return benyttetYug;
+    }
+
+    public void setBenyttetYug(int benyttetYug) {
+        this.benyttetYug = benyttetYug;
     }
 }
