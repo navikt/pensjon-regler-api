@@ -15,9 +15,6 @@ public class BasisTilleggspensjon extends Tilleggspensjon {
         // Fjerner brutto og netto
         brutto = 0;
         netto = 0;
-
-        getFormler().ny().notasjon("0").felt("brutto").build();
-        getFormler().ny().notasjon("0").felt("netto").build();
     }
 
     public BasisTilleggspensjon(BasisTilleggspensjon bt) {
