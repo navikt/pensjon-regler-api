@@ -7,6 +7,7 @@ import java.util.Vector;
 
 
 import no.nav.domain.pensjon.regler.beregning2011.BeregnetUtbetalingsperiode;
+import no.nav.domain.pensjon.regler.beregning2011.Gjenlevendetillegg;
 import no.nav.domain.pensjon.regler.grunnlag.EtteroppgjorGrunnlag;
 import no.nav.domain.pensjon.regler.krav.Kravhode;
 import no.nav.domain.pensjon.regler.vedtak.VilkarsVedtak;
@@ -27,6 +28,8 @@ public class BeregnUforetrygdRequest extends ServiceRequest {
 
     private Date virkTom;
 
+    private Gjenlevendetillegg forrigeGjenlevendetillegg;
+
     /**
      * Liste over perioder med utbetalt uføretrygd
      */
@@ -46,7 +49,7 @@ public class BeregnUforetrygdRequest extends ServiceRequest {
 
     public BeregnUforetrygdRequest(Kravhode kravhode, Vector<VilkarsVedtak> vedtaksliste, Date virkFom, Date virkTom,
             List<BeregnetUtbetalingsperiode> beregnetUtbetalingsperiodeListe, boolean etteroppgjor,
-            EtteroppgjorGrunnlag etteroppgjorGrunnlag) {
+            EtteroppgjorGrunnlag etteroppgjorGrunnlag, Gjenlevendetillegg forrigeGjenlevendetillegg) {
         this.kravhode = kravhode;
         vilkarsvedtaksliste = vedtaksliste;
         this.virkFom = virkFom;
@@ -54,6 +57,7 @@ public class BeregnUforetrygdRequest extends ServiceRequest {
         this.beregnetUtbetalingsperiodeListe = beregnetUtbetalingsperiodeListe;
         this.etteroppgjor = etteroppgjor;
         this.etteroppgjorGrunnlag = etteroppgjorGrunnlag;
+        this.forrigeGjenlevendetillegg = forrigeGjenlevendetillegg;
     }
 
     public Kravhode getKravhode() {
@@ -95,6 +99,14 @@ public class BeregnUforetrygdRequest extends ServiceRequest {
 
     public void setVirkTom(Date virkTom) {
         this.virkTom = virkTom;
+    }
+
+    public Gjenlevendetillegg getForrigeGjenlevendetillegg() {
+        return forrigeGjenlevendetillegg;
+    }
+
+    public void setForrigeGjenlevendetillegg(Gjenlevendetillegg forrigeGjenlevendetillegg) {
+        this.forrigeGjenlevendetillegg = forrigeGjenlevendetillegg;
     }
 
     public List<BeregnetUtbetalingsperiode> getBeregnetUtbetalingsperiodeListe() {
