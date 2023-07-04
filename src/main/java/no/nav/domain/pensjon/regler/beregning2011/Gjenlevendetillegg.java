@@ -90,6 +90,11 @@ public class Gjenlevendetillegg extends Ytelseskomponent implements UforetrygdYt
     private double eksportFaktor;
 
     /**
+     * Grunnlaget for gjenlevendetillegget
+     */
+    private double grunnlagGjenlevendetillegg;
+
+    /**
      * Map av formler brukt i beregning av Tilleggspensjon.
      */
     private final HashMap<String, Formel> formelMap;
@@ -120,6 +125,7 @@ public class Gjenlevendetillegg extends Ytelseskomponent implements UforetrygdYt
         periodisertAvvikEtteroppgjor = gjenlevendetillegg.periodisertAvvikEtteroppgjor;
         eksportFaktor = gjenlevendetillegg.eksportFaktor;
         tidligereBelopAr = gjenlevendetillegg.tidligereBelopAr;
+        grunnlagGjenlevendetillegg = gjenlevendetillegg.grunnlagGjenlevendetillegg;
 
         formelMap = new HashMap<>();
         if (gjenlevendetillegg.formelMap != null && !gjenlevendetillegg.formelMap.isEmpty()) {
@@ -223,6 +229,14 @@ public class Gjenlevendetillegg extends Ytelseskomponent implements UforetrygdYt
     @Override
     public void setTidligereBelopAr(int tidligereBelopAr) {
         this.tidligereBelopAr = tidligereBelopAr;
+    }
+
+    public double getGrunnlagGjenlevendetillegg() {
+        return grunnlagGjenlevendetillegg;
+    }
+
+    public void setGrunnlagGjenlevendetillegg(double grunnlagGjenlevendetillegg) {
+        this.grunnlagGjenlevendetillegg = grunnlagGjenlevendetillegg;
     }
 
     @Override
