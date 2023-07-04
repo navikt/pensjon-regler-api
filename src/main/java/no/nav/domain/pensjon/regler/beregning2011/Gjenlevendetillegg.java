@@ -3,6 +3,12 @@ package no.nav.domain.pensjon.regler.beregning2011;
 import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.beregning.Ytelseskomponent;
 import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
+import no.nav.domain.pensjon.regler.util.formula.Formel;
+import no.nav.domain.pensjon.regler.util.formula.Formler;
+import no.nav.domain.pensjon.regler.util.formula.IFormelProvider;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Steinar Hjellvik (Decisive) PK-7113
@@ -11,7 +17,7 @@ import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
  * @author Swiddy de Louw (Capgemini) - PK-11041
  * @author Tatyana Lochehina PK-13673
  */
-public class Gjenlevendetillegg extends Ytelseskomponent implements UforetrygdYtelseskomponent {
+public class Gjenlevendetillegg extends Ytelseskomponent implements UforetrygdYtelseskomponent, IFormelProvider {
 
     private static final long serialVersionUID = -4631123447862835485L;
 
@@ -83,9 +89,20 @@ public class Gjenlevendetillegg extends Ytelseskomponent implements UforetrygdYt
     @GuiPrompt(prompt = "Eksportfaktor")
     private double eksportFaktor;
 
+    /**
+     * Map av formler brukt i beregning av Tilleggspensjon.
+     */
+    private final HashMap<String, Formel> formelMap;
+
+    /**
+     * Formler er grensesnittet mot formelrammeverket.
+     */
+    private final Formler formler = new Formler(this);
+
     public Gjenlevendetillegg() {
         super();
         ytelsekomponentType = new YtelsekomponentTypeCti("UT_GJT");
+        formelMap = new HashMap<>();
     }
 
     public Gjenlevendetillegg(Gjenlevendetillegg gjenlevendetillegg) {
@@ -103,6 +120,13 @@ public class Gjenlevendetillegg extends Ytelseskomponent implements UforetrygdYt
         periodisertAvvikEtteroppgjor = gjenlevendetillegg.periodisertAvvikEtteroppgjor;
         eksportFaktor = gjenlevendetillegg.eksportFaktor;
         tidligereBelopAr = gjenlevendetillegg.tidligereBelopAr;
+
+        formelMap = new HashMap<>();
+        if (gjenlevendetillegg.formelMap != null && !gjenlevendetillegg.formelMap.isEmpty()) {
+            for (Map.Entry<String, Formel> pair : gjenlevendetillegg.formelMap.entrySet()) {
+                formelMap.put(pair.getKey(), new Formel(pair.getValue()));
+            }
+        }
     }
 
     public double getBgKonvertert() {
@@ -199,5 +223,20 @@ public class Gjenlevendetillegg extends Ytelseskomponent implements UforetrygdYt
     @Override
     public void setTidligereBelopAr(int tidligereBelopAr) {
         this.tidligereBelopAr = tidligereBelopAr;
+    }
+
+    @Override
+    public HashMap<String, Formel> getFormelMap() {
+        return formelMap;
+    }
+
+    @Override
+    public Formler getFormler() {
+        return formler;
+    }
+
+    @Override
+    public String getFormelPrefix() {
+        return ytelsekomponentType.getKode();
     }
 }
