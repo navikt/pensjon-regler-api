@@ -4,7 +4,6 @@ import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.beregning.Ytelseskomponent;
 import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
 import no.nav.domain.pensjon.regler.util.formula.Formel;
-import no.nav.domain.pensjon.regler.util.formula.Formler;
 import no.nav.domain.pensjon.regler.util.formula.IFormelProvider;
 
 import java.util.HashMap;
@@ -98,11 +97,6 @@ public class Gjenlevendetillegg extends Ytelseskomponent implements UforetrygdYt
      * Map av formler brukt i beregning av Tilleggspensjon.
      */
     private final HashMap<String, Formel> formelMap;
-
-    /**
-     * Formler er grensesnittet mot formelrammeverket.
-     */
-    private final Formler formler = new Formler(this);
 
     public Gjenlevendetillegg() {
         super();
@@ -242,11 +236,6 @@ public class Gjenlevendetillegg extends Ytelseskomponent implements UforetrygdYt
     @Override
     public HashMap<String, Formel> getFormelMap() {
         return formelMap;
-    }
-
-    @Override
-    public Formler getFormler() {
-        return formler;
     }
 
     @Override

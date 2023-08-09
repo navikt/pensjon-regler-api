@@ -5,7 +5,6 @@ import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.kode.FormelKodeCti;
 import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
 import no.nav.domain.pensjon.regler.util.formula.Formel;
-import no.nav.domain.pensjon.regler.util.formula.Formler;
 import no.nav.domain.pensjon.regler.util.formula.IFormelProvider;
 
 import java.util.HashMap;
@@ -73,11 +72,6 @@ public class Tilleggspensjon extends Ytelseskomponent implements IFormelProvider
      * Map av formler brukt i beregning av Tilleggspensjon.
      */
     private HashMap<String, Formel> formelMap;
-
-    /**
-     * Formler er grensesnittet mot formelrammeverket.
-     */
-    private Formler formler = new Formler(this);
 
     public Tilleggspensjon() {
         super();
@@ -192,11 +186,6 @@ public class Tilleggspensjon extends Ytelseskomponent implements IFormelProvider
     @Override
     public HashMap<String, Formel> getFormelMap() {
         return formelMap;
-    }
-
-    @Override
-    public Formler getFormler() {
-        return formler;
     }
 
     @Override
