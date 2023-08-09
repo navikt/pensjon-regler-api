@@ -4,7 +4,6 @@ import no.nav.domain.pensjon.regler.GuiPrompt;
 import no.nav.domain.pensjon.regler.beregning.*;
 import no.nav.domain.pensjon.regler.beregning.penobjekter.*;
 import no.nav.domain.pensjon.regler.kode.FormelKodeCti;
-import no.nav.domain.pensjon.regler.util.formula.IFormelProvider;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
