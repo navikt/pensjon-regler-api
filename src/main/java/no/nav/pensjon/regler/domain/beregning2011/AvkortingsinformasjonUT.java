@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 
 import java.io.Serializable;
 
@@ -14,66 +14,66 @@ public class AvkortingsinformasjonUT extends AbstraktAvkortingsinformasjon imple
     /**
      * Beløpsgrense.
      */
-    @GuiPrompt(prompt = "Beløpsgrense")
+
     private int belopsgrense;
 
     /**
      * Sum av inntektskomponentene som ble lagt til grunn.
      */
-    @GuiPrompt(prompt = "Forventet inntekt")
+
     private int forventetInntekt;
 
     /**
      * Inntekt under denne grensen gir ikke utslag i avkorting.
      */
-    @GuiPrompt(prompt = "Inntektsgrense")
+
     private int inntektsgrense;
 
     /**
      * Inntektsgrense nest år settes når neste års inntektsgrense beregnes
      */
-    @GuiPrompt(prompt = "Inntektsgrense neste år")
+
     private int inntektsgrenseNesteAr;
 
     /**
      * Inntektstaket for påfølgende år fastsatt på bakgrunn av siste gjeldende OIFU i året. Feltet er kun angitt dersom inntektstak neste år avviker fra gjeldende inntektstak.
      */
-    @GuiPrompt(prompt = "Inntektstak neste år")
+
     private int inntektstakNesteAr;
     /**
      * Angir dekningsgrad av tapt arbeidsevne.
      */
-    @GuiPrompt(prompt = "Dekningsgrad av tapt arbeidsevne")
+
     private double kompensasjonsgrad;
 
     /**
      * Oppjustert inntekt etter uførhet.
      */
-    @GuiPrompt(prompt = "Oppjustert inntekt etter uførhet")
+
     private int oieu;
 
     /**
      * Oppjustert inntekt før uførhet.
      */
-    @GuiPrompt(prompt = "Oppjustert inntekt før uførhet")
+
     private int oifu;
 
     /**
      * Den OIFU som er angitt i beregningsperioden. Denne er ikke nødvendigvis den høyeste i året og skal benyttes for beregning av brutto barnetillegg.
      */
-    @GuiPrompt(prompt = "Oppjustert inntekt før uførhet for barnetillegg")
+
     private int oifuForBarnetillegg;
 
     /**
      * Beregnet årlig bruttobeløp etter full uføregrad.
      */
-    @GuiPrompt(prompt = "Brutto per år, ugradert")
+
     private int ugradertBruttoPerAr;
 
     /**
      * Utbetalingsgrad etter inntektsavkorting.
      */
-    @GuiPrompt(prompt = "Utbetalingsgrad etter inntektsavkorting")
+
     private int utbetalingsgrad;
 
     /**

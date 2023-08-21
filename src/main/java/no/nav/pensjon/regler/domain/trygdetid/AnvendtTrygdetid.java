@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.trygdetid;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 
 import java.io.Serializable;
 
@@ -14,7 +14,7 @@ public class AnvendtTrygdetid implements Serializable {
     /**
      * Anvendt trygdetid i antall år.
      */
-    @GuiPrompt(prompt = "Anvendt trygdetid i antall år")
+
     private int tt_anv;
 
     /**
@@ -22,7 +22,7 @@ public class AnvendtTrygdetid implements Serializable {
      * Teller er lik antall måneder faktisk trygdetid i Norge.
      * Nevner er lik antall måneder faktisk trygdetid i Norge og i avtaleland.
      */
-    @GuiPrompt(prompt = "Pro rata brøk")
+
     private Brok pro_rata;
 
     public AnvendtTrygdetid() {

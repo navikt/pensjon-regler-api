@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.grunnlag.EosEkstra;
 import no.nav.pensjon.regler.domain.kode.FppGarantiKodeCti;
 import no.nav.pensjon.regler.domain.kode.InntektKode1Cti;
@@ -29,7 +29,7 @@ public class UforeEkstra implements Serializable {
      * UFGRAD_50_REAK
      * YRKODE_18_HJEMMV
      */
-    @GuiPrompt(prompt = "Hvordan inntektstaket er beregnet (inntektkode1)")
+
     private InntektKode1Cti inntektkode1;
 
     /**
@@ -42,33 +42,33 @@ public class UforeEkstra implements Serializable {
      * INT_U_FRI_GML_REGL
      * INT_M_FRI_GML_REGL
      */
-    @GuiPrompt(prompt = "Inntektstak inneholder fribeløp (inntektkode2)")
+
     private InntektKode2Cti inntektkode2;
 
     /**
      * Inntektstak ved uførepensjon.Angir den høyeste pensjonsgivende inntekt uførepensjonisten
      * kan ha uten at uføregraden skal revurderes.
      */
-    @GuiPrompt(prompt = "Inntektstak ved uførepensjon")
+
     private int tak;
 
     /**
      * Inntektsgrense før friinntektsdato ved uførepensjon.
      * Angir den høyeste pensjonsgivende inntekt uførepensjonisten kan ha før friinntektsdato uten at uføregraden skal revurderes.
      */
-    @GuiPrompt(prompt = "Inntektsgrense før friinntektsdato")
+
     private int inntektsgrenseForFriinntektsdato;
 
     /**
      * Fremtidig pensjonspoengtall.
      */
-    @GuiPrompt(prompt = "Fremtidig pensjonspoengtall")
+
     private double fpp;
 
     /**
      * Framtidige pensjonspoengtall garanti, f.eks ung ufør har i dag en garanti på 3.3. i FPP.
      */
-    @GuiPrompt(prompt = "Fremtidig pensjonspoengtall garanti")
+
     private double fppGaranti;
 
     /**
@@ -79,25 +79,25 @@ public class UforeEkstra implements Serializable {
      * <code>UNG_UF_MR_33_FR_92 = Ung ufør med rett til 3.3 poeng fra 0592</code><br>
      * <code>UNG_UF_FOR_67 = unge uføre før 1967</code>
      */
-    @GuiPrompt(prompt = "Fremtidig pensjonspoengtall garanti kode")
+
     private FppGarantiKodeCti fppGarantiKode;
 
     /**
      * Antall godskrevet framtidig poengtall, ikke full framtidig godskriving.
      */
-    @GuiPrompt(prompt = "Redusert antall fpp år")
+
     private int redusertAntFppAr;
 
     /**
      * Uforeperioden som skal benyttes i historikken hvis/når Uføregrunnlaget blir historisk.
      */
-    @GuiPrompt(prompt = "Beregnet uføreperiode")
+
     private BeregningUforeperiode uforeperiode;
 
     /**
      * Uforeperioden for ysk som skal benyttes i historikken hvis/når Uføregrunnlaget blir historisk.
      */
-    @GuiPrompt(prompt = "Beregnet yrkesskadeperiode")
+
     private BeregningUforeperiode uforeperiodeYSK;
 
     /**

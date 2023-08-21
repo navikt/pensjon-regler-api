@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent;
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
 
@@ -17,56 +17,56 @@ public class UforetrygdOrdiner extends Ytelseskomponent implements UforetrygdYte
     /**
      * Brukers minsteytelse.
      */
-    @GuiPrompt(prompt = "Brukers minsteytelse")
+
     private Minsteytelse minsteytelse;
 
     /**
      * Brukers uføretrygd før inntektsavkorting.
      */
-    @GuiPrompt(prompt = "Egenopptjent uføretrygd")
+
     private EgenopptjentUforetrygd egenopptjentUforetrygd;
 
     /**
      * Angir om egenopptjentUforetrygd er best.
      */
-    @GuiPrompt(prompt = "Egenopptjent uføretrygd gunstigst")
+
     private boolean egenopptjentUforetrygdBest;
 
     /**
      * Angir detaljer rundt inntektsavkortingen.
      */
-    @GuiPrompt(prompt = "Detaljer om inntektsavkorting")
+
     private AvkortingsinformasjonUT avkortingsinformasjon;
 
     /**
      * Akkumulert netto hittil i året eksklusiv måned for beregningsperiodens fomDato.
      */
-    @GuiPrompt(prompt = "Akkumulert netto")
+
     private int nettoAkk;
 
     /**
      * gjenstående beløp brukeren har rett på for året som beregningsperioden starter,
      * og inkluderer måneden det beregnes fra.
      */
-    @GuiPrompt(prompt = "Gjenstående netto for året")
+
     private int nettoRestAr;
 
     /**
      * Inntektsavkortningsbeløp per år, før justering med differansebeløp
      */
-    @GuiPrompt(prompt = "Inntektsavkortningsbeløp per år")
+
     private int avkortningsbelopPerAr;
 
     /**
      * Utrykker avviket mellom lignet og forventet beløp ved etteroppgjør.
      */
-    @GuiPrompt(prompt = "Periodisert avvik ved etteroppgjør")
+
     private double periodisertAvvikEtteroppgjor;
 
     /**
      * Angir fradragPerAr dersom det ikke hadde vært arbeidsforsøk i perioden.
      */
-    @GuiPrompt(prompt = "Fradrag per år uten arbeidsforsøk")
+
     private double fradragPerArUtenArbeidsforsok;
 
     /**

@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 
 import java.io.Serializable;
 import java.util.Date;
@@ -8,13 +8,13 @@ import java.util.Date;
 public class LonnsvekstInformasjon implements Serializable {
     private static final long serialVersionUID = -979400824825729782L;
 
-    @GuiPrompt(prompt = "Lønnsvekst")
+
     private double lonnsvekst;
 
-    @GuiPrompt(prompt = "Reguleringsdato")
+
     private Date reguleringsDato;
 
-    @GuiPrompt(prompt = "Uttaksgrad ved regulering")
+
     private int uttaksgradVedRegulering;
 
     public LonnsvekstInformasjon() {

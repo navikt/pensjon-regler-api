@@ -38,13 +38,8 @@ public class ListUtil {
         for (A a : listToCopy) {
             try {
                 copyOfList.add((A) Class.forName(a.getClass().getName()).getConstructor(a.getClass()).newInstance(a));
-            } catch (IllegalArgumentException e) {
-            } catch (SecurityException e) {
-            } catch (InstantiationException e) {
-            } catch (IllegalAccessException e) {
-            } catch (InvocationTargetException e) {
-            } catch (NoSuchMethodException e) {
-            } catch (ClassNotFoundException e) {
+            } catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException |
+                     NoSuchMethodException | SecurityException | InstantiationException | ClassNotFoundException ignored) {
             }
         }
         return copyOfList;

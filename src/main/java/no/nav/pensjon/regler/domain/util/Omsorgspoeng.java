@@ -5,13 +5,10 @@ import no.nav.pensjon.regler.domain.beregning.Poengtall;
 import no.nav.pensjon.regler.domain.beregning2011.OpptjeningUT;
 import no.nav.pensjon.regler.domain.kode.PoengtallTypeCti;
 import no.nav.pensjon.regler.domain.util.OmsorgspoengCompareUtil.SynkendeArstallComparator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
 import static no.nav.pensjon.regler.domain.util.OmsorgspoengCompareUtil.PoengtallComparator;
-import static no.nav.pensjon.regler.domain.util.OmsorgspoengLogUtil.*;
 
 /**
  * Klasse for å ta hensyn til omsorgspoeng ved beregning av FPP.
@@ -22,9 +19,6 @@ import static no.nav.pensjon.regler.domain.util.OmsorgspoengLogUtil.*;
  * @version $Id$
  */
 public class Omsorgspoeng extends AbstractOmsorgspoeng {
-    // Logging
-    private static final Logger log = LoggerFactory.getLogger(Omsorgspoeng.class);
-
     /*
      * BeregnFPPHalvparten beregner fpp etter alternativ 2 i Gunnar Sletners Beregningsregler, side 91
      * BeregnFPPHalvparten tar inn en poengrekke. Sorterer poengtallene i en rekke for omsorgsår hvor pp > 0
@@ -39,19 +33,11 @@ public class Omsorgspoeng extends AbstractOmsorgspoeng {
     public double beregnFPPHalvparten(Vector<Poengtall> poengtallliste) {
         double beste_fpp = 0.0;
         if (poengtallliste.isEmpty()) {
-            if (log.isDebugEnabled()) {
-                System.out.println("beregnFPPHalvparten tom liste => fpp " + beste_fpp);
-            }
             return beste_fpp;
         }
 
-        //debug = System.getProperty("PREG_DEBUG", "false").equals("true");
-        if (log.isDebugEnabled()) {
-            printRekke("beregnFPPHalvparten ", new Vector<Omsorgsopptjening>(poengtallliste), log);
-        }
-
-        Vector<Poengtall> uten_omsorg = new Vector<Poengtall>();
-        Vector<Poengtall> med_omsorg = new Vector<Poengtall>();
+        Vector<Poengtall> uten_omsorg = new Vector<>();
+        Vector<Poengtall> med_omsorg = new Vector<>();
         long halvparten; // antall år i beste halvpart
         double fpp_uten = 0.0;
 
@@ -73,17 +59,10 @@ public class Omsorgspoeng extends AbstractOmsorgspoeng {
         }
         ar_med_omsorg = med_omsorg.size();
 
-        //		if (log.isDebugEnabled()) printRekke("Poengtall uten omsorg", uten_omsorg);
-        //		if (log.isDebugEnabled()) printRekke("Poengtall med omsorg", med_omsorg);
-
         halvparten = Math.round(uten_omsorg.size() * 0.5);
         if (uten_omsorg.isEmpty()) {
-            if (log.isDebugEnabled()) {
-                log.debug("beregnFPPHalvparten ingen poengtall uten omsorg => fpp " + beste_fpp);
-            }
             return beste_fpp;
         }
-        //if (log.isDebugEnabled()) System.out.println("halvparten " + halvparten + " " +uten_omsorg.size());
 
         Collections.sort(med_omsorg, new PoengtallComparator());
         Collections.sort(uten_omsorg, new PoengtallComparator());
@@ -96,16 +75,12 @@ public class Omsorgspoeng extends AbstractOmsorgspoeng {
         fpp_uten = Avrunding.avrundSpt(fpp_uten, 1.0); // ocm
         fpp_uten = Avrunding.avrundSpt(fpp_uten, halvparten);
         fpp_uten = Avrunding.avrundSpt(fpp_uten, 1.0);
-        //if (log.isDebugEnabled()) System.out.println("fpp_uten avrundet" + fpp_uten + " halvparten " + halvparten + " uavrundet "+d + " fpp/halv " + d/halvparten);
 
         if (fpp_uten == 0) {
-            if (log.isDebugEnabled()) {
-                log.debug("beregnFPPHalvparten ingen poengtall uten omsorg > 0  => fpp " + beste_fpp);
-            }
             return 0.0;
         }
         // starter med en poengtall-liste som er lik uten_omsorg
-        Vector<Poengtall> tmp_list = new Vector<Poengtall>(uten_omsorg);
+        Vector<Poengtall> tmp_list = new Vector<>(uten_omsorg);
 
         beste_fpp = fpp_uten;
         int mindre = 0;
@@ -131,9 +106,6 @@ public class Omsorgspoeng extends AbstractOmsorgspoeng {
             if (mindre > 2) {
                 break;
             }
-        }
-        if (log.isDebugEnabled()) {
-            log.debug("beregnFPPHalvparten fpp ferdig " + beste_fpp);
         }
         return beste_fpp;
     }
@@ -236,26 +208,11 @@ public class Omsorgspoeng extends AbstractOmsorgspoeng {
      * Den største av disse alternativene deles på 3 og returneres som fpp.
      */
     private List<Ref_pp> finnBesteFemSiste(List<Omsorgsopptjening> poengtallliste) {
-        // Debug settes nå på Logger-objektet.
-        // debug =System.getProperty("PREG_DEBUG", "false").equals("true");
-        // satstabeller_debug = System.getProperty("SATSTABELLER_DEBUG", "false").equals("true");
         this.poengtallliste = poengtallliste;
 
-        //Reduserer poengrekken til formen "i1 {o1} i2 {o2} i3 {o3} i4 i5"
         konstruerMinstePoengrekke();
 
-        if (log.isDebugEnabled()) {
-            printRekke("finnBesteFemSiste ", poengtallliste, log);
-            printRedusertRekke(ikkeOmsorgsar, o, log);
-        }
-
         int besteUtfall = besteFemBasertPaMinstePoengrekke();
-
-        if (log.isDebugEnabled()) {
-            log.debug("Vinnende tre år:" + refArListString(alleUtfall.get(besteUtfall)));
-            log.debug("Vinnende tre pp:" + refppListString(alleUtfall.get(besteUtfall)));
-            log.debug("Sum :" + resultat[besteUtfall]);
-        }
         return alleUtfall.get(besteUtfall);
     }
 
@@ -265,7 +222,7 @@ public class Omsorgspoeng extends AbstractOmsorgspoeng {
      */
     public List<Omsorgsopptjening> finnBeste3Av5(List<Omsorgsopptjening> poengtallliste) {
         List<Ref_pp> resultat = finnBesteFemSiste(poengtallliste);
-        List<Omsorgsopptjening> arene = new ArrayList<Omsorgsopptjening>();
+        List<Omsorgsopptjening> arene = new ArrayList<>();
         for (Ref_pp p : resultat) {
             if (p.pt instanceof OpptjeningUT) {
                 arene.add(p.pt);
@@ -282,8 +239,8 @@ public class Omsorgspoeng extends AbstractOmsorgspoeng {
      * Spesialutgave som Blaze kan bruke
      */
     public List<OpptjeningUT> finnBeste3Av5_blaze(List<OpptjeningUT> poengtallliste) {
-        List<Ref_pp> resultat = finnBesteFemSiste(new ArrayList<Omsorgsopptjening>(poengtallliste));
-        List<OpptjeningUT> arene = new ArrayList<OpptjeningUT>();
+        List<Ref_pp> resultat = finnBesteFemSiste(new ArrayList<>(poengtallliste));
+        List<OpptjeningUT> arene = new ArrayList<>();
         for (Ref_pp p : resultat) {
             if (p.pt instanceof OpptjeningUT) {
                 arene.add((OpptjeningUT) p.pt);
@@ -303,7 +260,7 @@ public class Omsorgspoeng extends AbstractOmsorgspoeng {
         List<Omsorgsopptjening> liste = Arrays.asList(poengtallliste);
         List<Ref_pp> resultat = finnBesteFemSiste(liste);
 
-        liste = new ArrayList<Omsorgsopptjening>();
+        liste = new ArrayList<>();
         for (Ref_pp o : resultat) {
             if (o.pt instanceof OpptjeningUT) {
                 liste.add(o.pt);
@@ -367,7 +324,7 @@ public class Omsorgspoeng extends AbstractOmsorgspoeng {
      * Denne funksjonen kan eventuelt refaktoreres til å heller ta inn en liste.
      */
     private void vurderUtfall(Ref_pp i1, Ref_pp i2, Ref_pp i3, Ref_pp i4, Ref_pp i5) {
-        Vector<Ref_pp> detteUtfall = new Vector<Ref_pp>();
+        Vector<Ref_pp> detteUtfall = new Vector<>();
         detteUtfall.add(i1);
         detteUtfall.add(i2);
         detteUtfall.add(i3);
@@ -411,7 +368,7 @@ public class Omsorgspoeng extends AbstractOmsorgspoeng {
      * @return beregnet fpp
      */
     public double beregnFPP3Beste(Vector<Omsorgsopptjening> poengtallliste, int tilAr) {
-        Vector<Omsorgsopptjening> tempPoengtallListe = new Vector<Omsorgsopptjening>(poengtallliste);
+        Vector<Omsorgsopptjening> tempPoengtallListe = new Vector<>(poengtallliste);
         for (Omsorgsopptjening poengtall : poengtallliste) {
             if (poengtall.getOpptjeningsar() > tilAr) {
                 tempPoengtallListe.remove(poengtall);

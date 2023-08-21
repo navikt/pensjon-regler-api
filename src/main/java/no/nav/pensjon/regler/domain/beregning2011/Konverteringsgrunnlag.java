@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.beregning.Grunnpensjon;
 import no.nav.pensjon.regler.domain.beregning.Sertillegg;
 import no.nav.pensjon.regler.domain.beregning.Tilleggspensjon;
@@ -20,20 +20,20 @@ public class Konverteringsgrunnlag implements Serializable {
     /**
      * Grunnpensjon for dette konverteringsgrunnlaget
      */
-    @GuiPrompt(prompt = "Grunnpensjon")
+
     private Grunnpensjon gp;
 
     /**
      * Tilleggspensjon for dette konverteringsgrunnlaget
      */
-    @GuiPrompt(prompt = "Tilleggspensjon")
+
     private Tilleggspensjon tp;
 
     /**
      * Særtillegg for dette konverteringsgrunnlaget
      * Betinget, hvis uførepensjon er beregnet med særtillegg
      */
-    @GuiPrompt(prompt = "Særtillegg")
+
     private Sertillegg st;
 
     /**

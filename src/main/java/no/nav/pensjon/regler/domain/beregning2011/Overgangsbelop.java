@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
 
 import java.io.Serializable;
@@ -12,22 +12,22 @@ public class Overgangsbelop implements Serializable {
 
     private static final long serialVersionUID = 2894452390016921661L;
 
-    @GuiPrompt(prompt = "Formel")
+
     private FormelKodeCti formelKode;
 
-    @GuiPrompt(prompt = "Grunnpensjon brutto")
+
     private int gpBrutto;
 
-    @GuiPrompt(prompt = "Grunnpensjon sats")
+
     private double gpSats;
 
-    @GuiPrompt(prompt = "Overgangsbeløp")
+
     private double overgangsbelop;
 
-    @GuiPrompt(prompt = "Særtillegg brutto")
+
     private int stBrutto;
 
-    @GuiPrompt(prompt = "Tilleggspensjon brutto")
+
     private int tpBrutto;
 
     public Overgangsbelop() {

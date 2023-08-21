@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent;
 import no.nav.pensjon.regler.domain.util.Copyable;
 import no.nav.pensjon.regler.domain.util.DateCompareUtil;
@@ -14,39 +14,39 @@ public class BeregnetUtbetalingsperiode implements Serializable, Comparable<Bere
     /**
      * Periodens startdato.
      */
-    @GuiPrompt(prompt = "Periodens startdato")
+
     private Date fomDato;
 
     /**
      * Periodens sluttdato.
      */
-    @GuiPrompt(prompt = "Periodens sluttdato")
+
     private Date tomDato;
 
     /**
      * Uføregrad for perioden
      */
-    @GuiPrompt(prompt = "Uføregrad")
+
     private int uforegrad;
 
     /**
      * Yrkesskadegrad for perioden
      */
-    @GuiPrompt(prompt = "Yrkesskadegrad")
+
     private int yrkesskadegrad;
 
     /**
      * Antall fellesbarn det er innvilget barnetillegg for i perioden.
      * Vil kun være angitt for fremtidige perioder i kontekst av etteroppgjør
      */
-    @GuiPrompt(prompt = "Antall fellesbarn med innvilget barnetillegg i perioden")
+
     private int antallFellesbarn;
 
     /**
      * Antall særkullsbarn det er innvilget barnetillegg for i perioden.
      * Vil kun være angitt for fremtidige perioder i kontekst av etteroppgjør
      */
-    @GuiPrompt(prompt = "Antall særkullsbarn med innvilget barnetillegg i perioden")
+
     private int antallSerkullsbarn;
 
     private Map<String, Ytelseskomponent> ytelseskomponenter = new HashMap<String, Ytelseskomponent>();

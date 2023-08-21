@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.EksportlandCti;
 
 import java.io.Serializable;
@@ -12,13 +12,13 @@ public class Eksportrett implements Serializable {
     /**
      * Angir om personen har eksportrett eller ikke.
      */
-    @GuiPrompt(prompt = "Eksportrett")
+
     private boolean eksportrett;
 
     /**
      * Angir land personen bor i.
      */
-    @GuiPrompt(prompt = "Bostedsland")
+
     EksportlandCti bostedsland;
 
     /**

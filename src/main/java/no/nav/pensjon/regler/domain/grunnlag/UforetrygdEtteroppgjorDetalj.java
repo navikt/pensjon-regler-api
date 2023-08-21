@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.GrunnlagsrolleCti;
 import no.nav.pensjon.regler.domain.util.Copyable;
 
@@ -18,31 +18,31 @@ public class UforetrygdEtteroppgjorDetalj implements Serializable, Copyable<Ufor
     /**
      * Angir gyldighetsperioden for detaljen. Avgrenset av uføreperioden og året som etteroppgjørsgrunnlaget gjelder for.
      */
-    @GuiPrompt(prompt = "Fra og med dato")
+
     private Date fomDato;
 
     /**
      * Liste over inntektsfratrekk for etteroppgjøret (for perioder uten uføretrygd og andre registrerte fradrag).
      */
-    @GuiPrompt(prompt = "Inntektsfratrekk for etteroppgjøret")
+
     private List<Inntektsgrunnlag> fratrekk = new ArrayList<Inntektsgrunnlag>();
 
     /**
      * Kode som angir hvilken rolle personen har på kravet. De ulike rollene er definert i Kodeverk, ark K_GRNL_ROLLE_T.
      */
-    @GuiPrompt(prompt = "Grunnlagsrolle")
+
     private GrunnlagsrolleCti grunnlagsrolle;
 
     /**
      * Liste over alle inntekter som skal benyttes i etteroppgjøret.
      */
-    @GuiPrompt(prompt = "Inntekter benyttet i etteroppgjør")
+
     private List<Inntektsgrunnlag> inntekter = new ArrayList<Inntektsgrunnlag>();
 
     /**
      * Angir gyldighetsperioden for detaljen. Avgrenset av uføreperioden og året som etteroppgjørsgrunnlaget gjelder for.
      */
-    @GuiPrompt(prompt = "Til og med dato")
+
     private Date tomDato;
 
     public UforetrygdEtteroppgjorDetalj() {

@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.beregning.*;
 import no.nav.pensjon.regler.domain.beregning.penobjekter.*;
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
@@ -37,34 +37,34 @@ public class PensjonUnderUtbetaling implements Serializable {
      * avrundet hver for seg til nærmeste krone. Dette medfører at
      * avrund(totalbelopNettoAr/12) vil kunne være forskjellig fra totalbelopNetto.
      */
-    @GuiPrompt(prompt = "Sum netto per måned")
+
     private int totalbelopNetto;
 
     /**
      * Årlig netto beløp under utbetaling
      */
-    @GuiPrompt(prompt = "Sum netto per år")
+
     private double totalbelopNettoAr;
 
     /**
      * Angir sum brutto per måned.
      */
-    @GuiPrompt(prompt = "Sum brutto per måned")
+
     private int totalbelopBrutto;
 
     /**
      * Angir sum brutto per år.
      */
-    @GuiPrompt(prompt = "Sum brutto per år")
+
     private double totalbelopBruttoAr;
 
     /**
      * Indikerer hvilken beregningsformel som ble brukt.
      */
-    @GuiPrompt(prompt = "Formel")
+
     private FormelKodeCti formelKode;
 
-    @GuiPrompt(prompt = "Regulering fratrekk")
+
     private double pubReguleringFratrekk;
 
     private List<Ytelseskomponent> ytelseskomponenter = new ArrayList<Ytelseskomponent>();

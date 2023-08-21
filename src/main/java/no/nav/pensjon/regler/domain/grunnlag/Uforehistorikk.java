@@ -181,11 +181,7 @@ public class Uforehistorikk implements Serializable {
     public String toString() {
         final String TAB = "    ";
 
-        StringBuilder retValue = new StringBuilder();
-
-        retValue.append("Uforehistorikk ( ").append(super.toString()).append(TAB).append("uforeperiodeListe = ").append(uforeperiodeListe).append(TAB).append(" )");
-
-        return retValue.toString();
+        return "Uforehistorikk ( " + super.toString() + TAB + "uforeperiodeListe = " + uforeperiodeListe + TAB + " )";
     }
 
 }

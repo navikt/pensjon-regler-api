@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.MinstepensjonTypeCti;
 import no.nav.pensjon.regler.domain.kode.ResultatKildeCti;
 import no.nav.pensjon.regler.domain.trygdetid.AnvendtTrygdetid;
@@ -21,69 +21,69 @@ public class OvergangsinfoUPtilUT implements Serializable {
     /**
      * Konvertert beregningsgrunnlag for Ordinær beregning
      */
-    @GuiPrompt(prompt = "Konvertert beregningsgrunnlag for ordinær beregning")
+
     private BeregningsgrunnlagKonvertert konvertertBeregningsgrunnlagOrdiner;
 
     /**
      * Konvertert beregningsgrunnlag for Yrkesskade beregning
      */
-    @GuiPrompt(prompt = "Konvertert beregningsgrunnlag for yrkesskade beregning")
+
     private BeregningsgrunnlagKonvertert konvertertBeregningsgrunnlagYrkesskade;
 
     /**
      * Uføretrygd ektefelletilleg
      */
-    @GuiPrompt(prompt = "Ektefelletillegg uføretrygd")
+
     private EktefelletilleggUT ektefelletilleggUT;
 
     /**
      * Inntektsgrense for Friintektsdato
      */
-    @GuiPrompt(prompt = "Inntektsgrense for friinntektsdato")
+
     private int inntektsgrenseorFriinntektsdato;
 
     /**
      * Konvertert beregningsgrunnlag for gjenlevendetillegg hvis fastsatt
      */
-    @GuiPrompt(prompt = "Konvertert beregningsgrunnlag for gjenlevendetillegg")
+
     private BeregningsgrunnlagKonvertert konvertertBeregningsgrunnlagGJT;
 
     /**
      * Anvendt trygdetid fra konvertert uførepensjon
      */
-    @GuiPrompt(prompt = "Anvendt trygdetid fra konvertert uførepensjon")
+
     private AnvendtTrygdetid anvendtTrygdetidUP;
 
     /**
      * Anvendt trygdetid fra hjemmeberegningen til konvertert uførepensjon
      */
-    @GuiPrompt(prompt = "Anvendt trygdetid fra hjemmeberegning til konvertert uførepensjon")
+
     private AnvendtTrygdetid anvendtTrygdetidUPHjemme;
 
     /**
      * Egen anvendt trygdetid fra UP
      */
-    @GuiPrompt(prompt = "Egen anvendt trygdetid fra uførepensjon")
+
     private AnvendtTrygdetid anvendtTrygdetidUP_egen;
 
 
     /**
      * Hvorvidt utbetalt uførepensjonen per 31.12.2014 ble definert som minstepensjon.
      */
-    @GuiPrompt(prompt = " Hvorvidt utbetalt uførepensjonen per 31.12.2014 ble definert som minstepensjon")
+
     private MinstepensjonTypeCti minstepensjonType;
 
 
     /**
      * Hvorvidt utbetalt uførepensjonen per 31.12.2014 ble manuelt overstyrt eller ikke.
      */
-    @GuiPrompt(prompt = "Hvorvidt utbetalt uførepensjonen per 31.12.2014 ble manuelt overstyrt eller ikke")
+
     private ResultatKildeCti resultatKilde;
 
     /**
      * Netto særtillegg i utbetalt uførepensjonen per 31.12.2014.
      */
-    @GuiPrompt(prompt = " Netto særtillegg i utbetalt uførepensjonen per 31.12.2014")
+
     private int sertilleggNetto;
 
     /**

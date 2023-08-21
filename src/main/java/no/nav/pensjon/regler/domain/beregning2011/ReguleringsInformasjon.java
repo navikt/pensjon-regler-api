@@ -1,34 +1,34 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 
 import java.io.Serializable;
 
 public class ReguleringsInformasjon implements Serializable {
     private static final long serialVersionUID = -8046515500454507355L;
 
-    @GuiPrompt(prompt = "Lønnsvekst")
+
     private double lonnsvekst;
 
-    @GuiPrompt(prompt = "Fratrekksfaktor")
+
     private double fratrekksfaktor;
 
-    @GuiPrompt(prompt = "Gammelt grunnbeløp")
+
     private int gammelG;
 
-    @GuiPrompt(prompt = "Nytt grunnbeløp")
+
     private int nyG;
 
-    @GuiPrompt(prompt = "Reguleringsfaktor")
+
     private double reguleringsfaktor;
 
-    @GuiPrompt(prompt = "Gjennomsnittlig uttaksgrad siste år")
+
     private double gjennomsnittligUttaksgradSisteAr;
 
-    @GuiPrompt(prompt = "Reguleringsbeløp")
+
     private double reguleringsbelop;
 
-    @GuiPrompt(prompt = "Faktor som vil være gjennomsnittet av pris og lønnvekst")
+
     private double prisOgLonnsvekst;
 
     public ReguleringsInformasjon() {

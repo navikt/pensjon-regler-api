@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.EksportUnntakCti;
 import no.nav.pensjon.regler.domain.kode.InngangUnntakCti;
 
@@ -13,19 +13,19 @@ public class Unntak implements Serializable {
     /**
      * Angir om personen har unntak eller ikke.
      */
-    @GuiPrompt(prompt = "Unntak")
+
     boolean unntak;
 
     /**
      * Angir type unntak.
      */
-    @GuiPrompt(prompt = "Unntaktype")
+
     InngangUnntakCti unntakType;
 
     /**
      * Unntak fra eksportforbud.
      */
-    @GuiPrompt(prompt = "Unntak fra eksportforbud")
+
     EksportUnntakCti eksportUnntak;
 
     /**

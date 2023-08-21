@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.YtelseVedDodCti;
 import no.nav.pensjon.regler.domain.trygdetid.AnvendtTrygdetid;
 
@@ -17,79 +17,79 @@ public class GjenlevendetilleggInformasjon implements Serializable {
     /**
      * Avdødes beregningsgrunnlag.
      */
-    @GuiPrompt(prompt = "Avdødes beregningsgrunnlag")
+
     private AbstraktBeregningsgrunnlag beregningsgrunnlagAvdodOrdiner;
 
     /**
      * Avdødes anvendte trygdetid.
      */
-    @GuiPrompt(prompt = "Avdødes anvendte trygdetid")
+
     private AnvendtTrygdetid anvendtTrygdetid;
 
     /**
      * Dødsdato.
      */
-    @GuiPrompt(prompt = "Dødsdato")
+
     private Date dodstidspunkt;
 
     /**
      * Hvis ufør ved død er dette gjeldende uføretidspunkt.
      */
-    @GuiPrompt(prompt = "Uføretidspunkt hvis ufør ved død")
+
     private Date uforetidspunkt;
 
     /**
      * Hvilken ytelse avdød mottok ved sin død.
      */
-    @GuiPrompt(prompt = "Ytelse ved død")
+
     private YtelseVedDodCti ytelseVedDod;
 
     /**
      * Angir om avdøde ga opphav til gjenlevendepensjon.
      */
-    @GuiPrompt(prompt = "Avdød ga opphav til gjenlevendepensjon")
+
     private boolean gjenlevendepensjon;
 
     /**
      * Angir om ung ufør ble anvendt for avdøde.
      */
-    @GuiPrompt(prompt = "Ung ufør anvendt for avdøde")
+
     private boolean minsteYtelseBenyttetUngUfor;
 
     /**
      * Minsteytelsen med avdødes egen trygdetid.
      */
-    @GuiPrompt(prompt = "Minsteytelse med avdødes trygdetid")
+
     private int minsteYtelseArsbelop;
 
     /**
      * Avdødes minsteytelsesats basert på gjenlevendes sivilstand.
      */
-    @GuiPrompt(prompt = "Minsteytelse sats")
+
     private double minsteYtelseSats;
 
     /**
      * Yrkesskade beregnet for avdød.
      */
-    @GuiPrompt(prompt = "Yrkesskade beregnet for avdød")
+
     private boolean yrkesskade;
 
     /**
      * Avdødes beregningsgrunnlag for yrkesskade.
      */
-    @GuiPrompt(prompt = "Avdødes yrkesskade beregningsgrunnlag")
+
     private AbstraktBeregningsgrunnlag beregningsgrunnlagAvdodYrkesskade;
 
     /**
      * Skadetidspunkt ved yrkesskade.
      */
-    @GuiPrompt(prompt = "Skadetidspunkt ved yrkesskade")
+
     private Date skadetidspunkt;
 
     /**
      * Avdødes yrkesskadegrad.
      */
-    @GuiPrompt(prompt = "Avdødes yrkesskadegrad")
+
     private int yrkesskadegrad;
 
     public GjenlevendetilleggInformasjon() {

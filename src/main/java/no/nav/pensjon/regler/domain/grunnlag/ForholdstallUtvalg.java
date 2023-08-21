@@ -13,7 +13,7 @@ public class ForholdstallUtvalg implements Serializable {
     private double PREG_ft67virk;
     private double PREG_reguleringsfaktor;
 
-    private List<Forholdstall> forholdstallListe = new ArrayList<Forholdstall>();
+    private List<Forholdstall> forholdstallListe = new ArrayList<>();
 
     public ForholdstallUtvalg() {
     }

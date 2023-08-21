@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
 import no.nav.pensjon.regler.domain.kode.JustertPeriodeCti;
 import no.nav.pensjon.regler.domain.kode.YtelseVedDodCti;
@@ -18,40 +18,40 @@ import java.util.Date;
 public class Uforetrygdberegning extends Beregning2011 {
     private static final long serialVersionUID = 1L;
 
-    @GuiPrompt(prompt = "Brutto per år")
+
     private int bruttoPerAr;
 
-    @GuiPrompt(prompt = "Formel")
+
     private FormelKodeCti formelKode;
 
-    @GuiPrompt(prompt = "Grunnbeløp")
+
     private int grunnbelop;
 
-    @GuiPrompt(prompt = "Minsteytelse")
+
     private Minsteytelse minsteytelse;
 
-    @GuiPrompt(prompt = "Pro rata brøk")
+
     private Brok prorataBrok;
 
-    @GuiPrompt(prompt = "Uføregrad")
+
     private int uforegrad;
 
-    @GuiPrompt(prompt = "Uføretidspunkt")
+
     private Date uforetidspunkt;
 
-    @GuiPrompt(prompt = "Egenopptjent uføretrygd")
+
     private EgenopptjentUforetrygd egenopptjentUforetrygd;
 
-    @GuiPrompt(prompt = "Egenopptjent uføretrygd gunstigst")
+
     private boolean egenopptjentUforetrygdBest;
 
-    @GuiPrompt(prompt = "Yrkesskadegrad")
+
     private int yrkesskadegrad;
 
-    @GuiPrompt(prompt = "Yrkesskadetidspunkt")
+
     private Date yrkesskadetidspunkt;
 
-    @GuiPrompt(prompt = "Mottar minsteytelse")
+
     private boolean mottarMinsteytelse;
 
     /* Bygger opp årsakskoder som viser hvorfor personen mottar minsteytelse */
@@ -60,24 +60,24 @@ public class Uforetrygdberegning extends Beregning2011 {
     private String PREG_avtaleBeregningsmetode;
 
     /* Viser hvilken type institusjonsopphold det er beregnet for. Kodene hentes fra K_JUST_PERIODE */
-    @GuiPrompt(prompt = "Institusjonsopphold type")
+
     private JustertPeriodeCti instOppholdType;
 
     /* Angir om ytelsen er endret, enten  økt eller redusert. */
-    @GuiPrompt(prompt = "Institusjonsopphold anvendt")
+
     private boolean instOpphAnvendt;
 
     /*
      * Ekstra informasjon til beregnet uføretrygd.
      * Brukes for at PREG skal beregne en uførehistorikk for uføretrygd.
      */
-    @GuiPrompt(prompt = "Ekstra informasjon til beregnet uføretrygd")
+
     private UforeEkstraUT uforeEkstra;
 
     /**
      * Satt på de beregninger hvor avdødes ytelse har påvirket beregningen.
      */
-    @GuiPrompt(prompt = "Ytelse ved død")
+
     private YtelseVedDodCti ytelseVedDod;
 
     public Uforetrygdberegning() {

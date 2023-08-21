@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 
 import java.io.Serializable;
 
@@ -11,16 +11,16 @@ public class Justertbelop implements Serializable {
 
     private static final long serialVersionUID = 8226436523267966505L;
 
-    @GuiPrompt(prompt = "Grunnbeløp per 01.05.2014")
+
     private int g01052014;
 
-    @GuiPrompt(prompt = "Gjennomsnittlig grunnbeløp 2014")
+
     private int gjennomsnittligG2014;
 
-    @GuiPrompt(prompt = "Justert beløp")
+
     private double justertbelop;
 
-    @GuiPrompt(prompt = "Overgangsbeløp")
+
     private Overgangsbelop overgangsbelop;
 
     public Justertbelop() {

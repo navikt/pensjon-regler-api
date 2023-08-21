@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
 import no.nav.pensjon.regler.domain.kode.GPSatsTypeCti;
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
@@ -16,16 +16,16 @@ public class Grunnpensjon extends Ytelseskomponent {
     /**
      * Prosentsatsen.
      */
-    @GuiPrompt(prompt = "Prosentsats grunnpensjon")
+
     protected double pSats_gp;
 
     /**
      * Ordinær, forhøyet
      */
-    @GuiPrompt(prompt = "Satstype")
+
     protected GPSatsTypeCti satsType;
 
-    @GuiPrompt(prompt = "Ektefelle inntekt over 2G")
+
     protected boolean ektefelleInntektOver2G;
 
     /**
@@ -37,7 +37,7 @@ public class Grunnpensjon extends Ytelseskomponent {
     /**
      * Trygdetid anvendt i beregning av grunnpensjon.
      */
-    @GuiPrompt(prompt = "Anvendt trygdetid")
+
     protected AnvendtTrygdetid anvendtTrygdetid;
 
     /**

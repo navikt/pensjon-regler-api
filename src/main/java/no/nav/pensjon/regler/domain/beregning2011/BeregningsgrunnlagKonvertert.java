@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 
 /**
  * @author Aasmund Nordstoga (Accenture) PK-5549
@@ -11,7 +11,7 @@ public class BeregningsgrunnlagKonvertert extends AbstraktBeregningsgrunnlag {
 
     private Skattekompensertbelop skattekompensertbelop;
 
-    @GuiPrompt(prompt = "Inntekt ved skadetidspunkt")
+
     private int inntektVedSkadetidspunkt;
 
     public BeregningsgrunnlagKonvertert() {

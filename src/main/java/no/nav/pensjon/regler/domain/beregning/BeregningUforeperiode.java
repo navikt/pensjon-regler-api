@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.grunnlag.Uforeperiode;
 import no.nav.pensjon.regler.domain.kode.FppGarantiKodeCti;
 import no.nav.pensjon.regler.domain.kode.ProRataBeregningTypeCti;
@@ -20,23 +20,23 @@ public class BeregningUforeperiode implements Serializable {
     /**
      * Uføregraden, heltall 0-100.
      */
-    @GuiPrompt(prompt = "Uføregrad")
+
     private Integer ufg;
     /**
      * Dato for uføretidspunktet.
      */
-    @GuiPrompt(prompt = "Uføretidspunkt")
+
     private Date uft;
     /**
      * Angir om uføregraden er ren uføre,inneholder delvis yrke eller bare yrke.
      */
-    @GuiPrompt(prompt = "Uføretype")
+
     private UforeTypeCti uforeType;
 
     /**
      * Framtidige pensjonspoengtall garanti, f.eks ung ufør har i dag en garanti på 3.3.
      */
-    @GuiPrompt(prompt = "Framtidige pensjonspoengtall garanti")
+
     private Double fppGaranti;
 
     /**
@@ -47,163 +47,163 @@ public class BeregningUforeperiode implements Serializable {
      * <code>D = Ung ufør med rett til 3.3 poeng fra mai 1992</code><br>
      * <code>E = unge uføre før 1967</code>
      */
-    @GuiPrompt(prompt = "Kode for framtidige pensjonspoengtall garanti")
+
     private FppGarantiKodeCti fppGarantiKode;
 
     /**
      * Antall godskrevet framtidig poengtall, ikke full framtidig godskriving.
      */
-    @GuiPrompt(prompt = "Redusert antall fpp år")
+
     private Integer redusertAntFppAr;
 
     /**
      * Antall godskrevet framtidig poengtall, ikke full framtidig godskriving. EØS eller annen pro-rata beregning.
      */
-    @GuiPrompt(prompt = "Redusert antall fpp år pro rata")
+
     private Integer redusertAntFppAr_proRata;
 
     /**
      * Angir hva utfallet av pro-rata beregningen var. Hvis satt er EØS eneste alternativ eller bedre enn alternativet (Folketrygd).
      */
-    @GuiPrompt(prompt = "Pro rata beregning type")
+
     private ProRataBeregningTypeCti proRataBeregningType;
 
     /**
      * Dato for virkningsåret for denne uføreperioden.
      */
-    @GuiPrompt(prompt = "Virkningsdato")
+
     private Date virk;
 
     /**
      * Dato for når uføreperioden avsluttes.
      */
-    @GuiPrompt(prompt = "Dato uføreperiode avsluttes")
+
     private Date uftTom;
 
     /**
      * Dato for når uføregraden starter.
      */
-    @GuiPrompt(prompt = "Dato uføregraden starter")
+
     private Date ufgFom;
 
     /**
      * Dato for når uføregraden avsluttes.
      */
-    @GuiPrompt(prompt = "Dato uføregraden avslutter")
+
     private Date ufgTom;
 
     /**
      * Fødselsår for yngste barn.
      */
-    @GuiPrompt(prompt = "Fødselsår yngste barn")
+
     private Integer fodselsArYngsteBarn;
 
     /**
      * Sluttpoengtall på tilleggspensjonen.
      */
-    @GuiPrompt(prompt = "Sluttpoengtall")
+
     private Double spt;
 
     /**
      * Sluttpoengtall på tilleggspensjonen. Pro-rata beregning variant.
      */
-    @GuiPrompt(prompt = "Pro rata sluttpoengtall")
+
     private Double spt_proRata;
 
     /**
      * Sluttpoengtall på tilleggspensjonen ved overkomp.
      */
-    @GuiPrompt(prompt = "Overkompensasjon poengtall")
+
     private Double opt;
 
     /**
      * Sluttpoengtall på tilleggspensjonen ved yrkesskade.
      */
-    @GuiPrompt(prompt = "Yrkesskade poengtall")
+
     private Double ypt;
 
     /**
      * Antall poengår før 1992 på sluttpoengtallet.
      */
-    @GuiPrompt(prompt = "Poengår før 1992")
+
     private Integer spt_pa_f92;
 
     /**
      * Antall poengår etter 1991 på sluttpoengtallet
      */
-    @GuiPrompt(prompt = "Poengår etter 1991")
+
     private Integer spt_pa_e91;
 
     /**
      * Antall poengår før 1992 på sluttpoengtallet.
      */
-    @GuiPrompt(prompt = "Pro rata brøk teller")
+
     private Integer proRata_teller;
 
     /**
      * Antall poengår etter 1991 på sluttpoengtallet
      */
-    @GuiPrompt(prompt = "Pro rata brøk nevner")
+
     private Integer proRata_nevner;
 
     /**
      * Antall poengår før 1992 på sluttpoengtallet med overkomp
      */
-    @GuiPrompt(prompt = "Overkompensasjon poengår før 1992")
+
     private Integer opt_pa_f92;
 
     /**
      * Antall poengår etter 1992 på sluttpoengtallet med overkomp
      */
-    @GuiPrompt(prompt = "Overkompensasjon poengår etter 1991")
+
     private Integer opt_pa_e91;
 
     /**
      * Antall poengår før 1992 på sluttpoengtallet ved yrkesskade
      */
-    @GuiPrompt(prompt = "Yrkesskade poengår før 1992")
+
     private Integer ypt_pa_f92;
 
     /**
      * Antall poengår etter 1992 på sluttpoengtallet ved yrkesskade
      */
-    @GuiPrompt(prompt = "Yrkesskade poengår etter 1991")
+
     private Integer ypt_pa_e91;
 
     /**
      * Poengtall ut fra antatt årlig inntekt på skadetidspunktet
      */
-    @GuiPrompt(prompt = "Poengtall antatt årlig inntekt")
+
     private Double paa;
 
     /**
      * Fremtidige pensjonspoeng
      */
-    @GuiPrompt(prompt = "Fremtidig pensjonspoeng")
+
     private Double fpp;
 
     /**
      * Fremtidige omregnete pensjonspoeng
      */
-    @GuiPrompt(prompt = "Fremtidig pensjonspoeng omregnet")
+
     private Double fpp_omregnet;
 
     /**
      * Sluttpoengtall i EØS
      */
-    @GuiPrompt(prompt = "Sluttpoengtall EØS")
+
     private Double spt_eos;
 
     /**
      * Antall poengår etter 1991 etter EØS-alternativet for sluttpoengtall
      */
-    @GuiPrompt(prompt = "EØS poengår etter 1991")
+
     private Integer spt_pa_e91_eos;
 
     /**
      * Antall poengår før 1992 etter EØS-alternativet for sluttpoengtall
      */
-    @GuiPrompt(prompt = "EØS poengår før 1992")
+
     private Integer spt_pa_f92_eos;
 
     /*
@@ -211,25 +211,25 @@ public class BeregningUforeperiode implements Serializable {
      * Dette er beregningsgrunnlagOrdinært når uforeType er UFORE eller UF_M_YRKE
      * og beregningsgrunnlagYrkesskade når type er YRKE
      */
-    @GuiPrompt(prompt = "Beregningsgrunnlag (årsbeløp)")
+
     private int beregningsgrunnlag;
 
     /*
      * Det uføretidspunkt som er angitt for perioden, men ikke nødvendigvis anvendt.
      */
-    @GuiPrompt(prompt = "Angitt uføretidspunkt")
+
     private Date angittUforetidspunkt;
 
     /**
      * Antatt årlig inntekt før uføretidspunktet (brukes i fastsettelse av opptjening til alderspensjon etter kapittel 19).
      */
-    @GuiPrompt(prompt = "Antatt årlig inntekt før uføretidspunkt, kapittel 19")
+
     private double antattInntektFaktorKap19;
 
     /**
      * Antatt årlig inntekt før uføretidspunktet (brukes i fastsettelse av opptjening til alderspensjon etter kapittel 20).
      */
-    @GuiPrompt(prompt = "Antatt årlig inntekt før uføretidspunkt, kapittel 20")
+
     private double antattInntektFaktorKap20;
 
     /**

@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.trygdetid.Brok;
 import no.nav.pensjon.regler.domain.util.DateCompareUtil;
 
@@ -13,43 +13,43 @@ public abstract class AbstraktBarnetilleggperiode implements Serializable, Compa
     /**
      * Start for periode med et antall barn.
      */
-    @GuiPrompt(prompt = "Start dato for perioden")
+
     private Date fomDato;
 
     /**
      * Stopp for periode med et antall barn.
      */
-    @GuiPrompt(prompt = "Slutt dato for perioden")
+
     private Date tomDato;
 
     /**
      * Periodens lengde i antall måneder.
      */
-    @GuiPrompt(prompt = "Periodens lengde i mnd")
+
     private int lengde;
 
     /**
      * Antall barn det beregnes barnetillegg for i perioden.
      */
-    @GuiPrompt(prompt = "Antall barn det beregnes barnetilleg for i perioden")
+
     private int antallBarn;
 
     /**
      * Fribeløpet for antall barn i perioden.
      */
-    @GuiPrompt(prompt = "Fribeløp i perioden")
+
     private int fribelop;
 
     /**
      * Brutto årlig barnetillegg, beregnet for antall barn (felles- og særkullsbarn) i perioden og eventuelt redusert mot tak.
      */
-    @GuiPrompt(prompt = "Brutto årlig barnetillegg")
+
     private int bruttoPerAr;
 
     /**
      * Reguleringsfaktor dersom perioden gjelder for en annen G enn GvedVirk.
      */
-    @GuiPrompt(prompt = "Reguleringsfaktor")
+
     private Brok reguleringsfaktor;
 
     /**

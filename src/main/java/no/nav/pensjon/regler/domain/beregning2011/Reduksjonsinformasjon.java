@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.BarnetilleggRegelverkCti;
 
 import java.io.Serializable;
@@ -16,62 +16,62 @@ public class Reduksjonsinformasjon implements Serializable {
      * Antall prosent brutto totalytelse ved 100% uføregrad utgjør av OIFU. Ytelse inkluderer ordinær
      * uføretrygd, barnetillegg og et eventuelt gjenlevendetillegg.
      */
-    @GuiPrompt(prompt = "Antall prosent brutto totalytelse ved 100% uføregrad utgjør av OIFU")
+
     private double andelYtelseAvOIFU;
 
     /**
      * Beskriver hvilket regelverk som er benyttet i beregning av regelverk, se kodeverk K_BT_REGELVERK
      */
-    @GuiPrompt(prompt = "Regelverk benyttet i beregning av barnetillegg")
+
     private BarnetilleggRegelverkCti barnetilleggRegelverkType;
 
     /**
      * Barnetillegg fellesbarn brutto per år
      */
-    @GuiPrompt(prompt = " Barnetillegg fellesbarn brutto per år")
+
     private int btFBEtterReduksjon;
 
     /**
      * Barnetillegg særkullsbarn per år
      */
-    @GuiPrompt(prompt = "Barnetillegg særkullsbarn per år")
+
     private int btSBEtterReduksjon;
 
     /**
      * 95% av oppjustert IFU (tak)
      */
-    @GuiPrompt(prompt = "95% av oppjustert IFU (tak)")
+
     private int gradertOppjustertIFU;
 
     /**
      * Samlet brutto etter reduksjon for barnetillegg særkullsbarn/fellesbarn
      */
-    @GuiPrompt(prompt = " Samlet brutto etter reduksjon for barnetillegg")
+
     private int sumBruttoEtterReduksjonBT;
 
     /**
      * Samlet brutto før reduksjon for barnetillegg særkullsbarn/fellesbarn
      */
-    @GuiPrompt(prompt = "Samlet brutto før reduksjon for barnetillegg")
+
     private int sumBruttoForReduksjonBT;
 
     /**
      * Sum av uføretrygd, gjenlevendetillegg og barnetillegg
      */
-    @GuiPrompt(prompt = "Sum av uføretrygd, gjenlevendetillegg og barnetillegg")
+
     private int sumUTBT;
 
     /**
      * Antall felles- og særkullsbarn
      */
-    @GuiPrompt(prompt = "Antall felles- og særkullsbarn")
+
     private int totaltAntallBarn;
 
     /**
      * Angir prosentsatsen som brukes til å beregne taket for hvor stor samlet ugradert uføretrygd og brutto barnetillegg brukeren kan ha i forhold til oppjustert IFU før brutto
      * barnetillegg blir redusert
      */
-    @GuiPrompt(prompt = "Prosentsats oppjustert IFU for tak")
+
     private int prosentsatsOIFUForTak;
 
     public Reduksjonsinformasjon() {

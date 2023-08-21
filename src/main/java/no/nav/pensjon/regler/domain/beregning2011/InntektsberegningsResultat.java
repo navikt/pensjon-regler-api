@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 
 import java.io.Serializable;
 
@@ -9,11 +9,11 @@ public class InntektsberegningsResultat implements Serializable {
     private static final long serialVersionUID = -1933024004904240799L;
 
     /** Ny forventet inntekt for TSB. */
-    @GuiPrompt(prompt = "Ny forventet inntekt for barnetillegg særkullsbarn")
+
     private InntektBT inntektTSB;
 
     /** Ny forventet inntekt for TFB. */
-    @GuiPrompt(prompt = "Ny forventet inntekt for barnetillegg fellesbarn")
+
     private InntektBT inntektTFB;
 
     public InntektsberegningsResultat() {

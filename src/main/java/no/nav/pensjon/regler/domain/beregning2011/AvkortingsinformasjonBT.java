@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.AvviksjusteringCti;
 
 import java.io.Serializable;
@@ -18,13 +18,13 @@ public class AvkortingsinformasjonBT extends AbstraktAvkortingsinformasjon imple
     /**
      * Angir liste over fremtidige perioder.
      */
-    @GuiPrompt(prompt = "Fremtidige barnetillegg perioder")
+
     private List<AbstraktBarnetilleggperiode> barnetilleggPeriodeListe = new ArrayList<AbstraktBarnetilleggperiode>();
 
     /**
      * Fribeløp for antall barn ved virk.
      */
-    @GuiPrompt(prompt = "Fribeløp ved virk")
+
     private int fribelopVedVirk;
 
     /**

@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,17 +13,17 @@ public class BeregningsgrunnlagOrdiner extends AbstraktBeregningsgrunnlag {
 
     private static final long serialVersionUID = 8408663631045755322L;
 
-    @GuiPrompt(prompt = "Opptjening uføretrygd")
+
     private List<OpptjeningUT> opptjeningUTListe;
 
-    @GuiPrompt(prompt = "Nasjonalt snitt")
+
     private int nasjonaltSnitt;
 
     /**
      * Angir det sluttpoengtall som ordinært beregningsgrunnlag er omregnet fra.
      * Angår kun beregning av avdøde i sammenheng med nytt UT_GJT.
      */
-    @GuiPrompt(prompt = "Sluttpoengtall som ordinært beregningsgrunnlag er omregnet fra")
+
     private double sluttpoengtall;
 
     public BeregningsgrunnlagOrdiner() {

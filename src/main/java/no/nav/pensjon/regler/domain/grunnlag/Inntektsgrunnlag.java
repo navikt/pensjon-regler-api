@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.GrunnlagKildeCti;
 import no.nav.pensjon.regler.domain.kode.InntektTypeCti;
 import no.nav.pensjon.regler.domain.util.Copyable;
@@ -24,7 +24,7 @@ public class Inntektsgrunnlag implements Comparable<Inntektsgrunnlag>, Serializa
     /**
      * Inntektens størrelse, i hele kroner.
      */
-    @GuiPrompt(prompt = "Inntekt")
+
     private int belop;
 
     /**
@@ -44,19 +44,19 @@ public class Inntektsgrunnlag implements Comparable<Inntektsgrunnlag>, Serializa
      * PENSKD Pensjonsinntekt (ikke folketrygd)
      * KAP Kapitalinntekt
      */
-    @GuiPrompt(prompt = "Inntektstype")
+
     private InntektTypeCti inntektType;
 
     /**
      * fra-og-med dato for gyldigheten av inntektsgrunnlaget.
      */
-    @GuiPrompt(prompt = "Fra og med dato")
+
     private Date fom;
 
     /**
      * til-og-med dato for gyldigheten av inntektsgrunnlaget.
      */
-    @GuiPrompt(prompt = "Til og med dato")
+
     private Date tom;
 
     /**

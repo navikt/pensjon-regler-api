@@ -16,7 +16,7 @@ public class BarnetilleggSerkullsbarnUT extends AbstraktBarnetilleggUT implement
 	/**
      * Brukers gjenlevendetillegg før justering.
      */
-	// @GuiPrompt(prompt = "Brukers gjenlevendetillegg")
+
     private int brukersGjenlevendetilleggForJustering;
 
     public BarnetilleggSerkullsbarnUT() {

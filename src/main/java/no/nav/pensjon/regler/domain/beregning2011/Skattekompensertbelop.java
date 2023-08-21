@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
 
 import java.io.Serializable;
@@ -12,18 +12,18 @@ public class Skattekompensertbelop implements Serializable {
 
     private static final long serialVersionUID = 6675803833673448538L;
 
-    @GuiPrompt(prompt = "Faktor")
+
     private double faktor;
 
-    @GuiPrompt(prompt = "Formel")
+
     private FormelKodeCti formelKode;
 
-    @GuiPrompt(prompt = "Årsbeløp")
+
     private double arsbelop;
 
     private Justertbelop justertbelop;
 
-    @GuiPrompt(prompt = "Tillegg")
+
     private double tillegg;
 
     public Skattekompensertbelop() {
