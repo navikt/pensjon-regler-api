@@ -680,15 +680,6 @@ public class Persongrunnlag implements Serializable {
         return afpHistorikkListe;
     }
 
-    /**
-     * Read only property for afpHistorikkListe as array
-     * 
-     * @return array of AfpHistorikk
-     */
-    public AfpHistorikk[] getAfpHistorikkListeAsArray() {
-        return afpHistorikkListe != null ? afpHistorikkListe.toArray(new AfpHistorikk[afpHistorikkListe.size()]) : new AfpHistorikk[0];
-    }
-
     public int getAntallArUtland() {
         return antallArUtland;
     }
@@ -701,24 +692,10 @@ public class Persongrunnlag implements Serializable {
     }
 
     /**
-     * @return array of ArbeidsforholdEtterUforgrunnlag
-     */
-    public ArbeidsforholdEtterUforgrunnlag[] getArbeidsforholdEtterUforgrunnlagListeAsArray() {
-        return arbeidsforholdEtterUforgrunnlagListe != null ?
-                arbeidsforholdEtterUforgrunnlagListe.toArray(new ArbeidsforholdEtterUforgrunnlag[arbeidsforholdEtterUforgrunnlagListe.size()]) :
-                new ArbeidsforholdEtterUforgrunnlag[0];
-    }
-
-    /**
      * @return the arbeidsforholdsgrunnlagListe
      */
     public List<Arbeidsforholdsgrunnlag> getArbeidsforholdsgrunnlagListe() {
         return arbeidsforholdsgrunnlagListe;
-    }
-
-    public Arbeidsforholdsgrunnlag[] getArbeidsforholdsgrunnlagListeAsArray() {
-        return arbeidsforholdsgrunnlagListe != null ? arbeidsforholdsgrunnlagListe.toArray(new Arbeidsforholdsgrunnlag[arbeidsforholdsgrunnlagListe.size()])
-                : new Arbeidsforholdsgrunnlag[0];
     }
 
     public Boolean getArligPGIMinst1G() {
@@ -743,15 +720,6 @@ public class Persongrunnlag implements Serializable {
 
     public List<Dagpengegrunnlag> getDagpengegrunnlagListe() {
         return dagpengegrunnlagListe;
-    }
-
-    /**
-     * Read only property for dagpengegrunnlagListe as array.
-     * 
-     * @return array of Dagpengegrunnlag
-     */
-    public Dagpengegrunnlag[] getDagpengegrunnlagListeAsArray() {
-        return dagpengegrunnlagListe != null ? dagpengegrunnlagListe.toArray(new Dagpengegrunnlag[dagpengegrunnlagListe.size()]) : new Dagpengegrunnlag[0];
     }
 
     public Boolean getDodAvYrkesskade() {
@@ -806,41 +774,12 @@ public class Persongrunnlag implements Serializable {
         return inntektsgrunnlagListe;
     }
 
-    /**
-     * Read only property for inntektsgrunnlagListe as array.
-     * 
-     * @return array of Inntektsgrunnlag
-     */
-    public Inntektsgrunnlag[] getInntektsgrunnlagListeAsArray() {
-        return inntektsgrunnlagListe != null ? inntektsgrunnlagListe.toArray(new Inntektsgrunnlag[inntektsgrunnlagListe.size()]) : new Inntektsgrunnlag[0];
-    }
-
     public List<InstOpphFasteUtgifterperiode> getInstOpphFasteUtgifterperiodeListe() {
         return instOpphFasteUtgifterperiodeListe;
     }
 
-    /**
-     * Read only property for instOpphFasteUtgifterperiodeListe as array
-     * 
-     * @return array of InstOpphFasteUtgifterperiode
-     */
-    public InstOpphFasteUtgifterperiode[] getInstOpphFasteUtgifterperiodeListeAsArray() {
-        return instOpphFasteUtgifterperiodeListe != null ? instOpphFasteUtgifterperiodeListe.toArray(new InstOpphFasteUtgifterperiode[instOpphFasteUtgifterperiodeListe.size()])
-                : new InstOpphFasteUtgifterperiode[0];
-    }
-
     public List<InstOpphReduksjonsperiode> getInstOpphReduksjonsperiodeListe() {
         return instOpphReduksjonsperiodeListe;
-    }
-
-    /**
-     * Read only property for instOpphReduksjonsperiodeListe as array.
-     * 
-     * @return array of InstOpphReduksjonsperiode
-     */
-    public InstOpphReduksjonsperiode[] getInstOpphReduksjonsperiodeListeAsArray() {
-        return instOpphReduksjonsperiodeListe != null ? instOpphReduksjonsperiodeListe.toArray(new InstOpphReduksjonsperiode[instOpphReduksjonsperiodeListe.size()])
-                : new InstOpphReduksjonsperiode[0];
     }
 
     public Boolean getMedlemIFolketrygdenSiste3Ar() {
@@ -851,26 +790,8 @@ public class Persongrunnlag implements Serializable {
         return omsorgsgrunnlagListe;
     }
 
-    /**
-     * Read only property for omsorgsgrunnlagListe as array.
-     * 
-     * @return array of Omsorgsgrunnlag
-     */
-    public Omsorgsgrunnlag[] getOmsorgsgrunnlagListeAsArray() {
-        return omsorgsgrunnlagListe != null ? omsorgsgrunnlagListe.toArray(new Omsorgsgrunnlag[omsorgsgrunnlagListe.size()]) : new Omsorgsgrunnlag[0];
-    }
-
     public List<Opptjeningsgrunnlag> getOpptjeningsgrunnlagListe() {
         return opptjeningsgrunnlagListe;
-    }
-
-    /**
-     * Read only property for opptjeningsgrunnlagListe as array.
-     * 
-     * @return array of Opptjeningsgrunnlag
-     */
-    public Opptjeningsgrunnlag[] getOpptjeningsgrunnlagListeAsArray() {
-        return opptjeningsgrunnlagListe != null ? opptjeningsgrunnlagListe.toArray(new Opptjeningsgrunnlag[opptjeningsgrunnlagListe.size()]) : new Opptjeningsgrunnlag[0];
     }
 
     public Boolean getOver60ArKanIkkeForsorgesSelv() {
@@ -898,15 +819,6 @@ public class Persongrunnlag implements Serializable {
 
     public List<PersonDetalj> getPersonDetaljListe() {
         return personDetaljListe;
-    }
-
-    /**
-     * Read only property for personDetaljListe as array.
-     * 
-     * @return array of PersonDetalj
-     */
-    public PersonDetalj[] getPersonDetaljListeAsArray() {
-        return personDetaljListe != null ? personDetaljListe.toArray(new PersonDetalj[personDetaljListe.size()]) : new PersonDetalj[0];
     }
 
     public BarnDetalj getPREG_barnDetalj() {
@@ -961,95 +873,6 @@ public class Persongrunnlag implements Serializable {
         return skiltesDelAvAvdodesTP;
     }
 
-    /**
-     * Read only property for arbeidsforholdEtterUforgrunnlagListe as sorted array.
-     * 
-     * @return array of ArbeidsforholdEtterUforgrunnlag
-     */
-    public ArbeidsforholdEtterUforgrunnlag[] getSortedArbeidsforholdEtterUforgrunnlagListeAsArray() {
-        if (arbeidsforholdEtterUforgrunnlagListe != null) {
-            ArrayList<ArbeidsforholdEtterUforgrunnlag> sortedList = new ArrayList<ArbeidsforholdEtterUforgrunnlag>(arbeidsforholdEtterUforgrunnlagListe);
-            Collections.sort(sortedList);
-            return sortedList.toArray(new ArbeidsforholdEtterUforgrunnlag[arbeidsforholdEtterUforgrunnlagListe.size()]);
-        } else {
-            return new ArbeidsforholdEtterUforgrunnlag[0];
-        }
-    }
-
-    /**
-     * Read only property for arbeidsforholdsgrunnlagListe as sorted array.
-     * 
-     * @return array of Arbeidsforholdsgrunnlag
-     */
-    public Arbeidsforholdsgrunnlag[] getSortedArbeidsforholdsgrunnlagListeAsArray() {
-        if (arbeidsforholdsgrunnlagListe != null) {
-            ArrayList<Arbeidsforholdsgrunnlag> sortedList = new ArrayList<Arbeidsforholdsgrunnlag>(arbeidsforholdsgrunnlagListe);
-            Collections.sort(sortedList);
-            return sortedList.toArray(new Arbeidsforholdsgrunnlag[arbeidsforholdsgrunnlagListe.size()]);
-        } else {
-            return new Arbeidsforholdsgrunnlag[0];
-        }
-    }
-
-    /**
-     * Read only property for opptjeningsgrunnlagListe as sorted array
-     * Sorterer i reversert rekkefølge
-     * 
-     * @return array of Opptjeningsgrunnlag, sorted by year.
-     */
-    public Opptjeningsgrunnlag[] getSortedOpptjeningsgrunnlagListeAsArray() {
-        return getSortedOpptjeningsgrunnlagListeAsArray(true);
-    }
-
-    /**
-     * Read only property for opptjeningsgrunnlagListe as sorted array
-     * 
-     * @return array of Opptjeningsgrunnlag, sorted by year.
-     */
-    public Opptjeningsgrunnlag[] getSortedOpptjeningsgrunnlagListeAsArray(boolean reverse) {
-        if (opptjeningsgrunnlagListe != null) {
-            ArrayList<Opptjeningsgrunnlag> sortedOg = new ArrayList<Opptjeningsgrunnlag>(opptjeningsgrunnlagListe);
-            if (reverse) {
-                Collections.sort(sortedOg, Collections.reverseOrder());
-            } else {
-                Collections.sort(sortedOg);
-            }
-            return sortedOg.toArray(new Opptjeningsgrunnlag[sortedOg.size()]);
-        } else {
-            return new Opptjeningsgrunnlag[0];
-        }
-    }
-
-    /**
-     * Read only property for trygdetidPerioder as sorted array.
-     * 
-     * @return sorted array of TTPeriode
-     */
-    public TTPeriode[] getSortedTrygdetidPerioderAsArray() {
-        if (trygdetidPerioder != null) {
-            ArrayList<TTPeriode> sortedList = new ArrayList<TTPeriode>(trygdetidPerioder);
-            Collections.sort(sortedList);
-            return sortedList.toArray(new TTPeriode[trygdetidPerioder.size()]);
-        } else {
-            return new TTPeriode[0];
-        }
-    }
-
-    /**
-     * Read only property for trygdetidPerioderKapittel20 as sorted array.
-     * 
-     * @return array of TTPeriode
-     */
-    public TTPeriode[] getSortedTrygdetidPerioderKapittel20AsArray() {
-        if (trygdetidPerioderKapittel20 != null) {
-            ArrayList<TTPeriode> sortedList = new ArrayList<TTPeriode>(trygdetidPerioderKapittel20);
-            Collections.sort(sortedList);
-            return sortedList.toArray(new TTPeriode[trygdetidPerioderKapittel20.size()]);
-        } else {
-            return new TTPeriode[0];
-        }
-    }
-
     public LandCti getStatsborgerskap() {
         return statsborgerskap;
     }
@@ -1078,26 +901,8 @@ public class Persongrunnlag implements Serializable {
         return trygdetidPerioder;
     }
 
-    /**
-     * Read only property for trygdetidPerioder as array.
-     * 
-     * @return array of TTPeriode
-     */
-    public TTPeriode[] getTrygdetidPerioderAsArray() {
-        return trygdetidPerioder != null ? trygdetidPerioder.toArray(new TTPeriode[trygdetidPerioder.size()]) : new TTPeriode[0];
-    }
-
     public List<TTPeriode> getTrygdetidPerioderKapittel20() {
         return trygdetidPerioderKapittel20;
-    }
-
-    /**
-     * Read only property for trygdetidPerioderKapittel20 as array.
-     * 
-     * @return array of TTPeriode
-     */
-    public TTPeriode[] getTrygdetidPerioderKapittel20AsArray() {
-        return trygdetidPerioderKapittel20 != null ? trygdetidPerioderKapittel20.toArray(new TTPeriode[trygdetidPerioderKapittel20.size()]) : new TTPeriode[0];
     }
 
     public Uforegrunnlag getUforegrunnlag() {
@@ -1112,21 +917,8 @@ public class Persongrunnlag implements Serializable {
         return utbetalingsgradUTListe;
     }
 
-    public UtbetalingsgradUT[] getUtbetalingsgradUTListeAsArray() {
-        return utbetalingsgradUTListe != null ? utbetalingsgradUTListe.toArray(new UtbetalingsgradUT[utbetalingsgradUTListe.size()]) : new UtbetalingsgradUT[0];
-    }
-
     public List<Utenlandsopphold> getUtenlandsoppholdListe() {
         return utenlandsoppholdListe;
-    }
-
-    /**
-     * Read only property for utenlandsoppholdListe as array.
-     * 
-     * @return array of Utenlandsopphold
-     */
-    public Utenlandsopphold[] getUtenlandsoppholdListeAsArray() {
-        return utenlandsoppholdListe != null ? utenlandsoppholdListe.toArray(new Utenlandsopphold[0]) : new Utenlandsopphold[0];
     }
 
     public int[] getVernepliktAr() {
@@ -1151,89 +943,6 @@ public class Persongrunnlag implements Serializable {
 
     public boolean isPREG_P67() {
         return PREG_P67;
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the afpHistorikkListe as array.
-     */
-    @Deprecated
-    public AfpHistorikk[] retrieveAfpHistorikkListeAsArray() {
-        return afpHistorikkListe.toArray(new AfpHistorikk[0]);
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the inntektsgrunnlagListe as array.
-     */
-    @Deprecated
-    public Inntektsgrunnlag[] retrieveInntektsgrunnlagListeAsArray() {
-        return inntektsgrunnlagListe.toArray(new Inntektsgrunnlag[0]);
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the afpHistorikkListe as array.
-     */
-    @Deprecated
-    public InstOpphFasteUtgifterperiode[] retrieveInstOpphFasteUtgifterperiodeListeAsArray() {
-        return instOpphFasteUtgifterperiodeListe.toArray(new InstOpphFasteUtgifterperiode[0]);
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the afpHistorikkListe as array.
-     */
-    @Deprecated
-    public InstOpphReduksjonsperiode[] retrieveInstOpphReduksjonsperiodeListeAsArray() {
-        return instOpphReduksjonsperiodeListe.toArray(new InstOpphReduksjonsperiode[0]);
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the opptjeningsgrunnlagListe as array.
-     */
-    @Deprecated
-    public Opptjeningsgrunnlag[] retrieveOpptjeningsgrunnlagListeAsArray() {
-        return opptjeningsgrunnlagListe.toArray(new Opptjeningsgrunnlag[0]);
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the personDetaljListe as array.
-     */
-    @Deprecated
-    public PersonDetalj[] retrievePersonDetaljListeAsArray() {
-        return personDetaljListe.toArray(new PersonDetalj[0]);
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the opptjeningsgrunnlagListe as array, sorted by year.
-     */
-    @Deprecated
-    public Opptjeningsgrunnlag[] retrieveSortedOpptjeningsgrunnlagListeAsArray() {
-        ArrayList<Opptjeningsgrunnlag> sortedOg = new ArrayList<Opptjeningsgrunnlag>(opptjeningsgrunnlagListe);
-        Collections.sort(sortedOg, Collections.reverseOrder());
-        return sortedOg.toArray(new Opptjeningsgrunnlag[0]);
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the trygdetidPerioder as array.
-     */
-    @Deprecated
-    public TTPeriode[] retrieveTrygdetidPerioderAsArray() {
-        return trygdetidPerioder.toArray(new TTPeriode[0]);
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the utenlandsoppholdListe as array.
-     */
-    @Deprecated
-    public Utenlandsopphold[] retrieveUtenlandsoppholdListeAsArray() {
-        return utenlandsoppholdListe.toArray(new Utenlandsopphold[0]);
     }
 
     public void setAfpHistorikkListe(List<AfpHistorikk> afpHistorikkListe) {
@@ -1519,10 +1228,6 @@ public class Persongrunnlag implements Serializable {
         return forsteVirkningsdatoGrunnlagListe;
     }
 
-    public ForsteVirkningsdatoGrunnlag[] getForsteVirkningsdatoGrunnlagListeAsArray() {
-        return forsteVirkningsdatoGrunnlagListe != null ? forsteVirkningsdatoGrunnlagListe.toArray(new ForsteVirkningsdatoGrunnlag[forsteVirkningsdatoGrunnlagListe.size()]) : new ForsteVirkningsdatoGrunnlag[0];
-    }
-
     public void setForsteVirkningsdatoGrunnlagListe(List<ForsteVirkningsdatoGrunnlag> forsteVirkningsdatoGrunnlagListe) {
         this.forsteVirkningsdatoGrunnlagListe = forsteVirkningsdatoGrunnlagListe;
     }
@@ -1531,16 +1236,8 @@ public class Persongrunnlag implements Serializable {
         return PREG_vilkarsvedtakEPSListe;
     }
 
-    public VilkarsVedtak[] getPREG_vilkarsvedtakEPSListeAsArray() {
-        return PREG_vilkarsvedtakEPSListe != null ? PREG_vilkarsvedtakEPSListe.toArray(new VilkarsVedtak[PREG_vilkarsvedtakEPSListe.size()]) : new VilkarsVedtak[0];
-    }
-
     public void setPREG_vilkarsvedtakEPSListe(List<VilkarsVedtak> preg_vilkarsvedtakEPSListe) {
         this.PREG_vilkarsvedtakEPSListe = preg_vilkarsvedtakEPSListe;
-    }
-    @Deprecated
-    public VilkarsVedtak[] retrievePREG_vilkarsvedtakEPSListeAsArray() {
-        return PREG_vilkarsvedtakEPSListe.toArray(new VilkarsVedtak[0]);
     }
 
     @Override

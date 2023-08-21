@@ -53,18 +53,6 @@ public class FaktoromregnInntektBatchRequest extends ServiceRequest {
 		return kravFaktoromregningGrunnlagListe;
 	}
 
-	/**
-	 * Read only property for kravFaktoromregningGrunnlagListe as array
-	 * 
-	 * @return array of KravFaktoromregningGrunnlag
-	 */
-	public KravFaktoromregningGrunnlag[] getKravFaktoromregningGrunnlagListeAsArray() {
-		return (kravFaktoromregningGrunnlagListe != null ? this.kravFaktoromregningGrunnlagListe
-				.toArray(new KravFaktoromregningGrunnlag[this.kravFaktoromregningGrunnlagListe
-						.size()])
-				: new KravFaktoromregningGrunnlag[0]);
-	}
-
 	public KravFaktoromregningGrunnlag[] retrieveKravFaktoromregningGrunnlagListe() {
 		return (KravFaktoromregningGrunnlag[]) kravFaktoromregningGrunnlagListe
 				.toArray(new KravFaktoromregningGrunnlag[0]);

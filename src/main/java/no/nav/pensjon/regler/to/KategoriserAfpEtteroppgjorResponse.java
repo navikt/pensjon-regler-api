@@ -23,14 +23,6 @@ public class KategoriserAfpEtteroppgjorResponse extends ServiceResponse {
 		return afpEtteroppgjorKategoriListe;
 	}
 
-	/**
-	 * Read only property for afpEtteroppgjorKategoriListe as array
-	 * @return array of AfpEtteroppgjorKategori
-	 */
-	public AfpEtteroppgjorKategori[] getAfpEtteroppgjorKategoriListeAsArray() {
-		return (afpEtteroppgjorKategoriListe != null ? this.afpEtteroppgjorKategoriListe.toArray(new AfpEtteroppgjorKategori[this.afpEtteroppgjorKategoriListe.size()]) : new AfpEtteroppgjorKategori[0]);
-	}
-	
 	public void setAfpEtteroppgjorKategoriListe(
 			Vector<AfpEtteroppgjorKategori> afpEtteroppgjorKategoriListe) {
 		this.afpEtteroppgjorKategoriListe = afpEtteroppgjorKategoriListe;

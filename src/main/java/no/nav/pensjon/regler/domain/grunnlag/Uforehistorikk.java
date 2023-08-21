@@ -84,52 +84,6 @@ public class Uforehistorikk implements Serializable {
         this.uforeperiodeListe = uforeperiodeListe;
     }
 
-    /**
-     * @deprecated
-     * @return Returns the uforeperiodeListe as array.
-     */
-    @Deprecated
-    public Uforeperiode[] retrieveUforeperiodeListeAsArray() {
-        return uforeperiodeListe.toArray(new Uforeperiode[0]);
-    }
-
-    /**
-     * Read only property for uforeperiodeListe as array.
-     * 
-     * @return array of Uforeperiode
-     */
-    public Uforeperiode[] getUforeperiodeListeAsArray() {
-        return uforeperiodeListe != null ? uforeperiodeListe.toArray(new Uforeperiode[uforeperiodeListe.size()]) : new Uforeperiode[0];
-    }
-
-    public void setUforeperiodeListeAsArray(Uforeperiode[] uforeperioder) {
-        if (uforeperioder != null && uforeperioder.length > 0){
-            for (Uforeperiode up : uforeperioder){
-                uforeperiodeListe.add(up);
-            }
-        }
-    }
-
-    /**
-     * Sortert utgave av uforeperiodeliste
-     * 
-     * @param reverse, hvis true reverseres sortering
-     * @return sortert kopi av lista
-     */
-    public Uforeperiode[] getSortedUforeperiodeListeAsArray(boolean reverse) {
-        if (uforeperiodeListe != null) {
-            ArrayList<Uforeperiode> sortedOg = new ArrayList<Uforeperiode>(uforeperiodeListe);
-            if (reverse) {
-                Collections.sort(sortedOg, Collections.reverseOrder());
-            } else {
-                Collections.sort(sortedOg);
-            }
-            return sortedOg.toArray(new Uforeperiode[sortedOg.size()]);
-        } else {
-            return new Uforeperiode[0];
-        }
-    }
-
     public int getGarantigrad() {
         return garantigrad;
     }
@@ -152,14 +106,6 @@ public class Uforehistorikk implements Serializable {
 
     public void setSistMedlITrygden(Date sistMedlITrygden) {
         this.sistMedlITrygden = sistMedlITrygden;
-    }
-
-    /**
-     * Read only property for PREG_originalUforeperiodeListe as array.
-     *
-     */
-    public Uforeperiode[] getPREG_originalUforeperiodeListeAsArray() {
-        return PREG_originalUforeperiodeListe != null ? PREG_originalUforeperiodeListe.toArray(new Uforeperiode[PREG_originalUforeperiodeListe.size()]) : new Uforeperiode[0];
     }
 
     public List<Uforeperiode> getPREG_originalUforeperiodeListe() {

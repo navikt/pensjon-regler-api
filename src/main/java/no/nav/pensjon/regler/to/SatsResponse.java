@@ -26,11 +26,6 @@ public class SatsResponse extends ServiceResponse{
 	public List<SatsResultat> getSatsResultater() {
 		return satsResultater;
 	}
-
-	public SatsResultat[] getSatsResultaterAsArray() {
-		return (satsResultater != null ? this.satsResultater.toArray(new SatsResultat[this.satsResultater.size()]) : new SatsResultat[0]);
-	}
-	
 	public void setSatsResultater(List<SatsResultat> satsResultater) {
 		this.satsResultater = satsResultater;
 	}

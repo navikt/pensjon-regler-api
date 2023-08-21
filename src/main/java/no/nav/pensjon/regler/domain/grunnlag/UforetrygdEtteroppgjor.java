@@ -79,10 +79,6 @@ public class UforetrygdEtteroppgjor implements Serializable {
         return detaljer;
     }
 
-    public UforetrygdEtteroppgjorDetalj[] getDetaljerAsArray() {
-        return detaljer != null ? detaljer.toArray(new UforetrygdEtteroppgjorDetalj[detaljer.size()]) : new UforetrygdEtteroppgjorDetalj[0];
-    }
-
     public Date getPeriodeFom() {
         return periodeFom;
     }

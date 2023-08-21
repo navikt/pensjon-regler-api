@@ -64,10 +64,6 @@ public class InfoPavirkendeYtelse implements Serializable {
         this.vilkarsvedtakEPSListe = vilkarsvedtakEPSListe;
     }
 
-    public VilkarsVedtak[] getVilkarsvedtakEPSListeAsArray() {
-        return vilkarsvedtakEPSListe != null ? vilkarsvedtakEPSListe.toArray(new VilkarsVedtak[vilkarsvedtakEPSListe.size()]) : new VilkarsVedtak[0];
-    }
-
     public void setTjenestepensjonsordningEps(YtelseTypeCti tjenestepensjonsordningEps) {
         this.tjenestepensjonsordningEps = tjenestepensjonsordningEps;
     }

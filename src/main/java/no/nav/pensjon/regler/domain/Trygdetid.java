@@ -269,24 +269,6 @@ public class Trygdetid implements Serializable {
         this.tt = tt;
     }
 
-    /**
-     * @return Returns the merknad as array.
-     * @deprecated
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[0]);
-    }
-
-    /**
-     * Read only property for merknadListe.
-     *
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
     public boolean isFtt_redusert() {
         return ftt_redusert;
     }
@@ -303,10 +285,6 @@ public class Trygdetid implements Serializable {
         this.ftt_fom = ftt_fom;
     }
 
-    /*
-     * Generic version. Uses reflection to print field names and values.
-     * @see java.lang.Object#toString()
-     */
     @Override
     public String toString() {
         return ToStringUtil.toString(this);
@@ -398,24 +376,6 @@ public class Trygdetid implements Serializable {
 
     public void setTtUtlandTrygdeavtaler(List<TTUtlandTrygdeavtale> ttUtlandTrygdeavtaler) {
         this.ttUtlandTrygdeavtaler = ttUtlandTrygdeavtaler;
-    }
-
-    /**
-     * @return
-     * @deprecated
-     */
-    @Deprecated
-    public TTUtlandTrygdeavtale[] retrieveTTUtlandTrygdeavtaleListeAsArray() {
-        return ttUtlandTrygdeavtaler.toArray(new TTUtlandTrygdeavtale[0]);
-    }
-
-    /**
-     * Read only property for TTUtlandTrygdeavtaleListe as array.
-     *
-     * @return array of TTUtlandTrygdeavtale
-     */
-    public TTUtlandTrygdeavtale[] getTTUtlandTrygdeavtaleListeAsArray() {
-        return ttUtlandTrygdeavtaler != null ? ttUtlandTrygdeavtaler.toArray(new TTUtlandTrygdeavtale[ttUtlandTrygdeavtaler.size()]) : new TTUtlandTrygdeavtale[0];
     }
 
     public int getTt_faktisk() {

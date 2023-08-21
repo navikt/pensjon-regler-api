@@ -83,24 +83,6 @@ public class Simulering implements Serializable {
         this.persongrunnlagListe = persongrunnlagListe;
     }
 
-    /**
-     * @deprecated
-     * @return Returns the persongrunnlagListe as array.
-     */
-    @Deprecated
-    public Persongrunnlag[] retrievePersongrunnlagListeAsArray() {
-        return persongrunnlagListe.toArray(new Persongrunnlag[0]);
-    }
-
-    /**
-     * Read only property for persongrunnlagListe as array.
-     * 
-     * @return array of Persongrunnlag
-     */
-    public Persongrunnlag[] getPersongrunnlagListeAsArray() {
-        return persongrunnlagListe != null ? persongrunnlagListe.toArray(new Persongrunnlag[persongrunnlagListe.size()]) : new Persongrunnlag[0];
-    }
-
     public SimuleringTypeCti getYtelseType() {
         return simuleringType;
     }
@@ -115,24 +97,6 @@ public class Simulering implements Serializable {
 
     public void setVilkarsvedtakliste(List<VilkarsVedtak> vilkarsvedtakliste) {
         this.vilkarsvedtakliste = vilkarsvedtakliste;
-    }
-
-    /**
-     * @deprecated
-     * @return
-     */
-    @Deprecated
-    public VilkarsVedtak[] retrieveVilkarsvedtakListeAsArray() {
-        return vilkarsvedtakliste.toArray(new VilkarsVedtak[0]);
-    }
-
-    /**
-     * Read only property for vilkarsvedtakListe as array.
-     * 
-     * @return array of VilkarsVedtak
-     */
-    public VilkarsVedtak[] getVilkarsvedtakListeAsArray() {
-        return vilkarsvedtakliste != null ? vilkarsvedtakliste.toArray(new VilkarsVedtak[vilkarsvedtakliste.size()]) : new VilkarsVedtak[0];
     }
 
     /*

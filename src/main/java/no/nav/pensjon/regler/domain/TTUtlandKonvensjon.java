@@ -116,24 +116,6 @@ public class TTUtlandKonvensjon implements Serializable {
         merknadListe = new ArrayList<Merknad>();
     }
 
-    /**
-     * @deprecated
-     * @return Returns the merknad as array.
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[merknadListe.size()]);
-    }
-
-    /**
-     * Read only property for merknadListe.
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
     /*
      * Generic version. Uses reflection to print field names and values.
      * @see java.lang.Object#toString()

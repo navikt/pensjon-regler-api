@@ -20,10 +20,6 @@ public class KravFaktoromregningGrunnlag implements Serializable {
         persongrunnlagOmregningGrunnlagListe = new ArrayList<PersongrunnlagOmregningGrunnlag>();
     }
 
-    public PersongrunnlagOmregningGrunnlag[] persongrunnlagOmregningGrunnlagListeAsArray() {
-        return persongrunnlagOmregningGrunnlagListe.toArray(new PersongrunnlagOmregningGrunnlag[0]);
-    }
-
     public Long getKravId() {
         return kravId;
     }

@@ -88,14 +88,7 @@ public class BeregnAlderspensjon2016ForsteUttakRequest extends ServiceRequest {
 	public List<VilkarsVedtak> getVilkarsvedtakListe() {
 		return vilkarsvedtakListe;
 	}
-	/**
-	 * Read only property for vilkarsvedtakListe as array.
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getVilkarsvedtakListeAsArray() {
-		return (vilkarsvedtakListe != null ? vilkarsvedtakListe.toArray(new VilkarsVedtak[vilkarsvedtakListe.size()]) : new VilkarsVedtak[0]);
-	}
-	
+
 	public void setVilkarsvedtakListe(List<VilkarsVedtak> vilkarsvedtakListe) {
 		this.vilkarsvedtakListe = vilkarsvedtakListe;
 	}

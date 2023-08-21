@@ -30,21 +30,6 @@ public class Forstegangstjeneste implements Serializable {
         this.periodeListe = periodeListe;
     }
 
-    /**
-     * Read only property for periodeListe as array.
-     * 
-     * @return array of ForstegangstjenestePeriode
-     */
-    public ForstegangstjenestePeriode[] getPeriodeListeAsArray() {
-        return periodeListe != null ? periodeListe.toArray(new ForstegangstjenestePeriode[periodeListe.size()]) : new ForstegangstjenestePeriode[0];
-    }
-
-    public ForstegangstjenestePeriode[] getSortertPeriodeListeAsArray() {
-        ArrayList<ForstegangstjenestePeriode> sortertPeriodeListe = new ArrayList<ForstegangstjenestePeriode>(periodeListe);
-        Collections.sort(sortertPeriodeListe);
-        return sortertPeriodeListe.toArray(new ForstegangstjenestePeriode[sortertPeriodeListe.size()]);
-    }
-
     public Integer[] getForstegangstjenesteAr() {
         Set<Integer> arSet = new HashSet<Integer>();
         Calendar cal = Calendar.getInstance();

@@ -21,14 +21,7 @@ public class BeregnPoengtallBatchRequest extends ServiceRequest{
 		return personOpptjeningsgrunnlagListe;
 	}
 
-	/**
-	 * Read only property for personOpptjeningsgrunnlagListe as array
-	 * @return array of PersonOpptjeningsgrunnlag
-	 */
-	public PersonOpptjeningsgrunnlag[] getPersonOpptjeningsgrunnlaglisteAsArray() {
-		return (personOpptjeningsgrunnlagListe != null ? this.personOpptjeningsgrunnlagListe.toArray(new PersonOpptjeningsgrunnlag[this.personOpptjeningsgrunnlagListe.size()]) : new PersonOpptjeningsgrunnlag[0]);
-	}
-	
+
 	public void setPersonOpptjeningsgrunnlagliste(Vector<PersonOpptjeningsgrunnlag> personOpptjeningsgrunnlagListe) {
 		this.personOpptjeningsgrunnlagListe = personOpptjeningsgrunnlagListe;
 	}

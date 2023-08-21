@@ -1,7 +1,5 @@
 package no.nav.pensjon.regler.domain.beregning;
 
-
-
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
 import no.nav.pensjon.regler.domain.util.formula.Formel;
@@ -99,10 +97,10 @@ public class Tilleggspensjon extends Ytelseskomponent implements IFormelProvider
         }
         skiltesDelAvAdodesTP = tilleggspensjon.skiltesDelAvAdodesTP;
 
-        formelMap = new HashMap<>( );
+        formelMap = new HashMap<>();
         if (tilleggspensjon.formelMap != null && !tilleggspensjon.formelMap.isEmpty()) {
             for (Map.Entry<String, Formel> pair : tilleggspensjon.formelMap.entrySet()) {
-                formelMap.put( pair.getKey(), new Formel( pair.getValue() ));
+                formelMap.put(pair.getKey(), new Formel(pair.getValue()));
             }
         }
 

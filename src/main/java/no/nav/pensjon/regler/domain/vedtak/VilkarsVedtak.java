@@ -208,24 +208,6 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
         beregningsvilkarPeriodeListe = new ArrayList<BeregningsvilkarPeriode>();
     }
 
-    /**
-     * @deprecated
-     * @return Returns the merknad as array.
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[merknadListe.size()]);
-    }
-
-    /**
-     * Read only property for merknadListe as array.
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
     public List<Merknad> getMerknadListe() {
         return merknadListe;
     }
@@ -401,41 +383,6 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
     }
 
     /**
-     * @return siste periode fra beregningsvilkarsPeriodeListe, null hvis ingen elementer i listen
-     */
-
-    public BeregningsvilkarPeriode getSisteBeregningsvilkarPeriode() {
-        return !beregningsvilkarPeriodeListe.isEmpty() ? getSortedBeregningssvilkarPeriodeListeAsArray(true)[0] : null;
-    }
-
-    /**
-     * Read only property for abstraktBeregningsvilkarListe as array.
-     *
-     * @return første periode fra beregningsvilkarsPeriodeListe, null hvis ingen elementer i listen
-     */
-    public BeregningsvilkarPeriode getFørsteBeregningsvilkarPeriode() {
-        return !beregningsvilkarPeriodeListe.isEmpty() ? getSortedBeregningssvilkarPeriodeListeAsArray(false)[0] : null;
-    }
-
-    /**
-     * @return beregningsvilkarPeriodeListe sortert etter dato i kronologisk rekkefølge etter dato fom
-     * eller reversert rekkefølge dersom parameter reverse = true.
-     */
-    public BeregningsvilkarPeriode[] getSortedBeregningssvilkarPeriodeListeAsArray(boolean reverse) {
-        if (!beregningsvilkarPeriodeListe.isEmpty()) {
-            ArrayList<BeregningsvilkarPeriode> sortedBvp = new ArrayList<BeregningsvilkarPeriode>(beregningsvilkarPeriodeListe);
-            if (reverse) {
-                Collections.sort(sortedBvp, Collections.reverseOrder());
-            } else {
-                Collections.sort(sortedBvp);
-            }
-            return sortedBvp.toArray(new BeregningsvilkarPeriode[sortedBvp.size()]);
-        } else {
-            return new BeregningsvilkarPeriode[0];
-        }
-    }
-
-    /**
      * @return the beregningsvilkarPeriodeListe
      */
     public List<BeregningsvilkarPeriode> getBeregningsvilkarPeriodeListe() {
@@ -450,70 +397,9 @@ public class VilkarsVedtak implements java.io.Serializable, Comparable<VilkarsVe
     }
 
     /**
-     * @return the beregningsvilkarPeriodeListe as a array
-     */
-    public BeregningsvilkarPeriode[] getBeregningsvilkarPeriodeListeAsArray() {
-        return !beregningsvilkarPeriodeListe.isEmpty() ? beregningsvilkarPeriodeListe.toArray(new BeregningsvilkarPeriode[beregningsvilkarPeriodeListe.size()])
-                : new BeregningsvilkarPeriode[0];
-    }
-
-    /**
-     * @return the beregningsvilkarPeriodeListe as a sorted array in ascending order
-     */
-    public BeregningsvilkarPeriode[] getSortedBeregningssvilkarPeriodeListeAsArray() {
-        return getSortedBeregningssvilkarPeriodeListeAsArray(false);
-    }
-
-    /**
      * @return the beregningsvilkarsPeriode som gjaldt på oppgitt dato, tar utgangspunkt at det ikke kan finnes overlapp i perioder.
      */
     public BeregningsvilkarPeriode getGjeldendeBeregningsvilkarPeriodePaaDato(Date dato) {
         return ListUtil.finnGjeldendeBeregningsvilkaarPeriodePaaDato(beregningsvilkarPeriodeListe, dato);
-    }
-
-    /**
-     * @param dato the cutoff date
-     * @return the beregningsvilkarPeriodeListe that contains beregningsvilkarPeriode that are valid before or on the cutoff date, as a sorted array in ascending order.
-     *
-     * The method is used by the ruleservices to determine which beregningsvilkarPeriode are relevant (past and present period, relative to virk, is relevant).
-     */
-    public BeregningsvilkarPeriode[] getSortedBeregningssvilkarPeriodeListeTomDatoAsArray(Date dato) {
-        ArrayList<BeregningsvilkarPeriode> resultList = new ArrayList<BeregningsvilkarPeriode>();
-
-        for (BeregningsvilkarPeriode periode : beregningsvilkarPeriodeListe) {
-            if( DateUtil.isBeforeDay(periode.getFomDato(), dato) || DateUtil.isSameDay(periode.getFomDato(), dato) ) {
-                resultList.add(periode);
-            }
-        }
-
-        Collections.sort(resultList);
-
-        return resultList.toArray(new BeregningsvilkarPeriode[resultList.size()]);
-    }
-
-
-    /**
-     *
-     * @param virk
-     * @return List of BeregningsvilkarPeriode i året for virk, sortert i kronologisk rekkefølge.
-     */
-    public BeregningsvilkarPeriode[] findBeregningsvilkarperioderForAr(Date virk){
-        ArrayList<BeregningsvilkarPeriode> resultList = new ArrayList<BeregningsvilkarPeriode>();
-
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(virk);
-
-        Date fom = DateUtil.createDate(cal.get(Calendar.YEAR), Calendar.JANUARY,1);
-        Date tom = DateUtil.createDate(cal.get(Calendar.YEAR), Calendar.DECEMBER, 31);
-
-        for (BeregningsvilkarPeriode periode : beregningsvilkarPeriodeListe) {
-            if(DateUtil.intersectsWithPossiblyOpenEndings(periode.getFomDato(), periode.getTomDato(), fom, tom, true)){
-                resultList.add(periode);
-            }
-        }
-
-        Collections.sort(resultList);
-
-        return resultList.toArray(new BeregningsvilkarPeriode[resultList.size()]);
     }
 }

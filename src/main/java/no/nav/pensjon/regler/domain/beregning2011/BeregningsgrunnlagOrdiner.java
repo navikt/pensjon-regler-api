@@ -1,14 +1,9 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * @author Steinar Hjellvik (Decisive) - PK-11391
- */
 public class BeregningsgrunnlagOrdiner extends AbstraktBeregningsgrunnlag {
 
     private static final long serialVersionUID = 8408663631045755322L;
@@ -23,7 +18,6 @@ public class BeregningsgrunnlagOrdiner extends AbstraktBeregningsgrunnlag {
      * Angir det sluttpoengtall som ordinært beregningsgrunnlag er omregnet fra.
      * Angår kun beregning av avdøde i sammenheng med nytt UT_GJT.
      */
-
     private double sluttpoengtall;
 
     public BeregningsgrunnlagOrdiner() {
@@ -49,28 +43,6 @@ public class BeregningsgrunnlagOrdiner extends AbstraktBeregningsgrunnlag {
 
     public void setOpptjeningUTListe(List<OpptjeningUT> opptjeningUTListe) {
         this.opptjeningUTListe = opptjeningUTListe;
-    }
-
-    public OpptjeningUT[] getOpptjeningUTListeAsArray() {
-        return opptjeningUTListe != null ? opptjeningUTListe.toArray(new OpptjeningUT[opptjeningUTListe.size()]) : new OpptjeningUT[0];
-    }
-
-    public OpptjeningUT[] retrieveOpptjeningUTListeAsArray() {
-        return getOpptjeningUTListeAsArray();
-    }
-
-    /**
-     * Returnerer array med OpptjeningUT sortert med største først etter:
-     * 1. avkortetBelop
-     * 2. år
-     * Original liste blir ikke endret.
-     * 
-     * @return
-     */
-    public OpptjeningUT[] sortertOpptjeningUTListeAsArray() {
-        ArrayList<OpptjeningUT> sortertOpptjeningUTListe = new ArrayList<OpptjeningUT>(opptjeningUTListe);
-        Collections.sort(sortertOpptjeningUTListe);
-        return sortertOpptjeningUTListe.toArray(new OpptjeningUT[sortertOpptjeningUTListe.size()]);
     }
 
     public int getNasjonaltSnitt() {

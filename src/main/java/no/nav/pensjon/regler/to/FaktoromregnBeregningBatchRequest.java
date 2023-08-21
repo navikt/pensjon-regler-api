@@ -25,15 +25,6 @@ public class FaktoromregnBeregningBatchRequest  extends ServiceRequest {
 	public Vector<BeregningerTilFaktoromregningGrunnlag> getBeregningerTilFaktoromregningGrunnlagListe() {
 		return beregningerTilFaktoromregningGrunnlagListe;
 	}
-	
-	/**
-	 * Read only property for beregningerTilFaktoromregningGrunnlagListe as array
-	 * @return array of BeregningerTilFaktoromregningGrunnlag
-	 */
-	public BeregningerTilFaktoromregningGrunnlag[] getBeregningerTilFaktoromregningGrunnlagListeAsArray() {
-		return (beregningerTilFaktoromregningGrunnlagListe != null ? this.beregningerTilFaktoromregningGrunnlagListe.toArray(new BeregningerTilFaktoromregningGrunnlag[this.beregningerTilFaktoromregningGrunnlagListe.size()]) : new BeregningerTilFaktoromregningGrunnlag[0]);
-	}
-	
 	public void setBeregningerTilFaktoromregningGrunnlagListe(
 			Vector<BeregningerTilFaktoromregningGrunnlag> beregningerTilFaktoromregningGrunnlagListe) {
 		this.beregningerTilFaktoromregningGrunnlagListe = beregningerTilFaktoromregningGrunnlagListe;

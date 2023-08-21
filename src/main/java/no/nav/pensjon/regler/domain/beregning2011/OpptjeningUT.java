@@ -382,19 +382,6 @@ public class OpptjeningUT implements Comparable<OpptjeningUT>, Serializable, Oms
         this.PREG_opptjeningTypeListe = PREG_opptjeningTypeListe;
     }
 
-    public OpptjeningTypeMapping[] getPREG_OpptjeningTypeListeAsArray() {
-        return PREG_opptjeningTypeListe != null ? PREG_opptjeningTypeListe.toArray(new OpptjeningTypeMapping[PREG_opptjeningTypeListe.size()]) : new OpptjeningTypeMapping[0];
-    }
-
-    /**
-     * Read only property for merknadListe as array.
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
     @Override
     public boolean isInntektIAvtaleland() {
         return inntektIAvtaleland;

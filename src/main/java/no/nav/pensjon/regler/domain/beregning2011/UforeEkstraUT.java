@@ -51,15 +51,6 @@ public class UforeEkstraUT implements Serializable {
     }
 
     /**
-     * Read only property for BeregnetUforeperiodeListe as array.
-     * 
-     * @return array of BeregningUforeperiode
-     */
-    public BeregningUforeperiode[] getUforeperiodeListeAsArray() {
-        return beregnetUforeperiodeListe != null ? beregnetUforeperiodeListe.toArray(new BeregningUforeperiode[beregnetUforeperiodeListe.size()]) : new BeregningUforeperiode[0];
-    }
-
-    /**
      * @param beregnetUforeperiodeListe the beregnetUforeperiodeListe to set
      */
     public void setBeregnetUforeperiodeListe(List<BeregningUforeperiode> beregnetUforeperiodeListe) {

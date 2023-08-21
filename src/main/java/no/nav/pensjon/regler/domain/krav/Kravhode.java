@@ -179,76 +179,12 @@ public class Kravhode implements Serializable {
         this.persongrunnlagListe = persongrunnlagListe;
     }
 
-    /**
-     * @deprecated
-     * @return Returns the persongrunnlagListe as array.
-     */
-    @Deprecated
-    public Persongrunnlag[] retrievePersongrunnlagListeAsArray() {
-        return persongrunnlagListe != null ? persongrunnlagListe.toArray(new Persongrunnlag[persongrunnlagListe.size()]) : new Persongrunnlag[0];
-    }
-
-    /**
-     * Read only property for persongrunnlagListe as array.
-     *
-     * @return array of Persongrunnlag
-     */
-    public Persongrunnlag[] getPersongrunnlagListeAsArray() {
-        return persongrunnlagListe != null ? persongrunnlagListe.toArray(new Persongrunnlag[persongrunnlagListe.size()]) : new Persongrunnlag[0];
-    }
-
-    /**
-     * Samme som getPersongrunnlagListeAsArray, men med annet navn slik at Blaze forstår dette som en metode.
-     * Workaround når man ønsker å sjekke persongrunnlagliste as array flere ganger. (Brukt i BEF145)
-     *
-     * @return array med Persongrunnlag
-     */
-    public Persongrunnlag[] hentPersongrunnlagListeAsArray() {
-        return getPersongrunnlagListeAsArray();
-    }
-
     public List<Kravlinje> getKravlinjeListe() {
         return kravlinjeListe;
     }
 
     public void setKravlinjeListe(List<Kravlinje> kravlinjeListe) {
         this.kravlinjeListe = kravlinjeListe;
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the persongrunnlagListe as array.
-     */
-    @Deprecated
-    public Kravlinje[] retrieveKravlinjeListeAsArray() {
-        return kravlinjeListe.toArray(new Kravlinje[0]);
-    }
-
-    /**
-     * Read only property for kravlinjeListe as array.
-     *
-     * @return array of Kravlinje
-     */
-    public Kravlinje[] getKravlinjeListeAsArray() {
-        return kravlinjeListe != null ? kravlinjeListe.toArray(new Kravlinje[kravlinjeListe.size()]) : new Kravlinje[0];
-    }
-
-    /**
-     * @deprecated
-     * @return
-     */
-    @Deprecated
-    public Uttaksgrad[] retrieveUttaksgradListeAsArray() {
-        return uttaksgradListe.toArray(new Uttaksgrad[0]);
-    }
-
-    /**
-     * Read only property for uttaksgradListe as array.
-     *
-     * @return array of Uttaksgrad
-     */
-    public Uttaksgrad[] getUttaksgradListeAsArray() {
-        return uttaksgradListe != null ? uttaksgradListe.toArray(new Uttaksgrad[uttaksgradListe.size()]) : new Uttaksgrad[0];
     }
 
     /**

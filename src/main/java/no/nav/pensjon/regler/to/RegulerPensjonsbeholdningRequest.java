@@ -40,8 +40,4 @@ public class RegulerPensjonsbeholdningRequest extends ServiceRequest  {
 			ArrayList<PersonPensjonsbeholdning> beregningsgrunnlagForPensjonsbeholdning) {
 		this.beregningsgrunnlagForPensjonsbeholdning = beregningsgrunnlagForPensjonsbeholdning;
 	}
-	
-	public PersonPensjonsbeholdning[] getBeregningsgrunnlagForPensjonsbeholdningAsArray() {
-		return (beregningsgrunnlagForPensjonsbeholdning != null ? beregningsgrunnlagForPensjonsbeholdning.toArray(new PersonPensjonsbeholdning[beregningsgrunnlagForPensjonsbeholdning.size()]) : new PersonPensjonsbeholdning[0]);
-	}
 }

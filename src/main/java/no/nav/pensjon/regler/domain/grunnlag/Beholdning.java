@@ -66,15 +66,6 @@ public abstract class Beholdning implements Serializable {
         return merknadListe;
     }
 
-    /**
-     * Read only property for merknadListe as array
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
     public void setMerknadListe(List<Merknad> merknadListe) {
         this.merknadListe = merknadListe;
     }

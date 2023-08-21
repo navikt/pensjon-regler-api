@@ -8,10 +8,6 @@ import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * Ektefelletillegg
- */
-
 public class Ektefelletillegg extends Ytelseskomponent {
 
     private static final long serialVersionUID = -2250297845903930169L;
@@ -132,15 +128,6 @@ public class Ektefelletillegg extends Ytelseskomponent {
 
     public List<AvkortingsArsakCti> getArsaksList() {
         return arsaksList;
-    }
-
-    /**
-     * Read only property for arsaksListe as array
-     * 
-     * @return array of AvkortingsArsak
-     */
-    public AvkortingsArsakCti[] getArsaksListeAsArray() {
-        return arsaksList != null ? arsaksList.toArray(new AvkortingsArsakCti[arsaksList.size()]) : new AvkortingsArsakCti[0];
     }
 
     public void setArsaksList(List<AvkortingsArsakCti> arsaksList) {

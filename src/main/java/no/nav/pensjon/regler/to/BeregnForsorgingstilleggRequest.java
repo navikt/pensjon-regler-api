@@ -145,28 +145,8 @@ public class BeregnForsorgingstilleggRequest extends ServiceRequest {
         return beregnetUtbetalingsperiodeListeBruker;
     }
 
-    /**
-     * Read only property for beregnetUtbetalingsperiodeListeBruker as array
-     * 
-     * @return array of BeregnetUtbetalingPeriode
-     */
-    public BeregnetUtbetalingsperiode[] getBeregnetUtbetalingsperiodeListeBrukerAsArray() {
-        return beregnetUtbetalingsperiodeListeBruker != null ? beregnetUtbetalingsperiodeListeBruker.toArray(new BeregnetUtbetalingsperiode[beregnetUtbetalingsperiodeListeBruker.size()])
-                : new BeregnetUtbetalingsperiode[0];
-    }
-
     public List<BeregnetUtbetalingsperiode> getBeregnetUtbetalingsperiodeListeEPS() {
         return beregnetUtbetalingsperiodeListeEPS;
-    }
-
-    /**
-     * Read only property for beregnetUtbetalingsperiodeListeEPS as array
-     * 
-     * @return array of BeregnetUtbetalingPeriode
-     */
-    public BeregnetUtbetalingsperiode[] getBeregnetUtbetalingsperiodeListeEPSAsArray() {
-        return beregnetUtbetalingsperiodeListeEPS != null ? beregnetUtbetalingsperiodeListeEPS.toArray(new BeregnetUtbetalingsperiode[beregnetUtbetalingsperiodeListeEPS.size()])
-                : new BeregnetUtbetalingsperiode[0];
     }
 
     public Beregning getBeregningSoker() {
@@ -215,15 +195,6 @@ public class BeregnForsorgingstilleggRequest extends ServiceRequest {
 
     public List<VilkarsVedtak> getVilkarsvedtakListe() {
         return vilkarsvedtakListe;
-    }
-
-    /**
-     * Read only property for vilkarsvedtakListe as array
-     * 
-     * @return array of VilkarsVedtak
-     */
-    public VilkarsVedtak[] getVilkarsvedtakListeAsArray() {
-        return vilkarsvedtakListe != null ? vilkarsvedtakListe.toArray(new VilkarsVedtak[vilkarsvedtakListe.size()]) : new VilkarsVedtak[0];
     }
 
     public Date getVirk() {

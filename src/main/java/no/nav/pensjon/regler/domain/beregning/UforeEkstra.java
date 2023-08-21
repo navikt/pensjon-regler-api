@@ -209,12 +209,8 @@ public class UforeEkstra implements Serializable {
     public String toString() {
         final String TAB = "    ";
 
-        StringBuilder retValue = new StringBuilder();
-
-        retValue.append("UforeEkstra ( ").append(super.toString()).append(TAB).append("inntektkode1 = ").append(inntektkode1).append(TAB).append("inntektkode2 = ")
-                .append(inntektkode2).append(TAB).append("tak = ").append(tak).append(TAB).append(" )");
-
-        return retValue.toString();
+        return "UforeEkstra ( " + super.toString() + TAB + "inntektkode1 = " + inntektkode1 + TAB + "inntektkode2 = " +
+                inntektkode2 + TAB + "tak = " + tak + TAB + " )";
     }
 
     public double getFpp() {

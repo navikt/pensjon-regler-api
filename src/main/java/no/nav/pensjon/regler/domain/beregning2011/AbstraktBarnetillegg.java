@@ -168,10 +168,6 @@ public abstract class AbstraktBarnetillegg extends Ytelseskomponent implements S
         return avkortingsArsakList;
     }
 
-    public AvkortingsArsakCti[] getArsaksListeAsArray() {
-        return avkortingsArsakList != null ? avkortingsArsakList.toArray(new AvkortingsArsakCti[avkortingsArsakList.size()]) : new AvkortingsArsakCti[0];
-    }
-
     public int getForsorgingstilleggNiva() {
         return forsorgingstilleggNiva;
     }

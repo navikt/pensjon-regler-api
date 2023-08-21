@@ -66,10 +66,6 @@ public class KonverterAP1967TilAP2011Request extends ServiceRequest {
 	public void setKravhode(Kravhode kravhode) {
 		this.kravhode = kravhode;
 	}
-	public VilkarsVedtak[] getVilkarsvedtakListeAsArray() {
-		return (vilkarsvedtakListe!=null?this.vilkarsvedtakListe.toArray(new VilkarsVedtak[vilkarsvedtakListe.size()]):new VilkarsVedtak[0]);
-	}
-	
 	public List<VilkarsVedtak> getVilkarsvedtakListe() {
 		return vilkarsvedtakListe;
 	}

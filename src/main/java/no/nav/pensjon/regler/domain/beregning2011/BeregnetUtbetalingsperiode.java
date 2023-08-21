@@ -64,21 +64,15 @@ public class BeregnetUtbetalingsperiode implements Serializable, Comparable<Bere
         antallSerkullsbarn = bup.antallSerkullsbarn;
 
         if (!bup.ytelseskomponenter.isEmpty()) {
-            ytelseskomponenter = new HashMap<String, Ytelseskomponent>();
-            Iterator<Ytelseskomponent> it = bup.ytelseskomponenter.values().iterator();
-            while (it.hasNext()) {
-                Ytelseskomponent yk = it.next();
+            ytelseskomponenter = new HashMap<>();
+            for (Ytelseskomponent yk : bup.ytelseskomponenter.values()) {
                 Ytelseskomponent ykcopy;
                 try {
                     ykcopy = (Ytelseskomponent) Class.forName(yk.getClass().getName()).getConstructor(yk.getClass()).newInstance(yk);
                     ytelseskomponenter.put(ykcopy.getYtelsekomponentType().getKode(), ykcopy);
-                } catch (IllegalArgumentException e) {
-                } catch (SecurityException e) {
-                } catch (InstantiationException e) {
-                } catch (IllegalAccessException e) {
-                } catch (InvocationTargetException e) {
-                } catch (NoSuchMethodException e) {
-                } catch (ClassNotFoundException e) {
+                } catch (IllegalArgumentException | ClassNotFoundException | NoSuchMethodException |
+                         InvocationTargetException | IllegalAccessException | InstantiationException |
+                         SecurityException ignored) {
                 }
             }
         }
@@ -111,8 +105,7 @@ public class BeregnetUtbetalingsperiode implements Serializable, Comparable<Bere
 
     @SuppressWarnings("unchecked")
     public <E extends Ytelseskomponent> E getYtelseskomponent(String kode) {
-        E yk = (E) ytelseskomponenter.get(kode);
-        return yk;
+        return (E) ytelseskomponenter.get(kode);
     }
 
     public Map<String, Ytelseskomponent> getYtelseskomponenter() {
@@ -121,10 +114,6 @@ public class BeregnetUtbetalingsperiode implements Serializable, Comparable<Bere
 
     public List<Ytelseskomponent> getYtelseskomponentListe() {
         return new ArrayList<Ytelseskomponent>(ytelseskomponenter.values());
-    }
-
-    public Ytelseskomponent[] getYtelseskomponentListeAsArray() {
-        return ytelseskomponenter != null ? ytelseskomponenter.values().toArray(new Ytelseskomponent[ytelseskomponenter.size()]) : new Ytelseskomponent[0];
     }
 
     public void setFomDato(Date fomDato) {

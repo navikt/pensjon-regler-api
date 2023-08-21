@@ -35,10 +35,6 @@ public class BeregnOpptjeningResponse extends ServiceResponse {
 		return beholdninger;
 	}
 
-	public Pensjonsbeholdning[] getBeholdningerAsArray() {
-		return (beholdninger != null ? beholdninger.toArray(new Pensjonsbeholdning[beholdninger.size()]) : new Pensjonsbeholdning[0]);	
-	}
-	
 	public void setBeholdninger(List<Pensjonsbeholdning> beholdninger) {
 		this.beholdninger = (ArrayList<Pensjonsbeholdning>) beholdninger;
 	}

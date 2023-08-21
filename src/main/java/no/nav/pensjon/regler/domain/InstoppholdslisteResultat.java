@@ -33,16 +33,6 @@ public class InstoppholdslisteResultat implements Serializable {
         return instOpphPeriodegrunnlagListe;
     }
 
-    /**
-     * Read only property for instOpphPeriodegrunnlagListe as array
-     * 
-     * @return array of InstOpphPeriodegrunnlag
-     */
-    public InstOpphPeriodegrunnlag[] getInstOpphPeriodegrunnlagListeAsArray() {
-        return instOpphPeriodegrunnlagListe != null ? instOpphPeriodegrunnlagListe.toArray(new InstOpphPeriodegrunnlag[instOpphPeriodegrunnlagListe.size()])
-                : new InstOpphPeriodegrunnlag[0];
-    }
-
     public void setInstOpphPeriodegrunnlagListe(List<InstOpphPeriodegrunnlag> instOpphPeriodegrunnlagListe) {
         this.instOpphPeriodegrunnlagListe = instOpphPeriodegrunnlagListe;
     }

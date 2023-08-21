@@ -89,24 +89,6 @@ public class AFPEtteroppgjorgrunnlag implements Serializable {
         return afpEtteroppgjorKategori;
     }
 
-    /**
-     * @deprecated
-     * @return Returns the afpUtbetalingsperiode as array.
-     */
-    @Deprecated
-    public AfpUtbetalingsperiode[] retrieveAfpUtbetalingsperiodeListAsArray() {
-        return afpUtbetalingsperiodeList.toArray(new AfpUtbetalingsperiode[0]);
-    }
-
-    /**
-     * Read only property for afpUtbetalingsperiodeListe as array.
-     * 
-     * @return array of AfpUtbetalingsperiode
-     */
-    public AfpUtbetalingsperiode[] getAfpUtbetalingsperiodeListeAsArray() {
-        return afpUtbetalingsperiodeList != null ? afpUtbetalingsperiodeList.toArray(new AfpUtbetalingsperiode[afpUtbetalingsperiodeList.size()]) : new AfpUtbetalingsperiode[0];
-    }
-
     public void setAfpEtteroppgjorKategori(AfpEtteroppgjorKategori afpEtteroppgjorKategori) {
         this.afpEtteroppgjorKategori = afpEtteroppgjorKategori;
     }

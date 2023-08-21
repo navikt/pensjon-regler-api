@@ -102,12 +102,4 @@ public class UforetrygdEtteroppgjorDetalj implements Serializable, Copyable<Ufor
     public void setTomDato(Date tomDato) {
         this.tomDato = tomDato;
     }
-
-    public Inntektsgrunnlag[] getInntekterAsArray() {
-        return inntekter != null ? inntekter.toArray(new Inntektsgrunnlag[inntekter.size()]) : new Inntektsgrunnlag[0];
-    }
-
-    public Inntektsgrunnlag[] getFratrekkAsArray() {
-        return fratrekk != null ? fratrekk.toArray(new Inntektsgrunnlag[fratrekk.size()]) : new Inntektsgrunnlag[0];
-    }
 }

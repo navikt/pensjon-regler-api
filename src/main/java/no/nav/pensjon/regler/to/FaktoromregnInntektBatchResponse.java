@@ -22,14 +22,6 @@ public class FaktoromregnInntektBatchResponse extends ServiceResponse {
 		return kravFaktoromregningResultatListe;
 	}
 
-	/**
-	 * Read only property for kravFaktoromregningResultatListe as array
-	 * @return array of KravFaktoromregningResultat
-	 */
-	public KravFaktoromregningResultat[] getKravFaktoromregningResultatListeAsArray() {
-		return (kravFaktoromregningResultatListe != null ? this.kravFaktoromregningResultatListe.toArray(new KravFaktoromregningResultat[this.kravFaktoromregningResultatListe.size()]) : new KravFaktoromregningResultat[0]);
-	}
-	
 	public void setBeregningerFaktoromregningResultatListe(
 			Vector<KravFaktoromregningResultat> beregningerFaktoromregningResultatListe) {
 		this.kravFaktoromregningResultatListe = beregningerFaktoromregningResultatListe;

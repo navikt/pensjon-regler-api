@@ -170,33 +170,6 @@ public abstract class Beregning2011 implements IBeregning, Serializable {
     }
 
     /**
-     * @deprecated
-     * @return
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[0]);
-    }
-
-    /**
-     * Read only property for merknadListe as array.
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
-    /**
-     * Read only property for delberegning2011Liste as array.
-     * 
-     * @return array of Beregning2011Relasjon
-     */
-    public BeregningRelasjon[] getDelberegning2011ListeAsArray() {
-        return delberegning2011Liste.toArray(new BeregningRelasjon[delberegning2011Liste.size()]);
-    }
-
-    /**
      * @return returnerer delberegning1967 fra delberegning2011Liste
      */
     public BeregningRelasjon getDelberegning1967() {
@@ -205,8 +178,6 @@ public abstract class Beregning2011 implements IBeregning, Serializable {
 
     /**
      * Hvis beregningsrelasjon ikke inneholder beregning 1967 blir, delberegning1967 satt til null.
-     * 
-     * @param delberegning1967
      */
     public void setDelberegning1967(BeregningRelasjon delberegning1967) {
         if (erBeregning1967(delberegning1967)) {
@@ -226,9 +197,6 @@ public abstract class Beregning2011 implements IBeregning, Serializable {
 
     /**
      * Legger til beregningRelasjon til lista. BeregningsId blir satt på den respektive beregningen.
-     * 
-     * @param beregningRelasjon
-     * @param beregningId
      */
     public void addBeregningRelasjon(BeregningRelasjon beregningRelasjon, String beregningId) {
         if (beregningId != null && beregningRelasjon != null) {
@@ -264,8 +232,6 @@ public abstract class Beregning2011 implements IBeregning, Serializable {
 
     /**
      * Hent BeregningsRelasjon som tilhører en bestemt beregning
-     * 
-     * @param beregningId
      */
     public BeregningRelasjon getBeregningRelasjon(String beregningId) {
         for (BeregningRelasjon br : delberegning2011Liste) {

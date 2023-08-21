@@ -65,28 +65,4 @@ public class DelingstallUtvalg implements Serializable {
         this.delingstallListe = delingstallListe;
     }
 
-    /**
-     * @deprecated
-     * @return
-     */
-    @Deprecated
-    public Delingstall[] retrieveSortedDelingstallListeAsArray() {
-        Collections.sort(delingstallListe);
-        return delingstallListe.toArray(new Delingstall[0]);
-    }
-
-    /**
-     * Read only property for delingstallListe as sorted array.
-     * 
-     * @return array of Delingstall
-     */
-    public Delingstall[] getSortedDelingstallListeAsArray() {
-        if (delingstallListe != null) {
-            Collections.sort(delingstallListe);
-            return delingstallListe.toArray(new Delingstall[delingstallListe.size()]);
-        } else {
-            return new Delingstall[0];
-        }
-    }
-
 }

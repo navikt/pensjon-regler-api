@@ -64,58 +64,6 @@ public class ForholdstallUtvalg implements Serializable {
         this.ft = ft;
     }
 
-    /**
-     * @deprecated
-     * @return
-     */
-    @Deprecated
-    public Forholdstall[] retrieveSortedForholdstallListeAsArray() {
-        Collections.sort(forholdstallListe);
-        return forholdstallListe.toArray(new Forholdstall[0]);
-    }
-
-    /**
-     * Read only property for forholdstallListe as sorted array.
-     * 
-     * @return array of Forholdstall
-     */
-    public Forholdstall[] getSortedForholdstallListeAsArray() {
-        if (forholdstallListe != null) {
-            Collections.sort(forholdstallListe);
-            return forholdstallListe.toArray(new Forholdstall[forholdstallListe.size()]);
-        } else {
-            return new Forholdstall[0];
-        }
-    }
-
-    /**
-     * @deprecated
-     * @return
-     */
-    @Deprecated
-    public Double[] retrieveSortedForholdstallListeAsDoubleArray() {
-        Collections.sort(forholdstallListe);
-        ArrayList<Double> forholdstallDouble = new ArrayList<Double>();
-        for (Forholdstall ft : forholdstallListe) {
-            forholdstallDouble.add(new Double(ft.getForholdstall()));
-        }
-        return forholdstallDouble.toArray(new Double[0]);
-    }
-
-    /**
-     * Read only property for forholdstallListe as sorted array of double.
-     * 
-     * @return array of Double
-     */
-    public Double[] getSortedForholdstallListeAsDoubleArray() {
-        Collections.sort(forholdstallListe);
-        ArrayList<Double> forholdstallDouble = new ArrayList<Double>();
-        for (Forholdstall ft : forholdstallListe) {
-            forholdstallDouble.add(new Double(ft.getForholdstall()));
-        }
-        return forholdstallDouble.toArray(new Double[forholdstallDouble.size()]);
-    }
-
     public List<Forholdstall> getForholdstallListe() {
         return forholdstallListe;
     }

@@ -61,8 +61,6 @@ public class BeregningsInformasjonMinstenivatilleggPensjonistpar implements Seri
 
     /**
      * Copy constructor
-     * 
-     * @param beregningsInformasjonMinstenivatilleggPensjonistpar
      */
     public BeregningsInformasjonMinstenivatilleggPensjonistpar(BeregningsInformasjonMinstenivatilleggPensjonistpar beregningsInformasjonMinstenivatilleggPensjonistpar) {
         samletPensjon = beregningsInformasjonMinstenivatilleggPensjonistpar.samletPensjon;

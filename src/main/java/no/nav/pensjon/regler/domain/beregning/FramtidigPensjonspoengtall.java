@@ -4,8 +4,6 @@ import no.nav.pensjon.regler.domain.Merknad;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -35,18 +33,18 @@ public class FramtidigPensjonspoengtall implements Serializable {
 
     /**
      * Copy Constructor
-     * 
+     *
      * @param framtidigPensjonspoengtall a <code>FramtidigPensjonspoengtall</code> object
      */
     public FramtidigPensjonspoengtall(FramtidigPensjonspoengtall framtidigPensjonspoengtall) {
         pt = framtidigPensjonspoengtall.pt;
-        poengtallListe = new ArrayList<Poengtall>();
+        poengtallListe = new ArrayList<>();
         if (framtidigPensjonspoengtall.poengtallListe != null) {
             for (Poengtall poengtall : framtidigPensjonspoengtall.poengtallListe) {
                 poengtallListe.add(new Poengtall(poengtall));
             }
         }
-        merknadListe = new ArrayList<Merknad>();
+        merknadListe = new ArrayList<>();
         if (framtidigPensjonspoengtall.merknadListe != null) {
             for (Merknad merknad : framtidigPensjonspoengtall.merknadListe) {
                 merknadListe.add(new Merknad(merknad));
@@ -56,8 +54,8 @@ public class FramtidigPensjonspoengtall implements Serializable {
 
     public FramtidigPensjonspoengtall() {
         super();
-        poengtallListe = new ArrayList<Poengtall>();
-        merknadListe = new ArrayList<Merknad>();
+        poengtallListe = new ArrayList<>();
+        merknadListe = new ArrayList<>();
     }
 
     public FramtidigPensjonspoengtall(double poengtall, List<Poengtall> poengtallListe) {
@@ -91,69 +89,6 @@ public class FramtidigPensjonspoengtall implements Serializable {
     }
 
     /**
-     * @deprecated
-     * @return Returns the pt as array.
-     */
-    @Deprecated
-    public Poengtall[] retrievePoengtallListeAsArray() {
-        return poengtallListe.toArray(new Poengtall[0]);
-    }
-
-    /**
-     * Read only property for poengtallListe as array.
-     * 
-     * @return array of Poengtall
-     */
-    public Poengtall[] getPoengtallListeAsArray() {
-        return poengtallListe != null ? poengtallListe.toArray(new Poengtall[poengtallListe.size()]) : new Poengtall[0];
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the pt as array, sorted by poeng (pp).
-     */
-    @Deprecated
-    public Poengtall[] retrieveSortertPoengtallListeAsArray() {
-        ArrayList<Poengtall> sortedPt = new ArrayList<Poengtall>(poengtallListe);
-        Collections.sort(sortedPt, Collections.reverseOrder());
-        return sortedPt.toArray(new Poengtall[0]);
-    }
-
-    /**
-     * Read only property for poengtallListe as sorted array.
-     * 
-     * @return array of Poengtall, sorted by poeng (pp).
-     */
-    public Poengtall[] getSortertPoengtallListeAsArray() {
-        if (poengtallListe != null) {
-            ArrayList<Poengtall> sortedPt = new ArrayList<Poengtall>(poengtallListe);
-            Collections.sort(sortedPt, Collections.reverseOrder());
-            return sortedPt.toArray(new Poengtall[sortedPt.size()]);
-        } else {
-            return new Poengtall[0];
-        }
-    }
-
-    public Poengtall[] poengtallListeSortertPaaPoengaar(){
-        if (poengtallListe != null) {
-            List<Poengtall> poengtallList = new ArrayList<Poengtall>(poengtallListe);
-            Comparator<Poengtall> comparator = (p1, p2) -> {
-                if (p2.getAr() == p1.getAr()) {
-                    return 0;
-                } else if (p2.getAr() < p1.getAr()) {
-                    return -1;
-                } else {
-                    return 1;
-                }
-            };
-            Collections.sort(poengtallList, comparator);
-            return poengtallList.toArray(new Poengtall[poengtallList.size()]);
-        } else {
-            return new Poengtall[0];
-        }
-    }
-
-    /**
      * @return Returns the merknad.
      */
     public List<Merknad> getMerknadListe() {
@@ -168,40 +103,18 @@ public class FramtidigPensjonspoengtall implements Serializable {
     }
 
     /**
-     * @deprecated
-     * @return Returns the merknad as array.
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[0]);
-    }
-
-    /**
-     * Read only property for merknadListe.
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
-    /**
      * Constructs a <code>String</code> with all attributes
      * in name = value format.
-     * 
+     *
      * @return a <code>String</code> representation
-     *         of this object.
+     * of this object.
      */
     @Override
     public String toString() {
         final String TAB = "    ";
 
-        StringBuilder retValue = new StringBuilder();
-
-        retValue.append("FramtidigPensjonspoengtall ( ").append(super.toString()).append(TAB).append("pt = ").append(pt).append(TAB).append("poengtallListe = ")
-                .append(poengtallListe).append(TAB).append("merknadListe = ").append(merknadListe).append(TAB).append(" )");
-
-        return retValue.toString();
+        return "FramtidigPensjonspoengtall ( " + super.toString() + TAB + "pt = " + pt + TAB + "poengtallListe = " +
+                poengtallListe + TAB + "merknadListe = " + merknadListe + TAB + " )";
     }
 
 }

@@ -39,10 +39,6 @@ public abstract class AbstraktBeregningsvilkar implements Serializable {
         this.merknadListe = merknadListe;
     }
 
-    public Merknad[] retrieveMerknadListeAsArray(){
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
     /**
      * Metoden, når implementert i en klasse som implementerer abstraktberegningsvilkar skal returnere en kopi av input hvis den er av den implementerende klassen.
      * Dette gjør kopiering av lister av abstrakte beregningsvilkår lettere, og gjør at koden ikke kompilerer hvis implementasjon mangler.

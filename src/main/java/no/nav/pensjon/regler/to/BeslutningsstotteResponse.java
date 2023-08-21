@@ -85,10 +85,6 @@ public class BeslutningsstotteResponse extends ServiceResponse {
         this.inntektsberegningsResultat = inntektsberegningsResultat;
     }
 
-    public AbstraktBeregningsvilkar[] retrieveBeregningsvilkarsListeAsArray() {
-        return beregningsvilkarListe != null ? beregningsvilkarListe.toArray(new AbstraktBeregningsvilkar[beregningsvilkarListe.size()]) : new AbstraktBeregningsvilkar[0];
-    }
-
     public List<AbstraktBeregningsvilkar> getBeregningsvilkarListe() {
         return beregningsvilkarListe;
     }

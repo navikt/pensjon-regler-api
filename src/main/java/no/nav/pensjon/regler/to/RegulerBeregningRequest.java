@@ -43,13 +43,6 @@ public class RegulerBeregningRequest extends ServiceRequest {
 	public ArrayList<Uttaksgrad> getUttaksgradListe() {
 		return uttaksgradListe;
 	}
-	/**
-	 * Read only property for opptjeningsgrunnlagListe as array.
-	 * @return array of Opptjeningsgrunnlag
-	 */
-	public Uttaksgrad[] getUttaksgradListeAsArray() {
-		return (uttaksgradListe != null ? uttaksgradListe.toArray(new Uttaksgrad[uttaksgradListe.size()]) : new Uttaksgrad[0]);
-	}
 
 	public void setUttaksgradListe(ArrayList<Uttaksgrad> uttaksgradListe) {
 		this.uttaksgradListe = uttaksgradListe;
@@ -62,13 +55,6 @@ public class RegulerBeregningRequest extends ServiceRequest {
 	public void setBrukersVilkarsvedtakListe(
 			ArrayList<VilkarsVedtak> brukersVilkarsvedtakListe) {
 		this.brukersVilkarsvedtakListe = brukersVilkarsvedtakListe;
-	}
-	/**
-	 * Read only property for opptjeningsgrunnlagListe as array.
-	 * @return array of Opptjeningsgrunnlag
-	 */
-	public VilkarsVedtak[] getBrukersVilkarsvedtakListeAsArray() {
-		return (brukersVilkarsvedtakListe != null ? brukersVilkarsvedtakListe.toArray(new VilkarsVedtak[brukersVilkarsvedtakListe.size()]) : new VilkarsVedtak[0]);
 	}
 
 	public Persongrunnlag getSokersPersongrunnlag() {

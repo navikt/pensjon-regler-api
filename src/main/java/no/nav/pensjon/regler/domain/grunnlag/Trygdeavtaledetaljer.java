@@ -187,24 +187,6 @@ public class Trygdeavtaledetaljer implements Serializable {
         this.poengarListe = poengarListe;
     }
 
-    /**
-     * @deprecated
-     * @return Returns the poengarListe as array.
-     */
-    @Deprecated
-    public PoengarManuell[] retrievePoengarListeAsArray() {
-        return poengarListe.toArray(new PoengarManuell[0]);
-    }
-
-    /**
-     * Read only property for poengarListe as array.
-     * 
-     * @return array of PoengarManuell
-     */
-    public PoengarManuell[] getPoengarListeAsArray() {
-        return poengarListe != null ? poengarListe.toArray(new PoengarManuell[poengarListe.size()]) : new PoengarManuell[0];
-    }
-
     public int getSumPensjonAndreAvtaleland() {
         return sumPensjonAndreAvtaleland;
     }

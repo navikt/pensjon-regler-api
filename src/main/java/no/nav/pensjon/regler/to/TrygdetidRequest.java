@@ -158,15 +158,6 @@ public class TrygdetidRequest extends ServiceRequest {
     }
 
     /**
-     * Read only property for uttaksgradListe as array.
-     * 
-     * @return array of Uttaksgrad
-     */
-    public Uttaksgrad[] getUttaksgradListeAsArray() {
-        return uttaksgradListe != null ? uttaksgradListe.toArray(new Uttaksgrad[uttaksgradListe.size()]) : new Uttaksgrad[0];
-    }
-
-    /**
      * Sorterer på nyeste fomDato - denne blir uttaksgradListe.get(0)
      */
     private void sorterUttaksgradListe() {
@@ -191,28 +182,6 @@ public class TrygdetidRequest extends ServiceRequest {
      */
     public void setBeregningsvilkarPeriodeListe(List<BeregningsvilkarPeriode> beregningsvilkarPeriodeListe) {
         this.beregningsvilkarPeriodeListe = beregningsvilkarPeriodeListe;
-    }
-
-    /**
-     * @return the beregningsvilkarPeriodeListe as a array
-     */
-    public BeregningsvilkarPeriode[] getBeregningsvilkarPeriodeListeAsArray() {
-        return !beregningsvilkarPeriodeListe.isEmpty() ? beregningsvilkarPeriodeListe.toArray(new BeregningsvilkarPeriode[beregningsvilkarPeriodeListe.size()])
-                : new BeregningsvilkarPeriode[0];
-    }
-
-    /**
-     * @return beregningsvilkarPeriodeListe som en array sortert kronologisk på fom dato.
-     */
-    public BeregningsvilkarPeriode[] getSortedBeregningssvilkarPeriodeListeAsArray() {
-        if (beregningsvilkarPeriodeListe != null
-                && !beregningsvilkarPeriodeListe.isEmpty()) {
-            ArrayList<BeregningsvilkarPeriode> sortedBvp = new ArrayList<BeregningsvilkarPeriode>(beregningsvilkarPeriodeListe);
-            Collections.sort(sortedBvp);
-            return sortedBvp.toArray(new BeregningsvilkarPeriode[sortedBvp.size()]);
-        } else {
-            return new BeregningsvilkarPeriode[0];
-        }
     }
 
     public Boolean getRedusertFTTUT() {

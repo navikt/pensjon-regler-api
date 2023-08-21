@@ -72,24 +72,7 @@ public class VilkarsprovRequest extends ServiceRequest{
 		return vilkarsvedtakliste;
 	}
 
-	/**
-	 * Read only property for vilkarsvedtakliste as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getVilkarsvedtaklisteAsArray() {
-		return (vilkarsvedtakliste != null ? this.vilkarsvedtakliste.toArray(new VilkarsVedtak[this.vilkarsvedtakliste.size()]) : new VilkarsVedtak[0]);
-	}
-	
 	public void setVilkarsvedtakliste(List<VilkarsVedtak> vilkarsvedtakliste) {
 		this.vilkarsvedtakliste = vilkarsvedtakliste;
-	}
-	
-	public VilkarsVedtak[] getSortertVilkarsVedtakListeAsArray() {
-		if (vilkarsvedtakliste != null) {
-			ArrayList<VilkarsVedtak> sortedVv = new ArrayList<VilkarsVedtak>(vilkarsvedtakliste);
-			Collections.sort(sortedVv);
-			return sortedVv.toArray(new VilkarsVedtak[sortedVv.size()]);
-		}
-		return new VilkarsVedtak[0];
 	}
 }

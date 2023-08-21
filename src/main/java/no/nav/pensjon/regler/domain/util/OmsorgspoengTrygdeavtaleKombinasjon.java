@@ -223,10 +223,6 @@ public class OmsorgspoengTrygdeavtaleKombinasjon implements Comparable<Omsorgspo
         return kombinasjon;
     }
 
-    public OpptjeningUT[] getKombinasjonSortertAsArray() {
-        return kombinasjon != null ? getKombinasjonSortert().toArray(new OpptjeningUT[kombinasjon.size()]) : new OpptjeningUT[0];
-    }
-
     public OmsorgspoengTrygdeavtaleKombinasjon getUtvidetOmfang() {
         return utvidetOmfangKombinasjon;
     }

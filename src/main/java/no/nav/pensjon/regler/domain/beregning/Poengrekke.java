@@ -358,24 +358,6 @@ public class Poengrekke implements Serializable {
     }
 
     /**
-     * @deprecated
-     * @return Returns the poengtall as array.
-     */
-    @Deprecated
-    public Poengtall[] retrievePoengtallListeAsArray() {
-        return poengtallListe.toArray(new Poengtall[0]);
-    }
-
-    /**
-     * Read only property for poengtallListe as array.
-     * 
-     * @return array of Poengtall
-     */
-    public Poengtall[] getPoengtallListeAsArray() {
-        return poengtallListe != null ? poengtallListe.toArray(new Poengtall[poengtallListe.size()]) : new Poengtall[0];
-    }
-
-    /**
      * @return Returns the tpi.
      */
     public int getTpi() {
@@ -405,87 +387,10 @@ public class Poengrekke implements Serializable {
         merknadListe = merknad;
     }
 
-    /**
-     * @deprecated
-     * @return Returns the merknad as array.
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[0]);
-    }
-
-    /**
-     * Read only property for merknadListe as array.
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the poengtall as array, sorted by poeng (pp).
-     */
-    @Deprecated
-    public Poengtall[] retrieveSortertPoengtallListeAsArray() {
-        ArrayList<Poengtall> sortedPt = new ArrayList<Poengtall>(poengtallListe);
-        Collections.sort(sortedPt, Collections.reverseOrder());
-        return sortedPt.toArray(new Poengtall[0]);
-    }
-
-    /**
-     * @return Returns the poengtallListe as array sorted by faktiske brutto pensjonspoeng (brp_fa).
-     */
-    public Poengtall[] retrieveSortertPoengtallListeByBRPFAAsArray() {
-        if (poengtallListe != null) {
-            ArrayList<Poengtall> sortedPt = new ArrayList<Poengtall>(poengtallListe);
-            Comparator<Poengtall> comparator = (a, b) -> Double.compare(b.getPREG_brp_fa(), a.getPREG_brp_fa());
-            Collections.sort(sortedPt, comparator);
-            return sortedPt.toArray(new Poengtall[sortedPt.size()]);
-        } else {
-            return new Poengtall[0];
-        }
-    }
-
-    /**
-     * Read only property for poengtallListe as sorted array.
-     * 
-     * @return array of Poengtall, sorted by poeng (pp).
-     */
-    public Poengtall[] getSortertPoengtallListeAsArray() {
-        if (poengtallListe != null) {
-            ArrayList<Poengtall> sortedPt = new ArrayList<Poengtall>(poengtallListe);
-            Collections.sort(sortedPt, Collections.reverseOrder());
-            return sortedPt.toArray(new Poengtall[sortedPt.size()]);
-        } else {
-            return new Poengtall[0];
-        }
-    }
-
     public Poengtall[] sorterPoengtall(Poengtall[] pt) {
         List<Poengtall> ptList = Arrays.asList(pt);
         Collections.sort(ptList, Collections.reverseOrder());
         return ptList.toArray(new Poengtall[0]);
-    }
-
-    public Poengtall[] poengtallListeSortertPaaPoengaar(){
-        if (poengtallListe != null) {
-            List<Poengtall> poengtallList = new ArrayList<Poengtall>(poengtallListe);
-            Comparator<Poengtall> comparator = (p1, p2) -> {
-                if (p2.getAr() == p1.getAr()) {
-                    return 0;
-                } else if (p2.getAr() < p1.getAr()) {
-                    return -1;
-                } else {
-                    return 1;
-                }
-            };
-            Collections.sort(poengtallList, comparator);
-            return poengtallList.toArray(new Poengtall[poengtallList.size()]);
-        } else {
-            return new Poengtall[0];
-        }
     }
 
     public int getPa_no() {
@@ -711,7 +616,5 @@ public class Poengrekke implements Serializable {
 	public void setTpiEtterHovedregel(int tpiEtterHovedregel) {
 		this.tpiEtterHovedregel = tpiEtterHovedregel;
 	}
-	
-	
-	
+
 }

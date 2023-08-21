@@ -42,10 +42,7 @@ public class Grunnpensjon extends Ytelseskomponent {
 
     /**
      * Copy Constructor
-     * 
-     * @param grunnpensjon a <code>Grunnpensjon</code> object
      */
-
     public Grunnpensjon(Grunnpensjon gp) {
         super(gp);
         pSats_gp = gp.pSats_gp;

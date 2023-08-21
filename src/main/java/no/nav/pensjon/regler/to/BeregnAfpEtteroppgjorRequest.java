@@ -25,12 +25,4 @@ public class BeregnAfpEtteroppgjorRequest  extends ServiceRequest {
 			Vector<AFPEtteroppgjorgrunnlag> afpEtteroppgjorgrunnlagListe) {
 		this.afpEtteroppgjorgrunnlagListe = afpEtteroppgjorgrunnlagListe;
 	}
-
-	/**
-	 * Read only property for afpEtteroppgjorgrunnlagListe as array
-	 * @return array of AFPEtteroppgjorgrunnlag
-	 */
-	public AFPEtteroppgjorgrunnlag[] getAfpEtteroppgjorgrunnlagListeAsArray(){
-		return (afpEtteroppgjorgrunnlagListe != null ? afpEtteroppgjorgrunnlagListe.toArray(new AFPEtteroppgjorgrunnlag[afpEtteroppgjorgrunnlagListe.size()]) : new AFPEtteroppgjorgrunnlag[0]);
-	}
 }

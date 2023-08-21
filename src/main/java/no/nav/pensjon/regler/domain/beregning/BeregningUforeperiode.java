@@ -1,6 +1,5 @@
 package no.nav.pensjon.regler.domain.beregning;
 
-
 import no.nav.pensjon.regler.domain.grunnlag.Uforeperiode;
 import no.nav.pensjon.regler.domain.kode.FppGarantiKodeCti;
 import no.nav.pensjon.regler.domain.kode.ProRataBeregningTypeCti;
@@ -9,11 +8,6 @@ import no.nav.pensjon.regler.domain.kode.UforeTypeCti;
 import java.io.Serializable;
 import java.util.Date;
 
-/* 
- * @author Swiddy de Louw (Capgemin) - PK-10228
- * @author Steinar Hjellvik (Decisive) - PK-6458
- * @author Magnus Bakken (Accenture) - PK-20759
- */
 public class BeregningUforeperiode implements Serializable {
 
     private static final long serialVersionUID = 5820916129615202514L;
@@ -239,41 +233,6 @@ public class BeregningUforeperiode implements Serializable {
         super();
     }
 
-    /**
-     * @param ufg
-     * @param uft
-     * @param uforeType
-     * @param fppGaranti
-     * @param fppGarantiKode
-     * @param redusertAntFppAr
-     * @param redusertAntFppAr_proRata
-     * @param proRataBeregningType
-     * @param virk
-     * @param uftTom
-     * @param ufgFom
-     * @param ufgTom
-     * @param fodselsArYngsteBarn
-     * @param spt
-     * @param spt_proRata
-     * @param opt
-     * @param ypt
-     * @param spt_pa_f92
-     * @param spt_pa_e91
-     * @param proRata_teller
-     * @param proRata_nevner
-     * @param opt_pa_f92
-     * @param opt_pa_e91
-     * @param ypt_pa_f92
-     * @param ypt_pa_e91
-     * @param paa
-     * @param fpp
-     * @param fpp_omregnet
-     * @param spt_eos
-     * @param spt_pa_e91_eos
-     * @param spt_pa_f92_eos
-     * @param beregningsgrunnlag
-     * @param angittUforetidspunkt
-     */
     public BeregningUforeperiode(Integer ufg, Date uft, UforeTypeCti uforeType, Double fppGaranti, FppGarantiKodeCti fppGarantiKode, Integer redusertAntFppAr,
                                  Integer redusertAntFppAr_proRata, ProRataBeregningTypeCti proRataBeregningType, Date virk, Date uftTom, Date ufgFom, Date ufgTom,
                                  Integer fodselsArYngsteBarn, Double spt, Double spt_proRata, Double opt, Double ypt, Integer spt_pa_f92, Integer spt_pa_e91,
@@ -321,67 +280,67 @@ public class BeregningUforeperiode implements Serializable {
     public BeregningUforeperiode(BeregningUforeperiode b) {
         this();
         if (b.fodselsArYngsteBarn != null) {
-            fodselsArYngsteBarn = new Integer(b.fodselsArYngsteBarn);
+            fodselsArYngsteBarn = b.fodselsArYngsteBarn;
         }
         if (b.fpp != null) {
-            fpp = new Double(b.fpp);
+            fpp = b.fpp;
         }
         if (b.fpp_omregnet != null) {
-            fpp_omregnet = new Double(b.fpp_omregnet);
+            fpp_omregnet = b.fpp_omregnet;
         }
         if (b.fppGaranti != null) {
-            fppGaranti = new Double(b.fppGaranti);
+            fppGaranti = b.fppGaranti;
         }
         if (b.fppGarantiKode != null) {
             fppGarantiKode = new FppGarantiKodeCti(b.fppGarantiKode);
         }
         if (b.opt != null) {
-            opt = new Double(b.opt);
+            opt = b.opt;
         }
         if (b.opt_pa_e91 != null) {
-            opt_pa_e91 = new Integer(b.opt_pa_e91);
+            opt_pa_e91 = b.opt_pa_e91;
         }
         if (b.opt_pa_f92 != null) {
-            opt_pa_f92 = new Integer(b.opt_pa_f92);
+            opt_pa_f92 = b.opt_pa_f92;
         }
         if (b.paa != null) {
-            paa = new Double(b.paa);
+            paa = b.paa;
         }
         if (b.proRata_nevner != null) {
-            proRata_nevner = new Integer(b.proRata_nevner);
+            proRata_nevner = b.proRata_nevner;
         }
         if (b.proRata_teller != null) {
-            proRata_teller = new Integer(b.proRata_teller);
+            proRata_teller = b.proRata_teller;
         }
         if (b.proRataBeregningType != null) {
             proRataBeregningType = new ProRataBeregningTypeCti(b.proRataBeregningType);
         }
         if (b.redusertAntFppAr != null) {
-            redusertAntFppAr = new Integer(b.redusertAntFppAr);
+            redusertAntFppAr = b.redusertAntFppAr;
         }
         if (b.redusertAntFppAr_proRata != null) {
-            redusertAntFppAr_proRata = new Integer(b.redusertAntFppAr_proRata);
+            redusertAntFppAr_proRata = b.redusertAntFppAr_proRata;
         }
         if (b.spt != null) {
-            spt = new Double(b.spt);
+            spt = b.spt;
         }
         if (b.spt_pa_e91 != null) {
-            spt_pa_e91 = new Integer(b.spt_pa_e91);
+            spt_pa_e91 = b.spt_pa_e91;
         }
         if (b.spt_pa_e91_eos != null) {
-            spt_pa_e91_eos = new Integer(b.spt_pa_e91_eos);
+            spt_pa_e91_eos = b.spt_pa_e91_eos;
         }
         if (b.spt_pa_f92 != null) {
-            spt_pa_f92 = new Integer(b.spt_pa_f92);
+            spt_pa_f92 = b.spt_pa_f92;
         }
         if (b.spt_pa_f92_eos != null) {
-            spt_pa_f92_eos = new Integer(b.spt_pa_f92_eos);
+            spt_pa_f92_eos = b.spt_pa_f92_eos;
         }
         if (b.spt_proRata != null) {
-            spt_proRata = new Double(b.spt_proRata);
+            spt_proRata = b.spt_proRata;
         }
         if (b.ufg != null) {
-            ufg = new Integer(b.ufg);
+            ufg = b.ufg;
         }
         if (b.ufgFom != null) {
             ufgFom = (Date) b.ufgFom.clone();
@@ -402,13 +361,13 @@ public class BeregningUforeperiode implements Serializable {
             virk = (Date) b.virk.clone();
         }
         if (b.ypt != null) {
-            ypt = new Double(b.ypt);
+            ypt = b.ypt;
         }
         if (b.ypt_pa_e91 != null) {
-            ypt_pa_e91 = new Integer(b.ypt_pa_e91);
+            ypt_pa_e91 = b.ypt_pa_e91;
         }
         if (b.ypt_pa_f92 != null) {
-            ypt_pa_f92 = new Integer(b.ypt_pa_f92);
+            ypt_pa_f92 = b.ypt_pa_f92;
         }
         beregningsgrunnlag = b.beregningsgrunnlag;
         if (b.angittUforetidspunkt != null) {
