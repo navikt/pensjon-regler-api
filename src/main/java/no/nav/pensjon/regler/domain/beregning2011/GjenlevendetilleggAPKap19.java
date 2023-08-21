@@ -1,12 +1,10 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.domain.pensjon.regler.beregning.Ytelseskomponent;
-import no.nav.domain.pensjon.regler.kode.YtelsekomponentTypeCti;
-import no.nav.domain.pensjon.regler.trygdetid.Brok;
-import no.nav.domain.pensjon.regler.util.formula.Formel;
-import no.nav.domain.pensjon.regler.util.formula.IFormelProvider;
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent;
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
+import no.nav.pensjon.regler.domain.trygdetid.Brok;
+import no.nav.pensjon.regler.domain.util.formula.Formel;
+import no.nav.pensjon.regler.domain.util.formula.IFormelProvider;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,12 +33,12 @@ public class GjenlevendetilleggAPKap19 extends Ytelseskomponent implements IForm
     /**
      * Map av formler brukt i beregning av Tilleggspensjon.
      */
-    private HashMap<String, Formel> formelMap;
+    private final HashMap<String, Formel> formelMap;
 
     public GjenlevendetilleggAPKap19() {
         super();
         ytelsekomponentType = new YtelsekomponentTypeCti("AP_GJT_KAP19");
-        formelMap = new HashMap<>( );
+        formelMap = new HashMap<>();
     }
 
     public GjenlevendetilleggAPKap19(GjenlevendetilleggAPKap19 gjtKap19) {
@@ -50,10 +48,10 @@ public class GjenlevendetilleggAPKap19 extends Ytelseskomponent implements IForm
         this.referansebelop = gjtKap19.referansebelop;
         this.eksportfaktor = gjtKap19.eksportfaktor;
 
-        formelMap = new HashMap<>( );
+        formelMap = new HashMap<>();
         if (gjtKap19.formelMap != null && !gjtKap19.formelMap.isEmpty()) {
             for (Map.Entry<String, Formel> pair : gjtKap19.formelMap.entrySet()) {
-                formelMap.put( pair.getKey(), new Formel( pair.getValue() ));
+                formelMap.put(pair.getKey(), new Formel(pair.getValue()));
             }
         }
     }
