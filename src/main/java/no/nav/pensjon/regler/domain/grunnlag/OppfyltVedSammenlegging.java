@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.AvtalelandCti;
 
 import java.io.Serializable;
@@ -12,13 +12,13 @@ public class OppfyltVedSammenlegging implements Serializable {
     /**
      * Angir om kriteriet er oppfylt eller ikke.
      */
-    @GuiPrompt(prompt = "Oppfylt")
+
     boolean oppfylt;
 
     /**
      * Angir avtaleland.
      */
-    @GuiPrompt(prompt = "Avtaleland")
+
     AvtalelandCti avtaleland;
 
     /**

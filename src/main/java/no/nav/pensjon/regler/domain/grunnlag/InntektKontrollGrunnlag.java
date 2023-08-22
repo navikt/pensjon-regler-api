@@ -59,24 +59,12 @@ public class InntektKontrollGrunnlag implements Serializable {
         return faktiskeInntekterBrukerListe;
     }
 
-    public FaktiskInntektsgrunnlag[] getFaktiskeInntekterBrukerListeAsArray() {
-        return getFaktiskeInntekterBrukerListe() != null
-                ? getFaktiskeInntekterBrukerListe().toArray(new FaktiskInntektsgrunnlag[getFaktiskeInntekterBrukerListe().size()])
-                : new FaktiskInntektsgrunnlag[0];
-    }
-
     public void setFaktiskeInntekterBrukerListe(List<FaktiskInntektsgrunnlag> faktiskeInntekterBrukerListe) {
         this.faktiskeInntekterBrukerListe = faktiskeInntekterBrukerListe;
     }
 
     public List<FaktiskInntektsgrunnlag> getFaktiskeInntekterEPSListe() {
         return faktiskeInntekterEPSListe;
-    }
-
-    public FaktiskInntektsgrunnlag[] getFaktiskeInntekterEPSListeAsArray() {
-        return getFaktiskeInntekterEPSListe() != null
-                ? getFaktiskeInntekterEPSListe().toArray(new FaktiskInntektsgrunnlag[getFaktiskeInntekterEPSListe().size()])
-                : new FaktiskInntektsgrunnlag[0];
     }
 
     public void setFaktiskeInntekterEPSListe(List<FaktiskInntektsgrunnlag> faktiskeInntekterEPSListe) {
@@ -87,24 +75,12 @@ public class InntektKontrollGrunnlag implements Serializable {
         return forventetInntektBrukerListe;
     }
 
-    public Inntektsgrunnlag[] getForventetInntektBrukerListeAsArray() {
-        return getForventetInntektBrukerListe() != null
-                ? getForventetInntektBrukerListe().toArray(new Inntektsgrunnlag[getForventetInntektBrukerListe().size()])
-                : new Inntektsgrunnlag[0];
-    }
-
     public void setForventetInntektBrukerListe(List<Inntektsgrunnlag> forventetInntektBrukerListe) {
         this.forventetInntektBrukerListe = forventetInntektBrukerListe;
     }
 
     public List<Inntektsgrunnlag> getForventetInntektEPSListe() {
         return forventetInntektEPSListe;
-    }
-
-    public Inntektsgrunnlag[] getForventetInntektEPSListeAsArray() {
-        return getForventetInntektEPSListe() != null
-                ? getForventetInntektEPSListe().toArray(new Inntektsgrunnlag[getForventetInntektEPSListe().size()])
-                : new Inntektsgrunnlag[0];
     }
 
     public void setForventetInntektEPSListe(List<Inntektsgrunnlag> forventetInntektEPSListe) {
@@ -115,24 +91,12 @@ public class InntektKontrollGrunnlag implements Serializable {
         return beregnetUtbetalingsperiodeBrukerListe;
     }
 
-    public BeregnetUtbetalingsperiode[] getBeregnetUtbetalingsperiodeBrukerListeAsArray() {
-        return getBeregnetUtbetalingsperiodeBrukerListe() != null
-                ? getBeregnetUtbetalingsperiodeBrukerListe().toArray(new BeregnetUtbetalingsperiode[getBeregnetUtbetalingsperiodeBrukerListe().size()])
-                : new BeregnetUtbetalingsperiode[0];
-    }
-
     public void setBeregnetUtbetalingsperiodeBrukerListe(List<BeregnetUtbetalingsperiode> beregnetUtbetalingsperiodeBrukerListe) {
         this.beregnetUtbetalingsperiodeBrukerListe = beregnetUtbetalingsperiodeBrukerListe;
     }
 
     public List<BeregnetUtbetalingsperiode> getBeregnetUtbetalingsperiodeEPSListe() {
         return beregnetUtbetalingsperiodeEPSListe;
-    }
-
-    public BeregnetUtbetalingsperiode[] getBeregnetUtbetalingsperiodeEPSListeAsArray() {
-        return beregnetUtbetalingsperiodeEPSListe != null
-                ? beregnetUtbetalingsperiodeEPSListe.toArray(new BeregnetUtbetalingsperiode[beregnetUtbetalingsperiodeEPSListe.size()])
-                : new BeregnetUtbetalingsperiode[0];
     }
 
     public void setBeregnetUtbetalingsperiodeEPSListe(List<BeregnetUtbetalingsperiode> beregnetUtbetalingsperiodeEPSListe) {

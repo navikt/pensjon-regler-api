@@ -62,14 +62,6 @@ public class BeregnYtelseRequest extends ServiceRequest {
 		return vilkarsvedtaksliste;
 	}
 
-	/**
-	 * Read only property for vilkarsvedtaksliste
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getVilkarsVedtakListeAsArray() {
-		return (vilkarsvedtaksliste != null ? this.vilkarsvedtaksliste.toArray(new VilkarsVedtak[this.vilkarsvedtaksliste.size()]) : new VilkarsVedtak[0]);
-	}
-	
 	public void setVedtaksliste(Vector<VilkarsVedtak> vedtaksliste) {
 		this.vilkarsvedtaksliste = vedtaksliste;
 	}

@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.Merknad;
 import no.nav.pensjon.regler.domain.beregning2011.ReguleringsInformasjon;
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
@@ -24,37 +24,37 @@ public abstract class Ytelseskomponent implements Serializable {
     /**
      * Brutto beløp.
      */
-    @GuiPrompt(prompt = "Brutto")
+
     protected int brutto = 0;
 
     /**
      * Netto beløp.
      */
-    @GuiPrompt(prompt = "Netto")
+
     protected int netto = 0;
 
     /**
      * Fradraget: brutto - netto
      */
-    @GuiPrompt(prompt = "Fradrag")
+
     protected int fradrag = 0;
 
     /**
      * Ikke avrundet beløp, gjelder for hele året.
      */
-    @GuiPrompt(prompt = "Brutto per år")
+
     protected double bruttoPerAr = 0.0;
 
     /**
      * Årlig netto utbetalt sum.
      */
-    @GuiPrompt(prompt = "Netto per år")
+
     protected double nettoPerAr = 0.0;
 
     /**
      * Ytelsens fradrag per år.
      */
-    @GuiPrompt(prompt = "Fradrag per år")
+
     protected double fradragPerAr = 0.0;
 
     /**
@@ -70,13 +70,13 @@ public abstract class Ytelseskomponent implements Serializable {
     /**
      * Indikerer hvilken beregningsformel som ble brukt.
      */
-    @GuiPrompt(prompt = "Formel")
+
     private FormelKodeCti formelKode;
 
     /**
      * Informasjon om regulering av ytelsen.
      */
-    @GuiPrompt(prompt = "Reguleringsinformasjon")
+
     private ReguleringsInformasjon reguleringsInformasjon;
 
     /**
@@ -196,24 +196,6 @@ public abstract class Ytelseskomponent implements Serializable {
 
     public void setFradragPerAr(double fradragPerAr) {
         this.fradragPerAr = fradragPerAr;
-    }
-
-    /**
-     * @return Returns the merknadListe as array.
-     * @deprecated
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[0]);
-    }
-
-    /**
-     * Read only property for merknadListe as array.
-     *
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
     }
 
     @Override

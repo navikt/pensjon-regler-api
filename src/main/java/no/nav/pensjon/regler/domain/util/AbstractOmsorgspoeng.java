@@ -20,15 +20,14 @@ abstract class AbstractOmsorgspoeng {
     protected static final boolean OMSORG = true;
     protected static final boolean IKKE_INNTEKT_I_AVTALELAND = false;
     protected static final boolean INNTEKT_I_AVTALELAND = true;
-    protected static boolean debug = false, satstabeller_debug = false;
     protected static final int VELDIG_LAVT_TALL = -1000;
     protected static OpptjeningUT dummy = new OpptjeningUT(VELDIG_LAVT_TALL, 0.0, IKKE_OMSORG, IKKE_INNTEKT_I_AVTALELAND);
 
     List<Ref_pp> ikkeOmsorgsar;
     List<Ref_pp>[] o;
     List<List<Ref_pp>>[] os;
-    List<Omsorgsopptjening> poengtallliste = new Vector<Omsorgsopptjening>();
-    List<List<Ref_pp>> alleUtfall = new ArrayList<List<Ref_pp>>();
+    List<Omsorgsopptjening> poengtallliste = new Vector<>();
+    List<List<Ref_pp>> alleUtfall = new ArrayList<>();
     double[] resultat = new double[10];
     double[] justerteBelop = new double[10];
     int[] arstallsum = new int[10];
@@ -77,8 +76,8 @@ abstract class AbstractOmsorgspoeng {
      * slik at man unngår å plukke opp i4 og i5.
      */
     protected List<Ref_pp> finnNStorsteOmsorgsarMellom(List<Omsorgsopptjening> poengtallliste, int antall, Ref_pp forste, Ref_pp siste) {
-        PriorityQueue<Omsorgsopptjening> storsteOar = new PriorityQueue<Omsorgsopptjening>(63, new PoengtallComparator());
-        List<Ref_pp> deNStorsteOmsorgsarene = new ArrayList<Ref_pp>();
+        PriorityQueue<Omsorgsopptjening> storsteOar = new PriorityQueue<>(63, new PoengtallComparator());
+        List<Ref_pp> deNStorsteOmsorgsarene = new ArrayList<>();
         //Legger alle omsorgsårene mellom forste og siste år inn i en prioritetskø som er sortert på høyeste pp
         for (Omsorgsopptjening noenPoengtall : poengtallliste) {
             if (!noenPoengtall.isInntektIAvtaleland() && noenPoengtall.getOpptjeningsar() > forste.pt.getOpptjeningsar()) {

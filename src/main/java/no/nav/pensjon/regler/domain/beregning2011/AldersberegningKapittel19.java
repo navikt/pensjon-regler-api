@@ -104,8 +104,4 @@ public class AldersberegningKapittel19 extends Beregning2011 {
     public void setFtBenyttetArsakListe(List<FtDtArsak> ftBenyttetArsakListe) {
         this.ftBenyttetArsakListe = ftBenyttetArsakListe;
     }
-
-    public FtDtArsak[] getFtBenyttetArsakListeAsArray() {
-        return ftBenyttetArsakListe != null ? ftBenyttetArsakListe.toArray(new FtDtArsak[ftBenyttetArsakListe.size()]) : new FtDtArsak[0];
-    }
 }

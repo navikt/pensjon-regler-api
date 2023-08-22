@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent;
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
 import no.nav.pensjon.regler.domain.util.formula.Formel;
@@ -28,64 +28,64 @@ public class Gjenlevendetillegg extends Ytelseskomponent implements UforetrygdYt
     /**
      * Årsbeløpet fra knvertert beregningsgrunnlag.
      */
-    @GuiPrompt(prompt = "Årsbeløp konvertert beregningsgrunnlag")
+
     private double bgKonvertert;
 
     /**
      * Årsbeløpet fra konvertertberegningsgrunnlagGJT
      */
-    @GuiPrompt(prompt = "Årsbeløp konvertert beregningsgrunnlag gjenlevendetillegg")
+
     private double bgGjenlevendetillegg;
 
     /**
      * Akkumulert netto hittil i året eksklusiv måned for beregningsperiodens fomDato.
      */
-    @GuiPrompt(prompt = "Netto akkumulert")
+
     private int nettoAkk;
 
     /**
      * gjenstående beløp brukeren har rett på for året som beregningsperioden starter,
      * og inkluderer måneden det beregnes fra.
      */
-    @GuiPrompt(prompt = "Netto gjenstående")
+
     private int nettoRestAr;
 
     /**
      * Inntektsavkortningsbeløp per år, før justering med differansebeløp
      */
-    @GuiPrompt(prompt = "Inntektsavkortingsbeløp per år")
+
     private int avkortningsbelopPerAr;
 
     /**
      * Angir om gjenlevendetillegget er beregnet som konvertert
      * eller iht. nye regler for gjenlevendetillegg innvilget fom. 01.01.2015.
      */
-    @GuiPrompt(prompt = "Gjenlevendetillegg beregnet etter nye regler")
+
     private boolean nyttGjenlevendetillegg;
 
     /**
      * Hvilken faktor gjenlevendetillegget er avkortet med uten hensyn til justering for tidligere avkortet/justert beløp
      */
-    @GuiPrompt(prompt = "Avkortingsfaktor gjenlevendetillegg")
+
     private double avkortingsfaktorGJT;
 
     /**
      * Oppsummering av sentrale felt brukt i utregning av nytt gjenlevendetillegg.
      * Kun satt dersom nyttGjenlevendetillegg er true.
      */
-    @GuiPrompt(prompt = "Gjenlevendetillegg informasjon")
+
     private GjenlevendetilleggInformasjon gjenlevendetilleggInformasjon;
 
     /**
      * Utrykker avviket mellom lignet og forventet beløp ved etteroppgjør.
      */
-    @GuiPrompt(prompt = "Periodisert avvik etteroppgjør")
+
     private double periodisertAvvikEtteroppgjor;
 
     /**
      * Representerer reduksjon av UFI (brutto uføretrygd) pga eksport.
      */
-    @GuiPrompt(prompt = "Eksportfaktor")
+
     private double eksportFaktor;
 
     /**

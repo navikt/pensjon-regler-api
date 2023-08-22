@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.beregning.Ektefelletillegg;
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent;
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
@@ -23,32 +23,32 @@ public class EktefelletilleggUT extends Ytelseskomponent implements UforetrygdYt
     /**
      * Akkumulert netto hittil i året eksklusiv måned for beregningsperiodens fomDato.
      */
-    @GuiPrompt(prompt = "Netto akkumulert")
+
     private int nettoAkk;
 
     /**
      * gjenstående beløp brukeren har rett på for året som beregningsperioden starter,
      * og inkluderer måneden det beregnes fra.
      */
-    @GuiPrompt(prompt = "Netto gjenstående")
+
     private int nettoRestAr;
 
     /**
      * Inntektsavkortningsbeløp per år, før justering med differansebeløp
      */
-    @GuiPrompt(prompt = "Avkortningsbeløp per år")
+
     private int avkortningsbelopPerAr;
 
 	/**
 	 * netto ektefelletillegg per måned før konvertering * 12
 	 */
-    @GuiPrompt(prompt = "Ektefelletillegg før skattekompensasjon")
+
     private double etForSkattekomp;
 
 	/**
 	 * brukers oppjusterte uførepensjon før skattekompensasjon
 	 */
-    @GuiPrompt(prompt = "Brukers oppjusterte uførepensjon før skattekompensasjon")
+
 	private double upForSkattekomp;
 
     public EktefelletilleggUT() {

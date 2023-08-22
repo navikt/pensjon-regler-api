@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent;
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
 
@@ -8,22 +8,22 @@ public class Skjermingstillegg extends Ytelseskomponent {
 
     private static final long serialVersionUID = -3535325741085042503L;
 
-    @GuiPrompt(prompt = "Forholdstall ved 67 år for søkers årskull")
+
     private Double ft67Soker;
 
-    @GuiPrompt(prompt = "Skjermingstillegg sats hentet fra satstabell")
+
     private Double skjermingsgrad;
 
-    @GuiPrompt(prompt = "Uføregrad ved 67 år")
+
     private Integer ufg;
 
-    @GuiPrompt(prompt = "Basis grunnpensjon brutto per år")
+
     private Double basGp_bruttoPerAr;
 
-    @GuiPrompt(prompt = "Basis tilleggspensjon brutto per år")
+
     private Double basTp_bruttoPerAr;
 
-    @GuiPrompt(prompt = "Basis pensjonstillegg brutto per år")
+
     private Double basPenT_bruttoPerAr;
 
     public Skjermingstillegg() {

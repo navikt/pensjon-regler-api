@@ -1,16 +1,12 @@
 package no.nav.pensjon.regler.domain.beregning;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.AvkortingsArsakCti;
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
 
 import java.util.ArrayList;
 import java.util.List;
-
-/*
- * Ektefelletillegg
- */
 
 public class Ektefelletillegg extends Ytelseskomponent {
 
@@ -19,37 +15,37 @@ public class Ektefelletillegg extends Ytelseskomponent {
     /**
      * Fribeløpet
      */
-    @GuiPrompt(prompt = "Fribeløp")
+
     private int fribelop;
 
     /**
      * Summen av inntektene som kan bli lagt til grunn ved avkorting, selv når det ikke fører til avkorting.
      */
-    @GuiPrompt(prompt = "Sum inntekt ved avkorting")
+
     private int samletInntektAvkort;
 
     /**
      * Angir om tillegget er avkortet.
      */
-    @GuiPrompt(prompt = "Avkortet")
+
     private boolean avkortet;
 
     /**
      * Årsaken(e) til avkorting. Satt dersom avkortet er true.
      */
-    @GuiPrompt(prompt = "Årsak til avkorting")
+
     private List<AvkortingsArsakCti> arsaksList = new ArrayList<AvkortingsArsakCti>();
 
     /**
      * Angir minste pensjonsnivåsats for ektefelletillegget
      */
-    @GuiPrompt(prompt = "Minste pensjonsnivå sats for ektefelletillegg")
+
     private double mpnSatsFT;
 
     /**
      * Den anvendte trygdetiden i beregningen av tillegget. Kan være forskjellig fra Beregningen.tt_anv
      */
-    @GuiPrompt(prompt = "Anvendt trygdetid")
+
     private int tt_anv;
 
     /**
@@ -60,13 +56,13 @@ public class Ektefelletillegg extends Ytelseskomponent {
     /**
      * Telleren i proratabrøken for EØS-avtaleberegnet tillegg
      */
-    @GuiPrompt(prompt = "Pro rata teller")
+
     private int proratateller;
 
     /**
      * Telleren i proratabrøken for EØS-avtaleberegnet tillegg
      */
-    @GuiPrompt(prompt = "Pro rata nevner")
+
     private int proratanevner;
 
     /**
@@ -77,7 +73,7 @@ public class Ektefelletillegg extends Ytelseskomponent {
      * Skattefritaket skal ikke gjelde alderspensjonister som tilstås ektefelletillegg med virkning tidligst
      * 1. januar 2011
      */
-    @GuiPrompt(prompt = "Skattefritak")
+
     private boolean skattefritak;
 
     /**
@@ -132,15 +128,6 @@ public class Ektefelletillegg extends Ytelseskomponent {
 
     public List<AvkortingsArsakCti> getArsaksList() {
         return arsaksList;
-    }
-
-    /**
-     * Read only property for arsaksListe as array
-     * 
-     * @return array of AvkortingsArsak
-     */
-    public AvkortingsArsakCti[] getArsaksListeAsArray() {
-        return arsaksList != null ? arsaksList.toArray(new AvkortingsArsakCti[arsaksList.size()]) : new AvkortingsArsakCti[0];
     }
 
     public void setArsaksList(List<AvkortingsArsakCti> arsaksList) {

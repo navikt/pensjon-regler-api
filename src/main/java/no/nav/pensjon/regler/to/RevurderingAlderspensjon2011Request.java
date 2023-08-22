@@ -78,14 +78,7 @@ public class RevurderingAlderspensjon2011Request extends ServiceRequest {
 		return vilkarsvedtakListe;
 	}
 
-	/**
-	 * Read only property for vilkarsvedtakListe as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getVilkarsvedtakListeAsArray() {
-		return (vilkarsvedtakListe != null ? this.vilkarsvedtakListe.toArray(new VilkarsVedtak[this.vilkarsvedtakListe.size()]) : new VilkarsVedtak[0]);
-	}
-	
+
 	public void setVilkarsvedtakListe(Vector<VilkarsVedtak> vilkarsvedtakListe) {
 		this.vilkarsvedtakListe = vilkarsvedtakListe;
 	}

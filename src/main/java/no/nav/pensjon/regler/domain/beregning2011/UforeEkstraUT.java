@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.beregning.BeregningUforeperiode;
 import no.nav.pensjon.regler.domain.grunnlag.Uforeperiode;
 
@@ -20,7 +20,7 @@ public class UforeEkstraUT implements Serializable {
      * Beregnede uføreperioder for uføretrygd.
      * Dette er uføreperioder som beregnes av PREG, og ligger ved beregningen for en uføretrygd.
      */
-    @GuiPrompt(prompt = "Beregnede uføreperioder for uføretrygd")
+
     private List<BeregningUforeperiode> beregnetUforeperiodeListe;
 
     /*
@@ -48,15 +48,6 @@ public class UforeEkstraUT implements Serializable {
      */
     public List<BeregningUforeperiode> getBeregnetUforeperiodeListe() {
         return beregnetUforeperiodeListe;
-    }
-
-    /**
-     * Read only property for BeregnetUforeperiodeListe as array.
-     * 
-     * @return array of BeregningUforeperiode
-     */
-    public BeregningUforeperiode[] getUforeperiodeListeAsArray() {
-        return beregnetUforeperiodeListe != null ? beregnetUforeperiodeListe.toArray(new BeregningUforeperiode[beregnetUforeperiodeListe.size()]) : new BeregningUforeperiode[0];
     }
 
     /**

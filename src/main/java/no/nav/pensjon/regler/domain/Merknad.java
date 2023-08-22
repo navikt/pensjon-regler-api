@@ -70,24 +70,6 @@ public class Merknad implements Serializable {
     }
 
     /**
-     * @deprecated
-     * @return Returns the argumentListe as array.
-     */
-    @Deprecated
-    public String[] retrieveArgumentListeAsArray() {
-        return argumentListe.toArray(new String[0]);
-    }
-
-    /**
-     * Read only property for argumentListe as array.
-     * 
-     * @return array of String
-     */
-    public String[] getArgumentListeAsArray() {
-        return argumentListe != null ? argumentListe.toArray(new String[argumentListe.size()]) : new String[0];
-    }
-
-    /**
      * @param arg
      *            The argument to add.
      */

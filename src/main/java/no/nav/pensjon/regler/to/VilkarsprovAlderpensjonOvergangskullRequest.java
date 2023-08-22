@@ -91,13 +91,6 @@ public class VilkarsprovAlderpensjonOvergangskullRequest extends ServiceRequest 
 	 * Read only property for vilkarsvedtakListe as array
 	 * @return array of VilkarsVedtak
 	 */
-//	public VilkarsVedtak[] getVilkarsvedtakListeAsArray() {
-//		return (vilkarsvedtakListe != null ? this.vilkarsvedtakListe.toArray(new VilkarsVedtak[this.vilkarsvedtakListe.size()]) : new VilkarsVedtak[0]);
-//	}
-//	
-//	public void setVilkarsvedtakListe(List<VilkarsVedtak> vilkarsvedtakListe) {
-//		this.vilkarsvedtakListe = vilkarsvedtakListe;
-//	}
 
 	public boolean isUtforVilkarsberegning() {
 		return utforVilkarsberegning;

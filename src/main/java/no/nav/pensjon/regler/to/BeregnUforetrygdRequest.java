@@ -72,15 +72,6 @@ public class BeregnUforetrygdRequest extends ServiceRequest {
         return vilkarsvedtaksliste;
     }
 
-    /**
-     * Read only property for vilkarsvedtaksliste
-     * 
-     * @return array of VilkarsVedtak
-     */
-    public VilkarsVedtak[] getVilkarsVedtakListeAsArray() {
-        return vilkarsvedtaksliste != null ? vilkarsvedtaksliste.toArray(new VilkarsVedtak[vilkarsvedtaksliste.size()]) : new VilkarsVedtak[0];
-    }
-
     public void setVedtaksliste(Vector<VilkarsVedtak> vedtaksliste) {
         vilkarsvedtaksliste = vedtaksliste;
     }
@@ -117,15 +108,6 @@ public class BeregnUforetrygdRequest extends ServiceRequest {
         this.beregnetUtbetalingsperiodeListe = beregnetUtbetalingsperiodeListe;
     }
 
-    /**
-     * Read only property av BeregnetUtbetalingsperiodeListe as Array
-     * 
-     * @return array of BeregnetUtbetalingsperiode
-     */
-    public BeregnetUtbetalingsperiode[] getBeregnetUtbetalingsperiodeListeAsArray() {
-        return beregnetUtbetalingsperiodeListe != null ? beregnetUtbetalingsperiodeListe.toArray(new BeregnetUtbetalingsperiode[beregnetUtbetalingsperiodeListe.size()])
-                : new BeregnetUtbetalingsperiode[0];
-    }
 
     /**
      * @return the etteroppgjor

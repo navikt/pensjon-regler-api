@@ -43,14 +43,7 @@ public class SamletEktefellepensjonRequest extends ServiceRequest {
 			List<VilkarsVedtak> soker1VilkarsvedtakListe) {
 		this.soker1VilkarsvedtakListe = soker1VilkarsvedtakListe;
 	}
-	/**
-	 * Read only property for vilkarsvedtakListe as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getSoker1VilkarsvedtakListeAsArray() {
-		return (soker1VilkarsvedtakListe != null ? soker1VilkarsvedtakListe.toArray(new VilkarsVedtak[soker1VilkarsvedtakListe.size()]) : new VilkarsVedtak[0]);
-	}
-	
+
 	public List<VilkarsVedtak> getSoker1VilkarsvedtakListe2011() {
 		return soker1VilkarsvedtakListe2011;
 	}
@@ -58,13 +51,6 @@ public class SamletEktefellepensjonRequest extends ServiceRequest {
 	public void setSoker1VilkarsvedtakListe2011(
 			List<VilkarsVedtak> soker1VilkarsvedtakListe2011) {
 		this.soker1VilkarsvedtakListe2011 = soker1VilkarsvedtakListe2011;
-	}
-	/**
-	 * Read only property for vilkarsvedtakListe as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getSoker1VilkarsvedtakListe2011AsArray() {
-		return (soker1VilkarsvedtakListe2011 != null ? soker1VilkarsvedtakListe2011.toArray(new VilkarsVedtak[soker1VilkarsvedtakListe2011.size()]) : new VilkarsVedtak[0]);
 	}
 
 	public Kravhode getSoker2Kravhode2011() {
@@ -83,14 +69,7 @@ public class SamletEktefellepensjonRequest extends ServiceRequest {
 			List<VilkarsVedtak> soker2VilkarsvedtakListe) {
 		this.soker2VilkarsvedtakListe = soker2VilkarsvedtakListe;
 	}
-	/**
-	 * Read only property for vilkarsvedtakListe as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getSoker2VilkarsvedtakListeAsArray() {
-		return (soker2VilkarsvedtakListe != null ? soker2VilkarsvedtakListe.toArray(new VilkarsVedtak[soker2VilkarsvedtakListe.size()]) : new VilkarsVedtak[0]);
-	}
-	
+
 	public List<VilkarsVedtak> getSoker2VilkarsvedtakListe2011() {
 		return soker2VilkarsvedtakListe2011;
 	}
@@ -98,13 +77,6 @@ public class SamletEktefellepensjonRequest extends ServiceRequest {
 	public void setSoker2VilkarsvedtakListe2011(
 			List<VilkarsVedtak> soker2VilkarsvedtakListe2011) {
 		this.soker2VilkarsvedtakListe2011 = soker2VilkarsvedtakListe2011;
-	}
-	/**
-	 * Read only property for vilkarsvedtakListe as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getSoker2VilkarsvedtakListe2011AsArray() {
-		return (soker2VilkarsvedtakListe2011 != null ? soker2VilkarsvedtakListe2011.toArray(new VilkarsVedtak[soker2VilkarsvedtakListe2011.size()]) : new VilkarsVedtak[0]);
 	}
 	public BeregningsResultatAfpPrivat getSoker1BeregningsresultatAfpPrivat() {
 		return soker1BeregningsresultatAfpPrivat;

@@ -24,10 +24,6 @@ public class PersongrunnlagOmregningGrunnlag implements Serializable {
         inntektsgrunnlagGrunnlagListe = new ArrayList<Inntektsgrunnlag>();
     }
 
-    public Inntektsgrunnlag[] inntektsgrunnlagGrunnlagListeAsArray() {
-        return inntektsgrunnlagGrunnlagListe.toArray(new Inntektsgrunnlag[0]);
-    }
-
     public Long getPersongrunnlagId() {
         return persongrunnlagId;
     }

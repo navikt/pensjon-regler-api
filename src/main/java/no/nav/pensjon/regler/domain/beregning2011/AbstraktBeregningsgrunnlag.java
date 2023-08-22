@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
 
 import java.io.Serializable;
@@ -13,22 +13,22 @@ public abstract class AbstraktBeregningsgrunnlag implements Serializable {
 
     private static final long serialVersionUID = -8142049555303833817L;
 
-    @GuiPrompt(prompt = "Formel")
+
     private FormelKodeCti formelKode;
 
-    @GuiPrompt(prompt = "Årsbeløp")
+
     private int arsbelop;
 
     /**
      *  Antatt årlig inntekt før uføretidspunktet (brukes i fastsettelse av opptjening til alderspensjon etter kapittel 19).
      */
-    @GuiPrompt(prompt = "Antatt årlig inntekt før uføretidspunkt, kapittel 19")
+
     private double antattInntektFaktorKap19;
 
     /**
      *  Antatt årlig inntekt før uføretidspunktet (brukes i fastsettelse av opptjening til alderspensjon etter kapittel 20).
      */
-    @GuiPrompt(prompt = "Antatt årlig inntekt før uføretidspunkt, kapittel 20")
+
     private double antattInntektFaktorKap20;
 
     protected AbstraktBeregningsgrunnlag() {

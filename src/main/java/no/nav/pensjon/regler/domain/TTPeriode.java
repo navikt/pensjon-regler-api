@@ -15,37 +15,31 @@ public class TTPeriode implements Comparable<TTPeriode>, Serializable {
     /**
      * Fra-og-med dato for perioden.
      */
-    @GuiPrompt(prompt = "Fra og med dato")
     private Date fom;
 
     /**
      * Til-og-med dato for perioden.
      */
-    @GuiPrompt(prompt = "Til og med dato")
     private Date tom;
 
     /**
      * Skal bruker ha poeng for hele året i fom-datoen
      */
-    @GuiPrompt(prompt = "Poeng i innår")
     private boolean poengIInnAr;
 
     /**
      * Skal bruker ha poeng for hele året i tom-datoen
      */
-    @GuiPrompt(prompt = "Poeng i utår")
     private boolean poengIUtAr;
 
     /**
      * Hvilket land perioden er opptjent i.
      */
-    @GuiPrompt(prompt = "Land")
     private LandCti land;
 
     /**
      * Om det skal regnes pro rata. Gjelder ved utenlandssaker.
      */
-    @GuiPrompt(prompt = "Ikke pro rata")
     private boolean ikkeProRata;
 
     /**

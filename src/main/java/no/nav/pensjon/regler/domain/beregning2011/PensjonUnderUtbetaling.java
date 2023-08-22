@@ -1,13 +1,11 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.beregning.*;
 import no.nav.pensjon.regler.domain.beregning.penobjekter.*;
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
 import no.nav.pensjon.regler.domain.util.formula.IFormelProvider;
 
-import java.beans.PropertyChangeListener;
-import java.beans.PropertyChangeSupport;
 import java.io.ObjectStreamException;
 import java.io.Serializable;
 import java.lang.reflect.Constructor;
@@ -20,7 +18,7 @@ import java.util.List;
 /**
  * Objektet inneholder den faktiske pensjonen under utbetaling, samt en liste
  * over delytelsene som denne består av.
- * 
+ *
  * @author Ørnulf Moen
  */
 public class PensjonUnderUtbetaling implements Serializable {
@@ -29,7 +27,6 @@ public class PensjonUnderUtbetaling implements Serializable {
     /**
      * property change variabler
      */
-    private transient PropertyChangeSupport pcs = new PropertyChangeSupport(this);
     private static final HashMap<Class<?>, String> properties = finnProperties();
 
     /**
@@ -37,37 +34,37 @@ public class PensjonUnderUtbetaling implements Serializable {
      * avrundet hver for seg til nærmeste krone. Dette medfører at
      * avrund(totalbelopNettoAr/12) vil kunne være forskjellig fra totalbelopNetto.
      */
-    @GuiPrompt(prompt = "Sum netto per måned")
+
     private int totalbelopNetto;
 
     /**
      * Årlig netto beløp under utbetaling
      */
-    @GuiPrompt(prompt = "Sum netto per år")
+
     private double totalbelopNettoAr;
 
     /**
      * Angir sum brutto per måned.
      */
-    @GuiPrompt(prompt = "Sum brutto per måned")
+
     private int totalbelopBrutto;
 
     /**
      * Angir sum brutto per år.
      */
-    @GuiPrompt(prompt = "Sum brutto per år")
+
     private double totalbelopBruttoAr;
 
     /**
      * Indikerer hvilken beregningsformel som ble brukt.
      */
-    @GuiPrompt(prompt = "Formel")
+
     private FormelKodeCti formelKode;
 
-    @GuiPrompt(prompt = "Regulering fratrekk")
+
     private double pubReguleringFratrekk;
 
-    private List<Ytelseskomponent> ytelseskomponenter = new ArrayList<Ytelseskomponent>();
+    private List<Ytelseskomponent> ytelseskomponenter = new ArrayList<>();
 
     /**
      * TemporarYtelseskomponent PREG_tpiYtelse Eksisterer kun inne i regulering
@@ -79,19 +76,16 @@ public class PensjonUnderUtbetaling implements Serializable {
      * initialisere felt vi hopper over p.g.a sykliske avhengigheter.
      */
     private Object readResolve() throws ObjectStreamException {
-        pcs = new PropertyChangeSupport(this);
         return this;
     }
 
     public PensjonUnderUtbetaling() {
         super();
-        pcs = new PropertyChangeSupport(this);
         setFormelKode(new FormelKodeCti("BPUx"));
     }
 
     public PensjonUnderUtbetaling(PensjonUnderUtbetaling pub) {
         super();
-        pcs = new PropertyChangeSupport(this);
         totalbelopNetto = pub.totalbelopNetto;
         totalbelopNettoAr = pub.totalbelopNettoAr;
         totalbelopBrutto = pub.totalbelopBrutto;
@@ -105,7 +99,7 @@ public class PensjonUnderUtbetaling implements Serializable {
             for (Ytelseskomponent yk : pub.getYtelseskomponenter()) {
                 Class<? extends Ytelseskomponent> clazz = yk.getClass();
                 try {
-                    Constructor<? extends Ytelseskomponent> constructor = clazz.getConstructor(new Class[] {clazz});
+                    Constructor<? extends Ytelseskomponent> constructor = clazz.getConstructor(clazz);
                     ytelseskomponenter.add(constructor.newInstance(yk));
                 } catch (InvocationTargetException e) {
                     //Vil kastes hvis copy constructor f.eks. ledet til nullpointerexception.
@@ -128,9 +122,7 @@ public class PensjonUnderUtbetaling implements Serializable {
     }
 
     public void setYtelseskomponenter(List<Ytelseskomponent> delytelser) {
-        List<Ytelseskomponent> old = delytelser;
         ytelseskomponenter = delytelser;
-        pcs.firePropertyChange("ytelseskomponenterAsArray", old, delytelser);
     }
 
     public int getTotalbelopNetto() {
@@ -171,24 +163,6 @@ public class PensjonUnderUtbetaling implements Serializable {
 
     public void setPubReguleringFratrekk(double pubReguleringFratrekk) {
         this.pubReguleringFratrekk = pubReguleringFratrekk;
-    }
-
-    /**
-     * @return
-     * @deprecated
-     */
-    @Deprecated
-    public Ytelseskomponent[] retrieveYtelseskomponenterAsArray() {
-        return ytelseskomponenter.toArray(new Ytelseskomponent[0]);
-    }
-
-    /**
-     * Read only property for ytelseskomponenter as array.
-     * 
-     * @return array of Ytelseskomponent
-     */
-    public Ytelseskomponent[] getYtelseskomponenterAsArray() {
-        return ytelseskomponenter != null ? ytelseskomponenter.toArray(new Ytelseskomponent[ytelseskomponenter.size()]) : new Ytelseskomponent[0];
     }
 
     public FormelKodeCti getFormelKode() {
@@ -576,7 +550,7 @@ public class PensjonUnderUtbetaling implements Serializable {
     }
 
     public IFormelProvider[] getFormelProviderArray() {
-        return ytelseskomponenter.stream().filter( yk -> yk instanceof IFormelProvider).map(yk -> (IFormelProvider)yk ).toArray(value -> new IFormelProvider[value]);
+        return ytelseskomponenter.stream().filter(yk -> yk instanceof IFormelProvider).map(yk -> (IFormelProvider) yk).toArray(value -> new IFormelProvider[value]);
     }
 
     /**
@@ -596,7 +570,7 @@ public class PensjonUnderUtbetaling implements Serializable {
 
     /**
      * Legger til en ytelseskomponent og oppdaterer properties ved å fyre av en property changed event
-     * 
+     *
      * @param y
      */
     public void leggTilYtelseskomponent(Ytelseskomponent y) {
@@ -605,18 +579,11 @@ public class PensjonUnderUtbetaling implements Serializable {
             ytelseskomponenter.remove(lagret);
         }
         ytelseskomponenter.add(y);
-
-        if (properties.containsKey(y.getClass())) {
-            // Vi må fyre en property changed event slik at Blaze skal oppfatte at en gitt property skal oppdateres
-            pcs.firePropertyChange(properties.get(y.getClass()), lagret, y);
-            pcs.firePropertyChange("ytelseskomponenter", null, null);
-            pcs.firePropertyChange("ytelseskomponenterAsArray", null, null);
-        }
     }
 
     /**
      * Fjerner en ytelseskomponent basert på objekttypen
-     * 
+     *
      * @param y, ytelseskomponent
      */
     public void fjernYtelseskomponent(Ytelseskomponent y) {
@@ -631,29 +598,6 @@ public class PensjonUnderUtbetaling implements Serializable {
         ytelseskomponenter.clear();
         totalbelopNetto = 0;
         totalbelopNettoAr = 0.0;
-        for (Class<?> clazz : properties.keySet()) {
-            pcs.firePropertyChange(properties.get(clazz), old, null);
-        }
-        pcs.firePropertyChange("ytelseskomponenter", null, null);
-        pcs.firePropertyChange("ytelseskomponenterAsArray", null, null);
-    }
-
-    /**
-     * Legger en listener til registeret av lyttere
-     * 
-     * @param listener
-     */
-    public synchronized void addPropertyChangeListener(PropertyChangeListener listener) {
-        pcs.addPropertyChangeListener(listener);
-    }
-
-    /**
-     * Fjerner en listener i registeret for lyttere
-     * 
-     * @param listener
-     */
-    public synchronized void removePropertyChangeListener(PropertyChangeListener listener) {
-        pcs.removePropertyChangeListener(listener);
     }
 
     @Override
@@ -674,7 +618,7 @@ public class PensjonUnderUtbetaling implements Serializable {
 
     /**
      * Fjerner en ytelseskomponent, null safe
-     * 
+     *
      * @param y
      */
     private void fjernEllerLeggTilYtelseskomponent(Class<? extends Ytelseskomponent> clazz, Ytelseskomponent y) {
@@ -687,8 +631,6 @@ public class PensjonUnderUtbetaling implements Serializable {
 
     /**
      * Fjerner en ytelseskomponent og oppdaterer properties ved å fyre av en property changed event
-     * 
-     * @param clazz
      */
     private void fjernYtelseskomponent(Class<? extends Ytelseskomponent> clazz) {
         boolean funnet = false;
@@ -701,18 +643,12 @@ public class PensjonUnderUtbetaling implements Serializable {
         }
         if (funnet) {
             ytelseskomponenter.remove(tmpYtelseskomponent);
-            if (properties.containsKey(clazz)) {
-                // Vi må fyre en property changed event slik at Blaze skal oppfatte at en gitt property skal oppdateres
-                pcs.firePropertyChange(properties.get(clazz), tmpYtelseskomponent, null);
-                pcs.firePropertyChange("ytelseskomponenter", null, null);
-                pcs.firePropertyChange("ytelseskomponenterAsArray", null, null);
-            }
         }
     }
 
     /**
      * Metode som endrer forste bokstav til lowecase
-     * 
+     *
      * @param input
      * @return string
      */
@@ -726,7 +662,7 @@ public class PensjonUnderUtbetaling implements Serializable {
     /**
      * Metode som finner properties for ytelseskomponenter
      * og legger dem i hashmap
-     * 
+     *
      * @throws InstantiationException
      * @throws IllegalAccessException
      */
@@ -742,7 +678,7 @@ public class PensjonUnderUtbetaling implements Serializable {
             while (superclass != null) {
                 if (superclass != null && superclass.equals(Ytelseskomponent.class)) {
                     String propertyName = method.getName().substring(3);
-                    if (propertyName.toLowerCase().equals(clazz.getSimpleName().toLowerCase())) {
+                    if (propertyName.equalsIgnoreCase(clazz.getSimpleName())) {
                         properties.put(clazz, forbokstavTilLowercase(propertyName));
                     }
                 }

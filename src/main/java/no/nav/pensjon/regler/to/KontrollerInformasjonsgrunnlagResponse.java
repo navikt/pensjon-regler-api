@@ -30,14 +30,6 @@ public class KontrollerInformasjonsgrunnlagResponse extends ServiceResponse {
 		return merknadListe;
 	}
 
-	/**
-	 * Read only property for merknadListe as array
-	 * @return array of Merknad
-	 */
-	public Merknad[] getMerknadListeAsArray() {
-		return (merknadListe != null ? this.merknadListe.toArray(new Merknad[this.merknadListe.size()]) : new Merknad[0]);
-	}
-	
 	public void setMerknadListe(List<Merknad> merknadListe) {
 		this.merknadListe = merknadListe;
 	}

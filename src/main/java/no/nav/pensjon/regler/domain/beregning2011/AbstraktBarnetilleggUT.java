@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 
 import java.io.Serializable;
 
@@ -11,43 +11,43 @@ public abstract class AbstraktBarnetilleggUT extends AbstraktBarnetillegg implem
     /**
      * Detaljer rundt avkortning av netto barnetillegg.
      */
-    @GuiPrompt(prompt = "Informasjon om avkorting av barnetillegg")
+
     private AvkortingsinformasjonBT avkortingsinformasjon;
 
     /**
      * Inntektsavkortningsbeløp per år, før justering med differansebeløp
      */
-    @GuiPrompt(prompt = "Inntektsavkortningsbeløp per år")
+
     protected int avkortningsbelopPerAr;
 
     /**
      * Inntekt som fører til at barnetillegget ikke blir utbetalt
      */
-    @GuiPrompt(prompt = "Inntektstak")
+
     private int inntektstak;
 
     /**
      * Akkumulert netto hittil i året eksklusiv måned for beregningsperiodens fomDato.
      */
-    @GuiPrompt(prompt = "Akkumulert netto")
+
     protected int nettoAkk;
 
     /**
      * Gjenstående beløp brukeren har rett på for året som beregningsperioden starter, og inkluderer måneden det beregnes fra.
      */
-    @GuiPrompt(prompt = "Netto gjenstående beløp for året")
+
     protected int nettoRestAr;
 
     /**
      * Uttrykker avviket mellom ytelseskomponenten basert på løpende inntektsavkorting og ytelseskomponenten basert på lignet inntekt.
      */
-    @GuiPrompt(prompt = "Periodisert avvik ved etteroppgjør")
+
     private double periodisertAvvikEtteroppgjor;
 
     /**
      * Detaljer rundt reduksjon av brutto barnetillegg.
      */
-    @GuiPrompt(prompt = "Reduksjonsinformasjon")
+
     private Reduksjonsinformasjon reduksjonsinformasjon;
 
     /**
@@ -58,7 +58,7 @@ public abstract class AbstraktBarnetilleggUT extends AbstraktBarnetillegg implem
 	/**
      * Brukers uføretrygd før justering
      */
-	 @GuiPrompt(prompt = "Brukers uføretrygd")
+
     private int brukersUforetrygdForJustering;
 
     

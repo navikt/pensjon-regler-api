@@ -57,13 +57,13 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
     /**
      * Året regnet som poengår.
      */
-	private boolean PREG_poengar;
+    private boolean PREG_poengar;
 
     /**
      * Året regnet som poengår iht. trygdeavtale.
      */
     private boolean PREG_poengarUtland;
-	
+
     /**
      * Poengtall uten garanti. Internt bruk i PREG.
      */
@@ -145,7 +145,7 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
 
     /**
      * Copy Constructor
-     * 
+     *
      * @param poengtall a <code>Poengtall</code> object
      */
     public Poengtall(Poengtall poengtall) {
@@ -195,7 +195,7 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
         this.bruktIBeregning = bruktIBeregning;
         this.gv = gv;
         this.poengtallType = poengtallType;
-        if (poengtallType != null && poengtallType.getKode() != null){
+        if (poengtallType != null && poengtallType.getKode() != null) {
             PREG_omsorg = poengtallType.getKode().equals("J") || poengtallType.getKode().equals("K") || poengtallType.getKode().equals("L");
         }
         this.maksUforegrad = maksUforegrad;
@@ -211,8 +211,7 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
     }
 
     /**
-     * @param ar
-     *            The ar to set.
+     * @param ar The ar to set.
      */
     public void setAr(int ar) {
         this.ar = ar;
@@ -260,8 +259,7 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
     }
 
     /**
-     * @param brukt_i_beregning
-     *            The brukt_i_beregning to set.
+     * @param brukt_i_beregning The brukt_i_beregning to set.
      */
     public void setBruktIBeregning(boolean brukt_i_beregning) {
         bruktIBeregning = brukt_i_beregning;
@@ -275,8 +273,7 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
     }
 
     /**
-     * @param pi
-     *            The pi to set.
+     * @param pi The pi to set.
      */
     public void setPi(int pi) {
         this.pi = pi;
@@ -290,8 +287,7 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
     }
 
     /**
-     * @param pia
-     *            The pia to set.
+     * @param pia The pia to set.
      */
     public void setPia(int pia) {
         this.pia = pia;
@@ -305,8 +301,7 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
     }
 
     /**
-     * @param pp
-     *            The pp to set.
+     * @param pp The pp to set.
      */
     public void setPp(double pp) {
         this.pp = pp;
@@ -320,29 +315,10 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
     }
 
     /**
-     * @param merknad
-     *            The merknad to set.
+     * @param merknad The merknad to set.
      */
     public void setMerknadListe(List<Merknad> merknad) {
         merknadListe = merknad;
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the merknad as array.
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[0]);
-    }
-
-    /**
-     * Read only property for merknadListe as array.
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
     }
 
     /**
@@ -353,8 +329,7 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
     }
 
     /**
-     * @param gv
-     *            The gv to set.
+     * @param gv The gv to set.
      */
     public void setGv(int gv) {
         this.gv = gv;
@@ -368,8 +343,7 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
     }
 
     /**
-     * @param poengtallTypeCti
-     *            The poengtallTypeCti to set.
+     * @param poengtallTypeCti The poengtallTypeCti to set.
      */
     public void setPoengtallType(PoengtallTypeCti poengtallTypeCti) {
         poengtallType = poengtallTypeCti;
@@ -407,14 +381,14 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
         return maksUforegrad;
     }
 
-	public boolean getPREG_poengar(){
-		return PREG_poengar;
-	} 
-	
-	public void setPREG_poengar(boolean PREG_poengar){
-		this.PREG_poengar = PREG_poengar;
-	}
-	
+    public boolean getPREG_poengar() {
+        return PREG_poengar;
+    }
+
+    public void setPREG_poengar(boolean PREG_poengar) {
+        this.PREG_poengar = PREG_poengar;
+    }
+
     public void setMaksUforegrad(int maksUforegrad) {
         this.maksUforegrad = maksUforegrad;
     }
@@ -547,15 +521,15 @@ public class Poengtall implements Comparable<Poengtall>, Serializable, Omsorgsop
         PREG_tilsvarerUforear = uforear;
     }
 
-    public boolean isInntektIAvtaleland(){
+    public boolean isInntektIAvtaleland() {
         return false;
     }
 
     /**
      * Trengs for å implementere Omsorgsopptjening
      */
-    public void setInntektIAvtaleland(boolean inntektIAvtaleland){
-    //Skal ikke gjøre noe.
+    public void setInntektIAvtaleland(boolean inntektIAvtaleland) {
+        //Skal ikke gjøre noe.
     }
 
     public boolean isPREG_poengarUtland() {

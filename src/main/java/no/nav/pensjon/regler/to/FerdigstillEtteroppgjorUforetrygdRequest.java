@@ -37,12 +37,6 @@ public class FerdigstillEtteroppgjorUforetrygdRequest extends ServiceRequest {
         return beregnetUtbetalingsperiodeListe;
     }
 
-    public BeregnetUtbetalingsperiode[] getBeregnetUtbetalingsperiodeListeAsArray() {
-        return beregnetUtbetalingsperiodeListe != null ?
-                beregnetUtbetalingsperiodeListe.toArray(new BeregnetUtbetalingsperiode[beregnetUtbetalingsperiodeListe.size()])
-                : new BeregnetUtbetalingsperiode[0];
-    }
-
     public int getEtteroppgjorsar() {
         return etteroppgjorsar;
     }

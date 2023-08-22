@@ -901,24 +901,6 @@ public class Beregning implements IBeregning, Serializable {
         return merknadListe;
     }
 
-    /**
-     * @deprecated
-     * @return Returns the merknadListe as array.
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[0]);
-    }
-
-    /**
-     * Read only property for merknadListe as array.
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
     @Override
     public List<BeregningRelasjon> getDelberegningsListe() {
         return delberegningsListe;
@@ -926,24 +908,6 @@ public class Beregning implements IBeregning, Serializable {
 
     public void setDelberegningsListe(List<BeregningRelasjon> delberegningsListe) {
         this.delberegningsListe = delberegningsListe;
-    }
-
-    /**
-     * @deprecated
-     * @return Returns the beregningListe as array.
-     */
-    @Deprecated
-    public BeregningRelasjon[] retrieveBeregningListeAsArray() {
-        return delberegningsListe.toArray(new BeregningRelasjon[0]);
-    }
-
-    /**
-     * Read only property for beregningListe as array.
-     * 
-     * @return array of BeregningRelasjon
-     */
-    public BeregningRelasjon[] getBeregningListeAsArray() {
-        return delberegningsListe != null ? delberegningsListe.toArray(new BeregningRelasjon[delberegningsListe.size()]) : new BeregningRelasjon[0];
     }
 
     public void putBeregningListe(BeregningRelasjon[] beregningListe) {
@@ -1466,11 +1430,6 @@ public class Beregning implements IBeregning, Serializable {
         addBeregningRelasjon(br, beregningsnavn);
     }
 
-    /**
-     * Hent BeregningsRelasjon som tilhører en bestemt beregning
-     * 
-     * @param beregningId
-     */
     public BeregningRelasjon getBeregningRelasjon(String beregningId) {
         for (BeregningRelasjon br : delberegningsListe) {
             if (br.getBeregning() != null && beregningId.equals(br.getBeregning().getPREG_beregningsnavn())) {
@@ -1532,12 +1491,11 @@ public class Beregning implements IBeregning, Serializable {
     }
 
     public List<Ytelseskomponent> getYtelseskomponenter() {
-        List<Ytelseskomponent> retval = new ArrayList<Ytelseskomponent>();
+        List<Ytelseskomponent> retval = new ArrayList<>();
         for (Field f : getClass().getDeclaredFields()) {
             try {
                 Object o = f.get(this);
-                if (o != null
-                        && Ytelseskomponent.class.isInstance(o)) {
+                if (Ytelseskomponent.class.isInstance(o)) {
                     retval.add((Ytelseskomponent) o);
                 }
             } catch (IllegalAccessException ex) {
@@ -1545,33 +1503,5 @@ public class Beregning implements IBeregning, Serializable {
             }
         }
         return retval;
-    }
-
-    public Ytelseskomponent[] getYtelseskomponenterAsArray() {
-        List<Ytelseskomponent> ytelser = getYtelseskomponenter();
-        return ytelser.toArray(new Ytelseskomponent[ytelser.size()]);
-    }
-
-    public Ytelseskomponent[] retrieveYtelseskomponenterAsArray() {
-        return getYtelseskomponenterAsArray();
-    }
-
-    public Ytelseskomponent[] getYtelseskomponenterIPubAsArray() {
-        List<Ytelseskomponent> retval = new ArrayList<Ytelseskomponent>();
-        for (Field f : getClass().getDeclaredFields()) {
-            if (f.getName().contains("Kapittel3")) {
-                continue;
-            }
-            try {
-                Object o = f.get(this);
-                if (o != null
-                        && Ytelseskomponent.class.isInstance(o)) {
-                    retval.add((Ytelseskomponent) o);
-                }
-            } catch (IllegalAccessException ex) {
-                // skip
-            }
-        }
-        return retval.toArray(new Ytelseskomponent[retval.size()]);
     }
 }

@@ -22,10 +22,6 @@ public class BeregningerTilFaktoromregningGrunnlag implements Serializable {
         beregningGrunnlagListe = new ArrayList<Beregning>();
     }
 
-    public Beregning[] beregningGrunnlagListeAsArray() {
-        return beregningGrunnlagListe.toArray(new Beregning[0]);
-    }
-
     public List<Beregning> getBeregningGrunnlagListe() {
         return beregningGrunnlagListe;
     }

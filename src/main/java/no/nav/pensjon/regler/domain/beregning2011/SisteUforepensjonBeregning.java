@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.Trygdetid;
 import no.nav.pensjon.regler.domain.beregning.Ektefelletillegg;
 import no.nav.pensjon.regler.domain.beregning.UforeEkstra;
@@ -18,62 +18,62 @@ public class SisteUforepensjonBeregning extends SisteBeregning {
 
     private static final long serialVersionUID = 7328363937502718087L;
 
-    @GuiPrompt(prompt = "Ektefelletillegg")
+
     private Ektefelletillegg et;
 
-    @GuiPrompt(prompt = "Trygdetid")
+
     private Trygdetid tt;
 
-    @GuiPrompt(prompt = "Uføre ekstra")
+
     private UforeEkstra uforeEkstra;
 
     /**
      * Konverteringsgrunnlaget for brukers rettigheter
      */
-    @GuiPrompt(prompt = "Konverteringsgrunnlag for brukers rettigheter")
+
     private Konverteringsgrunnlag konverteringsgrunnlagOrdinert;
 
     /**
      * Betinget, Konverteringsgrunnlag hvis gjenlevenderetten vant
      */
-    @GuiPrompt(prompt = "Konverteringsgrunnlag hvis gjenlevenderetten vant")
+
     private Konverteringsgrunnlag konverteringsgrunnlagGJT;
 
     /**
      * Betinget: Hvis uføregraden > 0, yrkesskadegrad < uføregrad.
      */
-    @GuiPrompt(prompt = "Konverteringsgrunnlag uføredel")
+
     private Konverteringsgrunnlag konverteringsgrunnlagUforedel;
 
     /**
      * Betinget: Hvis uføregraden > 0, yrkesskadegrad < uføregrad.
      */
-    @GuiPrompt(prompt = "Konverteringsgrunnlag yrkesskade")
+
     private Konverteringsgrunnlag konverteringsgrunnlagYrkesskade;
 
     /**
      * Betinget: Hvis det fantes en folketrygdberegning(ikke nødvendigvis vinnende) i UP
      */
-    @GuiPrompt(prompt = "Anvendt trygdetid for folketrygdberegning")
+
     private AnvendtTrygdetid anvendtTrygdetidFolketrygd;
 
     /**
      * Hvorvidt utbetalt uførepensjonen per 31.12.2014 ble definert som minstepensjon.
      */
-    @GuiPrompt(prompt = " Hvorvidt utbetalt uførepensjonen per 31.12.2014 ble definert som minstepensjon")
+
     private MinstepensjonTypeCti minstepensjonType;
 
 
     /**
      * Hvorvidt utbetalt uførepensjonen per 31.12.2014 ble manuelt overstyrt eller ikke.
      */
-    @GuiPrompt(prompt = "Hvorvidt utbetalt uførepensjonen per 31.12.2014 ble manuelt overstyrt eller ikke")
+
     private ResultatKildeCti resultatKilde;
 
     /**
      * Netto særtillegg i utbetalt uførepensjonen per 31.12.2014.
      */
-    @GuiPrompt(prompt = " Netto særtillegg i utbetalt uførepensjonen per 31.12.2014")
+
     private int sertilleggNetto;
 
     public SisteUforepensjonBeregning() {

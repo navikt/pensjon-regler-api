@@ -21,14 +21,6 @@ public class FaktoromregnBeregningBatchResponse extends ServiceResponse {
 		return beregningerFaktoromregningResultatListe;
 	}
 
-	/**
-	 * Read only property for beregningerFaktoromregningResultatListe as array
-	 * @return array of BeregningerFaktoromregningResultat
-	 */
-	public BeregningerFaktoromregningResultat[] getBeregningerFaktoromregningResultatListeAsArray() {
-		return (beregningerFaktoromregningResultatListe != null ? this.beregningerFaktoromregningResultatListe.toArray(new BeregningerFaktoromregningResultat[this.beregningerFaktoromregningResultatListe.size()]) : new BeregningerFaktoromregningResultat[0]);
-	}
-	
 	public void setBeregningerFaktoromregningResultatListe(
 			Vector<BeregningerFaktoromregningResultat> beregningerFaktoromregningResultatListe) {
 		this.beregningerFaktoromregningResultatListe = beregningerFaktoromregningResultatListe;

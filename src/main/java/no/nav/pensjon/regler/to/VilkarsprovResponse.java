@@ -30,14 +30,6 @@ public class VilkarsprovResponse extends ServiceResponse{
 		return vedtaksliste;
 	}
 
-	/**
-	 * Read only property for vedtaksliste as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getVilkarsvedtakListeAsArray() {
-		return (vedtaksliste != null ? this.vedtaksliste.toArray(new VilkarsVedtak[this.vedtaksliste.size()]) : new VilkarsVedtak[0]);
-	}
-	
 	public void setVedtaksliste(List<VilkarsVedtak> vedtaksliste) {
 		this.vedtaksliste = vedtaksliste;
 	}

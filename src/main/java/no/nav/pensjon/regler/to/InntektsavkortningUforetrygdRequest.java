@@ -132,12 +132,6 @@ public class InntektsavkortningUforetrygdRequest extends ServiceRequest {
         this.etteroppgjorGrunnlag = etteroppgjorGrunnlag;
     }
 
-    public BeregnetUtbetalingsperiode[] getBeregnetUtbetalingsperiodeListeAsArray() {
-        return beregnetUtbetalingsperiodeListe != null ? beregnetUtbetalingsperiodeListe.toArray(
-                new BeregnetUtbetalingsperiode[beregnetUtbetalingsperiodeListe.size()]) :
-                new BeregnetUtbetalingsperiode[0];
-    }
-
     public List<BeregnetUtbetalingsperiode> getBeregnetUtbetalingsperiodeListe() {
         return beregnetUtbetalingsperiodeListe;
     }

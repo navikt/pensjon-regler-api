@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.util.DateCompareUtil;
 import no.nav.pensjon.regler.domain.vedtak.*;
 
@@ -24,13 +24,13 @@ public class BeregningsvilkarPeriode implements Serializable, Comparable<Beregni
     /**
      * Fom dato for perioden de angitte beregningsvilkår og vilkår gjelder for
      */
-    @GuiPrompt(prompt = "Fra og med dato")
+
     private Date fomDato;
 
     /**
      * Tom dato for perioden de angitte beregningsvilkår og vilkår gjelder for
      */
-    @GuiPrompt(prompt = "Til og med dato")
+
     private Date tomDato;
 
     /**

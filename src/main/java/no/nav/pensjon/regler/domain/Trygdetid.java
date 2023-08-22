@@ -1,15 +1,15 @@
 package no.nav.pensjon.regler.domain;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import no.nav.pensjon.regler.domain.grunnlag.AntallArMndDag;
 import no.nav.pensjon.regler.domain.kode.RegelverkTypeCti;
 import no.nav.pensjon.regler.domain.kode.TrygdetidGarantiTypeCti;
 import no.nav.pensjon.regler.domain.kode.UtfallTypeCti;
 import no.nav.pensjon.regler.domain.util.ToStringUtil;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Trygdetid - framtidig trygdetid
@@ -34,7 +34,6 @@ public class Trygdetid implements Serializable {
      * N_REG_G_N_OPPTJ - nytt regelverk, gammel og ny opptjeningsmodell
      * N_REG_N_OPPTJ - nytt regelverk, ny opptjeningsmodell
      */
-    @GuiPrompt(prompt = "Regelverktype")
     private RegelverkTypeCti regelverkType;
 
     /**
@@ -42,26 +41,22 @@ public class Trygdetid implements Serializable {
      * er når antall poengår er større. I simulering er dette den eneste
      * trygdetiden som trengs.
      */
-    @GuiPrompt(prompt = "Samlet trygdetid i antall år")
     private int tt;
 
     /**
      * Framtidig trygdetid i antall måneder.
      */
-    @GuiPrompt(prompt = "Framtidig trygdetid i måneder")
     private int ftt;
 
     /**
      * Om framtidig trygdetid er redusert i henhold til 4/5-dels regelen (§3-6
      * tredje ledd).
      */
-    @GuiPrompt(prompt = "Redusert framtidig trygdetid")
     private boolean ftt_redusert;
 
     /**
      * Dato fremtidig trygdetid regnes fra.
      */
-    @GuiPrompt(prompt = "Fremtidig trygdetid regnes fra dato")
     private Date ftt_fom;
 
     /**
@@ -69,21 +64,17 @@ public class Trygdetid implements Serializable {
      * avtaler. Utgjør summen av all faktisk trygdetid i Norge og andre EØS-land
      * eller alternativt det landet vi har bilateral avtale med. Måneder.
      */
-    @GuiPrompt(prompt = "Faktisk trygdetid i måneder")
     private int tt_fa_mnd;
-
     /**
      * Trygdetid i antall år på grunnlag av poengår i det 67., 68. og 69.
      * leveåret. Godskrives ved fylte 70 år.
      */
-    @GuiPrompt(prompt = "Trygdetid av poeng i 67. til 69. leveår")
     private int tt_67_70;
 
     /**
      * Trygdetid beregnet for poengår opptjent fra og med kalenderåret bruker fylte 6 år
      * til og med kalenderåret bruker fylte 75 år.
      */
-    @GuiPrompt(prompt = "Trygdetid av poeng i 67. til 75. leveår")
     private int tt_67_75;
 
     /**
@@ -91,26 +82,22 @@ public class Trygdetid implements Serializable {
      * Slike poengår vil kun legges til summen dersom vilkår for at de skal kunne telle
      * med er oppfylt. I antall måneder.
      */
-    @GuiPrompt(prompt = "Sum faktisk trygdetid og poengår etter fylte 67")
     private int tt_faktisk;
 
     /**
      * Trygdetid etter 1966 i antall år.
      */
-    @GuiPrompt(prompt = "Trygdetid etter 1966")
     private int tt_E66;
 
     /**
      * Trygdetid før 1967 i antall år.
      */
-    @GuiPrompt(prompt = "Trygdetid før 1967")
     private int tt_F67;
 
     /**
      * Faktisk trygdetid i antall år, måneder og dager før 2021.
      * Innført ifbm overgangsregler for flyktninger.
      */
-    @GuiPrompt(prompt = "Faktisk trygdetid før 2021")
     private AntallArMndDag tt_fa_F2021;
 
     /**
@@ -118,26 +105,22 @@ public class Trygdetid implements Serializable {
      * fylte 16 år til og med måneden før stønadstilfellet inntrådte. Brukes til
      * å bestemme 4/5-dels krav til faktisk trygdetid (§3-6 tredje ledd).
      */
-    @GuiPrompt(prompt = "Opptjeningsperiode")
     private int opptjeningsperiode;
 
     /**
      * Trygdetid i EØS land unntatt Norge.
      */
-    @GuiPrompt(prompt = "Trygdetid i EØS unntatt Norge")
     private TTUtlandEOS ttUtlandEos;
 
     /**
      * Trygdetid i land tilhørende Nordisk konvensjon (artikkel 10) unntatt
      * Norge.
      */
-    @GuiPrompt(prompt = "Trygdetid i Nordisk konvensjonsland unntatt Norge")
     private TTUtlandKonvensjon ttUtlandKonvensjon;
 
     /**
      * Trygdetid i land med bilaterale avtaler.
      */
-    @GuiPrompt(prompt = "Trygdetid i avtaleland")
     private List<TTUtlandTrygdeavtale> ttUtlandTrygdeavtaler;
 
     /**
@@ -145,7 +128,6 @@ public class Trygdetid implements Serializable {
      */
     private List<Merknad> merknadListe;
 
-    @GuiPrompt(prompt = "Trygdetid garantitype")
     private TrygdetidGarantiTypeCti garantiType;
 
     /**
@@ -159,19 +141,16 @@ public class Trygdetid implements Serializable {
      * Felt som blir brukt for å holde orden på nøyaktig antall år, måneder og dager trygdetid
      * for å unngå avrundingsfeil på grunn av dobbel avrunding.
      */
-    @GuiPrompt(prompt = "Faktisk trygdetid uavrundet")
     private AntallArMndDag tt_fa;
 
     /**
      * Trygdetidens virkningsdato fom. Brukes ved fastsettelse av periodisert trygdetid for AP2011/AP2016 og AP2025
      */
-    @GuiPrompt(prompt = "Virkningsdato fra og med")
     private Date virkFom;
 
     /**
      * Trygdetidens virkningsdato tom. Brukes ved fastsettelse av periodisert trygdetid for AP2011/AP2016 og AP2025
      */
-    @GuiPrompt(prompt = "Virkningsdato til og med")
     private Date virkTom;
 
     private UtfallTypeCti anvendtFlyktning;
@@ -179,8 +158,7 @@ public class Trygdetid implements Serializable {
     /**
      * Copy Constructor
      *
-     * @param trygdetid
-     * a <code>Trygdetid</code> object
+     * @param trygdetid a <code>Trygdetid</code> object
      */
     public Trygdetid(Trygdetid trygdetid) {
         trygdetidId = trygdetid.trygdetidId;
@@ -235,7 +213,7 @@ public class Trygdetid implements Serializable {
         if (trygdetid.getVirkTom() != null) {
             virkTom = new Date(trygdetid.getVirkTom().getTime());
         }
-        if (trygdetid.getTt_fa() != null){
+        if (trygdetid.getTt_fa() != null) {
             tt_fa = new AntallArMndDag(trygdetid.getTt_fa());
         }
         if (trygdetid.anvendtFlyktning != null) {
@@ -244,7 +222,7 @@ public class Trygdetid implements Serializable {
     }
 
     public Trygdetid(long trygdetidId, int tt, int ftt, boolean ftt_redusert, int tt_etter_UFT, int tt_etter_dod, int tt_overfort, int tt_garanti, int tt_fa_mnd, int tt_67_70,
-            int tt_E66, int tt_F67, int opptjeningsperiode, TTUtlandEOS ttUtlandEos, TTUtlandKonvensjon ttUtlandKonvensjon) {
+                     int tt_E66, int tt_F67, int opptjeningsperiode, TTUtlandEOS ttUtlandEos, TTUtlandKonvensjon ttUtlandKonvensjon) {
         super();
         this.trygdetidId = trygdetidId;
         this.tt = tt;
@@ -291,24 +269,6 @@ public class Trygdetid implements Serializable {
         this.tt = tt;
     }
 
-    /**
-     * @deprecated
-     * @return Returns the merknad as array.
-     */
-    @Deprecated
-    public Merknad[] retrieveMerknadListeAsArray() {
-        return merknadListe.toArray(new Merknad[0]);
-    }
-
-    /**
-     * Read only property for merknadListe.
-     *
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
-    }
-
     public boolean isFtt_redusert() {
         return ftt_redusert;
     }
@@ -325,10 +285,6 @@ public class Trygdetid implements Serializable {
         this.ftt_fom = ftt_fom;
     }
 
-    /*
-     * Generic version. Uses reflection to print field names and values.
-     * @see java.lang.Object#toString()
-     */
     @Override
     public String toString() {
         return ToStringUtil.toString(this);
@@ -420,24 +376,6 @@ public class Trygdetid implements Serializable {
 
     public void setTtUtlandTrygdeavtaler(List<TTUtlandTrygdeavtale> ttUtlandTrygdeavtaler) {
         this.ttUtlandTrygdeavtaler = ttUtlandTrygdeavtaler;
-    }
-
-    /**
-     * @deprecated
-     * @return
-     */
-    @Deprecated
-    public TTUtlandTrygdeavtale[] retrieveTTUtlandTrygdeavtaleListeAsArray() {
-        return ttUtlandTrygdeavtaler.toArray(new TTUtlandTrygdeavtale[0]);
-    }
-
-    /**
-     * Read only property for TTUtlandTrygdeavtaleListe as array.
-     *
-     * @return array of TTUtlandTrygdeavtale
-     */
-    public TTUtlandTrygdeavtale[] getTTUtlandTrygdeavtaleListeAsArray() {
-        return ttUtlandTrygdeavtaler != null ? ttUtlandTrygdeavtaler.toArray(new TTUtlandTrygdeavtale[ttUtlandTrygdeavtaler.size()]) : new TTUtlandTrygdeavtale[0];
     }
 
     public int getTt_faktisk() {

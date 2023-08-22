@@ -148,15 +148,8 @@ public class BeregningRelasjon implements Serializable {
                     Constructor<? extends Beregning2011> constructor = clazz.getConstructor(new Class[] {clazz});
                     return constructor.newInstance(beregning2011);
                 }
-            } catch (NoSuchMethodException e) {
-                throw new RuntimeException(e);
-            } catch (IllegalArgumentException e) {
-                throw new RuntimeException(e);
-            } catch (InstantiationException e) {
-                throw new RuntimeException(e);
-            } catch (IllegalAccessException e) {
-                throw new RuntimeException(e);
-            } catch (InvocationTargetException e) {
+            } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException |
+                     InstantiationException | IllegalArgumentException e) {
                 throw new RuntimeException(e);
             }
         }

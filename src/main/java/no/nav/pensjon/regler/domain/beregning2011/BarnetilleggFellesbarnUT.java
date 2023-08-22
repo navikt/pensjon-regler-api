@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
 
@@ -13,25 +13,25 @@ public class BarnetilleggFellesbarnUT extends AbstraktBarnetilleggUT implements 
     /**
      * Beløp som er fratrukket annen forelders inntekt (inntil 1G)
      */
-    @GuiPrompt(prompt = "Beløp fratrukket annen forelders inntekt (inntil 1G)")
+
     private int belopFratrukketAnnenForeldersInntekt;
 
     /**
      * Brukers inntekt
      */
-    @GuiPrompt(prompt = "Brukers inntekt")
+
     private int brukersInntektTilAvkortning;
 
     /**
      * Annen forelders inntekt brukt i behovsprøving
      */
-    @GuiPrompt(prompt = "Annen forelders inntekt")
+
     private int inntektAnnenForelder;
 	
 	/**
      * Annen forelders uføretrygd før justering.
      */
-	 @GuiPrompt(prompt = "Annen forelders uføretrygd før justering")
+
     private int annenForelderUforetrygdForJustering;
 
     public BarnetilleggFellesbarnUT() {

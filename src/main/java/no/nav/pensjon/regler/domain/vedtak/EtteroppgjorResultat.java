@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.vedtak;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.EtteroppgjorResultatCti;
 import no.nav.pensjon.regler.domain.util.ToStringUtil;
 
@@ -121,67 +121,67 @@ public class EtteroppgjorResultat implements Serializable {
     /**
      * Angir kronebeløp for et helt rettsgebyr
      */
-    @GuiPrompt(prompt = "Rettsgebyr")
+
     private int rettsgebyr;
 
     /**
      * Resultatet av etteroppgjøret.
      */
-    @GuiPrompt(prompt = "Resultat av etteroppgjør")
+
     private EtteroppgjorResultatCti etteroppgjorResultatType;
 
     /**
      * Toleransegrense for etterbetaling.
      */
-    @GuiPrompt(prompt = "Toleransegrense for etterbetaling")
+
     private int toleransegrensePositiv;
 
     /**
      * Toleransegrense for tilbakekreving.
      */
-    @GuiPrompt(prompt = "Toleransegrense for tilbakekreving")
+
     private int toleransegrenseNegativ;
 
     /**
      * Representerer inntekten som legges til grunn for beregningen av etteroppgjøret for uføretrygden.
      */
-    @GuiPrompt(prompt = "Inntekt brukt i etteroppgjør uføretrygd")
+
     private int inntektUT;
 
     /**
      * Inntekten som legges til grunn for beregningen av etteroppgjøret for barnetillegget for fellesbarn
      */
-    @GuiPrompt(prompt = "Inntekt brukt i etteroppgjør barnetillegg fellesbarn")
+
     private int inntektTFB;
 
     /**
      * Inntekten som legges til grunn for beregningen av etteroppgjøret for barnetillegget for særkullsbarn
      */
-    @GuiPrompt(prompt = "Inntekt brukt i etteroppgjør barnetillegg særkullsbarn")
+
     private int inntektTSB;
 
     /**
      * Det totale avviksbeløpet i UT, TFB og TSB.
      */
-    @GuiPrompt(prompt = "Totalt avviksbeløp")
+
     private int avviksbelop;
 
     /**
      * Beløpet som utgjør differansen mellom uføretrygd og ev. gjenlevendetillegg basert på forventet og uføretrygd og ev. gjenlevendetillegg basert på lignet inntekt.
      */
-    @GuiPrompt(prompt = "Avviksbeløp uføretrygd")
+
     private int avviksbelopUT;
 
     /**
      * Beløpet som utgjør differansen mellom barnetillegget for fellesbarn basert på forventet og barnetillegget for fellesbarn basert på lignet inntekt
      */
-    @GuiPrompt(prompt = "Avviksbeløp barnetillegg fellesbarn")
+
     private int avviksbelopTFB;
 
     /**
      * Beløpet som utgjør differansen mellom barnetillegget for særkullsbarn basert på forventet og barnetillegget for særkullsbarn basert på lignet inntekt
      */
-    @GuiPrompt(prompt = "Avviksbeløp barnetillegg særkullsbarn")
+
     private int avviksbelopTSB;
 
     public EtteroppgjorResultat() {

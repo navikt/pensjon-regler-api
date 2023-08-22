@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
 
 /*
@@ -14,7 +14,7 @@ public class Sertillegg extends Ytelseskomponent {
     /**
      * Prosentsatsen
      */
-    @GuiPrompt(prompt = "Prosentsats særtillegg")
+
     private double pSats_st;
 
     private int PREG_orginalBrutto;

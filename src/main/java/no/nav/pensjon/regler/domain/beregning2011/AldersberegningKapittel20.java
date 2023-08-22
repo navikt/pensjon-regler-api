@@ -80,10 +80,6 @@ public class AldersberegningKapittel20 extends Beregning2011 {
         this.dtBenyttetArsakListe = dtBenyttetArsakListe;
     }
 
-    public FtDtArsak[] getDtBenyttetArsakListeAsArray() {
-        return dtBenyttetArsakListe != null ? dtBenyttetArsakListe.toArray(new FtDtArsak[dtBenyttetArsakListe.size()]) : new FtDtArsak[0];
-    }
-
     public Beholdninger getBeholdningerForForsteuttak() {
         return beholdningerForForsteuttak;
     }

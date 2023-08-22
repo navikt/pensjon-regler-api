@@ -21,10 +21,6 @@ public class KategoriserAfpEtteroppgjorRequest  extends ServiceRequest {
 		return afpEtteroppgjorgrunnlagListe;
 	}
 
-	public AFPEtteroppgjorgrunnlag[] getAfpEtteroppgjorgrunnlagListeAsArray() {
-		return (afpEtteroppgjorgrunnlagListe != null ? this.afpEtteroppgjorgrunnlagListe.toArray(new AFPEtteroppgjorgrunnlag[this.afpEtteroppgjorgrunnlagListe.size()]) : new AFPEtteroppgjorgrunnlag[0]);
-	}
-	
 	public void setAfpEtteroppgjorgrunnlagListe(
 			Vector<AFPEtteroppgjorgrunnlag> afpEtteroppgjorgrunnlagListe) {
 		this.afpEtteroppgjorgrunnlagListe = afpEtteroppgjorgrunnlagListe;

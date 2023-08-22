@@ -221,15 +221,6 @@ public class Opptjeningsgrunnlag implements Comparable<Opptjeningsgrunnlag>, Ser
     }
 
     /**
-     * Read only property for opptjeningTypeListe as array
-     * 
-     * @return array of OpptjeningTypeMapping
-     */
-    public OpptjeningTypeMapping[] getOpptjeningTypeMappingListeAsArray() {
-        return opptjeningTypeListe != null ? opptjeningTypeListe.toArray(new OpptjeningTypeMapping[opptjeningTypeListe.size()]) : new OpptjeningTypeMapping[0];
-    }
-
-    /**
      * @param aOpptjeningTypeListe the opptjeningTypeListe to set
      */
     public void setOpptjeningTypeListe(List<OpptjeningTypeMapping> aOpptjeningTypeListe) {

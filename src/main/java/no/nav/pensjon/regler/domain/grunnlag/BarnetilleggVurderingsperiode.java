@@ -63,12 +63,4 @@ public class BarnetilleggVurderingsperiode implements Serializable, Comparable<B
         this.tomDato = tomDato;
     }
 
-    /**
-     * @return the btVilkarListe as a array
-     */
-    public BarnetilleggVilkar[] retrieveBtVilkarListeAsArray() {
-        return !btVilkarListe.isEmpty() ? btVilkarListe.toArray(new BarnetilleggVilkar[btVilkarListe.size()])
-                : new BarnetilleggVilkar[0];
-    }
-
 }

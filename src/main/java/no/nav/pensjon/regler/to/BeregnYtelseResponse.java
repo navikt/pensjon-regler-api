@@ -42,14 +42,6 @@ public class BeregnYtelseResponse extends ServiceResponse {
 		return beregningsListe;
 	}
 
-	/**
-	 * Read only property for beregningsListe as array
-	 * @return array of Beregning
-	 */
-	public Beregning[] getBeregningsListeAsArray() {
-		return (beregningsListe != null ? this.beregningsListe.toArray(new Beregning[this.beregningsListe.size()]) : new Beregning[0]);
-	}
-	
 	public void setBeregningsListe(List<Beregning> beregningsListe) {
 		this.beregningsListe = beregningsListe;
 	}

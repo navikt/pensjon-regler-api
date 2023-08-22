@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.beregning2011.PensjonUnderUtbetaling;
 import no.nav.pensjon.regler.domain.util.ToStringUtil;
 
@@ -17,13 +17,13 @@ public class EtteroppgjorGrunnlag implements Serializable {
     /**
      * Ytterligere informasjon om etteroppgjør
      */
-    @GuiPrompt(prompt = "Informasjon om etteroppgjør")
+
     private UforetrygdEtteroppgjor uforetrygdEtteroppgjor;
 
     /**
      * Den PensjonUnderUtbetaling som blir revurdert.
      */
-    @GuiPrompt(prompt = "Pensjon under utbetaling som blir revurdert")
+
     private PensjonUnderUtbetaling pensjonUnderUtbetalingForRevurdering;
 
     public EtteroppgjorGrunnlag() {

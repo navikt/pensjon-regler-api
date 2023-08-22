@@ -225,33 +225,4 @@ public class BeregnInstitusjonsoppholdRequest extends ServiceRequest {
 	public void setBruker2afpLivsvarig(AfpLivsvarig bruker2afpLivsvarig) {
 		this.bruker2afpLivsvarig = bruker2afpLivsvarig;
 	}
-
-	/**
-	 * Read only property for bruker1VilkarsvedtakListe as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getBruker1VilkarsvedtakListeAsArray() {
-		return (bruker1VilkarsvedtakListe != null ? this.bruker1VilkarsvedtakListe.toArray(new VilkarsVedtak[this.bruker1VilkarsvedtakListe.size()]) : new VilkarsVedtak[0]);
-	}
-	/**
-	 * Read only property for bruker1VilkarsvedtakListe2011 as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getBruker1VilkarsvedtakListe2011AsArray() {
-		return (bruker1VilkarsvedtakListe2011 != null ? this.bruker1VilkarsvedtakListe2011.toArray(new VilkarsVedtak[this.bruker1VilkarsvedtakListe2011.size()]) : new VilkarsVedtak[0]);
-	}
-	/**
-	 * Read only property for bruker2VilkarsvedtakListe as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getBruker2VilkarsvedtakListeAsArray() {
-		return (bruker2VilkarsvedtakListe != null ? this.bruker2VilkarsvedtakListe.toArray(new VilkarsVedtak[this.bruker2VilkarsvedtakListe.size()]) : new VilkarsVedtak[0]);
-	}
-	/**
-	 * Read only property for bruker2VilkarsvedtakListe2011 as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getBruker2VilkarsvedtakListe2011AsArray() {
-		return (bruker2VilkarsvedtakListe2011 != null ? this.bruker2VilkarsvedtakListe2011.toArray(new VilkarsVedtak[this.bruker2VilkarsvedtakListe2011.size()]) : new VilkarsVedtak[0]);
-	}
 }

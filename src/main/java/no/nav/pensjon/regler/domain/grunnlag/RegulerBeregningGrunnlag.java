@@ -76,20 +76,12 @@ public class RegulerBeregningGrunnlag implements Serializable {
         this.uttaksgradListe = uttaksgradListe;
     }
 
-    public Uttaksgrad[] getuttaksgradListeAsArray() {
-        return uttaksgradListe != null ? uttaksgradListe.toArray(new Uttaksgrad[uttaksgradListe.size()]) : new Uttaksgrad[0];
-    }
-
     public List<VilkarsVedtak> getBrukersVilkarsvedtakListe() {
         return brukersVilkarsvedtakListe;
     }
 
     public void setBrukersVilkarsvedtakListe(List<VilkarsVedtak> brukersVilkarsvedtakListe) {
         this.brukersVilkarsvedtakListe = brukersVilkarsvedtakListe;
-    }
-
-    public VilkarsVedtak[] getbrukersVilkarsvedtakListeAsArray() {
-        return brukersVilkarsvedtakListe != null ? brukersVilkarsvedtakListe.toArray(new VilkarsVedtak[brukersVilkarsvedtakListe.size()]) : new VilkarsVedtak[0];
     }
 
     public Persongrunnlag getSokersPersongrunnlag() {

@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti;
 import no.nav.pensjon.regler.domain.trygdetid.AnvendtTrygdetid;
 
@@ -14,41 +14,41 @@ public class EgenopptjentUforetrygd implements Serializable {
 
     private static final long serialVersionUID = -121347340388844508L;
 
-    @GuiPrompt(prompt = "Faktor")
+
     private double faktor;
 
-    @GuiPrompt(prompt = "Formel")
+
     private FormelKodeCti formelKode;
 
-    @GuiPrompt(prompt = "Årsbeløp")
+
     private int arsbelop;
 
-    @GuiPrompt(prompt = "Beregningsgrunnlag ordinær")
+
     private AbstraktBeregningsgrunnlag beregningsgrunnlagOrdiner;
 
-    @GuiPrompt(prompt = "Beregningsgrunnlag yrkesskade")
+
     private AbstraktBeregningsgrunnlag beregningsgrunnlagYrkesskade;
 
-    @GuiPrompt(prompt = "Beregningsgrunnlag yrkesskade gunstigst")
+
     private boolean beregningsgrunnlagYrkesskadeBest;
 
     /**
      * Prosentsats brukt for påslag.
      */
-    @GuiPrompt(prompt = "SatsPåslag")
+
     private int konverteringsPaslagForRedGP;
 
     /**
      * Påslag pga økt redusert grunnpensjon sats til egenopptjent uføretrygd som angår konvertert uføretidpunkt.
      */
-    @GuiPrompt(prompt = "Påslag")
+
     private int konverteringsPaslagForRedGPSats;
 
 
     /**
      * Trygdetid som er brukt ved beregning av egenopptjent uføretrygd.
      */
-    @GuiPrompt(prompt = "Anvendt trygdetid")
+
     private AnvendtTrygdetid anvendtTrygdetid;
 
     public EgenopptjentUforetrygd() {

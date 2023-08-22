@@ -25,14 +25,6 @@ public class InstitusjonsOppholdRequest extends ServiceRequest{
 		return instOpphPeriodegrunnlagListe;
 	}
 
-	/**
-	 * Read only property for instOpphPeriodegrunnlagListe
-	 * @return array of InstOpphPeriodegrunnlag
-	 */
-	public InstOpphPeriodegrunnlag[] getInstOpphPeriodegrunnlagListeAsArray() {
-		return (instOpphPeriodegrunnlagListe != null ? this.instOpphPeriodegrunnlagListe.toArray(new InstOpphPeriodegrunnlag[this.instOpphPeriodegrunnlagListe.size()]) : new InstOpphPeriodegrunnlag[0]);
-	}
-
 	public void setInstOpphPeriodegrunnlagListe(
 			Vector<InstOpphPeriodegrunnlag> instOpphPeriodegrunnlagListe) {
 		this.instOpphPeriodegrunnlagListe = instOpphPeriodegrunnlagListe;

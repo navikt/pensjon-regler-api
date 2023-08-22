@@ -1,6 +1,5 @@
 package no.nav.pensjon.regler.domain.beregning;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
 import no.nav.pensjon.regler.domain.grunnlag.Uforeperiode;
 import no.nav.pensjon.regler.domain.kode.FppGarantiKodeCti;
 import no.nav.pensjon.regler.domain.kode.ProRataBeregningTypeCti;
@@ -9,34 +8,29 @@ import no.nav.pensjon.regler.domain.kode.UforeTypeCti;
 import java.io.Serializable;
 import java.util.Date;
 
-/* 
- * @author Swiddy de Louw (Capgemin) - PK-10228
- * @author Steinar Hjellvik (Decisive) - PK-6458
- * @author Magnus Bakken (Accenture) - PK-20759
- */
 public class BeregningUforeperiode implements Serializable {
 
     private static final long serialVersionUID = 5820916129615202514L;
     /**
      * Uføregraden, heltall 0-100.
      */
-    @GuiPrompt(prompt = "Uføregrad")
+
     private Integer ufg;
     /**
      * Dato for uføretidspunktet.
      */
-    @GuiPrompt(prompt = "Uføretidspunkt")
+
     private Date uft;
     /**
      * Angir om uføregraden er ren uføre,inneholder delvis yrke eller bare yrke.
      */
-    @GuiPrompt(prompt = "Uføretype")
+
     private UforeTypeCti uforeType;
 
     /**
      * Framtidige pensjonspoengtall garanti, f.eks ung ufør har i dag en garanti på 3.3.
      */
-    @GuiPrompt(prompt = "Framtidige pensjonspoengtall garanti")
+
     private Double fppGaranti;
 
     /**
@@ -47,163 +41,163 @@ public class BeregningUforeperiode implements Serializable {
      * <code>D = Ung ufør med rett til 3.3 poeng fra mai 1992</code><br>
      * <code>E = unge uføre før 1967</code>
      */
-    @GuiPrompt(prompt = "Kode for framtidige pensjonspoengtall garanti")
+
     private FppGarantiKodeCti fppGarantiKode;
 
     /**
      * Antall godskrevet framtidig poengtall, ikke full framtidig godskriving.
      */
-    @GuiPrompt(prompt = "Redusert antall fpp år")
+
     private Integer redusertAntFppAr;
 
     /**
      * Antall godskrevet framtidig poengtall, ikke full framtidig godskriving. EØS eller annen pro-rata beregning.
      */
-    @GuiPrompt(prompt = "Redusert antall fpp år pro rata")
+
     private Integer redusertAntFppAr_proRata;
 
     /**
      * Angir hva utfallet av pro-rata beregningen var. Hvis satt er EØS eneste alternativ eller bedre enn alternativet (Folketrygd).
      */
-    @GuiPrompt(prompt = "Pro rata beregning type")
+
     private ProRataBeregningTypeCti proRataBeregningType;
 
     /**
      * Dato for virkningsåret for denne uføreperioden.
      */
-    @GuiPrompt(prompt = "Virkningsdato")
+
     private Date virk;
 
     /**
      * Dato for når uføreperioden avsluttes.
      */
-    @GuiPrompt(prompt = "Dato uføreperiode avsluttes")
+
     private Date uftTom;
 
     /**
      * Dato for når uføregraden starter.
      */
-    @GuiPrompt(prompt = "Dato uføregraden starter")
+
     private Date ufgFom;
 
     /**
      * Dato for når uføregraden avsluttes.
      */
-    @GuiPrompt(prompt = "Dato uføregraden avslutter")
+
     private Date ufgTom;
 
     /**
      * Fødselsår for yngste barn.
      */
-    @GuiPrompt(prompt = "Fødselsår yngste barn")
+
     private Integer fodselsArYngsteBarn;
 
     /**
      * Sluttpoengtall på tilleggspensjonen.
      */
-    @GuiPrompt(prompt = "Sluttpoengtall")
+
     private Double spt;
 
     /**
      * Sluttpoengtall på tilleggspensjonen. Pro-rata beregning variant.
      */
-    @GuiPrompt(prompt = "Pro rata sluttpoengtall")
+
     private Double spt_proRata;
 
     /**
      * Sluttpoengtall på tilleggspensjonen ved overkomp.
      */
-    @GuiPrompt(prompt = "Overkompensasjon poengtall")
+
     private Double opt;
 
     /**
      * Sluttpoengtall på tilleggspensjonen ved yrkesskade.
      */
-    @GuiPrompt(prompt = "Yrkesskade poengtall")
+
     private Double ypt;
 
     /**
      * Antall poengår før 1992 på sluttpoengtallet.
      */
-    @GuiPrompt(prompt = "Poengår før 1992")
+
     private Integer spt_pa_f92;
 
     /**
      * Antall poengår etter 1991 på sluttpoengtallet
      */
-    @GuiPrompt(prompt = "Poengår etter 1991")
+
     private Integer spt_pa_e91;
 
     /**
      * Antall poengår før 1992 på sluttpoengtallet.
      */
-    @GuiPrompt(prompt = "Pro rata brøk teller")
+
     private Integer proRata_teller;
 
     /**
      * Antall poengår etter 1991 på sluttpoengtallet
      */
-    @GuiPrompt(prompt = "Pro rata brøk nevner")
+
     private Integer proRata_nevner;
 
     /**
      * Antall poengår før 1992 på sluttpoengtallet med overkomp
      */
-    @GuiPrompt(prompt = "Overkompensasjon poengår før 1992")
+
     private Integer opt_pa_f92;
 
     /**
      * Antall poengår etter 1992 på sluttpoengtallet med overkomp
      */
-    @GuiPrompt(prompt = "Overkompensasjon poengår etter 1991")
+
     private Integer opt_pa_e91;
 
     /**
      * Antall poengår før 1992 på sluttpoengtallet ved yrkesskade
      */
-    @GuiPrompt(prompt = "Yrkesskade poengår før 1992")
+
     private Integer ypt_pa_f92;
 
     /**
      * Antall poengår etter 1992 på sluttpoengtallet ved yrkesskade
      */
-    @GuiPrompt(prompt = "Yrkesskade poengår etter 1991")
+
     private Integer ypt_pa_e91;
 
     /**
      * Poengtall ut fra antatt årlig inntekt på skadetidspunktet
      */
-    @GuiPrompt(prompt = "Poengtall antatt årlig inntekt")
+
     private Double paa;
 
     /**
      * Fremtidige pensjonspoeng
      */
-    @GuiPrompt(prompt = "Fremtidig pensjonspoeng")
+
     private Double fpp;
 
     /**
      * Fremtidige omregnete pensjonspoeng
      */
-    @GuiPrompt(prompt = "Fremtidig pensjonspoeng omregnet")
+
     private Double fpp_omregnet;
 
     /**
      * Sluttpoengtall i EØS
      */
-    @GuiPrompt(prompt = "Sluttpoengtall EØS")
+
     private Double spt_eos;
 
     /**
      * Antall poengår etter 1991 etter EØS-alternativet for sluttpoengtall
      */
-    @GuiPrompt(prompt = "EØS poengår etter 1991")
+
     private Integer spt_pa_e91_eos;
 
     /**
      * Antall poengår før 1992 etter EØS-alternativet for sluttpoengtall
      */
-    @GuiPrompt(prompt = "EØS poengår før 1992")
+
     private Integer spt_pa_f92_eos;
 
     /*
@@ -211,25 +205,25 @@ public class BeregningUforeperiode implements Serializable {
      * Dette er beregningsgrunnlagOrdinært når uforeType er UFORE eller UF_M_YRKE
      * og beregningsgrunnlagYrkesskade når type er YRKE
      */
-    @GuiPrompt(prompt = "Beregningsgrunnlag (årsbeløp)")
+
     private int beregningsgrunnlag;
 
     /*
      * Det uføretidspunkt som er angitt for perioden, men ikke nødvendigvis anvendt.
      */
-    @GuiPrompt(prompt = "Angitt uføretidspunkt")
+
     private Date angittUforetidspunkt;
 
     /**
      * Antatt årlig inntekt før uføretidspunktet (brukes i fastsettelse av opptjening til alderspensjon etter kapittel 19).
      */
-    @GuiPrompt(prompt = "Antatt årlig inntekt før uføretidspunkt, kapittel 19")
+
     private double antattInntektFaktorKap19;
 
     /**
      * Antatt årlig inntekt før uføretidspunktet (brukes i fastsettelse av opptjening til alderspensjon etter kapittel 20).
      */
-    @GuiPrompt(prompt = "Antatt årlig inntekt før uføretidspunkt, kapittel 20")
+
     private double antattInntektFaktorKap20;
 
     /**
@@ -239,41 +233,6 @@ public class BeregningUforeperiode implements Serializable {
         super();
     }
 
-    /**
-     * @param ufg
-     * @param uft
-     * @param uforeType
-     * @param fppGaranti
-     * @param fppGarantiKode
-     * @param redusertAntFppAr
-     * @param redusertAntFppAr_proRata
-     * @param proRataBeregningType
-     * @param virk
-     * @param uftTom
-     * @param ufgFom
-     * @param ufgTom
-     * @param fodselsArYngsteBarn
-     * @param spt
-     * @param spt_proRata
-     * @param opt
-     * @param ypt
-     * @param spt_pa_f92
-     * @param spt_pa_e91
-     * @param proRata_teller
-     * @param proRata_nevner
-     * @param opt_pa_f92
-     * @param opt_pa_e91
-     * @param ypt_pa_f92
-     * @param ypt_pa_e91
-     * @param paa
-     * @param fpp
-     * @param fpp_omregnet
-     * @param spt_eos
-     * @param spt_pa_e91_eos
-     * @param spt_pa_f92_eos
-     * @param beregningsgrunnlag
-     * @param angittUforetidspunkt
-     */
     public BeregningUforeperiode(Integer ufg, Date uft, UforeTypeCti uforeType, Double fppGaranti, FppGarantiKodeCti fppGarantiKode, Integer redusertAntFppAr,
                                  Integer redusertAntFppAr_proRata, ProRataBeregningTypeCti proRataBeregningType, Date virk, Date uftTom, Date ufgFom, Date ufgTom,
                                  Integer fodselsArYngsteBarn, Double spt, Double spt_proRata, Double opt, Double ypt, Integer spt_pa_f92, Integer spt_pa_e91,
@@ -321,67 +280,67 @@ public class BeregningUforeperiode implements Serializable {
     public BeregningUforeperiode(BeregningUforeperiode b) {
         this();
         if (b.fodselsArYngsteBarn != null) {
-            fodselsArYngsteBarn = new Integer(b.fodselsArYngsteBarn);
+            fodselsArYngsteBarn = b.fodselsArYngsteBarn;
         }
         if (b.fpp != null) {
-            fpp = new Double(b.fpp);
+            fpp = b.fpp;
         }
         if (b.fpp_omregnet != null) {
-            fpp_omregnet = new Double(b.fpp_omregnet);
+            fpp_omregnet = b.fpp_omregnet;
         }
         if (b.fppGaranti != null) {
-            fppGaranti = new Double(b.fppGaranti);
+            fppGaranti = b.fppGaranti;
         }
         if (b.fppGarantiKode != null) {
             fppGarantiKode = new FppGarantiKodeCti(b.fppGarantiKode);
         }
         if (b.opt != null) {
-            opt = new Double(b.opt);
+            opt = b.opt;
         }
         if (b.opt_pa_e91 != null) {
-            opt_pa_e91 = new Integer(b.opt_pa_e91);
+            opt_pa_e91 = b.opt_pa_e91;
         }
         if (b.opt_pa_f92 != null) {
-            opt_pa_f92 = new Integer(b.opt_pa_f92);
+            opt_pa_f92 = b.opt_pa_f92;
         }
         if (b.paa != null) {
-            paa = new Double(b.paa);
+            paa = b.paa;
         }
         if (b.proRata_nevner != null) {
-            proRata_nevner = new Integer(b.proRata_nevner);
+            proRata_nevner = b.proRata_nevner;
         }
         if (b.proRata_teller != null) {
-            proRata_teller = new Integer(b.proRata_teller);
+            proRata_teller = b.proRata_teller;
         }
         if (b.proRataBeregningType != null) {
             proRataBeregningType = new ProRataBeregningTypeCti(b.proRataBeregningType);
         }
         if (b.redusertAntFppAr != null) {
-            redusertAntFppAr = new Integer(b.redusertAntFppAr);
+            redusertAntFppAr = b.redusertAntFppAr;
         }
         if (b.redusertAntFppAr_proRata != null) {
-            redusertAntFppAr_proRata = new Integer(b.redusertAntFppAr_proRata);
+            redusertAntFppAr_proRata = b.redusertAntFppAr_proRata;
         }
         if (b.spt != null) {
-            spt = new Double(b.spt);
+            spt = b.spt;
         }
         if (b.spt_pa_e91 != null) {
-            spt_pa_e91 = new Integer(b.spt_pa_e91);
+            spt_pa_e91 = b.spt_pa_e91;
         }
         if (b.spt_pa_e91_eos != null) {
-            spt_pa_e91_eos = new Integer(b.spt_pa_e91_eos);
+            spt_pa_e91_eos = b.spt_pa_e91_eos;
         }
         if (b.spt_pa_f92 != null) {
-            spt_pa_f92 = new Integer(b.spt_pa_f92);
+            spt_pa_f92 = b.spt_pa_f92;
         }
         if (b.spt_pa_f92_eos != null) {
-            spt_pa_f92_eos = new Integer(b.spt_pa_f92_eos);
+            spt_pa_f92_eos = b.spt_pa_f92_eos;
         }
         if (b.spt_proRata != null) {
-            spt_proRata = new Double(b.spt_proRata);
+            spt_proRata = b.spt_proRata;
         }
         if (b.ufg != null) {
-            ufg = new Integer(b.ufg);
+            ufg = b.ufg;
         }
         if (b.ufgFom != null) {
             ufgFom = (Date) b.ufgFom.clone();
@@ -402,13 +361,13 @@ public class BeregningUforeperiode implements Serializable {
             virk = (Date) b.virk.clone();
         }
         if (b.ypt != null) {
-            ypt = new Double(b.ypt);
+            ypt = b.ypt;
         }
         if (b.ypt_pa_e91 != null) {
-            ypt_pa_e91 = new Integer(b.ypt_pa_e91);
+            ypt_pa_e91 = b.ypt_pa_e91;
         }
         if (b.ypt_pa_f92 != null) {
-            ypt_pa_f92 = new Integer(b.ypt_pa_f92);
+            ypt_pa_f92 = b.ypt_pa_f92;
         }
         beregningsgrunnlag = b.beregningsgrunnlag;
         if (b.angittUforetidspunkt != null) {

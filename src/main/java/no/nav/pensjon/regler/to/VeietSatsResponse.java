@@ -24,11 +24,7 @@ public class VeietSatsResponse extends ServiceResponse{
 	public List<VeietSatsResultat> getVeietSatsResultater() {
 		return veietSatsResultater;
 	}
-	
-	public VeietSatsResultat[] getVeietSatsResultaterAsArray() {
-		return (veietSatsResultater != null ? this.veietSatsResultater.toArray(new VeietSatsResultat[this.veietSatsResultater.size()]) : new VeietSatsResultat[0]);
-	}
-	
+
 	public void setVeietSatsResultater(List<VeietSatsResultat> satsResultater) {
 		this.veietSatsResultater = satsResultater;
 	}

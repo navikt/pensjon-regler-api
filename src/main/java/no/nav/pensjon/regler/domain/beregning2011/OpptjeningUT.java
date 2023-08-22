@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.Merknad;
 import no.nav.pensjon.regler.domain.Omsorgsopptjening;
 import no.nav.pensjon.regler.domain.grunnlag.OpptjeningTypeMapping;
@@ -24,86 +24,86 @@ public class OpptjeningUT implements Comparable<OpptjeningUT>, Serializable, Oms
     /**
      * Angir om avkortet mot 6*grunnbeløp ved virk.
      */
-    @GuiPrompt(prompt = "Avkortet beløp")
+
     private double avkortetBelop;
 
     /**
      * Angir om et av de tre årene som er brukt.
      */
-    @GuiPrompt(prompt = " Angir om et av de tre årene som er brukt")
+
     private boolean brukt;
 
     /**
      * Angir om det er inntekt i avtaleland som angår den konvensjon som beregningsgrunnlaget inngår i.
      */
-    @GuiPrompt(prompt = "Inntekt i avtaleland")
+
     private boolean inntektIAvtaleland;
 
     /**
      * Inntekten for et år ganget med forholdet mellom grunnbeløpet ved virk
      * og gjennomsnittlig grunnbeløp for inntektsåret.
      */
-    @GuiPrompt(prompt = "Justert beløp")
+
     private double justertBelop;
 
     /**
      * Pensjonsgivende inntekt.
      */
-    @GuiPrompt(prompt = "Pensjonsgivende inntekt")
+
     private int pgi;
 
     /**
      * Gjennomsnittlig G for inntektsåret.
      */
-    @GuiPrompt(prompt = "Gjennomsnittlig G for inntektsåret")
+
     private int veietG;
 
     /**
      * Hvilket årstall.
      */
-    @GuiPrompt(prompt = "Årstall")
+
     private int ar;
 
     private List<Merknad> merknadListe = new ArrayList<Merknad>();
 
-    @GuiPrompt(prompt = "Formel")
+
     private FormelKodeCti formelkode;
 
     /**
      * Opptjeningsgaranti ved førstegangstjeneste.
      */
-    @GuiPrompt(prompt = "Opptjeningsgaranti ved førstegangstjeneste")
+
     private int forstegangstjeneste;
 
     /**
      * Beregnet inntekt for året.
      */
-    @GuiPrompt(prompt = "Beregnet inntekt for året")
+
     private int belop;
 
     /**
      * Minste beløp for fastsettelse av justert PGI.
      */
-    @GuiPrompt(prompt = "Minste beløp for fastsettelse av justert PGI")
+
     private int garantiBelop;
 
     /**
      * Angir om det finnes omsorgsopptjening for året.
      */
-    @GuiPrompt(prompt = "Om det finnes omsorgsopptjening for året")
+
     private boolean omsorgsar;
 
     /**
      * Pensjonsgivende inntekt justert i henhold til
      * gjennomsnittlig stillingsprosent for året.
      */
-    @GuiPrompt(prompt = "Pensjonsgivende inntekt justert for gjennomsnittlig stillingsprosent")
+
     private int justertPGI;
 
     /**
      * Opptjening fra uførepensjon eller uføretrygd
      */
-    @GuiPrompt(prompt = "Opptjening fra uførepensjon eller uføretrygd")
+
     private double uforeopptjening;
 
     /**
@@ -380,19 +380,6 @@ public class OpptjeningUT implements Comparable<OpptjeningUT>, Serializable, Oms
 
     public void setPREG_opptjeningTypeListe(List<OpptjeningTypeMapping> PREG_opptjeningTypeListe) {
         this.PREG_opptjeningTypeListe = PREG_opptjeningTypeListe;
-    }
-
-    public OpptjeningTypeMapping[] getPREG_OpptjeningTypeListeAsArray() {
-        return PREG_opptjeningTypeListe != null ? PREG_opptjeningTypeListe.toArray(new OpptjeningTypeMapping[PREG_opptjeningTypeListe.size()]) : new OpptjeningTypeMapping[0];
-    }
-
-    /**
-     * Read only property for merknadListe as array.
-     * 
-     * @return array of Merknad
-     */
-    public Merknad[] getMerknadListeAsArray() {
-        return merknadListe != null ? merknadListe.toArray(new Merknad[merknadListe.size()]) : new Merknad[0];
     }
 
     @Override

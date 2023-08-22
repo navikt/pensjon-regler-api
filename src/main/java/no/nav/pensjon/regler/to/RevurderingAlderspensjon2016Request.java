@@ -88,14 +88,7 @@ public class RevurderingAlderspensjon2016Request extends ServiceRequest {
 	public void setKravhode(Kravhode kravhode) {
 		this.kravhode = kravhode;
 	}
-	/**
-	 * Read only property for vilkarsvedtakListe as array
-	 * @return array of VilkarsVedtak
-	 */
-	public VilkarsVedtak[] getVilkarsvedtakListeAsArray() {
-		return (vilkarsvedtakListe != null ? this.vilkarsvedtakListe.toArray(new VilkarsVedtak[this.vilkarsvedtakListe.size()]) : new VilkarsVedtak[0]);
-	}
-	
+
 	public List<VilkarsVedtak> getVilkarsvedtakListe() {
 		return vilkarsvedtakListe;
 	}

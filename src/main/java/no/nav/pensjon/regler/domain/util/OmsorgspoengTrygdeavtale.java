@@ -5,26 +5,18 @@ import no.nav.pensjon.regler.domain.beregning2011.OpptjeningUT;
 import no.nav.pensjon.regler.domain.util.OmsorgspoengCompareUtil.IalRefppComparator;
 import no.nav.pensjon.regler.domain.util.OmsorgspoengCompareUtil.PoengtallComparator;
 import no.nav.pensjon.regler.domain.util.OmsorgspoengCompareUtil.SynkendeArstallComparator;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.*;
-
-import static no.nav.pensjon.regler.domain.util.OmsorgspoengLogUtil.printOmsorgsopptjeningListe;
-import static no.nav.pensjon.regler.domain.util.OmsorgspoengLogUtil.printRekke;
 
 /**
  * Klasse for å ta hensyn til omsorgspoeng ved valg av år til bruk i beregningsgrunnlag
  * for uføretrygd når det er trygdeavtale.
  *
  * @author Lars Hartviksen (Decisive), PK-9695
- *         Date: 02.05.14
- *         Time: 11:54
+ * Date: 02.05.14
+ * Time: 11:54
  */
 public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
-    // Logging
-    private static final Logger log = LoggerFactory.getLogger(OmsorgspoengTrygdeavtale.class);
-
     // Rekursiv "ytre løkke"
     /**
      * Tre-dimensjonal array som holder styr på om det har noe for seg å generere
@@ -38,41 +30,11 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
     private boolean[][] eksisterendeUtvalg;
 
     public List<Omsorgsopptjening> finnBeste3Av5_trygdeavtale(List<Omsorgsopptjening> poengrekke) {
-        List<List<Omsorgsopptjening>> beste = new ArrayList<List<Omsorgsopptjening>>();
-        if (log.isDebugEnabled()) {
-            log.debug("****************************************");
-            log.debug("*** Start finnBeste3Av5_trygdeavtale ***");
-            log.debug("****************************************");
-        }
-        printRekke("Input: ", poengrekke, log);
+        List<List<Omsorgsopptjening>> beste = new ArrayList<>();
         beste.add(finnBesteNSisteTrygdeavtale(poengrekke, 5));
         beste.addAll(finnBesteIalUtvalg(poengrekke, 5));
 
-        if (log.isDebugEnabled()) {
-            log.debug("Resultatalternativliste :");
-            for (List<Omsorgsopptjening> l : beste) {
-                printOmsorgsopptjeningListe(l, log);
-            }
-            log.debug("-------------------------");
-        }
-
-        List<Omsorgsopptjening> allerBest = bestAvForsteFem(beste);
-
-        if (log.isDebugEnabled()) {
-            log.debug("Resultat fra finnBeste3Av5_trygdeavtale:");
-            printOmsorgsopptjeningListe(allerBest, log);
-            log.debug("-------------------------");
-        }
-        return allerBest;
-    }
-
-    public List<OpptjeningUT> finnBeste3Av5_trygdeavtale_blaze(List<OpptjeningUT> poengrekke) {
-        List<Omsorgsopptjening> svarListe = finnBeste3Av5_trygdeavtale(new ArrayList<Omsorgsopptjening>(poengrekke));
-        List<OpptjeningUT> returListe = new ArrayList<OpptjeningUT>();
-        for (Omsorgsopptjening o : svarListe) {
-            returListe.add((OpptjeningUT) o);
-        }
-        return returListe;
+        return bestAvForsteFem(beste);
     }
 
     /*
@@ -90,7 +52,6 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
         if (!poengtallliste.isEmpty()) {
             sisteArIRekken = poengtallliste.get(0).getOpptjeningsar();
         }
-        log.debug("*** finnBesteNSisteTrygdeavtale " + antall + " fram til " + sisteArIRekken + "***");
         sisteAr = sisteArIRekken;
 
         int n = antall;
@@ -100,9 +61,9 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
 
         konstruerMinstePoengrekkerIal(true, poengtallliste);
 
-        List<List<Ref_pp>> kombinasjonerAvIal = new ArrayList<List<Ref_pp>>();
-        List<Double> kombinasjonersNasjonaleSnitt = new ArrayList<Double>();
-        List<Double> kombinasjonersResultat = new ArrayList<Double>();
+        List<List<Ref_pp>> kombinasjonerAvIal = new ArrayList<>();
+        List<Double> kombinasjonersNasjonaleSnitt = new ArrayList<>();
+        List<Double> kombinasjonersResultat = new ArrayList<>();
 
         // Prøver alternativet som bare inneholder de fem inntektsårene
         vurderUtfallMedIal(
@@ -170,8 +131,8 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
             }
         }
 
-        ArrayList<Omsorgsopptjening> gullreka = new ArrayList<Omsorgsopptjening>();
-        ArrayList<Omsorgsopptjening> svaret = new ArrayList<Omsorgsopptjening>();
+        ArrayList<Omsorgsopptjening> gullreka = new ArrayList<>();
+        ArrayList<Omsorgsopptjening> svaret = new ArrayList<>();
         List<Ref_pp> gullrekka = kombinasjonerAvIal.get(vinner);
         for (Ref_pp r : gullrekka) {
             if (r.pt.getOpptjeningsar() <= sisteAr) {
@@ -187,11 +148,6 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
         for (int i = 0; i < antall; i++) {
             svaret.add(gullreka.get(i));
         }
-
-        if (log.isDebugEnabled()) {
-            log.debug("Liste fra Utvidet Omfang(" + antall + "):");
-            printOmsorgsopptjeningListe(svaret, log);
-        }
         return svaret;
     }
 
@@ -203,7 +159,7 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
      * @param i5 Ett av fem år
      */
     private void vurderUtfallMedIal(Ref_pp i1, Ref_pp i2, Ref_pp i3, Ref_pp i4, Ref_pp i5) {
-        Vector<Ref_pp> detteUtfall = new Vector<Ref_pp>();
+        Vector<Ref_pp> detteUtfall = new Vector<>();
         detteUtfall.add(i1);
         detteUtfall.add(i2);
         detteUtfall.add(i3);
@@ -243,7 +199,7 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
         Collections.sort(liste, new SynkendeArstallComparator());
         int aar = liste.get(0).getOpptjeningsar();
         return finnBesteIalUtvalgHjelper(liste,
-                new LinkedList<Omsorgsopptjening>(),
+                new LinkedList<>(),
                 aar,
                 vindu,
                 0,
@@ -291,10 +247,10 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
      * ...
      * - Siste år er tidligere.
      *
-     * @param liste Listen med OpptjeningUT.
-     * @param op_stack Stabel som holder på et utvalg som er i ferd med å genereres.
-     * @param ar Nåværende posisjon i liste.
-     * @param antallPlasser Antall plasser i utvalget som det gjenstår å fylle.
+     * @param liste           Listen med OpptjeningUT.
+     * @param op_stack        Stabel som holder på et utvalg som er i ferd med å genereres.
+     * @param ar              Nåværende posisjon i liste.
+     * @param antallPlasser   Antall plasser i utvalget som det gjenstår å fylle.
      * @param antallValgteIal Antall plasser i utvalget som er fylt av år med inntekt i avtaleland.
      */
     private List<List<Omsorgsopptjening>> finnBesteIalUtvalgHjelper(
@@ -305,7 +261,7 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
             int antallValgteIal,
             int uft) {
         //hvis condition gjelder så består op_stack utelukkende av opptjeninger med verdi 0.
-        List<List<Omsorgsopptjening>> returListeListe = new ArrayList<List<Omsorgsopptjening>>();
+        List<List<Omsorgsopptjening>> returListeListe = new ArrayList<>();
         if (antallPlasser == 0) {
             if (antallValgteIal > 0) {
                 Integer forrigeInntektAr = finnForrigeOpptjeningArIkkeZero(liste, ar);
@@ -313,7 +269,7 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
                     if (!eksisterendeUtvalg[uft - forrigeInntektAr][antallValgteIal]) {
                         eksisterendeUtvalg[uft - forrigeInntektAr][antallValgteIal] = true;
 
-                        List<Omsorgsopptjening> nyListe = new ArrayList<Omsorgsopptjening>();
+                        List<Omsorgsopptjening> nyListe = new ArrayList<>();
                         for (Omsorgsopptjening o : liste) {
                             if (o.getOpptjeningsar() <= forrigeInntektAr) {
                                 nyListe.add(o);
@@ -322,7 +278,7 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
 
                         List<Omsorgsopptjening> beste = finnBesteNSisteTrygdeavtale(nyListe, antallValgteIal);
 
-                        List<Omsorgsopptjening> returListe = new ArrayList<Omsorgsopptjening>();
+                        List<Omsorgsopptjening> returListe = new ArrayList<>();
                         returListe.addAll(op_stack);
                         returListe.addAll(beste);
                         returListeListe.add(returListe);
@@ -424,9 +380,6 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
             vurderUtfallMedIal(i3, o1.get(0), i2, i4, i5);  // Utfall 7: Summen av det  største pp for omsorgsårene før tredje PI år  og første PI år  og andre PI år
         }
 
-        //vurderUtfallMedIal(o4.get(0), o4.get(1), o4.get(2), o4.get(3), i5, param);  // Utfall 8: O4 + I5
-        //vurderUtfallMedIal(o5.get(0), o5.get(1), o5.get(2), o5.get(3), o5.get(4), param);  // Utfall 9: O5
-
         return hvilketUtfallErBest();
     }
 
@@ -458,7 +411,7 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
         for (int i = omsorgsarMedIal.size(); i < 1; i++) {
             omsorgsarMedIal.add(new Ref_pp(dummy, 0.0, 0, OMSORG, INNTEKT_I_AVTALELAND));
         }
-        os[n - 1] = genererIalalternativerRekursivt(new LinkedList<Ref_pp>(o[n - 1]), omsorgsarMedIal, n);
+        os[n - 1] = genererIalalternativerRekursivt(new LinkedList<>(o[n - 1]), omsorgsarMedIal, n);
     }
 
     protected List<List<Ref_pp>> genererIalalternativerRekursivt(
@@ -466,8 +419,8 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
             PriorityQueue<Ref_pp> ial,
             int antallPlasser) {
         if (antallPlasser == 0) {
-            List<List<Ref_pp>> kombs = new ArrayList<List<Ref_pp>>();
-            kombs.add(new ArrayList<Ref_pp>());
+            List<List<Ref_pp>> kombs = new ArrayList<>();
+            kombs.add(new ArrayList<>());
             return kombs;
         } else {
             Ref_pp opptj = olok.pop();
@@ -495,7 +448,7 @@ public class OmsorgspoengTrygdeavtale extends AbstractOmsorgspoeng {
             List<Omsorgsopptjening> poengtallliste, Ref_pp forste, Ref_pp siste, List<Ref_pp> storste) {
         // Oppretter prioritetskø med ial-år mellom forste og siste år.
         PriorityQueue<Ref_pp> senesteOarMedIal =
-                new PriorityQueue<Ref_pp>(63, new IalRefppComparator());
+                new PriorityQueue<>(63, new IalRefppComparator());
 
         for (Omsorgsopptjening noenPoengtall : poengtallliste) {
             if (noenPoengtall.getOpptjeningsar() > forste.pt.getOpptjeningsar()) {

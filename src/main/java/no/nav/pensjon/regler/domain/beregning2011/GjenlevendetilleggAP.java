@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent;
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti;
 
@@ -17,13 +17,13 @@ public class GjenlevendetilleggAP extends Ytelseskomponent {
 	/**
 	 * Sum av GP, TP og PenT for AP2011 medregnet GJR.
 	 */
-	@GuiPrompt(prompt = "AP kapittel 19 med gjenlevenderett")
+
 	private int apKap19MedGJR;
 
 	/**
 	 * Sum av GP, TP og PenT for AP2011 uten GJR.
 	 */
-	@GuiPrompt(prompt = "AP kapittel 19 uten gjenlevenderett")
+
 	private int apKap19UtenGJR;
 
 	public GjenlevendetilleggAP() {

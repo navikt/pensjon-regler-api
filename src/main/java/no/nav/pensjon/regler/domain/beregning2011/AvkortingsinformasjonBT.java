@@ -1,11 +1,10 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 import no.nav.pensjon.regler.domain.kode.AvviksjusteringCti;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**
@@ -18,13 +17,13 @@ public class AvkortingsinformasjonBT extends AbstraktAvkortingsinformasjon imple
     /**
      * Angir liste over fremtidige perioder.
      */
-    @GuiPrompt(prompt = "Fremtidige barnetillegg perioder")
-    private List<AbstraktBarnetilleggperiode> barnetilleggPeriodeListe = new ArrayList<AbstraktBarnetilleggperiode>();
+
+    private List<AbstraktBarnetilleggperiode> barnetilleggPeriodeListe = new ArrayList<>();
 
     /**
      * Fribeløp for antall barn ved virk.
      */
-    @GuiPrompt(prompt = "Fribeløp ved virk")
+
     private int fribelopVedVirk;
 
     /**
@@ -88,11 +87,11 @@ public class AvkortingsinformasjonBT extends AbstraktAvkortingsinformasjon imple
         }
 
         for (AbstraktBarnetilleggperiode btp : avkortingsinformasjonBT.barnetilleggPeriodeListe) {
-            if ( btp instanceof TidligereBarnetilleggperiode ) {
-                barnetilleggPeriodeListe.add(new TidligereBarnetilleggperiode( (TidligereBarnetilleggperiode)btp));
+            if (btp instanceof TidligereBarnetilleggperiode) {
+                barnetilleggPeriodeListe.add(new TidligereBarnetilleggperiode((TidligereBarnetilleggperiode) btp));
             }
-            if ( btp instanceof FremtidigBarnetilleggperiode ) {
-                barnetilleggPeriodeListe.add(new FremtidigBarnetilleggperiode( (FremtidigBarnetilleggperiode)btp));
+            if (btp instanceof FremtidigBarnetilleggperiode) {
+                barnetilleggPeriodeListe.add(new FremtidigBarnetilleggperiode((FremtidigBarnetilleggperiode) btp));
             }
         }
     }
@@ -103,56 +102,6 @@ public class AvkortingsinformasjonBT extends AbstraktAvkortingsinformasjon imple
 
     public int getFribelopVedVirk() {
         return fribelopVedVirk;
-    }
-
-    public AbstraktBarnetilleggperiode[] getBarnetilleggPeriodeListeAsArray() {
-        return barnetilleggPeriodeListe != null ? barnetilleggPeriodeListe.toArray(new AbstraktBarnetilleggperiode[barnetilleggPeriodeListe.size()]) : new AbstraktBarnetilleggperiode[0];
-    }
-
-    public AbstraktBarnetilleggperiode[] getSortertBarnetilleggperiodelisteAsArray() {
-        if (barnetilleggPeriodeListe != null) {
-            ArrayList<AbstraktBarnetilleggperiode> sortedList = new ArrayList<AbstraktBarnetilleggperiode>(barnetilleggPeriodeListe);
-            Collections.sort(sortedList);
-            return sortedList.toArray(new AbstraktBarnetilleggperiode[barnetilleggPeriodeListe.size()]);
-        } else {
-            return new AbstraktBarnetilleggperiode[0];
-        }
-    }
-
-    public TidligereBarnetilleggperiode[] getSortertTidligereBarnetilleggperiodelisteAsArray() {
-
-        if (barnetilleggPeriodeListe != null) {
-            ArrayList<TidligereBarnetilleggperiode> sortedTidligereList = new ArrayList<TidligereBarnetilleggperiode>();
-            for (AbstraktBarnetilleggperiode btp : barnetilleggPeriodeListe) {
-                if (btp instanceof TidligereBarnetilleggperiode) {
-                    sortedTidligereList.add((TidligereBarnetilleggperiode) btp);
-                }
-            }
-
-            Collections.sort(sortedTidligereList);
-            return sortedTidligereList.toArray(new TidligereBarnetilleggperiode[sortedTidligereList.size()]);
-
-        } else {
-            return new TidligereBarnetilleggperiode[0];
-        }
-    }
-
-    public FremtidigBarnetilleggperiode[] getSortertFremtidigBarnetilleggperiodelisteAsArray() {
-
-        if (barnetilleggPeriodeListe != null) {
-            ArrayList<FremtidigBarnetilleggperiode> sortedFremtidigList = new ArrayList<FremtidigBarnetilleggperiode>();
-            for (AbstraktBarnetilleggperiode btp : barnetilleggPeriodeListe) {
-                if (btp instanceof FremtidigBarnetilleggperiode) {
-                    sortedFremtidigList.add((FremtidigBarnetilleggperiode) btp);
-                }
-            }
-
-            Collections.sort(sortedFremtidigList);
-            return sortedFremtidigList.toArray(new FremtidigBarnetilleggperiode[sortedFremtidigList.size()]);
-
-        } else {
-            return new FremtidigBarnetilleggperiode[0];
-        }
     }
 
     public void setBarnetilleggPeriodeListe(List<AbstraktBarnetilleggperiode> barnetilleggPeriodeListe) {

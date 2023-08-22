@@ -78,14 +78,6 @@ public class IdentifiserRegelendringerResponse extends ServiceResponse {
 		return regelendringListe;
 	}
 
-	/**
-	 * Read only property for regelendringListe as array
-	 * @return array of Regelendring
-	 */
-	public Regelendring[] getRegelendringListeAsArray() {
-		return (regelendringListe != null ? this.regelendringListe.toArray(new Regelendring[this.regelendringListe.size()]) : new Regelendring[0]);
-	}
-	
 	public void setRegelendringListe(Vector<Regelendring> regelendringListe) {
 		this.regelendringListe = regelendringListe;
 	}

@@ -23,14 +23,6 @@ public class BeregnAfpEtteroppgjorResponse extends ServiceResponse {
 		return afpEtteroppgjorListe;
 	}
 
-	/**
-	 * Read only property for afpEtteroppgjorListe
-	 * @return array of AFPetteroppgjor
-	 */
-	public AFPetteroppgjor[] getAfpEtteroppgjorListeAsArray() {
-		return (afpEtteroppgjorListe != null ? this.afpEtteroppgjorListe.toArray(new AFPetteroppgjor[this.afpEtteroppgjorListe.size()]) : new AFPetteroppgjor[0]);
-	}
-	
 	public void setAfpEtteroppgjorListe(
 			Vector<AFPetteroppgjor> afpEtteroppgjorListe) {
 		this.afpEtteroppgjorListe = afpEtteroppgjorListe;

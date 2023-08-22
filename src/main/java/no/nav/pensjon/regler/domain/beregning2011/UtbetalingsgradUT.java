@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011;
 
-import no.nav.pensjon.regler.domain.GuiPrompt;
+
 
 import java.io.Serializable;
 
@@ -14,13 +14,13 @@ public class UtbetalingsgradUT implements Serializable {
     /**
      * Året utbetalingsgraden gjelder for.
      */
-    @GuiPrompt(prompt = "År")
+
     private int ar;
 
     /**
      * Utbetalingsgraden hentes fra uforetrygdOrdiner.avkortingsInformasjon.utbetalingsgrad.
      */
-    @GuiPrompt(prompt = "Utbetalingsgrad")
+
     private int utbetalingsgrad;
 
     public UtbetalingsgradUT() {
