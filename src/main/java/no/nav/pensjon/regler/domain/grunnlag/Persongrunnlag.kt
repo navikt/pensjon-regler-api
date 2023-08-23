@@ -313,66 +313,8 @@ class Persongrunnlag : Serializable {
     var utbetalingsgradUTListe: List<UtbetalingsgradUT> = mutableListOf()
 
     /**
-     * Intern PREG attributt. Relasjon til personen's tilhørende vedtak.
-     */
-    var pREG_vilkarsVedtak: VilkarsVedtak? = null
-
-    /**
-     * Intern PREG attributt. Sivilstand som gjelder på beregningstidspunkt.
-     */
-    var pREG_sivilstandType: SivilstandTypeCti? = null
-
-    /**
-     * Intern PREG attributt. Grunnlagsrolle som gjelder på beregningstidspunkt.
-     */
-    var pREG_grunnlagsrolle: GrunnlagsrolleCti? = null
-
-    /**
-     * Intern PREG attributt. BarnDetalj som gjelder på beregningstidspunkt.
-     */
-    var pREG_barnDetalj: BarnDetalj? = null
-
-    /**
-     * Intern PREG attributt. Angir om brukeren skal behandles som gift. Satt på
-     * grunnlag av tilknyttet persons borMed relasjon til søker.
-     */
-    var isPREG_behandlesSomGift = false
-
-    /**
-     * Intern PREG attributt. Angir om poengrekkeberegningen skal bruke
-     * opptjening kun til og med 67 år.
-     */
-    var isPREG_P67 = false
-    var pREG_borMed: BorMedTypeCti? = null
-    var pREG_instOpphReduksjonsperiode: InstOpphReduksjonsperiode? = null
-    var pREG_instOpphFasteUtgifterperiode: InstOpphFasteUtgifterperiode? = null
-
-    /**
-     * Denne PREG variabel brukes ikke slik den er navngitt!
-     * Er omdøpt til "mottarPensjon" i regelmotor og brukes til
-     * å angi om personen selv mottar pensjon.
-     */
-    var isPREG_ektefellenMottarPensjon = false
-    var pREG_personDetalj: PersonDetalj? = null
-    var pREG_poengtillegg = 0.0
-    var isPREG_boddEllerArbeidetIUtlandet = false
-
-    /**
-     * Midlertidig felt. Brukes til å sette Første virk på grunnlaget til MOR/FAR
-     * ved barnepensjon. Angir Første virk på vedtaket (som ikke er med).
-     * Ref CR 81364 og 85157 - fiktiv Uføreperiode med type VIRK_IKKE_UFOR.
-     * Kun getter/setter for feltet, ikke med i constructor'ene.
-     */
-    var pREG_forsteVirk: Date? = null
-
-    /**
      * Objekt som inneholder informasjon om TP-ordningers uførepensjonsgrunnlag. Dette er manuelt registrerte data og ikke hentet fra TP-registeret eller andre eksterne kilder.
      */
     var afpTpoUpGrunnlag: AfpTpoUpGrunnlag? = null
-
-    /**
-     * Liste over hovedytelser som kan påvirke ytelsen. Kun fastsatt for EPS.
-     */
-    var PREG_vilkarsvedtakEPSListe: List<VilkarsVedtak> = mutableListOf()
 
 }

@@ -6,5 +6,5 @@ import java.io.Serializable
 class PersongrunnlagOmregningGrunnlag : Serializable {
     var persongrunnlagId: Long? = null
     var inntektsgrunnlagGrunnlagListe: List<Inntektsgrunnlag> = mutableListOf()
-    var isLonnsvekstOmregn = false
+    var lonnsvekstOmregn = false
 }

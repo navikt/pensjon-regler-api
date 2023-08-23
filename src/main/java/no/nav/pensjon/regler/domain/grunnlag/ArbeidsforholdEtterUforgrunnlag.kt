@@ -17,6 +17,6 @@ class ArbeidsforholdEtterUforgrunnlag : Serializable {
     /**
      * if it is lasting facilitated work
      */
-    var isVarigTilrettelagtArbeid = false
+    var varigTilrettelagtArbeid = false
 
 }

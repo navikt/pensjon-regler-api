@@ -67,11 +67,11 @@ class InstOpphPeriodegrunnlag : Serializable {
     /**
      * Angir om institusjonsoppholdet er overfårt til en annen institusjon.
      */
-    var isOverfort = false
+    var overfort = false
 
     /**
      * Kun brukt i PEN
      */
-    var isBruk: Boolean = true
+    var bruk: Boolean = true
 
 }

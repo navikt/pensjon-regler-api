@@ -14,7 +14,7 @@ class BarnDetalj : Serializable {
      * Angir om barnet bor med en begge foreldre.
      * "true" betyr fellesbarn, "false" betyr særkullsbarn.
      */
-    var isBorMedBeggeForeldre = false
+    var borMedBeggeForeldre = false
 
     /**
      * Fra-og-med dato for når barnet bor sammen med begge foreldrene.
@@ -29,10 +29,10 @@ class BarnDetalj : Serializable {
     /**
      * Angir om barnet har hatt inntekt over 1G.
      */
-    var isInntektOver1G = false
+    var inntektOver1G = false
 
     /**
      * Angir hvorvidt barnet er under utdanning.
      */
-    var isUnderUtdanning = false
+    var underUtdanning = false
 }

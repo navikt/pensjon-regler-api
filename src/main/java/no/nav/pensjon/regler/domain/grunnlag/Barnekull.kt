@@ -11,5 +11,5 @@ class Barnekull : Serializable {
     /**
      * Angir om persondetaljen brukes som grunnlag på kravet.
      */
-    var isBruk: Boolean = true
+    var bruk: Boolean = true
 }

@@ -30,34 +30,4 @@ class BeregningsvilkarPeriode : Serializable {
      */
     var vilkarListe: List<AbstraktVilkar> = mutableListOf()
 
-    /**
-     * PREG variabel for å markere perioden at beregningsgrunnlagOrdiner er konvertert.
-     */
-    var isPREG_konvertertOrdiner = false
-
-    /**
-     * PREG variabel for å markere perioden at beregningsgrunnlagYrkesskade er konvertert.
-     */
-    var isPREG_konvertertYrkesskade = false
-
-    /**
-     * PREG variabel som angir hvorvidt perioden er av betydning for uføretrygdopptjening. Hvis satt er ufgFom/ufgTom relevante.
-     */
-    var isPREG_uforetrygdOpptjening = false
-
-    /**
-     * PREG variabel som angir hvilket år denne periodens Uføregrad gjelder fra mht. opptjening fra uføretrygd.
-     */
-    var pREG_ufgFom: Date? = null
-
-    /**
-     * PREG variabel som angir hvilket år denne periodens Uføregrad gjelder til mht. opptjening fra uføretrygd.
-     */
-    var pREG_ufgTom: Date? = null
-
-    /**
-     * PREG variabel som angir om perioden representerer et opphår eller en gjenoppliving av Uføreytelsen.
-     */
-    var pREG_opphorEllerGjenopplivingType = 0
-
 }

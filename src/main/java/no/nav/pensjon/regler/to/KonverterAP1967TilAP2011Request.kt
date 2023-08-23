@@ -13,6 +13,6 @@ class KonverterAP1967TilAP2011Request {
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var beregning: Beregning? = null
     var virkFom: Date? = null
-    var isEpsMottarPensjon = false
+    var epsMottarPensjon = false
     var afpLivsvarig: AfpLivsvarig? = null
 }

@@ -22,10 +22,10 @@ open class SisteAldersberegning2011 : SisteBeregning() {
     var beholdninger: Beholdninger? = null // 2025
     var beholdningerAltKonv: Beholdninger? = null // Beholdninger for tapende konvensjon i siste aldersberegning.
     var eps: Persongrunnlag? = null
-    var isEpsMottarPensjon = false
+    var epsMottarPensjon = false
     var vilkarsvedtakEktefelletillegg: VilkarsVedtak? = null
     var avdodesPersongrunnlag: Persongrunnlag? = null
-    var isGjenlevenderettAnvendt = false
+    var gjenlevenderettAnvendt = false
     var anvendtGjenlevenderettVedtak: VilkarsVedtak? = null
     var beregningsMetode: BeregningMetodeTypeCti? = null
     var tt_anv_kap_20 = 0

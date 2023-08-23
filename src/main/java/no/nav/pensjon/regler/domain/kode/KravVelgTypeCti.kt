@@ -5,10 +5,10 @@ class KravVelgTypeCti : TypeCti {
      * Kode som angir detaljering av kravet.
      * Se K_KRAV_VELG_T
      */
-    var isHovedKravlinje = false
+    var hovedKravlinje = false
 
     constructor(kravVelgTypeCti: KravVelgTypeCti) : super(kravVelgTypeCti) {
-        isHovedKravlinje = kravVelgTypeCti.isHovedKravlinje
+        hovedKravlinje = kravVelgTypeCti.hovedKravlinje
     }
 
     constructor() : super()

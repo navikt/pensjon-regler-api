@@ -85,20 +85,6 @@ class UforeEkstra : Serializable {
      */
     var uforeperiodeYSK: BeregningUforeperiode? = null
 
-    /**
-     * Informasjon ang EØS beregning. Objektet sparer på data for bruk ved konvertering til AP.
-     * på UforeEkstra benyttes feltet kun som transport til toppnoden.
-     */
-    var pREG_eosEkstra: EosEkstra? = null
-
-    /**
-     * Angir om bruker fyller vilkårende for å kunne få ung ufør garanti.
-     * Brukes i BeregningsInformasjon.
-     * Settes av "Ung Ufør Ruleset Template".OpprettUforeEkstra.
-     */
-    var isPREG_vurdertUngUfor = false
-
-
     init {
         inntektkode1 = InntektKode1Cti("INT_NIV_UF")
         inntektkode2 = InntektKode2Cti("INT_IKKE_BER")

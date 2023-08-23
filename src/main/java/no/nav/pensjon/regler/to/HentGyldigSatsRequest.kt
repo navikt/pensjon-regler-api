@@ -7,7 +7,7 @@ class HentGyldigSatsRequest {
     var fomDato: Date? = null
     var tomDato: Date? = null
     var satsType: SatsTypeCti? = null
-    var isBeregnetSomGift = false
-    var isForsorgerEPSOver60 = false
-    var isUngUfor = false
+    var beregnetSomGift = false
+    var forsorgerEPSOver60 = false
+    var ungUfor = false
 }

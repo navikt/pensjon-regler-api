@@ -26,6 +26,6 @@ class GarantitilleggInformasjon : Serializable {
      * trygdetidsgrunnlag for kapittel 20. Denne estimering gjøres i forbindelse med
      * beregning av garantitilleggsbeholdning BER3156. Ref. CR 216411.
      */
-    var isEstimertTTkap19Benyttet = false
+    var estimertTTkap19Benyttet = false
 
 }

@@ -2,7 +2,6 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.Omsorgsopptjening
-import no.nav.pensjon.regler.domain.grunnlag.OpptjeningTypeMapping
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import java.io.Serializable
 
@@ -16,18 +15,25 @@ class OpptjeningUT : Serializable, Omsorgsopptjening {
     /**
      * Angir om et av de tre årene som er brukt.
      */
-    var isBrukt = false
+    var brukt = false
 
     /**
      * Angir om det er inntekt i avtaleland som angår den konvensjon som beregningsgrunnlaget inngår i.
      */
-    var inntektIAvtaleland = false
+    override var inntektIAvtaleland: Boolean = false
+    override val opptjeningsar: Int
+        get() = ar
+    override val verdi: Double
+        get() = avkortetBelop
 
     /**
      * Inntekten for et år ganget med forholdet mellom grunnbeløpet ved virk
      * og gjennomsnittlig grunnbeløp for inntektsåret.
      */
-    var justertBelop = 0.0
+    override var justertBelop: Double = 0.0
+
+    override val omsorg: Boolean
+        get() = omsorgsar
 
     /**
      * Pensjonsgivende inntekt.
@@ -70,7 +76,7 @@ class OpptjeningUT : Serializable, Omsorgsopptjening {
     /**
      * Angir om det finnes omsorgsopptjening for året.
      */
-    var isOmsorgsar = false
+    var omsorgsar = false
     /**
      * @return the justertPGI
      */
@@ -93,30 +99,4 @@ class OpptjeningUT : Serializable, Omsorgsopptjening {
      */
     var uforeopptjening = 0.0
 
-    /**
-     * Inneholder alle inntektstyper for dette året
-     */
-    var pREG_opptjeningTypeListe: List<OpptjeningTypeMapping> = mutableListOf()
-
-    /**
-     * Maks Uføregrad for dette året.
-     */
-    var pREG_maksUforegrad = 0
-
-    /**
-     * Maks yrkesskadegrad for dette året.
-     */
-    var pREG_maksYrkesskadegrad = 0
-
-    override fun getOpptjeningsar(): Int {
-        return ar
-    }
-
-    override fun getVerdi(): Double {
-        return avkortetBelop
-    }
-
-    override fun isOmsorg(): Boolean {
-        return isOmsorgsar
-    }
 }

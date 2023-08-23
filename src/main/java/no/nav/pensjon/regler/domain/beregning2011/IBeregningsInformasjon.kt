@@ -9,12 +9,12 @@ import no.nav.pensjon.regler.domain.kode.ResultatTypeCti
 interface IBeregningsInformasjon {
     var penPerson: PenPerson?
     var beregningsMetode: BeregningMetodeTypeCti?
-    var isEnsligPensjonInstOpph: Boolean
+    var ensligPensjonInstOpph: Boolean
     var instOppholdType: JustertPeriodeCti?
-    var isInstOpphAnvendt: Boolean
+    var instOpphAnvendt: Boolean
     var resultatType: ResultatTypeCti?
     var trygdetid: Int?
     var tt_anv: Int
     var vurdertBosattland: LandCti?
-    var isEksport: Boolean
+    var eksport: Boolean
 }

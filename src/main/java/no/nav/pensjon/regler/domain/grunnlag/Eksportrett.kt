@@ -7,7 +7,7 @@ class Eksportrett : Serializable {
     /**
      * Angir om personen har eksportrett eller ikke.
      */
-    var isEksportrett = false
+    var eksportrett = false
 
     /**
      * Angir land personen bor i.

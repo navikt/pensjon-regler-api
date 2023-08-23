@@ -251,17 +251,17 @@ class Beregning : IBeregning, Serializable {
      * dersom TP'en fra HJELPEBER er brukt. Da er også flagget bruk i beregningsrelasjonen som hjelpeberegningen
      * inngår i satt.
      */
-    var isIkkeTraverser = false
+    var ikkeTraverser = false
 
     /**
      * Er ektefelles totalinntekt, inkludert alle relevante inntekter > 2G.
      */
-    var isEktefelleInntektOver2g = false
+    var ektefelleInntektOver2g = false
 
     /**
      * Hvorvidt det er en P67 beregning.Gjelder alderspensjon .
      */
-    var isP67beregning = false
+    var p67beregning = false
 
     /**
      * årsak til periodisering av beregningen, G-justering, regelendring osv.
@@ -287,7 +287,7 @@ class Beregning : IBeregning, Serializable {
     /**
      * Angir om denne beregningen er top-noden av beregningene.
      */
-    var isTotalVinner = false
+    var totalVinner = false
 
     /**
      * Pensjonsgraden ved AFP,heltall mellom 0-100.
@@ -321,7 +321,7 @@ class Beregning : IBeregning, Serializable {
     /**
      * Angir om ektefellen mottar ytelser fra Folketrygden, dvs har inntekt av type PENF.
      */
-    var isEktefelleMottarPensjon = false
+    var ektefelleMottarPensjon = false
 
     /**
      * Andre beregningsdata ved beregning av uførepensjon.
@@ -342,7 +342,7 @@ class Beregning : IBeregning, Serializable {
      * Angir om beregningen er gjort med mindre enn full grad for ufg,afpPensjonsgrad eller tt_anv..
      * Er satt dersom ufg < 100%, tt_anv < 40 eller afpPensjongrad < 100%.
      */
-    var isGradert = false
+    var gradert = false
 
     /**
      * Inntekten som har ligget til grunn ved inntektsavkorting - Det er denne inntekten vi i Myggen vil kjøre inntektskontroll mot.
@@ -352,7 +352,7 @@ class Beregning : IBeregning, Serializable {
     /**
      * Angir om ytelsene er redusert på grunn av institusjonsopphold.
      */
-    var isRedusertPgaInstOpphold = false
+    var redusertPgaInstOpphold = false
 
     /**
      * Angir hvilken type institusjon beregningen angår.
@@ -375,7 +375,7 @@ class Beregning : IBeregning, Serializable {
      * Angir om opptjeningen fra det 65 året er brukt som opptjening i de 66 året fram til brukeren
      * fyller 70 år.
      */
-    var isBrukOpptjeningFra65I66Aret = false
+    var brukOpptjeningFra65I66Aret = false
 
     /**
      * Informasjon ang EØS beregning. Objektet sparer på data for bruk ved konvertering til AP.
@@ -403,7 +403,7 @@ class Beregning : IBeregning, Serializable {
     /*
      * Flagg som angir om ung ufør garanti er tatt bort ved eksport.
      */
-    var isUngUforGarantiFrafalt = false
+    var ungUforGarantiFrafalt = false
 
     /**
      * Intern PREG variabel.
@@ -420,49 +420,8 @@ class Beregning : IBeregning, Serializable {
     var yst: Date? = null
 
     /**
-     * Intern PREG variabel.
-     * Benyttes for å avgjøre hvilken beregningsmetode som skal kjøres for forsørgertillegg.
-     */
-    var pREG_ftType: String? = null
-
-    /**
-     * PREG versjonsnummer.
-     */
-    var pREG_versjon: String? = null
-
-    /**
      * Liste av merknader - forklaringer,unntak og avvisningsgrunner fra regelmotoren.
      */
     var merknadListe: List<Merknad> = mutableListOf()
-
-    /**
-     * Indikerer om beregningen er gjort på grunnlag av en GammelUngufør-garanti.
-     */
-    var isPREG_gammelUngUfor = false
-
-    /**
-     * Angir om den avdødes tt_anv ble valgt. Settes i regelsettet GJPbestemTrygdetidRS.
-     */
-    var isPREG_tt_anv_avdodBrukt = false
-
-    /**
-     * Holder på brukers originale tt_anv dersom den har blitt overskrevet.
-     */
-    var pREG_tt_anv_andre = 0
-
-    /**
-     * Sparer unna uforeEkstra i denne før det blir slettet i FjernUforeEkstraGJPRS;
-     */
-    var pREG_uforeEkstraAvdod: UforeEkstra? = null
-    var pREG_avtaleBeregningsmetode: String? = null
-
-    /**
-     * Prorata faktor anvendt for grunnpensjon.
-     */
-    var pREG_prorata_anv_gp = 0.0
-
-    /**
-     * @param merknad The merknad to set.
-     */
 
 }

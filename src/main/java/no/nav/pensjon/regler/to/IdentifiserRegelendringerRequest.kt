@@ -24,7 +24,7 @@ class IdentifiserRegelendringerRequest {
      * Angir om brukeren har AFP-privat
      * (dvs. AFP-livsvarig del og eventuellt kronetillegg/kompensasjonstillegg).
      */
-    var isAfpPrivat = false
+    var afpPrivat = false
 
     /**
      * Fra og med dato for regelendringer.

@@ -149,60 +149,9 @@ class Poengrekke : Serializable {
      var merknadListe: List<Merknad> = mutableListOf()
 
     /**
-     * Angir om omregnet FPP skal benyttes i godskrivning av framtidige år.
-     * Intern PREG variabel.
-     */
-    var isPREG_bevarFPPgrunnlag = false
-
-    /**
-     * Angir hvilket år poengrekken regnes fra. Intern PREG variabel.
-     */
-    var pREG_startar = 0
-
-    /**
-     * Angir hvilket år ordinåre poeng regnes til. Intern PREG variabel.
-     */
-    var pREG_tilar = 0
-
-    /**
-     * Angir hvilken dato ordinåre poeng regnes til. Intern PREG variabel.
-     */
-    var pREG_tildato: Date? = null
-
-    /**
-     * Angir hvilket år fremtidige poeng regnes til. Intern PREG variabel.
-     */
-    var pREG_sluttar = 0
-
-    /**
-     * Angir om FPP skal beregnes. Intern PREG variabel.
-     */
-    var isPREG_vilkar3_17 = false
-
-    /**
-     * Angir om FPP ikke skal omregnes til under 5. Intern PREG variabel.
-     */
-    var isPREG_FPPomregnetGaranti = false
-
-    /**
-     * Antall poengår etter 1991 og etter det 66. året. Intern PREG variabel.
-     */
-    var pREG_pa_67_70_e91 = 0
-
-    /**
-     * Antall reelle poengår totalt. Kan være over 40.
-     */
-    var pREG_pa_fa = 0
-
-    /**
-     * Angir om avdøde er død før avgang AP.
-     */
-    var pREG_dodForAP: Boolean? = null
-
-    /**
      * Flagg som viser om oppustert grunnlag fra pensjonsberegning fra TP-ordning er benyttet
      */
-    var isAfpTpoUpGrunnlagAnvendt = false
+    var afpTpoUpGrunnlagAnvendt = false
 
     /**
      * Det oppjusterte uførepensjonsgrunnlaget fra TP-ordningen som ble brukt i beregning av TPI
@@ -243,7 +192,7 @@ class Poengrekke : Serializable {
         pa_pro_rata_teller = poengrekke.pa_pro_rata_teller
         pa_pro_rata_nevner = poengrekke.pa_pro_rata_nevner
         fpa = poengrekke.fpa
-        isAfpTpoUpGrunnlagAnvendt = poengrekke.isAfpTpoUpGrunnlagAnvendt
+        afpTpoUpGrunnlagAnvendt = poengrekke.afpTpoUpGrunnlagAnvendt
         afpTpoUpGrunnlagOppjustert = poengrekke.afpTpoUpGrunnlagOppjustert
         tpiEtterHovedregel = poengrekke.tpiEtterHovedregel
         merknadListe = mutableListOf()

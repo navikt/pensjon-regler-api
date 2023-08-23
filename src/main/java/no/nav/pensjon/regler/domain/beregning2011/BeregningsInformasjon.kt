@@ -18,18 +18,18 @@ class BeregningsInformasjon : Serializable, IBeregningsInformasjon2011 {
     override var spt: Sluttpoengtall? = null
     override var opt: Sluttpoengtall? = null
     override var ypt: Sluttpoengtall? = null
-    override var isGrunnpensjonAvkortet = false
+    override var grunnpensjonAvkortet = false
     var merknadListe: List<Merknad> = mutableListOf()
-    override var isMottarMinstePensjonsniva = false
+    override var mottarMinstePensjonsniva = false
     override var minstepensjonArsak: String? = null
-    override var isRettPaGjenlevenderett = false
-    override var isGjenlevenderettAnvendt = false
-    override var isAvdodesTilleggspensjonBrukt = false
-    override var isAvdodesTrygdetidBrukt = false
-    override var isUngUfor = false
-    override var isUngUforAnvendt = false
-    override var isYrkesskadeRegistrert = false
-    override var isYrkesskadeAnvendt = false
+    override var rettPaGjenlevenderett = false
+    override var gjenlevenderettAnvendt = false
+    override var avdodesTilleggspensjonBrukt = false
+    override var avdodesTrygdetidBrukt = false
+    override var ungUfor = false
+    override var ungUforAnvendt = false
+    override var yrkesskadeRegistrert = false
+    override var yrkesskadeAnvendt = false
     override var yrkesskadegrad = 0
 
     // Fra IBeregningsInformasjon
@@ -37,18 +37,18 @@ class BeregningsInformasjon : Serializable, IBeregningsInformasjon2011 {
 
     // Fra IBeregningsInformasjon
     override var beregningsMetode: BeregningMetodeTypeCti? = null
-    override var isEksport = false
+    override var eksport = false
     override var resultatType: ResultatTypeCti? = null
     var tapendeBeregningsmetodeListe: List<TapendeBeregningsmetode> = mutableListOf()
     override var trygdetid: Int? = null
     override var tt_anv = 0
     override var vurdertBosattland: LandCti? = null
-    override var isEnsligPensjonInstOpph = false
+    override var ensligPensjonInstOpph = false
     override var instOppholdType: JustertPeriodeCti? = null
-    override var isInstOpphAnvendt = false
+    override var instOpphAnvendt = false
 
     // Avdødes tilleggspensjon
     var tp = 0.0
     var ttBeregnetForGrunnlagsrolle = 0
-    var isUngUforGarantiFrafalt = false
+    var ungUforGarantiFrafalt = false
 }

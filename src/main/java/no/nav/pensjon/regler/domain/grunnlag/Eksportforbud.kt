@@ -7,7 +7,7 @@ class Eksportforbud : Serializable {
     /**
      * Angir om personen har eksportforbud eller ikke.
      */
-    var isForbud = false
+    var forbud = false
 
     /**
      * Angir type eksportunntak.

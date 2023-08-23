@@ -4,6 +4,6 @@ class RettTilGjenlevendetillegg : AbstraktVilkar() {
     /**
      * Angir om gjenlevendetillegget skal beregnes som konvertert eller ikke.
      */
-    var isKonvertert = false
+    var konvertert = false
 
 }

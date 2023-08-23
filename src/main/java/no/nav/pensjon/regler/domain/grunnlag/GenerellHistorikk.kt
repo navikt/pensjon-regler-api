@@ -45,6 +45,6 @@ class GenerellHistorikk : Serializable {
     var sertillegg1943kull: Sertillegg? = null
 
     /* CR175446 - Gift eller tilsvarende med samme person siden 31.12.2010 */
-    var isGiftFor2011 = false
+    var giftFor2011 = false
 
 }

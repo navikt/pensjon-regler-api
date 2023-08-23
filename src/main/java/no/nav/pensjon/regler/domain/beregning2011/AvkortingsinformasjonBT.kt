@@ -50,11 +50,11 @@ class AvkortingsinformasjonBT : AbstraktAvkortingsinformasjon(), Serializable {
     /**
      * Flagg som angir om inntekt er periodisert pga kortere periode med barnetillegg enn uføretrygd.
      */
-    var isInntektPeriodisert = false
+    var inntektPeriodisert = false
 
     /**
      * Flagg som angir at fribeløp er periodisert pga barnetillegg i deler av året.
      */
-    var isFribelopPeriodisert = false
+    var fribelopPeriodisert = false
 
 }

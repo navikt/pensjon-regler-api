@@ -15,10 +15,10 @@ class Uforetrygdberegning : Beregning2011() {
     var uforegrad = 0
     var uforetidspunkt: Date? = null
     var egenopptjentUforetrygd: EgenopptjentUforetrygd? = null
-    var isEgenopptjentUforetrygdBest = false
+    var egenopptjentUforetrygdBest = false
     var yrkesskadegrad = 0
     var yrkesskadetidspunkt: Date? = null
-    var isMottarMinsteytelse = false
+    var mottarMinsteytelse = false
 
     /* Bygger opp årsakskoder som viser hvorfor personen mottar minsteytelse */
     var minsteytelseArsak: String? = null
@@ -28,7 +28,7 @@ class Uforetrygdberegning : Beregning2011() {
     var instOppholdType: JustertPeriodeCti? = null
 
     /* Angir om ytelsen er endret, enten  økt eller redusert. */
-    var isInstOpphAnvendt = false
+    var instOpphAnvendt = false
 
     /**
      * Ekstra informasjon til beregnet uføretrygd.

@@ -26,7 +26,7 @@ class InstOpphReduksjonsperiode : Serializable {
     /**
      * Angir om reduksjon er grunnet varighet.
      */
-    var isReduksjonGrunnetVarighet = false
+    var reduksjonGrunnetVarighet = false
 
     /**
      * Angir om institusjonsoppholdsperioden medfører en økning eller reduksjon av pensjonsytelsen.
@@ -36,6 +36,6 @@ class InstOpphReduksjonsperiode : Serializable {
     /**
      * Angir om bruker har forsørgeransvar ved institusjonsopphold
      */
-    var isForsorgeransvar = false
+    var forsorgeransvar = false
 
 }

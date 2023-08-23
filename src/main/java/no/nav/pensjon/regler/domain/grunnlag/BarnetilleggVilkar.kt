@@ -8,5 +8,5 @@ import java.io.Serializable
  */
 class BarnetilleggVilkar : Serializable {
     var btVilkarType: BarnetilleggVilkarTypeCti? = null
-    var isVurdertTil = false
+    var vurdertTil = false
 }

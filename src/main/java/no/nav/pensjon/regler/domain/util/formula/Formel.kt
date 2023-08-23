@@ -11,10 +11,10 @@ class Formel : Serializable {
     var notasjon: String = ""
     var innhold: String? = null
     var vekt = 0
-    var isRequiresValidation = false
-    var isRenameAllowed = false
-    var isDomain = false
-    var isAutoResolve = false
+    var requiresValidation = false
+    var renameAllowed = false
+    var domain = false
+    var autoResolve = false
     var varMap: HashMap<String, Number> = HashMap()
     var formelVarMap: HashMap<String, Formel> = HashMap()
     var subFormelList: ArrayList<Formel> = ArrayList()
@@ -29,10 +29,10 @@ class Formel : Serializable {
         notasjon = f.notasjon
         innhold = f.innhold
         vekt = f.vekt
-        this.isRequiresValidation = f.isRequiresValidation
-        this.isRenameAllowed = f.isRenameAllowed
-        this.isDomain = f.isDomain
-        this.isAutoResolve = f.isAutoResolve
+        this.requiresValidation = f.requiresValidation
+        this.renameAllowed = f.renameAllowed
+        this.domain = f.domain
+        this.autoResolve = f.autoResolve
         tokenSet = HashSet(f.tokenSet)
         varMap = HashMap(f.varMap)
         formelVarMap = HashMap()
@@ -58,7 +58,7 @@ class Formel : Serializable {
     private fun toTreeString(level: Int, maxLevel: Int): String {
         val s = StringBuilder()
         s.append(StringUtils.repeat(' ', level * 2)).append(
-            """Formelnavn: '$navn' felt: '${if (felt == null) "---" else felt}' domain: ${isDomain} level: $level resultat: ${if (resultat == null) "---" else resultat} vekt: $vekt ant.subFormler: ${subFormelList.size} hash: ${this.hashCode()}
+            """Formelnavn: '$navn' felt: '${if (felt == null) "---" else felt}' domain: ${domain} level: $level resultat: ${if (resultat == null) "---" else resultat} vekt: $vekt ant.subFormler: ${subFormelList.size} hash: ${this.hashCode()}
 """
         )
         s.append(StringUtils.repeat(' ', level * 2)).append("    notasjon:\t'$notasjon'\n")
@@ -86,7 +86,7 @@ class Formel : Serializable {
         val s = StringBuilder()
         s.append(StringUtils.repeat(' ', level * 2)).append(
             """
-    <formel title='$navn' felt='${if (felt == null) "---" else felt}' domain='${isDomain}' level='$level' resultat='${if (resultat == null) "---" else resultat}' vekt='$vekt' antSubFormler='${subFormelList.size}' >
+    <formel title='$navn' felt='${if (felt == null) "---" else felt}' domain='${domain}' level='$level' resultat='${if (resultat == null) "---" else resultat}' vekt='$vekt' antSubFormler='${subFormelList.size}' >
     
     """.trimIndent()
         )

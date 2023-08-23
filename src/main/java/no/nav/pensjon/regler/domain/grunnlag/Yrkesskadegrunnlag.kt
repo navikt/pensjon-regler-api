@@ -25,7 +25,7 @@ class Yrkesskadegrunnlag : Serializable {
     /**
      * Angir om yrkesskaden skyldes yrkessykdom.
      */
-    var isYrkessykdom = false
+    var yrkessykdom = false
 
     /**
      * Det er en minimumsgaranti mht poengtall for som gjelder for spesielle
@@ -37,7 +37,7 @@ class Yrkesskadegrunnlag : Serializable {
     /**
      * Bruker forsørget av avdød iht paragraf 17-12.2
      */
-    var isBrukerForsorgetAvAnnen = false
+    var brukerForsorgetAvAnnen = false
 
     /**
      * Antatt årlig inntekt på skadetidspunktet.
@@ -47,5 +47,5 @@ class Yrkesskadegrunnlag : Serializable {
     /**
      * Angir om yrkesskadegrunnlaget brukes som grunnlag på kravet.
      */
-    var isBruk: Boolean = true
+    var bruk: Boolean = true
 }

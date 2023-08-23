@@ -54,7 +54,7 @@ class Inntektsgrunnlag
     /**
      * Angir om inntektsgrunnlaget brukes som grunnlag på kravet.
      */
-    var isBruk: Boolean = true
+    var bruk: Boolean = true
 
     /**
      * Kilden til inntektsgrunnlaget.

@@ -55,12 +55,12 @@ class PersonDetalj : Serializable {
      * Angir om det er opprettet barne- eller ektefelletillegg kravlinje for persongrunnlaget
      * med gitt rolle.
      */
-    var isTillegg = false
+    var tillegg = false
 
     /**
      * Angir om persondetaljen brukes som grunnlag på kravet.
      */
-    var isBruk: Boolean = true
+    var bruk: Boolean = true
 
     /**
      * Angir kilden til persondetaljen.

@@ -75,15 +75,15 @@ class VilkarsVedtak : Serializable {
     var penPerson: PenPerson? = null
     var vilkarsprovresultat: AbstraktVilkarsprovResultat? = null
     var begrunnelse: BegrunnelseTypeCti? = null
-    var isAvslattKapittel19 = false
-    var isAvslattGarantipensjon = false
+    var avslattKapittel19 = false
+    var avslattGarantipensjon = false
     var pREG_persongrunnlag: Persongrunnlag? = null
-    var isVurderSkattefritakET = false
+    var vurderSkattefritakET = false
 
     // CR170026
-    var isUnntakHalvMinstepensjon = false
-    var isEpsAvkallEgenPensjon = false
-    var isEpsRettEgenPensjon = false
+    var unntakHalvMinstepensjon = false
+    var epsAvkallEgenPensjon = false
+    var epsRettEgenPensjon = false
 
     /**
      * List av Beregningsvilkarperioder

@@ -12,7 +12,7 @@ class RevurderingYtelse1967Request {
     var vilkarsvedtakListe: Vector<VilkarsVedtak> = Vector()
     var sisteBeregning1967: SisteBeregning1967? = null
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
-    var isEpsMottarPensjon = false
-    var isBeregnForsorgingstillegg = false
-    var isBeregnInstitusjonsopphold = false
+    var epsMottarPensjon = false
+    var beregnForsorgingstillegg = false
+    var beregnInstitusjonsopphold = false
 }

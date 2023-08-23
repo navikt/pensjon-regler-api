@@ -8,7 +8,7 @@ class Unntak : Serializable {
     /**
      * Angir om personen har unntak eller ikke.
      */
-    var isUnntak = false
+    var unntak = false
 
     /**
      * Angir type unntak.

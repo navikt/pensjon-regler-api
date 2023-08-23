@@ -30,7 +30,7 @@ class AFPEtteroppgjorgrunnlag : Serializable {
      * Skal settes til true når personen har gått over til en annen type pensjon midt i
      * oppgjørsåret
      */
-    var isOvergangTilAnnenPensjon = false
+    var overgangTilAnnenPensjon = false
 
     /**
      * Liste av Utbetalingsperioder.

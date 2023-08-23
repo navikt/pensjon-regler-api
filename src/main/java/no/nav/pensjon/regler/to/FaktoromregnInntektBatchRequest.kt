@@ -22,5 +22,5 @@ class FaktoromregnInntektBatchRequest {
     /**
      * Angir om tjenestekallet er en batch jobb eller ikke.
      */
-    var isAutomaticJob = false
+    var automaticJob = false
 }

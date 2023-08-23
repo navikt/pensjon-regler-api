@@ -45,7 +45,7 @@ class Opptjeningsgrunnlag : Serializable {
     /**
      * Angir om opptjeningsgrunnlaget brukes somm grunnlag på kravet.
      */
-    var isBruk: Boolean = true
+    var bruk: Boolean = true
 
     /**
      * Kilden til opptjeningsgrunnlaget.

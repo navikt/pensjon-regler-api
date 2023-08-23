@@ -11,7 +11,7 @@ class Minsteytelse : Serializable {
     var merknadListe: List<Merknad> = mutableListOf()
     var satsMinsteytelse: SatsMinsteytelse? = null
     var arsbelop = 0
-    var isEksportforbud = false
+    var eksportforbud = false
 
     /**
      * Trygdetid som er brukt ved beregning av minsteytelsen.

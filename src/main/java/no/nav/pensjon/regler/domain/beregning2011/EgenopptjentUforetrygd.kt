@@ -24,7 +24,7 @@ class EgenopptjentUforetrygd : Serializable {
                 field = aBeregningsgrunnlag
             }
         }
-    var isBeregningsgrunnlagYrkesskadeBest = false
+    var beregningsgrunnlagYrkesskadeBest = false
 
     /**
      * Prosentsats brukt for Påslag.

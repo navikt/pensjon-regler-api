@@ -14,7 +14,7 @@ class RevurderingAlderspensjon2025Request {
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: ArrayList<VilkarsVedtak> = ArrayList()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
-    var isEpsMottarPensjon = false
+    var epsMottarPensjon = false
     var forholdstallUtvalg: ForholdstallUtvalg? = null
     var delingstallUtvalg: DelingstallUtvalg? = null
     var virkFom: Date? = null

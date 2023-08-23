@@ -10,9 +10,9 @@ class BeregnYtelseRequest {
     var vedtaksliste = Vector<VilkarsVedtak>()
     var fom: Date? = null
     var tom: Date? = null
-    var isEktefelleMottarPensjon = false
-    var isBeregnForsorgingstillegg = false
-    var isBeregnInstitusjonsopphold = false
+    var ektefelleMottarPensjon = false
+    var beregnForsorgingstillegg = false
+    var beregnInstitusjonsopphold = false
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var vedtakVirkFom: Date? = null
 }

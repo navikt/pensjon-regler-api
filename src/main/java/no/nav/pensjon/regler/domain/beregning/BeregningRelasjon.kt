@@ -17,7 +17,7 @@ class BeregningRelasjon : Serializable {
     /**
      * Angir om beregningen er brukt (helt eller delvis) i beregningen den tilhører.
      */
-    var isBruk = false
+    var bruk = false
 
     /**
      * Referanse tilbake til beregning hvor beregningsrelasjon inngår i delberegningslisten.

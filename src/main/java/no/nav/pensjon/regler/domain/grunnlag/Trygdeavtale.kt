@@ -33,7 +33,7 @@ class Trygdeavtale : Serializable {
     /**
      * Angir om personen omfattes av avtalens personkrets
      */
-    var isOmfattesavAvtalensPersonkrets = false
+    var omfattesavAvtalensPersonkrets = false
 
     /**
      * Dato for kravdato i avtale

@@ -9,6 +9,6 @@ class Uforegrad : AbstraktBeregningsvilkar() {
     /**
      * Angir hvilende rett til garantigrad.
      */
-    var isErGarantigrad = false
+    var erGarantigrad = false
 
 }

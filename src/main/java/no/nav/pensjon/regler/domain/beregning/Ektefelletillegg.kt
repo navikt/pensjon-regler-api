@@ -18,7 +18,7 @@ class Ektefelletillegg : Ytelseskomponent() {
     /**
      * Angir om tillegget er avkortet.
      */
-    var isAvkortet = false
+    var avkortet = false
 
     /**
      * årsaken(e) til avkorting. Satt dersom avkortet er true.
@@ -58,7 +58,7 @@ class Ektefelletillegg : Ytelseskomponent() {
      * Skattefritaket skal ikke gjelde alderspensjonister som tilstøs ektefelletillegg med virkning tidligst
      * 1. januar 2011
      */
-    var isSkattefritak = false
+    var skattefritak = false
 
     init {
         ytelsekomponentType = YtelsekomponentTypeCti("ET")

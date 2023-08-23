@@ -36,7 +36,7 @@ class InntektsavkortningUforetrygdRequest {
     /**
      * Angir om inntektsavkortingen skal gjøres på bakgrunn av reglene for etteroppgjør.
      */
-    var isEtteroppgjor = false
+    var etteroppgjor = false
 
     /**
      * Inneholder informasjon knyttet til etteroppgjør.

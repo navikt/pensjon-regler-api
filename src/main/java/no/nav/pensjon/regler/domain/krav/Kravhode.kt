@@ -33,13 +33,13 @@ class Kravhode : Serializable {
     /**
      * Angir om søker skal ha afptillegg.
      */
-    var isAfptillegg = false
+    var afptillegg = false
 
     /**
      * Angir om opptjeningen fra det 65 året skal brukes som opptjening i det 66 år fram til brukeren fyller 70 år.
      * Settes av Regelmotoren første gang.
      */
-    var isBrukOpptjeningFra65I66Aret = false
+    var brukOpptjeningFra65I66Aret = false
 
     /**
      * Angir detaljering i kravet,brukes i barnepensjon.
@@ -49,22 +49,22 @@ class Kravhode : Serializable {
     /**
      * Angir om personen som kravet gjelder har bodd eller arbeidet utenlands:
      */
-    var isBoddEllerArbeidetIUtlandet = false
+    var boddEllerArbeidetIUtlandet = false
 
     /**
      * Flagg som angir om brukerens far har bodd eller arbeidet i utlandet.
      */
-    var isBoddArbeidUtlandFar = false
+    var boddArbeidUtlandFar = false
 
     /**
      * Flagg som angir om brukerens mor har bodd eller arbeidet i utlandet.
      */
-    var isBoddArbeidUtlandMor = false
+    var boddArbeidUtlandMor = false
 
     /**
      * Flagg som angir om brukerens avdøde E/P/S har bodd eller arbeidet i utlandet.
      */
-    var isBoddArbeidUtlandAvdod = false
+    var boddArbeidUtlandAvdod = false
     var uttaksgradListe: List<Uttaksgrad> = mutableListOf()
         set(value) {
             field = value
@@ -77,17 +77,6 @@ class Kravhode : Serializable {
      */
     var sisteSakstypeForAP: SakTypeCti? = null
 
-    /**
-     * Angir om ektefellen mottar pensjon.
-     * Innført ifm CR140475. BeregnYtelse blir kalt med flagget ektefelleMottarPensjon i Request-objektet.
-     * Det flagget blir overfårt til PREG_epsMottarPensjon i startBeregnYtelse slik at det blir med inn
-     * til initPREG(kravhode, ..). initPREG utvides til å kalle en ny funksjon settEpsMottarPensjon som
-     * setter flagget tilknyttet.mottarPensjon lik ektefelleMottarPensjon i Request-objektet.
-     * Dermed kan regelsettet TilknyttetHarPensjonRS i støttefunksjoner kun bytte innholdet til å bruke
-     * tilknyttet.mottarPensjon istedet for å se etter PENF inntekt osv.
-     */
-    var isPREG_epsMottarPensjon = false
-
     /*
 	* Felt for å tre p_satsGP fra SisteAldersberegning2011.basispensjon.gp.p_satsGP  inn til BestemPsatsGPRS
 	* i forbindelse med kall tilBER 3152 RevurderingOpptjening. Innført ifm PK15267/PEN6372
@@ -97,7 +86,7 @@ class Kravhode : Serializable {
     /*
     * Angir om barnetilleggsgrunnlag er på nytt format (Gjelder per i dag uføretrygd).
      */
-    var isBtVurderingsperiodeBenyttet = false
+    var btVurderingsperiodeBenyttet = false
 
     /**
      * Sorterer på nyeste fomDato - denne blir uttaksgradListe.get(0)

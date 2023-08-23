@@ -34,12 +34,12 @@ class GjenlevendetilleggInformasjon : Serializable {
     /**
      * Angir om avdøde ga opphav til gjenlevendepensjon.
      */
-    var isGjenlevendepensjon = false
+    var gjenlevendepensjon = false
 
     /**
      * Angir om ung ufør ble anvendt for avdøde.
      */
-    var isMinsteYtelseBenyttetUngUfor = false
+    var minsteYtelseBenyttetUngUfor = false
 
     /**
      * Minsteytelsen med avdødes egen trygdetid.
@@ -54,7 +54,7 @@ class GjenlevendetilleggInformasjon : Serializable {
     /**
      * Yrkesskade beregnet for avdød.
      */
-    var isYrkesskade = false
+    var yrkesskade = false
 
     /**
      * Avdødes beregningsgrunnlag for yrkesskade.

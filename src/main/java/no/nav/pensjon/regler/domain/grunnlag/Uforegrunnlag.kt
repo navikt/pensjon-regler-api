@@ -45,7 +45,7 @@ class Uforegrunnlag : Serializable {
     /**
      * Om tilfellet er en reaktivisering- f.eks har forsøkt å jobbe, men forsøket feilet.
      */
-    var isReaktivisering = false
+    var reaktivisering = false
 
     /**
      * Dato når reaktivering startet
@@ -55,30 +55,30 @@ class Uforegrunnlag : Serializable {
     /**
      * Opplysning om at uførepensjonen skal utbetales til arbeidsgiver.
      */
-    var isLonnstilskudd = false
+    var lonnstilskudd = false
 
     /*
        * Forhøyelse av Uføregrad uten nytt uføretidspunkt.
        * Brukes i skjermbildet for validering og mulighet til å gi feilmelding
        * dersom saksbehandler ikke har satt nytt uføretidspunkt.
        */
-    var isForhoyelseUtenNyttUft = false
+    var forhoyelseUtenNyttUft = false
 
     /**
      * Angir om personen er "ung ufør".Settes av saksbehandler.
      * Brukes ikke i PREG. Det er garantertTPUngUfor som brukes istedet.
      */
-    var isUngUfor = false
+    var ungUfor = false
 
     /**
      * Angir on årlig inntekt er større enn G på uføretidspunktet.
      */
-    var isArligInntektMinst1g = false
+    var arligInntektMinst1g = false
 
     /**
      * Unntak for ventetid etter §12-12.
      */
-    var isUnntakVentetid12_12 = false
+    var unntakVentetid12_12 = false
 
     /**
      * Kode for yrke til den Uføre.
@@ -90,7 +90,7 @@ class Uforegrunnlag : Serializable {
     /**
      * Garantert tilleggspensjon til ung ufør fådt før 1940.
      */
-    var isGarantertTPUngUfor = false
+    var garantertTPUngUfor = false
 
     /*
        * Alternativt uføretidspunkt ung ufør ved krav før 36 år.
@@ -100,15 +100,10 @@ class Uforegrunnlag : Serializable {
     /**
      * Hele eller deler av uførheten skyldes yrkesskade.
      */
-    var isUforhetSkyldesYrkesskade = false
+    var uforhetSkyldesYrkesskade = false
 
     /**
      * Angir om Uføregrunnlaget brukes som grunnlag på kravet.
      */
-    var isBruk: Boolean = true
-
-    /**
-     * Angir om Uføregrunnlaget brukes som grunnlag på kravet.
-     */
-    var isPREG_nedsattUfg = false
+    var bruk: Boolean = true
 }

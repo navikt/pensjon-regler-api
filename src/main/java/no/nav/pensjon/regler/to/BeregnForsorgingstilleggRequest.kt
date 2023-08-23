@@ -77,7 +77,7 @@ class BeregnForsorgingstilleggRequest {
      * Ektefelletillegg for uføretrygd for søker
      */
     var ektefelletilleggUT: EktefelletilleggUT? = null
-    var isEtteroppgjor = false
+    var etteroppgjor = false
     var etteroppgjorGrunnlag: EtteroppgjorGrunnlag? = null
 
     /**

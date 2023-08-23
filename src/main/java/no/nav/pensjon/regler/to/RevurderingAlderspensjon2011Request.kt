@@ -12,7 +12,7 @@ class RevurderingAlderspensjon2011Request() {
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: Vector<VilkarsVedtak> = Vector()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
-    var isEpsMottarPensjon = false
+    var epsMottarPensjon = false
     var forholdstallUtvalg: ForholdstallUtvalg? = null
     var virkFom: Date? = null
     var virkTom: Date? = null

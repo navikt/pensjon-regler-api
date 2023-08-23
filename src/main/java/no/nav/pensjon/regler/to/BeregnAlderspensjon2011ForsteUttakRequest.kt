@@ -14,6 +14,6 @@ class BeregnAlderspensjon2011ForsteUttakRequest {
     var virkFom: Date? = null
     var virkTom: Date? = null
     var forholdstallUtvalg: ForholdstallUtvalg? = null
-    var isEktefellenMottarPensjon = false
+    var ektefellenMottarPensjon = false
     var afpLivsvarig: AfpLivsvarig? = null
 }

@@ -5,7 +5,7 @@ import no.nav.pensjon.regler.domain.kode.GarantipenNivaCti
 import java.io.Serializable
 
 class Garantipensjonsniva : Serializable {
-    var isEktefelleInntektOver2G = false
+    var ektefelleInntektOver2G = false
     var belop = 0.0
     var belopIkkeProratisert = 0.0
     var sats = 0.0

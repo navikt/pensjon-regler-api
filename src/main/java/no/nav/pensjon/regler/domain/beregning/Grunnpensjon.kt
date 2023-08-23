@@ -18,7 +18,7 @@ open class Grunnpensjon : Ytelseskomponent {
      * Ordinår, forhøyet
      */
     var satsType: GPSatsTypeCti? = null
-    var isEktefelleInntektOver2G = false
+    var ektefelleInntektOver2G = false
 
     /**
      * Trygdetid anvendt i beregning av grunnpensjon.
@@ -39,7 +39,7 @@ open class Grunnpensjon : Ytelseskomponent {
         if (gp.satsType != null) {
             satsType = GPSatsTypeCti(gp.satsType!!)
         }
-        isEktefelleInntektOver2G = gp.isEktefelleInntektOver2G
+        ektefelleInntektOver2G = gp.ektefelleInntektOver2G
         if (gp.anvendtTrygdetid != null) {
             anvendtTrygdetid = AnvendtTrygdetid(gp.anvendtTrygdetid!!)
         }

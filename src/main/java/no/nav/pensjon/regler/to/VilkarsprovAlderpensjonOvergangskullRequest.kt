@@ -20,5 +20,5 @@ class VilkarsprovAlderpensjonOvergangskullRequest {
      * Read only property for vilkarsvedtakListe as array
      * @return array of VilkarsVedtak
      */
-    var isUtforVilkarsberegning = false
+    var utforVilkarsberegning = false
 }

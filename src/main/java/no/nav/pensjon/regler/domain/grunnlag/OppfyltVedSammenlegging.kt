@@ -7,7 +7,7 @@ class OppfyltVedSammenlegging : Serializable {
     /**
      * Angir om kriteriet er oppfylt eller ikke.
      */
-    var isOppfylt = false
+    var oppfylt = false
 
     /**
      * Angir avtaleland.

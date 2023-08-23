@@ -7,7 +7,7 @@ class UforetrygdEtteroppgjor : Serializable {
     /**
      * Angir om det har vært arbeidsforsøk i etteroppgjørsåret.
      */
-    var isArbeidsforsok = false
+    var arbeidsforsok = false
 
     /**
      * Angir start av arbeidsforsøk.

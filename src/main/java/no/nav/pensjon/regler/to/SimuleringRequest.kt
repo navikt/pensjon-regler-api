@@ -6,9 +6,9 @@ import java.util.*
 class SimuleringRequest {
     var simulering: Simulering? = null
     var fom: Date? = null
-    var isEktefelleMottarPensjon = false
-    var isBeregnForsorgingstillegg = false
-    var isBeregnInstitusjonsopphold = false
+    var ektefelleMottarPensjon = false
+    var beregnForsorgingstillegg = false
+    var beregnInstitusjonsopphold = false
 
     constructor()
     constructor(
@@ -20,9 +20,9 @@ class SimuleringRequest {
     ) {
         this.simulering = simulering
         this.fom = fom
-        this.isEktefelleMottarPensjon = ektefelleMottarPensjon
-        this.isBeregnForsorgingstillegg = beregnForsorgingstillegg
-        this.isBeregnInstitusjonsopphold = beregnInstitusjonsopphold
+        this.ektefelleMottarPensjon = ektefelleMottarPensjon
+        this.beregnForsorgingstillegg = beregnForsorgingstillegg
+        this.beregnInstitusjonsopphold = beregnInstitusjonsopphold
     }
 
     constructor(simulering: Simulering?, fom: Date?) {

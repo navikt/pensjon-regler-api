@@ -8,12 +8,12 @@ class SatsMinsteytelse : Serializable {
     var sats = 0.0
     var satsType: MinsteytelseNivaCti? = null
     var benyttetSivilstand: BorMedTypeCti? = null
-    var isBenyttetUngUfor = false
-    var isOppfyltUngUfor = false
+    var benyttetUngUfor = false
+    var oppfyltUngUfor = false
 
     /**
      * Angir om ung Uføregaranti ikke er benyttet pga eksportforbud.
      */
-    var isEksportForbudUngUfor = false
+    var eksportForbudUngUfor = false
 
 }

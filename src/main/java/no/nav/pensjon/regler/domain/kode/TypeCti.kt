@@ -8,7 +8,7 @@ open class TypeCti : Serializable {
     var dekode: String? = null
     var dato_fom: Date? = null
     var dato_tom: Date? = null
-    var isEr_gyldig = false
+    var er_gyldig = false
     var kommentar: String? = null
 
     constructor(typeCti: TypeCti) {
@@ -20,14 +20,14 @@ open class TypeCti : Serializable {
         if (typeCti.dato_tom != null) {
             dato_tom = typeCti.dato_tom!!.clone() as Date
         }
-        isEr_gyldig = typeCti.isEr_gyldig
+        er_gyldig = typeCti.er_gyldig
         kommentar = typeCti.kommentar
     }
 
     constructor() : super()
     constructor(kode: String?) : super() {
         this.kode = kode
-        isEr_gyldig = true
+        er_gyldig = true
     }
 
     /*

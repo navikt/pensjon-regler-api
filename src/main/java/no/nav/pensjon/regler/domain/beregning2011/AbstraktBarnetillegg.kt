@@ -13,7 +13,7 @@ abstract class AbstraktBarnetillegg protected constructor() : Ytelseskomponent()
     /**
      * Angir om tillegget er avkortet.
      */
-    var isAvkortet = false
+    var avkortet = false
 
     /**
      * Differansetillegg ved barnetillegg. Anvendes dersom primårt land for BT er et annet EØS land

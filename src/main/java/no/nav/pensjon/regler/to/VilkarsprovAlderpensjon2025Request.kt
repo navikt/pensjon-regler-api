@@ -16,6 +16,6 @@ class VilkarsprovAlderpensjon2025Request {
     var afpLivsvarig: AfpLivsvarig? = null
     var afpVirkFom: Date? = null
     var sisteBeregning: SisteAldersberegning2011? = null
-    var isUtforVilkarsberegning = false
+    var utforVilkarsberegning = false
     var garantitilleggsbeholdningGrunnlag: GarantitilleggsbeholdningGrunnlag? = null
 }

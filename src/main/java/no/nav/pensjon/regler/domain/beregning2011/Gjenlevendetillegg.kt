@@ -41,7 +41,7 @@ class Gjenlevendetillegg() : Ytelseskomponent(), UforetrygdYtelseskomponent, IFo
      * Angir om gjenlevendetillegget er beregnet som konvertert
      * eller iht. nye regler for gjenlevendetillegg innvilget fom. 01.01.2015.
      */
-    var isNyttGjenlevendetillegg = false
+    var nyttGjenlevendetillegg = false
     /**
      * @return the avkortingsfaktorGJT
      */

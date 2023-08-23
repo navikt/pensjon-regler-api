@@ -21,12 +21,12 @@ class PoengarManuell : Serializable {
     /**
      * Angir om poengåret skal brukes i pro rata beregning.
      */
-    var isIkkeProrata = false
+    var ikkeProrata = false
 
     /**
      * Angir om poengåret skal brukes i alternativ pro rata beregning.
      */
-    var isIkkeAlternativProrata = false
+    var ikkeAlternativProrata = false
 
     /**
      * Avtaleland som poengår ble opptjent i.

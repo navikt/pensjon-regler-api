@@ -14,5 +14,5 @@ class VilkarsprovAlderpensjon2011Request {
     var forholdstallUtvalg: ForholdstallUtvalg? = null
     var afpLivsvarig: AfpLivsvarig? = null
     var sisteBeregning: SisteAldersberegning2011? = null
-    var isUtforVilkarsberegning = false
+    var utforVilkarsberegning = false
 }

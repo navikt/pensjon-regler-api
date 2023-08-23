@@ -40,7 +40,7 @@ class TrygdetidRequest {
     /**
      * Angir om personen har bodd eller arbeidet i utlandet.
      */
-    var isBoddEllerArbeidetIUtlandet = false
+    var boddEllerArbeidetIUtlandet = false
 
     /**
      * Regelverktype bestemmer om trygdetid skal regnes etter gamle eller nye regler.

@@ -4,11 +4,11 @@ class TidligereGjenlevendePensjon : AbstraktBeregningsvilkar() {
     /**
      * Angir om bruker mottok GJP som fålge av avdødes dødsfall.
      */
-    var isSokerMottokGJPForAvdod = false
+    var sokerMottokGJPForAvdod = false
 
     /**
      * Angir om avdøde hadde inntekt på minst 1G før dødsfall
      */
-    var isArligPGIMinst1G = false
+    var arligPGIMinst1G = false
 
 }

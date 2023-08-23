@@ -16,7 +16,7 @@ class BeregnAlderspensjon2025ForsteUttakRequest {
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var forholdstallUtvalg: ForholdstallUtvalg? = null
     var delingstallUtvalg: DelingstallUtvalg? = null
-    var isEpsMottarPensjon = false
+    var epsMottarPensjon = false
     var afpLivsvarig: AfpLivsvarig? = null
     var garantitilleggsbeholdningGrunnlag: GarantitilleggsbeholdningGrunnlag? = null
 }

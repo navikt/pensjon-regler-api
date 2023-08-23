@@ -19,5 +19,5 @@ class BeregnOvergangskullRequest {
     var sisteAldersBeregning: SisteAldersberegning2011? = null
     var nettoUPellerGJP = 0.0
     var nettoUPellerGJPresultatType: ResultatTypeCti? = null
-    var isEpsMottarPensjon = false
+    var epsMottarPensjon = false
 }

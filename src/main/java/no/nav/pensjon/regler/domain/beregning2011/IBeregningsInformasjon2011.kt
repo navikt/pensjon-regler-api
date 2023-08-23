@@ -4,21 +4,21 @@ import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.beregning.Sluttpoengtall
 
 interface IBeregningsInformasjon2011 : IBeregningsInformasjon {
-    var isAvdodesTilleggspensjonBrukt: Boolean
-    var isAvdodesTrygdetidBrukt: Boolean
+    var avdodesTilleggspensjonBrukt: Boolean
+    var avdodesTrygdetidBrukt: Boolean
     var forholdstall67: Double
     var forholdstallUttak: Double
-    var isGjenlevenderettAnvendt: Boolean
-    var isGrunnpensjonAvkortet: Boolean
-    var isMottarMinstePensjonsniva: Boolean
+    var gjenlevenderettAnvendt: Boolean
+    var grunnpensjonAvkortet: Boolean
+    var mottarMinstePensjonsniva: Boolean
     var minstepensjonArsak: String?
     var opt: Sluttpoengtall?
-    var isRettPaGjenlevenderett: Boolean
+    var rettPaGjenlevenderett: Boolean
     var spt: Sluttpoengtall?
-    var isUngUfor: Boolean
-    var isUngUforAnvendt: Boolean
+    var ungUfor: Boolean
+    var ungUforAnvendt: Boolean
     var ypt: Sluttpoengtall?
-    var isYrkesskadeAnvendt: Boolean
+    var yrkesskadeAnvendt: Boolean
     var yrkesskadegrad: Int
-    var isYrkesskadeRegistrert: Boolean
+    var yrkesskadeRegistrert: Boolean
 }

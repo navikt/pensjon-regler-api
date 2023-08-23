@@ -28,11 +28,11 @@ class Utenlandsopphold : Serializable {
     /**
      * Har personen bodd i utlandet
      */
-    var isBodd = false
+    var bodd = false
 
     /**
      * Har personen arbeidet i utlandet
      */
-    var isArbeidet = false
+    var arbeidet = false
 
 }

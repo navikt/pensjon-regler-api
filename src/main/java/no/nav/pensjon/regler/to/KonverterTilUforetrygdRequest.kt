@@ -14,9 +14,9 @@ class KonverterTilUforetrygdRequest {
     var virkFom: Date? = null
 
     // Brukes til å si om en beregning skal faktorkonverteres eller ikke
-    var isFaktorkonvertering = false
+    var faktorkonvertering = false
     //Angir om inntektsavkortingen skal gjøres på bakgrunn av reglene for etteroppgjør
-    var isEtteroppgjor = false
+    var etteroppgjor = false
     //Inneholder informasjon knyttet til etteroppgjør
     var etteroppgjorGrunnlag: EtteroppgjorGrunnlag? = null
 }

@@ -20,7 +20,7 @@ class UforetrygdOrdiner : Ytelseskomponent(), UforetrygdYtelseskomponent {
     /**
      * Angir om egenopptjentUforetrygd er best.
      */
-    var isEgenopptjentUforetrygdBest = false
+    var egenopptjentUforetrygdBest = false
 
     /**
      * Angir detaljer rundt inntektsavkortingen.

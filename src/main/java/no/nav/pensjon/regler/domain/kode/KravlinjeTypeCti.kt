@@ -4,10 +4,10 @@ class KravlinjeTypeCti : TypeCti {
     /**
      * Denne er true dersom kravet er en hovedytelse (AP, UP osv).Default false.
      */
-    var isHovedKravlinje = false
+    var hovedKravlinje = false
 
     constructor(kravlinjeTypeCti: KravlinjeTypeCti) : super(kravlinjeTypeCti) {
-        isHovedKravlinje = kravlinjeTypeCti.isHovedKravlinje
+        hovedKravlinje = kravlinjeTypeCti.hovedKravlinje
     }
 
     constructor() : super()

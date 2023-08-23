@@ -8,5 +8,5 @@ class Omsorgsgrunnlag : Serializable {
     var ar = 0
     var omsorgType: OmsorgTypeCti? = null
     var personOmsorgFor: PenPerson? = null
-    var isBruk = false
+    var bruk = false
 }
