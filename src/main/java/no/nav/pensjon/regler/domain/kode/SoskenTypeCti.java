@@ -1,10 +1,10 @@
 package no.nav.pensjon.regler.domain.kode;
 
 /**
- * Angir søsken type. Se arkfane K_SOSKEN_T
- * pr sept 2007 så tabellen slik ut
- * HEL Helsøsken
- * HALV Halvsøsken
+ * Angir sÃ¸sken type. Se arkfane K_SOSKEN_T
+ * pr sept 2007 sÃ¥ tabellen slik ut
+ * HEL HelsÃ¸sken
+ * HALV HalvsÃ¸sken
  */
 public class SoskenTypeCti extends TypeCti {
 

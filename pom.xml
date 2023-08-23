@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>no.nav.preg-layers.service</groupId>
+	<groupId>no.nav.pensjon.regler</groupId>
 	<artifactId>preg-api</artifactId>
 	<version>10.11.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -18,24 +18,92 @@
 			<version>4.13.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-stdlib-jdk8</artifactId>
+			<version>${kotlin.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jetbrains.kotlin</groupId>
+			<artifactId>kotlin-test-junit</artifactId>
+			<version>${kotlin.version}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 	<properties>
-		<java.jdk.version>1.8</java.jdk.version>
-		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+		<java.jdk.version>17</java.jdk.version>
+		<kotlin.version>1.9.0</kotlin.version>
+		<!-- Config properties -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.release>17</maven.compiler.release>
+		<kotlin.code.style>official</kotlin.code.style>
 	</properties>
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.jetbrains.kotlin</groupId>
+				<artifactId>kotlin-maven-plugin</artifactId>
+				<version>${kotlin.version}</version>
+				<executions>
+					<execution>
+						<id>compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<sourceDirs>
+								<source>src/main/java</source>
+								<source>target/generated-sources/annotations</source>
+							</sourceDirs>
+						</configuration>
+					</execution>
+					<execution>
+						<id>test-compile</id>
+						<phase>test-compile</phase>
+						<goals>
+							<goal>test-compile</goal>
+						</goals>
+						<configuration>
+							<sourceDirs>
+								<source>src/test/java</source>
+								<source>target/generated-test-sources/test-annotations</source>
+							</sourceDirs>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<jvmTarget>1.8</jvmTarget>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.1</version>
+				<executions>
+					<execution>
+						<id>compile</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>testCompile</id>
+						<phase>test-compile</phase>
+						<goals>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>8</source>
+					<target>8</target>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
 	<repositories>
 		<!-- Skal brukes hvis bygget kjøres fra en Github Action -->
 		<repository>

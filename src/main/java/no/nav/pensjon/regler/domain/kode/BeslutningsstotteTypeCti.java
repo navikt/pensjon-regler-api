@@ -1,7 +1,7 @@
 package no.nav.pensjon.regler.domain.kode;
 
 /**
- * Beskriver type besluttningsstøtte som skal eksekveres
+ * Beskriver type besluttningsstÃ¸tte som skal eksekveres
  * 
  * @author Swiddy de Louw (Capgemini) - PK7973 - PKPYTON-526
  */

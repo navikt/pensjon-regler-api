@@ -1,7 +1,7 @@
 package no.nav.pensjon.regler.domain.kode;
 
 /**
- * Beskriver hvorvidt saksbehandler mener vilkår er oppfylt.
+ * Beskriver hvorvidt saksbehandler mener vilkÃ¥r er oppfylt.
  */
 public class VilkarOppfyltUTCti extends TypeCti {
 

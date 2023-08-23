@@ -5,22 +5,22 @@ public class YrkeCti extends TypeCti {
     private static final long serialVersionUID = -1359402436242656547L;
 
     /**
-     * Koder for yrker brukt ved uførepensjon uten yrkesskade.
+     * Koder for yrker brukt ved ufÃ¸repensjon uten yrkesskade.
      * Arkfane: k_yrke_t
-     * pr sept 2007 så tabellen slik ut
+     * pr sept 2007 sÃ¥ tabellen slik ut
      * INTET Intet yrke
      * ARB Arbeider
-     * FUNK Funksjonær
-     * GB Gårdbruker
+     * FUNK FunksjonÃ¦r
+     * GB GÃ¥rdbruker
      * SKOLE Skoleelev
      * FISKER Fisker
-     * SJO Sjømann
-     * SELVN Selvstendig næringsdrivende
+     * SJO SjÃ¸mann
+     * SELVN Selvstendig nÃ¦ringsdrivende
      * PENS Pensjonist
      * ANDRE Andre
      * KOMB_YRK Er faktisk i en kombinert yrkessituasjon
-     * ANTA_KOMB Antas å ville ha vært i en kombinert yrkesaktiv/-hjemmearbeidende situasjon om uførheten ikke hadde oppstått
-     * ANTA_YRK Antas å ville ha vært yrkesaktiv om ikke uførheten hadde inntruffet
+     * ANTA_KOMB Antas Ã¥ ville ha vÃ¦rt i en kombinert yrkesaktiv/-hjemmearbeidende situasjon om ufÃ¸rheten ikke hadde oppstÃ¸tt
+     * ANTA_YRK Antas Ã¥ ville ha vÃ¦rt yrkesaktiv om ikke ufÃ¸rheten hadde inntruffet
      * SKILT Er skilt
      * GJENL Er gjenlevende
      * SEP Formelt eller faktisk separert
