@@ -17,8 +17,4 @@ class RegulerAfpPrivatBeregningRequest() {
         this.virkFomAfpFrivatUttak = virkFomAfpFrivatUttak
         this.beregningsResultat = beregningsResultat
     }
-
-    companion object {
-        private const val serialVersionUID = -3094634556146897922L
-    }
 }

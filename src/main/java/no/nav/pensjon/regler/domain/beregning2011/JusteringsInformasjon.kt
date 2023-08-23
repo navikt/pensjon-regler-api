@@ -14,7 +14,7 @@ class JusteringsInformasjon : Serializable {
     constructor(ji: JusteringsInformasjon) : this(){
         totalJusteringsfaktor = ji.totalJusteringsfaktor
         if (ji.justeringsTypeCti != null) {
-            justeringsTypeCti = JusteringsTypeCti(ji.justeringsTypeCti)
+            justeringsTypeCti = JusteringsTypeCti(ji.justeringsTypeCti!!)
         }
         for (ij in ji.elementer) {
             val clazz: Class<out IJustering> = ij.javaClass

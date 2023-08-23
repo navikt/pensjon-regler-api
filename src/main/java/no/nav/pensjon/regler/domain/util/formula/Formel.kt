@@ -102,7 +102,4 @@ class Formel : Serializable {
         return s.toString()
     }
 
-    companion object {
-        private const val serialVersionUID = 111864321440574836L
-    }
 }

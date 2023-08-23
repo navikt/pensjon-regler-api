@@ -21,7 +21,7 @@ open class Pensjonstillegg : Ytelseskomponent {
         forholdstall67 = pt.forholdstall67
         minstepensjonsnivaSats = pt.minstepensjonsnivaSats
         if (pt.minstepensjonsnivaSatsType != null) {
-            minstepensjonsnivaSatsType = MinstepenNivaCti(pt.minstepensjonsnivaSatsType)
+            minstepensjonsnivaSatsType = MinstepenNivaCti(pt.minstepensjonsnivaSatsType!!)
         }
         if (pt.justertMinstePensjonsniva != null) {
             justertMinstePensjonsniva = JustertMinstePensjonsniva(pt.justertMinstePensjonsniva!!)

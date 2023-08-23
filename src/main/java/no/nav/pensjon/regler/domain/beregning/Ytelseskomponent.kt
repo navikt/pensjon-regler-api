@@ -103,10 +103,10 @@ abstract class Ytelseskomponent : Serializable {
         nettoPerAr = ytelseskomponent.nettoPerAr
         fradragPerAr = ytelseskomponent.fradragPerAr
         if (ytelseskomponent.ytelsekomponentType != null) {
-            ytelsekomponentType = YtelsekomponentTypeCti(ytelseskomponent.ytelsekomponentType)
+            ytelsekomponentType = YtelsekomponentTypeCti(ytelseskomponent.ytelsekomponentType!!)
         }
         if (ytelseskomponent.formelKode != null) {
-            formelKode = FormelKodeCti(ytelseskomponent.formelKode)
+            formelKode = FormelKodeCti(ytelseskomponent.formelKode!!)
         }
         for (merknad in ytelseskomponent.merknadListe) {
             merknadListe.add(Merknad(merknad))
@@ -117,7 +117,7 @@ abstract class Ytelseskomponent : Serializable {
         fradragsTransaksjon = ytelseskomponent.fradragsTransaksjon
         opphort = ytelseskomponent.opphort
         if (ytelseskomponent.sakType != null) {
-            sakType = SakTypeCti(ytelseskomponent.sakType)
+            sakType = SakTypeCti(ytelseskomponent.sakType!!)
         }
     }
 }

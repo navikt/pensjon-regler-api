@@ -121,8 +121,4 @@ class BeregnForsorgingstilleggRequest {
         this.beregningsResultatAlderspensjonTilstotende = beregningsResultatAlderspensjonTilstotende
         this.beregningsResultatAfpPrivatTilstotende = beregningsResultatAfpPrivatTilstotende
     }
-
-    companion object {
-        private const val serialVersionUID = 8864544986202456302L
-    }
 }

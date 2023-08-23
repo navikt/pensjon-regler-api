@@ -84,9 +84,5 @@ class Gjenlevendetillegg() : Ytelseskomponent(), UforetrygdYtelseskomponent, IFo
     }
 
     override val formelPrefix: String
-        get() = ytelsekomponentType!!.kode
-
-    companion object {
-        private const val serialVersionUID = -4631123447862835485L
-    }
+        get() = ytelsekomponentType?.kode!!
 }

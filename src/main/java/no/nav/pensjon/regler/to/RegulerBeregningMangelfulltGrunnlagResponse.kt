@@ -19,8 +19,4 @@ class RegulerBeregningMangelfulltGrunnlagResponse() : Serializable {
         this.beregning1967 = beregning1967
         this.beregningsResultat2011 = beregningsResultat2011
     }
-
-    companion object {
-        private const val serialVersionUID = 1245764083517519824L
-    }
 }

@@ -33,10 +33,10 @@ class MinstePensjonsniva : Serializable {
         pro_rata_nevner_mnd = mpn.pro_rata_nevner_mnd
         pro_rata_brok = mpn.pro_rata_brok
         if (mpn.satsType != null) {
-            satsType = MinstepenNivaCti(mpn.satsType)
+            satsType = MinstepenNivaCti(mpn.satsType!!)
         }
         if (mpn.formelKode != null) {
-            formelKode = FormelKodeCti(mpn.formelKode)
+            formelKode = FormelKodeCti(mpn.formelKode!!)
         }
         for (merknad in mpn.merknadListe) {
             merknadListe.add(Merknad(merknad))

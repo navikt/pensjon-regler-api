@@ -21,8 +21,4 @@ class SamletEktefellepensjonRequest {
     var soker2VilkarsvedtakListe: List<VilkarsVedtak> = ArrayList()
     var soker1VilkarsvedtakListe2011: List<VilkarsVedtak> = ArrayList()
     var soker2VilkarsvedtakListe2011: List<VilkarsVedtak> = ArrayList()
-
-    companion object {
-        private const val serialVersionUID = 2620310836634304154L
-    }
 }

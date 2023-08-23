@@ -37,7 +37,7 @@ open class Grunnpensjon : Ytelseskomponent {
     constructor(gp: Grunnpensjon) : super(gp){
         pSats_gp = gp.pSats_gp
         if (gp.satsType != null) {
-            satsType = GPSatsTypeCti(gp.satsType)
+            satsType = GPSatsTypeCti(gp.satsType!!)
         }
         isEktefelleInntektOver2G = gp.isEktefelleInntektOver2G
         if (gp.anvendtTrygdetid != null) {

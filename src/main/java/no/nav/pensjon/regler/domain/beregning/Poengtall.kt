@@ -135,21 +135,12 @@ class Poengtall : Serializable, Omsorgsopptjening {
      */
     var pREG_effektivPAA = 0.0
 
-    /**
-     * Liste av merknader.
-     */
     var merknadListe: MutableList<Merknad> = mutableListOf()
 
-    /**
-     * {@inheritDoc}
-     */
     override fun getVerdi(): Double {
         return pp
     }
 
-    /**
-     * {@inheritDoc}
-     */
     override fun isOmsorg(): Boolean {
         return isPREG_omsorg
     }
@@ -170,7 +161,7 @@ class Poengtall : Serializable, Omsorgsopptjening {
         bruktIBeregning = poengtall.bruktIBeregning
         gv = poengtall.gv
         if (poengtall.poengtallType != null) {
-            poengtallType = PoengtallTypeCti(poengtall.poengtallType)
+            poengtallType = PoengtallTypeCti(poengtall.poengtallType!!)
         }
         maksUforegrad = poengtall.maksUforegrad
         isUforear = poengtall.isUforear
