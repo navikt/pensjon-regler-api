@@ -2,10 +2,6 @@ package no.nav.pensjon.regler.domain.vedtak
 
 import no.nav.pensjon.regler.domain.grunnlag.Unntak
 
-/**
- * @author Magnus Bakken (Accenture), PK-9695, PKYPTON-923
- * @author Steinar Hjellvik Decisive,  PK-6559
- */
 class ForutgaendeMedlemskap : AbstraktVilkar() {
     /**
      * Minst tre års forutgående medlemskap i Norge med uføretidspunkt FOM 01.01.1994

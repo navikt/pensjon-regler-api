@@ -7,8 +7,6 @@ import java.io.Serializable
 /**
  * Objektet inneholder den faktiske pensjonen under utbetaling, samt en liste
  * over delytelsene som denne består av.
- *
- * @author årnulf Moen
  */
 class PensjonUnderUtbetaling : Serializable {
     /**

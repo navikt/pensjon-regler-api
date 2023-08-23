@@ -1,11 +1,5 @@
 package no.nav.pensjon.regler.domain.kode;
 
-/*
- * Inntektstyper som POPP kjenner, bruker kodeverket K_OPPTJN_POPP_T
- * 
- * @author Swiddy de Louw - PK-7973 PKPYTON-526
- */
-
 public class OpptjeningPOPPTypeCti extends TypeCti {
 
     private static final long serialVersionUID = 2903516942493488921L;

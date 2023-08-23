@@ -7,9 +7,6 @@ import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
 
-/**
- * @author Swiddy de Louw (Capgemini) PK-16620
- */
 class BeregnUforetrygdRequest {
     var kravhode: Kravhode? = null
     var vedtaksliste = Vector<VilkarsVedtak>()

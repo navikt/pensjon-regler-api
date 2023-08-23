@@ -5,13 +5,6 @@ import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import no.nav.pensjon.regler.domain.util.formula.Formel
 import no.nav.pensjon.regler.domain.util.formula.IFormelProvider
 
-/**
- * @author Steinar Hjellvik (Decisive) PK-7113
- * @author Swiddy de Louw (Capgemini) PK-7113
- * @author Steinar Hjellvik (Decisive) - PK-11391
- * @author Swiddy de Louw (Capgemini) - PK-11041
- * @author Tatyana Lochehina PK-13673
- */
 class Gjenlevendetillegg() : Ytelseskomponent(), UforetrygdYtelseskomponent, IFormelProvider {
     /**
      * årsbeløp for delytelsen fra tidligere vedtak (fra tilsvarende beregningsperiode)

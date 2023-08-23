@@ -6,9 +6,6 @@ import no.nav.pensjon.regler.domain.beregning2011.AbstraktBeregningsResultat
 import no.nav.pensjon.regler.domain.beregning2011.BeregningsresultatUforetrygd
 import java.io.Serializable
 
-/**
- * @author Nabil Safadi (Decisive) - PK-8518
- */
 class BeregnInstitusjonsoppholdResponse : Serializable {
     /**
      * Pakkseddel for beregningene.

@@ -17,10 +17,6 @@ import java.util.*
  * Persongrunnlag inneholder nødvendige data knyttet til en bestemt person.
  * Persongrunnlag brukes som inndata til kall på en regeltjeneste og må
  * defineres før kallet.
- *
- * @author Swiddy de Louw (Capgemini) - PK-7973 - PKPYTON-526
- * @author Steinar Hjellvik (Decisive) - PK-6458
- * @author Lars Hartvigsen (Decisive) - PK-12705, PK-20946
  */
 class Persongrunnlag : Serializable {
     /**

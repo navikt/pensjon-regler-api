@@ -3,10 +3,6 @@ package no.nav.pensjon.regler.domain.grunnlag
 import java.io.Serializable
 import java.util.*
 
-/**
- * @author Tatyana Lochehina PK-13673
- * @author Swiddy de Louw (Capgemini) PK-13673
- */
 class UforetrygdEtteroppgjor : Serializable {
     /**
      * Angir om det har vært arbeidsforsøk i etteroppgjørsåret.

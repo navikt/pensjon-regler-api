@@ -5,9 +5,6 @@ import no.nav.pensjon.regler.domain.trygdetid.AnvendtTrygdetid
 import java.io.Serializable
 import java.util.*
 
-/**
- * @author Steinar Hjellvik (Decisive) - PK-11391
- */
 class GjenlevendetilleggInformasjon : Serializable {
     /**
      * Avdødes beregningsgrunnlag.

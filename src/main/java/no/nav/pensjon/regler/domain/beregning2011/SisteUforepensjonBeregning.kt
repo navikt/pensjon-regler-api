@@ -7,11 +7,6 @@ import no.nav.pensjon.regler.domain.kode.MinstepensjonTypeCti
 import no.nav.pensjon.regler.domain.kode.ResultatKildeCti
 import no.nav.pensjon.regler.domain.trygdetid.AnvendtTrygdetid
 
-/**
- * @auhtor Magnus Bakken (Accenture) PK-9158
- * @author Aasmund Nordstoga (Accenture) PK-5549
- * @author Swiddy de Louw (Capgemini) PK-7113
- */
 class SisteUforepensjonBeregning : SisteBeregning() {
     var et: Ektefelletillegg? = null
     var tt: Trygdetid? = null

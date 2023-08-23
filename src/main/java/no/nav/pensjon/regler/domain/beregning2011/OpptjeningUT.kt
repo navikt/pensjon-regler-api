@@ -6,11 +6,6 @@ import no.nav.pensjon.regler.domain.grunnlag.OpptjeningTypeMapping
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import java.io.Serializable
 
-/**
- * @author Magnus Bakken (Accenture), PK-9491
- * @author Swiddy de Louw (Capgemini), PK-7973 PKPYTON-526
- * @author Swiddy de Louw (Capgemini), PK-8704,PKPYTON-563
- */
 class OpptjeningUT : Serializable, Omsorgsopptjening {
     /**
      * Angir om avkortet mot 6*grunnbeløp ved virk.

@@ -6,13 +6,6 @@ import no.nav.pensjon.regler.domain.kode.UforeTypeCti
 import java.io.Serializable
 import java.util.*
 
-/**
- * @author Aasmund Nordstoga (Accenture) - PENPORT-3962
- * @author Swiddy de Louw (Capgemini) - PK-10228
- * @author Steinar Hjellvik (Decisive) - PK-6458
- * @author Magnus Bakken (Accenture) - PK-20759
- * @version $Id$
- */
 class Uforeperiode : Serializable {
     /**
      * Uføregraden, heltall 0-100.

@@ -3,10 +3,6 @@ package no.nav.pensjon.regler.domain.vedtak
 import no.nav.pensjon.regler.domain.grunnlag.Eksportforbud
 import no.nav.pensjon.regler.domain.grunnlag.Unntak
 
-/**
- * @author Magnus Bakken (Accenture), PK-10597, PKPYTON-1063
- * @author Steinar Hjellvik Decisive,  PK-6559
- */
 class FortsattMedlemskap : AbstraktVilkar() {
     /**
      * Fortsatt medlem i folketrygden

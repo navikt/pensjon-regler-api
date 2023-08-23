@@ -3,11 +3,6 @@ package no.nav.pensjon.regler.domain.beregning2011
 import no.nav.pensjon.regler.domain.grunnlag.Beholdninger
 import no.nav.pensjon.regler.domain.trygdetid.Brok
 
-/**
- * @author årnulf Moen (Decisive), Pensjonsprosjektet
- * @author Lars Hartvigsen (Decisive), PK-9169
- * @author Tatyana Lochehina PK-9502
- */
 class AldersberegningKapittel20 : Beregning2011() {
     var delingstall = 0.0
     var beholdninger: Beholdninger? = null

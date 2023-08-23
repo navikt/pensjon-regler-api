@@ -12,10 +12,6 @@ import no.nav.pensjon.regler.domain.krav.Kravlinje
 import java.io.Serializable
 import java.util.*
 
-/**
- * @author Magnus Bakken (Accenture) PK-10597, PK-9695, PKPYTON-923
- * @author Swiddy de Louw (Capgemini), PK-8704,PKPYTON-563
- */
 class VilkarsVedtak : Serializable {
     /**
      * Kode som angir hvilket resultat PREG setter på vilkårsvedtaket. Se

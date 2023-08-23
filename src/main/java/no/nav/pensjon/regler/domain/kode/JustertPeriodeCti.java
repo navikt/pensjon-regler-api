@@ -2,8 +2,6 @@ package no.nav.pensjon.regler.domain.kode;
 
 /**
  * Tilsvarer kodeverktype K_JUST_PERIODE.
- * 
- * @author and2812
  */
 public class JustertPeriodeCti extends TypeCti {
 

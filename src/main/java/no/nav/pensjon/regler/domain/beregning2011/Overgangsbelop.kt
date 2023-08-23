@@ -3,9 +3,6 @@ package no.nav.pensjon.regler.domain.beregning2011
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import java.io.Serializable
 
-/**
- * @author Aasmund Nordstoga (Accenture) PK-5549
- */
 class Overgangsbelop : Serializable {
     var formelKode: FormelKodeCti? = null
     var gpBrutto = 0

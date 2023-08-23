@@ -2,9 +2,6 @@ package no.nav.pensjon.regler.domain.grunnlag
 
 import java.io.Serializable
 
-/**
- * @author Lars Hartvigsen (Decisive), PK-5610
- */
 class AntallArMndDag : Serializable {
     /**
      * Antall år som skal beskrives.

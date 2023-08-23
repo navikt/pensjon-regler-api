@@ -12,9 +12,6 @@ import java.util.*
 /**
  * Kravhode utgjør, sammen med en liste av VilkarsVedtak, hele inndata for
  * de fleste regeltjenestene.
- *
- * @author Magnus Bakken (Accenture), PK-10597
- * @author Dag Brenna (Accenture), PK-15267
  */
 class Kravhode : Serializable {
     /**

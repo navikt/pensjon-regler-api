@@ -1,8 +1,5 @@
 package no.nav.pensjon.regler.domain.kode;
 
-/**
- * @author Lars Hartvigsen (Decisive), PK-9169
- */
 public class FtDtArsakCti extends TypeCti {
     private static final long serialVersionUID = 2505259777598455125L;
 

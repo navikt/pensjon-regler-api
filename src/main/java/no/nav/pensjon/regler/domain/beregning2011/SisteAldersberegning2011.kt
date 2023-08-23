@@ -11,10 +11,6 @@ import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
  * Beregning på nytt regelverk
  * Denne benyttes av 2011, 2016 og 2025
  * For 2016 vil alle feltene være aktuelle
- *
- * @author PREG
- * @author Stian Kroknes (Accenture) - PENPORT-250
- * @author Stian Kroknes (Accenture) Rullet tilbake PENPORT-250
  */
 open class SisteAldersberegning2011 : SisteBeregning() {
     var regelverkType: RegelverkTypeCti? = null // Dene benyttes for å avgjøre om det er på 2011, 2016 eller 2025.

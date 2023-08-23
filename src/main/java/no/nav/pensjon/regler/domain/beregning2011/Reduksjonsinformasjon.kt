@@ -3,9 +3,6 @@ package no.nav.pensjon.regler.domain.beregning2011
 import no.nav.pensjon.regler.domain.kode.BarnetilleggRegelverkCti
 import java.io.Serializable
 
-/**
- * @author Lars Hartvigsen PK-20946
- */
 class Reduksjonsinformasjon : Serializable {
     /**
      * Antall prosent brutto totalytelse ved 100% Uføregrad utgjør av OIFU. Ytelse inkluderer ordinår

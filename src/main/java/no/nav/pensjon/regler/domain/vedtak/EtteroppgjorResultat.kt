@@ -3,9 +3,6 @@ package no.nav.pensjon.regler.domain.vedtak
 import no.nav.pensjon.regler.domain.kode.EtteroppgjorResultatCti
 import java.io.Serializable
 
-/**
- * @author Tatyana Lochehina PK-13673
- */
 class EtteroppgjorResultat : Serializable {
     /**
      * Totalbeløp for ytelsene uføretrygd og gjenlevendetillegg basert på tidligere vedtak, som var gjeldende (løpende eller i iverksettelsesløpet) i etteroppgjørsåret ved

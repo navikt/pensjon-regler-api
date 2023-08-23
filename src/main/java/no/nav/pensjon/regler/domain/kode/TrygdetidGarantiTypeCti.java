@@ -1,10 +1,5 @@
 package no.nav.pensjon.regler.domain.kode;
 
-/**
- * Kodeverk for Trygdetid garantiType.
- * 
- * @author Steinar Hjellvik
- */
 public class TrygdetidGarantiTypeCti extends TypeCti {
 
     private static final long serialVersionUID = 3893598271442970148L;

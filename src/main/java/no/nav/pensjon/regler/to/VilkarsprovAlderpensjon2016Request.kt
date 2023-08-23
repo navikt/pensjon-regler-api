@@ -8,10 +8,6 @@ import no.nav.pensjon.regler.domain.grunnlag.GarantitilleggsbeholdningGrunnlag
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import java.util.*
 
-/**
- *
- * @author Christian Arnesen
- */
 class VilkarsprovAlderpensjon2016Request {
     var kravhode: Kravhode? = null
     var virkFom: Date? = null

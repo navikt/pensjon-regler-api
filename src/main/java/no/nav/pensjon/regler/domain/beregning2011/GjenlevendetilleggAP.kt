@@ -5,9 +5,6 @@ import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 
 /**
  * GjenlevendetilleggAP
- *
- * @author Lars Hartvigsen (Decisive), PK-20265
- * @author Magnus Bakken (Accenture), PK-20716
  */
 class GjenlevendetilleggAP : Ytelseskomponent() {
     /**

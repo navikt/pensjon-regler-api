@@ -10,10 +10,6 @@ import java.util.*
 
 /**
  * Objektet inneholder requesten for tjenesten BeregnForsorgingstillegg
- *
- * @author Kenneth Fjelleng (Capgemini) PK-7106
- * @author Aasmund Nordstoga (Accenture) PK-9028
- * @author Aasmund Nordstoga (Accenture) PK-20773
  */
 class BeregnForsorgingstilleggRequest {
     /**

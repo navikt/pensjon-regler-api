@@ -2,10 +2,6 @@ package no.nav.pensjon.regler.domain.grunnlag
 
 import java.io.Serializable
 
-/**
- * @author Magnus Bakken (Accenture), PK-9695, PKPYTON-923
- * @author Aasmund Nordstoga (Accenture) PK-19079, PKPYTON-1962
- */
 class InngangOgEksportGrunnlag : Serializable {
     /**
      * Minst tre års trygdetid i Norge

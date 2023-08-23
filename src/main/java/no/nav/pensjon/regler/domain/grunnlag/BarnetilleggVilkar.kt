@@ -5,8 +5,6 @@ import java.io.Serializable
 
 /**
  * Representerer et vilkår for barnetillegg på uføretrygd. Saksbehandler gjår en vurdering av enkeltvilkår.
- *
- * @author Lars Hartvigsen (Decisive) - PK-20946
  */
 class BarnetilleggVilkar : Serializable {
     var btVilkarType: BarnetilleggVilkarTypeCti? = null

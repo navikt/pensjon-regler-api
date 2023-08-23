@@ -10,11 +10,6 @@ import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
 
-/**
- * @author PREG
- * @author Stian Kroknes (Accenture) PENPORT-1055
- * @author Nabil Safadi (Decisive) - PK-8518
- */
 class BeregnInstitusjonsoppholdRequest {
     var fom: Date? = null
 
