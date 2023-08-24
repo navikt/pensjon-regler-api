@@ -18,6 +18,5 @@ class AldersberegningKapittel20 : Beregning2011() {
      * Anvendt proratabrøk i trygdeavtaleberegninger.
      */
     var prorataBrok: Brok? = null
-    var pREG_avtaleBeregningsmetode: String? = null
 
 }

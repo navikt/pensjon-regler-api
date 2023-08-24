@@ -17,7 +17,4 @@ class Yrkesskadeopptjening : Serializable {
      * Antatt Inntekt for yrkesskadeopptjeningen.
      */
     var antattInntektYrke = 0.0
-    private var PREG_ai_yp_proRata = 0.0
-    private var PREG_ai_yp_gradert = 0.0
-    private var PREG_ai_yp_gradert_proRata = 0.0
 }

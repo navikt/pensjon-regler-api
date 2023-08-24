@@ -22,19 +22,4 @@ class Pakkseddel : Serializable {
      */
     var merknadListe: List<Merknad> = mutableListOf()
 
-    /**
-     * Hvilken versjon av PREG som er i bruk.
-     */
-    private var PREG_version: String? = null
-
-    /**
-     * Hvilken type testsatstabell som er i bruk.
-     */
-    private var PREG_TestSatstabellType: String? = null
-
-    /**
-     * Hvilken versjon av satstabeller som er i bruk.
-     */
-    private var PREG_satstabellVersion: String? = null
-
 }

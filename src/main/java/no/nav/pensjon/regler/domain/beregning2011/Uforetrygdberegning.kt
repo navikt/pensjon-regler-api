@@ -22,7 +22,6 @@ class Uforetrygdberegning : Beregning2011() {
 
     /* Bygger opp årsakskoder som viser hvorfor personen mottar minsteytelse */
     var minsteytelseArsak: String? = null
-    var pREG_avtaleBeregningsmetode: String? = null
 
     /* Viser hvilken type institusjonsopphold det er beregnet for. Kodene hentes fra K_JUST_PERIODE */
     var instOppholdType: JustertPeriodeCti? = null

@@ -28,9 +28,4 @@ abstract class AbstraktBeregningsResultat protected constructor() : Serializable
     var merknadListe: List<Merknad> = mutableListOf()
     var gjennomsnittligUttaksgradSisteAr = 0.0
 
-    /**
-     * PREG versjonsnummer.
-     */
-    var pREG_versjon: String? = null
-
 }

@@ -50,7 +50,6 @@ class Uforegrunnlag : Serializable {
     /**
      * Dato når reaktivering startet
      */
-    var pREG_reaktiviseringFomDato: Date? = null
 
     /**
      * Opplysning om at uførepensjonen skal utbetales til arbeidsgiver.

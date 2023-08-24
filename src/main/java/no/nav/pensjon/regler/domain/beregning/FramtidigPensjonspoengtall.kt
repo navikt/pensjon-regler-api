@@ -23,11 +23,6 @@ class FramtidigPensjonspoengtall : Serializable {
      */
      var merknadListe: List<Merknad> = mutableListOf()
 
-    /**
-     * Omregnet poengtall etter 1991. Intern PREG variabel.
-     */
-    var pREG_pt_e91 = 0.0
-
     constructor()
     constructor(framtidigPensjonspoengtall: FramtidigPensjonspoengtall) {
         pt = framtidigPensjonspoengtall.pt

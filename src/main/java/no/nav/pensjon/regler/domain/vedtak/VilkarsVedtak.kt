@@ -77,7 +77,6 @@ class VilkarsVedtak : Serializable {
     var begrunnelse: BegrunnelseTypeCti? = null
     var avslattKapittel19 = false
     var avslattGarantipensjon = false
-    var pREG_persongrunnlag: Persongrunnlag? = null
     var vurderSkattefritakET = false
 
     // CR170026

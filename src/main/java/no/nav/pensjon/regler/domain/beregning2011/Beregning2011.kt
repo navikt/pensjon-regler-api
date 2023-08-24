@@ -11,10 +11,6 @@ import no.nav.pensjon.regler.domain.kode.ResultatTypeCti
 import java.io.Serializable
 
 abstract class Beregning2011 : IBeregning, Serializable {
-    /**
-     * @param pREGBeregningId the PREG_beregningsnavn to set
-     */
-    var pREG_beregningsnavn: String? = null
     var gjelderPerson: PenPerson? = null
     open var grunnbelop = 0
     var tt_anv = 0
@@ -26,11 +22,6 @@ abstract class Beregning2011 : IBeregning, Serializable {
 
     override val delberegningsListe: List<BeregningRelasjon>
         get() = delberegning2011Liste
-
-    /**
-     * Referanse tilbake til beregningsrelasjon dersom denne beregning inngår i en beregningsrelasjon.
-     */
-    var pREG_beregningsrelasjon: BeregningRelasjon? = null
 
     /**
      * Feltet støtter navngivning av beregningen i beregningstreet.

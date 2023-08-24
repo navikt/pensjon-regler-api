@@ -67,10 +67,4 @@ class Uforeopptjening : Serializable {
      * Angir om årets Uføreopptjening er relatert til Uføreperiode hvor uføretidspunktet er konvertert fra uførepensjon.
      */
     var konvertertUFT = false
-
-    private var PREG_ai_up_gradert = 0.0
-    private var PREG_ai_up_gradert_proRata = 0.0
-    private var PREG_ai_up_restGradert = 0.0
-    private var PREG_ai_up_restGradert_proRata = 0.0
-    private var PREG_ai_upyp = 0.0
 }

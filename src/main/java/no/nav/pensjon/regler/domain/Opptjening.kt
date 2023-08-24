@@ -23,9 +23,4 @@ class Opptjening : Serializable {
     var forstegangstjeneste = 0.0
     var arligOpptjeningOmsorg = 0.0
     var arligOpptjeningUtenOmsorg = 0.0
-    var PREG_antFgtMnd = 0.0
-    var PREG_samletDagpenger = 0.0
-    var PREG_samletUtbetalteDagpenger = 0.0
-    var PREG_samletFerietillegg = 0.0
-    var PREG_samletBarnetillegg = 0.0
 }

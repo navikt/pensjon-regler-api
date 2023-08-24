@@ -17,16 +17,6 @@ import java.util.*
  * Beregning er resultatet fra en beregning i PREG.
  */
 class Beregning : IBeregning, Serializable {
-    /**
-     * Felt som gjøres for å holde orden på de forskjellige beregningene,
-     * f.eks hjelpeberegninger.
-     */
-    var pREG_beregningsnavn: String? = null
-
-    /**
-     * Referanse tilbake til beregningsrelasjon dersom denne beregning inngår i en beregningsrelasjon.
-     */
-    var PREG_beregningsrelasjon: BeregningRelasjon? = null
 
     /**
      * Representerer personen beregning gjelder for.

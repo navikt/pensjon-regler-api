@@ -154,10 +154,4 @@ class InngangOgEksportGrunnlag : Serializable {
      */
     var oppfyltVedSammenleggingFemArKap20: OppfyltVedSammenlegging? = null
 
-    /**
-     * PREG variabel for å vite om det finnes trygdeavtale når man er i BestemUnguførRS i Folketrygd flyter.
-     * Trygdeavtale objetet nulles før kall til Folketrygd-flyter
-     */
-    var pREG_trygdeavtale: Trygdeavtale? = null
-
 }

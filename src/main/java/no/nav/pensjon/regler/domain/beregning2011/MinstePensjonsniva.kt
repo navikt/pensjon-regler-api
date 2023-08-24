@@ -17,7 +17,6 @@ class MinstePensjonsniva : Serializable {
     /** Minstepensjonsnivå. Kan være lav, ordinær og forhøyet. Benytter tabellen  */
     var satsType: MinstepenNivaCti? = null
     var merknadListe: MutableList<Merknad> = mutableListOf()
-    var pREG_belopIkkeProratisert = 0.0
     var faktisk_tt_avtaleland_mnd = 0
 
     init {
@@ -41,7 +40,6 @@ class MinstePensjonsniva : Serializable {
         for (merknad in mpn.merknadListe) {
             merknadListe.add(Merknad(merknad))
         }
-        pREG_belopIkkeProratisert = mpn.pREG_belopIkkeProratisert
         faktisk_tt_avtaleland_mnd = mpn.faktisk_tt_avtaleland_mnd
     }
 }

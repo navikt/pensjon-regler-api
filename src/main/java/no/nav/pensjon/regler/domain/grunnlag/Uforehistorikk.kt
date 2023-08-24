@@ -25,10 +25,4 @@ class Uforehistorikk : Serializable {
      */
     var sistMedlITrygden: Date? = null
 
-    /**
-     * Ved eksport og ung Uføre vil denne listen inneholde Uførehistorikk med ung Uføre.
-     * Intern PREG variabel
-     */
-    var PREG_originalUforeperiodeListe: List<Uforeperiode> = mutableListOf()
-
 }

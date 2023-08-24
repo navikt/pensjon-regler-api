@@ -35,28 +35,6 @@ open class Tilleggspensjon : Ytelseskomponent, IFormelProvider {
     var skiltesDelAvAdodesTP = 0
 
     /**
-     * Bevarer ST brutto i tilfelle Sertillegg objektet avkortes bort.
-     * Verdien er nødvendig dersom Tilleggspensjonen skal ytterligere avkorte ST i evt SAMBER.
-     */
-    var pREG_uavkortetSTBrutto = 0
-
-    /**
-     * Bevarer ST brutto per år i tilfelle Sertillegg objektet avkortes bort.
-     * Verdien er nødvendig dersom Tilleggspensjonen skal ytterligere avkorte ST i evt SAMBER.
-     */
-    var pREG_uavkortetSTBruttoPerAr = 0.0
-
-    /**
-     * Andel av tilleggspensjon beregnet med restgrad Uføre (UFG - YUG).
-     */
-    var pREG_tp_up = 0
-
-    /**
-     * Andel av tilleggspensjon beregnet med yrkesskadegrad.
-     */
-    var pREG_tp_yp = 0
-
-    /**
      * Map av formler brukt i beregning av Tilleggspensjon.
      */
     override var formelMap: HashMap<String, Formel> = HashMap()
@@ -86,7 +64,5 @@ open class Tilleggspensjon : Ytelseskomponent, IFormelProvider {
                 formelMap[key] = Formel(value)
             }
         }
-        pREG_uavkortetSTBrutto = tilleggspensjon.pREG_uavkortetSTBrutto
-        pREG_uavkortetSTBruttoPerAr = tilleggspensjon.pREG_uavkortetSTBruttoPerAr
     }
 }
