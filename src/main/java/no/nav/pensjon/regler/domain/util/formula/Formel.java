@@ -13,6 +13,7 @@ public class Formel implements Serializable {
 
     private String navn;
     private String emne;
+    private String prefix;
     private String felt;
     private Number resultat;
     private String notasjon;
@@ -28,6 +29,8 @@ public class Formel implements Serializable {
     private HashSet<String> tokenSet;
 
     public Formel() {
+        this.emne = "";
+        this.prefix = "";
         this.notasjon = "";
         this.varMap = new HashMap<>();
         this.formelVarMap = new HashMap<>();
@@ -38,6 +41,7 @@ public class Formel implements Serializable {
     public Formel(Formel f) {
         this.navn = f.navn;
         this.emne = f.emne;
+        this.prefix = f.prefix;
         this.felt = f.felt;
         this.resultat = f.resultat;
         this.notasjon = f.notasjon;
@@ -245,5 +249,13 @@ public class Formel implements Serializable {
         }
         s.append(StringUtils.repeat(' ', level * 2)).append("</formel>\n");
         return s.toString();
+    }
+
+    public String getPrefix() {
+        return prefix;
+    }
+
+    public void setPrefix(String prefix) {
+        this.prefix = prefix;
     }
 }
