@@ -6,7 +6,7 @@ on:
     - 'master'
 
 jobs:
-  build:
+  release:
     permissions:
       actions: read
       checks: read
@@ -14,7 +14,6 @@ jobs:
       deployments: write
       packages: write
       pull-requests: write
-  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
