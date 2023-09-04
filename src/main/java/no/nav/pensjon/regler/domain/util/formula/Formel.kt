@@ -5,11 +5,12 @@ import java.io.Serializable
 
 class Formel : Serializable {
     var navn: String? = null
-    var emne: String? = null
+    var emne: String = ""
+    var prefix: String = ""
     var felt: String? = null
     var resultat: Number? = null
     var notasjon: String = ""
-    var innhold: String? = null
+    var innhold: String = ""
     var vekt = 0
     var requiresValidation = false
     var renameAllowed = false
@@ -24,6 +25,7 @@ class Formel : Serializable {
     constructor(f: Formel) {
         navn = f.navn
         emne = f.emne
+        prefix = f.prefix
         felt = f.felt
         resultat = f.resultat
         notasjon = f.notasjon
