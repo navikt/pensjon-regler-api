@@ -5,7 +5,7 @@ import no.nav.pensjon.regler.domain.kode.LandCti
 import java.io.Serializable
 import java.util.*
 
-class TTPeriode : Serializable {
+open class TTPeriode : Serializable {
     /**
      * Fra-og-med dato for perioden.
      */

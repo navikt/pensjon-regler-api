@@ -6,7 +6,7 @@ import java.io.Serializable
 import java.util.*
 
 class VilkarsprovResponse : Serializable {
-    var vedtaksliste: List<VilkarsVedtak> = Vector()
+    var vedtaksliste: MutableList<VilkarsVedtak> = Vector()
 
     /**
      * Pakkseddel for beregningene.

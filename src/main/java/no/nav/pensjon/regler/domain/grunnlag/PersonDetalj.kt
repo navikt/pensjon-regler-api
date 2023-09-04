@@ -13,7 +13,7 @@ import java.util.*
  * dvs detaljer om den faktiske rollen en bruker har i et krav, sivilstand , pensjonsfaglig vurdert
  * sivilstand og barn for en definert periode.
  */
-class PersonDetalj : Serializable {
+open class PersonDetalj : Serializable {
     /**
      * Rollen denne personen har i kontekst av kravet.
      */

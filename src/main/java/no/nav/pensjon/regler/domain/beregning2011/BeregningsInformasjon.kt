@@ -9,7 +9,7 @@ import no.nav.pensjon.regler.domain.kode.LandCti
 import no.nav.pensjon.regler.domain.kode.ResultatTypeCti
 import java.io.Serializable
 
-class BeregningsInformasjon : Serializable, IBeregningsInformasjon2011 {
+open class BeregningsInformasjon : Serializable, IBeregningsInformasjon2011 {
     //Fra IBeregningsInformasjon2011
     override var forholdstallUttak = 0.0
     override var forholdstall67 = 0.0

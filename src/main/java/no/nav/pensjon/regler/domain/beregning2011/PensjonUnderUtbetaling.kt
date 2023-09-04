@@ -36,5 +36,5 @@ class PensjonUnderUtbetaling : Serializable {
      */
     var formelKode: FormelKodeCti = FormelKodeCti("BPUx")
     var pubReguleringFratrekk = 0.0
-    var ytelseskomponenter: List<Ytelseskomponent> = mutableListOf()
+    var ytelseskomponenter: MutableList<Ytelseskomponent> = mutableListOf()
 }

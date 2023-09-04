@@ -10,6 +10,7 @@ import no.nav.pensjon.regler.domain.kode.GrunnlagsrolleCti
 import no.nav.pensjon.regler.domain.kode.LandCti
 import no.nav.pensjon.regler.domain.kode.SivilstandTypeCti
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
+import org.apache.commons.lang3.mutable.Mutable
 import java.io.Serializable
 import java.util.*
 
@@ -18,7 +19,7 @@ import java.util.*
  * Persongrunnlag brukes som inndata til kall på en regeltjeneste og må
  * defineres før kallet.
  */
-class Persongrunnlag : Serializable {
+open class Persongrunnlag : Serializable {
     /**
      * Representerer personen.
      */
@@ -56,7 +57,7 @@ class Persongrunnlag : Serializable {
      * personDetaljListe. Eks: ved skifte av sivilstand vil en tjeneste bli kalt
      * to ganger.
      */
-    var personDetaljListe: List<PersonDetalj> = mutableListOf()
+    var personDetaljListe: MutableList<PersonDetalj> = mutableListOf()
 
     /**
      * Dato for sist innmeldt i Folketrygden- for fremtidig trygdetid.
@@ -111,23 +112,23 @@ class Persongrunnlag : Serializable {
     /**
      * Liste av opptjeningsgrunnlag for personen.
      */
-    var opptjeningsgrunnlagListe: List<Opptjeningsgrunnlag> = mutableListOf()
+    var opptjeningsgrunnlagListe: MutableList<Opptjeningsgrunnlag> = mutableListOf()
 
     /**
      * Liste av inntektsgrunnlag for personen.
      */
-    var inntektsgrunnlagListe: List<Inntektsgrunnlag> = mutableListOf()
+    var inntektsgrunnlagListe: MutableList<Inntektsgrunnlag> = mutableListOf()
 
     /**
      * Liste av trygdetidsperioder for personen.
      */
-    var trygdetidPerioder: List<TTPeriode> = mutableListOf()
+    var trygdetidPerioder: MutableList<TTPeriode> = mutableListOf()
 
     /**
      * Liste av trygdetidsperioder for personen.
      * For beregning av trygdetid for AP2016 iht. kapittel 20 og AP2025.
      */
-    var trygdetidPerioderKapittel20: List<TTPeriode> = mutableListOf()
+    var trygdetidPerioderKapittel20: MutableList<TTPeriode> = mutableListOf()
 
     /**
      * Framtidig og faktisk trygdetid. Denne ligger også i VilkarsVedtak, men er
@@ -210,7 +211,7 @@ class Persongrunnlag : Serializable {
     /**
      * Liste av utenlandsopphold.
      */
-    var utenlandsoppholdListe: List<Utenlandsopphold> = mutableListOf()
+    var utenlandsoppholdListe: MutableList<Utenlandsopphold> = mutableListOf()
 
     /**
      * Trygdeavtale, representerer en saksbehandlers vurdering av hvilken
@@ -232,7 +233,7 @@ class Persongrunnlag : Serializable {
     /**
      * Grunnlag påkrevd for å kunne behandle inngang og eksport av pensjonssaker mellom Norge og utland.
      */
-    var forsteVirkningsdatoGrunnlagListe: List<ForsteVirkningsdatoGrunnlag> = mutableListOf()
+    var forsteVirkningsdatoGrunnlagListe: MutableList<ForsteVirkningsdatoGrunnlag> = mutableListOf()
 
     /**
      * årlig pensjonsgivende inntekt var minst 1G på dødstidspunktet.
@@ -270,7 +271,7 @@ class Persongrunnlag : Serializable {
      * Liste av institusjonsoppholdsfasteutgifterperioder relatert til
      * persongrunnlaget
      */
-    var instOpphFasteUtgifterperiodeListe: List<InstOpphFasteUtgifterperiode> = mutableListOf()
+    var instOpphFasteUtgifterperiodeListe: MutableList<InstOpphFasteUtgifterperiode> = mutableListOf()
 
     /**
      * Landskode - det land personen er bosatt i på VIRK. Intern PREG attributt.
@@ -284,13 +285,13 @@ class Persongrunnlag : Serializable {
      * Informasjon om Førstegangstjenesteperioder.
      */
     var forstegangstjenestegrunnlag: Forstegangstjeneste? = null
-    var dagpengegrunnlagListe: List<Dagpengegrunnlag> = mutableListOf()
-    var omsorgsgrunnlagListe: List<Omsorgsgrunnlag> = mutableListOf()
+    var dagpengegrunnlagListe: MutableList<Dagpengegrunnlag> = mutableListOf()
+    var omsorgsgrunnlagListe: MutableList<Omsorgsgrunnlag> = mutableListOf()
 
     /**
      * Informasjon om arbeidsforhold med perioder og stillingsprosent.
      */
-    var arbeidsforholdsgrunnlagListe: List<Arbeidsforholdsgrunnlag> = mutableListOf()
+    var arbeidsforholdsgrunnlagListe: MutableList<Arbeidsforholdsgrunnlag> = mutableListOf()
 
     /**
      * Contains information about post injury arbeidsforhold perioder and stillingsprosent.
@@ -316,5 +317,6 @@ class Persongrunnlag : Serializable {
      * Objekt som inneholder informasjon om TP-ordningers uførepensjonsgrunnlag. Dette er manuelt registrerte data og ikke hentet fra TP-registeret eller andre eksterne kilder.
      */
     var afpTpoUpGrunnlag: AfpTpoUpGrunnlag? = null
+
 
 }

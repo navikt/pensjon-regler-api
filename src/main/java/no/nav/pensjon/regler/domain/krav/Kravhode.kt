@@ -13,17 +13,17 @@ import java.util.*
  * Kravhode utgjør, sammen med en liste av VilkarsVedtak, hele inndata for
  * de fleste regeltjenestene.
  */
-class Kravhode : Serializable {
+open class Kravhode : Serializable {
     /**
      * Liste av personer som inngår som datagrunnlag.
      * nøyaktig en person i listen må ha rollen "SOKER".
      */
-    var persongrunnlagListe: List<Persongrunnlag> = mutableListOf()
+    var persongrunnlagListe: MutableList<Persongrunnlag> = mutableListOf()
 
     /**
      * Liste av krav søkeren fremmer.
      */
-    var kravlinjeListe: List<Kravlinje> = mutableListOf()
+    var kravlinjeListe: MutableList<Kravlinje> = mutableListOf()
 
     /**
      * Angir type AFPordning.
@@ -65,7 +65,7 @@ class Kravhode : Serializable {
      * Flagg som angir om brukerens avdøde E/P/S har bodd eller arbeidet i utlandet.
      */
     var boddArbeidUtlandAvdod = false
-    var uttaksgradListe: List<Uttaksgrad> = mutableListOf()
+    var uttaksgradListe: MutableList<Uttaksgrad> = mutableListOf()
         set(value) {
             field = value
             sorterUttaksgradListe()

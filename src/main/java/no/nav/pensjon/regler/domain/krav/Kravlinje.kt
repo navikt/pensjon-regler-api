@@ -8,15 +8,20 @@ import java.io.Serializable
  * En Kravlinje er en del av et KravHode. Eksempler på Kravlinje er GP, ET, UP
  * osv.
  */
-class Kravlinje : Serializable {
+open class Kravlinje : Serializable {
     /**
      * Hvilken type kravlinjen gjelder, spesifisert som VilkarsvedtakType.
      */
     var kravlinjeType: KravlinjeTypeCti? = null
-
     /**
      * Personen kravet relaterer seg til.
      */
     var relatertPerson: PenPerson? = null
+
+    constructor()
+    constructor(kravlinjeType: KravlinjeTypeCti?, relatertPerson: PenPerson?) {
+        this.kravlinjeType = kravlinjeType
+        this.relatertPerson = relatertPerson
+    }
 
 }

@@ -7,7 +7,7 @@ class Uforehistorikk : Serializable {
     /**
      * Liste av Uføreperioder.
      */
-    var uforeperiodeListe: List<Uforeperiode> = mutableListOf()
+    var uforeperiodeListe: MutableList<Uforeperiode> = mutableListOf()
 
     /**
      * Uføregraden pensjonen er blitt fryst fra.

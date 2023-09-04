@@ -1,6 +1,5 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
-import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.beregning.Sluttpoengtall
 
 interface IBeregningsInformasjon2011 : IBeregningsInformasjon {

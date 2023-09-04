@@ -36,8 +36,8 @@ class Formel : Serializable {
         tokenSet = HashSet(f.tokenSet)
         varMap = HashMap(f.varMap)
         formelVarMap = HashMap()
-        if (!f.formelVarMap.isEmpty()) {
-            f.formelVarMap.forEach { key, value ->
+        if (f.formelVarMap.isNotEmpty()) {
+            f.formelVarMap.forEach { (key, value) ->
                 formelVarMap[key] = Formel(value)
             }
         }

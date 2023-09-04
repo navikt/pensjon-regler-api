@@ -8,7 +8,7 @@ class InfoPavirkendeYtelse : Serializable {
     /**
      * Liste av alle vilkårsvedtak for hovedytelse som EPS har løpende.
      */
-    var vilkarsvedtakEPSListe: List<VilkarsVedtak> = mutableListOf()
+    var vilkarsvedtakEPSListe: MutableList<VilkarsVedtak> = mutableListOf()
 
     /**
      * EPS uforegrad dersom EPS har uførepensjon.

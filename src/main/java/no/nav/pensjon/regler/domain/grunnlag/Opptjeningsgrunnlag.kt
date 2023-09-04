@@ -55,5 +55,5 @@ class Opptjeningsgrunnlag : Serializable {
     /**
      * Inneholder alle inntektstyper for dette året
      */
-    var opptjeningTypeListe: List<OpptjeningTypeMapping> = mutableListOf()
+    var opptjeningTypeListe: MutableList<OpptjeningTypeMapping> = mutableListOf()
 }
