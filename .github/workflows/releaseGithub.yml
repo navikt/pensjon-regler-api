@@ -6,6 +6,14 @@ on:
     - 'master'
 
 jobs:
+  build:
+    permissions:
+      actions: read
+      checks: read
+      contents: read
+      deployments: write
+      packages: write
+      pull-requests: write
   release:
     runs-on: ubuntu-latest
     steps:
