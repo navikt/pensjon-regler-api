@@ -5,7 +5,7 @@ import java.io.Serializable
 import java.lang.reflect.Constructor
 import java.lang.reflect.InvocationTargetException
 
-class JusteringsInformasjon : Serializable {
+open class JusteringsInformasjon : Serializable {
     var totalJusteringsfaktor = 0.0
     var justeringsTypeCti: JusteringsTypeCti? = null
     var elementer: MutableList<IJustering> = mutableListOf()
