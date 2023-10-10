@@ -35,4 +35,14 @@ open class JusteringsInformasjon : Serializable {
             }
         }
     }
+
+    constructor(
+        totalJusteringsfaktor: Double = 0.0,
+        justeringsTypeCti: JusteringsTypeCti? = null,
+        elementer: MutableList<IJustering> = mutableListOf()
+    ) {
+        this.totalJusteringsfaktor = totalJusteringsfaktor
+        this.justeringsTypeCti = justeringsTypeCti
+        this.elementer = elementer
+    }
 }
