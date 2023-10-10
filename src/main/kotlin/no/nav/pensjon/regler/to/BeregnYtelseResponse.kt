@@ -8,7 +8,7 @@ import java.util.Vector
 /**
  * Klassen representerer hele resultatet fra et kall til en regeltjeneste for ytelsesberegning.
  */
-class BeregnYtelseResponse : Serializable {
+class BeregnYtelseResponse() : Serializable {
     /**
      * Pakkseddel for beregningene.
      */
@@ -18,4 +18,5 @@ class BeregnYtelseResponse : Serializable {
      * En liste av beregninger som utgjør resultatet.
      */
     var beregningListe: List<Beregning> = Vector()
+
 }
