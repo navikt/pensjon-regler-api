@@ -7,7 +7,7 @@ import no.nav.pensjon.regler.domain.krav.Kravhode
 import java.util.*
 
 class VilkarsprovAlderpensjon2011Request {
-    var kravHode: Kravhode? = null
+    var kravhode: Kravhode? = null
     var fom: Date? = null
     var tom: Date? = null
     var afpVirkFom: Date? = null

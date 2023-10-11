@@ -17,6 +17,6 @@ class BeregnYtelseResponse() : Serializable {
     /**
      * En liste av beregninger som utgjør resultatet.
      */
-    var beregningListe: List<Beregning> = Vector()
+    var beregningsListe: List<Beregning> = Vector()
 
 }

@@ -7,7 +7,7 @@ import java.util.*
 
 class BeregnYtelseRequest {
     var kravhode: Kravhode? = null
-    var vedtaksliste = Vector<VilkarsVedtak>()
+    var vilkarsvedtaksliste = Vector<VilkarsVedtak>()
     var fom: Date? = null
     var tom: Date? = null
     var ektefelleMottarPensjon = false
