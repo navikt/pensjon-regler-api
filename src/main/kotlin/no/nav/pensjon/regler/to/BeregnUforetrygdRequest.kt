@@ -9,7 +9,7 @@ import java.util.*
 
 class BeregnUforetrygdRequest {
     var kravhode: Kravhode? = null
-    var vedtaksliste = Vector<VilkarsVedtak>()
+    var vilkarsvedtaksliste = Vector<VilkarsVedtak>()
     var virkFom: Date? = null
     var virkTom: Date? = null
     var forrigeGjenlevendetillegg: Gjenlevendetillegg? = null
