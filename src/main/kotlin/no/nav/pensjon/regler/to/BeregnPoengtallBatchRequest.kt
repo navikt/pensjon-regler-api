@@ -1,13 +1,9 @@
 package no.nav.pensjon.regler.to
 
 import no.nav.pensjon.regler.domain.grunnlag.PersonOpptjeningsgrunnlag
-import java.util.*
+import java.io.Serializable
 
-class BeregnPoengtallBatchRequest {
-    var personOpptjeningsgrunnlagliste = Vector<PersonOpptjeningsgrunnlag>()
 
-    constructor() : super()
-    constructor(personOpptjeningsgrunnlagListe: Vector<PersonOpptjeningsgrunnlag>) : super() {
-        personOpptjeningsgrunnlagliste = personOpptjeningsgrunnlagListe
-    }
+class BeregnPoengtallBatchRequest : Serializable {
+    var personOpptjeningsgrunnlagListe: MutableList<PersonOpptjeningsgrunnlag?> = mutableListOf()
 }
