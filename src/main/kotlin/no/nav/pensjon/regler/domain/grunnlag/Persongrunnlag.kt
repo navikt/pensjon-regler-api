@@ -297,16 +297,11 @@ open class Persongrunnlag : Serializable {
      * Contains information about post injury arbeidsforhold perioder and stillingsprosent.
      */
     var arbeidsforholdEtterUforgrunnlagListe: List<ArbeidsforholdEtterUforgrunnlag> = mutableListOf()
-    /**
-     * @return the overgangsinfoUPtilUT
-     */
-    /**
-     * @param overgangsinfoUPtilUT the overgangsinfoUPtilUT to set
-     */
+
     /**
      * Informasjon om konverterting fra UP til UT.
      */
-    var overgangsinfoUPtilUT: OvergangsinfoUPtilUT? = null
+    var overgangsInfoUPtilUT: OvergangsinfoUPtilUT? = null
 
     /**
      * Inneholder utbetalingsgraden for uføretrygd etter inntektsavkorting.
