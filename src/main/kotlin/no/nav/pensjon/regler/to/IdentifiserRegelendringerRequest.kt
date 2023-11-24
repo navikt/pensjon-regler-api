@@ -18,7 +18,7 @@ class IdentifiserRegelendringerRequest {
     /**
      * Alle vedtakene som er innvilget og gyldige i perioden.
      */
-    var vilkarsvedtakListe: List<VilkarsVedtak> = mutableListOf()
+    var vilkarsvedtakListe: MutableList<VilkarsVedtak> = mutableListOf()
 
     /**
      * Angir om brukeren har AFP-privat

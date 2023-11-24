@@ -223,7 +223,7 @@ class Beregning : IBeregning, Serializable {
     /**
      * Liste av beregninger.Kan inneholde alternative beregninger gjort ved lønnsomhetsberegninger.Vinneren ligger da i hovedobjektet mens taperen(e) ligger i denne listen.
      */
-    override var delberegningsListe: List<BeregningRelasjon> = mutableListOf()
+    override var delberegningsListe: MutableList<BeregningRelasjon> = mutableListOf()
 
     /**
      * Angir type beregning: BER, HJELPEBER, SAM_BER, VUR_BER.
@@ -412,6 +412,6 @@ class Beregning : IBeregning, Serializable {
     /**
      * Liste av merknader - forklaringer,unntak og avvisningsgrunner fra regelmotoren.
      */
-    var merknadListe: List<Merknad> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
 
 }

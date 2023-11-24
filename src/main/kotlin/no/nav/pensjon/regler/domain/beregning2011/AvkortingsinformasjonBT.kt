@@ -10,7 +10,7 @@ class AvkortingsinformasjonBT : AbstraktAvkortingsinformasjon(), Serializable {
     /**
      * Angir liste over fremtidige perioder.
      */
-    var barnetilleggPeriodeListe: List<AbstraktBarnetilleggperiode> = mutableListOf()
+    var barnetilleggPeriodeListe: MutableList<AbstraktBarnetilleggperiode> = mutableListOf()
 
     /**
      * Fribeløp for antall barn ved virk.

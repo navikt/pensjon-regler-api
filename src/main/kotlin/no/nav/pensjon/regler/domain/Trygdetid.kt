@@ -111,12 +111,12 @@ class Trygdetid : Serializable {
     /**
      * Trygdetid i land med bilaterale avtaler.
      */
-    var ttUtlandTrygdeavtaler: List<TTUtlandTrygdeavtale> = mutableListOf()
+    var ttUtlandTrygdeavtaler: MutableList<TTUtlandTrygdeavtale> = mutableListOf()
 
     /**
      * Liste av merknader.
      */
-    var merknadListe: List<Merknad> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
     var garantiType: TrygdetidGarantiTypeCti? = null
 
     /**

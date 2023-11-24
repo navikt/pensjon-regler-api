@@ -13,7 +13,7 @@ class IdentifiserRegelendringerResponse : Serializable {
      * Listen av regel- og satsendringer som tjenesten fant for tidsrommet og input den ble kalt med.
      * Listen er ikke sortert på dato, men hver dato i listen er unik.
      */
-    var regelendringListe = Vector<Regelendring>()
+    var regelendringListe = mutableListOf<Regelendring>()
 
     /**
      * Pakkseddel som indikerer om det oppstod feil ved tjenestekallet.

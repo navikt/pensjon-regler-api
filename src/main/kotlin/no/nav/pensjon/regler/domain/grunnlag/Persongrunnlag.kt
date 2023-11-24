@@ -179,7 +179,7 @@ open class Persongrunnlag : Serializable {
      * Historikk for AFP ytelser. Inneholder informasjon relevant for
      * perioden(e) bruker hadde AFP.
      */
-    var afpHistorikkListe: List<AfpHistorikk> = mutableListOf()
+    var afpHistorikkListe: MutableList<AfpHistorikk> = mutableListOf()
 
     /**
      * Beskriver hvor mange barn det er i kullet.
@@ -265,7 +265,7 @@ open class Persongrunnlag : Serializable {
      * Liste av institusjonsoppholdsreduksjonsperioder relatert til
      * persongrunnlaget
      */
-    var instOpphReduksjonsperiodeListe: List<InstOpphReduksjonsperiode> = mutableListOf()
+    var instOpphReduksjonsperiodeListe: MutableList<InstOpphReduksjonsperiode> = mutableListOf()
 
     /**
      * Liste av institusjonsoppholdsfasteutgifterperioder relatert til
@@ -296,7 +296,7 @@ open class Persongrunnlag : Serializable {
     /**
      * Contains information about post injury arbeidsforhold perioder and stillingsprosent.
      */
-    var arbeidsforholdEtterUforgrunnlagListe: List<ArbeidsforholdEtterUforgrunnlag> = mutableListOf()
+    var arbeidsforholdEtterUforgrunnlagListe: MutableList<ArbeidsforholdEtterUforgrunnlag> = mutableListOf()
 
     /**
      * Informasjon om konverterting fra UP til UT.
@@ -306,7 +306,7 @@ open class Persongrunnlag : Serializable {
     /**
      * Inneholder utbetalingsgraden for uføretrygd etter inntektsavkorting.
      */
-    var utbetalingsgradUTListe: List<UtbetalingsgradUT> = mutableListOf()
+    var utbetalingsgradUTListe: MutableList<UtbetalingsgradUT> = mutableListOf()
 
     /**
      * Objekt som inneholder informasjon om TP-ordningers uførepensjonsgrunnlag. Dette er manuelt registrerte data og ikke hentet fra TP-registeret eller andre eksterne kilder.

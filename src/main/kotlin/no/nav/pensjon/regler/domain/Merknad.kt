@@ -12,12 +12,14 @@ class Merknad : Serializable {
     /**
      * Beskrivende
      */
-    var argumentListe: List<String> = mutableListOf()
+    var argumentListe: MutableList<String> = mutableListOf()
 
     constructor()
     constructor(merknad: Merknad) {
         kode = merknad.kode
-        argumentListe = ArrayList(merknad.argumentListe)
+        argumentListe = mutableListOf<String>().apply {
+            addAll(merknad.argumentListe)
+        }
     }
 
 }

@@ -4,5 +4,5 @@ import no.nav.pensjon.regler.domain.grunnlag.InstOpphPeriodegrunnlag
 import java.util.*
 
 class InstitusjonsOppholdRequest {
-    var instOpphPeriodegrunnlagListe: List<InstOpphPeriodegrunnlag> = Vector()
+    var instOpphPeriodegrunnlagListe: MutableList<InstOpphPeriodegrunnlag> = mutableListOf()
 }

@@ -46,7 +46,7 @@ class TrygdetidRequest {
      * Regelverktype bestemmer om trygdetid skal regnes etter gamle eller nye regler.
      */
     var regelverkType: RegelverkTypeCti? = null
-    var uttaksgradListe: List<Uttaksgrad> = mutableListOf()
+    var uttaksgradListe: MutableList<Uttaksgrad> = mutableListOf()
         get() = field
         set(value) {
             sorterUttaksgradListe()
@@ -57,7 +57,7 @@ class TrygdetidRequest {
     /**
      * Liste av beregningsvilkarPerioder, påkrevd ved uføretrygd.
      */
-    var beregningsvilkarPeriodeListe: List<BeregningsvilkarPeriode> = mutableListOf()
+    var beregningsvilkarPeriodeListe: MutableList<BeregningsvilkarPeriode> = mutableListOf()
 
     /**
      * Sorterer på nyeste fomDato - denne blir uttaksgradListe.get(0)

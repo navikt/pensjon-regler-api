@@ -43,7 +43,7 @@ class Sluttpoengtall : Serializable {
     constructor(sluttpoengtall: Sluttpoengtall) {
         pt = sluttpoengtall.pt
         poengTillegg = sluttpoengtall.poengTillegg
-        merknadListe = ArrayList()
+        merknadListe = mutableListOf()
         for (merknad in sluttpoengtall.merknadListe) {
             merknadListe.add(Merknad(merknad))
         }

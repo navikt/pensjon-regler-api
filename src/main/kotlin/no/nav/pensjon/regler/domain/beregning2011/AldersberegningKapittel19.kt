@@ -14,6 +14,6 @@ class AldersberegningKapittel19 : Beregning2011() {
      */
     var restpensjonUtenGJR: Basispensjon? = null
     var forholdstall = 0.0
-    var ftBenyttetArsakListe: List<FtDtArsak> = mutableListOf()
+    var ftBenyttetArsakListe: MutableList<FtDtArsak> = mutableListOf()
 
 }

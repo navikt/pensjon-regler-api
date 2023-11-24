@@ -7,7 +7,7 @@ class AldersberegningKapittel20 : Beregning2011() {
     var delingstall = 0.0
     var beholdninger: Beholdninger? = null
     var pensjonUnderUtbetaling: PensjonUnderUtbetaling? = null
-    var dtBenyttetArsakListe: List<FtDtArsak> = mutableListOf()
+    var dtBenyttetArsakListe: MutableList<FtDtArsak> = mutableListOf()
 
     /**
      * De faktiske beholdningene som ble brukt i beregningen ved Førstegangsuttaket

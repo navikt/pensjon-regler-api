@@ -5,6 +5,6 @@ import java.io.Serializable
 import java.util.*
 
 class KategoriserAfpEtteroppgjorResponse : Serializable {
-    var afpEtteroppgjorKategoriListe = Vector<AfpEtteroppgjorKategori>()
+    var afpEtteroppgjorKategoriListe = mutableListOf<AfpEtteroppgjorKategori>()
 
 }

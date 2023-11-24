@@ -18,7 +18,7 @@ class UforetrygdEtteroppgjor : Serializable {
      * Angir slutt av arbeidsforsøk.
      */
     var arbeidsforsokTom: Date? = null
-    var detaljer: List<UforetrygdEtteroppgjorDetalj> = mutableListOf()
+    var detaljer: MutableList<UforetrygdEtteroppgjorDetalj> = mutableListOf()
 
     /**
      * Angir start av uføretrygd i etteroppgjørsåret.

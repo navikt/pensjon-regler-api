@@ -10,7 +10,7 @@ class VilkarsprovRequest {
     var sisteBeregning: SisteBeregning? = null
     var fom: Date? = null
     var tom: Date? = null
-    var vilkarsvedtakliste: List<VilkarsVedtak> = mutableListOf()
+    var vilkarsvedtakliste: MutableList<VilkarsVedtak> = mutableListOf()
 
     constructor()
     constructor(kravhode: Kravhode?, sisteBeregning: SisteBeregning?, fom: Date?, tom: Date?) {

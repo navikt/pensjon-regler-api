@@ -16,12 +16,12 @@ class BeregnInstitusjonsoppholdRequest {
     // bruker1 beregning1967
     var bruker1Beregning: Beregning? = null
     var bruker1Kravhode: Kravhode? = null
-    var bruker1VilkarsvedtakListe = Vector<VilkarsVedtak>()
+    var bruker1VilkarsvedtakListe = mutableListOf<VilkarsVedtak>()
 
     // bruker1  beregningsResultat(dekker 2011,2016 og 2025)
     var bruker1BeregningsResultat: AbstraktBeregningsResultat? = null
     var bruker1Kravhode2011: Kravhode? = null
-    var bruker1VilkarsvedtakListe2011 = Vector<VilkarsVedtak>()
+    var bruker1VilkarsvedtakListe2011 = mutableListOf<VilkarsVedtak>()
     var bruker1ForholdstallUtvalg: ForholdstallUtvalg? = null
     var bruker1SisteAldersberegning2011: SisteAldersberegning2011? = null
 
@@ -34,12 +34,12 @@ class BeregnInstitusjonsoppholdRequest {
     // bruker2 beregning1967
     var bruker2Beregning: Beregning? = null
     var bruker2Kravhode: Kravhode? = null
-    var bruker2VilkarsvedtakListe = Vector<VilkarsVedtak>()
+    var bruker2VilkarsvedtakListe = mutableListOf<VilkarsVedtak>()
 
     // bruker2  beregningsResultat(dekker 2011,2016 og 2025)
     var bruker2BeregningsResultat: AbstraktBeregningsResultat? = null
     var bruker2Kravhode2011: Kravhode? = null
-    var bruker2VilkarsvedtakListe2011 = Vector<VilkarsVedtak>()
+    var bruker2VilkarsvedtakListe2011 = mutableListOf<VilkarsVedtak>()
     var bruker2ForholdstallUtvalg: ForholdstallUtvalg? = null
     var bruker2SisteAldersberegning2011: SisteAldersberegning2011? = null
 

@@ -16,23 +16,23 @@ class FramtidigPensjonspoengtall : Serializable {
     /**
      * Poengtallene som ligger til grunn for poengtallet.
      */
-     var poengtallListe: List<Poengtall> = mutableListOf()
+     var poengtallListe: MutableList<Poengtall> = mutableListOf()
 
     /**
      * Liste av merknader.
      */
-     var merknadListe: List<Merknad> = mutableListOf()
+     var merknadListe: MutableList<Merknad> = mutableListOf()
 
     constructor()
     constructor(framtidigPensjonspoengtall: FramtidigPensjonspoengtall) {
         pt = framtidigPensjonspoengtall.pt
         poengtallListe = mutableListOf()
         for (poengtall in framtidigPensjonspoengtall.poengtallListe) {
-            (poengtallListe as MutableList<Poengtall>).add(Poengtall(poengtall))
+            poengtallListe.add(Poengtall(poengtall))
         }
-        merknadListe = ArrayList()
+        merknadListe = mutableListOf()
         for (merknad in framtidigPensjonspoengtall.merknadListe) {
-            (merknadListe as ArrayList<Merknad>).add(Merknad(merknad))
+            merknadListe.add(Merknad(merknad))
         }
     }
 

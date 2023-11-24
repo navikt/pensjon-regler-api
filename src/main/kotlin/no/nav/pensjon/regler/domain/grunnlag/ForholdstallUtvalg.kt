@@ -4,6 +4,6 @@ import java.io.Serializable
 
 class ForholdstallUtvalg : Serializable {
     var ft = 0.0
-    var forholdstallListe: List<Forholdstall> = mutableListOf()
+    var forholdstallListe: MutableList<Forholdstall> = mutableListOf()
 
 }

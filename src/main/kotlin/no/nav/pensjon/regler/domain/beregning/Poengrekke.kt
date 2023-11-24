@@ -64,7 +64,7 @@ class Poengrekke : Serializable {
     /**
      * Liste av Poengtall
      */
-     var poengtallListe: List<Poengtall> = mutableListOf()
+     var poengtallListe: MutableList<Poengtall> = mutableListOf()
 
     /**
      * Samlet antall poengår i Norge.
@@ -146,7 +146,7 @@ class Poengrekke : Serializable {
     /**
      * Liste av merknader.
      */
-     var merknadListe: List<Merknad> = mutableListOf()
+     var merknadListe: MutableList<Merknad> = mutableListOf()
 
     /**
      * Flagg som viser om oppustert grunnlag fra pensjonsberegning fra TP-ordning er benyttet
@@ -172,7 +172,7 @@ class Poengrekke : Serializable {
         tpi = poengrekke.tpi
         poengtallListe = mutableListOf()
         for (poengtall in poengrekke.poengtallListe) {
-            (poengtallListe as MutableList<Poengtall>).add(Poengtall(poengtall))
+            poengtallListe.add(Poengtall(poengtall))
         }
         pa_no = poengrekke.pa_no
         if (poengrekke.fpp != null) {
@@ -197,7 +197,7 @@ class Poengrekke : Serializable {
         tpiEtterHovedregel = poengrekke.tpiEtterHovedregel
         merknadListe = mutableListOf()
         for (merknad in poengrekke.merknadListe) {
-            (merknadListe as MutableList<Merknad>).add(Merknad(merknad))
+            merknadListe.add(Merknad(merknad))
         }
     }
 }

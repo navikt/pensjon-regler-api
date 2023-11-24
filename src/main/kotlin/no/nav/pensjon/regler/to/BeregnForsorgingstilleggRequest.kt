@@ -21,13 +21,13 @@ class BeregnForsorgingstilleggRequest {
      * En liste med hva som er beregnet utbetalt av ytelser hittil i år.
      * Listen inneholder et sett med kontinuerlige ikke-overlappende perioder
      */
-    var beregnetUtbetalingsperiodeListeBruker: List<BeregnetUtbetalingsperiode> = ArrayList()
+    var beregnetUtbetalingsperiodeListeBruker: MutableList<BeregnetUtbetalingsperiode> = mutableListOf()
 
     /**
      * En liste med hva som er beregnet utbetalt av ytelser hittil i år.
      * Listen inneholder et sett med kontinuerlige ikke-overlappende perioder
      */
-    var beregnetUtbetalingsperiodeListeEPS: List<BeregnetUtbetalingsperiode> = ArrayList()
+    var beregnetUtbetalingsperiodeListeEPS: MutableList<BeregnetUtbetalingsperiode> = mutableListOf()
 
     /**
      * Dersom søker har uførepensjon og dersom beregning 1967.
@@ -88,7 +88,7 @@ class BeregnForsorgingstilleggRequest {
     /**
      * Liste av vilkårsvedtak for ytelser som skal beregnes.
      */
-    var vilkarsvedtakListe: List<VilkarsVedtak> = ArrayList()
+    var vilkarsvedtakListe: MutableList<VilkarsVedtak> = mutableListOf()
 
     /**
      * Virkningstidspunkt for søknad om forsærgingstillegg.
@@ -97,9 +97,9 @@ class BeregnForsorgingstilleggRequest {
 
     constructor() : super()
     constructor(
-        vilkarsvedtakListe: List<VilkarsVedtak>,
-        beregnetUtbetalingsperiodeListeBruker: List<BeregnetUtbetalingsperiode>,
-        beregnetUtbetalingsperiodeListeEPS: List<BeregnetUtbetalingsperiode>,
+        vilkarsvedtakListe: MutableList<VilkarsVedtak>,
+        beregnetUtbetalingsperiodeListeBruker: MutableList<BeregnetUtbetalingsperiode>,
+        beregnetUtbetalingsperiodeListeEPS: MutableList<BeregnetUtbetalingsperiode>,
         kravhode: Kravhode?,
         beregningsResultatAlderspensjonSoker: AbstraktBeregningsResultat?,
         beregningSoker: Beregning?,

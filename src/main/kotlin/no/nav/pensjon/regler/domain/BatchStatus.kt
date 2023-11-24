@@ -9,5 +9,7 @@ class BatchStatus : Serializable {
      * Liste av merknader. Beskriver hvorfor g-omregningen feilet for det gjeldende objektet.
      * Dersom statusOK er true finnes ingen merknader.
      */
-    var merknadListe: List<Merknad> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
+
+    val test = 0
 }

@@ -5,5 +5,5 @@ import java.io.Serializable
 
 class BeregningerTilFaktoromregningGrunnlag : Serializable {
     var vedtakId: Long? = null
-    var beregningGrunnlagListe: List<Beregning> = mutableListOf()
+    var beregningGrunnlagListe: MutableList<Beregning> = mutableListOf()
 }

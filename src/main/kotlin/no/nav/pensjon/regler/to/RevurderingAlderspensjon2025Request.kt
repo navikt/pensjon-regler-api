@@ -12,7 +12,7 @@ import java.util.*
 
 class RevurderingAlderspensjon2025Request {
     var kravhode: Kravhode? = null
-    var vilkarsvedtakListe: ArrayList<VilkarsVedtak> = ArrayList()
+    var vilkarsvedtakListe: MutableList<VilkarsVedtak> = mutableListOf()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var epsMottarPensjon = false
     var forholdstallUtvalg: ForholdstallUtvalg? = null

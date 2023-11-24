@@ -98,7 +98,7 @@ class Poengtall : Serializable, Omsorgsopptjening {
         }
         maksUforegrad = poengtall.maksUforegrad
         uforear = poengtall.uforear
-        merknadListe = ArrayList()
+        merknadListe = mutableListOf()
         for (merknad in poengtall.merknadListe) {
             merknadListe.add(Merknad(merknad))
         }

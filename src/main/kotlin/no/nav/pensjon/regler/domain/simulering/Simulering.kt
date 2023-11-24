@@ -30,6 +30,6 @@ class Simulering : Serializable {
     /**
      * Liste av tilknyttede personer.
      */
-    var persongrunnlagListe: List<Persongrunnlag> = mutableListOf()
-    var vilkarsvedtakliste: List<VilkarsVedtak> = mutableListOf()
+    var persongrunnlagListe: MutableList<Persongrunnlag> = mutableListOf()
+    var vilkarsvedtakliste: MutableList<VilkarsVedtak> = mutableListOf()
 }

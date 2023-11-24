@@ -11,7 +11,7 @@ import java.util.*
 
 class BeregnOvergangskullRequest {
     var kravhode: Kravhode? = null
-    var vilkarsvedtakListe: Vector<VilkarsVedtak> = Vector()
+    var vilkarsvedtakListe: MutableList<VilkarsVedtak> = mutableListOf()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var delingstallUtvalg: DelingstallUtvalg? = null
     var forholdstallUtvalg: ForholdstallUtvalg? = null

@@ -18,7 +18,7 @@ class Formel : Serializable {
     var autoResolve = false
     var varMap: HashMap<String, Number> = HashMap()
     var formelVarMap: HashMap<String, Formel> = HashMap()
-    var subFormelList: ArrayList<Formel> = ArrayList()
+    var subFormelList: MutableList<Formel> = mutableListOf()
     var tokenSet: HashSet<String> = HashSet()
 
     constructor()
@@ -43,7 +43,7 @@ class Formel : Serializable {
                 formelVarMap[key] = Formel(value)
             }
         }
-        subFormelList = java.util.ArrayList()
+        subFormelList = mutableListOf()
         for (subFormel in f.subFormelList) {
             subFormelList.add(Formel(subFormel))
         }

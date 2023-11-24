@@ -12,7 +12,7 @@ class Trygdeavtaledetaljer : Serializable {
     /**
      * Liste med poengår i avtaleland av typen PoengarManuell
      */
-    var poengarListe: List<PoengarManuell> = mutableListOf()
+    var poengarListe: MutableList<PoengarManuell> = mutableListOf()
 
     /**
      * Faktisk trygdetid i andre EØS-land for alternativ pro rata beregning

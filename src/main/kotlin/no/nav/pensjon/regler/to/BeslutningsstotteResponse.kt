@@ -6,7 +6,7 @@ import no.nav.pensjon.regler.domain.vedtak.AbstraktBeregningsvilkar
 import java.io.Serializable
 
 class BeslutningsstotteResponse : Serializable {
-    var beregningsvilkarListe: List<AbstraktBeregningsvilkar> = ArrayList()
+    var beregningsvilkarListe: MutableList<AbstraktBeregningsvilkar> = mutableListOf()
     var pakkseddel: Pakkseddel? = null
 
     /** Resultat av beregning av forventet inntekt  */

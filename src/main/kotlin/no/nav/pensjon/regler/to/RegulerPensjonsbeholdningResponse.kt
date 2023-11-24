@@ -6,5 +6,5 @@ import java.io.Serializable
 
 class RegulerPensjonsbeholdningResponse() : Serializable {
     var pakkseddel: Pakkseddel? = null
-    var regulertBeregningsgrunnlagForPensjonsbeholdning: ArrayList<PersonPensjonsbeholdning> = ArrayList()
+    var regulertBeregningsgrunnlagForPensjonsbeholdning: MutableList<PersonPensjonsbeholdning> = mutableListOf()
 }

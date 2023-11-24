@@ -5,7 +5,7 @@ import no.nav.pensjon.regler.domain.grunnlag.Pensjonsbeholdning
 import java.io.Serializable
 
 class BeregnOpptjeningResponse() : Serializable {
-    var beholdninger: ArrayList<Pensjonsbeholdning> = ArrayList()
+    var beholdninger: MutableList<Pensjonsbeholdning> = mutableListOf()
 
     var pakkseddel = Pakkseddel()
 

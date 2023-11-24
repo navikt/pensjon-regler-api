@@ -6,6 +6,6 @@ import java.util.*
 class FaktoromregnBeregningBatchRequest {
     var gammelGGjaldtDato: Date? = null
     var nyGOmregnFraDato: Date? = null
-    var beregningerTilFaktoromregningGrunnlagListe = Vector<BeregningerTilFaktoromregningGrunnlag>()
+    var beregningerTilFaktoromregningGrunnlagListe = mutableListOf<BeregningerTilFaktoromregningGrunnlag>()
 
 }

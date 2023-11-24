@@ -5,6 +5,6 @@ import java.io.Serializable
 import java.util.*
 
 class SatsResponse : Serializable {
-    var satsResultater: List<SatsResultat> = Vector()
+    var satsResultater: MutableList<SatsResultat> = mutableListOf()
 
 }

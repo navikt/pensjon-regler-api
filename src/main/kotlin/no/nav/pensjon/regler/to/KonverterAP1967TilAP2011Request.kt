@@ -9,7 +9,7 @@ import java.util.*
 
 class KonverterAP1967TilAP2011Request {
     var kravhode: Kravhode? = null
-    var vilkarsvedtakListe: List<VilkarsVedtak> = Vector()
+    var vilkarsvedtakListe: MutableList<VilkarsVedtak> = mutableListOf()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var beregning: Beregning? = null
     var virkFom: Date? = null

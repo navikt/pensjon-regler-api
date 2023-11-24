@@ -10,7 +10,7 @@ class KonverterTilUforetrygdRequest {
     var kravhode: Kravhode? = null
     var sisteUforepensjonBeregning: SisteUforepensjonBeregning? = null
     var sisteUforepensjonBeregningTilRevurdering: SisteUforepensjonBeregning? = null
-    var vilkarsvedtaksliste = Vector<VilkarsVedtak>()
+    var vilkarsvedtaksliste = mutableListOf<VilkarsVedtak>()
     var virkFom: Date? = null
 
     // Brukes til å si om en beregning skal faktorkonverteres eller ikke

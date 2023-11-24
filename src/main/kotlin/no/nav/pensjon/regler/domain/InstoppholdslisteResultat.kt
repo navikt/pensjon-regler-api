@@ -12,5 +12,5 @@ class InstoppholdslisteResultat : Serializable {
     /**
      * Returlisten av periodegrunnlagene. Utfylt når merknad er null.
      */
-    var instOpphPeriodegrunnlagListe: List<InstOpphPeriodegrunnlag> = mutableListOf()
+    var instOpphPeriodegrunnlagListe: MutableList<InstOpphPeriodegrunnlag> = mutableListOf()
 }

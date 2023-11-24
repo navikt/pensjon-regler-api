@@ -58,6 +58,6 @@ abstract class AbstraktBarnetillegg protected constructor() : Ytelseskomponent()
     /**
      * årsaken(e) til avkorting. Satt dersom avkortet er true.
      */
-    var avkortingsArsakList: List<AvkortingsArsakCti> = mutableListOf()
+    var avkortingsArsakList: MutableList<AvkortingsArsakCti> = mutableListOf()
 
 }

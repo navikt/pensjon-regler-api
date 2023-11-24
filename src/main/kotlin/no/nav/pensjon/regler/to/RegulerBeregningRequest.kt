@@ -9,8 +9,8 @@ import java.util.*
 class RegulerBeregningRequest {
     var beregning1967: Beregning? = null
     var virkFom: Date? = null
-    var uttaksgradListe: ArrayList<Uttaksgrad> = ArrayList()
-    var brukersVilkarsvedtakListe: ArrayList<VilkarsVedtak> = ArrayList()
+    var uttaksgradListe: MutableList<Uttaksgrad> = mutableListOf()
+    var brukersVilkarsvedtakListe: MutableList<VilkarsVedtak> = mutableListOf()
     var sokersPersongrunnlag: Persongrunnlag? = null
     var epsPersongrunnlag: Persongrunnlag? = null
 }

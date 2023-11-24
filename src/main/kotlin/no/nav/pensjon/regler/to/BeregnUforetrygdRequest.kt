@@ -9,7 +9,7 @@ import java.util.*
 
 class BeregnUforetrygdRequest {
     var kravhode: Kravhode? = null
-    var vilkarsvedtaksliste = Vector<VilkarsVedtak>()
+    var vilkarsvedtaksliste = mutableListOf<VilkarsVedtak>()
     var virkFom: Date? = null
     var virkTom: Date? = null
     var forrigeGjenlevendetillegg: Gjenlevendetillegg? = null
@@ -17,7 +17,7 @@ class BeregnUforetrygdRequest {
     /**
      * Liste over perioder med utbetalt uføretrygd
      */
-    var beregnetUtbetalingsperiodeListe: List<BeregnetUtbetalingsperiode> = ArrayList()
+    var beregnetUtbetalingsperiodeListe: MutableList<BeregnetUtbetalingsperiode> = mutableListOf()
 
     //Angir om inntektsavkortingen skal gjøres på bakgrunn av reglene for etteroppgjør
     var etteroppgjor = false

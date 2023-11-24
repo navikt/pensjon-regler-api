@@ -5,5 +5,5 @@ import java.io.Serializable
 import java.util.*
 
 class BeregnAfpEtteroppgjorResponse : Serializable {
-    var afpEtteroppgjorListe = Vector<AFPetteroppgjor>()
+    var afpEtteroppgjorListe = mutableListOf<AFPetteroppgjor>()
 }

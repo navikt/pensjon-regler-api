@@ -87,12 +87,12 @@ class VilkarsVedtak : Serializable {
     /**
      * List av Beregningsvilkarperioder
      */
-    var beregningsvilkarPeriodeListe: List<BeregningsvilkarPeriode> = mutableListOf()
+    var beregningsvilkarPeriodeListe: MutableList<BeregningsvilkarPeriode> = mutableListOf()
 
     /**
      * Liste av merknader - forklaringer,unntak og avvisningsgrunner fra
      * regelmotoren.
      */
-    var merknadListe: List<Merknad> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
 
 }

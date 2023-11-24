@@ -11,7 +11,7 @@ class RegulerBeregning2011Request {
     var virkFom: Date? = null
     var beregningsResultat: AbstraktBeregningsResultat? = null
     var afpLivsvarig: AfpLivsvarig? = null
-    var uttaksgradListe: ArrayList<Uttaksgrad> = ArrayList()
+    var uttaksgradListe: MutableList<Uttaksgrad> = mutableListOf()
     var fodselsdato: Date? = null
     var forholdstallUtvalg: ForholdstallUtvalg? = null
     var delingstallUtvalg: DelingstallUtvalg? = null

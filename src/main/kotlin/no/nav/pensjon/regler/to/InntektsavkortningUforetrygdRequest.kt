@@ -46,9 +46,9 @@ class InntektsavkortningUforetrygdRequest {
     /**
      * Liste over perioder med utbetalt uføretrygd
      */
-    var beregnetUtbetalingsperiodeListe: List<BeregnetUtbetalingsperiode> = ArrayList()
+    var beregnetUtbetalingsperiodeListe: MutableList<BeregnetUtbetalingsperiode> = mutableListOf()
 
-    fun setBeregnetUtbetalingPeriodeUTListe(beregnetUtbetalingsperiodeListe: List<BeregnetUtbetalingsperiode>) {
+    fun setBeregnetUtbetalingPeriodeUTListe(beregnetUtbetalingsperiodeListe: MutableList<BeregnetUtbetalingsperiode>) {
         this.beregnetUtbetalingsperiodeListe = beregnetUtbetalingsperiodeListe
     }
 }

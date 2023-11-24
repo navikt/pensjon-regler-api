@@ -17,8 +17,8 @@ class SamletEktefellepensjonRequest {
     var soker2Kravhode: Kravhode? = null
     var soker1Kravhode2011: Kravhode? = null
     var soker2Kravhode2011: Kravhode? = null
-    var soker1VilkarsvedtakListe: List<VilkarsVedtak> = ArrayList()
-    var soker2VilkarsvedtakListe: List<VilkarsVedtak> = ArrayList()
-    var soker1VilkarsvedtakListe2011: List<VilkarsVedtak> = ArrayList()
-    var soker2VilkarsvedtakListe2011: List<VilkarsVedtak> = ArrayList()
+    var soker1VilkarsvedtakListe: MutableList<VilkarsVedtak> = mutableListOf()
+    var soker2VilkarsvedtakListe: MutableList<VilkarsVedtak> = mutableListOf()
+    var soker1VilkarsvedtakListe2011: MutableList<VilkarsVedtak> = mutableListOf()
+    var soker2VilkarsvedtakListe2011: MutableList<VilkarsVedtak> = mutableListOf()
 }

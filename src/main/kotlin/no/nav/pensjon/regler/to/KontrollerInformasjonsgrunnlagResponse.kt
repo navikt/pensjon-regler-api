@@ -6,7 +6,7 @@ import java.io.Serializable
 import java.util.*
 
 class KontrollerInformasjonsgrunnlagResponse : Serializable {
-    var merknadListe: List<Merknad> = Vector()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
 
     /**
      * Pakkseddel for beregningene.

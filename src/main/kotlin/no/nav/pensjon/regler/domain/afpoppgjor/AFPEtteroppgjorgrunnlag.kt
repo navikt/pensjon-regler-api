@@ -35,7 +35,7 @@ class AFPEtteroppgjorgrunnlag : Serializable {
     /**
      * Liste av Utbetalingsperioder.
      */
-    var afpUtbetalingsperiodeList: List<AfpUtbetalingsperiode> = mutableListOf()
+    var afpUtbetalingsperiodeList: MutableList<AfpUtbetalingsperiode> = mutableListOf()
 
     /**
      * Brukerregistrert inntekt etter opphør

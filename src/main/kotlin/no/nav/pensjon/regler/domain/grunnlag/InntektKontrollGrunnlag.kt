@@ -6,28 +6,28 @@ import java.util.*
 
 class InntektKontrollGrunnlag : Serializable {
     /** Inneholder faktiske inntekter mottatt av bruker hittil i år.  */
-    var faktiskeInntekterBrukerListe: List<FaktiskInntektsgrunnlag> = mutableListOf()
+    var faktiskeInntekterBrukerListe: MutableList<FaktiskInntektsgrunnlag> = mutableListOf()
 
     /** Inneholder faktiske inntekter mottatt av EPS hittil i år.  */
-    var faktiskeInntekterEPSListe: List<FaktiskInntektsgrunnlag> = mutableListOf()
+    var faktiskeInntekterEPSListe: MutableList<FaktiskInntektsgrunnlag> = mutableListOf()
 
     /** Inneholder forventede inntekter for bruker fra Inntektskomponenten.  */
-    var forventetInntektBrukerListe: List<Inntektsgrunnlag> = mutableListOf()
+    var forventetInntektBrukerListe: MutableList<Inntektsgrunnlag> = mutableListOf()
 
     /** Inneholder forventede inntekter for EPS fra Inntektskomponenten.  */
-    var forventetInntektEPSListe: List<Inntektsgrunnlag> = mutableListOf()
+    var forventetInntektEPSListe: MutableList<Inntektsgrunnlag> = mutableListOf()
 
     /**
      * En liste med hva som er beregnet utbetalt av ytelser hittil i år for søker.
      * Listen inneholder et sett med kontinuerlige ikke-overlappende perioder
      */
-    var beregnetUtbetalingsperiodeBrukerListe: List<BeregnetUtbetalingsperiode> = mutableListOf()
+    var beregnetUtbetalingsperiodeBrukerListe: MutableList<BeregnetUtbetalingsperiode> = mutableListOf()
 
     /**
      * En liste med hva som er beregnet utbetalt av ytelser hittil i år for EPS.
      * Listen inneholder et sett med kontinuerlige ikke-overlappende perioder
      */
-    var beregnetUtbetalingsperiodeEPSListe: List<BeregnetUtbetalingsperiode> = mutableListOf()
+    var beregnetUtbetalingsperiodeEPSListe: MutableList<BeregnetUtbetalingsperiode> = mutableListOf()
 
     /** Angir hvilken måned som kontrolleres.  */
     var kontrolldato: Date? = null

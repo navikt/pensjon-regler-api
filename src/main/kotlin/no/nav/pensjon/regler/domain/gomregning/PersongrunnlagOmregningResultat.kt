@@ -5,6 +5,6 @@ import java.io.Serializable
 
 class PersongrunnlagOmregningResultat : Serializable {
     var persongrunnlagId: Long? = null
-    var inntektsgrunnlagResultatListe: List<Inntektsgrunnlag> = mutableListOf()
+    var inntektsgrunnlagResultatListe: MutableList<Inntektsgrunnlag> = mutableListOf()
 
 }

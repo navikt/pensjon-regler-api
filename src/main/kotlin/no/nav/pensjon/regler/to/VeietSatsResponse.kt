@@ -5,5 +5,5 @@ import java.io.Serializable
 import java.util.*
 
 class VeietSatsResponse : Serializable {
-    var veietSatsResultater: List<VeietSatsResultat> = Vector()
+    var veietSatsResultater: MutableList<VeietSatsResultat> = mutableListOf()
 }

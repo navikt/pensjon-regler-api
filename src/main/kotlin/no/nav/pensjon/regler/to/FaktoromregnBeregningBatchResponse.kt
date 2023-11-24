@@ -5,6 +5,6 @@ import java.io.Serializable
 import java.util.*
 
 class FaktoromregnBeregningBatchResponse : Serializable {
-    var beregningerFaktoromregningResultatListe = Vector<BeregningerFaktoromregningResultat>()
+    var beregningerFaktoromregningResultatListe = mutableListOf<BeregningerFaktoromregningResultat>()
 
 }

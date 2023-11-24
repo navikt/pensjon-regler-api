@@ -17,10 +17,10 @@ abstract class Beregning2011 : IBeregning, Serializable {
     var resultatType: ResultatTypeCti? = null
     var beregningsMetode: BeregningMetodeTypeCti? = null
     var beregningType: BeregningTypeCti? = null
-    var delberegning2011Liste: List<BeregningRelasjon> = mutableListOf()
-    var merknadListe: List<Merknad> = mutableListOf()
+    var delberegning2011Liste: MutableList<BeregningRelasjon> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
 
-    override val delberegningsListe: List<BeregningRelasjon>
+    override val delberegningsListe: MutableList<BeregningRelasjon>
         get() = delberegning2011Liste
 
     /**

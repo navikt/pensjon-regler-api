@@ -7,5 +7,5 @@ import java.io.Serializable
 class BeregningerFaktoromregningResultat : Serializable {
     var vedtakId: Long? = null
     var batchStatus: BatchStatus? = null
-    var beregningResultatListe: List<Beregning> = mutableListOf()
+    var beregningResultatListe: MutableList<Beregning> = mutableListOf()
 }

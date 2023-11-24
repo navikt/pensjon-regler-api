@@ -50,7 +50,7 @@ class OpptjeningUT : Serializable, Omsorgsopptjening {
      */
     @JvmField
     var ar = 0
-    var merknadListe: List<Merknad> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
     var formelkode: FormelKodeCti? = null
 
     /**

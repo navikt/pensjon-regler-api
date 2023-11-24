@@ -8,7 +8,7 @@ import java.io.Serializable
 
 class Minsteytelse : Serializable {
     var formelKode: FormelKodeCti? = null
-    var merknadListe: List<Merknad> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
     var satsMinsteytelse: SatsMinsteytelse? = null
     var arsbelop = 0
     var eksportforbud = false

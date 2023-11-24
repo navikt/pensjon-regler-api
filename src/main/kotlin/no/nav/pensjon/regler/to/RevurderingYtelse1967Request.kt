@@ -9,7 +9,7 @@ import java.util.*
 class RevurderingYtelse1967Request {
     var virkFom: Date? = null
     var kravhode: Kravhode? = null
-    var vilkarsvedtakListe: Vector<VilkarsVedtak> = Vector()
+    var vilkarsvedtakListe: MutableList<VilkarsVedtak> = mutableListOf()
     var sisteBeregning1967: SisteBeregning1967? = null
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var epsMottarPensjon = false

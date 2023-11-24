@@ -23,11 +23,11 @@ class BeregningsvilkarPeriode : Serializable {
     /**
      * Liste av beregningsvilkår til bruk ved beregning av uføretrygd.
      */
-    var beregningsvilkarListe: List<AbstraktBeregningsvilkar> = mutableListOf()
+    var beregningsvilkarListe: MutableList<AbstraktBeregningsvilkar> = mutableListOf()
 
     /**
      * Liste av vilkår til bruk ved beregning av uføretrygd.
      */
-    var vilkarListe: List<AbstraktVilkar> = mutableListOf()
+    var vilkarListe: MutableList<AbstraktVilkar> = mutableListOf()
 
 }

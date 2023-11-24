@@ -4,5 +4,5 @@ import java.io.Serializable
 
 class DelingstallUtvalg : Serializable {
     var dt = 0.0
-    var delingstallListe: List<Delingstall> = mutableListOf()
+    var delingstallListe: MutableList<Delingstall> = mutableListOf()
 }

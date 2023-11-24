@@ -13,7 +13,7 @@ class UforetrygdEtteroppgjorDetalj : Serializable {
     /**
      * Liste over inntektsfratrekk for etteroppgjøret (for perioder uten uføretrygd og andre registrerte fradrag).
      */
-    var fratrekk: List<Inntektsgrunnlag> = ArrayList()
+    var fratrekk: MutableList<Inntektsgrunnlag> = mutableListOf()
 
     /**
      * Kode som angir hvilken rolle personen har på kravet. De ulike rollene er definert i Kodeverk, ark K_GRNL_ROLLE_T.
@@ -23,7 +23,7 @@ class UforetrygdEtteroppgjorDetalj : Serializable {
     /**
      * Liste over alle inntekter som skal benyttes i etteroppgjøret.
      */
-    var inntekter: List<Inntektsgrunnlag> = ArrayList()
+    var inntekter: MutableList<Inntektsgrunnlag> = mutableListOf()
 
     /**
      * Angir gyldighetsperioden for detaljen. Avgrenset av Uføreperioden og året som etteroppgjørsgrunnlaget gjelder for.

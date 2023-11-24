@@ -1,7 +1,7 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
 class BeregningsgrunnlagOrdiner : AbstraktBeregningsgrunnlag() {
-    var opptjeningUTListe: List<OpptjeningUT> = mutableListOf()
+    var opptjeningUTListe: MutableList<OpptjeningUT> = mutableListOf()
     var nasjonaltSnitt = 0
 
     /**

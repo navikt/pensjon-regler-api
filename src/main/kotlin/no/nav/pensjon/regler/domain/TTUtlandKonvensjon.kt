@@ -62,5 +62,5 @@ class TTUtlandKonvensjon : Serializable {
     /**
      * Liste av merknader.
      */
-    var merknadListe: List<Merknad> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
 }

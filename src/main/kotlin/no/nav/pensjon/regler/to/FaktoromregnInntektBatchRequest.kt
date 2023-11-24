@@ -17,7 +17,7 @@ class FaktoromregnInntektBatchRequest {
     /**
      * Liste av grunnlag for faktoromregning.
      */
-    var kravFaktoromregningGrunnlagListe = Vector<KravFaktoromregningGrunnlag>()
+    var kravFaktoromregningGrunnlagListe = mutableListOf<KravFaktoromregningGrunnlag>()
 
     /**
      * Angir om tjenestekallet er en batch jobb eller ikke.

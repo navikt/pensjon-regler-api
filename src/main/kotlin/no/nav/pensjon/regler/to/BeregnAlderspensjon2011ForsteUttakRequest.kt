@@ -9,7 +9,7 @@ import java.util.*
 
 class BeregnAlderspensjon2011ForsteUttakRequest {
     var kravhode: Kravhode? = null
-    var vilkarsvedtakListe: List<VilkarsVedtak> = Vector()
+    var vilkarsvedtakListe: MutableList<VilkarsVedtak> = mutableListOf()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var virkFom: Date? = null
     var virkTom: Date? = null

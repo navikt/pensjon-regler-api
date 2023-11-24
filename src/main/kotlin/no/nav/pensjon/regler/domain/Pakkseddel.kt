@@ -20,6 +20,6 @@ class Pakkseddel : Serializable {
     /**
      * Liste av merknader. Beskriver hvordan PREG kom frem til `kontrollTjenesteOk`.
      */
-    var merknadListe: List<Merknad> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
 
 }

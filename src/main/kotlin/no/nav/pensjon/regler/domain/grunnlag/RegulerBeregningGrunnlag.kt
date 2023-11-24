@@ -9,8 +9,8 @@ import java.util.*
 class RegulerBeregningGrunnlag : Serializable {
     var beregning1967: Beregning? = null
     var virkFom: Date? = null
-    var uttaksgradListe: List<Uttaksgrad> = mutableListOf()
-    var brukersVilkarsvedtakListe: List<VilkarsVedtak> = mutableListOf()
+    var uttaksgradListe: MutableList<Uttaksgrad> = mutableListOf()
+    var brukersVilkarsvedtakListe: MutableList<VilkarsVedtak> = mutableListOf()
     var sokersPersongrunnlag: Persongrunnlag? = null
     var epsPersongrunnlag: Persongrunnlag? = null
     var pakkseddel: Pakkseddel? = null

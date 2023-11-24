@@ -4,5 +4,5 @@ import java.io.Serializable
 
 class KravFaktoromregningGrunnlag : Serializable {
     var kravId: Long? = null
-    var persongrunnlagOmregningGrunnlagListe: List<PersongrunnlagOmregningGrunnlag> = mutableListOf()
+    var persongrunnlagOmregningGrunnlagListe: MutableList<PersongrunnlagOmregningGrunnlag> = mutableListOf()
 }

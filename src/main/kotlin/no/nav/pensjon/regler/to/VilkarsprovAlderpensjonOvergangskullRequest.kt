@@ -16,9 +16,5 @@ class VilkarsprovAlderpensjonOvergangskullRequest {
     var afpVirkFom: Date? = null
     var sisteBeregning: SisteAldersberegning2011? = null
 
-    /**
-     * Read only property for vilkarsvedtakListe as array
-     * @return array of VilkarsVedtak
-     */
     var utforVilkarsberegning = false
 }

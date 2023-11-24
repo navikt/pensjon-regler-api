@@ -25,7 +25,7 @@ abstract class AbstraktBeregningsResultat protected constructor() : Serializable
     var benyttetSivilstand: BorMedTypeCti? = null
     var beregningArsak: BeregningArsakCti? = null
     var lonnsvekstInformasjon: LonnsvekstInformasjon? = null
-    var merknadListe: List<Merknad> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
     var gjennomsnittligUttaksgradSisteAr = 0.0
 
 }

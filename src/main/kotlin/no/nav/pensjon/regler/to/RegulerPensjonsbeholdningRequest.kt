@@ -5,6 +5,6 @@ import java.util.*
 
 class RegulerPensjonsbeholdningRequest() {
     var virkFom: Date? = null
-    var beregningsgrunnlagForPensjonsbeholdning: ArrayList<PersonPensjonsbeholdning> = ArrayList()
+    var beregningsgrunnlagForPensjonsbeholdning: MutableList<PersonPensjonsbeholdning> = mutableListOf()
 
 }

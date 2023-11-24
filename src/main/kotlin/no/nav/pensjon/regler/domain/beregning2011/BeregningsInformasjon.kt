@@ -19,7 +19,7 @@ open class BeregningsInformasjon : Serializable, IBeregningsInformasjon2011 {
     override var opt: Sluttpoengtall? = null
     override var ypt: Sluttpoengtall? = null
     override var grunnpensjonAvkortet = false
-    var merknadListe: List<Merknad> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf()
     override var mottarMinstePensjonsniva = false
     override var minstepensjonArsak: String? = null
     override var rettPaGjenlevenderett = false
@@ -39,7 +39,7 @@ open class BeregningsInformasjon : Serializable, IBeregningsInformasjon2011 {
     override var beregningsMetode: BeregningMetodeTypeCti? = null
     override var eksport = false
     override var resultatType: ResultatTypeCti? = null
-    var tapendeBeregningsmetodeListe: List<TapendeBeregningsmetode> = mutableListOf()
+    var tapendeBeregningsmetodeListe: MutableList<TapendeBeregningsmetode> = mutableListOf()
     override var trygdetid: Int? = null
     override var tt_anv = 0
     override var vurdertBosattland: LandCti? = null
