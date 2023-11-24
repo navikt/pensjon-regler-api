@@ -4,6 +4,13 @@ on: workflow_dispatch
 
 jobs:
   release:
+    permissions:
+      actions: read
+      checks: read
+      contents: read
+      deployments: write
+      packages: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
