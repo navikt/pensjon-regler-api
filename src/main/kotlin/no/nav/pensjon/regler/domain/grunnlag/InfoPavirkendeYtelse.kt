@@ -21,4 +21,9 @@ class InfoPavirkendeYtelse : Serializable {
      */
     var tjenestepensjonsordningEps: YtelseTypeCti? = null
 
+    /**
+     * Satt til true dersom EPS mottar omstillingsstonad (utbetalt beløp > 0).
+     */
+    var mottarOmstillingsstonadEps: Boolean = false
+
 }
