@@ -1,10 +1,7 @@
 package no.nav.pensjon.regler.to
 
 import no.nav.pensjon.regler.domain.beregning.Beregning
-import no.nav.pensjon.regler.domain.beregning2011.AbstraktBeregningsResultat
-import no.nav.pensjon.regler.domain.beregning2011.AfpLivsvarig
-import no.nav.pensjon.regler.domain.beregning2011.BeregningsresultatUforetrygd
-import no.nav.pensjon.regler.domain.beregning2011.SisteAldersberegning2011
+import no.nav.pensjon.regler.domain.beregning2011.*
 import no.nav.pensjon.regler.domain.grunnlag.ForholdstallUtvalg
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
@@ -29,7 +26,7 @@ class BeregnInstitusjonsoppholdRequest {
     var bruker1BeregningsresultatUforetrygd: BeregningsresultatUforetrygd? = null
 
     /* Informasjon om afpPrivatberegning for bruker1. Kun påkrevd dersom bruker1 har AfpPrivat. */
-    var bruker1afpLivsvarig: AfpLivsvarig? = null
+    var bruker1afpLivsvarig: AfpPrivatLivsvarig? = null
 
     // bruker2 beregning1967
     var bruker2Beregning: Beregning? = null
@@ -44,5 +41,5 @@ class BeregnInstitusjonsoppholdRequest {
     var bruker2SisteAldersberegning2011: SisteAldersberegning2011? = null
 
     /* Informasjon om afpPrivatberegning for bruker2. Kun påkrevd dersom bruker2 har AfpPrivat. */
-    var bruker2afpLivsvarig: AfpLivsvarig? = null
+    var bruker2afpLivsvarig: AfpPrivatLivsvarig? = null
 }

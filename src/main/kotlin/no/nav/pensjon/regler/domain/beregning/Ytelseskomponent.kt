@@ -12,90 +12,81 @@ import java.io.Serializable
  * Superklasse for alle ytelser, Grunnpensjon, Sertillegg, AfpTillegg osv. For
  * alle ytelser gjelder at brutto - netto = fradrag.
  */
-abstract class Ytelseskomponent : Serializable {
+abstract class Ytelseskomponent(
     /**
      * Brutto beløp.
      */
-    open var brutto = 0
+    var brutto: Int = 0,
 
     /**
      * Netto beløp.
      */
-    open var netto = 0
+    var netto: Int = 0,
 
     /**
      * Fradraget: brutto - netto
      */
-    var fradrag = 0
+    var fradrag: Int = 0,
 
     /**
      * Ikke avrundet beløp, gjelder for hele året.
      */
-    var bruttoPerAr = 0.0
+    var bruttoPerAr: Double = 0.0,
 
     /**
      * årlig netto utbetalt sum.
      */
-    var nettoPerAr = 0.0
+    var nettoPerAr: Double = 0.0,
 
     /**
      * Ytelsens fradrag per år.
      */
-    var fradragPerAr = 0.0
+    var fradragPerAr: Double = 0.0,
 
     /**
      * Type ytelse, verdi fra kodeverk.
      */
-    var ytelsekomponentType: YtelsekomponentTypeCti? = null
+    var ytelsekomponentType: YtelsekomponentTypeCti? = null,
 
     /**
      * Liste av merknader.
      */
-    var merknadListe: MutableList<Merknad> = mutableListOf()
+    var merknadListe: MutableList<Merknad> = mutableListOf(),
 
     /**
      * Indikerer hvilken beregningsformel som ble brukt.
      */
-    var formelKode: FormelKodeCti? = null
+    var formelKode: FormelKodeCti? = null,
 
     /**
      * Informasjon om regulering av ytelsen.
      */
-    var reguleringsInformasjon: ReguleringsInformasjon? = null
+    var reguleringsInformasjon: ReguleringsInformasjon? = null,
 
     /**
      * Angir om ytelseskomponenten går til utbetaling eller tilbakekreving.
      * Settes ikke i PREG, men mappes slik at vi ikke mister den ved kall til regeltjenester som returnerer kopier av innsendt ytelseskomponent (f.eks. faktoromregning).
      */
-    var fradragsTransaksjon = false
+    var fradragsTransaksjon: Boolean = false,
 
     /**
      * Angir om ytelseskomponenten er opphørt.
      * Settes ikke i PREG, men mappes slik at vi ikke mister den ved kall til regeltjenester som returnerer kopier av innsendt ytelseskomponent (f.eks. faktoromregning).
      */
-    var opphort = false
+    var opphort: Boolean = false,
 
     /**
      * Angir sakentypen ytelseskomponenten er knyttet til.
      * Settes ikke i PREG, men mappes slik at vi ikke mister den ved kall til regeltjenester som returnerer kopier av innsendt ytelseskomponent (f.eks. faktoromregning).
      */
-    var sakType: SakTypeCti? = null
+    var sakType: SakTypeCti? = null,
 
-    /**
-     * Copy Constructor
-     *
-     * @param ytelseskomponent a `Ytelseskomponent` object
-     */
+    ) : Serializable {
+
 
     val isIFormelProvider: Boolean
-        /**
-         * Angir om ytelseskomponenten implementerer interfacet IFormelProvider.
-         * Dette dekker opp for mangel i Blaze Advisor som ikke kan sjekke om en klasse er et interface.
-         */
         get() = this is IFormelProvider
-
-    constructor()
-    constructor(ytelseskomponent: Ytelseskomponent) {
+    constructor(ytelseskomponent: Ytelseskomponent) : this() {
         brutto = ytelseskomponent.brutto
         netto = ytelseskomponent.netto
         fradrag = ytelseskomponent.fradrag

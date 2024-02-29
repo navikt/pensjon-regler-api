@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.to
 
-import no.nav.pensjon.regler.domain.beregning2011.AfpLivsvarig
+import no.nav.pensjon.regler.domain.beregning2011.AfpPrivatLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.SisteAldersberegning2016
 import no.nav.pensjon.regler.domain.grunnlag.DelingstallUtvalg
 import no.nav.pensjon.regler.domain.grunnlag.ForholdstallUtvalg
@@ -19,7 +19,7 @@ class RevurderingAlderspensjon2016Request {
     var delingstallUtvalg: DelingstallUtvalg? = null
     var virkFom: Date? = null
     var forrigeAldersBeregning: SisteAldersberegning2016? = null
-    var afpLivsvarig: AfpLivsvarig? = null
+    var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
 
     /**
      * Grunnlag for beregning av garantitilleggsbeholdning.
