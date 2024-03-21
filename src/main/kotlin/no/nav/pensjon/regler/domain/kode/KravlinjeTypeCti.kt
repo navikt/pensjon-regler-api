@@ -12,4 +12,7 @@ class KravlinjeTypeCti : TypeCti {
 
     constructor() : super()
     constructor(kode: String?) : super(kode)
+    constructor(kode: String, hovedKravlinje: Boolean = false) : super(kode) {
+        this.hovedKravlinje = hovedKravlinje
+    }
 }
