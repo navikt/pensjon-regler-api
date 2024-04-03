@@ -5,5 +5,5 @@ import java.io.Serializable
 
 
 abstract class ServiceResponse(
-    open val pakkseddel: Pakkseddel = Pakkseddel(),
+    open var pakkseddel: Pakkseddel = Pakkseddel(),
 ) : Serializable
