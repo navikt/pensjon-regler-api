@@ -6,7 +6,7 @@ import no.nav.pensjon.regler.domain.grunnlag.Uttaksgrad
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
 
-class RegulerBeregningRequest {
+class RegulerBeregningRequest : ServiceRequest() {
     var beregning1967: Beregning? = null
     var virkFom: Date? = null
     var uttaksgradListe: ArrayList<Uttaksgrad> = ArrayList()

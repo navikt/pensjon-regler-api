@@ -5,7 +5,7 @@ import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
 
-class VilkarsprovHalvpensjonRequest {
+class VilkarsprovHalvpensjonRequest : ServiceRequest() {
     var kravhode: Kravhode? = null
     var fom: Date? = null
     var tom: Date? = null

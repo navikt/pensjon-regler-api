@@ -6,7 +6,7 @@ import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
 
-class RevurderingYtelse1967Request {
+class RevurderingYtelse1967Request : ServiceRequest() {
     var virkFom: Date? = null
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: Vector<VilkarsVedtak> = Vector()

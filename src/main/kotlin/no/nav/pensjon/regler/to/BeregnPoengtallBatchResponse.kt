@@ -1,9 +1,8 @@
 package no.nav.pensjon.regler.to
 
 import no.nav.pensjon.regler.domain.grunnlag.PersonOpptjeningsgrunnlag
-import java.io.Serializable
 
 
-class BeregnPoengtallBatchResponse : Serializable {
+class BeregnPoengtallBatchResponse : ServiceResponse() {
     var personOpptjeningsgrunnlagListe: MutableList<PersonOpptjeningsgrunnlag> = mutableListOf()
 }

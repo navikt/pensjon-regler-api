@@ -7,7 +7,7 @@ import java.util.*
 /**
  * Dataoverføringsobjekt for tjenesten beregnOpptjening.
  */
-class BeregnOpptjeningRequest {
+class BeregnOpptjeningRequest : ServiceRequest() {
     var beholdningTom: Date? = null
     var persongrunnlag: Persongrunnlag? = null
     var beholdning: Pensjonsbeholdning? = null

@@ -7,7 +7,7 @@ import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
 
-class InntektsavkortningUforetrygdRequest {
+class InntektsavkortningUforetrygdRequest : ServiceRequest() {
     /**
      * Et beregningsresultat for uføretrygd basert på forventet inntekt som skal inntektsavkortes på nytt.
      */

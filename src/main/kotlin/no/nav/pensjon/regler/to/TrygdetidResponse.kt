@@ -1,10 +1,10 @@
 package no.nav.pensjon.regler.to
 
-import no.nav.pensjon.regler.domain.Pakkseddel
-import no.nav.pensjon.regler.domain.Trygdetid
-import java.io.Serializable
 
-class TrygdetidResponse : Serializable {
+import no.nav.pensjon.regler.domain.Trygdetid
+
+
+class TrygdetidResponse : ServiceResponse() {
     /**
      * Fastsatt trygdetid.
      */
@@ -20,8 +20,4 @@ class TrygdetidResponse : Serializable {
      */
     var trygdetidAlternativ: Trygdetid? = null
 
-    /**
-     * Pakkseddel for beregningene.
-     */
-    var pakkseddel = Pakkseddel()
 }

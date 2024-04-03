@@ -1,12 +1,12 @@
 package no.nav.pensjon.regler.to
 
-import no.nav.pensjon.regler.domain.Pakkseddel
+
 import no.nav.pensjon.regler.domain.beregning.Beregning
 import no.nav.pensjon.regler.domain.beregning2011.AbstraktBeregningsResultat
 import no.nav.pensjon.regler.domain.beregning2011.BeregningsResultatAfpPrivat
-import java.io.Serializable
 
-class SamletEktefellepensjonResponse : Serializable {
+
+class SamletEktefellepensjonResponse : ServiceResponse() {
     //return soker1Beregningsresultat;
     var soker1Beregningsresultat: AbstraktBeregningsResultat? = null
 
@@ -16,5 +16,4 @@ class SamletEktefellepensjonResponse : Serializable {
     var soker2Beregning: Beregning? = null
     var soker1BeregningsresultatAfpPrivat: BeregningsResultatAfpPrivat? = null
     var soker2BeregningsresultatAfpPrivat: BeregningsResultatAfpPrivat? = null
-    var pakkseddel: Pakkseddel? = null
 }

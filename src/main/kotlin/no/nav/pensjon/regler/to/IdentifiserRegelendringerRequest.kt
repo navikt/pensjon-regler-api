@@ -7,7 +7,7 @@ import java.util.*
 /**
  * Requestobjekt for BEF2001 Identifiser regelendringer.
  */
-class IdentifiserRegelendringerRequest {
+class IdentifiserRegelendringerRequest : ServiceRequest() {
     /**
      * må minimum inneholde: fullt persongrunnlag for brukeren, med persondetaljer,
      * Uførehistorikk, instopphold etc og persongrunnlaget til

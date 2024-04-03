@@ -10,7 +10,7 @@ import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
 
-class BeregnInstitusjonsoppholdRequest {
+class BeregnInstitusjonsoppholdRequest : ServiceRequest() {
     var fom: Date? = null
 
     // bruker1 beregning1967

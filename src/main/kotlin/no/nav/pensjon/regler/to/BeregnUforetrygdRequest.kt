@@ -7,7 +7,7 @@ import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
 
-class BeregnUforetrygdRequest {
+class BeregnUforetrygdRequest : ServiceRequest() {
     var kravhode: Kravhode? = null
     var vilkarsvedtaksliste = Vector<VilkarsVedtak>()
     var virkFom: Date? = null

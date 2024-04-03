@@ -4,9 +4,8 @@ import no.nav.pensjon.regler.domain.beregning2011.BeregningsResultatAfpPrivat
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
-import kotlin.collections.ArrayList
 
-class BeregnAfpPrivatRequest {
+class BeregnAfpPrivatRequest : ServiceRequest() {
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: ArrayList<VilkarsVedtak> = ArrayList()
     var virkFom: Date? = null

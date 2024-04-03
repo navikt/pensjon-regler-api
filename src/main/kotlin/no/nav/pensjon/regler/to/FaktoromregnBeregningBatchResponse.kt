@@ -1,10 +1,10 @@
 package no.nav.pensjon.regler.to
 
 import no.nav.pensjon.regler.domain.gomregning.BeregningerFaktoromregningResultat
-import java.io.Serializable
+
 import java.util.*
 
-class FaktoromregnBeregningBatchResponse : Serializable {
+class FaktoromregnBeregningBatchResponse : ServiceResponse() {
     var beregningerFaktoromregningResultatListe = Vector<BeregningerFaktoromregningResultat>()
 
 }

@@ -10,7 +10,7 @@ import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
 
-class RevurderingAlderspensjon2025Request {
+class RevurderingAlderspensjon2025Request : ServiceRequest() {
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: ArrayList<VilkarsVedtak> = ArrayList()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null

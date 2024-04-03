@@ -22,4 +22,9 @@ class Pakkseddel : Serializable {
      */
     var merknadListe: List<Merknad> = mutableListOf()
 
+    /**
+     * Anvendt satstabell i beregningen.
+     */
+    var satstabell: String? = null
+
 }

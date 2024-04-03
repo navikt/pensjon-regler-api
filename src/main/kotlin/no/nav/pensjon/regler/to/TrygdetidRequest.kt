@@ -10,7 +10,7 @@ import java.util.*
 /**
  * Dataoverføringsobjekt, inndata, for tjenesten fastsettTrygdetid.
  */
-class TrygdetidRequest {
+class TrygdetidRequest : ServiceRequest() {
     /**
      * Virkningstidspunktets fom. for ønsket ytelse.
      */
@@ -47,7 +47,6 @@ class TrygdetidRequest {
      */
     var regelverkType: RegelverkTypeCti? = null
     var uttaksgradListe: List<Uttaksgrad> = mutableListOf()
-        get() = field
         set(value) {
             sorterUttaksgradListe()
             field = value

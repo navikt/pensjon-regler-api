@@ -5,6 +5,6 @@ import java.util.*
 /**
  * Dataoverføringsobjekt, inndata, for tjenesten beregnMinstepensjon.
  */
-class BeregnMinstepensjonRequest {
+class BeregnMinstepensjonRequest : ServiceRequest() {
     var virk: Date? = null
 }

@@ -6,7 +6,7 @@ import no.nav.pensjon.regler.domain.beregning2011.BeregningsResultatAfpPrivat
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 
-class SamletEktefellepensjonRequest {
+class SamletEktefellepensjonRequest : ServiceRequest() {
     var soker1Beregningsresultat: AbstraktBeregningsResultat? = null
     var soker2Beregningsresultat: AbstraktBeregningsResultat? = null
     var soker1Beregning: Beregning? = null

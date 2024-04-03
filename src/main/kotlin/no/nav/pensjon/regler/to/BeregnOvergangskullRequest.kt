@@ -9,7 +9,7 @@ import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
 
-class BeregnOvergangskullRequest {
+class BeregnOvergangskullRequest : ServiceRequest() {
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: Vector<VilkarsVedtak> = Vector()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null

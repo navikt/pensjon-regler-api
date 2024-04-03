@@ -8,7 +8,7 @@ import no.nav.pensjon.regler.domain.grunnlag.GarantitilleggsbeholdningGrunnlag
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import java.util.*
 
-class VilkarsprovAlderpensjon2016Request {
+class VilkarsprovAlderpensjon2016Request : ServiceRequest() {
     var kravhode: Kravhode? = null
     var virkFom: Date? = null
     var forholdstallUtvalg: ForholdstallUtvalg? = null

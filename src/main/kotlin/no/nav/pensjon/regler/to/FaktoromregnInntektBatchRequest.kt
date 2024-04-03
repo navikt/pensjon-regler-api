@@ -3,7 +3,7 @@ package no.nav.pensjon.regler.to
 import no.nav.pensjon.regler.domain.gomregning.KravFaktoromregningGrunnlag
 import java.util.*
 
-class FaktoromregnInntektBatchRequest {
+class FaktoromregnInntektBatchRequest : ServiceRequest() {
     /**
      * Dato for når gammel regulering gjaldt.
      */

@@ -6,7 +6,7 @@ import no.nav.pensjon.regler.domain.kode.BeslutningsstotteTypeCti
 import no.nav.pensjon.regler.domain.kode.BorMedTypeCti
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 
-class BeslutningsstotteRequest {
+class BeslutningsstotteRequest : ServiceRequest() {
     var beslutningsstotteType: BeslutningsstotteTypeCti? = null
     var persongrunnlag: Persongrunnlag? = null
 

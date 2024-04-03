@@ -1,10 +1,9 @@
 package no.nav.pensjon.regler.to
 
-import no.nav.pensjon.regler.domain.Pakkseddel
-import no.nav.pensjon.regler.domain.beregning2011.BeregningsresultatUforetrygd
-import java.io.Serializable
 
-class BeregnUforetrygdResponse : Serializable {
+import no.nav.pensjon.regler.domain.beregning2011.BeregningsresultatUforetrygd
+
+
+class BeregnUforetrygdResponse : ServiceResponse() {
     var beregningsresultatUforetrygd: BeregningsresultatUforetrygd? = null
-    var pakkseddel: Pakkseddel? = null
 }

@@ -3,7 +3,7 @@ package no.nav.pensjon.regler.to
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import java.util.*
 
-class VilkarsprovAlderpensjonForsteUttakRequest {
+class VilkarsprovAlderpensjonForsteUttakRequest : ServiceRequest() {
     var kravHode: Kravhode? = null
     var fom: Date? = null
     var uttaksgrad = 0

@@ -5,7 +5,7 @@ import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
 
-class BeregnYtelseRequest {
+class BeregnYtelseRequest : ServiceRequest() {
     var kravhode: Kravhode? = null
     var vilkarsvedtaksliste = Vector<VilkarsVedtak>()
     var fom: Date? = null

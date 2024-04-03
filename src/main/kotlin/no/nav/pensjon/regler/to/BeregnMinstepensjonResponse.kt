@@ -1,11 +1,10 @@
 package no.nav.pensjon.regler.to
 
-import java.io.Serializable
 
 /**
  * Dataoverføringsobjekt, returdata, for tjenesten beregnMinstepensjon.
  *
  */
-class BeregnMinstepensjonResponse : Serializable {
+class BeregnMinstepensjonResponse : ServiceResponse() {
     var belop: Long = 0
 }

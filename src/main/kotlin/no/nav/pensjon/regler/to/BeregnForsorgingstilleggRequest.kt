@@ -11,7 +11,7 @@ import java.util.*
 /**
  * Objektet inneholder requesten for tjenesten BeregnForsorgingstillegg
  */
-class BeregnForsorgingstilleggRequest {
+class BeregnForsorgingstilleggRequest : ServiceRequest() {
     /**
      * Beskriver hvilke regler som skal benyttes i beregning av BT for UT etter 01.01.2016
      */
@@ -94,31 +94,4 @@ class BeregnForsorgingstilleggRequest {
      * Virkningstidspunkt for søknad om forsærgingstillegg.
      */
     var virk: Date? = null
-
-    constructor() : super()
-    constructor(
-        vilkarsvedtakListe: List<VilkarsVedtak>,
-        beregnetUtbetalingsperiodeListeBruker: List<BeregnetUtbetalingsperiode>,
-        beregnetUtbetalingsperiodeListeEPS: List<BeregnetUtbetalingsperiode>,
-        kravhode: Kravhode?,
-        beregningsResultatAlderspensjonSoker: AbstraktBeregningsResultat?,
-        beregningSoker: Beregning?,
-        beregningsResultatAfpPrivatSoker: BeregningsResultatAfpPrivat?,
-        virk: Date?,
-        beregningTilstotende: Beregning?,
-        beregningsResultatAlderspensjonTilstotende: BeregningsResultatAlderspensjon2011?,
-        beregningsResultatAfpPrivatTilstotende: BeregningsResultatAfpPrivat?
-    ) : super() {
-        this.vilkarsvedtakListe = vilkarsvedtakListe
-        this.beregnetUtbetalingsperiodeListeBruker = beregnetUtbetalingsperiodeListeBruker
-        this.beregnetUtbetalingsperiodeListeEPS = beregnetUtbetalingsperiodeListeEPS
-        this.kravhode = kravhode
-        this.beregningsResultatAlderspensjonSoker = beregningsResultatAlderspensjonSoker
-        this.beregningSoker = beregningSoker
-        this.beregningsResultatAfpPrivatSoker = beregningsResultatAfpPrivatSoker
-        this.virk = virk
-        this.beregningTilstotende = beregningTilstotende
-        this.beregningsResultatAlderspensjonTilstotende = beregningsResultatAlderspensjonTilstotende
-        this.beregningsResultatAfpPrivatTilstotende = beregningsResultatAfpPrivatTilstotende
-    }
 }
