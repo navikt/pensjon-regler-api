@@ -2,7 +2,7 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import java.io.Serializable
 
-abstract class AbstraktBarnetilleggUT : AbstraktBarnetillegg(), Serializable, UforetrygdYtelseskomponent {
+abstract class AbstraktBarnetilleggUT : AbstraktBarnetillegg, Serializable, UforetrygdYtelseskomponent {
     /**
      * Detaljer rundt avkortning av netto barnetillegg.
      */
@@ -47,5 +47,18 @@ abstract class AbstraktBarnetilleggUT : AbstraktBarnetillegg(), Serializable, Uf
      * Brukers uføretrygd før justering
      */
     var brukersUforetrygdForJustering = 0
+
+    constructor()
+
+    constructor(ab: AbstraktBarnetilleggUT) : super(ab) {
+        inntektstak = ab.inntektstak
+        nettoAkk = ab.nettoAkk
+        nettoRestAr = ab.nettoRestAr
+        reduksjonsinformasjon = ab.reduksjonsinformasjon
+        avkortingsinformasjon = ab.avkortingsinformasjon
+        periodisertAvvikEtteroppgjor = ab.periodisertAvvikEtteroppgjor
+        tidligereBelopAr = ab.tidligereBelopAr
+        brukersUforetrygdForJustering = ab.brukersUforetrygdForJustering
+    }
 
 }

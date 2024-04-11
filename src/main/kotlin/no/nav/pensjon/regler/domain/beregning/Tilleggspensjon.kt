@@ -44,10 +44,11 @@ open class Tilleggspensjon : Ytelseskomponent, IFormelProvider {
 
     init {
         ytelsekomponentType = YtelsekomponentTypeCti("TP")
-        formelKode = FormelKodeCti("TPx")
     }
 
-    constructor()
+    constructor() {
+        formelKode = FormelKodeCti("TPx")
+    }
     constructor(tilleggspensjon: Tilleggspensjon) : super(tilleggspensjon) {
         if (tilleggspensjon.spt != null) {
             spt = Sluttpoengtall(tilleggspensjon.spt!!)

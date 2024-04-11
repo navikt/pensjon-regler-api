@@ -27,14 +27,16 @@ open class Grunnpensjon : Ytelseskomponent {
 
     init {
         ytelsekomponentType = YtelsekomponentTypeCti("GP")
+    }
+
+    constructor() {
         formelKode = FormelKodeCti("GPx")
     }
 
-    constructor()
     /**
      * Copy Constructor
      */
-    constructor(gp: Grunnpensjon) : super(gp){
+    constructor(gp: Grunnpensjon) : super(gp) {
         pSats_gp = gp.pSats_gp
         if (gp.satsType != null) {
             satsType = GPSatsTypeCti(gp.satsType!!)

@@ -5,9 +5,15 @@ import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import java.io.Serializable
 
-class BarnetilleggFellesbarn : AbstraktBarnetillegg(), Serializable {
+class BarnetilleggFellesbarn : AbstraktBarnetillegg, Serializable {
+
     init {
-        formelKode = FormelKodeCti("BTx")
         ytelsekomponentType = YtelsekomponentTypeCti("TFB")
     }
+
+    constructor() {
+        formelKode = FormelKodeCti("BTx")
+    }
+
+    constructor (barnetilleggFellesbarn: BarnetilleggFellesbarn) : super(barnetilleggFellesbarn)
 }

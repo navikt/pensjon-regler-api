@@ -4,7 +4,7 @@ import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.kode.AvkortingsArsakCti
 import java.io.Serializable
 
-abstract class AbstraktBarnetillegg protected constructor() : Ytelseskomponent(), Serializable {
+abstract class AbstraktBarnetillegg : Ytelseskomponent, Serializable {
     /**
      * Antall barn i kullet.
      */
@@ -58,6 +58,24 @@ abstract class AbstraktBarnetillegg protected constructor() : Ytelseskomponent()
     /**
      * årsaken(e) til avkorting. Satt dersom avkortet er true.
      */
-    var avkortingsArsakList: List<AvkortingsArsakCti> = mutableListOf()
+    var avkortingsArsakList: MutableList<AvkortingsArsakCti> = mutableListOf()
+
+    constructor()
+
+    constructor(ab: AbstraktBarnetillegg) : super(ab) {
+        antallBarn = ab.antallBarn
+        avkortet = ab.avkortet
+        btDiff_eos = ab.btDiff_eos
+        fribelop = ab.fribelop
+        mpnSatsFT = ab.mpnSatsFT
+        proratanevner = ab.proratanevner
+        proratateller = ab.proratateller
+        samletInntektAvkort = ab.samletInntektAvkort
+        tt_anv = ab.tt_anv
+        forsorgingstilleggNiva = ab.forsorgingstilleggNiva
+        for (arsak in ab.avkortingsArsakList) {
+            avkortingsArsakList.add(AvkortingsArsakCti(arsak.kode))
+        }
+    }
 
 }
