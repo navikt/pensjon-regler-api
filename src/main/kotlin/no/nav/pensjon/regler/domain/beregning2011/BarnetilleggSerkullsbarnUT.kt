@@ -4,7 +4,7 @@ import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import java.io.Serializable
 
-class BarnetilleggSerkullsbarnUT : AbstraktBarnetilleggUT(), Serializable {
+class BarnetilleggSerkullsbarnUT : AbstraktBarnetilleggUT, Serializable {
     /**
      * Brukers gjenlevendetillegg før justering.
      */
@@ -12,6 +12,13 @@ class BarnetilleggSerkullsbarnUT : AbstraktBarnetilleggUT(), Serializable {
 
     init {
         ytelsekomponentType = YtelsekomponentTypeCti("UT_TSB")
+    }
+
+    constructor(barnetilleggFellesbarnUT: BarnetilleggSerkullsbarnUT) : super(barnetilleggFellesbarnUT) {
+        brukersGjenlevendetilleggForJustering = barnetilleggFellesbarnUT.brukersGjenlevendetilleggForJustering
+    }
+
+    constructor() {
         formelKode = FormelKodeCti("BTx")
     }
 }

@@ -4,7 +4,7 @@ import no.nav.pensjon.regler.domain.kode.AvkortingsArsakCti
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 
-class Ektefelletillegg : Ytelseskomponent() {
+class Ektefelletillegg : Ytelseskomponent {
     /**
      * Fribeløpet
      */
@@ -23,7 +23,7 @@ class Ektefelletillegg : Ytelseskomponent() {
     /**
      * årsaken(e) til avkorting. Satt dersom avkortet er true.
      */
-     var arsaksList: MutableList<AvkortingsArsakCti> = mutableListOf()
+    var arsaksList: MutableList<AvkortingsArsakCti> = mutableListOf()
 
     /**
      * Angir minste pensjonsnivåsats for ektefelletillegget
@@ -62,6 +62,25 @@ class Ektefelletillegg : Ytelseskomponent() {
 
     init {
         ytelsekomponentType = YtelsekomponentTypeCti("ET")
+    }
+
+    constructor() {
         formelKode = FormelKodeCti("ETx")
+    }
+
+    constructor(ektefelletillegg: Ektefelletillegg) : super(ektefelletillegg) {
+        fribelop = ektefelletillegg.fribelop
+        samletInntektAvkort = ektefelletillegg.samletInntektAvkort
+        avkortet = ektefelletillegg.avkortet
+        mpnSatsFT = ektefelletillegg.mpnSatsFT
+        tt_anv = ektefelletillegg.tt_anv
+        forsorgingstilleggNiva = ektefelletillegg.forsorgingstilleggNiva
+        proratanevner = ektefelletillegg.proratanevner
+        proratateller = ektefelletillegg.proratateller
+        skattefritak = ektefelletillegg.skattefritak
+        arsaksList = ArrayList()
+        for (arsak in ektefelletillegg.arsaksList) {
+            arsaksList.add(AvkortingsArsakCti(arsak.kode))
+        }
     }
 }

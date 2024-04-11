@@ -13,10 +13,12 @@ open class Pensjonstillegg : Ytelseskomponent {
 
     init {
         ytelsekomponentType = YtelsekomponentTypeCti("PT")
+    }
+
+    constructor() {
         formelKode = FormelKodeCti("PenTx")
     }
 
-    constructor()
     constructor(pt: Pensjonstillegg) : super(pt){
         forholdstall67 = pt.forholdstall67
         minstepensjonsnivaSats = pt.minstepensjonsnivaSats
