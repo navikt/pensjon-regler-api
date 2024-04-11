@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>no.nav.pensjon.regler</groupId>
 	<artifactId>preg-api</artifactId>
-	<version>10.28.0-SNAPSHOT</version>
+	<version>10.29.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>pensjon-service :: Rule services API</name>
 	<dependencies>
@@ -41,6 +41,7 @@
 	</properties>
 	<build>
 		<sourceDirectory>src/main/kotlin</sourceDirectory>
+		<testSourceDirectory>src/test/kotlin</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
