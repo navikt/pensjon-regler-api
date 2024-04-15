@@ -59,12 +59,6 @@ class InngangOgEksportGrunnlag : Serializable {
     var eksportrettEtterAndreTrygdeavtaler: Eksportrett? = null
 
     /**
-     * IKKE I BRUK (se PENPORT-279)
-     * Innvilget garantert tilleggspensjon til ung ufør/død skal eksporteres
-     */
-    private val innvilgetGarantertTP: Boolean? = null
-
-    /**
      * Eksportrett for garantert tilleggspensjon ung ufør.
      */
     var eksportrettGarantertTP: Unntak? = null
