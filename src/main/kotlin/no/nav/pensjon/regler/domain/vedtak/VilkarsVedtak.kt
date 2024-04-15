@@ -81,7 +81,6 @@ class VilkarsVedtak : Serializable {
 
     // CR170026
     var unntakHalvMinstepensjon = false
-    var epsAvkallEgenPensjon = false
     var epsRettEgenPensjon = false
 
     /**
