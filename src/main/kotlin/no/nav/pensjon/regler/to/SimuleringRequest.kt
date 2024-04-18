@@ -3,7 +3,7 @@ package no.nav.pensjon.regler.to
 import no.nav.pensjon.regler.domain.simulering.Simulering
 import java.util.*
 
-class SimuleringRequest : ServiceRequest {
+class SimuleringRequest() : ServiceRequest() {
     var simulering: Simulering? = null
     var fom: Date? = null
     var ektefelleMottarPensjon = false
@@ -16,7 +16,7 @@ class SimuleringRequest : ServiceRequest {
         ektefelleMottarPensjon: Boolean,
         beregnForsorgingstillegg: Boolean,
         beregnInstitusjonsopphold: Boolean
-    ) {
+    ) : this() {
         this.simulering = simulering
         this.fom = fom
         this.ektefelleMottarPensjon = ektefelleMottarPensjon
@@ -24,7 +24,7 @@ class SimuleringRequest : ServiceRequest {
         this.beregnInstitusjonsopphold = beregnInstitusjonsopphold
     }
 
-    constructor(simulering: Simulering?, fom: Date?) {
+    constructor(simulering: Simulering?, fom: Date?) : this() {
         this.simulering = simulering
         this.fom = fom
     }
