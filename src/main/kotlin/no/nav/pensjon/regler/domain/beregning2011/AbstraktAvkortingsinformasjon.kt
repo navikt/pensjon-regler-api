@@ -1,11 +1,18 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.kode.InntektsavkortingTypeCti
 import java.io.Serializable
 
 /**
  * Inneholder felles felt for avkorting av både UT og BT. Enkelte felt fra tidligere klasse Avkortningsinformasjon.
  */
+@JsonSubTypes(
+    JsonSubTypes.Type(value = AvkortingsinformasjonBT::class),
+    JsonSubTypes.Type(value = AvkortingsinformasjonBT::class),
+)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 abstract class AbstraktAvkortingsinformasjon : Serializable {
     /**
      * Antall måneder før virk.

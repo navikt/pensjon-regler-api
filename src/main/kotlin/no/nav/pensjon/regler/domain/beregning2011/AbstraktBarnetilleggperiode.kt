@@ -1,9 +1,17 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.trygdetid.Brok
 import java.io.Serializable
 import java.util.*
 
+@JsonSubTypes(
+    JsonSubTypes.Type(value = TidligereBarnetilleggperiode::class),
+    JsonSubTypes.Type(value = FremtidigBarnetilleggperiode::class),
+    JsonSubTypes.Type(value = AvkortingsinformasjonBT::class)
+)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 abstract class AbstraktBarnetilleggperiode : Serializable {
     /**
      * Start for periode med et antall barn.

@@ -1,5 +1,8 @@
 package no.nav.pensjon.regler.domain.beregning
 
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
+import no.nav.pensjon.regler.domain.beregning2011.BasisGrunnpensjon
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.GPSatsTypeCti
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
@@ -8,6 +11,10 @@ import no.nav.pensjon.regler.domain.trygdetid.AnvendtTrygdetid
 /**
  * Grunnpensjon
  */
+@JsonSubTypes(
+    JsonSubTypes.Type(value = BasisGrunnpensjon::class)
+)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 open class Grunnpensjon : Ytelseskomponent {
     /**
      * Prosentsatsen.
