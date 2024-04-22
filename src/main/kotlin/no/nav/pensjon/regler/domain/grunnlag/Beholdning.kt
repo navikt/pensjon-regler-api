@@ -12,10 +12,10 @@ import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import java.io.Serializable
 
 @JsonSubTypes(
-    JsonSubTypes.Type(value = Garantitilleggsbeholdning::class, name = "Garantitilleggsbeholdning"),
-    JsonSubTypes.Type(value = AfpOpptjening::class, name = "AfpOpptjening"),
-    JsonSubTypes.Type(value = Garantipensjonsbeholdning::class, name = "Garantipensjonsbeholdning"),
-    JsonSubTypes.Type(value = Pensjonsbeholdning::class, name = "Pensjonsbeholdning")
+    JsonSubTypes.Type(value = Garantitilleggsbeholdning::class),
+    JsonSubTypes.Type(value = AfpOpptjening::class),
+    JsonSubTypes.Type(value = Garantipensjonsbeholdning::class),
+    JsonSubTypes.Type(value = Pensjonsbeholdning::class)
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 abstract class Beholdning protected constructor() : Serializable {

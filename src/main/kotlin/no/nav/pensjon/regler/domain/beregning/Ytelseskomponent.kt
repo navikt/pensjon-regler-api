@@ -16,7 +16,7 @@ import java.io.Serializable
  * alle ytelser gjelder at brutto - netto = fradrag.
  */
 @JsonSubTypes(
-    JsonSubTypes.Type(value = FasteUtgifterTilleggUT::class, name = ""),
+    JsonSubTypes.Type(value = FasteUtgifterTilleggUT::class),
     JsonSubTypes.Type(value = Garantitillegg_Art_27_UT::class),
     JsonSubTypes.Type(value = MinstenivatilleggPensjonistpar::class),
     JsonSubTypes.Type(value = Mendel::class),
