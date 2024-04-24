@@ -8,7 +8,7 @@ import java.io.Serializable
 class AfpEtteroppgjorKategori : Serializable {
     /**
      * Nøkkelfelt brukt av PEN tjenestene.
-     * PREG skal ta denne inn og levere den tilbake i alle tjenestene sine.
+     * pensjon-regler skal ta denne inn og levere den tilbake i alle tjenestene sine.
      */
     var vedtakId: Long = 0
 
@@ -55,7 +55,7 @@ class AfpEtteroppgjorKategori : Serializable {
     var gruppe: AFPetteroppgjorGruppeCti? = null
 
     /**
-     * Status fra PREG per element
+     * Status fra pensjon-regler per element
      */
     var status: BatchStatus? = null
 }

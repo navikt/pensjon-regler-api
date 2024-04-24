@@ -1,1 +1,1 @@
-# preg-api
+# pensjon-regler-api

@@ -31,7 +31,7 @@ class Uforetrygdberegning : Beregning2011() {
 
     /**
      * Ekstra informasjon til beregnet uføretrygd.
-     * Brukes for at PREG skal beregne en Uførehistorikk for uføretrygd.
+     * Brukes for at pensjon-regler skal beregne en Uførehistorikk for uføretrygd.
      */
     var uforeEkstra: UforeEkstraUT? = null
 

@@ -65,7 +65,7 @@ class Uforegrunnlag : Serializable {
 
     /**
      * Angir om personen er "ung ufør".Settes av saksbehandler.
-     * Brukes ikke i PREG. Det er garantertTPUngUfor som brukes istedet.
+     * Brukes ikke i pensjon-regler. Det er garantertTPUngUfor som brukes istedet.
      */
     var ungUfor = false
 

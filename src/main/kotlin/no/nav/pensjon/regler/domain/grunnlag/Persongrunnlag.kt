@@ -274,7 +274,7 @@ open class Persongrunnlag : Serializable {
     var instOpphFasteUtgifterperiodeListe: MutableList<InstOpphFasteUtgifterperiode> = mutableListOf()
 
     /**
-     * Landskode - det land personen er bosatt i på VIRK. Intern PREG attributt.
+     * Landskode - det land personen er bosatt i på VIRK. Intern pensjon-regler attributt.
      * Default settes denne til NOR og erstattes med Trygdeavtale.bostedsland
      * dersom trygdeavtale ikke er null.
      */

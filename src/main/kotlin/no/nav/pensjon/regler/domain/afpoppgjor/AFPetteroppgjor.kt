@@ -7,7 +7,7 @@ import java.util.*
 class AFPetteroppgjor : Serializable {
     /**
      * Nøkkelfelt brukt av PEN tjenestene.
-     * PREG skal ta denne inn og levere den tilbake i alle tjenestene sine.
+     * pensjon-regler skal ta denne inn og levere den tilbake i alle tjenestene sine.
      */
     var vedtakId: Long = 0
 
@@ -62,7 +62,7 @@ class AFPetteroppgjor : Serializable {
     var beregnetTPI = 0
 
     /**
-     * Status fra PREG per element
+     * Status fra pensjon-regler per element
      */
     var status: BatchStatus? = null
 }

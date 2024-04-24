@@ -7,7 +7,7 @@ import java.util.*
 class AFPEtteroppgjorgrunnlag : Serializable {
     /**
      * Nøkkelfelt brukt av PEN tjenestene.
-     * PREG skal ta denne inn og levere den tilbake i alle tjenestene sine.
+     * pensjon-regler skal ta denne inn og levere den tilbake i alle tjenestene sine.
      */
     var vedtakId: Long = 0
 

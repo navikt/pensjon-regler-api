@@ -14,7 +14,7 @@ import java.io.Serializable
 import java.util.*
 
 /**
- * Beregning er resultatet fra en beregning i PREG.
+ * Beregning er resultatet fra en beregning i pensjon-regler.
  */
 class Beregning : IBeregning, Serializable {
 
@@ -255,7 +255,7 @@ class Beregning : IBeregning, Serializable {
 
     /**
      * årsak til periodisering av beregningen, G-justering, regelendring osv.
-     * Settes dersom beregningen blir periodiserer av PREG (i.e. det returneres en liste av beregninger ).
+     * Settes dersom beregningen blir periodiserer av pensjon-regler (i.e. det returneres en liste av beregninger ).
      * Skal brukes i saksbehandling for å vise årsaken til periodiseringen av beregningen.
      * Hvis det er flere årsaker til at det er en periode i beregningen på samme periode (i.e. endring i sats og regel på samme dag så må det være en prioritering av endringene.
      * Da skal den årsak som mest sjelden skjer settes.
@@ -299,7 +299,7 @@ class Beregning : IBeregning, Serializable {
     /**
      * Beregnet fremtidig inntekt.Det er en G-omregnet oppgitt fremtidig inntekt som skal brukes av inntektskontrollen i Myggen.
      * beregnetFremtidigInntekt er G-omregnet oppgitt fremtidig inntekt som skal brukes av inntektskontrollen i Myggen.
-     * PREG bruker Inntekt av type (FPI eller HYPF eller HYPF2G) og opptjusterer denne ihht til G:
+     * pensjon-regler bruker Inntekt av type (FPI eller HYPF eller HYPF2G) og opptjusterer denne ihht til G:
      * beregnetFremtidigInntekt = (FPI eller HYPF eller HYPF2G) * nyG/gammelG
      * Dette attributtet er ytelsesuavhengig.
      * 30-jan-2008: Denne må antagelig suppleres med en tilsvarende beregnetFremtidigInntekt på Ektefelletillegget.
@@ -396,14 +396,14 @@ class Beregning : IBeregning, Serializable {
     var ungUforGarantiFrafalt = false
 
     /**
-     * Intern PREG variabel.
+     * Intern pensjon-regler variabel.
      * Anvendt uføretidspunkt. Hentes normalt fra Uføregrunnlag men kan være hentet fra Uførehistorikk ved
      * lønnsomhetsberegning.
      */
     var uft: Date? = null
 
     /**
-     * Intern PREG variabel.
+     * Intern pensjon-regler variabel.
      * Anvendt yrkesskadetidspunkt. Hentes normalt fra yrkesskadegrunnlag men kan være hentet fra yrkesskadehistorikk
      * ved lønnsomhetsberegning.
      */

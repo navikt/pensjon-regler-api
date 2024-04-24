@@ -5,7 +5,7 @@ import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import java.io.Serializable
 
 /**
- * Brukes i PREG kun ved g-omregning
+ * Brukes i pensjon-regler kun ved g-omregning
  */
 class KrigOgGammelYrkesskade : Ytelseskomponent(), Serializable {
     /**

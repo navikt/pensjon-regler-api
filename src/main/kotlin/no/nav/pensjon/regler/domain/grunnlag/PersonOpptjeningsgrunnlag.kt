@@ -5,7 +5,7 @@ import java.util.*
 
 class PersonOpptjeningsgrunnlag : Serializable {
     /**
-     * Brukes ikke av PREG
+     * Brukes ikke av pensjon-regler
      */
     var fnr: String? = null
 
