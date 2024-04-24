@@ -173,7 +173,7 @@ class Uforeperiode : Serializable {
      * @param beregningsgrunnlag the beregningsgrunnlag to set
      */
     /**
-     * Flag som angir om perioden angir en nedsettelse av grad. Intern PREG variabel.
+     * Flag som angir om perioden angir en nedsettelse av grad. Intern pensjon-regler variabel.
      */
     /*
      * Det beregningsgrunnlag (årsbeløp) som ble gjeldende i perioden.

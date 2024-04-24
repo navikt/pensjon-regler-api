@@ -4,7 +4,7 @@ import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import java.io.Serializable
 
 /**
- * Kopi av PEN 28/8/2009 - ruller tilbake til PREG domenemodell
+ * Kopi av PEN 28/8/2009 - ruller tilbake til pensjon-regler domenemodell
  */
 class Basispensjon : Serializable {
     /** utgjør summen av basisgrunnpensjon, basistilleggspensjon og i basispensjonstillegg.  */

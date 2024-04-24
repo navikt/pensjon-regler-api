@@ -12,7 +12,7 @@ import java.util.*
  */
 class Trygdetid : Serializable {
     /**
-     * Unik id for objektet, brukes ikke av PREG,og blir med ut uforandret.
+     * Unik id for objektet, brukes ikke av pensjon-regler,og blir med ut uforandret.
      */
     var trygdetidId: Long = 0
 

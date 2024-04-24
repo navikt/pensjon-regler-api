@@ -14,8 +14,8 @@ import java.util.*
 
 class VilkarsVedtak : Serializable {
     /**
-     * Kode som angir hvilket resultat PREG setter på vilkårsvedtaket. Se
-     * K_VILKAR_RESUL_T for gyldige typer. Kun satt hvis PREG utfører
+     * Kode som angir hvilket resultat pensjon-regler setter på vilkårsvedtaket. Se
+     * K_VILKAR_RESUL_T for gyldige typer. Kun satt hvis pensjon-regler utfører
      * vilkårsprøving.
      */
     var anbefaltResultat: VilkarsvedtakResultatCti? = null
@@ -47,7 +47,7 @@ class VilkarsVedtak : Serializable {
     /**
      * Dato vilkårsvedtaket har virkning til. Denne skal ikke være satt, og det
      * betyr at vedtaket har uendelig gyldighet. Skulle den likevel være satt
-     * vil PREG sjekke at virken på ytelsen det beregnes for er nnnnenfor
+     * vil pensjon-regler sjekke at virken på ytelsen det beregnes for er nnnnenfor
      * virkFom-virkTom. Er den utenfor blir vedtaket behandlet som ikke gyldig.
      */
     var virkTom: Date? = null

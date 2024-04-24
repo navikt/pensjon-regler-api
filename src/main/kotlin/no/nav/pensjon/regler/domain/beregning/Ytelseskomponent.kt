@@ -65,19 +65,19 @@ abstract class Ytelseskomponent : Serializable {
 
     /**
      * Angir om ytelseskomponenten går til utbetaling eller tilbakekreving.
-     * Settes ikke i PREG, men mappes slik at vi ikke mister den ved kall til regeltjenester som returnerer kopier av innsendt ytelseskomponent (f.eks. faktoromregning).
+     * Settes ikke i pensjon-regler, men mappes slik at vi ikke mister den ved kall til regeltjenester som returnerer kopier av innsendt ytelseskomponent (f.eks. faktoromregning).
      */
     var fradragsTransaksjon = false
 
     /**
      * Angir om ytelseskomponenten er opphørt.
-     * Settes ikke i PREG, men mappes slik at vi ikke mister den ved kall til regeltjenester som returnerer kopier av innsendt ytelseskomponent (f.eks. faktoromregning).
+     * Settes ikke i pensjon-regler, men mappes slik at vi ikke mister den ved kall til regeltjenester som returnerer kopier av innsendt ytelseskomponent (f.eks. faktoromregning).
      */
     var opphort = false
 
     /**
      * Angir sakentypen ytelseskomponenten er knyttet til.
-     * Settes ikke i PREG, men mappes slik at vi ikke mister den ved kall til regeltjenester som returnerer kopier av innsendt ytelseskomponent (f.eks. faktoromregning).
+     * Settes ikke i pensjon-regler, men mappes slik at vi ikke mister den ved kall til regeltjenester som returnerer kopier av innsendt ytelseskomponent (f.eks. faktoromregning).
      */
     var sakType: SakTypeCti? = null
 
