@@ -8,9 +8,6 @@ import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import no.nav.pensjon.regler.domain.util.formula.Formel
 import no.nav.pensjon.regler.domain.util.formula.IFormelProvider
 
-/*
- * Tilleggspensjon
- */
 @JsonSubTypes(
     JsonSubTypes.Type(value = BasisTilleggspensjon::class)
 )
@@ -45,9 +42,6 @@ open class Tilleggspensjon : Ytelseskomponent, IFormelProvider {
      * Map av formler brukt i beregning av Tilleggspensjon.
      */
     override var formelMap: HashMap<String, Formel> = HashMap()
-
-    override val formelPrefix: String
-        get() = ytelsekomponentType?.kode!!
 
     init {
         ytelsekomponentType = YtelsekomponentTypeCti("TP")

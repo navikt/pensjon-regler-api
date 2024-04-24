@@ -7,6 +7,13 @@
 	<packaging>jar</packaging>
 	<name>pensjon-service :: Rule services API</name>
 	<properties>
+		<java.jdk.version>17</java.jdk.version>
+		<kotlin.version>1.9.0</kotlin.version>
+		<!-- Config properties -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.release>17</maven.compiler.release>
+		<kotlin.code.style>official</kotlin.code.style>
 		<jackson.version>2.17.0</jackson.version>
 	</properties>
 	<dependencies>
@@ -43,15 +50,7 @@
 			<version>${jackson.version}</version>
 		</dependency>
 	</dependencies>
-	<properties>
-		<java.jdk.version>17</java.jdk.version>
-		<kotlin.version>1.9.0</kotlin.version>
-		<!-- Config properties -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven.compiler.release>17</maven.compiler.release>
-		<kotlin.code.style>official</kotlin.code.style>
-	</properties>
+
 	<build>
 		<sourceDirectory>src/main/kotlin</sourceDirectory>
 		<testSourceDirectory>src/test/kotlin</testSourceDirectory>

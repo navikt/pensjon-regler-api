@@ -1,7 +1,13 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.beregning.Sluttpoengtall
 
+@JsonSubTypes(
+    JsonSubTypes.Type(value = BeregningsInformasjon::class)
+)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 interface IBeregningsInformasjon2011 : IBeregningsInformasjon {
     var avdodesTilleggspensjonBrukt: Boolean
     var avdodesTrygdetidBrukt: Boolean

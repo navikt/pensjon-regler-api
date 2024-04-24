@@ -33,9 +33,6 @@ class GjenlevendetilleggAPKap19 : Ytelseskomponent(), IFormelProvider {
      */
     override var formelMap: HashMap<String, Formel> = HashMap()
 
-    override val formelPrefix: String
-        get() = "GJT_Kap19"
-
     init {
         ytelsekomponentType = YtelsekomponentTypeCti("AP_GJT_KAP19")
     }
