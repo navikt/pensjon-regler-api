@@ -45,6 +45,11 @@ class BeregnForsorgingstilleggRequest : ServiceRequest() {
     var beregningsResultatAfpPrivatTilstotende: BeregningsResultatAfpPrivat? = null
 
     /**
+     * AfpOffentligLivsvarigGrunnlag for tilstøtende
+     */
+    var afpOffentligLivsvarigGrunnlagTilstotende: AfpOffentligLivsvarigGrunnlag? = null
+
+    /**
      * Beregningen ved virkningstidspunkt. Vil inneholde en AldersberegningKapittel19,
      * som igjen inneholder MinstePensjonsnivå, Basispensjon, Restpensjon, PensjonUnderUtbetaling
      * og BeregningsInformasjon.

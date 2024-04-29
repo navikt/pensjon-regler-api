@@ -1,6 +1,7 @@
 package no.nav.pensjon.regler.to
 
 import no.nav.pensjon.regler.domain.beregning2011.AfpLivsvarig
+import no.nav.pensjon.regler.domain.beregning2011.AfpOffentligLivsvarigGrunnlag
 import no.nav.pensjon.regler.domain.beregning2011.SisteAldersberegning2011
 import no.nav.pensjon.regler.domain.grunnlag.DelingstallUtvalg
 import no.nav.pensjon.regler.domain.grunnlag.ForholdstallUtvalg
@@ -21,4 +22,5 @@ class RevurderingAlderspensjon2025Request : ServiceRequest() {
     var sisteAldersBeregning2011: SisteAldersberegning2011? = null
     var afpLivsvarig: AfpLivsvarig? = null
     var garantitilleggsbeholdningGrunnlag: GarantitilleggsbeholdningGrunnlag? = null
+    var afpOffentligLivsvarigGrunnlag: AfpOffentligLivsvarigGrunnlag? = null
 }
