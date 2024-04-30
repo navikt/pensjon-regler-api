@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>no.nav.pensjon.regler</groupId>
 	<artifactId>pensjon-regler-api</artifactId>
-	<version>10.29.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	<name>pensjon-service :: Rule services API</name>
 	<dependencies>
