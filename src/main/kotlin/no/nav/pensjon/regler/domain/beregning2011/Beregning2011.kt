@@ -2,14 +2,9 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import no.nav.pensjon.regler.domain.IBeregning
 import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.PenPerson
 import no.nav.pensjon.regler.domain.beregning.BeregningRelasjon
-import no.nav.pensjon.regler.domain.beregning.penobjekter.Arbeidsavklaringspenger
-import no.nav.pensjon.regler.domain.beregning.penobjekter.ArbeidsavklaringspengerUT
-import no.nav.pensjon.regler.domain.beregning.penobjekter.Sykepenger
-import no.nav.pensjon.regler.domain.beregning.penobjekter.SykepengerUT
 import no.nav.pensjon.regler.domain.kode.BeregningGjelderTypeCti
 import no.nav.pensjon.regler.domain.kode.BeregningMetodeTypeCti
 import no.nav.pensjon.regler.domain.kode.BeregningTypeCti
@@ -23,7 +18,7 @@ import java.io.Serializable
     JsonSubTypes.Type(value = AldersberegningKapittel19::class),
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
-abstract class Beregning2011 : IBeregning, Serializable {
+abstract class Beregning2011 : Serializable {
     var gjelderPerson: PenPerson? = null
     open var grunnbelop = 0
     var tt_anv = 0
@@ -33,7 +28,7 @@ abstract class Beregning2011 : IBeregning, Serializable {
     var delberegning2011Liste: List<BeregningRelasjon> = mutableListOf()
     var merknadListe: List<Merknad> = mutableListOf()
 
-    override val delberegningsListe: List<BeregningRelasjon>
+    val delberegningsListe: List<BeregningRelasjon>
         get() = delberegning2011Liste
 
     /**
