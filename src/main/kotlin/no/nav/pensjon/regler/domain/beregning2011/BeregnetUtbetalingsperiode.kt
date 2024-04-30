@@ -4,7 +4,7 @@ import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import java.io.Serializable
 import java.util.*
 
-class BeregnetUtbetalingsperiode : Serializable {
+class BeregnetUtbetalingsperiode() : Serializable {
     /**
      * Periodens startdato.
      */
