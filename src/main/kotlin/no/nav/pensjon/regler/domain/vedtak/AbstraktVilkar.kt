@@ -7,14 +7,15 @@ import no.nav.pensjon.regler.domain.kode.VilkarOppfyltUTCti
 import java.io.Serializable
 
 @JsonSubTypes(
-    JsonSubTypes.Type(value = FortsattMedlemskap::class),
     JsonSubTypes.Type(value = BeregningsvilkarPeriode::class),
-    JsonSubTypes.Type(value = ForutgaendeMedlemskap::class),
-    JsonSubTypes.Type(value = RettTilEksportEtterTrygdeavtaler::class),
     JsonSubTypes.Type(value = MedlemskapForUTEtterTrygdeavtaler::class),
-    JsonSubTypes.Type(value = UngUfor::class),
+    JsonSubTypes.Type(value = RettTilEksportEtterTrygdeavtaler::class),
     JsonSubTypes.Type(value = RettTilGjenlevendetillegg::class),
-    JsonSubTypes.Type(value = Yrkesskadegrad::class)
+    JsonSubTypes.Type(value = ForutgaendeMedlemskap::class),
+    JsonSubTypes.Type(value = Yrkesskade::class),
+    JsonSubTypes.Type(value = FortsattMedlemskap::class),
+    JsonSubTypes.Type(value = UngUfor::class)
+
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 abstract class AbstraktVilkar : Serializable {

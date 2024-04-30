@@ -5,12 +5,7 @@ import no.nav.pensjon.regler.domain.TTPeriode
 import no.nav.pensjon.regler.domain.Trygdetid
 import no.nav.pensjon.regler.domain.beregning2011.OvergangsinfoUPtilUT
 import no.nav.pensjon.regler.domain.beregning2011.UtbetalingsgradUT
-import no.nav.pensjon.regler.domain.kode.BorMedTypeCti
-import no.nav.pensjon.regler.domain.kode.GrunnlagsrolleCti
 import no.nav.pensjon.regler.domain.kode.LandCti
-import no.nav.pensjon.regler.domain.kode.SivilstandTypeCti
-import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
-import org.apache.commons.lang3.mutable.Mutable
 import java.io.Serializable
 import java.util.*
 
@@ -19,7 +14,7 @@ import java.util.*
  * Persongrunnlag brukes som inndata til kall på en regeltjeneste og må
  * defineres før kallet.
  */
-open class Persongrunnlag : Serializable {
+class Persongrunnlag() : Serializable {
     /**
      * Representerer personen.
      */
@@ -314,4 +309,9 @@ open class Persongrunnlag : Serializable {
     var afpTpoUpGrunnlag: AfpTpoUpGrunnlag? = null
 
 
+}
+
+
+fun main() {
+    val pg = Persongrunnlag()
 }

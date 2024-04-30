@@ -3,7 +3,6 @@ package no.nav.pensjon.regler.domain.vedtak
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.Merknad
-import no.nav.pensjon.regler.domain.beregning2011.*
 import java.io.Serializable
 
 @JsonSubTypes(
@@ -16,7 +15,7 @@ import java.io.Serializable
     JsonSubTypes.Type(value = Skadetidspunkt::class),
     JsonSubTypes.Type(value = Uforetidspunkt::class),
     JsonSubTypes.Type(value = InntektForUforhet::class),
-    JsonSubTypes.Type(value = Uforegrad::class),
+    JsonSubTypes.Type(value = Uforegrad::class)
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 abstract class AbstraktBeregningsvilkar protected constructor() : Serializable {
