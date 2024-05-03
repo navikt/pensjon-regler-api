@@ -38,4 +38,5 @@ class BeregnetUtbetalingsperiode : Serializable {
     var antallSerkullsbarn = 0
     var ytelseskomponenter: Map<String, Ytelseskomponent> = mutableMapOf()
 
+    var afpOffentligLivsvarigGrunnlag: AfpOffentligLivsvarigGrunnlag? = null
 }
