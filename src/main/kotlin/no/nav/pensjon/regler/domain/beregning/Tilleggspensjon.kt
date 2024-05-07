@@ -40,11 +40,9 @@ open class Tilleggspensjon : Ytelseskomponent, IFormelProvider {
     override var formelMap: HashMap<String, Formel> = HashMap()
 
     override val formelPrefix: String
-        get() = ytelsekomponentType?.kode!!
+        get() = ytelsekomponentType.kode!!
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("TP")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("TP")
 
     constructor() {
         formelKode = FormelKodeCti("TPx")

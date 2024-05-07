@@ -48,7 +48,5 @@ class GjenlevendetilleggAP : Ytelseskomponent(), IFormelProvider {
     override val formelPrefix: String
         get() = "GJT_Kap20"
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("AP_GJT")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("AP_GJT")
 }

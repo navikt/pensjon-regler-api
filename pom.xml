@@ -3,9 +3,20 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>no.nav.pensjon.regler</groupId>
 	<artifactId>pensjon-regler-api</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>jar</packaging>
-	<name>pensjon-service :: Rule services API</name>
+	<name>NAV :: Pensjon-Regler API</name>
+
+    <properties>
+        <java.jdk.version>17</java.jdk.version>
+        <kotlin.version>1.9.0</kotlin.version>
+        <!-- Config properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.release>17</maven.compiler.release>
+        <kotlin.code.style>official</kotlin.code.style>
+    </properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -30,15 +41,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	<properties>
-		<java.jdk.version>17</java.jdk.version>
-		<kotlin.version>1.9.0</kotlin.version>
-		<!-- Config properties -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven.compiler.release>17</maven.compiler.release>
-		<kotlin.code.style>official</kotlin.code.style>
-	</properties>
 	<build>
 		<sourceDirectory>src/main/kotlin</sourceDirectory>
 		<testSourceDirectory>src/test/kotlin</testSourceDirectory>
@@ -67,12 +69,6 @@
 						<goals>
 							<goal>compile</goal>
 						</goals>
-						<configuration>
-							<sourceDirs>
-								<source>src/main/kotlin</source>
-								<source>target/generated-sources/annotations</source>
-							</sourceDirs>
-						</configuration>
 					</execution>
 					<execution>
 						<id>test-compile</id>
@@ -80,12 +76,6 @@
 						<goals>
 							<goal>test-compile</goal>
 						</goals>
-						<configuration>
-							<sourceDirs>
-								<source>src/test/kotlin</source>
-								<source>target/generated-test-sources/test-annotations</source>
-							</sourceDirs>
-						</configuration>
 					</execution>
 				</executions>
 				<configuration>
@@ -95,6 +85,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
 				<executions>
 					<execution>
 						<id>compile</id>

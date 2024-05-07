@@ -6,7 +6,5 @@ import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
  * Tillegget for faste utgifter. Brukes ved institusjonsopphold.
  */
 class FasteUtgifterTillegg : Ytelseskomponent() {
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("FAST_UTGIFT_T")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("FAST_UTGIFT_T")
 }

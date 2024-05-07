@@ -10,7 +10,6 @@ class Inntektspensjon : Ytelseskomponent() {
      */
     var eksportBrok: Brok? = null
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("IP")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("IP")
+
 }

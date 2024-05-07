@@ -12,16 +12,12 @@ class MinstePensjonsniva : Serializable {
     var pro_rata_teller_mnd = 0
     var pro_rata_nevner_mnd = 0
     var pro_rata_brok = 0.0
-    var formelKode: FormelKodeCti? = null
+    var formelKode: FormelKodeCti = FormelKodeCti("MPNx")
 
     /** Minstepensjonsnivå. Kan være lav, ordinær og forhøyet. Benytter tabellen  */
     var satsType: MinstepenNivaCti? = null
     var merknadListe: MutableList<Merknad> = mutableListOf()
     var faktisk_tt_avtaleland_mnd = 0
-
-    init {
-        formelKode = FormelKodeCti("MPNx")
-    }
 
     constructor()
     constructor(mpn: MinstePensjonsniva) : super() {
@@ -34,9 +30,7 @@ class MinstePensjonsniva : Serializable {
         if (mpn.satsType != null) {
             satsType = MinstepenNivaCti(mpn.satsType!!)
         }
-        if (mpn.formelKode != null) {
-            formelKode = FormelKodeCti(mpn.formelKode!!)
-        }
+        formelKode = FormelKodeCti(mpn.formelKode)
         for (merknad in mpn.merknadListe) {
             merknadListe.add(Merknad(merknad))
         }

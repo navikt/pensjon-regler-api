@@ -25,9 +25,7 @@ class BarnetilleggFellesbarnUT : AbstraktBarnetilleggUT, Serializable {
      */
     var annenForelderUforetrygdForJustering = 0
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("UT_TFB")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("UT_TFB")
 
     constructor() {
         formelKode = FormelKodeCti("BTx")

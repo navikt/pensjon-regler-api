@@ -9,9 +9,7 @@ open class AfpLivsvarig : Ytelseskomponent {
     var afpProsentgrad = 0.0
     var afpForholdstall = 0.0
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("AFP_LIVSVARIG")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("AFP_LIVSVARIG")
 
     constructor() {
         formelKode = FormelKodeCti("AFPx")

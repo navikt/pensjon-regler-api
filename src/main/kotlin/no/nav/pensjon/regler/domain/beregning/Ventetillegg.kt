@@ -21,7 +21,5 @@ class Ventetillegg : Ytelseskomponent() {
      */
     var venteTilleggProsent = 0.0
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("VT")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("VT")
 }

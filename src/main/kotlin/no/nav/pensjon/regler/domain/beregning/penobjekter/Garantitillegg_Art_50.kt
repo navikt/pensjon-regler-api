@@ -8,7 +8,5 @@ import java.io.Serializable
  * Brukes kun i BEF270 til G-omregning.
  */
 class Garantitillegg_Art_50 : Ytelseskomponent(), Serializable {
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("GT_EOS")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("GT_EOS")
 }

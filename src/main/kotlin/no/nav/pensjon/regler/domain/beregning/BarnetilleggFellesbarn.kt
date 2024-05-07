@@ -7,9 +7,7 @@ import java.io.Serializable
 
 class BarnetilleggFellesbarn : AbstraktBarnetillegg, Serializable {
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("TFB")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("TFB")
 
     constructor() {
         formelKode = FormelKodeCti("BTx")

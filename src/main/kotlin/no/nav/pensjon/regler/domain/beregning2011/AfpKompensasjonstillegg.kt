@@ -8,8 +8,5 @@ class AfpKompensasjonstillegg : Ytelseskomponent() {
     var reduksjonsbelop = 0
     var forholdstallKompensasjonstillegg = 0.0
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("AFP_KOMP_TILLEGG")
-    }
-
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("AFP_KOMP_TILLEGG")
 }

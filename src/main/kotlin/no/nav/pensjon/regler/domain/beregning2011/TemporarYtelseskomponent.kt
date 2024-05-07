@@ -4,7 +4,5 @@ import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 
 class TemporarYtelseskomponent : Ytelseskomponent() {
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("TEMP")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("TEMP")
 }

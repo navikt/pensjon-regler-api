@@ -7,9 +7,5 @@ class FremskrevetPensjonUnderUtbetaling : Serializable, Regulering {
     var pensjonUnderUtbetalingPerAr = 0.0
     override var gap = 0
     override var reguleringsfaktor = 0.0
-    var formelKode: FormelKodeCti? = null
-
-    init {
-        formelKode = FormelKodeCti("BPUx")
-    }
+    var formelKode: FormelKodeCti = FormelKodeCti("BPUx")
 }

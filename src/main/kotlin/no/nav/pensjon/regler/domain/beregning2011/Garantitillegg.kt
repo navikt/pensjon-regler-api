@@ -4,7 +4,5 @@ import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 
 class Garantitillegg : Ytelseskomponent() {
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("GAT")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("GAT")
 }

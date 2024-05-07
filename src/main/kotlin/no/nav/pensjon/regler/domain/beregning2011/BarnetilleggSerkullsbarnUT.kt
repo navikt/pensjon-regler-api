@@ -10,9 +10,7 @@ class BarnetilleggSerkullsbarnUT : AbstraktBarnetilleggUT, Serializable {
      */
     var brukersGjenlevendetilleggForJustering = 0
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("UT_TSB")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("UT_TSB")
 
     constructor(barnetilleggFellesbarnUT: BarnetilleggSerkullsbarnUT) : super(barnetilleggFellesbarnUT) {
         brukersGjenlevendetilleggForJustering = barnetilleggFellesbarnUT.brukersGjenlevendetilleggForJustering

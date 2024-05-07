@@ -5,7 +5,6 @@ import no.nav.pensjon.regler.domain.beregning2011.ReguleringsInformasjon
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.SakTypeCti
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
-import no.nav.pensjon.regler.domain.util.formula.IFormelProvider
 import java.io.Serializable
 
 /**
@@ -46,7 +45,7 @@ abstract class Ytelseskomponent : Serializable {
     /**
      * Type ytelse, verdi fra kodeverk.
      */
-    var ytelsekomponentType: YtelsekomponentTypeCti? = null
+    abstract var ytelsekomponentType: YtelsekomponentTypeCti
 
     /**
      * Liste av merknader.
@@ -81,19 +80,6 @@ abstract class Ytelseskomponent : Serializable {
      */
     var sakType: SakTypeCti? = null
 
-    /**
-     * Copy Constructor
-     *
-     * @param ytelseskomponent a `Ytelseskomponent` object
-     */
-
-    val isIFormelProvider: Boolean
-        /**
-         * Angir om ytelseskomponenten implementerer interfacet IFormelProvider.
-         * Dette dekker opp for mangel i Blaze Advisor som ikke kan sjekke om en klasse er et interface.
-         */
-        get() = this is IFormelProvider
-
     constructor()
     constructor(ytelseskomponent: Ytelseskomponent) {
         brutto = ytelseskomponent.brutto
@@ -102,9 +88,8 @@ abstract class Ytelseskomponent : Serializable {
         bruttoPerAr = ytelseskomponent.bruttoPerAr
         nettoPerAr = ytelseskomponent.nettoPerAr
         fradragPerAr = ytelseskomponent.fradragPerAr
-        if (ytelseskomponent.ytelsekomponentType != null) {
-            ytelsekomponentType = YtelsekomponentTypeCti(ytelseskomponent.ytelsekomponentType!!)
-        }
+        ytelsekomponentType = YtelsekomponentTypeCti(ytelseskomponent.ytelsekomponentType)
+
         if (ytelseskomponent.formelKode != null) {
             formelKode = FormelKodeCti(ytelseskomponent.formelKode!!)
         }

@@ -2,6 +2,7 @@ package no.nav.pensjon.regler.domain.grunnlag
 
 import no.nav.pensjon.regler.domain.beregning2011.JustertGarantipensjonsniva
 import no.nav.pensjon.regler.domain.kode.BeholdningsTypeCti
+import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.GarantipenNivaCti
 
 class Garantipensjonsbeholdning() : Beholdning() {
@@ -29,7 +30,5 @@ class Garantipensjonsbeholdning() : Beholdning() {
      */
     var garPN_justert = 0.0
 
-    init {
-        beholdningsType = BeholdningsTypeCti("GAR_PEN_B")
-    }
+    override var beholdningsType: BeholdningsTypeCti = BeholdningsTypeCti("GAR_PEN_B")
 }

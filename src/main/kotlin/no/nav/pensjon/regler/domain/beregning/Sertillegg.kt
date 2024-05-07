@@ -8,8 +8,5 @@ class Sertillegg : Ytelseskomponent() {
      */
     var pSats_st = 0.0
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("ST")
-    }
-
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("ST")
 }

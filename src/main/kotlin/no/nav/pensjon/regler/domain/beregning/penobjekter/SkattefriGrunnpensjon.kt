@@ -7,8 +7,5 @@ import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
  */
 class SkattefriGrunnpensjon : BeregningYtelseskomponent() {
     var pensjonsgrad = 0
-
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("SKATT_F_GP")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("SKATT_F_GP")
 }

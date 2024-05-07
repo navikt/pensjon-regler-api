@@ -10,8 +10,6 @@ import java.io.Serializable
 class Hjelpeloshetsbidrag : Ytelseskomponent(), Serializable {
     var grunnlagForUtbetaling = 0
 
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("HJELP_BIDRAG")
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("HJELP_BIDRAG")
-    }
 }

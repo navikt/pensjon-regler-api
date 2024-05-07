@@ -4,7 +4,5 @@ import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 
 class Garantipensjon : Ytelseskomponent() {
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("GAP")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("GAP")
 }

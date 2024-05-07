@@ -24,7 +24,7 @@ class UforeEkstra : Serializable {
      * UFGRAD_50_REAK
      * YRKODE_18_HJEMMV
      */
-    var inntektkode1: InntektKode1Cti? = null
+    var inntektkode1: InntektKode1Cti = InntektKode1Cti("INT_NIV_UF")
 
     /**
      * Beskriver om inntektstaket (tak) inneholder et fribeløp eller ikke.
@@ -36,7 +36,7 @@ class UforeEkstra : Serializable {
      * INT_U_FRI_GML_REGL
      * INT_M_FRI_GML_REGL
      */
-    var inntektkode2: InntektKode2Cti? = null
+    var inntektkode2: InntektKode2Cti = InntektKode2Cti("INT_IKKE_BER")
 
     /**
      * Inntektstak ved uførepensjon.Angir den Høyeste pensjonsgivende inntekt uførepensjonisten
@@ -84,10 +84,5 @@ class UforeEkstra : Serializable {
      * Uforeperioden for ysk som skal benyttes i historikken hvis/når Uføregrunnlaget blir historisk.
      */
     var uforeperiodeYSK: BeregningUforeperiode? = null
-
-    init {
-        inntektkode1 = InntektKode1Cti("INT_NIV_UF")
-        inntektkode2 = InntektKode2Cti("INT_IKKE_BER")
-    }
 
 }

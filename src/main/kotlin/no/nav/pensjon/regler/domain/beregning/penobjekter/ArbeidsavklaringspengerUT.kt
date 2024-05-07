@@ -6,7 +6,7 @@ import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
  * Created by N123422 on 07.11.2014.
  */
 class ArbeidsavklaringspengerUT : MotregningYtelseskomponent() {
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("UT_AAP")
-    }
+
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("UT_AAP")
+
 }

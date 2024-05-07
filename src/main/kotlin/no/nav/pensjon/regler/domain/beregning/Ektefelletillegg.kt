@@ -60,9 +60,7 @@ class Ektefelletillegg : Ytelseskomponent {
      */
     var skattefritak = false
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("ET")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("ET")
 
     constructor() {
         formelKode = FormelKodeCti("ETx")

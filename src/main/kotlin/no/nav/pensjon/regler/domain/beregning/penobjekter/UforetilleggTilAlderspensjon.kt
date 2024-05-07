@@ -10,7 +10,6 @@ import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 class UforetilleggTilAlderspensjon : Ytelseskomponent() {
     var beregning: Beregning? = null
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("UFORETILLEGG_AP")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("UFORETILLEGG_AP")
+
 }

@@ -58,7 +58,6 @@ class UforetrygdOrdiner : Ytelseskomponent(), UforetrygdYtelseskomponent {
      */
     override var tidligereBelopAr = 0
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("UT_ORDINER")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("UT_ORDINER")
+
 }

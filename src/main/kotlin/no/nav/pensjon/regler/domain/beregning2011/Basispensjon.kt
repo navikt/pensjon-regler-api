@@ -20,9 +20,5 @@ class Basispensjon : Serializable {
     var pt: BasisPensjonstillegg? = null
 
     /** Formelkode kun for bruk for restpensjon  */
-    var formelKode: FormelKodeCti? = null
-
-    init {
-        formelKode = FormelKodeCti("ResPx")
-    }
+    var formelKode: FormelKodeCti = FormelKodeCti("ResPx")
 }

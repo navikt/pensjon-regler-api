@@ -7,7 +7,5 @@ class FremskrevetAfpLivsvarig : AfpLivsvarig(), Regulering {
     override var gap = 0
     var gjennomsnittligUttaksgradSisteAr = 0.0
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("FREM_AFP_LIVSVARIG")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("FREM_AFP_LIVSVARIG")
 }

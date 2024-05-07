@@ -10,7 +10,6 @@ class MinstenivatilleggPensjonistpar : Ytelseskomponent() {
     var bruker: BeregningsInformasjonMinstenivatilleggPensjonistpar? = null
     var ektefelle: BeregningsInformasjonMinstenivatilleggPensjonistpar? = null
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("MIN_NIVA_TILL_PPAR")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("MIN_NIVA_TILL_PPAR")
+
 }

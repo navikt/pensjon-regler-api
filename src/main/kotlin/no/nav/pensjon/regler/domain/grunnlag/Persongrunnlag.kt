@@ -312,6 +312,4 @@ open class Persongrunnlag : Serializable {
      * Objekt som inneholder informasjon om TP-ordningers uførepensjonsgrunnlag. Dette er manuelt registrerte data og ikke hentet fra TP-registeret eller andre eksterne kilder.
      */
     var afpTpoUpGrunnlag: AfpTpoUpGrunnlag? = null
-
-
 }

@@ -8,7 +8,5 @@ class MinstenivatilleggIndividuelt : Ytelseskomponent() {
     var garPN: Garantipensjonsniva? = null
     var samletPensjonForMNT = 0.0
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("MIN_NIVA_TILL_INDV")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("MIN_NIVA_TILL_INDV")
 }

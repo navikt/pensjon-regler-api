@@ -25,9 +25,7 @@ open class Grunnpensjon : Ytelseskomponent {
      */
     var anvendtTrygdetid: AnvendtTrygdetid? = null
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("GP")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("GP")
 
     constructor() {
         formelKode = FormelKodeCti("GPx")

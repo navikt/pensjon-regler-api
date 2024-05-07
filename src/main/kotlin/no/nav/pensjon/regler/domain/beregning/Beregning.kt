@@ -32,32 +32,17 @@ class Beregning : IBeregning, Serializable {
      * Virkningstidspunktet ytelsen kan utbetales til.
      */
     var virkTom: Date? = null
-    /**
-     * @return Returns the brutto.
-     */
-    /**
-     * @param brutto The brutto to set.
-     */
+
     /**
      * beløp før avkorting.
      */
     var brutto = 0
-    /**
-     * @return Returns the netto.
-     */
-    /**
-     * @param netto The netto to set.
-     */
+
     /**
      * beløp etter avkorting.
      */
     var netto = 0
-    /**
-     * @return Returns the gp.
-     */
-    /**
-     * @param gp The gp to set.
-     */
+
     /**
      * Grunnpensjonen, regulert med lønnsvekst - 0.0075. Fra og med Horisonten.
      */
@@ -73,34 +58,18 @@ class Beregning : IBeregning, Serializable {
      * Trengs kun for Afp hvor gp er avkortet kan være avkortet til 70%.
      */
     var gpAfpPensjonsregulert: Grunnpensjon? = null
-    /**
-     * @return Returns the tp.
-     */
-    /**
-     * @param tp The tp to set.
-     */
+
     /**
      * Tilleggspensjonen.
      */
     var tp: Tilleggspensjon? = null
     var tpKapittel3: Tilleggspensjon? = null
-    /**
-     * @return Returns the st.
-     */
-    /**
-     * @param st The st to set.
-     */
+
     /**
      * særtillegget.
      */
     var st: Sertillegg? = null
     var stKapittel3: Sertillegg? = null
-    /**
-     * @return Returns the minstenivatilleggPensjonistpar.
-     */
-    /**
-     * @param minstenivatilleggPensjonistpar The minstenivatilleggPensjonistpar to set.
-     */
     /**
      * SamletektefelleGarantiTillegg
      */
@@ -110,12 +79,6 @@ class Beregning : IBeregning, Serializable {
      * MinstenivatilleggIndividuelt
      */
     var minstenivatilleggIndividuelt: MinstenivatilleggIndividuelt? = null
-    /**
-     * @return Returns the afp_tillegg.
-     */
-    /**
-     * @param afpTillegg The afp_tillegg to set.
-     */
     /**
      * AFP tillegget.
      */
@@ -193,12 +156,7 @@ class Beregning : IBeregning, Serializable {
      * Brukes bare ved g-omregningstjenesten BEF270.
      */
     var tilleggTilHjelpIHuset: TilleggTilHjelpIHuset? = null
-    /**
-     * @return Returns the g.
-     */
-    /**
-     * @param g The g to set.
-     */
+
     /**
      * Grunnbeløpet.
      */
@@ -390,7 +348,7 @@ class Beregning : IBeregning, Serializable {
      */
     var ttBeregnetForGrunnlagsrolle = 0
 
-    /*
+    /**
      * Flagg som angir om ung ufør garanti er tatt bort ved eksport.
      */
     var ungUforGarantiFrafalt = false

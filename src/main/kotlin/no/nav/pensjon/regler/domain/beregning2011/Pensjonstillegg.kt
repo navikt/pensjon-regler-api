@@ -11,9 +11,7 @@ open class Pensjonstillegg : Ytelseskomponent {
     var minstepensjonsnivaSatsType: MinstepenNivaCti? = null
     var justertMinstePensjonsniva: JustertMinstePensjonsniva? = null
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("PT")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("PT")
 
     constructor() {
         formelKode = FormelKodeCti("PenTx")

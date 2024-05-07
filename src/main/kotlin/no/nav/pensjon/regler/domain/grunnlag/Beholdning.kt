@@ -15,6 +15,6 @@ abstract class Beholdning protected constructor() : Serializable {
     var lonnsvekstInformasjon: LonnsvekstInformasjon? = null
     var reguleringsInformasjon: ReguleringsInformasjon? = null
     var formelkode: FormelKodeCti? = null
-    var beholdningsType: BeholdningsTypeCti? = null
+    abstract var beholdningsType: BeholdningsTypeCti
     var merknadListe: List<Merknad> = mutableListOf()
 }

@@ -8,7 +8,5 @@ class FasteUtgifterTilleggUT : Ytelseskomponent() {
     var nettoRestAr: Int? = null
     var avkortningsbelopPerAr: Int? = null
 
-    init {
-        ytelsekomponentType = YtelsekomponentTypeCti("UT_FAST_UTGIFT_T")
-    }
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("UT_FAST_UTGIFT_T")
 }
