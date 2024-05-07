@@ -1,5 +1,7 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.grunnlag.Beholdninger
 import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.kode.BeregningMetodeTypeCti
@@ -12,6 +14,10 @@ import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
  * Denne benyttes av 2011, 2016 og 2025
  * For 2016 vil alle feltene være aktuelle
  */
+@JsonSubTypes(
+    JsonSubTypes.Type(value = SisteAldersberegning2016::class)
+)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 open class SisteAldersberegning2011 : SisteBeregning() {
     var regelverkType: RegelverkTypeCti? = null // Dene benyttes for å avgjøre om det er på 2011, 2016 eller 2025.
     var basispensjon: Basispensjon? = null // 2011

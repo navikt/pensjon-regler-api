@@ -1,11 +1,19 @@
 package no.nav.pensjon.regler.domain.vedtak
 
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.beregning2011.AfpLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.FremskrevetAfpLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.FremskrevetPensjonUnderUtbetaling
 import no.nav.pensjon.regler.domain.beregning2011.PensjonUnderUtbetaling
 import java.io.Serializable
 
+@JsonSubTypes(
+    JsonSubTypes.Type(value = VilkarsprovInformasjon2011::class),
+    JsonSubTypes.Type(value = VilkarsprovInformasjon2016::class),
+    JsonSubTypes.Type(value = VilkarsprovInformasjon2025::class)
+)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 abstract class VilkarsprovInformasjon : Serializable {
     var ektefelleInntektOver2g = false
     var flyktning = false

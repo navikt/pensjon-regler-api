@@ -3,18 +3,18 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>no.nav.pensjon.regler</groupId>
 	<artifactId>pensjon-regler-api</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3-RC</version>
 	<packaging>jar</packaging>
 	<name>NAV :: Pensjon-Regler API</name>
 
     <properties>
         <java.jdk.version>17</java.jdk.version>
         <kotlin.version>1.9.0</kotlin.version>
-        <!-- Config properties -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.release>17</maven.compiler.release>
         <kotlin.code.style>official</kotlin.code.style>
+        <jackson.version>2.17.0</jackson.version>
     </properties>
 
 	<dependencies>
@@ -40,7 +40,18 @@
 			<version>${kotlin.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
 	</dependencies>
+
 	<build>
 		<sourceDirectory>src/main/kotlin</sourceDirectory>
 		<testSourceDirectory>src/test/kotlin</testSourceDirectory>

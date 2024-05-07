@@ -1,6 +1,5 @@
 package no.nav.pensjon.regler.domain.beregning
 
-import no.nav.pensjon.regler.domain.IBeregning
 import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.PenPerson
 import no.nav.pensjon.regler.domain.Trygdetid
@@ -16,7 +15,7 @@ import java.util.*
 /**
  * Beregning er resultatet fra en beregning i pensjon-regler.
  */
-class Beregning : IBeregning, Serializable {
+class Beregning : Serializable {
 
     /**
      * Representerer personen beregning gjelder for.
@@ -179,9 +178,9 @@ class Beregning : IBeregning, Serializable {
     var trygdetid: Trygdetid? = null
 
     /**
-     * Liste av beregninger.Kan inneholde alternative beregninger gjort ved lønnsomhetsberegninger.Vinneren ligger da i hovedobjektet mens taperen(e) ligger i denne listen.
+     * Liste av beregninger. Kan inneholde alternative beregninger gjort ved lønnsomhetsberegninger.Vinneren ligger da i hovedobjektet mens taperen(e) ligger i denne listen.
      */
-    override var delberegningsListe: List<BeregningRelasjon> = mutableListOf()
+    var delberegningsListe: List<BeregningRelasjon> = mutableListOf()
 
     /**
      * Angir type beregning: BER, HJELPEBER, SAM_BER, VUR_BER.

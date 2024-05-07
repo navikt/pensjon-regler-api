@@ -1,7 +1,10 @@
 package no.nav.pensjon.regler.domain.beregning
 
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.Merknad
-import no.nav.pensjon.regler.domain.beregning2011.ReguleringsInformasjon
+import no.nav.pensjon.regler.domain.beregning.penobjekter.*
+import no.nav.pensjon.regler.domain.beregning2011.*
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.SakTypeCti
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
@@ -11,6 +14,46 @@ import java.io.Serializable
  * Superklasse for alle ytelser, Grunnpensjon, Sertillegg, AfpTillegg osv. For
  * alle ytelser gjelder at brutto - netto = fradrag.
  */
+@JsonSubTypes(
+    JsonSubTypes.Type(value = AfpKompensasjonstillegg::class),
+    JsonSubTypes.Type(value = AfpKronetillegg::class),
+    JsonSubTypes.Type(value = AfpLivsvarig::class),
+    JsonSubTypes.Type(value = AfpTillegg::class),
+    JsonSubTypes.Type(value = BeregningYtelseskomponent::class),
+    JsonSubTypes.Type(value = Ektefelletillegg::class),
+    JsonSubTypes.Type(value = EktefelletilleggUT::class),
+    JsonSubTypes.Type(value = Familietillegg::class),
+    JsonSubTypes.Type(value = FasteUtgifterTillegg::class),
+    JsonSubTypes.Type(value = FasteUtgifterTilleggUT::class),
+    JsonSubTypes.Type(value = Garantipensjon::class),
+    JsonSubTypes.Type(value = Garantitillegg::class),
+    JsonSubTypes.Type(value = Garantitillegg_Art_27::class),
+    JsonSubTypes.Type(value = Garantitillegg_Art_27_UT::class),
+    JsonSubTypes.Type(value = Garantitillegg_Art_50::class),
+    JsonSubTypes.Type(value = Gjenlevendetillegg::class),
+    JsonSubTypes.Type(value = GjenlevendetilleggAP::class),
+    JsonSubTypes.Type(value = GjenlevendetilleggAPKap19::class),
+    JsonSubTypes.Type(value = Grunnpensjon::class),
+    JsonSubTypes.Type(value = Hjelpeloshetsbidrag::class),
+    JsonSubTypes.Type(value = Inntektspensjon::class),
+    JsonSubTypes.Type(value = KrigOgGammelYrkesskade::class),
+    JsonSubTypes.Type(value = Mendel::class),
+    JsonSubTypes.Type(value = MinstenivatilleggIndividuelt::class),
+    JsonSubTypes.Type(value = MinstenivatilleggPensjonistpar::class),
+    JsonSubTypes.Type(value = Paragraf_8_5_1_tillegg::class),
+    JsonSubTypes.Type(value = Pensjonstillegg::class),
+    JsonSubTypes.Type(value = Sertillegg::class),
+    JsonSubTypes.Type(value = Skjermingstillegg::class),
+    JsonSubTypes.Type(value = TemporarYtelseskomponent::class),
+    JsonSubTypes.Type(value = Tilleggspensjon::class),
+    JsonSubTypes.Type(value = TilleggTilHjelpIHuset::class),
+    JsonSubTypes.Type(value = UforetilleggTilAlderspensjon::class),
+    JsonSubTypes.Type(value = UforetrygdOrdiner::class),
+    JsonSubTypes.Type(value = Ventetillegg::class),
+
+    JsonSubTypes.Type(value = AbstraktBarnetillegg::class)
+)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 abstract class Ytelseskomponent : Serializable {
     /**
      * Brutto beløp.

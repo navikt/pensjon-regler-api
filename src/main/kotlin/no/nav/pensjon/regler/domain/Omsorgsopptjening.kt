@@ -1,5 +1,15 @@
 package no.nav.pensjon.regler.domain
 
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
+import no.nav.pensjon.regler.domain.beregning.Poengtall
+import no.nav.pensjon.regler.domain.beregning2011.OpptjeningUT
+
+@JsonSubTypes(
+    JsonSubTypes.Type(value = Poengtall::class),
+    JsonSubTypes.Type(value = OpptjeningUT::class)
+)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 interface Omsorgsopptjening {
     /**
      * Gitt år for opptjeningen
