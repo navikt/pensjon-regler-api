@@ -1,13 +1,17 @@
 package no.nav.pensjon.regler.domain.beregning
 
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
+import no.nav.pensjon.regler.domain.beregning2011.BasisTilleggspensjon
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import no.nav.pensjon.regler.domain.util.formula.Formel
 import no.nav.pensjon.regler.domain.util.formula.IFormelProvider
 
-/*
- * Tilleggspensjon
- */
+@JsonSubTypes(
+    JsonSubTypes.Type(value = BasisTilleggspensjon::class)
+)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 open class Tilleggspensjon : Ytelseskomponent, IFormelProvider {
     /**
      * Det ordinåre sluttpoengtallet.
@@ -39,14 +43,12 @@ open class Tilleggspensjon : Ytelseskomponent, IFormelProvider {
      */
     override var formelMap: HashMap<String, Formel> = HashMap()
 
-    override val formelPrefix: String
-        get() = ytelsekomponentType.kode!!
-
     override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("TP")
 
     constructor() {
         formelKode = FormelKodeCti("TPx")
     }
+
     constructor(tilleggspensjon: Tilleggspensjon) : super(tilleggspensjon) {
         if (tilleggspensjon.spt != null) {
             spt = Sluttpoengtall(tilleggspensjon.spt!!)

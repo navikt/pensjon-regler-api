@@ -1,6 +1,7 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
-import no.nav.pensjon.regler.domain.IBeregning
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.PenPerson
 import no.nav.pensjon.regler.domain.beregning.BeregningRelasjon
@@ -10,7 +11,14 @@ import no.nav.pensjon.regler.domain.kode.BeregningTypeCti
 import no.nav.pensjon.regler.domain.kode.ResultatTypeCti
 import java.io.Serializable
 
-abstract class Beregning2011 : IBeregning, Serializable {
+@JsonSubTypes(
+    JsonSubTypes.Type(value = Uforetrygdberegning::class),
+    JsonSubTypes.Type(value = AfpPrivatBeregning::class),
+    JsonSubTypes.Type(value = AldersberegningKapittel20::class),
+    JsonSubTypes.Type(value = AldersberegningKapittel19::class),
+)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
+abstract class Beregning2011 : Serializable {
     var gjelderPerson: PenPerson? = null
     open var grunnbelop = 0
     var tt_anv = 0
@@ -20,7 +28,7 @@ abstract class Beregning2011 : IBeregning, Serializable {
     var delberegning2011Liste: List<BeregningRelasjon> = mutableListOf()
     var merknadListe: List<Merknad> = mutableListOf()
 
-    override val delberegningsListe: List<BeregningRelasjon>
+    val delberegningsListe: List<BeregningRelasjon>
         get() = delberegning2011Liste
 
     /**

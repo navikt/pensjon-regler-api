@@ -1,7 +1,10 @@
 package no.nav.pensjon.regler.to
 
-import no.nav.pensjon.regler.domain.beregning2011.AfpLivsvarig
-import no.nav.pensjon.regler.domain.beregning2011.SisteAldersberegning2016
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
+import no.nav.pensjon.regler.domain.beregning.*
+import no.nav.pensjon.regler.domain.beregning.penobjekter.*
+import no.nav.pensjon.regler.domain.beregning2011.*
 import no.nav.pensjon.regler.domain.grunnlag.DelingstallUtvalg
 import no.nav.pensjon.regler.domain.grunnlag.ForholdstallUtvalg
 import no.nav.pensjon.regler.domain.grunnlag.GarantitilleggsbeholdningGrunnlag

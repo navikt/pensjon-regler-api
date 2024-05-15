@@ -81,6 +81,4 @@ class Gjenlevendetillegg() : Ytelseskomponent(), UforetrygdYtelseskomponent, IFo
 
     override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("UT_GJT")
 
-    override val formelPrefix: String
-        get() = ytelsekomponentType.kode!!
 }

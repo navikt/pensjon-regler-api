@@ -1,9 +1,19 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
+import com.fasterxml.jackson.annotation.JsonSubTypes
+import com.fasterxml.jackson.annotation.JsonTypeInfo
+import no.nav.pensjon.regler.domain.beregning.BarnetilleggFellesbarn
+import no.nav.pensjon.regler.domain.beregning.BarnetilleggSerkullsbarn
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.kode.AvkortingsArsakCti
 import java.io.Serializable
 
+@JsonSubTypes(
+    JsonSubTypes.Type(value = BarnetilleggSerkullsbarn::class),
+    JsonSubTypes.Type(value = BarnetilleggFellesbarn::class),
+    JsonSubTypes.Type(value = AbstraktBarnetilleggUT::class),
+)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 abstract class AbstraktBarnetillegg : Ytelseskomponent, Serializable {
     /**
      * Antall barn i kullet.

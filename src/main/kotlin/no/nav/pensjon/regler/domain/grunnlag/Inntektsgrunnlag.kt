@@ -5,11 +5,7 @@ import no.nav.pensjon.regler.domain.kode.InntektTypeCti
 import java.io.Serializable
 import java.util.*
 
-class Inntektsgrunnlag
-/**
- * private boolean kopiertFraGammeltKrav;
- */
-    : Serializable {
+class Inntektsgrunnlag() : Serializable {
     /*
      * Unik identifikator for Inntektsgrunnlag. Endres ikke av regelmotoren,
      * men Inntektsgrunnlag med null id kan opprettes av batchtjenestene,
