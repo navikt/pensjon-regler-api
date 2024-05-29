@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
+import com.fasterxml.jackson.annotation.JsonIgnore
 import no.nav.pensjon.regler.domain.PenPerson
 import no.nav.pensjon.regler.domain.TTPeriode
 import no.nav.pensjon.regler.domain.Trygdetid
@@ -307,4 +308,10 @@ class Persongrunnlag() : Serializable {
      * Objekt som inneholder informasjon om TP-ordningers uførepensjonsgrunnlag. Dette er manuelt registrerte data og ikke hentet fra TP-registeret eller andre eksterne kilder.
      */
     var afpTpoUpGrunnlag: AfpTpoUpGrunnlag? = null
+
+    /**
+     * Støttefelt for virk_ikke_ufor-hacket. Feltet er ikke forventet populert.
+     */
+    @JsonIgnore
+    var forsteVirk: Date? = null
 }
