@@ -9,7 +9,7 @@ import java.io.Serializable
  * Inneholder felles felt for avkorting av både UT og BT. Enkelte felt fra tidligere klasse Avkortningsinformasjon.
  */
 @JsonSubTypes(
-    JsonSubTypes.Type(value = AvkortingsinformasjonBT::class),
+    JsonSubTypes.Type(value = AvkortingsinformasjonUT::class),
     JsonSubTypes.Type(value = AvkortingsinformasjonBT::class),
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
