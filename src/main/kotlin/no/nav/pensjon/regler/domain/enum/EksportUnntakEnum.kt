@@ -1,0 +1,18 @@
+package no.nav.pensjon.regler.domain.enum
+
+enum class EksportUnntakEnum {
+    FLYKT_ALDER,
+    FLYKT_UFORE,
+    FLYKT_BARNEP,
+    FLYKT_GJENLEV,
+    DOD26_BARNEP,
+    DOD26_GJENLEV,
+    DOD26_ALDER,
+    UFOR25_UFOREP,
+    UFOR25_ALDER,
+    MINDRE5AR_BARNEP,
+    MINDRE5AR_GJENLEV,
+    MINDRE5AR_UFOREP,
+    GARANT_TP_UTFL_F_93,
+    GARANT_TP_USA_F_03
+}

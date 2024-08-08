@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
+import no.nav.pensjon.regler.domain.enum.BarnepensjonEosKapEnum
 import no.nav.pensjon.regler.domain.kode.BarnepensjonEOSKapittelCti
 import java.io.Serializable
 
@@ -58,5 +59,6 @@ class Trygdeavtaledetaljer : Serializable {
      * Angir hvilket kapittel (3 eller 8) i forordning 1408/71 barnepensjon skal beregnes etter ved EØS-saker.
      */
     var barnepensjonForordning1408_71: BarnepensjonEOSKapittelCti? = null
+    var barnepensjonForordning1408_71Enum: BarnepensjonEosKapEnum? = null
 
 }

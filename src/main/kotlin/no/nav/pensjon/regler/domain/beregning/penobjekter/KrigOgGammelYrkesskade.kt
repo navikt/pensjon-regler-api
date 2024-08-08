@@ -1,6 +1,7 @@
 package no.nav.pensjon.regler.domain.beregning.penobjekter
 
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
+import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import java.io.Serializable
 
@@ -39,4 +40,5 @@ class KrigOgGammelYrkesskade : Ytelseskomponent(), Serializable {
     var mendel = 0
 
     override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("KRIG_GY")
+    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.KRIG_GY
 }

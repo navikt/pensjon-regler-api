@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.vedtak
 
+import no.nav.pensjon.regler.domain.enum.EtteroppgjorResultatEnum
 import no.nav.pensjon.regler.domain.kode.EtteroppgjorResultatCti
 import java.io.Serializable
 
@@ -55,6 +56,7 @@ class EtteroppgjorResultat : Serializable {
      * Resultatet av etteroppgjøret.
      */
     var etteroppgjorResultatType: EtteroppgjorResultatCti? = null
+    var etteroppgjorResultatTypeEnum: EtteroppgjorResultatEnum? = null
 
     /**
      * Toleransegrense for etterbetaling.

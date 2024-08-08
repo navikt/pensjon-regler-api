@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.afpoppgjor
 
+import no.nav.pensjon.regler.domain.enum.AFPtypeEnum
 import no.nav.pensjon.regler.domain.kode.AfpOrdningTypeCti
 import java.io.Serializable
 import java.util.*
@@ -25,6 +26,7 @@ class AFPEtteroppgjorgrunnlag : Serializable {
      * AFPordningen personen er eller var medlem av
      */
     var afpOrdning: AfpOrdningTypeCti? = null
+    var afpOrdningEnum: AFPtypeEnum? = null
 
     /**
      * Skal settes til true når personen har gått over til en annen type pensjon midt i

@@ -1,8 +1,13 @@
 package no.nav.pensjon.regler.domain.vedtak
 
+import no.nav.pensjon.regler.domain.enum.KravlinjeTypeEnum
 import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.PenPerson
 import no.nav.pensjon.regler.domain.beregning2011.BeregningsvilkarPeriode
+import no.nav.pensjon.regler.domain.enum.BegrunnelseTypeEnum
+import no.nav.pensjon.regler.domain.enum.VedtakResultatEnum
+import no.nav.pensjon.regler.domain.enum.VilkarVurderingEnum
+import no.nav.pensjon.regler.domain.enum.YtelsetypeEnum
 import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.kode.BegrunnelseTypeCti
 import no.nav.pensjon.regler.domain.kode.KravlinjeTypeCti
@@ -19,6 +24,7 @@ class VilkarsVedtak : Serializable {
      * vilkårsprøving.
      */
     var anbefaltResultat: VilkarsvedtakResultatCti? = null
+    var anbefaltResultatEnum: VedtakResultatEnum? = null
 
     /**
      * Kode som angir det resultatet til vilkårsvedtaket. Settes av konsumenten
@@ -26,18 +32,21 @@ class VilkarsVedtak : Serializable {
      * for gyldige typer.
      */
     var vilkarsvedtakResultat: VilkarsvedtakResultatCti? = null
+    var vilkarsvedtakResultatEnum: VedtakResultatEnum? = null
 
     /**
      * Kode som angir hvilken type kravlinje vilkårsvedtaket relaterer seg til.
      * K_KRAVLINJE_T for gyldige typer.
      */
     var kravlinjeType: KravlinjeTypeCti? = null
+    var kravlinjeTypeEnum: KravlinjeTypeEnum? = null
 
     /**
      * Beskriver hvilken vurdering saksbehandler har lagt til grunn for
      * resultatvurderingen. Se K_VILKAR_VURD_T.
      */
     var anvendtVurdering: VilkarVurderingCti? = null
+    var anvendtVurderingEnum: VilkarVurderingEnum? = null
 
     /**
      * Dato vilkårsvedtaket har virkning fra.
@@ -75,6 +84,7 @@ class VilkarsVedtak : Serializable {
     var penPerson: PenPerson? = null
     var vilkarsprovresultat: AbstraktVilkarsprovResultat? = null
     var begrunnelse: BegrunnelseTypeCti? = null
+    var begrunnelseEnum: BegrunnelseTypeEnum? = null
     var avslattKapittel19 = false
     var avslattGarantipensjon = false
     var vurderSkattefritakET = false

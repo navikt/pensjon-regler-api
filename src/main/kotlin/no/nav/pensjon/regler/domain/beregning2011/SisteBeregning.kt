@@ -2,6 +2,9 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
+import no.nav.pensjon.regler.domain.enum.BorMedTypeEnum
+import no.nav.pensjon.regler.domain.enum.ResultattypeEnum
+import no.nav.pensjon.regler.domain.enum.SivilstandEnum
 import no.nav.pensjon.regler.domain.kode.BorMedTypeCti
 import no.nav.pensjon.regler.domain.kode.ResultatTypeCti
 import no.nav.pensjon.regler.domain.kode.SivilstandTypeCti
@@ -21,7 +24,10 @@ abstract class SisteBeregning protected constructor() : Serializable {
     var virkDato: Date? = null
     var tt_anv = 0
     var resultatType: ResultatTypeCti? = null
+    var resultatTypeEnum: ResultattypeEnum? = null
     var sivilstandType: SivilstandTypeCti? = null
+    var sivilstandTypeEnum: SivilstandEnum? = null
     var benyttetSivilstand: BorMedTypeCti? = null
+    var benyttetSivilstandEnum: BorMedTypeEnum? = null
 
 }

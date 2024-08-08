@@ -3,6 +3,7 @@ package no.nav.pensjon.regler.domain.vedtak
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.beregning2011.BeregningsvilkarPeriode
+import no.nav.pensjon.regler.domain.enum.VilkarOppfyltUTEnum
 import no.nav.pensjon.regler.domain.kode.VilkarOppfyltUTCti
 import java.io.Serializable
 
@@ -21,5 +22,6 @@ import java.io.Serializable
 abstract class AbstraktVilkar : Serializable {
 
     var resultat: VilkarOppfyltUTCti? = null
+    var resultatEnum: VilkarOppfyltUTEnum? = null
 
 }

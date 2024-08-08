@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.to
 
+import no.nav.pensjon.regler.domain.enum.GrunnlagsrolleEnum
 import no.nav.pensjon.regler.domain.kode.GrunnlagsrolleCti
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
@@ -10,6 +11,7 @@ class VilkarsprovHalvpensjonRequest : ServiceRequest() {
     var fom: Date? = null
     var tom: Date? = null
     var grunnlagsrolle: GrunnlagsrolleCti? = null
+    var grunnlagsrolleEnum: GrunnlagsrolleEnum? = null
 
     /**
      * vilkårsvedtak for uføretrygd.

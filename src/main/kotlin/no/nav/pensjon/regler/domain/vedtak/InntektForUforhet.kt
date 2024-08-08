@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.vedtak
 
+import no.nav.pensjon.regler.domain.enum.MinimumIfuTypeEnum
 import no.nav.pensjon.regler.domain.kode.MinimumIfuTypeCti
 import java.util.*
 
@@ -13,6 +14,7 @@ class InntektForUforhet : AbstraktBeregningsvilkar() {
      * Angir om bruker kvalifiserer til Minste-IFU sats som ung ufør, enslig eller gift.
      */
     var minimumIfuType: MinimumIfuTypeCti? = null
+    var minimumIfuTypeEnum: MinimumIfuTypeEnum? = null
 
     /**
      * Den endelige inntekten før uførhet som brukes.

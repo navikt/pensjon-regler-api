@@ -1,5 +1,7 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
+import no.nav.pensjon.regler.domain.enum.MinstepensjonstypeEnum
+import no.nav.pensjon.regler.domain.enum.ResultatKildeEnum
 import no.nav.pensjon.regler.domain.kode.MinstepensjonTypeCti
 import no.nav.pensjon.regler.domain.kode.ResultatKildeCti
 import no.nav.pensjon.regler.domain.trygdetid.AnvendtTrygdetid
@@ -50,11 +52,13 @@ class OvergangsinfoUPtilUT : Serializable {
      * Hvorvidt utbetalt uførepensjonen per 31.12.2014 ble definert som minstepensjon.
      */
     var minstepensjonType: MinstepensjonTypeCti? = null
+    var minstepensjontypeEnum: MinstepensjonstypeEnum? = null
 
     /**
      * Hvorvidt utbetalt uførepensjonen per 31.12.2014 ble manuelt overstyrt eller ikke.
      */
     var resultatKilde: ResultatKildeCti? = null
+    var resultatKildeEnum: ResultatKildeEnum? = null
 
     /**
      * Netto særtillegg i utbetalt uførepensjonen per 31.12.2014.
