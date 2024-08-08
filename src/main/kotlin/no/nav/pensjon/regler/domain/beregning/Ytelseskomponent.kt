@@ -137,7 +137,8 @@ abstract class Ytelseskomponent : Serializable {
         bruttoPerAr = ytelseskomponent.bruttoPerAr
         nettoPerAr = ytelseskomponent.nettoPerAr
         fradragPerAr = ytelseskomponent.fradragPerAr
-        ytelsekomponentType = YtelsekomponentTypeCti(ytelseskomponent.ytelsekomponentType)
+        ytelsekomponentType = YtelsekomponentTypeCti(ytelseskomponent.ytelsekomponentType!!)
+        ytelsekomponentTypeEnum = ytelseskomponent.ytelsekomponentTypeEnum
 
         if (ytelseskomponent.formelKode != null) {
             formelKode = FormelKodeCti(ytelseskomponent.formelKode!!)
