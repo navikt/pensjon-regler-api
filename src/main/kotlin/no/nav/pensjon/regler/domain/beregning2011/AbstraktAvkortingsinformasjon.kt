@@ -2,6 +2,7 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
+import no.nav.pensjon.regler.domain.enum.InntektsavkortingTypeEnum
 import no.nav.pensjon.regler.domain.kode.InntektsavkortingTypeCti
 import java.io.Serializable
 
@@ -44,4 +45,5 @@ abstract class AbstraktAvkortingsinformasjon : Serializable {
      */
     var inntektsavkortingType: InntektsavkortingTypeCti? = null
 
+    var inntektsavkortingTypeEnum: InntektsavkortingTypeEnum? = null
 }

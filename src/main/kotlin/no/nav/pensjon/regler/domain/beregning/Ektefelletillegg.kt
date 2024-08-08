@@ -1,5 +1,8 @@
 package no.nav.pensjon.regler.domain.beregning
 
+import no.nav.pensjon.regler.domain.enum.AvkortningsArsakEnum
+import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
+import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 import no.nav.pensjon.regler.domain.kode.AvkortingsArsakCti
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
@@ -24,6 +27,7 @@ class Ektefelletillegg : Ytelseskomponent {
      * årsaken(e) til avkorting. Satt dersom avkortet er true.
      */
     var arsaksList: MutableList<AvkortingsArsakCti> = mutableListOf()
+    var arsaksListEnum: MutableList<AvkortningsArsakEnum> = mutableListOf()
 
     /**
      * Angir minste pensjonsnivåsats for ektefelletillegget
@@ -61,9 +65,11 @@ class Ektefelletillegg : Ytelseskomponent {
     var skattefritak = false
 
     override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("ET")
+    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.ET
 
     constructor() {
         formelKode = FormelKodeCti("ETx")
+        formelKodeEnum = FormelKodeEnum.ETx
     }
 
     constructor(ektefelletillegg: Ektefelletillegg) : super(ektefelletillegg) {
@@ -79,6 +85,9 @@ class Ektefelletillegg : Ytelseskomponent {
         arsaksList = ArrayList()
         for (arsak in ektefelletillegg.arsaksList) {
             arsaksList.add(AvkortingsArsakCti(arsak.kode))
+        }
+        for (arsak in ektefelletillegg.arsaksListEnum) {
+            arsaksListEnum.add(arsak)
         }
     }
 }

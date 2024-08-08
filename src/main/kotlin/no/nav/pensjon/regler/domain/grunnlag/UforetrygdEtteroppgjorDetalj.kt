@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
+import no.nav.pensjon.regler.domain.enum.GrunnlagsrolleEnum
 import no.nav.pensjon.regler.domain.kode.GrunnlagsrolleCti
 import java.io.Serializable
 import java.util.*
@@ -19,6 +20,7 @@ class UforetrygdEtteroppgjorDetalj : Serializable {
      * Kode som angir hvilken rolle personen har på kravet. De ulike rollene er definert i Kodeverk, ark K_GRNL_ROLLE_T.
      */
     var grunnlagsrolle: GrunnlagsrolleCti? = null
+    var grunnlagsrolleEnum: GrunnlagsrolleEnum? = null
 
     /**
      * Liste over alle inntekter som skal benyttes i etteroppgjøret.

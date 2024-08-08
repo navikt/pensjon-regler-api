@@ -1,6 +1,10 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
 import no.nav.pensjon.regler.domain.PenPerson
+import no.nav.pensjon.regler.domain.enum.BorMedTypeEnum
+import no.nav.pensjon.regler.domain.enum.GrunnlagkildeEnum
+import no.nav.pensjon.regler.domain.enum.GrunnlagsrolleEnum
+import no.nav.pensjon.regler.domain.enum.SivilstandEnum
 import no.nav.pensjon.regler.domain.kode.BorMedTypeCti
 import no.nav.pensjon.regler.domain.kode.GrunnlagKildeCti
 import no.nav.pensjon.regler.domain.kode.GrunnlagsrolleCti
@@ -18,6 +22,7 @@ open class PersonDetalj : Serializable {
      * Rollen denne personen har i kontekst av kravet.
      */
     var grunnlagsrolle: GrunnlagsrolleCti? = null
+    var grunnlagsrolleEnum: GrunnlagsrolleEnum? = null
 
     /**
      * Fra-og-med dato for rollens gyldighet.
@@ -33,6 +38,7 @@ open class PersonDetalj : Serializable {
      * Representerer personens sivilstand i henhold til TPS.
      */
     var sivilstandType: SivilstandTypeCti? = null
+    var sivilstandTypeEnum: SivilstandEnum? = null
 
     /**
      * Eventuell angivelse av hvilken annen person som sivilstandType relaterer seg til,
@@ -45,6 +51,7 @@ open class PersonDetalj : Serializable {
      * Refereres konseptuelt som pensjonsfaglig vurdert sivilstand.
      */
     var borMed: BorMedTypeCti? = null
+    var borMedEnum: BorMedTypeEnum? = null
 
     /**
      * Detaljer om barnet hvis rolle=BARN. Angir om barnet bor med en annen forelder.
@@ -66,6 +73,8 @@ open class PersonDetalj : Serializable {
      * Angir kilden til persondetaljen.
      */
     var grunnlagKilde: GrunnlagKildeCti? = null
+    var grunnlagKildeEnum: GrunnlagkildeEnum? = null
+
     var serskiltSatsUtenET: Boolean? = null
     var epsAvkallEgenPensjon: Boolean? = null
 }

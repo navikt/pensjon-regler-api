@@ -1,6 +1,9 @@
 package no.nav.pensjon.regler.to
 
+import no.nav.pensjon.regler.domain.enum.KravlinjeTypeEnum
 import no.nav.pensjon.regler.domain.beregning2011.BeregningsvilkarPeriode
+import no.nav.pensjon.regler.domain.enum.RegelverkTypeEnum
+import no.nav.pensjon.regler.domain.enum.YtelsetypeEnum
 import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.grunnlag.Uttaksgrad
 import no.nav.pensjon.regler.domain.kode.KravlinjeTypeCti
@@ -30,6 +33,7 @@ class TrygdetidRequest : ServiceRequest() {
      * Type ytelse (AP,UP osv)
      */
     var ytelsesType: KravlinjeTypeCti? = null
+    var ytelsesTypeEnum: KravlinjeTypeEnum? = null
 
     /**
      * Persongrunnlag for personen.
@@ -46,6 +50,7 @@ class TrygdetidRequest : ServiceRequest() {
      * Regelverktype bestemmer om trygdetid skal regnes etter gamle eller nye regler.
      */
     var regelverkType: RegelverkTypeCti? = null
+    var regelverkTypeEnum: RegelverkTypeEnum? = null
     var uttaksgradListe: List<Uttaksgrad> = mutableListOf()
         set(value) {
             sorterUttaksgradListe()

@@ -1,5 +1,8 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
+import no.nav.pensjon.regler.domain.enum.FppGarantiKodeEnum
+import no.nav.pensjon.regler.domain.enum.ProRataBeregningTypeEnum
+import no.nav.pensjon.regler.domain.enum.UforetypeEnum
 import no.nav.pensjon.regler.domain.kode.FppGarantiKodeCti
 import no.nav.pensjon.regler.domain.kode.ProRataBeregningTypeCti
 import no.nav.pensjon.regler.domain.kode.UforeTypeCti
@@ -21,6 +24,7 @@ class Uforeperiode : Serializable {
      * Angir om Uføregraden er ren Uføre,inneholder delvis yrke eller bare yrke.
      */
     var uforeType: UforeTypeCti? = null
+    var uforeTypeEnum: UforetypeEnum? = null
 
     /**
      * Framtidige pensjonspoengtall garanti, f.eks ung ufør har i dag en garanti på 3.3.
@@ -36,6 +40,7 @@ class Uforeperiode : Serializable {
      * `E = unge Uføre før 1967`
      */
     var fppGarantiKode: FppGarantiKodeCti? = null
+    var fppGarantiKodeEnum: FppGarantiKodeEnum? = null
 
     /**
      * Antall godskrevet framtidig poengtall, ikke full framtidig godskriving.
@@ -51,6 +56,7 @@ class Uforeperiode : Serializable {
      * Angir hva utfallet av pro-rata beregningen var. Hvis satt er EØS eneste alternativ eller bedre enn alternativet (Folketrygd).
      */
     var proRataBeregningType: ProRataBeregningTypeCti? = null
+    var proRataBeregningTypeEnum: ProRataBeregningTypeEnum? = null
 
     /**
      * Dato for virkningsåret for denne Uføreperioden.

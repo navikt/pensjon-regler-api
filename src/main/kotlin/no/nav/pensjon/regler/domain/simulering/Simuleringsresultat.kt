@@ -2,6 +2,7 @@ package no.nav.pensjon.regler.domain.simulering
 
 import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.beregning.Beregning
+import no.nav.pensjon.regler.domain.enum.VedtakResultatEnum
 import no.nav.pensjon.regler.domain.kode.VilkarsvedtakResultatCti
 import java.io.Serializable
 import java.util.*
@@ -14,6 +15,7 @@ class Simuleringsresultat : Serializable {
      * Status på vedtaket
      */
     var status: VilkarsvedtakResultatCti? = null
+    var statusEnum: VedtakResultatEnum? = null
 
     /**
      * Beregningen

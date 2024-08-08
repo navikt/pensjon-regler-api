@@ -8,6 +8,7 @@ import java.util.*
 /**
  * En periode for et opphold på institusjon
  */
+@Deprecated("Ikke i bruk")
 class InstOpphPeriodegrunnlag : Serializable {
     /**
      * Kun brukt i PEN
@@ -18,11 +19,15 @@ class InstOpphPeriodegrunnlag : Serializable {
      * Kode som angir type opphold.
      */
     var oppholdType: OppholdTypeCti? = null
+    // TODO Hva skal her? Vi har ingen Enum for dette, Pesys har InstitusjonsoppholdTypeCode med AS (alder og sykehjem),FO (fengsel),HS (helseinstitusjon)
+//    var oppholdTypeEnum: OppholdTypeCti? = null
 
     /**
      * Varighetstypen på institusjonsoppholdet.
      */
     var varighetType: VarighetTypeCti? = null
+    // TODO Finner ingen koder for dette hverken i regler eller pesys
+//    var varighetTypeEnum: Varigh? = null
 
     /**
      * Fradato for oppholdet

@@ -1,5 +1,8 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
+import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
+import no.nav.pensjon.regler.domain.enum.JustertPeriodeEnum
+import no.nav.pensjon.regler.domain.enum.YtelseVedDodEnum
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.JustertPeriodeCti
 import no.nav.pensjon.regler.domain.kode.YtelseVedDodCti
@@ -9,6 +12,7 @@ import java.util.*
 class Uforetrygdberegning : Beregning2011() {
     var bruttoPerAr = 0
     var formelKode: FormelKodeCti? = null
+    var formelKodeEnum: FormelKodeEnum? = null
     override var grunnbelop = 0
     var minsteytelse: Minsteytelse? = null
     var prorataBrok: Brok? = null
@@ -25,6 +29,7 @@ class Uforetrygdberegning : Beregning2011() {
 
     /* Viser hvilken type institusjonsopphold det er beregnet for. Kodene hentes fra K_JUST_PERIODE */
     var instOppholdType: JustertPeriodeCti? = null
+    var instOppholdTypeEnum: JustertPeriodeEnum? = null
 
     /* Angir om ytelsen er endret, enten  økt eller redusert. */
     var instOpphAnvendt = false
@@ -39,5 +44,6 @@ class Uforetrygdberegning : Beregning2011() {
      * Satt på de beregninger hvor avdødes ytelse har påvirket beregningen.
      */
     var ytelseVedDod: YtelseVedDodCti? = null
+    var ytelseVedDodEnum: YtelseVedDodEnum? = null
 
 }

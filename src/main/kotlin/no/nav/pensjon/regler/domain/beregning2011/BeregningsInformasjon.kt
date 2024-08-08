@@ -3,6 +3,10 @@ package no.nav.pensjon.regler.domain.beregning2011
 import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.PenPerson
 import no.nav.pensjon.regler.domain.beregning.Sluttpoengtall
+import no.nav.pensjon.regler.domain.enum.BeregningsmetodeEnum
+import no.nav.pensjon.regler.domain.enum.JustertPeriodeEnum
+import no.nav.pensjon.regler.domain.enum.LandkodeEnum
+import no.nav.pensjon.regler.domain.enum.ResultattypeEnum
 import no.nav.pensjon.regler.domain.kode.BeregningMetodeTypeCti
 import no.nav.pensjon.regler.domain.kode.JustertPeriodeCti
 import no.nav.pensjon.regler.domain.kode.LandCti
@@ -32,14 +36,18 @@ class BeregningsInformasjon : Serializable {
     var yrkesskadegrad = 0
     var penPerson: PenPerson? = null
     var beregningsMetode: BeregningMetodeTypeCti? = null
+    var beregningsMetodeEnum: BeregningsmetodeEnum? = null
     var eksport = false
     var resultatType: ResultatTypeCti? = null
+    var resultatTypeEnum: ResultattypeEnum? = null
     var tapendeBeregningsmetodeListe: List<TapendeBeregningsmetode> = mutableListOf()
     var trygdetid: Int? = null
     var tt_anv = 0
     var vurdertBosattland: LandCti? = null
+    var vurdertBosattlandEnum: LandkodeEnum? = null
     var ensligPensjonInstOpph = false
     var instOppholdType: JustertPeriodeCti? = null
+    var instOppholdTypeEnum: JustertPeriodeEnum? = null
     var instOpphAnvendt = false
     var tp = 0.0
     var ttBeregnetForGrunnlagsrolle = 0

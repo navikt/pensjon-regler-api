@@ -6,6 +6,7 @@ package no.nav.pensjon.regler.domain.kode
  * HEL Helsøsken
  * HALV Halvsøsken
  */
+// TODO Klassen finnes i Pesys, men ikke i bruk av Regler. Kan denne deprecates?
 class SoskenTypeCti : TypeCti {
     constructor() : super()
     constructor(kode: String?) : super(kode)

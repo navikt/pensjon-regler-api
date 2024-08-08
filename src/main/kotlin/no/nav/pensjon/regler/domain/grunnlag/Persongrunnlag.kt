@@ -6,6 +6,7 @@ import no.nav.pensjon.regler.domain.TTPeriode
 import no.nav.pensjon.regler.domain.Trygdetid
 import no.nav.pensjon.regler.domain.beregning2011.OvergangsinfoUPtilUT
 import no.nav.pensjon.regler.domain.beregning2011.UtbetalingsgradUT
+import no.nav.pensjon.regler.domain.enum.LandkodeEnum
 import no.nav.pensjon.regler.domain.kode.LandCti
 import java.io.Serializable
 import java.util.*
@@ -37,6 +38,7 @@ class Persongrunnlag() : Serializable {
      * Personens statsborgerskap.
      */
     var statsborgerskap: LandCti? = null
+    var statsborgerskapEnum: LandkodeEnum? = null
 
     /**
      * Angir om personen er flyktning.
@@ -275,6 +277,7 @@ class Persongrunnlag() : Serializable {
      * dersom trygdeavtale ikke er null.
      */
     var bosattLand: LandCti? = null
+    var bosattLandEnum: LandkodeEnum? = null
     var pensjonsbeholdning: Pensjonsbeholdning? = null
 
     /**

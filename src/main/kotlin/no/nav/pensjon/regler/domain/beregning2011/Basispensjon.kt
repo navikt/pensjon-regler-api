@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
+import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import java.io.Serializable
 
@@ -21,4 +22,5 @@ class Basispensjon : Serializable {
 
     /** Formelkode kun for bruk for restpensjon  */
     var formelKode: FormelKodeCti = FormelKodeCti("ResPx")
+    var formelKodeEnum: FormelKodeEnum = FormelKodeEnum.ResPx
 }

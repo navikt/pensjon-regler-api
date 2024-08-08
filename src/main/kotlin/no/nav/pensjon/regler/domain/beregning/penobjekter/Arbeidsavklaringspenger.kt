@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning.penobjekter
 
+import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 
 /**
@@ -7,4 +8,5 @@ import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
  */
 class Arbeidsavklaringspenger : MotregningYtelseskomponent() {
     override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("AAP")
+    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.AAP
 }

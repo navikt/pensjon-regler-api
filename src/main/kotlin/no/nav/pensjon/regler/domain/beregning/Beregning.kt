@@ -7,6 +7,14 @@ import no.nav.pensjon.regler.domain.beregning.penobjekter.*
 import no.nav.pensjon.regler.domain.beregning2011.LonnsvekstInformasjon
 import no.nav.pensjon.regler.domain.beregning2011.MinstenivatilleggIndividuelt
 import no.nav.pensjon.regler.domain.beregning2011.MinstenivatilleggPensjonistpar
+import no.nav.pensjon.regler.domain.enum.Beregningsarsak
+import no.nav.pensjon.regler.domain.enum.BeregningsmetodeEnum
+import no.nav.pensjon.regler.domain.enum.BeregningtypeEnum
+import no.nav.pensjon.regler.domain.enum.BorMedTypeEnum
+import no.nav.pensjon.regler.domain.enum.JustertPeriodeEnum
+import no.nav.pensjon.regler.domain.enum.MinstepensjonstypeEnum
+import no.nav.pensjon.regler.domain.enum.ResultattypeEnum
+import no.nav.pensjon.regler.domain.enum.SivilstandEnum
 import no.nav.pensjon.regler.domain.grunnlag.EosEkstra
 import no.nav.pensjon.regler.domain.kode.*
 import java.io.Serializable
@@ -171,6 +179,7 @@ class Beregning : Serializable {
      * Angir hvilken metode som ble benyttet ved beregningen.EØS/nordisk/et annet land
      */
     var beregningsMetode: BeregningMetodeTypeCti? = null
+    var beregningsMetodeEnum: BeregningsmetodeEnum? = null
 
     /**
      * Framtidig trygdetid.
@@ -186,11 +195,13 @@ class Beregning : Serializable {
      * Angir type beregning: BER, HJELPEBER, SAM_BER, VUR_BER.
      */
     var beregningType: BeregningTypeCti? = null
+    var beregningTypeEnum: BeregningtypeEnum? = null
 
     /**
      * Hvilken resultattype en beregning er : AP,AP_GJP osv.
      */
     var resultatType: ResultatTypeCti? = null
+    var resultatTypeEnum: ResultattypeEnum? = null
 
     /**
      * Flegg som brukes på beregninger med beregningType HJELPEBER.
@@ -218,12 +229,14 @@ class Beregning : Serializable {
      * Da skal den årsak som mest sjelden skjer settes.
      */
     var beregningArsak: BeregningArsakCti? = null
+    var beregningArsakEnum: Beregningsarsak? = null
 
     /**
      * Angir type av minstepensjon.
      * ER_MINST_PEN eller IKKE_MINST_PEN
      */
     var minstepensjontype: MinstepensjonTypeCti? = null
+    var minstepensjontypeEnum: MinstepensjonstypeEnum? = null
 
     /**
      * Samler opp årsakene til at en brukers minstepensjonstatus er satt og tilhørende verdier
@@ -279,11 +292,13 @@ class Beregning : Serializable {
      * Benyttet sivilstand (tilknyttetPerson.borMedType
      */
     var benyttetSivilstand: BorMedTypeCti? = null
+    var benyttetSivilstandEnum: BorMedTypeEnum? = null
 
     /**
      * Brukerens sivilstand (som definert i TPS).
      */
     var brukersSivilstand: SivilstandTypeCti? = null
+    var brukersSivilstandEnum: SivilstandEnum? = null
 
     /**
      * Angir om beregningen er gjort med mindre enn full grad for ufg,afpPensjonsgrad eller tt_anv..
@@ -305,6 +320,7 @@ class Beregning : Serializable {
      * Angir hvilken type institusjon beregningen angår.
      */
     var instOppholdType: JustertPeriodeCti? = null
+    var instOppholdTypeEnum: JustertPeriodeEnum? = null
 
     /**
      * Angir den siste Uføregraden fra Uføregrunnlaget som ble lagt til grunn for beregningen.

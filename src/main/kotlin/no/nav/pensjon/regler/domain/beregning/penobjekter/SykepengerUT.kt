@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning.penobjekter
 
+import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 
 /**
@@ -7,4 +8,5 @@ import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
  */
 class SykepengerUT : MotregningYtelseskomponent() {
     override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("UT_SP")
+    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_SP
 }

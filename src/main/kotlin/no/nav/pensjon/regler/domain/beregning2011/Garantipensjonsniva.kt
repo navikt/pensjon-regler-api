@@ -1,5 +1,7 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
+import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
+import no.nav.pensjon.regler.domain.enum.GarantiPensjonsnivaSatsEnum
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.GarantipenNivaCti
 import java.io.Serializable
@@ -10,7 +12,9 @@ class Garantipensjonsniva : Serializable {
     var belopIkkeProratisert = 0.0
     var sats = 0.0
     var satsType: GarantipenNivaCti? = null
+    var satsTypeEnum: GarantiPensjonsnivaSatsEnum? = null
     var formelkode: FormelKodeCti? = null
+    var formelkodeEnum: FormelKodeEnum? = null
     var pro_rata_teller_mnd = 0
     var pro_rata_nevner_mnd = 0
     var pro_rata_brok = 0.0

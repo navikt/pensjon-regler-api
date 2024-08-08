@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
+import no.nav.pensjon.regler.domain.enum.YrkeEnum
 import no.nav.pensjon.regler.domain.kode.YrkeCti
 import java.io.Serializable
 import java.util.*
@@ -85,6 +86,7 @@ class Uforegrunnlag : Serializable {
      * for kombinert yrkesaktiv/husmor, kode = 11,12,13 og 18.
      */
     var yrke: YrkeCti? = null
+    var yrkeEnum: YrkeEnum? = null
 
     /**
      * Garantert tilleggspensjon til ung ufør fådt før 1940.
