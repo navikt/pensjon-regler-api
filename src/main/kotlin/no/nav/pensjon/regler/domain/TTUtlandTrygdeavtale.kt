@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain
 
+import no.nav.pensjon.regler.domain.enum.AvtaleLandEnum
 import no.nav.pensjon.regler.domain.kode.AvtalelandCti
 import java.io.Serializable
 
@@ -46,6 +47,7 @@ class TTUtlandTrygdeavtale : Serializable {
      * Avtaleland som trygdetid er opptjent i.
      */
     var avtaleland: AvtalelandCti? = null
+    var avtalelandEnum: AvtaleLandEnum? = null
 
     /**
      * Liste av merknader.

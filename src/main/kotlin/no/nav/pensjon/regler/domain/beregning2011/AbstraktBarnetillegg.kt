@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.beregning.BarnetilleggFellesbarn
 import no.nav.pensjon.regler.domain.beregning.BarnetilleggSerkullsbarn
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
+import no.nav.pensjon.regler.domain.enum.AvkortningsArsakEnum
 import no.nav.pensjon.regler.domain.kode.AvkortingsArsakCti
 import java.io.Serializable
 
@@ -69,6 +70,7 @@ abstract class AbstraktBarnetillegg : Ytelseskomponent, Serializable {
      * årsaken(e) til avkorting. Satt dersom avkortet er true.
      */
     var avkortingsArsakList: MutableList<AvkortingsArsakCti> = mutableListOf()
+    var avkortingsArsakListEnum: MutableList<AvkortningsArsakEnum> = mutableListOf()
 
     constructor()
 
@@ -85,6 +87,9 @@ abstract class AbstraktBarnetillegg : Ytelseskomponent, Serializable {
         forsorgingstilleggNiva = ab.forsorgingstilleggNiva
         for (arsak in ab.avkortingsArsakList) {
             avkortingsArsakList.add(AvkortingsArsakCti(arsak.kode))
+        }
+        for (arsak in ab.avkortingsArsakListEnum) {
+            avkortingsArsakListEnum.add(arsak)
         }
     }
 

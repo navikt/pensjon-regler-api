@@ -1,5 +1,7 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
+import no.nav.pensjon.regler.domain.enum.GrunnlagkildeEnum
+import no.nav.pensjon.regler.domain.enum.InntekttypeEnum
 import no.nav.pensjon.regler.domain.kode.GrunnlagKildeCti
 import no.nav.pensjon.regler.domain.kode.InntektTypeCti
 import java.io.Serializable
@@ -36,6 +38,7 @@ class Inntektsgrunnlag() : Serializable {
      * KAP Kapitalinntekt
      */
     var inntektType: InntektTypeCti? = null
+    var inntektTypeEnum: InntekttypeEnum? = null
 
     /**
      * fra-og-med dato for gyldigheten av inntektsgrunnlaget.
@@ -56,4 +59,6 @@ class Inntektsgrunnlag() : Serializable {
      * Kilden til inntektsgrunnlaget.
      */
     var grunnlagKilde: GrunnlagKildeCti? = null
+    var grunnlagKildeEnum: GrunnlagkildeEnum? = null
+
 }

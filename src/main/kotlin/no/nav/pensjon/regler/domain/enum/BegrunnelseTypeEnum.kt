@@ -1,0 +1,28 @@
+package no.nav.pensjon.regler.domain.enum
+
+enum class BegrunnelseTypeEnum  {
+    VIRKFOM_FOR_2011,
+    UNDER_3_AR_TT,
+    UNDER_62,
+    TOT_UTGRD_OVER_100,
+    LAVT_TIDLIG_UTTAK,
+    FAMPL_OG_AP,
+    OFFAFP_OG_ALDER,
+    UNDER_20_AR_BO,
+    UNDER_3_AR_PP,
+    BRUKER_UNDER_67M,
+    BRUKER_IKKE_HEL_AP,
+    EPS_OVER67M_AP_RETT,
+    EPS_SAMBOER_3_2,
+    EPS_UNDER_60_AFP,
+    EPS_INNT_OVER_1G,
+    EPS_HAR_RETT_TIL_AP,
+    UTG_MINDRE_ETT_AR,
+    FOR_LAV_UTG,
+    UNDER_20_AR_BO_2016,
+    UNDER_20_AR_TT_2025,
+    UNDER_5_AR_TT,
+    BT_INNT_OVER_1G,
+    BT_OVER_18,
+    FT_ETTER_2022;
+}

@@ -1,6 +1,8 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
 import no.nav.pensjon.regler.domain.beregning.Sertillegg
+import no.nav.pensjon.regler.domain.enum.Fravik_19_3_Enum
+import no.nav.pensjon.regler.domain.enum.PoengtilleggEnum
 import no.nav.pensjon.regler.domain.kode.Fravik_19_3Cti
 import no.nav.pensjon.regler.domain.kode.PoengtilleggCti
 import java.io.Serializable
@@ -19,6 +21,7 @@ class GenerellHistorikk : Serializable {
      * Brukes i utenlandssaker der pensjonisten kan få godskrevet trygdetid opptjent i utlandet før 1967.
      */
     var fravik_19_3: Fravik_19_3Cti? = null
+    var fravik_19_3Enum: Fravik_19_3_Enum? = null
 
     /*
      * Gjennomsnittlig Uføregrad - EØS.
@@ -30,6 +33,7 @@ class GenerellHistorikk : Serializable {
      */
     var ventetilleggsgrunnlag: Ventetilleggsgrunnlag? = null
     var poengtillegg: PoengtilleggCti? = null
+    var poengtilleggEnum: PoengtilleggEnum? = null
 
     /*
      * Inneholder informasjon ang tidligere EØS beregninger. Brukes ved konvertering til AP.

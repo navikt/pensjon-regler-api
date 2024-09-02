@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
+import no.nav.pensjon.regler.domain.enum.LandkodeEnum
 import no.nav.pensjon.regler.domain.kode.LandCti
 import java.io.Serializable
 import java.util.*
@@ -19,6 +20,7 @@ class Utenlandsopphold : Serializable {
      * Landet hvor oppholdet har funnet sted
      */
     var land: LandCti? = null
+    var landEnum: LandkodeEnum? = null
 
     /**
      * Hvilken pensjonsordning som skal brukes

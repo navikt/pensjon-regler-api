@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
+import no.nav.pensjon.regler.domain.enum.JustertMinstePensjonsnivaTypeEnum
 import no.nav.pensjon.regler.domain.kode.JusteringsTypeCti
 import java.io.Serializable
 import java.lang.reflect.Constructor
@@ -8,6 +9,8 @@ import java.lang.reflect.InvocationTargetException
 open class JusteringsInformasjon : Serializable {
     var totalJusteringsfaktor = 0.0
     var justeringsTypeCti: JusteringsTypeCti? = null
+    var justeringsTypeEnum: JustertMinstePensjonsnivaTypeEnum? = null
+
     var elementer: MutableList<IJustering> = mutableListOf()
 
     constructor()
@@ -15,6 +18,9 @@ open class JusteringsInformasjon : Serializable {
         totalJusteringsfaktor = ji.totalJusteringsfaktor
         if (ji.justeringsTypeCti != null) {
             justeringsTypeCti = JusteringsTypeCti(ji.justeringsTypeCti!!)
+        }
+        if(ji.justeringsTypeEnum != null) {
+            justeringsTypeEnum = ji.justeringsTypeEnum
         }
         for (ij in ji.elementer) {
             val clazz: Class<out IJustering> = ij.javaClass
@@ -39,10 +45,12 @@ open class JusteringsInformasjon : Serializable {
     constructor(
         totalJusteringsfaktor: Double = 0.0,
         justeringsTypeCti: JusteringsTypeCti? = null,
+        justeringsTypeEnum: JustertMinstePensjonsnivaTypeEnum? = null,
         elementer: MutableList<IJustering> = mutableListOf()
     ) {
         this.totalJusteringsfaktor = totalJusteringsfaktor
         this.justeringsTypeCti = justeringsTypeCti
+        this.justeringsTypeEnum = justeringsTypeEnum
         this.elementer = elementer
     }
 }

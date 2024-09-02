@@ -1,16 +1,15 @@
 package no.nav.pensjon.regler.domain.beregning
 
+import no.nav.pensjon.regler.domain.enum.FppGarantiKodeEnum
+import no.nav.pensjon.regler.domain.enum.ProRataBeregningTypeEnum
+import no.nav.pensjon.regler.domain.enum.UforetypeEnum
 import no.nav.pensjon.regler.domain.kode.FppGarantiKodeCti
 import no.nav.pensjon.regler.domain.kode.ProRataBeregningTypeCti
 import no.nav.pensjon.regler.domain.kode.UforeTypeCti
 import java.io.Serializable
 import java.util.*
 
-class BeregningUforeperiode
-/**
- * Default Constructor
- */
-    : Serializable {
+class BeregningUforeperiode : Serializable {
     /**
      * Uføregraden, heltall 0-100.
      */
@@ -28,6 +27,8 @@ class BeregningUforeperiode
      */
     @JvmField
     var uforeType: UforeTypeCti? = null
+    @JvmField
+    var uforeTypeEnum: UforetypeEnum? = null
 
     /**
      * Framtidige pensjonspoengtall garanti, f.eks ung ufør har i dag en garanti på 3.3.
@@ -45,6 +46,8 @@ class BeregningUforeperiode
      */
     @JvmField
     var fppGarantiKode: FppGarantiKodeCti? = null
+    @JvmField
+    var fppGarantiKodeEnum: FppGarantiKodeEnum? = null
 
     /**
      * Antall godskrevet framtidig poengtall, ikke full framtidig godskriving.
@@ -63,6 +66,8 @@ class BeregningUforeperiode
      */
     @JvmField
     var proRataBeregningType: ProRataBeregningTypeCti? = null
+    @JvmField
+    var proRataBeregningTypeEnum: ProRataBeregningTypeEnum? = null
 
     /**
      * Dato for virkningsåret for denne Uføreperioden.

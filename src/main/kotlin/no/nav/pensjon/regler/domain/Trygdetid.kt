@@ -1,5 +1,8 @@
 package no.nav.pensjon.regler.domain
 
+import no.nav.pensjon.regler.domain.enum.RegelverkTypeEnum
+import no.nav.pensjon.regler.domain.enum.TrygdetidGarantitypeEnum
+import no.nav.pensjon.regler.domain.enum.UtfallEnum
 import no.nav.pensjon.regler.domain.grunnlag.AntallArMndDag
 import no.nav.pensjon.regler.domain.kode.RegelverkTypeCti
 import no.nav.pensjon.regler.domain.kode.TrygdetidGarantiTypeCti
@@ -24,6 +27,7 @@ class Trygdetid : Serializable {
      * N_REG_N_OPPTJ - nytt regelverk, ny opptjeningsmodell
      */
     var regelverkType: RegelverkTypeCti? = null
+    var regelverkTypeEnum: RegelverkTypeEnum? = null
 
     /**
      * Samlet trygdetid i antall år. Vanligvis lik tt_anv i Beregning. Unntaket
@@ -118,6 +122,7 @@ class Trygdetid : Serializable {
      */
     var merknadListe: List<Merknad> = mutableListOf()
     var garantiType: TrygdetidGarantiTypeCti? = null
+    var garantiTypeEnum: TrygdetidGarantitypeEnum? = null
 
     /**
      * Felt som blir brukt ved proratisering av pensjonsnivå ved
@@ -142,4 +147,5 @@ class Trygdetid : Serializable {
      */
     var virkTom: Date? = null
     var anvendtFlyktning: UtfallTypeCti? = null
+    var anvendtFlyktningEnum: UtfallEnum? = null
 }

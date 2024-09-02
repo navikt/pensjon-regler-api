@@ -1,5 +1,8 @@
 package no.nav.pensjon.regler.domain.beregning
 
+import no.nav.pensjon.regler.domain.enum.FppGarantiKodeEnum
+import no.nav.pensjon.regler.domain.enum.InntektKode1Enum
+import no.nav.pensjon.regler.domain.enum.InntektKode2Enum
 import no.nav.pensjon.regler.domain.grunnlag.EosEkstra
 import no.nav.pensjon.regler.domain.kode.FppGarantiKodeCti
 import no.nav.pensjon.regler.domain.kode.InntektKode1Cti
@@ -25,6 +28,7 @@ class UforeEkstra : Serializable {
      * YRKODE_18_HJEMMV
      */
     var inntektkode1: InntektKode1Cti = InntektKode1Cti("INT_NIV_UF")
+    var inntektkode1Enum: InntektKode1Enum = InntektKode1Enum.INT_NIV_UF
 
     /**
      * Beskriver om inntektstaket (tak) inneholder et fribeløp eller ikke.
@@ -37,6 +41,7 @@ class UforeEkstra : Serializable {
      * INT_M_FRI_GML_REGL
      */
     var inntektkode2: InntektKode2Cti = InntektKode2Cti("INT_IKKE_BER")
+    var inntektkode2Enum: InntektKode2Enum = InntektKode2Enum.INT_IKKE_BER
 
     /**
      * Inntektstak ved uførepensjon.Angir den Høyeste pensjonsgivende inntekt uførepensjonisten
@@ -69,6 +74,7 @@ class UforeEkstra : Serializable {
      * `UNG_UF_FOR_67 = unge uføre før 1967`
      */
     var fppGarantiKode: FppGarantiKodeCti? = null
+    var fppGarantiKodeEnum: FppGarantiKodeEnum? = null
 
     /**
      * Antall godskrevet framtidig poengtall, ikke full framtidig godskriving.

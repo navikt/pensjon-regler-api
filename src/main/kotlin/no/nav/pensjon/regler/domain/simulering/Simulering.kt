@@ -1,5 +1,7 @@
 package no.nav.pensjon.regler.domain.simulering
 
+import no.nav.pensjon.regler.domain.enum.AFPtypeEnum
+import no.nav.pensjon.regler.domain.enum.SimuleringTypeEnum
 import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.kode.AfpOrdningTypeCti
 import no.nav.pensjon.regler.domain.kode.SimuleringTypeCti
@@ -16,11 +18,13 @@ class Simulering : Serializable {
      * Type simulering
      */
     var simuleringType: SimuleringTypeCti? = null
+    var simuleringTypeEnum: SimuleringTypeEnum? = null
 
     /**
      * Type AFP ordning
      */
     var afpOrdning: AfpOrdningTypeCti? = null
+    var afpOrdningEnum: AFPtypeEnum? = null
 
     /**
      * Dato for når bruker ønsker å simulere uttak av pensjon fra.

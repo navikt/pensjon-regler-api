@@ -1,6 +1,8 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
 import no.nav.pensjon.regler.domain.beregning2011.JustertGarantipensjonsniva
+import no.nav.pensjon.regler.domain.enum.BeholdningtypeEnum
+import no.nav.pensjon.regler.domain.enum.GarantiPensjonsnivaSatsEnum
 import no.nav.pensjon.regler.domain.kode.BeholdningsTypeCti
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.GarantipenNivaCti
@@ -14,6 +16,7 @@ class Garantipensjonsbeholdning() : Beholdning() {
      * Satstype brukt i garantipensjonsnivå.
      */
     var satsType: GarantipenNivaCti? = null
+    var satsTypeEnum: GarantiPensjonsnivaSatsEnum? = null
 
     /**
      * Garantipensjonsnivå sats
@@ -31,4 +34,5 @@ class Garantipensjonsbeholdning() : Beholdning() {
     var garPN_justert = 0.0
 
     override var beholdningsType: BeholdningsTypeCti = BeholdningsTypeCti("GAR_PEN_B")
+    override var beholdningsTypeEnum: BeholdningtypeEnum = BeholdningtypeEnum.GAR_PEN_B
 }

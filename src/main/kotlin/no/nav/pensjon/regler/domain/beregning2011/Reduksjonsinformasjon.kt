@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
+import no.nav.pensjon.regler.domain.enum.BarnetilleggregelverktypeEnum
 import no.nav.pensjon.regler.domain.kode.BarnetilleggRegelverkCti
 import java.io.Serializable
 
@@ -14,6 +15,7 @@ class Reduksjonsinformasjon : Serializable {
      * Beskriver hvilket regelverk som er benyttet i beregning av regelverk, se kodeverk K_BT_REGELVERK
      */
     var barnetilleggRegelverkType: BarnetilleggRegelverkCti? = null
+    var barnetilleggRegelverkTypeEnum: BarnetilleggregelverktypeEnum? = null
 
     /**
      * Barnetillegg fellesbarn brutto per år

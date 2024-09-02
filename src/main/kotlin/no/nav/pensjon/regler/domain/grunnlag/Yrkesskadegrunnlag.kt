@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
+import no.nav.pensjon.regler.domain.enum.YrkeYrkesskadeEnum
 import no.nav.pensjon.regler.domain.kode.YrkeYrkesskadeCti
 import java.io.Serializable
 import java.util.*
@@ -33,6 +34,7 @@ class Yrkesskadegrunnlag : Serializable {
      * osv.
      */
     var yrke: YrkeYrkesskadeCti? = null
+    var yrkeEnum: YrkeYrkesskadeEnum? = null
 
     /**
      * Bruker forsørget av avdød iht paragraf 17-12.2

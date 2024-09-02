@@ -2,6 +2,7 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.enum.GjenlevendetilleggAPkap20Enum
+import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import no.nav.pensjon.regler.domain.util.formula.Formel
 import no.nav.pensjon.regler.domain.util.formula.IFormelProvider
@@ -46,4 +47,5 @@ class GjenlevendetilleggAP : Ytelseskomponent(), IFormelProvider {
     override var formelMap: HashMap<String, Formel> = HashMap()
 
     override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("AP_GJT")
+    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.AP_GJT
 }

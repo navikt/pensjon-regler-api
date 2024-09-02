@@ -3,6 +3,9 @@ package no.nav.pensjon.regler.domain.beregning2011
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.Merknad
+import no.nav.pensjon.regler.domain.enum.Beregningsarsak
+import no.nav.pensjon.regler.domain.enum.BorMedTypeEnum
+import no.nav.pensjon.regler.domain.enum.SivilstandEnum
 import no.nav.pensjon.regler.domain.kode.BeregningArsakCti
 import no.nav.pensjon.regler.domain.kode.BorMedTypeCti
 import no.nav.pensjon.regler.domain.kode.SivilstandTypeCti
@@ -32,8 +35,11 @@ abstract class AbstraktBeregningsResultat protected constructor() : Serializable
      * Snittet av uttaksgradene i perioden fra (virk bakover i tid til 1 mai) og til (virk fremover i tid til 1 mai).
      */
     var brukersSivilstand: SivilstandTypeCti? = null
+    var brukersSivilstandEnum: SivilstandEnum? = null
     var benyttetSivilstand: BorMedTypeCti? = null
+    var benyttetSivilstandEnum: BorMedTypeEnum? = null
     var beregningArsak: BeregningArsakCti? = null
+    var beregningArsakEnum: Beregningsarsak? = null
     var lonnsvekstInformasjon: LonnsvekstInformasjon? = null
     var merknadListe: List<Merknad> = mutableListOf()
     var gjennomsnittligUttaksgradSisteAr = 0.0

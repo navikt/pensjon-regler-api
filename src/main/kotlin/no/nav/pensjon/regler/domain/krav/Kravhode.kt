@@ -1,5 +1,9 @@
 package no.nav.pensjon.regler.domain.krav
 
+import no.nav.pensjon.regler.domain.enum.AFPtypeEnum
+import no.nav.pensjon.regler.domain.enum.KravVelgtypeEnum
+import no.nav.pensjon.regler.domain.enum.RegelverkTypeEnum
+import no.nav.pensjon.regler.domain.enum.SakTypeEnum
 import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.grunnlag.Uttaksgrad
 import no.nav.pensjon.regler.domain.kode.AfpOrdningTypeCti
@@ -29,6 +33,7 @@ open class Kravhode : Serializable {
      * Angir type AFPordning.
      */
     var afpOrdning: AfpOrdningTypeCti? = null
+    var afpOrdningEnum: AFPtypeEnum? = null
 
     /**
      * Angir om søker skal ha afptillegg.
@@ -45,6 +50,7 @@ open class Kravhode : Serializable {
      * Angir detaljering i kravet,brukes i barnepensjon.
      */
     var kravVelgType: KravVelgTypeCti? = null
+    var kravVelgTypeEnum: KravVelgtypeEnum? = null
 
     /**
      * Angir om personen som kravet gjelder har bodd eller arbeidet utenlands:
@@ -71,11 +77,13 @@ open class Kravhode : Serializable {
             sorterUttaksgradListe()
         }
     var regelverkTypeCti: RegelverkTypeCti? = null
+    var regelverkTypeEnum: RegelverkTypeEnum? = null
 
     /**
      * Angir siste sakstype før overgang til AP.
      */
     var sisteSakstypeForAP: SakTypeCti? = null
+    var sisteSakstypeForAPEnum: SakTypeEnum? = null
 
     /*
 	* Felt for å tre p_satsGP fra SisteAldersberegning2011.basispensjon.gp.p_satsGP  inn til BestemPsatsGPRS

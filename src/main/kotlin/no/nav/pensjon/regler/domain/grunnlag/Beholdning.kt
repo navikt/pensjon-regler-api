@@ -7,6 +7,8 @@ import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.Opptjening
 import no.nav.pensjon.regler.domain.beregning2011.LonnsvekstInformasjon
 import no.nav.pensjon.regler.domain.beregning2011.ReguleringsInformasjon
+import no.nav.pensjon.regler.domain.enum.BeholdningtypeEnum
+import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
 import no.nav.pensjon.regler.domain.kode.BeholdningsTypeCti
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import java.io.Serializable
@@ -25,6 +27,8 @@ abstract class Beholdning protected constructor() : Serializable {
     var lonnsvekstInformasjon: LonnsvekstInformasjon? = null
     var reguleringsInformasjon: ReguleringsInformasjon? = null
     var formelkode: FormelKodeCti? = null
+    var formelKodeEnum: FormelKodeEnum? = null
     abstract var beholdningsType: BeholdningsTypeCti
+    abstract var beholdningsTypeEnum: BeholdningtypeEnum
     var merknadListe: List<Merknad> = mutableListOf()
 }

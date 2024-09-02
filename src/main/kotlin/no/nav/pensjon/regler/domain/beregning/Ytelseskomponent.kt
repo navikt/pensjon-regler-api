@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.beregning.penobjekter.*
 import no.nav.pensjon.regler.domain.beregning2011.*
+import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
+import no.nav.pensjon.regler.domain.enum.SakTypeEnum
+import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.SakTypeCti
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
@@ -89,6 +92,7 @@ abstract class Ytelseskomponent : Serializable {
      * Type ytelse, verdi fra kodeverk.
      */
     abstract var ytelsekomponentType: YtelsekomponentTypeCti
+    abstract var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum
 
     /**
      * Liste av merknader.
@@ -99,6 +103,7 @@ abstract class Ytelseskomponent : Serializable {
      * Indikerer hvilken beregningsformel som ble brukt.
      */
     var formelKode: FormelKodeCti? = null
+    var formelKodeEnum: FormelKodeEnum? = null
 
     /**
      * Informasjon om regulering av ytelsen.
@@ -122,6 +127,7 @@ abstract class Ytelseskomponent : Serializable {
      * Settes ikke i pensjon-regler, men mappes slik at vi ikke mister den ved kall til regeltjenester som returnerer kopier av innsendt ytelseskomponent (f.eks. faktoromregning).
      */
     var sakType: SakTypeCti? = null
+    var sakTypeEnum: SakTypeEnum? = null
 
     constructor()
     constructor(ytelseskomponent: Ytelseskomponent) {
@@ -131,10 +137,14 @@ abstract class Ytelseskomponent : Serializable {
         bruttoPerAr = ytelseskomponent.bruttoPerAr
         nettoPerAr = ytelseskomponent.nettoPerAr
         fradragPerAr = ytelseskomponent.fradragPerAr
-        ytelsekomponentType = YtelsekomponentTypeCti(ytelseskomponent.ytelsekomponentType)
+        ytelsekomponentType = YtelsekomponentTypeCti(ytelseskomponent.ytelsekomponentType!!)
+        ytelsekomponentTypeEnum = ytelseskomponent.ytelsekomponentTypeEnum
 
         if (ytelseskomponent.formelKode != null) {
             formelKode = FormelKodeCti(ytelseskomponent.formelKode!!)
+        }
+        if (ytelseskomponent.formelKodeEnum != null) {
+            formelKodeEnum = ytelseskomponent.formelKodeEnum
         }
         for (merknad in ytelseskomponent.merknadListe) {
             merknadListe.add(Merknad(merknad))
@@ -146,6 +156,9 @@ abstract class Ytelseskomponent : Serializable {
         opphort = ytelseskomponent.opphort
         if (ytelseskomponent.sakType != null) {
             sakType = SakTypeCti(ytelseskomponent.sakType!!)
+        }
+        if (ytelseskomponent.sakTypeEnum != null) {
+            sakTypeEnum = ytelseskomponent.sakTypeEnum
         }
     }
 }

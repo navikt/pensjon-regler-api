@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
+import no.nav.pensjon.regler.domain.enum.BarnetilleggVilkarTypeEnum
 import no.nav.pensjon.regler.domain.kode.BarnetilleggVilkarTypeCti
 import java.io.Serializable
 
@@ -8,5 +9,6 @@ import java.io.Serializable
  */
 class BarnetilleggVilkar : Serializable {
     var btVilkarType: BarnetilleggVilkarTypeCti? = null
+    var btVilkarTypeEnum: BarnetilleggVilkarTypeEnum? = null
     var vurdertTil = false
 }

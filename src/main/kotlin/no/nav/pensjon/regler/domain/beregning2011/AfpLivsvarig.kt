@@ -3,6 +3,8 @@ package no.nav.pensjon.regler.domain.beregning2011
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
+import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
+import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import no.nav.pensjon.regler.domain.vedtak.VilkarsprovInformasjon2011
@@ -18,10 +20,12 @@ open class AfpLivsvarig : Ytelseskomponent {
     var afpProsentgrad = 0.0
     var afpForholdstall = 0.0
 
-    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("AFP_LIVSVARIG")
+    override lateinit var ytelsekomponentType: YtelsekomponentTypeCti
+    override lateinit var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum
 
     constructor() {
         formelKode = FormelKodeCti("AFPx")
+        formelKodeEnum = FormelKodeEnum.AFPx
     }
 
     constructor(o: AfpLivsvarig) : super(o) {
