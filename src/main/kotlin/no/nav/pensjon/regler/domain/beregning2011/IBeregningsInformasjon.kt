@@ -16,6 +16,7 @@ import no.nav.pensjon.regler.domain.kode.ResultatTypeCti
     JsonSubTypes.Type(value = BeregningsInformasjon::class)
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
+@Deprecated("Ubrukt")
 interface IBeregningsInformasjon {
     var penPerson: PenPerson?
     var beregningsMetode: BeregningMetodeTypeCti?
