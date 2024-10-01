@@ -4,5 +4,6 @@ enum class BeslutningsstotteTypeEnum {
     KONVERTER_IFU,
     FASTSETT_UFG,
     BEREGN_IFU,
+    BEREGN_UFG,
     BEREGN_FORINT
 }

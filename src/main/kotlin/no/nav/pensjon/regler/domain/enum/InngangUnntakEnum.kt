@@ -21,5 +21,6 @@ enum class InngangUnntakEnum {
     HALV_MINPEN_BARNEP,
     HALV_MINPEN_GJENLEV,
     HALV_MINPEN_ALDER,
+    DOD26_UFOREP,
     HALV_MINPEN_UFP_UT;
 }
