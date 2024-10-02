@@ -2,6 +2,7 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
+import no.nav.pensjon.regler.domain.enum.MinstePensjonsnivaSatsEnum
 import no.nav.pensjon.regler.domain.enum.MinstepensjonstypeEnum
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.MinstepenNivaCti
@@ -19,7 +20,7 @@ class MinstePensjonsniva : Serializable {
 
     /** Minstepensjonsnivå. Kan være lav, ordinær og forhøyet. Benytter tabellen  */
     var satsType: MinstepenNivaCti? = null
-    var satsTypeEnum: MinstepensjonstypeEnum? = null
+    var satsTypeEnum: MinstePensjonsnivaSatsEnum? = null
     var merknadListe: MutableList<Merknad> = mutableListOf()
     var faktisk_tt_avtaleland_mnd = 0
 

@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
-import no.nav.pensjon.regler.domain.enum.JustertMinstePensjonsnivaTypeEnum
+import no.nav.pensjon.regler.domain.enum.JusteringsTypeEnum
 import no.nav.pensjon.regler.domain.kode.JusteringsTypeCti
 import java.io.Serializable
 import java.lang.reflect.Constructor
@@ -9,7 +9,7 @@ import java.lang.reflect.InvocationTargetException
 open class JusteringsInformasjon : Serializable {
     var totalJusteringsfaktor = 0.0
     var justeringsTypeCti: JusteringsTypeCti? = null
-    var justeringsTypeEnum: JustertMinstePensjonsnivaTypeEnum? = null
+    var justeringsTypeEnum: JusteringsTypeEnum? = null
 
     var elementer: MutableList<IJustering> = mutableListOf()
 
@@ -45,7 +45,7 @@ open class JusteringsInformasjon : Serializable {
     constructor(
         totalJusteringsfaktor: Double = 0.0,
         justeringsTypeCti: JusteringsTypeCti? = null,
-        justeringsTypeEnum: JustertMinstePensjonsnivaTypeEnum? = null,
+        justeringsTypeEnum: JusteringsTypeEnum? = null,
         elementer: MutableList<IJustering> = mutableListOf()
     ) {
         this.totalJusteringsfaktor = totalJusteringsfaktor

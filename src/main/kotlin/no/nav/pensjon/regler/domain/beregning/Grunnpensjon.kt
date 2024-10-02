@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.beregning2011.BasisGrunnpensjon
 import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
+import no.nav.pensjon.regler.domain.enum.GPSatsTypeEnum
 import no.nav.pensjon.regler.domain.enum.GarantiPensjonsnivaSatsEnum
 import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
@@ -28,7 +29,7 @@ open class Grunnpensjon : Ytelseskomponent {
      * Ordinår, forhøyet
      */
     var satsType: GPSatsTypeCti? = null
-    var satsTypeEnum: GarantiPensjonsnivaSatsEnum? = null
+    var satsTypeEnum: GPSatsTypeEnum? = null
 
     var ektefelleInntektOver2G = false
 

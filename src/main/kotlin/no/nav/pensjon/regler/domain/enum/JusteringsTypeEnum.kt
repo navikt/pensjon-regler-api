@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.enum
 
-enum class JustertMinstePensjonsnivaTypeEnum {
+enum class JusteringsTypeEnum {
     FREMSKREVET,
     REGULERT;
 }
