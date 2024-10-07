@@ -32,5 +32,11 @@ enum class InntekttypeEnum {
     RAP_ARB,
     RAP_NAR,
     RAP_AND,
-    UT_BT;
+    UT_BT,
+
+    P_BI_x_KAP,
+    P_BI_x_LIGN,
+    P_BI_x_LTR,
+    P_PE_x_PGILT,
+    P_PE_x_SILT,
 }

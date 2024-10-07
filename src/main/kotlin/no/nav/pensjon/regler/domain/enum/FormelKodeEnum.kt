@@ -124,6 +124,18 @@ enum class FormelKodeEnum  {
     UTSKO8,
     MyEksportforbud,
     AP_GJT1,
-    AP_GJT2;
+    AP_GJT2,
+
+    /**
+     * Nye fra PEN.
+     */
+    LivsvD3,
+    LivsvD4,
+    MPNUttakFullTT,
+    GAPx,
+    GAR_PEN_Bx,
+    GAR_T_Bx,
+    GATx,
+    PEN_Bx
 
 }
