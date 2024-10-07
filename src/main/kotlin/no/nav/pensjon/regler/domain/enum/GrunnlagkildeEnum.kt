@@ -23,5 +23,13 @@ enum class GrunnlagkildeEnum {
     OVRIG,
     INNT_KONV,
     IK,
-    PROSESS;
+    PROSESS,
+
+    /**
+     * Fra PEN
+     */
+    MPNOMR,
+    REGULERING,
+    BA,
+    OMSORGSOPPTJENING
 }

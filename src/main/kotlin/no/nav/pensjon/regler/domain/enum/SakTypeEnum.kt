@@ -10,5 +10,7 @@ enum class SakTypeEnum {
     UFOREP,
     GENRL,
     GRBL,
-    GAM_YRK
+    GAM_YRK,
+    AFP,
+    AFP_PRIVAT;
 }

@@ -1,6 +1,5 @@
 package no.nav.pensjon.regler.domain.enum
 
-// TODO Denne er ny, tatt fra Pesys. Vurder å ta inn i pensjon-regler
 enum class SimuleringTypeEnum {
     /**
      * AFP
