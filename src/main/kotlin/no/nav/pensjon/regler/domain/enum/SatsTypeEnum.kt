@@ -15,5 +15,11 @@ enum class SatsTypeEnum {
     RETTSGEBYR,
     TOL_GR_EO_ETTERBET,
     TOL_GR_EO_TILBAKEKR,
-    TERSKEL_FEILUTBET;
+    TERSKEL_FEILUTBET,
+
+    /**
+     * Fra PEN
+     */
+    REGULERINGSFAKTOR,
+    SKJERMINGSGRAD;
 }

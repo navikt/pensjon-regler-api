@@ -6,12 +6,9 @@ enum class SivilstandEnum {
     GJPA,
     NULL,
     REPA,
-    SAMB,
     SEPA,
     SEPR,
     SKIL,
     SKPA,
-    UGIF,
-    PENW,
-    PENV;
+    UGIF;
 }

@@ -13,7 +13,7 @@ class Sivilstand : Serializable {
      * Kode som angir hvilken type sivilstand personen har.
      */
     var sivilstandType: SivilstandTypeCti? = null
-    var brukersSivilstandEnum: SivilstandEnum? = null
+    var sivilstandTypeEnum: SivilstandEnum? = null
 
     /**
      * Sivilstandens gyldighet fra-og-med dato.
