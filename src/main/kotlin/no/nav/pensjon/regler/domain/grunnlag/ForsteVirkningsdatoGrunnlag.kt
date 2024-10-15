@@ -2,7 +2,6 @@ package no.nav.pensjon.regler.domain.grunnlag
 
 import no.nav.pensjon.regler.domain.PenPerson
 import no.nav.pensjon.regler.domain.enum.KravlinjeTypeEnum
-import no.nav.pensjon.regler.domain.enum.YtelsetypeEnum
 import no.nav.pensjon.regler.domain.kode.KravlinjeTypeCti
 import java.io.Serializable
 import java.util.*
