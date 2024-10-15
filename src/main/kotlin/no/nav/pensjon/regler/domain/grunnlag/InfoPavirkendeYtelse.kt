@@ -1,6 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
-import no.nav.pensjon.regler.domain.enum.YtelsetypeEnum
+import no.nav.pensjon.regler.domain.enum.YtelseTpOrdTypeEnum
 import no.nav.pensjon.regler.domain.kode.YtelseTypeCti
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.io.Serializable
@@ -21,7 +21,7 @@ class InfoPavirkendeYtelse : Serializable {
      * ikke blir beregnet av PESYS skal denne fylles ut.
      */
     var tjenestepensjonsordningEps: YtelseTypeCti? = null
-    var tjenestepensjonsordningEpsEnum: YtelsetypeEnum? = null
+    var tjenestepensjonsordningEpsEnum: YtelseTpOrdTypeEnum? = null
 
     /**
      * Satt til true dersom EPS mottar omstillingsstonad (utbetalt beløp > 0).

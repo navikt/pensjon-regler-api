@@ -21,19 +21,32 @@ open class Kravlinje : Serializable {
      */
     var relatertPerson: PenPerson? = null
 
+    /**
+     * Angir om det er hovedKravlinje
+     * Erstatter hovedKravlinje på KravlinjeTypeCti
+     */
+    var hovedKravlinje: Boolean = false
+
     constructor()
-    constructor(kravlinjeType: KravlinjeTypeCti?, relatertPerson: PenPerson?) {
+    constructor(
+        kravlinjeType: KravlinjeTypeCti?,
+        relatertPerson: PenPerson?,
+        hovedKravlinje: Boolean = false
+    ) {
         this.kravlinjeType = kravlinjeType
         this.relatertPerson = relatertPerson
+        this.hovedKravlinje = hovedKravlinje
     }
     constructor(
         kravlinjeType: KravlinjeTypeCti?,
         kravlinjeTypeEnum: KravlinjeTypeEnum,
-        relatertPerson: PenPerson?
+        relatertPerson: PenPerson?,
+        hovedKravlinje: Boolean = false
     ) {
         this.kravlinjeType = kravlinjeType
         this.relatertPerson = relatertPerson
         this.kravlinjeTypeEnum = kravlinjeTypeEnum
+        this.hovedKravlinje = hovedKravlinje
     }
 
 }
