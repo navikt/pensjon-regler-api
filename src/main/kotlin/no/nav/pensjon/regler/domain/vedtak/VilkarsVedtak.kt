@@ -7,8 +7,6 @@ import no.nav.pensjon.regler.domain.beregning2011.BeregningsvilkarPeriode
 import no.nav.pensjon.regler.domain.enum.BegrunnelseTypeEnum
 import no.nav.pensjon.regler.domain.enum.VedtakResultatEnum
 import no.nav.pensjon.regler.domain.enum.VilkarVurderingEnum
-import no.nav.pensjon.regler.domain.enum.YtelsetypeEnum
-import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.kode.BegrunnelseTypeCti
 import no.nav.pensjon.regler.domain.kode.KravlinjeTypeCti
 import no.nav.pensjon.regler.domain.kode.VilkarVurderingCti
