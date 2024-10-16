@@ -254,5 +254,37 @@ enum class LandkodeEnum  {
     P_SIKKIM,
     P_YEMEN,
     P_PANAMAKANALSONEN,
-    SGS;
+    SGS,
+
+    /**
+     * Fra PEN
+     */
+    /**
+     * P_SPANSKE_OMR_AFRIKA
+     */
+    P_349, // ("349")
+    /**
+     * P_SIKKIM
+     */
+    P_546, // ("546")
+    /**
+     * P_YEMEN
+     */
+    P_556, // ("556")
+    /**
+     * P_PANAMAKANALSONEN
+     */
+    P_669, // ("669")
+    P_UnkUnkUnk, // ("???")
+    ALA,
+    ATA,
+    BES,
+    BLM,
+    BVT,
+    CUW,
+    HMD,
+    IMN,
+    JEY,
+    MAF,
+    SXM;
 }
