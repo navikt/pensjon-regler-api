@@ -7,9 +7,6 @@ import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
 import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
-import no.nav.pensjon.regler.domain.vedtak.VilkarsprovInformasjon2011
-import no.nav.pensjon.regler.domain.vedtak.VilkarsprovInformasjon2016
-import no.nav.pensjon.regler.domain.vedtak.VilkarsprovInformasjon2025
 
 @JsonSubTypes(
     JsonSubTypes.Type(value = FremskrevetAfpLivsvarig::class)
@@ -20,8 +17,8 @@ open class AfpLivsvarig : Ytelseskomponent {
     var afpProsentgrad = 0.0
     var afpForholdstall = 0.0
 
-    override lateinit var ytelsekomponentType: YtelsekomponentTypeCti
-    override lateinit var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum
+    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("AFP_LIVSVARIG")
+    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.AFP_LIVSVARIG
 
     constructor() {
         formelKode = FormelKodeCti("AFPx")
