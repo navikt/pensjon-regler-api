@@ -36,5 +36,6 @@ enum class ResultattypeEnum {
     KONV_ALDER,
     KONV_AFP,
     AP2016,
-    AP2025;
+    AP2025,
+    KONV_KRIG;
 }
