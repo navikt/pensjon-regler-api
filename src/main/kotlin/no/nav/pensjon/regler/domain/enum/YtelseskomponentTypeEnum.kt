@@ -22,6 +22,7 @@ enum class YtelseskomponentTypeEnum {
     MENDEL,
     DIFF_BER,
     SEG,
+    AFP_LIVSVARIG,
     AFP_PRIVAT_LIVSVARIG,
     AFP_OFFENTLIG_LIVSVARIG,
     AFP_KRONETILLEGG,
