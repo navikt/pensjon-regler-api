@@ -246,7 +246,7 @@ class Persongrunnlag() : Serializable {
 
     /**
      * Årstall for avtjent verneplikt. Maks 4 år godkjennes. Er null dersom det
-     * ikke finnes vernepliktsær. må være i stigende rekkefålge, eks:<br></br>
+     * ikke finnes vernepliktsår. må være i stigende rekkefølge, eks:<br></br>
      * `[0] = 2001`<br></br>
      * `[1] = 2002`<br></br>
      * `[2] = 2004`
