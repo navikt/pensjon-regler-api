@@ -27,6 +27,7 @@ enum class BegrunnelseTypeEnum  {
     FT_ETTER_2022,
 
     // FIXME Nye som tidligere har kun vært i Pesys. Trenger vi disse?
+    FT_FRA_2025,
     ANNEN_HAR_ET,
     ANNULERING,
     BRUKER_AVSLAG_AP,
