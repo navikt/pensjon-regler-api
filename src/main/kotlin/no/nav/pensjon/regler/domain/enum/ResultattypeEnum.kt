@@ -10,6 +10,7 @@ enum class ResultattypeEnum {
     UT,
     UT_GJT,
     GJR,
+    KP,
 
     AP_GJP,
     AP_GJP_UP,
