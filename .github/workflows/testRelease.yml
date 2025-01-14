@@ -1,76 +1,31 @@
-name: Manual Release (Github Package Registry)
+name: Fetch Latest Release Notes
 
 on: workflow_dispatch
 
 jobs:
-  release:
+  fetch_release_notes:
     permissions:
-      actions: read
-      checks: read
-      contents: write
-      deployments: write
-      packages: write
-      pull-requests: write
+      contents: read
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
-      # Get the latest release tag
-      - name: Get latest release tag
-        id: get_latest_release
+      - name: Get latest release notes
+        id: fetch_release_notes
         run: |
-          LATEST_TAG=$(curl -s \
+          RELEASE_NOTES=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/releases/latest" \
-            | jq -r .tag_name)
-          echo "Latest tag: $LATEST_TAG"
-          echo "::set-output name=latest_tag::$LATEST_TAG"
+            | jq -r .body)
+          echo "::set-output name=release_notes::$RELEASE_NOTES"
 
-      # Get commits since last release
-      - name: Get commits since last release
-        id: fetch_commits
+      - name: Output release notes
         run: |
-          COMMITS=$(curl -s \
-            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/compare/${{ steps.get_latest_release.outputs.latest_tag }}...HEAD" \
-            | jq -r '.commits[].commit.message' | sed 's/^/* /')
-          echo "::set-output name=commits::$COMMITS"
+          echo "Latest Release Notes:"
+          echo "${{ steps.fetch_release_notes.outputs.release_notes }}"
 
-      # Generate release notes from commits
-      - name: Generate Release Notes
-        id: generate_release_notes
+      - name: Notify Slack about latest release
         run: |
-          COMMITS="${{ steps.fetch_commits.outputs.commits }}"
-
-          # Categories
-          NEW_FEATURES=$(echo "$COMMITS" | grep -i 'enhancement\|feature' | sed 's/^/* /')
-          BUG_FIXES=$(echo "$COMMITS" | grep -i 'bug\|fix' | sed 's/^/* /')
-          MAINTENANCE=$(echo "$COMMITS" | grep -i 'documentation\|refactor\|chore\|cleanup' | sed 's/^/* /')
-          OTHER_CHANGES=$(echo "$COMMITS" | grep -v -i 'enhancement\|feature\|bug\|fix\|documentation\|refactor\|chore\|cleanup' | sed 's/^/* /')
-
-          # Combine into final release notes with Markdown line breaks
-          RELEASE_NOTES="## 🚀 New Features\n$NEW_FEATURES\n\n## 🐛 Bug Fixes\n$BUG_FIXES\n\n## 🧹 Maintenance\n$MAINTENANCE\n\n## 🔄 Uncategorized Changes\n$OTHER_CHANGES"
-          
-          # Replace \n with Markdown line breaks for GitHub formatting
-          RELEASE_NOTES_MD=$(echo "$RELEASE_NOTES" | sed 's/\n/  \n/g')
-
-          echo "::set-output name=release_notes::$RELEASE_NOTES_MD"
-
-      # Create Release with Release Notes
-      - name: Create Release with Release Notes
-        uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ steps.generate_release_notes.outputs.release_notes }}
-          release_name: "Release ${{ steps.generate_release_notes.outputs.release_notes }}"
-          body: ${{ steps.generate_release_notes.outputs.release_notes }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # Notify Slack about new release
-      - name: Notify Slack about new release
-        run: |
-          SLACK_MESSAGE="*New Release: ${{ steps.generate_release_notes.outputs.release_notes }}*\n\nChanges:\n${{ steps.fetch_commits.outputs.commits }}"
+          SLACK_MESSAGE="*Latest Release Notes:*\n${{ steps.fetch_release_notes.outputs.release_notes }}"
           curl -X POST -H 'Content-type: application/json' \
             --data '{"text": "'"$SLACK_MESSAGE"'"}' \
             ${{ secrets.SLACK_WEBHOOK_URL }}
