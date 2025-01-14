@@ -22,5 +22,6 @@ enum class KravlinjeTypeEnum {
     TB,
     UP,
     UT,
-    UT_ET;
+    UT_ET,
+    KLAGE;
 }
