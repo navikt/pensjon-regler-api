@@ -16,9 +16,9 @@ jobs:
           RELEASE=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/releases/latest")
-          
+
           # Extract release notes and tag name
-          RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body')
+          RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body' | sed ':a;N;$!ba;s/\n/\\n/g')
           TAG_NAME=$(echo "$RELEASE" | jq -r '.tag_name')
 
           # Output the release notes and tag name as GitHub environment variables
@@ -32,10 +32,13 @@ jobs:
 
       - name: Notify Slack about latest release
         run: |
-          # Prepare Slack message with real line breaks
-          SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n\n${{ env.RELEASE_NOTES }}"
+          # Replace '\n' with actual newlines
+          SLACK_MESSAGE=$(echo "${{ env.RELEASE_NOTES }}" | sed 's/\\n/\n/g')
 
-          # Escape any special characters for JSON format
+          # Format the SLACK_MESSAGE with the tag name
+          SLACK_MESSAGE=$(echo "*New release: ${{ env.TAG_NAME }}*\n${SLACK_MESSAGE}" | sed 's/\\n/\n/g')
+
+          # Escape any special characters and pass it properly to Slack
           PAYLOAD=$(jq -n --arg text "$SLACK_MESSAGE" '{"text": $text}')
 
           # Send the message to Slack via webhook
