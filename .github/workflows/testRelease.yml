@@ -18,8 +18,8 @@ jobs:
           RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body')
           TAG_NAME=$(echo "$RELEASE" | jq -r '.tag_name')
 
-          # Escape the release notes to properly handle newlines
-          ESCAPED_RELEASE_NOTES=$(echo "$RELEASE_NOTES" | sed 's/\n/\\n/g')
+          # Escape newlines for proper formatting in the environment variable
+          ESCAPED_RELEASE_NOTES=$(echo "$RELEASE_NOTES" | sed 's/\n/\\n/g' | sed 's/"/\\"/g')  # Escape both newline and quotes
 
           # Save the release notes and tag name as environment variables
           echo "RELEASE_NOTES=$ESCAPED_RELEASE_NOTES" >> $GITHUB_ENV
@@ -34,7 +34,7 @@ jobs:
         run: |
           # Prepare Slack message
           SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n${{ env.RELEASE_NOTES }}"
-          
+
           # Send the message to Slack
           curl -X POST -H 'Content-type: application/json' \
             --data '{"text": "'"${SLACK_MESSAGE}"'"}' \
