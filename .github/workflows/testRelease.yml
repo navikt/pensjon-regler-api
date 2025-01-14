@@ -7,7 +7,7 @@ jobs:
     permissions:
       actions: read
       checks: read
-      contents: write  # Change this to write
+      contents: write
       deployments: write
       packages: write
       pull-requests: write
@@ -15,15 +15,43 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1  # Fetch only the latest commit
+
+      # Fetch the previous release tag
+      - name: Fetch previous release tag
+        id: previous_release
+        run: |
+          latest_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
+          echo "Latest tag: $latest_tag"
+          echo "::set-output name=latest_tag::$latest_tag"
+
+      # Fetch the history between the latest tag and the current commit
+      - name: Fetch history between latest tag and current commit
+        run: |
+          git fetch --depth=100 origin ${{ steps.previous_release.outputs.latest_tag }}..HEAD
+
+      # Determine the new version based on the previous release
+      - name: Determine new version
+        id: new_version
+        run: |
+          latest_tag=${{ steps.previous_release.outputs.latest_tag }}
+          if [ -z "$latest_tag" ]; then
+            new_version="v1.0.0"
+          else
+            new_version=$(echo $latest_tag | awk -F. -v OFS=. '{$NF += 1 ; print}')
+          fi
+          echo "New version: $new_version"
+          echo "::set-output name=version::$new_version"
 
       # Create Release and Generate Release Notes
       - name: Create Release with Release Notes
-        uses: actions/create-release@v1.1.4  # Updated to a more recent version
+        uses: actions/create-release@v1.1.4
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This token is provided by Actions, you do not need to create your own token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.ref_name }}  # Tag name from workflow dispatch
-          release_name: Release ${{ github.ref_name }}
+          tag_name: ${{ steps.new_version.outputs.version }}
+          release_name: Release ${{ steps.new_version.outputs.version }}
           generate_release_notes: true
 
       # Get the latest release notes from GitHub API
@@ -33,13 +61,13 @@ jobs:
           RELEASE_NOTES=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/releases/latest" \
-            | jq -r .body)  # Extracting the release notes content
-          echo "::set-output name=release_notes::$RELEASE_NOTES"  # Output for next step
+            | jq -r .body)
+          echo "::set-output name=release_notes::$RELEASE_NOTES"
 
       # Notify Slack with the latest release notes
       - name: Notify Slack about new release
         run: |
-          SLACK_MESSAGE="*New Release: ${GITHUB_REF#refs/tags/}*\n\n${{ steps.fetch_release_notes.outputs.release_notes }}"
+          SLACK_MESSAGE="*New Release: ${{ steps.new_version.outputs.version }}*\n\n${{ steps.fetch_release_notes.outputs.release_notes }}"
           curl -X POST -H 'Content-type: application/json' \
             --data '{"text": "'"$SLACK_MESSAGE"'"}' \
-            ${{ secrets.SLACK_WEBHOOK_URL }}  # Use the Slack webhook secret
+            ${{ secrets.SLACK_WEBHOOK_URL }}
