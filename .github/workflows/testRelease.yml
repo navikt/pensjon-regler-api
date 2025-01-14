@@ -7,7 +7,7 @@ jobs:
     permissions:
       actions: read
       checks: read
-      contents: read
+      contents: write
       deployments: write
       packages: write
       pull-requests: write
