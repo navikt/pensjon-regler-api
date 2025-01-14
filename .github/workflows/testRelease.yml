@@ -32,8 +32,11 @@ jobs:
 
       - name: Notify Slack about latest release
         run: |
-          # Format the SLACK_MESSAGE properly
-          SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n${{ env.RELEASE_NOTES }}"
+          # Replace '\n' with actual newlines
+          SLACK_MESSAGE=$(echo "${{ env.RELEASE_NOTES }}" | sed 's/\\n/\n/g')
+
+          # Format the SLACK_MESSAGE with the tag name
+          SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n${SLACK_MESSAGE}"
 
           # Escape any special characters and pass it properly to Slack
           PAYLOAD=$(jq -n --arg text "$SLACK_MESSAGE" '{"text": $text}')
