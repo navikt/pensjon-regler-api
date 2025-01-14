@@ -54,16 +54,20 @@ jobs:
         id: generate_release_notes
         run: |
           COMMITS="${{ steps.fetch_commits.outputs.commits }}"
-          
+
           # Categories
           NEW_FEATURES=$(echo "$COMMITS" | grep -i 'enhancement\|feature' | sed 's/^/* /')
           BUG_FIXES=$(echo "$COMMITS" | grep -i 'bug\|fix' | sed 's/^/* /')
           MAINTENANCE=$(echo "$COMMITS" | grep -i 'documentation\|refactor\|chore\|cleanup' | sed 's/^/* /')
           OTHER_CHANGES=$(echo "$COMMITS" | grep -v -i 'enhancement\|feature\|bug\|fix\|documentation\|refactor\|chore\|cleanup' | sed 's/^/* /')
 
-          # Combine into final release notes
+          # Combine into final release notes with Markdown line breaks
           RELEASE_NOTES="## 🚀 New Features\n$NEW_FEATURES\n\n## 🐛 Bug Fixes\n$BUG_FIXES\n\n## 🧹 Maintenance\n$MAINTENANCE\n\n## 🔄 Uncategorized Changes\n$OTHER_CHANGES"
-          echo "::set-output name=release_notes::$RELEASE_NOTES"
+
+          # Replace \n with Markdown line breaks for GitHub formatting
+          RELEASE_NOTES_MD=$(echo "$RELEASE_NOTES" | sed 's/\n/  \n/g')
+
+          echo "::set-output name=release_notes::$RELEASE_NOTES_MD"
 
       # Create Release with Dynamic Release Notes
       - name: Create Release with Dynamic Release Notes
