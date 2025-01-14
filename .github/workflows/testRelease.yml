@@ -1,4 +1,4 @@
-name: Fetch All Release Notes
+name: Fetch Latest Release Notes
 
 on: workflow_dispatch
 
@@ -9,23 +9,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get all release notes
+      - name: Get latest release notes
         id: fetch_release_notes
         run: |
-          RELEASES=$(curl -s \
+          RELEASE=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/releases")
-          RELEASE_NOTES=$(echo "$RELEASES" | jq -r '.[].body')
-          TAG_NAME=$(echo "$RELEASES" | jq -r '.[0].tag_name')
+            "https://api.github.com/repos/${{ github.repository }}/releases/latest")
+          RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body')
+          TAG_NAME=$(echo "$RELEASE" | jq -r '.tag_name')
           printf "RELEASE_NOTES<<EOF\n%s\nEOF\n" "$RELEASE_NOTES" >> $GITHUB_ENV
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
 
       - name: Output release notes
         run: |
-          echo "All Release Notes:"
+          echo "Latest Release Notes:"
           echo "${{ env.RELEASE_NOTES }}"
 
-      - name: Notify Slack about all releases
+      - name: Notify Slack about latest release
         run: |
           SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n${{ env.RELEASE_NOTES }}"
           curl -X POST -H 'Content-type: application/json' \
