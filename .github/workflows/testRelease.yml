@@ -18,8 +18,8 @@ jobs:
           RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body' | sed ':a;N;$!ba;s/\n/\\n/g')
           TAG_NAME=$(echo "$RELEASE" | jq -r '.tag_name')
 
-          # Escape newlines for proper formatting in the environment variable
-          printf "RELEASE_NOTES<<EOF\n%s\nEOF\n" "$RELEASE_NOTES" >> $GITHUB_ENV
+          # Output the release notes and tag name as GitHub environment variables
+          echo "RELEASE_NOTES=$RELEASE_NOTES" >> $GITHUB_ENV
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
 
       - name: Output release notes
@@ -29,10 +29,8 @@ jobs:
 
       - name: Notify Slack about latest release
         run: |
-          # Prepare Slack message
           SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n${{ env.RELEASE_NOTES }}"
 
-          # Send the message to Slack
           curl -X POST -H 'Content-type: application/json' \
-            --data '{"text": "'"${SLACK_MESSAGE}"'"}' \
+            --data '{"text": "'"$SLACK_MESSAGE"'"}' \
             ${{ secrets.SLACK_WEBHOOK_URL }}
