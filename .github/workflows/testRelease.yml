@@ -1,4 +1,4 @@
-name: Manual Release (Github Package Registry)
+name: Manual Release test
 
 on: workflow_dispatch
 
@@ -7,7 +7,7 @@ jobs:
     permissions:
       actions: read
       checks: read
-      contents: read
+      contents: write  # Change this to write
       deployments: write
       packages: write
       pull-requests: write
@@ -18,9 +18,9 @@ jobs:
 
       # Create Release and Generate Release Notes
       - name: Create Release with Release Notes
-        uses: actions/create-release@v1
+        uses: actions/create-release@v1.1.4  # Updated to a more recent version
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This token is provided by Actions, you do not need to create your own token
         with:
           tag_name: ${{ github.ref_name }}  # Tag name from workflow dispatch
           release_name: Release ${{ github.ref_name }}
