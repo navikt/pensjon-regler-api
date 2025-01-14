@@ -22,6 +22,7 @@ jobs:
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/releases/latest" \
             | jq -r .tag_name)
+          echo "Latest tag: $LATEST_TAG"
           echo "::set-output name=latest_tag::$LATEST_TAG"
 
       # Generate new version tag
@@ -45,8 +46,8 @@ jobs:
         run: |
           COMMITS=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/compare/${{ steps.get_latest_release.outputs.latest_tag }}...${{ steps.generate_new_tag.outputs.new_tag }}" \
-            | jq -r '.commits[].commit.message')
+            "https://api.github.com/repos/${{ github.repository }}/compare/${{ steps.get_latest_release.outputs.latest_tag }}...HEAD" \
+            | jq -r '.commits[].commit.message' | sed 's/^/* /')
           echo "::set-output name=commits::$COMMITS"
 
       # Process commits and generate categorized release notes
