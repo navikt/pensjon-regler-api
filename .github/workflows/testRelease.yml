@@ -15,9 +15,9 @@ jobs:
           RELEASES=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/releases")
-          RELEASE_NOTES=$(echo "$RELEASES" | jq -r '.[].body' | sed 's/^/* /')
+          RELEASE_NOTES=$(echo "$RELEASES" | jq -r '.[].body')
           TAG_NAME=$(echo "$RELEASES" | jq -r '.[0].tag_name')
-          echo "RELEASE_NOTES=$RELEASE_NOTES" >> $GITHUB_ENV
+          printf "RELEASE_NOTES<<EOF\n%s\nEOF\n" "$RELEASE_NOTES" >> $GITHUB_ENV
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
 
       - name: Output release notes
