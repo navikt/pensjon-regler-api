@@ -12,13 +12,43 @@ jobs:
       packages: write
       pull-requests: write
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up JDK 1.8
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+
       - name: Run Maven release
         run: ./releaseGithub.sh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Create Release and Generate Release Notes
+      - name: Create Release with Release Notes
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ github.ref_name }}  # Tag name from workflow dispatch
+          release_name: Release ${{ github.ref_name }}
+          generate_release_notes: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Get the latest release notes from GitHub API
+      - name: Fetch latest release notes
+        id: fetch_release_notes
+        run: |
+          RELEASE_NOTES=$(curl -s \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/releases/latest" \
+            | jq -r .body)  # Extracting the release notes content
+          echo "::set-output name=release_notes::$RELEASE_NOTES"  # Output for next step
+
+      # Notify Slack with the latest release notes
+      - name: Notify Slack about new release
+        run: |
+          SLACK_MESSAGE="*New Release: ${GITHUB_REF#refs/tags/}*\n\n${{ steps.fetch_release_notes.outputs.release_notes }}"
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text": "'"$SLACK_MESSAGE"'"}' \
+            ${{ secrets.SLACK_WEBHOOK_URL }}
