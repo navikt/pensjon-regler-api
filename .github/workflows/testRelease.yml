@@ -16,16 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # Create Release and Generate Release Notes
-      - name: Create Release with Release Notes
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ github.ref_name }}  # Tag name from workflow dispatch
-          release_name: Release ${{ github.ref_name }}
-          generate_release_notes: false  # We will generate custom release notes
-
       # Get the latest release tag
       - name: Get latest release tag
         id: get_latest_release
@@ -34,7 +24,35 @@ jobs:
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/releases/latest" \
             | jq -r .tag_name)
-          echo "::set-output name=latest_tag::$LATEST_TAG"  # Save the latest tag for use
+          echo "Latest tag: $LATEST_TAG"
+          echo "::set-output name=latest_tag::$LATEST_TAG"
+
+      # Generate the next version tag
+      - name: Generate new tag version
+        id: generate_new_tag
+        run: |
+          LATEST_TAG=${{ steps.get_latest_release.outputs.latest_tag }}
+          if [[ $LATEST_TAG =~ ^v([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]; then
+            MAJOR=${BASH_REMATCH[1]}
+            MINOR=${BASH_REMATCH[2]}
+            PATCH=${BASH_REMATCH[3]}
+            NEW_TAG="v$MAJOR.$MINOR.$((PATCH + 1))"
+          else
+            echo "Invalid version format: $LATEST_TAG. Defaulting to v1.0.0"
+            NEW_TAG="v1.0.0"
+          fi
+          echo "New tag: $NEW_TAG"
+          echo "::set-output name=new_tag::$NEW_TAG"
+
+      # Create Release with Release Notes
+      - name: Create Release with Release Notes
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # This token is provided by Actions
+        with:
+          tag_name: ${{ steps.generate_new_tag.outputs.new_tag }}
+          release_name: Release ${{ steps.generate_new_tag.outputs.new_tag }}
+          generate_release_notes: false  # Custom release notes will be generated
 
       # Get commits since the latest release tag
       - name: Get commits since last release
@@ -42,14 +60,14 @@ jobs:
         run: |
           COMMITS=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/compare/${{ steps.get_latest_release.outputs.latest_tag }}...${{ github.ref_name }}" \
-            | jq -r '.commits[].commit.message' | sed 's/^/* /')  # List commit messages
-          echo "::set-output name=commits::$COMMITS"  # Output commits
+            "https://api.github.com/repos/${{ github.repository }}/compare/${{ steps.get_latest_release.outputs.latest_tag }}...HEAD" \
+            | jq -r '.commits[].commit.message' | sed 's/^/* /')
+          echo "::set-output name=commits::$COMMITS"
 
       # Format and send the Slack message with release notes
       - name: Notify Slack about new release
         run: |
-          SLACK_MESSAGE="*New Release: ${GITHUB_REF#refs/tags/}*\n\nChanges:\n${{ steps.fetch_commits.outputs.commits }}"
+          SLACK_MESSAGE="*New Release: ${{ steps.generate_new_tag.outputs.new_tag }}*\n\nChanges:\n${{ steps.fetch_commits.outputs.commits }}"
           curl -X POST -H 'Content-type: application/json' \
             --data '{"text": "'"$SLACK_MESSAGE"'"}' \
-            ${{ secrets.SLACK_WEBHOOK_URL }}  # Use the Slack webhook secret
+            ${{ secrets.SLACK_WEBHOOK_URL }}
