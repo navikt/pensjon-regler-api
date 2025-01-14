@@ -29,11 +29,12 @@ jobs:
       # Create Release and Generate Release Notes
       - name: Create Release with Release Notes
         uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
           tag_name: ${{ github.ref_name }}  # Tag name from workflow dispatch
           release_name: Release ${{ github.ref_name }}
           generate_release_notes: true
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       # Get the latest release notes from GitHub API
       - name: Fetch latest release notes
@@ -51,4 +52,4 @@ jobs:
           SLACK_MESSAGE="*New Release: ${GITHUB_REF#refs/tags/}*\n\n${{ steps.fetch_release_notes.outputs.release_notes }}"
           curl -X POST -H 'Content-type: application/json' \
             --data '{"text": "'"$SLACK_MESSAGE"'"}' \
-            ${{ secrets.SLACK_WEBHOOK_URL }}
+            ${{ secrets.SLACK_WEBHOOK_URL }}  # Use the Slack webhook secret
