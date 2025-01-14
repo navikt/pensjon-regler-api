@@ -15,7 +15,7 @@ jobs:
           RELEASE=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/releases/latest")
-          RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body')
+          RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body' | sed ':a;N;$!ba;s/\n/\\n/g')
           TAG_NAME=$(echo "$RELEASE" | jq -r '.tag_name')
 
           # Escape newlines for proper formatting in the environment variable
