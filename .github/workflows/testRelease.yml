@@ -12,9 +12,12 @@ jobs:
       - name: Get latest release notes
         id: fetch_release_notes
         run: |
+          # Fetch the latest release information
           RELEASE=$(curl -s \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
             "https://api.github.com/repos/${{ github.repository }}/releases/latest")
+          
+          # Extract release notes and tag name
           RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body' | sed ':a;N;$!ba;s/\n/\\n/g')
           TAG_NAME=$(echo "$RELEASE" | jq -r '.tag_name')
 
@@ -29,8 +32,13 @@ jobs:
 
       - name: Notify Slack about latest release
         run: |
+          # Format the SLACK_MESSAGE properly
           SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n${{ env.RELEASE_NOTES }}"
 
+          # Escape any special characters and pass it properly to Slack
+          PAYLOAD=$(jq -n --arg text "$SLACK_MESSAGE" '{"text": $text}')
+
+          # Send the message to Slack via webhook
           curl -X POST -H 'Content-type: application/json' \
-            --data '{"text": "'"$SLACK_MESSAGE"'"}' \
+            --data "$PAYLOAD" \
             ${{ secrets.SLACK_WEBHOOK_URL }}
