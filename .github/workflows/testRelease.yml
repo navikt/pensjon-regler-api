@@ -18,11 +18,12 @@ jobs:
             "https://api.github.com/repos/${{ github.repository }}/releases/latest")
 
           # Extract release notes and tag name
-          RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body' | sed ':a;N;$!ba;s/\n/\\n/g')
+          RELEASE_NOTES=$(echo "$RELEASE" | jq -r '.body')
           TAG_NAME=$(echo "$RELEASE" | jq -r '.tag_name')
 
-          # Output the release notes and tag name as GitHub environment variables
-          echo "RELEASE_NOTES=$RELEASE_NOTES" >> $GITHUB_ENV
+          # Escape newlines and special characters for GitHub environment
+          SAFE_RELEASE_NOTES=$(echo "$RELEASE_NOTES" | sed ':a;N;$!ba;s/\n/\\n/g' | jq -R .)
+          echo "RELEASE_NOTES=$SAFE_RELEASE_NOTES" >> $GITHUB_ENV
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
 
       - name: Format Slack release notes
@@ -32,20 +33,19 @@ jobs:
           FORMATTED_NOTES=$(echo "${{ env.RELEASE_NOTES }}" \
             | sed 's/\\n/\n/g' \
             | sed 's/^* /• /g' \
-            | sed 's/^  * /  - /g' \
-            | jq -sRr @json)  # Escape the formatted notes for GitHub Actions and Slack
-
+            | sed 's/^  * /  - /g')
           echo "FORMATTED_NOTES=$FORMATTED_NOTES" >> $GITHUB_ENV
 
       - name: Notify Slack about latest release
         run: |
-          # Prepare Slack message with properly formatted release notes
-          SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n$(echo "${{ env.FORMATTED_NOTES }}" | jq -r)"
+          # Prepare Slack message
+          SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n${{ env.FORMATTED_NOTES }}"
 
-          # Escape any special characters and pass it properly to Slack
-          PAYLOAD=$(jq -n --arg text "$SLACK_MESSAGE" '{"text": $text}')
+          # Escape the entire Slack message for JSON payload
+          ESCAPED_MESSAGE=$(echo "$SLACK_MESSAGE" | jq -R .)
 
-          # Send the message to Slack via webhook
+          # Send the message to Slack
+          PAYLOAD=$(jq -n --arg text "$ESCAPED_MESSAGE" '{"text": $text}')
           curl -X POST -H 'Content-type: application/json' \
             --data "$PAYLOAD" \
             ${{ secrets.SLACK_WEBHOOK_URL }}
