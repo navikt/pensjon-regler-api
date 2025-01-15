@@ -29,12 +29,18 @@ jobs:
       - name: Format Slack release notes
         id: format_release_notes
         run: |
-          # Format release notes for Slack
-          FORMATTED_NOTES=$(echo "${{ env.RELEASE_NOTES }}" \
-            | sed 's/\\n/\n/g' \
-            | sed 's/^* /• /g' \
-            | sed 's/^  * /  - /g')
-          echo "FORMATTED_NOTES=$FORMATTED_NOTES" >> $GITHUB_ENV
+          # Replace escaped newlines with actual newlines
+          RELEASE_NOTES=$(echo "${{ env.RELEASE_NOTES }}" | sed 's/\\n/\n/g' | sed 's/\\r//g')
+
+          # Format the release notes for Slack
+          FORMATTED_NOTES=$(echo "$RELEASE_NOTES" \
+            | sed 's/^\* /• /g' \
+            | sed 's/^  \* /  - /g')
+
+          # Escape for safe GitHub environment variable usage
+          echo "FORMATTED_NOTES<<EOF" >> $GITHUB_ENV
+          echo "$FORMATTED_NOTES" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
 
       - name: Notify Slack about latest release
         run: |
