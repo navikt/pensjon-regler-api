@@ -25,18 +25,17 @@ jobs:
           echo "RELEASE_NOTES=$RELEASE_NOTES" >> $GITHUB_ENV
           echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
 
-      - name: Output release notes
+      - name: Format Slack release notes
+        id: format_release_notes
         run: |
-          echo "Latest Release Notes:"
-          echo "${{ env.RELEASE_NOTES }}"
+          # Format release notes for Slack
+          FORMATTED_NOTES=$(echo "${{ env.RELEASE_NOTES }}" | sed 's/\\n/\n/g' | sed 's/^* /• /g' | sed 's/^  * /  - /g')
+          echo "FORMATTED_NOTES=$FORMATTED_NOTES" >> $GITHUB_ENV
 
       - name: Notify Slack about latest release
         run: |
-          # Replace '\n' with actual newlines
-          SLACK_MESSAGE=$(echo "${{ env.RELEASE_NOTES }}" | sed 's/\\n/\n/g')
-
-          # Format the SLACK_MESSAGE with the tag name
-          SLACK_MESSAGE=$(echo "*New release: ${{ env.TAG_NAME }}*\n${SLACK_MESSAGE}" | sed 's/\\n/\n/g')
+          # Prepare Slack message with properly formatted release notes
+          SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n${{ env.FORMATTED_NOTES }}"
 
           # Escape any special characters and pass it properly to Slack
           PAYLOAD=$(jq -n --arg text "$SLACK_MESSAGE" '{"text": $text}')
