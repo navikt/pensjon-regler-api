@@ -29,13 +29,18 @@ jobs:
         id: format_release_notes
         run: |
           # Format release notes for Slack
-          FORMATTED_NOTES=$(echo "${{ env.RELEASE_NOTES }}" | sed 's/\\n/\n/g' | sed 's/^* /• /g' | sed 's/^  * /  - /g')
+          FORMATTED_NOTES=$(echo "${{ env.RELEASE_NOTES }}" \
+            | sed 's/\\n/\n/g' \
+            | sed 's/^* /• /g' \
+            | sed 's/^  * /  - /g' \
+            | jq -sRr @json)  # Escape the formatted notes for GitHub Actions and Slack
+
           echo "FORMATTED_NOTES=$FORMATTED_NOTES" >> $GITHUB_ENV
 
       - name: Notify Slack about latest release
         run: |
           # Prepare Slack message with properly formatted release notes
-          SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n${{ env.FORMATTED_NOTES }}"
+          SLACK_MESSAGE="*New release: ${{ env.TAG_NAME }}*\n$(echo "${{ env.FORMATTED_NOTES }}" | jq -r)"
 
           # Escape any special characters and pass it properly to Slack
           PAYLOAD=$(jq -n --arg text "$SLACK_MESSAGE" '{"text": $text}')
