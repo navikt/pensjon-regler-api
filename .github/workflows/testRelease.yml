@@ -36,7 +36,7 @@ jobs:
           RELEASE_NOTES=$(echo "${{ env.RELEASE_NOTES }}" | sed 's/\\n/\n/g')
 
           # Format the Slack message with the tag name and hyperlink
-          SLACK_MESSAGE="Ny versjon av pensjon-regler-api: <https://github.com/${{ github.repository }}/releases/tag/${{ env.TAG_NAME }}|${{ env.TAG_NAME }}>\n${RELEASE_NOTES}"
+          SLACK_MESSAGE=$(echo "*Ny versjon av pensjon-regler-api: <https://github.com/${{ github.repository }}/releases/tag/${{ env.TAG_NAME }}|${{ env.TAG_NAME }}>*\n${RELEASE_NOTES}" | sed 's/\\n/\n/g')
 
           # Escape the Slack message for JSON
           PAYLOAD=$(jq -n --arg text "$SLACK_MESSAGE" '{"text": $text}')
@@ -45,4 +45,5 @@ jobs:
           curl -X POST -H 'Content-type: application/json' \
             --data "$PAYLOAD" \
             ${{ secrets.SLACK_WEBHOOK_URL }}
+
 
