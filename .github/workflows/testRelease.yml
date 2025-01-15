@@ -32,8 +32,8 @@ jobs:
 
       - name: Notify Slack about latest release
         run: |
-          # Replace '\n' with actual newlines in the release notes
-          RELEASE_NOTES=$(echo "${{ env.RELEASE_NOTES }}" | sed 's/\\n/\n/g')
+          # Replace '\n' with actual newlines in the release notes and remove '#'
+          RELEASE_NOTES=$(echo "${{ env.RELEASE_NOTES }}" | sed 's/\\n/\n/g' | sed 's/#//g')
 
           # Escape the Slack message for JSON
           PAYLOAD=$(jq -n --arg pretext "Ny versjon av pensjon-regler-api: <https://github.com/${{ github.repository }}/releases/tag/${{ env.TAG_NAME }}|${{ env.TAG_NAME }}> :tada:" --arg color "good" --arg title "Release Notes" --arg value "$RELEASE_NOTES" '{"attachments": [{"pretext": $pretext, "color": $color, "fields": [{"title": $title, "value": $value, "short": false}]}]}')
