@@ -32,16 +32,17 @@ jobs:
 
       - name: Notify Slack about latest release
         run: |
-          # Replace '\n' with actual newlines
-          SLACK_MESSAGE=$(echo "${{ env.RELEASE_NOTES }}" | sed 's/\\n/\n/g')
+          # Replace '\n' with actual newlines in the release notes
+          RELEASE_NOTES=$(echo "${{ env.RELEASE_NOTES }}" | sed 's/\\n/\n/g')
 
-          # Format the SLACK_MESSAGE with the tag name
-          SLACK_MESSAGE=$(echo "*Ny versjon av pensjon-regler-api: <${env.TAG_NAME}|https://github.com/navikt/pensjon-regler-api/releases/tag/${{ env.TAG_NAME }}>*\n${SLACK_MESSAGE}" | sed 's/\\n/\n/g')
+          # Format the Slack message with the tag name and hyperlink
+          SLACK_MESSAGE="Ny versjon av pensjon-regler-api: <https://github.com/${{ github.repository }}/releases/tag/${{ env.TAG_NAME }}|${{ env.TAG_NAME }}>\n${RELEASE_NOTES}"
 
-          # Escape any special characters and pass it properly to Slack
+          # Escape the Slack message for JSON
           PAYLOAD=$(jq -n --arg text "$SLACK_MESSAGE" '{"text": $text}')
 
           # Send the message to Slack via webhook
           curl -X POST -H 'Content-type: application/json' \
             --data "$PAYLOAD" \
             ${{ secrets.SLACK_WEBHOOK_URL }}
+
