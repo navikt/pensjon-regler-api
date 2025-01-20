@@ -53,7 +53,7 @@ jobs:
           RELEASE_NOTES=$(echo "${{ env.RELEASE_NOTES }}"  | sed 's/\\n/\n/g' | sed 's/#//g')
 
           # Format the Slack message with the tag name and hyperlink
-          SLACK_MESSAGE=$(echo "*Ny versjon av pensjon-regler-api: <https://github.com/${{ github.repository }}/releases/tag/${{ env.TAG_NAME }}|${{ env.TAG_NAME }}>*\n${RELEASE_NOTES}" | sed 's/\\n/\n/g')
+          SLACK_MESSAGE=$(echo "*Ny versjon av pensjon-regler-api: <https://github.com/${{ github.repository }}/releases/tag/${{ env.TAG_NAME }}|${{ env.TAG_NAME }}>*\n\n${RELEASE_NOTES}" | sed 's/\\n/\n/g')
 
           # Escape the Slack message for JSON
           PAYLOAD=$(jq -n --arg text "$SLACK_MESSAGE" '{"text": $text}')
