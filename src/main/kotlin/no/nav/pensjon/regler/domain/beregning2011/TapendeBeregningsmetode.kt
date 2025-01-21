@@ -7,5 +7,4 @@ import java.io.Serializable
 class TapendeBeregningsmetode : Serializable {
     var beregningMetodeTypeCti: BeregningMetodeTypeCti? = null
     var beregningMetodeTypeEnum: BeregningsmetodeEnum? = null
-    var tapendeBeregningsmetodeId: Long = 0
 }
