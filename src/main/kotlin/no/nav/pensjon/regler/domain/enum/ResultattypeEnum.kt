@@ -12,6 +12,7 @@ enum class ResultattypeEnum {
     GJR,
     KP,
     GAM_YRK,
+    KONV_GJENL,
 
     AP_GJP,
     AP_GJP_UP,
