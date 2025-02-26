@@ -317,4 +317,12 @@ class Persongrunnlag() : Serializable {
      */
     @JsonIgnore
     var forsteVirk: Date? = null
+
+    /**
+     * Representerer grunnlaget for normert pensjonsalder
+     *
+     * Dette feltet inneholder normert, øvre og nedre pensjonsalder (i år og måneder)
+     * som benyttes i saksbehandlingen.
+     */
+    var normertPensjonsalderGrunnlag: NormertPensjonsalderGrunnlag? = null
 }

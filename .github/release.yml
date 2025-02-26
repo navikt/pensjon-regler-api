@@ -17,10 +17,5 @@ changelog:
         - chore
         - cleanup
 
-    - title: "🛠️ Other Changes"
-      labels:
-        - other
-        - misc
-
     - title: "🔄 Uncategorized Changes"
-      labels: [] # catch all
+      labels: [] # catch all for any changes without labels

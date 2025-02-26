@@ -136,6 +136,7 @@ enum class FormelKodeEnum  {
     GAR_PEN_Bx,
     GAR_T_Bx,
     GATx,
-    PEN_Bx
+    PEN_Bx,
+    IPx;
 
 }
