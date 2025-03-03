@@ -54,5 +54,6 @@ enum class EksportlandEnum {
     SWE,
     TUR,
     THA,
-    USA;
+    USA,
+    UKR;
 }
