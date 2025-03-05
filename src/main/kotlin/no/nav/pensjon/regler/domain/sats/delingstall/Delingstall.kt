@@ -2,7 +2,7 @@ package no.nav.pensjon.regler.domain.sats.delingstall
 
 import java.io.Serializable
 
-class Delingstall : Serializable {
-    var alder: Alder? = null
-    var delingstall = 0.0
-}
+data class Delingstall (
+    val alder: Alder,
+    val delingstall : Double
+): Serializable
