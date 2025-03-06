@@ -134,6 +134,7 @@ class Trygdetid : Serializable {
     /**
      * Felt som blir brukt for å holde orden på nøyaktig antall år, måneder og dager trygdetid
      * for å unngå avrundingsfeil på grunn av dobbel avrunding.
+     * Benyttes i sammenheng med halv minstepensjon/minsteytelse.
      */
     var tt_fa: AntallArMndDag? = null
 

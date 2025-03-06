@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain
 
+import no.nav.pensjon.regler.domain.grunnlag.AntallArMndDag
 import java.io.Serializable
 
 /**
@@ -58,6 +59,14 @@ class TTUtlandEOS : Serializable {
      * Trygdetiden settes lik antall år som blir tastet inn i feltet.
      */
     var tt_konvensjon_ar = 0
+
+    /**
+     * PL-7390: Støtte trygdeavtaler ifbm halvminsteytelse uføretrygd
+     * Felt som blir brukt for å holde orden på nøyaktig antall år, måneder og dager trygdetid
+     * for å unngå avrundingsfeil på grunn av dobbel avrunding.
+     * Benyttes i sammenheng med halv minstepensjon/minsteytelse.
+     */
+    var tt_fa: AntallArMndDag = AntallArMndDag()
 
     /**
      * Liste av merknader.
