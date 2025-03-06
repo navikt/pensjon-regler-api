@@ -32,4 +32,14 @@ class ForutgaendeMedlemskap : AbstraktVilkar() {
      * Oppfylt etter gamle regler og virkningsdato før 01.01.1990
      */
     var oppfyltEtterGamleRegler: Boolean? = null
+
+    /**
+     * §12-2 Unntak halv minsteytelse i folketrygdberegningen
+     */
+    var unntakHalvminsteytelseFolketrygd: Boolean = false
+
+    /**
+     * §12-2 Unntak halv minsteytelse i trygdeavtaleberegningen
+     */
+    var unntakHalvminsteytelseUtland: Boolean = false
 }
