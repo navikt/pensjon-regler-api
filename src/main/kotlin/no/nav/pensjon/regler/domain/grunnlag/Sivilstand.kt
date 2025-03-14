@@ -3,8 +3,6 @@ package no.nav.pensjon.regler.domain.grunnlag
 import no.nav.pensjon.regler.domain.PenPerson
 import no.nav.pensjon.regler.domain.enum.GrunnlagkildeEnum
 import no.nav.pensjon.regler.domain.enum.SivilstandEnum
-import no.nav.pensjon.regler.domain.kode.GrunnlagKildeCti
-import no.nav.pensjon.regler.domain.kode.SivilstandTypeCti
 import java.io.Serializable
 import java.util.*
 
@@ -12,7 +10,6 @@ class Sivilstand : Serializable {
     /**
      * Kode som angir hvilken type sivilstand personen har.
      */
-    var sivilstandType: SivilstandTypeCti? = null
     var sivilstandTypeEnum: SivilstandEnum? = null
 
     /**
@@ -33,7 +30,6 @@ class Sivilstand : Serializable {
     /**
      * Angir sivilstandens kilde.
      */
-    var kilde: GrunnlagKildeCti? = null
     var kildeEnum: GrunnlagkildeEnum? = null
 
 }

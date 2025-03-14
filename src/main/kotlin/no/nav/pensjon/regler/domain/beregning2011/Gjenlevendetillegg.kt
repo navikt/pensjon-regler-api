@@ -2,7 +2,6 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
-import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import no.nav.pensjon.regler.domain.util.formula.Formel
 import no.nav.pensjon.regler.domain.util.formula.IFormelProvider
 
@@ -80,7 +79,6 @@ class Gjenlevendetillegg() : Ytelseskomponent(), UforetrygdYtelseskomponent, IFo
      */
     override val formelMap: HashMap<String, Formel> = hashMapOf()
 
-    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("UT_GJT")
     override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_GJT
 
 }

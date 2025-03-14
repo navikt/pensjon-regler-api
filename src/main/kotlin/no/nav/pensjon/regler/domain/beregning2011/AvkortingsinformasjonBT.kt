@@ -1,7 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.enum.AvviksjusteringEnum
-import no.nav.pensjon.regler.domain.kode.AvviksjusteringCti
 import java.io.Serializable
 
 /**
@@ -46,7 +45,6 @@ class AvkortingsinformasjonBT : AbstraktAvkortingsinformasjon(), Serializable {
     /**
      * Angir en konklusjon for behovsprøvingen. Innenfor eller utenfor rammene for justering. Kodeverk K_AVVIKSJUSTERING_T
      */
-    var avviksjusteringType: AvviksjusteringCti? = null
     var avviksjusteringTypeEnum: AvviksjusteringEnum? = null
 
     /**

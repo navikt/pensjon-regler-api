@@ -3,8 +3,6 @@ package no.nav.pensjon.regler.domain.afpoppgjor
 import no.nav.pensjon.regler.domain.BatchStatus
 import no.nav.pensjon.regler.domain.enum.AFPoppgjKategoriEnum
 import no.nav.pensjon.regler.domain.enum.AfpEtteroppgjorBehandlingskodeEnum
-import no.nav.pensjon.regler.domain.kode.AFPetteroppgjorBehandlingskodeCti
-import no.nav.pensjon.regler.domain.kode.AFPetteroppgjorGruppeCti
 import java.io.Serializable
 
 class AfpEtteroppgjorKategori : Serializable {
@@ -49,13 +47,11 @@ class AfpEtteroppgjorKategori : Serializable {
      * Personen har AFP_STAT og fylte 65 år forrige år.
      * Settes til ANDRE ellers.
      */
-    var behandlingskode: AFPetteroppgjorBehandlingskodeCti? = null
     var behandlingskodeEnum: AfpEtteroppgjorBehandlingskodeEnum? = null
 
     /**
      * Gruppen dette oppgjøret er kategorisert som; Gruppe 1 - 4
      */
-    var gruppe: AFPetteroppgjorGruppeCti? = null
     var gruppeEnum: AFPoppgjKategoriEnum? = null
 
     /**

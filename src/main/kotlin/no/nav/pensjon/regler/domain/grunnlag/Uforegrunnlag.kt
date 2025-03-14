@@ -1,7 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
 import no.nav.pensjon.regler.domain.enum.YrkeEnum
-import no.nav.pensjon.regler.domain.kode.YrkeCti
 import java.io.Serializable
 import java.util.*
 
@@ -85,7 +84,6 @@ class Uforegrunnlag : Serializable {
      * Denne koden brukes til statstikk og for å beregne lovlig inntekt å 12-12
      * for kombinert yrkesaktiv/husmor, kode = 11,12,13 og 18.
      */
-    var yrke: YrkeCti? = null
     var yrkeEnum: YrkeEnum? = null
 
     /**

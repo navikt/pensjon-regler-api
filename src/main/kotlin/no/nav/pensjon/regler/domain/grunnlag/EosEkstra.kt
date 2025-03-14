@@ -1,11 +1,9 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
 import no.nav.pensjon.regler.domain.enum.ProRataBeregningTypeEnum
-import no.nav.pensjon.regler.domain.kode.ProRataBeregningTypeCti
 import java.io.Serializable
 
 class EosEkstra : Serializable {
-    var proRataBeregningType: ProRataBeregningTypeCti? = null
     var proRataBeregningTypeEnum: ProRataBeregningTypeEnum? = null
     var redusertAntFppAr: Int? = null
     var spt_eos: Double? = null

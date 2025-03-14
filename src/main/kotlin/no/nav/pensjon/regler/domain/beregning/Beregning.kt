@@ -16,7 +16,6 @@ import no.nav.pensjon.regler.domain.enum.MinstepensjonstypeEnum
 import no.nav.pensjon.regler.domain.enum.ResultattypeEnum
 import no.nav.pensjon.regler.domain.enum.SivilstandEnum
 import no.nav.pensjon.regler.domain.grunnlag.EosEkstra
-import no.nav.pensjon.regler.domain.kode.*
 import java.io.Serializable
 import java.util.*
 
@@ -178,7 +177,6 @@ class Beregning : Serializable {
     /**
      * Angir hvilken metode som ble benyttet ved beregningen.EØS/nordisk/et annet land
      */
-    var beregningsMetode: BeregningMetodeTypeCti? = null
     var beregningsMetodeEnum: BeregningsmetodeEnum? = null
 
     /**
@@ -194,13 +192,11 @@ class Beregning : Serializable {
     /**
      * Angir type beregning: BER, HJELPEBER, SAM_BER, VUR_BER.
      */
-    var beregningType: BeregningTypeCti? = null
     var beregningTypeEnum: BeregningtypeEnum? = null
 
     /**
      * Hvilken resultattype en beregning er : AP,AP_GJP osv.
      */
-    var resultatType: ResultatTypeCti? = null
     var resultatTypeEnum: ResultattypeEnum? = null
 
     /**
@@ -228,14 +224,12 @@ class Beregning : Serializable {
      * Hvis det er flere årsaker til at det er en periode i beregningen på samme periode (i.e. endring i sats og regel på samme dag så må det være en prioritering av endringene.
      * Da skal den årsak som mest sjelden skjer settes.
      */
-    var beregningArsak: BeregningArsakCti? = null
     var beregningArsakEnum: Beregningsarsak? = null
 
     /**
      * Angir type av minstepensjon.
      * ER_MINST_PEN eller IKKE_MINST_PEN
      */
-    var minstepensjontype: MinstepensjonTypeCti? = null
     var minstepensjontypeEnum: MinstepensjonstypeEnum? = null
 
     /**
@@ -291,13 +285,11 @@ class Beregning : Serializable {
     /**
      * Benyttet sivilstand (tilknyttetPerson.borMedType
      */
-    var benyttetSivilstand: BorMedTypeCti? = null
     var benyttetSivilstandEnum: BorMedTypeEnum? = null
 
     /**
      * Brukerens sivilstand (som definert i TPS).
      */
-    var brukersSivilstand: SivilstandTypeCti? = null
     var brukersSivilstandEnum: SivilstandEnum? = null
 
     /**
@@ -319,7 +311,6 @@ class Beregning : Serializable {
     /**
      * Angir hvilken type institusjon beregningen angår.
      */
-    var instOppholdType: JustertPeriodeCti? = null
     var instOppholdTypeEnum: JustertPeriodeEnum? = null
 
     /**

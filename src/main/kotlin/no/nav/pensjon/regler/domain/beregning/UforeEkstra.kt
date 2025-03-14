@@ -3,10 +3,6 @@ package no.nav.pensjon.regler.domain.beregning
 import no.nav.pensjon.regler.domain.enum.FppGarantiKodeEnum
 import no.nav.pensjon.regler.domain.enum.InntektKode1Enum
 import no.nav.pensjon.regler.domain.enum.InntektKode2Enum
-import no.nav.pensjon.regler.domain.grunnlag.EosEkstra
-import no.nav.pensjon.regler.domain.kode.FppGarantiKodeCti
-import no.nav.pensjon.regler.domain.kode.InntektKode1Cti
-import no.nav.pensjon.regler.domain.kode.InntektKode2Cti
 import java.io.Serializable
 
 /**
@@ -27,7 +23,6 @@ class UforeEkstra : Serializable {
      * UFGRAD_50_REAK
      * YRKODE_18_HJEMMV
      */
-    var inntektkode1: InntektKode1Cti = InntektKode1Cti("INT_NIV_UF")
     var inntektkode1Enum: InntektKode1Enum = InntektKode1Enum.INT_NIV_UF
 
     /**
@@ -40,7 +35,6 @@ class UforeEkstra : Serializable {
      * INT_U_FRI_GML_REGL
      * INT_M_FRI_GML_REGL
      */
-    var inntektkode2: InntektKode2Cti = InntektKode2Cti("INT_IKKE_BER")
     var inntektkode2Enum: InntektKode2Enum = InntektKode2Enum.INT_IKKE_BER
 
     /**
@@ -73,7 +67,6 @@ class UforeEkstra : Serializable {
      * `UNG_UF_MR_33_FR_92 = Ung ufør med rett til 3.3 poeng fra 0592`<br></br>
      * `UNG_UF_FOR_67 = unge uføre før 1967`
      */
-    var fppGarantiKode: FppGarantiKodeCti? = null
     var fppGarantiKodeEnum: FppGarantiKodeEnum? = null
 
     /**

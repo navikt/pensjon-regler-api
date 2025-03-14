@@ -2,8 +2,6 @@ package no.nav.pensjon.regler.domain
 
 import no.nav.pensjon.regler.domain.enum.GrunnlagkildeEnum
 import no.nav.pensjon.regler.domain.enum.LandkodeEnum
-import no.nav.pensjon.regler.domain.kode.GrunnlagKildeCti
-import no.nav.pensjon.regler.domain.kode.LandCti
 import java.io.Serializable
 import java.util.*
 
@@ -31,7 +29,6 @@ open class TTPeriode : Serializable {
     /**
      * Hvilket land perioden er opptjent i.
      */
-    var land: LandCti? = null
     var landEnum: LandkodeEnum? = null
 
     /**
@@ -47,7 +44,6 @@ open class TTPeriode : Serializable {
     /**
      * Kilden til trygdetidsperioden.
      */
-    var grunnlagKilde: GrunnlagKildeCti? = null
     var grunnlagKildeEnum: GrunnlagkildeEnum? = null
 
 }
