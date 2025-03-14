@@ -3,8 +3,6 @@ package no.nav.pensjon.regler.domain.grunnlag
 import no.nav.pensjon.regler.domain.beregning.Sertillegg
 import no.nav.pensjon.regler.domain.enum.Fravik_19_3_Enum
 import no.nav.pensjon.regler.domain.enum.PoengtilleggEnum
-import no.nav.pensjon.regler.domain.kode.Fravik_19_3Cti
-import no.nav.pensjon.regler.domain.kode.PoengtilleggCti
 import java.io.Serializable
 
 /**
@@ -20,7 +18,6 @@ class GenerellHistorikk : Serializable {
      * Koder som sier hvilken trygdetid som skal brukes i beregning når Første virk er før 1991.
      * Brukes i utenlandssaker der pensjonisten kan få godskrevet trygdetid opptjent i utlandet før 1967.
      */
-    var fravik_19_3: Fravik_19_3Cti? = null
     var fravik_19_3Enum: Fravik_19_3_Enum? = null
 
     /*
@@ -32,7 +29,6 @@ class GenerellHistorikk : Serializable {
      * Ventetilleggsgrunnlag
      */
     var ventetilleggsgrunnlag: Ventetilleggsgrunnlag? = null
-    var poengtillegg: PoengtilleggCti? = null
     var poengtilleggEnum: PoengtilleggEnum? = null
 
     /*

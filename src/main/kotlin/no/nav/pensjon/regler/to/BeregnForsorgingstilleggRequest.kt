@@ -4,7 +4,6 @@ import no.nav.pensjon.regler.domain.beregning.Beregning
 import no.nav.pensjon.regler.domain.beregning2011.*
 import no.nav.pensjon.regler.domain.enum.BarnetilleggregelverktypeEnum
 import no.nav.pensjon.regler.domain.grunnlag.EtteroppgjorGrunnlag
-import no.nav.pensjon.regler.domain.kode.BarnetilleggRegelverkCti
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
@@ -16,7 +15,6 @@ class BeregnForsorgingstilleggRequest : ServiceRequest() {
     /**
      * Beskriver hvilke regler som skal benyttes i beregning av BT for UT etter 01.01.2016
      */
-    var barnetilleggRegelverkCti: BarnetilleggRegelverkCti? = null
     var barnetilleggRegelverkEnum: BarnetilleggregelverktypeEnum? = null
 
     /**

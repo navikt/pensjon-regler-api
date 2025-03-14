@@ -6,10 +6,6 @@ import no.nav.pensjon.regler.domain.enum.RegelverkTypeEnum
 import no.nav.pensjon.regler.domain.enum.SakTypeEnum
 import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.grunnlag.Uttaksgrad
-import no.nav.pensjon.regler.domain.kode.AfpOrdningTypeCti
-import no.nav.pensjon.regler.domain.kode.KravVelgTypeCti
-import no.nav.pensjon.regler.domain.kode.RegelverkTypeCti
-import no.nav.pensjon.regler.domain.kode.SakTypeCti
 import java.io.Serializable
 import java.util.*
 
@@ -32,7 +28,6 @@ open class Kravhode : Serializable {
     /**
      * Angir type AFPordning.
      */
-    var afpOrdning: AfpOrdningTypeCti? = null
     var afpOrdningEnum: AFPtypeEnum? = null
 
     /**
@@ -49,7 +44,6 @@ open class Kravhode : Serializable {
     /**
      * Angir detaljering i kravet,brukes i barnepensjon.
      */
-    var kravVelgType: KravVelgTypeCti? = null
     var kravVelgTypeEnum: KravVelgtypeEnum? = null
 
     /**
@@ -76,13 +70,11 @@ open class Kravhode : Serializable {
             field = value
             sorterUttaksgradListe()
         }
-    var regelverkTypeCti: RegelverkTypeCti? = null
     var regelverkTypeEnum: RegelverkTypeEnum? = null
 
     /**
      * Angir siste sakstype før overgang til AP.
      */
-    var sisteSakstypeForAP: SakTypeCti? = null
     var sisteSakstypeForAPEnum: SakTypeEnum? = null
 
     /*

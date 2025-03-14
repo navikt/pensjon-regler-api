@@ -1,7 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning
 
 import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
-import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import org.junit.Test
 import kotlin.test.assertEquals
 
@@ -11,13 +10,10 @@ class GrunnpensjonTest {
     fun `Skal bevare formelKode ved bruk av copy-constructor`() {
         val gp = Grunnpensjon()
 
-        assertEquals(gp.formelKode!!.kode, FormelKodeCti("GPx").kode)
         assertEquals(gp.formelKodeEnum, FormelKodeEnum.GPx)
-
-        gp.formelKode = FormelKodeCti("BasGP1")
 
         val gpCopy = Grunnpensjon(gp)
 
-        assertEquals(gpCopy.formelKode!!.kode, FormelKodeCti("BasGP1").kode)
+        assertEquals(gpCopy.formelKodeEnum, FormelKodeEnum.GPx)
     }
 }

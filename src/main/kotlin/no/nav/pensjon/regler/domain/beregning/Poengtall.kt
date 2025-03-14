@@ -3,8 +3,6 @@ package no.nav.pensjon.regler.domain.beregning
 import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.Omsorgsopptjening
 import no.nav.pensjon.regler.domain.enum.PoengtalltypeEnum
-import no.nav.pensjon.regler.domain.kode.BeregningMetodeTypeCti
-import no.nav.pensjon.regler.domain.kode.PoengtallTypeCti
 import java.io.Serializable
 
 class Poengtall : Serializable, Omsorgsopptjening {
@@ -44,7 +42,6 @@ class Poengtall : Serializable, Omsorgsopptjening {
      * Poengtalltype.
      */
     @JvmField
-    var poengtallType: PoengtallTypeCti? = null
     var poengtallTypeEnum: PoengtalltypeEnum? = null
 
     /**
@@ -95,9 +92,6 @@ class Poengtall : Serializable, Omsorgsopptjening {
         ar = poengtall.ar
         bruktIBeregning = poengtall.bruktIBeregning
         gv = poengtall.gv
-        if (poengtall.poengtallType != null) {
-            poengtallType = PoengtallTypeCti(poengtall.poengtallType!!)
-        }
         if (poengtall.poengtallTypeEnum != null) {
             poengtallTypeEnum = poengtall.poengtallTypeEnum
         }

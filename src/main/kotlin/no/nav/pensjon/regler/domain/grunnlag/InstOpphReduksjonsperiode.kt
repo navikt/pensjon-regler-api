@@ -1,7 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
 import no.nav.pensjon.regler.domain.enum.JustertPeriodeEnum
-import no.nav.pensjon.regler.domain.kode.JustertPeriodeCti
 import java.io.Serializable
 import java.util.*
 
@@ -32,7 +31,6 @@ class InstOpphReduksjonsperiode : Serializable {
     /**
      * Angir om institusjonsoppholdsperioden medfører en økning eller reduksjon av pensjonsytelsen.
      */
-    var justertPeriodeType: JustertPeriodeCti? = null
     var justertPeriodeTypeEnum: JustertPeriodeEnum? = null
 
     /**

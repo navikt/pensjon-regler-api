@@ -5,10 +5,6 @@ import no.nav.pensjon.regler.domain.enum.BorMedTypeEnum
 import no.nav.pensjon.regler.domain.enum.GrunnlagkildeEnum
 import no.nav.pensjon.regler.domain.enum.GrunnlagsrolleEnum
 import no.nav.pensjon.regler.domain.enum.SivilstandEnum
-import no.nav.pensjon.regler.domain.kode.BorMedTypeCti
-import no.nav.pensjon.regler.domain.kode.GrunnlagKildeCti
-import no.nav.pensjon.regler.domain.kode.GrunnlagsrolleCti
-import no.nav.pensjon.regler.domain.kode.SivilstandTypeCti
 import java.io.Serializable
 import java.util.*
 
@@ -21,7 +17,6 @@ open class PersonDetalj : Serializable {
     /**
      * Rollen denne personen har i kontekst av kravet.
      */
-    var grunnlagsrolle: GrunnlagsrolleCti? = null
     var grunnlagsrolleEnum: GrunnlagsrolleEnum? = null
 
     /**
@@ -37,7 +32,6 @@ open class PersonDetalj : Serializable {
     /**
      * Representerer personens sivilstand i henhold til TPS.
      */
-    var sivilstandType: SivilstandTypeCti? = null
     var sivilstandTypeEnum: SivilstandEnum? = null
 
     /**
@@ -50,7 +44,6 @@ open class PersonDetalj : Serializable {
      * Representerer om og hvordan personen bor sammen med en annen person med persongrunnlag på kravet.
      * Refereres konseptuelt som pensjonsfaglig vurdert sivilstand.
      */
-    var borMed: BorMedTypeCti? = null
     var borMedEnum: BorMedTypeEnum? = null
 
     /**
@@ -72,7 +65,6 @@ open class PersonDetalj : Serializable {
     /**
      * Angir kilden til persondetaljen.
      */
-    var grunnlagKilde: GrunnlagKildeCti? = null
     var grunnlagKildeEnum: GrunnlagkildeEnum? = null
 
     var serskiltSatsUtenET: Boolean? = null

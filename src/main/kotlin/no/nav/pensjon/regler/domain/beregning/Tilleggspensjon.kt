@@ -5,8 +5,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.beregning2011.BasisTilleggspensjon
 import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
 import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
-import no.nav.pensjon.regler.domain.kode.FormelKodeCti
-import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import no.nav.pensjon.regler.domain.util.formula.Formel
 import no.nav.pensjon.regler.domain.util.formula.IFormelProvider
 
@@ -45,11 +43,9 @@ open class Tilleggspensjon : Ytelseskomponent, IFormelProvider {
      */
     override var formelMap: HashMap<String, Formel> = HashMap()
 
-    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("TP")
     override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.TP
 
     constructor() {
-        formelKode = FormelKodeCti("TPx")
         formelKodeEnum = FormelKodeEnum.TPx
     }
 

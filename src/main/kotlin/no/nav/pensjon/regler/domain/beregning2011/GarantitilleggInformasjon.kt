@@ -1,11 +1,9 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.enum.BorMedTypeEnum
-import no.nav.pensjon.regler.domain.kode.BorMedTypeCti
 import java.io.Serializable
 
 class GarantitilleggInformasjon : Serializable {
-    var anvendtSivilstand: BorMedTypeCti? = null
     var anvendtSivilstandEnum: BorMedTypeEnum? = null
     var pensjonsbeholdningBelopVed67 = 0.0
     var garantipensjonsbeholdningBelopVed67 = 0.0
