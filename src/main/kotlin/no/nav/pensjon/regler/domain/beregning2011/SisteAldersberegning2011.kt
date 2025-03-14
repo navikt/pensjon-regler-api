@@ -6,8 +6,6 @@ import no.nav.pensjon.regler.domain.enum.BeregningsmetodeEnum
 import no.nav.pensjon.regler.domain.enum.RegelverkTypeEnum
 import no.nav.pensjon.regler.domain.grunnlag.Beholdninger
 import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
-import no.nav.pensjon.regler.domain.kode.BeregningMetodeTypeCti
-import no.nav.pensjon.regler.domain.kode.RegelverkTypeCti
 import no.nav.pensjon.regler.domain.trygdetid.Brok
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 
@@ -21,8 +19,7 @@ import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 open class SisteAldersberegning2011 : SisteBeregning() {
-    var regelverkType: RegelverkTypeCti? = null // Dene benyttes for å avgjøre om det er på 2011, 2016 eller 2025.
-    var regelverkTypeEnum: RegelverkTypeEnum? = null
+    var regelverkTypeEnum: RegelverkTypeEnum? = null // Denne benyttes for å avgjøre om det er på 2011, 2016 eller 2025.
     var basispensjon: Basispensjon? = null // 2011
     var restpensjon: Basispensjon? = null // 2011
     var pensjonUnderUtbetaling: PensjonUnderUtbetaling? = null
@@ -36,7 +33,6 @@ open class SisteAldersberegning2011 : SisteBeregning() {
     var avdodesPersongrunnlag: Persongrunnlag? = null
     var gjenlevenderettAnvendt = false
     var anvendtGjenlevenderettVedtak: VilkarsVedtak? = null
-    var beregningsMetode: BeregningMetodeTypeCti? = null
     var beregningsMetodeEnum: BeregningsmetodeEnum? = null
     var tt_anv_kap_20 = 0
     var prorataBrok_kap_20: Brok? = null

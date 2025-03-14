@@ -2,7 +2,6 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
-import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import java.io.Serializable
 
 /**
@@ -35,7 +34,6 @@ class PensjonUnderUtbetaling : Serializable {
     /**
      * Indikerer hvilken beregningsformel som ble brukt.
      */
-    var formelKode: FormelKodeCti = FormelKodeCti("BPUx")
     var formelKodeEnum: FormelKodeEnum = FormelKodeEnum.BPUx
 
     var pubReguleringFratrekk = 0.0

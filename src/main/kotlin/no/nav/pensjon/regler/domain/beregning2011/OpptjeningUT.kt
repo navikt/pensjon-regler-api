@@ -3,7 +3,6 @@ package no.nav.pensjon.regler.domain.beregning2011
 import no.nav.pensjon.regler.domain.Merknad
 import no.nav.pensjon.regler.domain.Omsorgsopptjening
 import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
-import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import java.io.Serializable
 
 class OpptjeningUT : Serializable, Omsorgsopptjening {
@@ -52,7 +51,6 @@ class OpptjeningUT : Serializable, Omsorgsopptjening {
     @JvmField
     var ar = 0
     var merknadListe: List<Merknad> = mutableListOf()
-    var formelkode: FormelKodeCti? = null
     var formelkodeEnum: FormelKodeEnum? = null
 
     /**

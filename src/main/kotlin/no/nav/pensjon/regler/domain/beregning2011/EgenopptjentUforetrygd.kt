@@ -1,13 +1,11 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
-import no.nav.pensjon.regler.domain.kode.FormelKodeCti
 import no.nav.pensjon.regler.domain.trygdetid.AnvendtTrygdetid
 import java.io.Serializable
 
 class EgenopptjentUforetrygd : Serializable {
     var faktor = 0.66
-    var formelKode: FormelKodeCti? = null
     var formelKodeEnum: FormelKodeEnum? = null
     var arsbelop = 0
     var beregningsgrunnlagOrdiner: AbstraktBeregningsgrunnlag? = null

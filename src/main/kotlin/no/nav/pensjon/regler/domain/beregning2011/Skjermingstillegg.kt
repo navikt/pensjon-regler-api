@@ -2,7 +2,6 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
-import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 
 class Skjermingstillegg : Ytelseskomponent() {
     var ft67Soker: Double? = null
@@ -12,7 +11,6 @@ class Skjermingstillegg : Ytelseskomponent() {
     var basTp_bruttoPerAr: Double? = null
     var basPenT_bruttoPerAr: Double? = null
 
-    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("SKJERMT")
     override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.SKJERMT
 
 }

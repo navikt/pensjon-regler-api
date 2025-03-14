@@ -2,8 +2,6 @@ package no.nav.pensjon.regler.domain.grunnlag
 
 import no.nav.pensjon.regler.domain.enum.GrunnlagkildeEnum
 import no.nav.pensjon.regler.domain.enum.OpptjeningtypeEnum
-import no.nav.pensjon.regler.domain.kode.GrunnlagKildeCti
-import no.nav.pensjon.regler.domain.kode.OpptjeningTypeCti
 import java.io.Serializable
 
 class Opptjeningsgrunnlag : Serializable {
@@ -37,7 +35,6 @@ class Opptjeningsgrunnlag : Serializable {
      * OBU7 Omsorg for barn under 7 år
      * PPI Pensjonsgivende inntekt
      */
-    var opptjeningType: OpptjeningTypeCti? = null
     var opptjeningTypeEnum: OpptjeningtypeEnum? = null
 
     /**
@@ -53,7 +50,6 @@ class Opptjeningsgrunnlag : Serializable {
     /**
      * Kilden til opptjeningsgrunnlaget.
      */
-    var grunnlagKilde: GrunnlagKildeCti? = null
     var grunnlagKildeEnum: GrunnlagkildeEnum? = null
 
     /**

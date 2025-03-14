@@ -1,7 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
 import no.nav.pensjon.regler.domain.enum.EksportUnntakEnum
-import no.nav.pensjon.regler.domain.kode.EksportUnntakCti
 import java.io.Serializable
 
 class Eksportforbud : Serializable {
@@ -13,6 +12,5 @@ class Eksportforbud : Serializable {
     /**
      * Angir type eksportunntak.
      */
-    var unntakType: EksportUnntakCti? = null
     var unntakTypeEnum: EksportUnntakEnum? = null
 }

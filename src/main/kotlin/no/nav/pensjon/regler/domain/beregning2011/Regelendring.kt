@@ -1,7 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.enum.RegelendringTypeEnum
-import no.nav.pensjon.regler.domain.kode.RegelendringTypeCti
 import java.io.Serializable
 import java.util.*
 
@@ -14,7 +13,6 @@ class Regelendring : Serializable {
     /**
      * Tekst som beskriver typen endring, ref. kodeverk.
      */
-    var endringstype: RegelendringTypeCti? = null
     var endringstypeEnum: RegelendringTypeEnum? = null
 
 }

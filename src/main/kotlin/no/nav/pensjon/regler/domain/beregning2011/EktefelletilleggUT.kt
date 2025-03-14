@@ -2,7 +2,6 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
-import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 
 class EktefelletilleggUT : Ytelseskomponent(), UforetrygdYtelseskomponent {
     /**
@@ -36,6 +35,5 @@ class EktefelletilleggUT : Ytelseskomponent(), UforetrygdYtelseskomponent {
      */
     var upForSkattekomp = 0.0
 
-    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("UT_ET")
     override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_ET
 }

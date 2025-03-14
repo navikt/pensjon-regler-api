@@ -1,7 +1,6 @@
 package no.nav.pensjon.regler.domain.beregning
 
 import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
-import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 
 /**
  * Ventetillegg. netto=brutto=venteTillegg_GP+venteTillegg_TP
@@ -22,6 +21,5 @@ class Ventetillegg : Ytelseskomponent() {
      */
     var venteTilleggProsent = 0.0
 
-    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("VT")
     override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.VT
 }

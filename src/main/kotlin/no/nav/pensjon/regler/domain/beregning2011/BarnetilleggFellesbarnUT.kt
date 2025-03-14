@@ -2,8 +2,6 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import no.nav.pensjon.regler.domain.enum.FormelKodeEnum
 import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
-import no.nav.pensjon.regler.domain.kode.FormelKodeCti
-import no.nav.pensjon.regler.domain.kode.YtelsekomponentTypeCti
 import java.io.Serializable
 
 class BarnetilleggFellesbarnUT : AbstraktBarnetilleggUT, Serializable {
@@ -27,11 +25,9 @@ class BarnetilleggFellesbarnUT : AbstraktBarnetilleggUT, Serializable {
      */
     var annenForelderUforetrygdForJustering = 0
 
-    override var ytelsekomponentType: YtelsekomponentTypeCti = YtelsekomponentTypeCti("UT_TFB")
     override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_TFB
 
     constructor() {
-        formelKode = FormelKodeCti("BTx")
         formelKodeEnum = FormelKodeEnum.BTx
     }
 

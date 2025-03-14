@@ -1,7 +1,6 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
 import no.nav.pensjon.regler.domain.enum.YtelseTpOrdTypeEnum
-import no.nav.pensjon.regler.domain.kode.YtelseTypeCti
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.io.Serializable
 
@@ -20,7 +19,6 @@ class InfoPavirkendeYtelse : Serializable {
      * Hvis vilkarsvedtakEPSListen er tom og det finnes en tjenestepensjon for ektefellen som
      * ikke blir beregnet av PESYS skal denne fylles ut.
      */
-    var tjenestepensjonsordningEps: YtelseTypeCti? = null
     var tjenestepensjonsordningEpsEnum: YtelseTpOrdTypeEnum? = null
 
     /**
