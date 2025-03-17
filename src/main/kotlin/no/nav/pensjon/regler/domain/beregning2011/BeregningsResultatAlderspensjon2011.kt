@@ -9,5 +9,5 @@ class BeregningsResultatAlderspensjon2011 : AbstraktBeregningsResultat() {
     var beregningsInformasjonKapittel19: BeregningsInformasjon? = null
     var beregningsInformasjonAvdod: BeregningsInformasjon? = null
     var beregningKapittel19: AldersberegningKapittel19? = null
-
+    var afpOffentligLivsvarig: AfpOffentligLivsvarig? = null
 }
