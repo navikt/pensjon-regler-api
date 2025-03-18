@@ -2,6 +2,7 @@ package no.nav.pensjon.regler.to
 
 import no.nav.pensjon.regler.domain.beregning.Beregning
 import no.nav.pensjon.regler.domain.beregning2011.AfpLivsvarig
+import no.nav.pensjon.regler.domain.beregning2011.AfpPrivatLivsvarig
 import no.nav.pensjon.regler.domain.grunnlag.InfoPavirkendeYtelse
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
@@ -14,5 +15,7 @@ class KonverterAP1967TilAP2011Request : ServiceRequest() {
     var beregning: Beregning? = null
     var virkFom: Date? = null
     var epsMottarPensjon = false
+    @Deprecated("Avvikles. Erstattes av afpPrivatLivsvarig.")
     var afpLivsvarig: AfpLivsvarig? = null
+    var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
 }

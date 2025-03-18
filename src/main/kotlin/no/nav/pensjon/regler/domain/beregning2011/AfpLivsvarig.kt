@@ -10,6 +10,7 @@ import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
     JsonSubTypes.Type(value = FremskrevetAfpLivsvarig::class)
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
+@Deprecated("Avvikles. Erstattes med AfpPrivatLivsvarig : AbstraktAfpLivsvarig")
 open class AfpLivsvarig : Ytelseskomponent {
     var justeringsbelop = 0
     var afpProsentgrad = 0.0
