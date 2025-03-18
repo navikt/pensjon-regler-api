@@ -50,7 +50,7 @@ import java.io.Serializable
     JsonSubTypes.Type(value = UforetilleggTilAlderspensjon::class),
     JsonSubTypes.Type(value = UforetrygdOrdiner::class),
     JsonSubTypes.Type(value = Ventetillegg::class),
-
+    JsonSubTypes.Type(value = AbstraktAfpLivsvarig::class),
     JsonSubTypes.Type(value = AbstraktBarnetillegg::class)
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
