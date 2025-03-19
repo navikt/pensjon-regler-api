@@ -15,10 +15,5 @@ enum class GrunnlagsrolleEnum {
     AEKTEF,
     AFBARN,
     APARTNER,
-    ASAMBO,
-
-    /**
-     * Fra PEN
-     */
-    MEDMOR;
+    ASAMBO;
 }
