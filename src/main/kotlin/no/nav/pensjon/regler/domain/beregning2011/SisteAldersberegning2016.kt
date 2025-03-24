@@ -29,4 +29,10 @@ class SisteAldersberegning2016 : SisteAldersberegning2011() {
      */
     var basispensjonUtenGJR: Basispensjon? = null
 
+    /**
+     * Gjenlevendetillegg Kap 19 fra siste aldersberegning sin eksportberegning.
+     */
+    var gjtKap19eksport: GjenlevendetilleggAPKap19? = null
+
+
 }
