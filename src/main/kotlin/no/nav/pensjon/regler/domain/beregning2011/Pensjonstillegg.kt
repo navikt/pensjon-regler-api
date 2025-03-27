@@ -24,7 +24,7 @@ open class Pensjonstillegg : Ytelseskomponent {
     }
 
     constructor(pt: Pensjonstillegg) : super(pt) {
-        forholdstall67 = pt.forholdstall67
+        forholdstallVedNormertPensjonsalder = pt.forholdstallVedNormertPensjonsalder
         minstepensjonsnivaSats = pt.minstepensjonsnivaSats
         if (pt.minstepensjonsnivaSatsTypeEnum != null) {
             minstepensjonsnivaSatsTypeEnum = pt.minstepensjonsnivaSatsTypeEnum
