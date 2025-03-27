@@ -12,7 +12,7 @@ import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 open class Pensjonstillegg : Ytelseskomponent {
-    var forholdstall67 = 0.0
+    var forholdstallVedNormertPensjonsalder = 0.0
     var minstepensjonsnivaSats = 0.0
     var minstepensjonsnivaSatsTypeEnum: MinstePensjonsnivaSatsEnum? = null
     var justertMinstePensjonsniva: JustertMinstePensjonsniva? = null
