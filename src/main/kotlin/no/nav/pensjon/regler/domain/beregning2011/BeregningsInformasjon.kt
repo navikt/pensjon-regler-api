@@ -11,9 +11,9 @@ import java.io.Serializable
 
 class BeregningsInformasjon : Serializable {
     var forholdstallUttak = 0.0
-    var forholdstall67 = 0.0
+    var forholdstallVedNormertPensjonsalder = 0.0
     var delingstallUttak = 0.0
-    var delingstall67 = 0.0
+    var delingstallVedNormertPensjonsalder = 0.0
     var spt: Sluttpoengtall? = null
     var opt: Sluttpoengtall? = null
     var ypt: Sluttpoengtall? = null
