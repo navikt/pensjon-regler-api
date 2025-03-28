@@ -16,7 +16,7 @@ class RevurderingAlderspensjon2025Request : ServiceRequest() {
     var epsMottarPensjon = false
     var virkFom: Date? = null
     var sisteAldersBeregning2011: SisteAldersberegning2011? = null
-    @Deprecated("Avvikles. Erstattes av afpPrivatLivsvarig.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
     var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     var afpOffentligLivsvarigGrunnlag: AfpOffentligLivsvarigGrunnlag? = null

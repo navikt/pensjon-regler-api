@@ -11,7 +11,7 @@ class VilkarsprovAlderpensjon2011Request : ServiceRequest() {
     var fom: Date? = null
     var tom: Date? = null
     var afpVirkFom: Date? = null
-    @Deprecated("Avvikles. Erstattes av afpPrivatLivsvarig.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
     var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     var sisteBeregning: SisteAldersberegning2011? = null

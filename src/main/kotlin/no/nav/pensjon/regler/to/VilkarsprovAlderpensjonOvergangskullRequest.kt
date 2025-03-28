@@ -9,7 +9,7 @@ import java.util.*
 class VilkarsprovAlderpensjonOvergangskullRequest : ServiceRequest() {
     var kravHode: Kravhode? = null
     var virkFom: Date? = null
-    @Deprecated("Avvikles. Erstattes av afpPrivatLivsvarig.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
     var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     var afpVirkFom: Date? = null

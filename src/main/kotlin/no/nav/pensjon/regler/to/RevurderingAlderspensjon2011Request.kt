@@ -16,7 +16,7 @@ class RevurderingAlderspensjon2011Request : ServiceRequest() {
     var virkFom: Date? = null
     var virkTom: Date? = null
     var forrigeAldersBeregning: SisteAldersberegning2011? = null
-    @Deprecated("Avvikles. Erstattes av afpPrivatLivsvarig.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
     var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
 }

@@ -14,7 +14,7 @@ class BeregnAlderspensjon2025ForsteUttakRequest : ServiceRequest() {
     var vilkarsvedtakListe: List<VilkarsVedtak> = Vector()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var epsMottarPensjon = false
-    @Deprecated("Avvikles. Erstattes av afpPrivatLivsvarig.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
     var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     var afpOffentligLivsvarigGrunnlag: AfpOffentligLivsvarigGrunnlag? = null

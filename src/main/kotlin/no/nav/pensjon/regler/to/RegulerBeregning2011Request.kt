@@ -11,7 +11,7 @@ import java.util.*
 class RegulerBeregning2011Request : ServiceRequest() {
     var virkFom: Date? = null
     var beregningsResultat: AbstraktBeregningsResultat? = null
-    @Deprecated("Avvikles. Erstattes av afpPrivatLivsvarig.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
     var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     var uttaksgradListe: ArrayList<Uttaksgrad> = ArrayList()

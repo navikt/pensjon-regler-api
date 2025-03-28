@@ -15,7 +15,7 @@ class KonverterAP1967TilAP2011Request : ServiceRequest() {
     var beregning: Beregning? = null
     var virkFom: Date? = null
     var epsMottarPensjon = false
-    @Deprecated("Avvikles. Erstattes av afpPrivatLivsvarig.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
     var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
 }
