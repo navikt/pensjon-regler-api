@@ -24,7 +24,7 @@ class BeregnInstitusjonsoppholdRequest : ServiceRequest() {
     var bruker1BeregningsresultatUforetrygd: BeregningsresultatUforetrygd? = null
 
     /* Informasjon om afpPrivatberegning for bruker1. Kun påkrevd dersom bruker1 har AfpPrivat. */
-    @Deprecated("Avvikles. Erstattes av bruker1afpPrivatLivsvarig.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("bruker1afpPrivatLivsvarig"))
     var bruker1afpLivsvarig: AfpLivsvarig? = null
     var bruker1afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     @Deprecated("Avvikles. Skal ikke være nødvendig når AfpOffentligLivsvarig ligger på beregningsresultatet.")
@@ -42,7 +42,7 @@ class BeregnInstitusjonsoppholdRequest : ServiceRequest() {
     var bruker2SisteAldersberegning2011: SisteAldersberegning2011? = null
 
     /* Informasjon om afpPrivatberegning for bruker2. Kun påkrevd dersom bruker2 har AfpPrivat. */
-    @Deprecated("Avvikles. Erstattes av bruker2AfpPrivatLivsvarig.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("bruker2AfpPrivatLivsvarig"))
     var bruker2afpLivsvarig: AfpLivsvarig? = null
     var bruker2AfpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     @Deprecated("Avvikles. Skal ikke være nødvendig når AfpOffentligLivsvarig ligger på beregningsresultatet.")

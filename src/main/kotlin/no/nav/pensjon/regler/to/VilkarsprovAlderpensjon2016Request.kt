@@ -11,7 +11,7 @@ import java.util.*
 class VilkarsprovAlderpensjon2016Request : ServiceRequest() {
     var kravhode: Kravhode? = null
     var virkFom: Date? = null
-    @Deprecated("Avvikles. Erstattes av afpPrivatLivsvarig.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
     var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     var afpVirkFom: Date? = null

@@ -7,7 +7,7 @@ import no.nav.pensjon.regler.domain.enum.GarantiPensjonsnivaSatsEnum
 class Garantipensjonsbeholdning() : Beholdning() {
     var justertGarantipensjonsniva: JustertGarantipensjonsniva? = null
     var pensjonsbeholdning = 0.0
-    @Deprecated("Avvikles. Erstattes av delingstallVedNormertPensjonsalder.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("delingstallVedNormertPensjonsalder"))
     var delingstall67 = 0.0
     var delingstallVedNormertPensjonsalder = 0.0
 

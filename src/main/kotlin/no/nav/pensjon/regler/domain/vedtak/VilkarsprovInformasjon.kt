@@ -18,19 +18,19 @@ import java.io.Serializable
 abstract class VilkarsprovInformasjon : Serializable {
     var ektefelleInntektOver2g = false
     var flyktning = false
-    @Deprecated("Avvikles. Erstattes av fullPensjonVedNormertPensjonsalder.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("fullPensjonVedNormertPensjonsalder"))
     var fullPensjonVed67: FremskrevetPensjonUnderUtbetaling? = null
     var fullPensjonVedNormertPensjonsalder: FremskrevetPensjonUnderUtbetaling? = null
     var pensjonVedUttak: PensjonUnderUtbetaling? = null
     var fremskrevetAfpLivsvarig: FremskrevetAfpLivsvarig? = null
-    @Deprecated("Avvikles. Erstattes av afpPrivatLivsvarigVedUttak.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarigVedUttak"))
     var afpLivsvarigVedUttak: AfpLivsvarig? = null
     var afpPrivatLivsvarigVedUttak: AfpPrivatLivsvarig? = null
     var afpLivsvarigBrukt = false
-    @Deprecated("Avvikles. Erstattes av fremskrevetPensjonVedNormertPensjonsAlder.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("fremskrevetPensjonVedNormertPensjonsAlder"))
     var fremskrevetPensjonVed67 = 0.0
     var fremskrevetPensjonVedNormertPensjonsAlder = 0.0
-    @Deprecated("Avvikles. Erstattes av samletPensjonVedNormertPensjonsAlder.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("samletPensjonVedNormertPensjonsAlder"))
     var samletPensjonVed67PerAr = 0.0
     var samletPensjonVedNormertPensjonsAlder = 0.0
 }

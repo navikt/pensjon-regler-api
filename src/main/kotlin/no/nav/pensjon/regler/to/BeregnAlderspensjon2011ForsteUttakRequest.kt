@@ -14,7 +14,7 @@ class BeregnAlderspensjon2011ForsteUttakRequest : ServiceRequest() {
     var virkFom: Date? = null
     var virkTom: Date? = null
     var ektefellenMottarPensjon = false
-    @Deprecated("Avvikles. Erstattes av afpPrivatLivsvarig.")
+    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
     var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
 }
