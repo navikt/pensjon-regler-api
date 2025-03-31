@@ -13,9 +13,3 @@ class VilkarsprovInformasjon2025 : VilkarsprovInformasjon() {
     var beholdningerVed67: Beholdninger? = null
 
 }
-
-
-fun main() {
-    val vkInfo = VilkarsprovInformasjon2025()
-    vkInfo.garPN67ProRata = JustertGarantipensjonsniva()
-}
