@@ -12,5 +12,5 @@ class VilkarsprovInformasjon2025 : VilkarsprovInformasjon() {
     var garPNvedNormertPensjonsalderProRata: JustertGarantipensjonsniva? = null
     @Deprecated("Avvikles.", replaceWith = ReplaceWith("beholdningerVed67vedNormertPensjonsalder"))
     var beholdningerVed67: Beholdninger? = null
-    var beholdningerVedNormertPensjonsalder: Beholdninger? = null
+    var beholdningerVed67vedNormertPensjonsalder: Beholdninger? = null
 }
