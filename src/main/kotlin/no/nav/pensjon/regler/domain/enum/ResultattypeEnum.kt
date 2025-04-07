@@ -40,5 +40,6 @@ enum class ResultattypeEnum {
     KONV_AFP,
     AP2016,
     AP2025,
-    KONV_KRIG;
+    KONV_KRIG,
+    KONV_GAM_YRK;
 }
