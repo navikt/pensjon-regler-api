@@ -9,7 +9,6 @@ class BeregnAfpPrivatRequest : ServiceRequest() {
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: ArrayList<VilkarsVedtak> = ArrayList()
     var virkFom: Date? = null
-    var ft = 0.0
     var justeringsbelop = 0
     var referansebelop = 0
     var ftKompensasjonstillegg = 0.0
