@@ -9,6 +9,6 @@ class BeregnAfpEtteroppgjorResponse : ServiceResponse() {
         "Avvikles, erstattes av 'afpEtteroppgjor'",
         replaceWith = ReplaceWith("afpEtteroppgjor")
     )
-    var afpEtteroppgjorListe = Vector<AFPetteroppgjor>()
+    var afpEtteroppgjorListe: Vector<AFPetteroppgjor>? = Vector<AFPetteroppgjor>()
     var afpEtteroppgjor: AFPetteroppgjor? = null
 }

@@ -10,13 +10,13 @@ class AFPetteroppgjor(
      * pensjon-regler skal ta denne inn og levere den tilbake i alle tjenestene sine.
      */
     @Deprecated("Avvikles.")
-    var vedtakId: Long = 0,
+    var vedtakId: Long? = 0,
 
     /**
      * Id til personsobjektet fra PEN
      */
     @Deprecated("Avvikles.")
-    var penPersonId: Long = 0,
+    var penPersonId: Long? = 0,
 
     /**
      * Datoen for uttak av AFP - hvis dette skjedde i oppgjørsperioden

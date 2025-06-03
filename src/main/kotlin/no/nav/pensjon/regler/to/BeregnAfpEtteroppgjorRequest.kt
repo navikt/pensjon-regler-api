@@ -8,6 +8,6 @@ class BeregnAfpEtteroppgjorRequest(
         "Avvikles, erstattes av 'afpEtteroppgjorgrunnlag'",
         replaceWith = ReplaceWith("afpEtteroppgjorgrunnlag")
     )
-    var afpEtteroppgjorgrunnlagListe: Vector<AFPEtteroppgjorgrunnlag> = Vector<AFPEtteroppgjorgrunnlag>(),
+    var afpEtteroppgjorgrunnlagListe: Vector<AFPEtteroppgjorgrunnlag>? = Vector<AFPEtteroppgjorgrunnlag>(),
     var afpEtteroppgjorgrunnlag: AFPEtteroppgjorgrunnlag? = null
 ) : ServiceRequest()
