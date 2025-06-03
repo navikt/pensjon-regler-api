@@ -9,6 +9,6 @@ class KategoriserAfpEtteroppgjorResponse : ServiceResponse() {
         "Avvikles, erstattes av 'afpEtteroppgjorgrunnlag'",
         replaceWith = ReplaceWith("afpEtteroppgjorgrunnlag")
     )
-    var afpEtteroppgjorKategoriListe = Vector<AfpEtteroppgjorKategori>()
+    var afpEtteroppgjorKategoriListe: Vector<AfpEtteroppgjorKategori>? = Vector<AfpEtteroppgjorKategori>()
     var afpEtteroppgjorKategori: AfpEtteroppgjorKategori? = null
 }
