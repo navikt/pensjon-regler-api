@@ -6,19 +6,6 @@ import java.util.*
 
 class AFPEtteroppgjorgrunnlag(
     /**
-     * Nøkkelfelt brukt av PEN tjenestene.
-     * pensjon-regler skal ta denne inn og levere den tilbake i alle tjenestene sine.
-     */
-    @Deprecated("Avvikles.")
-    var vedtakId: Long? = 0,
-
-    /**
-     * Id til personsobjektet fra PEN
-     */
-    @Deprecated("Avvikles.")
-    var penPersonId: Long? = 0,
-
-    /**
      * Personens Fødselsdato
      */
     var fodselsdato: Date? = null,
