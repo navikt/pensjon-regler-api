@@ -17,7 +17,6 @@ import java.io.Serializable
 @JsonSubTypes(
     JsonSubTypes.Type(value = AfpKompensasjonstillegg::class),
     JsonSubTypes.Type(value = AfpKronetillegg::class),
-    JsonSubTypes.Type(value = AfpLivsvarig::class),
     JsonSubTypes.Type(value = AfpTillegg::class),
     JsonSubTypes.Type(value = BeregningYtelseskomponent::class),
     JsonSubTypes.Type(value = Ektefelletillegg::class),

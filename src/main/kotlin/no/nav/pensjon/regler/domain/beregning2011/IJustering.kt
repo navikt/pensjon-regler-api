@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo
 import java.util.*
 
 @JsonSubTypes(
-    JsonSubTypes.Type(value = IGRegulering::class),
     JsonSubTypes.Type(value = IFremskriving::class),
     JsonSubTypes.Type(value = ILonnsvekst::class)
 )
