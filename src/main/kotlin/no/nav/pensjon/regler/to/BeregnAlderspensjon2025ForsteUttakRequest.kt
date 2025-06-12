@@ -1,6 +1,5 @@
 package no.nav.pensjon.regler.to
 
-import no.nav.pensjon.regler.domain.beregning2011.AfpLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.AfpOffentligLivsvarigGrunnlag
 import no.nav.pensjon.regler.domain.beregning2011.AfpPrivatLivsvarig
 import no.nav.pensjon.regler.domain.grunnlag.InfoPavirkendeYtelse
@@ -14,8 +13,6 @@ class BeregnAlderspensjon2025ForsteUttakRequest : ServiceRequest() {
     var vilkarsvedtakListe: List<VilkarsVedtak> = Vector()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var epsMottarPensjon = false
-    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
-    var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     var afpOffentligLivsvarigGrunnlag: AfpOffentligLivsvarigGrunnlag? = null
 }

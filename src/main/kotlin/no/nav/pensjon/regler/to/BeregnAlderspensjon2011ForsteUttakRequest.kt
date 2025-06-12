@@ -1,6 +1,5 @@
 package no.nav.pensjon.regler.to
 
-import no.nav.pensjon.regler.domain.beregning2011.AfpLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.AfpPrivatLivsvarig
 import no.nav.pensjon.regler.domain.grunnlag.InfoPavirkendeYtelse
 import no.nav.pensjon.regler.domain.krav.Kravhode
@@ -14,7 +13,5 @@ class BeregnAlderspensjon2011ForsteUttakRequest : ServiceRequest() {
     var virkFom: Date? = null
     var virkTom: Date? = null
     var ektefellenMottarPensjon = false
-    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
-    var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
 }
