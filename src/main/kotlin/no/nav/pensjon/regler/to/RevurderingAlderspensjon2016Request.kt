@@ -1,6 +1,5 @@
 package no.nav.pensjon.regler.to
 
-import no.nav.pensjon.regler.domain.beregning2011.AfpLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.AfpPrivatLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.SisteAldersberegning2016
 import no.nav.pensjon.regler.domain.grunnlag.InfoPavirkendeYtelse
@@ -15,7 +14,5 @@ class RevurderingAlderspensjon2016Request : ServiceRequest() {
     var epsMottarPensjon = false
     var virkFom: Date? = null
     var forrigeAldersBeregning: SisteAldersberegning2016? = null
-    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
-    var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
 }

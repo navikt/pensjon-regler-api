@@ -1,6 +1,5 @@
 package no.nav.pensjon.regler.to
 
-import no.nav.pensjon.regler.domain.beregning2011.AfpLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.AfpOffentligLivsvarigGrunnlag
 import no.nav.pensjon.regler.domain.beregning2011.AfpPrivatLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.SisteAldersberegning2011
@@ -16,8 +15,6 @@ class RevurderingAlderspensjon2025Request : ServiceRequest() {
     var epsMottarPensjon = false
     var virkFom: Date? = null
     var sisteAldersBeregning2011: SisteAldersberegning2011? = null
-    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarig"))
-    var afpLivsvarig: AfpLivsvarig? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     var afpOffentligLivsvarigGrunnlag: AfpOffentligLivsvarigGrunnlag? = null
 }

@@ -2,7 +2,6 @@ package no.nav.pensjon.regler.domain.vedtak
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import no.nav.pensjon.regler.domain.beregning2011.AfpLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.AfpPrivatLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.FremskrevetAfpLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.FremskrevetPensjonUnderUtbetaling
@@ -23,8 +22,6 @@ abstract class VilkarsprovInformasjon : Serializable {
     var fullPensjonVedNormertPensjonsalder: FremskrevetPensjonUnderUtbetaling? = null
     var pensjonVedUttak: PensjonUnderUtbetaling? = null
     var fremskrevetAfpLivsvarig: FremskrevetAfpLivsvarig? = null
-    @Deprecated("Avvikles.", replaceWith = ReplaceWith("afpPrivatLivsvarigVedUttak"))
-    var afpLivsvarigVedUttak: AfpLivsvarig? = null
     var afpPrivatLivsvarigVedUttak: AfpPrivatLivsvarig? = null
     var afpLivsvarigBrukt = false
     @Deprecated("Avvikles.", replaceWith = ReplaceWith("fremskrevetPensjonVedNormertPensjonsAlder"))
