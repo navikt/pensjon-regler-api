@@ -31,5 +31,6 @@ enum class GrunnlagkildeEnum {
     MPNOMR,
     REGULERING,
     BA,
-    OMSORGSOPPTJENING
+    OMSORGSOPPTJENING,
+    EESSI
 }
