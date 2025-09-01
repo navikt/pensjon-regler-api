@@ -32,7 +32,7 @@ open class PersonDetalj : Serializable {
     /**
      * Representerer personens sivilstand i henhold til TPS.
      */
-    var sivilstandTypeEnum: SivilstandEnum? = null
+    var sivilstandTypeEnum: SivilstandEnum = SivilstandEnum.NULL
 
     /**
      * Eventuell angivelse av hvilken annen person som sivilstandType relaterer seg til,
