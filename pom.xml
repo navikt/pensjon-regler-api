@@ -14,7 +14,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.release>17</maven.compiler.release>
         <kotlin.code.style>official</kotlin.code.style>
-        <jackson.version>2.17.0</jackson.version>
+        <jackson.version>2.20</jackson.version>
     </properties>
 
 	<dependencies>
