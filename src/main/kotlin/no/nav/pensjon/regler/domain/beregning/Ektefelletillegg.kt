@@ -60,7 +60,7 @@ class Ektefelletillegg : Ytelseskomponent {
      */
     var skattefritak = false
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.ET
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.ET
 
     constructor() {
         formelKodeEnum = FormelKodeEnum.ETx

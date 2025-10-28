@@ -8,5 +8,5 @@ import java.io.Serializable
  * Brukes kun til G-omregning i BEF270.
  */
 class Mendel : Ytelseskomponent(), Serializable {
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.MENDEL
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.MENDEL
 }

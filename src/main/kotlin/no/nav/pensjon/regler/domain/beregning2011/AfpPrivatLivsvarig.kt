@@ -7,5 +7,5 @@ class AfpPrivatLivsvarig : AbstraktAfpLivsvarig() {
     var afpProsentgrad: Double = 0.0
     var afpForholdstall: Double = 0.0
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.AFP_PRIVAT_LIVSVARIG
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.AFP_PRIVAT_LIVSVARIG
 }

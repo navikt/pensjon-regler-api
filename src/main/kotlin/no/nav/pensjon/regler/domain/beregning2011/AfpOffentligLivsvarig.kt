@@ -7,6 +7,6 @@ open class AfpOffentligLivsvarig : AbstraktAfpLivsvarig() {
     var sistRegulertG: Int? = null
     var uttaksdato: LocalDate? = null
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.AFP_OFFENTLIG_LIVSVARIG
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.AFP_OFFENTLIG_LIVSVARIG
 
 }

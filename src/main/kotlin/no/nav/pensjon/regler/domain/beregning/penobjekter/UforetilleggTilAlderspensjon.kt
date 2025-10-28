@@ -10,6 +10,6 @@ import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 class UforetilleggTilAlderspensjon : Ytelseskomponent() {
     var beregning: Beregning? = null
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UFORETILLEGG_AP
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UFORETILLEGG_AP
 
 }

@@ -21,5 +21,5 @@ class Ventetillegg : Ytelseskomponent() {
      */
     var venteTilleggProsent = 0.0
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.VT
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.VT
 }

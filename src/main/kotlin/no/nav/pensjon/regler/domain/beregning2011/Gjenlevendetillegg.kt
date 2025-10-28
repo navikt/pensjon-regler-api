@@ -79,6 +79,6 @@ class Gjenlevendetillegg() : Ytelseskomponent(), UforetrygdYtelseskomponent, IFo
      */
     override val formelMap: HashMap<String, Formel> = hashMapOf()
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_GJT
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_GJT
 
 }

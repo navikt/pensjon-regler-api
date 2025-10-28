@@ -19,7 +19,7 @@ open class Pensjonstillegg : Ytelseskomponent {
     var minstepensjonsnivaSatsTypeEnum: MinstePensjonsnivaSatsEnum? = null
     var justertMinstePensjonsniva: JustertMinstePensjonsniva? = null
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.PT
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.PT
 
     constructor() {
         formelKodeEnum = FormelKodeEnum.PenTx

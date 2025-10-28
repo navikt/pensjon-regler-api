@@ -25,7 +25,7 @@ class BarnetilleggFellesbarnUT : AbstraktBarnetilleggUT, Serializable {
      */
     var annenForelderUforetrygdForJustering = 0
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_TFB
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_TFB
 
     constructor() {
         formelKodeEnum = FormelKodeEnum.BTx
