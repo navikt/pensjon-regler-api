@@ -6,7 +6,7 @@ import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 import java.io.Serializable
 
 class BarnetilleggSerkullsbarn : AbstraktBarnetillegg, Serializable {
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.TSB
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.TSB
 
     constructor() {
         formelKodeEnum = FormelKodeEnum.BTx

@@ -7,7 +7,7 @@ import java.io.Serializable
 
 class BarnetilleggFellesbarn : AbstraktBarnetillegg, Serializable {
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.TFB
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.TFB
 
     constructor() {
         formelKodeEnum = FormelKodeEnum.BTx

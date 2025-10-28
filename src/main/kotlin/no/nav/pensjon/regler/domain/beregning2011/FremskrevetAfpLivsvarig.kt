@@ -7,5 +7,5 @@ class FremskrevetAfpLivsvarig : AbstraktAfpLivsvarig(), Regulering {
     override var gap = 0
     var gjennomsnittligUttaksgradSisteAr = 0.0
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.FREM_AFP_LIVSVARIG
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.FREM_AFP_LIVSVARIG
 }

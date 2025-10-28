@@ -7,5 +7,5 @@ import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
  */
 class SkattefriUforetrygdOrdiner : BeregningYtelseskomponent() {
     var pensjonsgrad = 0
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.SKATT_F_UT_ORDINER
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.SKATT_F_UT_ORDINER
 }

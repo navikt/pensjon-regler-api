@@ -38,5 +38,5 @@ class KrigOgGammelYrkesskade : Ytelseskomponent(), Serializable {
      */
     var mendel = 0
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.KRIG_GY
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.KRIG_GY
 }

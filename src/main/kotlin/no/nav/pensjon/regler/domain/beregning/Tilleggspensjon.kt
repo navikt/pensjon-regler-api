@@ -43,7 +43,7 @@ open class Tilleggspensjon : Ytelseskomponent, IFormelProvider {
      */
     override var formelMap: HashMap<String, Formel> = HashMap()
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.TP
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.TP
 
     constructor() {
         formelKodeEnum = FormelKodeEnum.TPx

@@ -35,5 +35,5 @@ class EktefelletilleggUT : Ytelseskomponent(), UforetrygdYtelseskomponent {
      */
     var upForSkattekomp = 0.0
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_ET
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_ET
 }

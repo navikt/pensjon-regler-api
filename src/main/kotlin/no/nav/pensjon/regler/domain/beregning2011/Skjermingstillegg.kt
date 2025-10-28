@@ -11,6 +11,6 @@ class Skjermingstillegg : Ytelseskomponent() {
     var basTp_bruttoPerAr: Double? = null
     var basPenT_bruttoPerAr: Double? = null
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.SKJERMT
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.SKJERMT
 
 }

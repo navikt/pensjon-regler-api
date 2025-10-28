@@ -8,5 +8,5 @@ class Sertillegg : Ytelseskomponent() {
      */
     var pSats_st = 0.0
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.ST
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.ST
 }

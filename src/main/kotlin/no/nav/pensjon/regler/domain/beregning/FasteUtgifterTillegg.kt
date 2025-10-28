@@ -6,5 +6,5 @@ import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
  * Tillegget for faste utgifter. Brukes ved institusjonsopphold.
  */
 class FasteUtgifterTillegg : Ytelseskomponent() {
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.FAST_UTGIFT_T
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.FAST_UTGIFT_T
 }

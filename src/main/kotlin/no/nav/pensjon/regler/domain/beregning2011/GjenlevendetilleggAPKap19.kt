@@ -32,5 +32,5 @@ class GjenlevendetilleggAPKap19 : Ytelseskomponent(), IFormelProvider {
      */
     override var formelMap: HashMap<String, Formel> = HashMap()
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.AP_GJT_KAP19
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.AP_GJT_KAP19
 }

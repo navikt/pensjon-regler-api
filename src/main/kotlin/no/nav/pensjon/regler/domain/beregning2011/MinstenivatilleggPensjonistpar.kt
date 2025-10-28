@@ -10,6 +10,6 @@ class MinstenivatilleggPensjonistpar : Ytelseskomponent() {
     var bruker: BeregningsInformasjonMinstenivatilleggPensjonistpar? = null
     var ektefelle: BeregningsInformasjonMinstenivatilleggPensjonistpar? = null
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.MIN_NIVA_TILL_PPAR
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.MIN_NIVA_TILL_PPAR
 
 }

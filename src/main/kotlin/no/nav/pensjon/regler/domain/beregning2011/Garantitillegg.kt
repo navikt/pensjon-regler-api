@@ -4,5 +4,5 @@ import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 
 class Garantitillegg : Ytelseskomponent() {
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.GAT
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.GAT
 }

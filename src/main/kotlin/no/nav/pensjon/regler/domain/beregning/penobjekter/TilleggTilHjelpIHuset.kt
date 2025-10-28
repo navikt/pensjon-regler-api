@@ -10,6 +10,6 @@ import java.io.Serializable
 class TilleggTilHjelpIHuset : Ytelseskomponent(), Serializable {
     var grunnlagForUtbetaling = 0
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.HJELP_I_HUS
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.HJELP_I_HUS
 
 }

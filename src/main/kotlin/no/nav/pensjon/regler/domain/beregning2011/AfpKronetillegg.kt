@@ -4,5 +4,5 @@ import no.nav.pensjon.regler.domain.beregning.Ytelseskomponent
 import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 
 class AfpKronetillegg : Ytelseskomponent() {
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.AFP_KRONETILLEGG
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.AFP_KRONETILLEGG
 }

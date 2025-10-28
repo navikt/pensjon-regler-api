@@ -8,5 +8,5 @@ class FasteUtgifterTilleggUT : Ytelseskomponent() {
     var nettoRestAr: Int? = null
     var avkortningsbelopPerAr: Int? = null
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_FAST_UTGIFT_T
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_FAST_UTGIFT_T
 }

@@ -87,7 +87,7 @@ abstract class Ytelseskomponent : Serializable {
     /**
      * Type ytelse, verdi fra kodeverk.
      */
-    abstract var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum
+    abstract val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum
 
     /**
      * Liste av merknader.
@@ -130,7 +130,6 @@ abstract class Ytelseskomponent : Serializable {
         bruttoPerAr = ytelseskomponent.bruttoPerAr
         nettoPerAr = ytelseskomponent.nettoPerAr
         fradragPerAr = ytelseskomponent.fradragPerAr
-        ytelsekomponentTypeEnum = ytelseskomponent.ytelsekomponentTypeEnum
 
         if (ytelseskomponent.formelKodeEnum != null) {
             formelKodeEnum = ytelseskomponent.formelKodeEnum

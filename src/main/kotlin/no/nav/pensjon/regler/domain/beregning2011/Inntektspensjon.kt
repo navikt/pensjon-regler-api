@@ -10,6 +10,6 @@ class Inntektspensjon : Ytelseskomponent() {
      */
     var eksportBrok: Brok? = null
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.IP
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.IP
 
 }

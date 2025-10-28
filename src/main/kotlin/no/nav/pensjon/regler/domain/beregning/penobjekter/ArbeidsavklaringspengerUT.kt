@@ -7,6 +7,6 @@ import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
  */
 class ArbeidsavklaringspengerUT : MotregningYtelseskomponent() {
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_AAP
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.UT_AAP
 
 }

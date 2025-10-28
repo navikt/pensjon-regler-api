@@ -34,7 +34,7 @@ open class Grunnpensjon : Ytelseskomponent {
      */
     var anvendtTrygdetid: AnvendtTrygdetid? = null
 
-    override var ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.GP
+    override val ytelsekomponentTypeEnum: YtelseskomponentTypeEnum = YtelseskomponentTypeEnum.GP
 
     constructor() {
         formelKodeEnum = FormelKodeEnum.GPx
