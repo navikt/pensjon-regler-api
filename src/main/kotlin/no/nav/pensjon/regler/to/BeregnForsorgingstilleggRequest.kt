@@ -47,6 +47,7 @@ class BeregnForsorgingstilleggRequest : ServiceRequest() {
     /**
      * AfpOffentligLivsvarigGrunnlag for tilstøtende
      */
+    @Deprecated("Felt ikke i bruk. AfpOffentligLivsvarig er forventet satt på beregningsResultatAlderspensjonTilstotende")
     var afpOffentligLivsvarigGrunnlagTilstotende: AfpOffentligLivsvarigGrunnlag? = null
 
     /**
@@ -96,7 +97,7 @@ class BeregnForsorgingstilleggRequest : ServiceRequest() {
     var vilkarsvedtakListe: List<VilkarsVedtak> = ArrayList()
 
     /**
-     * Virkningstidspunkt for søknad om forsærgingstillegg.
+     * Virkningstidspunkt for beregning av forsørgingstillegg.
      */
     var virk: Date? = null
 }

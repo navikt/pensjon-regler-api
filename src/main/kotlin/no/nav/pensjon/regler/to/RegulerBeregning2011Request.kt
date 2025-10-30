@@ -13,6 +13,8 @@ class RegulerBeregning2011Request : ServiceRequest() {
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     var uttaksgradListe: ArrayList<Uttaksgrad> = ArrayList()
     var fodselsdato: Date? = null
+
+    @Deprecated("Felt ikke i bruk. AfpOffentligLivsvarig er forventet satt på beregningsResultat")
     var afpOffentligLivsvarigGrunnlag: AfpOffentligLivsvarigGrunnlag? = null
 
     /**
