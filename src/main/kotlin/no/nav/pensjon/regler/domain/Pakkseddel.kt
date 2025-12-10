@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.domain
 
+import com.fasterxml.jackson.annotation.JsonGetter
 import java.io.Serializable
 
 /**
@@ -14,8 +15,19 @@ class Pakkseddel : Serializable {
      * sendes til saksbehandler for manuell behandling.
      * For PEN vil resultatOK brukes til å avgjøre om resultatet skal lagres eller ikke.
      */
-    var kontrollTjenesteOk = true
-    var annenTjenesteOk = true
+    /**
+     * Er 'true' dersom ingen feilmeldinger er vedlagt pakkseddelen (merknadslisten er tom).
+     */
+    @get:JsonGetter
+    val kontrollTjenesteOk: Boolean
+        get() = merknadListe.isEmpty()
+
+    /**
+     * Er 'true' dersom ingen feilmeldinger er vedlagt pakkseddelen (merknadslisten er tom).
+     */
+    @get:JsonGetter
+    val annenTjenesteOk: Boolean
+        get() = merknadListe.isEmpty()
 
     /**
      * Liste av merknader. Beskriver hvordan pensjon-regler kom frem til `kontrollTjenesteOk`.
