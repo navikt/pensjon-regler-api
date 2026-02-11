@@ -1,0 +1,25 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+
+template: |
+  ## Versjonering
+
+  Ta høyde for versjonerings standard. Vi følger [Semantic Versioning](https://semver.org/):
+  - **Major** – Inkompatible API-endringer
+  - **Minor** – Ny funksjonalitet som er bakoverkompatibel
+  - **Patch** – Bakoverkompatible feilrettinger
+
+  ## Endringer
+
+  $CHANGES
+
+  Velg hva som passer.
+  
+  ## 🚀 Ny funksjonalitet
+  -
+
+  ## 💥 Brytende endringer
+  -
+
+  ## 📦 Avhengighetsoppdateringer
+  -
