@@ -23,7 +23,7 @@ open class Grunnpensjon : Ytelseskomponent {
     var pSats_gp = 0.0
 
     /**
-     * Ordinår, forhøyet
+     * Ordinår, forhøyet.
      */
     var satsTypeEnum: GPSatsTypeEnum? = null
 
