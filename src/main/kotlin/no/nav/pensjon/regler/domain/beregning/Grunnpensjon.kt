@@ -41,7 +41,7 @@ open class Grunnpensjon : Ytelseskomponent {
     }
 
     /**
-     * Copy Constructor
+     * Copy Constructor.
      */
     constructor(gp: Grunnpensjon) : super(gp) {
         pSats_gp = gp.pSats_gp
