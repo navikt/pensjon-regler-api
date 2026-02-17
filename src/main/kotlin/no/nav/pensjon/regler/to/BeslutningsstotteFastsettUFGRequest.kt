@@ -1,8 +1,14 @@
 package no.nav.pensjon.regler.to
 
-import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
+import no.nav.pensjon.regler.domain.vedtak.InntektEtterUforhet
+import no.nav.pensjon.regler.domain.vedtak.InntektForUforhet
+import java.util.Date
 
 class BeslutningsstotteFastsettUFGRequest(
-    /** Vilkårsvedtaket for uføretrygd. Påkrevd. */
-    var vilkarsvedtak: VilkarsVedtak
+    /**
+     * Fra siste beregningsvilkar periode:
+     */
+    var inntektForUforhet: InntektForUforhet,
+    var inntektEtterUforhet: InntektEtterUforhet,
+    var fomDato: Date
 ) : ServiceRequest()
