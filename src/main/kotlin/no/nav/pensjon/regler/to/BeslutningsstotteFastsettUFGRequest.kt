@@ -10,5 +10,4 @@ class BeslutningsstotteFastsettUFGRequest(
      */
     var inntektForUforhet: InntektForUforhet,
     var inntektEtterUforhet: InntektEtterUforhet,
-    var fomDato: Date
 ) : ServiceRequest()
