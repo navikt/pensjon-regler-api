@@ -24,7 +24,8 @@ Merge release-branchen inn til master.
 
 ### 4. Lage manuell release
 
-Gå til GitHub og lag en ny release manuelt fra master.
+Hver gang noe merges til master opprettes eller oppdateres automatisk en release-draft på GitHub. Denne draften samler opp alle endringer fortløpende og fungerer som en mal/guide for release notes. Ved flere merges til master oppdateres den samme draften kontinuerlig inntil en release publiseres.
 
-Merk: Teksten som vises i pensjon-regler ved ny release støtter ikke formattering (punktlister osv. fungerer ikke). Bruk derfor `-` som skilletegn istedenfor punktlister i release notes-teksten;
-hold det enkelt.
+Gå til GitHub → Releases → finn draften, juster teksten ved behov, og publiser.
+
+Merk: Teksten som vises i pensjon-regler ved ny release støtter ikke formattering (punktlister, hyperlenker osv. fungerer ikke). Bruk derfor `-` som skilletegn istedenfor punktlister i release notes-teksten.
