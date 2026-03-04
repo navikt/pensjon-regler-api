@@ -4,7 +4,7 @@ import no.nav.pensjon.regler.domain.enum.BorMedTypeEnum
 import no.nav.pensjon.regler.domain.vedtak.InntektForUforhet
 import no.nav.pensjon.regler.domain.vedtak.Uforetidspunkt
 import no.nav.pensjon.regler.domain.vedtak.UngUfor
-import java.util.*
+import java.time.LocalDate
 
 class BeslutningsstotteBeregnIFURequest(
     /**
@@ -19,5 +19,5 @@ class BeslutningsstotteBeregnIFURequest(
     var benyttetSivilstandEnum: BorMedTypeEnum? = null
 
     /** Virkningsdato fom, fra vilkarsvedtak */
-    var virkFom: Date? = null
+    var virkFom: LocalDate? = null
 }
