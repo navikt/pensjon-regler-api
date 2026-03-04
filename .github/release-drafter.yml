@@ -10,11 +10,12 @@ template: |
   - **Minor** – Ny funksjonalitet som er bakoverkompatibel
   - **Patch** – Bakoverkompatible feilrettinger
 
-  ## Endringer
-
   $CHANGES
 
   Velg hva som passer.
+  
+  ## 🛠️ Endringer
+  -
   
   ## 🚀 Ny funksjonalitet
   -
