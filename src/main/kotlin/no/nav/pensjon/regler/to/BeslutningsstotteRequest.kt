@@ -6,6 +6,7 @@ import no.nav.pensjon.regler.domain.grunnlag.InntektKontrollGrunnlag
 import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 
+@Deprecated("Bruk BeslutningsstotteBeregn*Request")
 class BeslutningsstotteRequest : ServiceRequest() {
     var beslutningsstotteTypeEnum: BeslutningsstotteTypeEnum? = null
     var persongrunnlag: Persongrunnlag? = null
