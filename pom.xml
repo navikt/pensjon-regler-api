@@ -8,11 +8,11 @@
 	<name>NAV :: Pensjon-Regler API</name>
 
     <properties>
-        <java.jdk.version>17</java.jdk.version>
+        <java.jdk.version>25</java.jdk.version>
         <kotlin.version>2.3.10</kotlin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.release>25</maven.compiler.release>
         <kotlin.code.style>official</kotlin.code.style>
         <jackson.version>2.21.1</jackson.version>
     </properties>
