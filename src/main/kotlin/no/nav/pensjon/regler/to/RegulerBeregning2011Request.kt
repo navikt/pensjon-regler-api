@@ -14,9 +14,6 @@ class RegulerBeregning2011Request : ServiceRequest() {
     var uttaksgradListe: ArrayList<Uttaksgrad> = ArrayList()
     var fodselsdato: Date? = null
 
-    @Deprecated("Felt ikke i bruk. AfpOffentligLivsvarig er forventet satt på beregningsResultat")
-    var afpOffentligLivsvarigGrunnlag: AfpOffentligLivsvarigGrunnlag? = null
-
     /**
      * Representerer grunnlaget for normert pensjonsalder
      *
