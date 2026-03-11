@@ -3,6 +3,7 @@ package no.nav.pensjon.regler.domain.grunnlag
 import no.nav.pensjon.regler.domain.enum.YrkeYrkesskadeEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Grunnlagsdata for yrkesskade. Denne er et tillegg til Uforegrunnlag. Hvis
@@ -14,7 +15,9 @@ class Yrkesskadegrunnlag : Serializable {
     /**
      * Dato for skadetidspunkt.
      */
+    @Deprecated("Use ystLd instead")
     var yst: Date? = null
+    var ystLd: LocalDate? = null
 
     /**
      * Uføregrad ved yrkesskade, heltall 0-100.Kan ikke være større enn

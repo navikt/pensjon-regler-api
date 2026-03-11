@@ -10,6 +10,7 @@ import no.nav.pensjon.regler.domain.enum.VilkarVurderingEnum
 import no.nav.pensjon.regler.domain.krav.Kravlinje
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class VilkarsVedtak : Serializable {
     /**
@@ -41,7 +42,9 @@ class VilkarsVedtak : Serializable {
     /**
      * Dato vilkårsvedtaket har virkning fra.
      */
+    @Deprecated("Use virkFomLd instead")
     var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
 
     /**
      * Dato vilkårsvedtaket har virkning til. Denne skal ikke være satt, og det
@@ -49,19 +52,25 @@ class VilkarsVedtak : Serializable {
      * vil pensjon-regler sjekke at virken på ytelsen det beregnes for er nnnnenfor
      * virkFom-virkTom. Er den utenfor blir vedtaket behandlet som ikke gyldig.
      */
+    @Deprecated("Use virkTomLd instead")
     var virkTom: Date? = null
+    var virkTomLd: LocalDate? = null
 
     /**
      * Dato Første innvilgede vilkårsvedtak personen har fått fra trygden.
      * Eks: har personen tidligere hatt UP og før nå AP vil det være datoen for Første UP-vedtaket.
      */
+    @Deprecated("Use forsteVirkLd instead")
     var forsteVirk: Date? = null
+    var forsteVirkLd: LocalDate? = null
 
     /**
      * Dato dette vilkårsvedtakets kravlinje fårst ble innvilget.
      * Eks: personen fikk innvilget gjenlevenderett fom dette virkningstidspunkt.
      */
+    @Deprecated("Use kravlinjeForsteVirkLd instead")
     var kravlinjeForsteVirk: Date? = null
+    var kravlinjeForsteVirkLd: LocalDate? = null
 
     /**
      * Kravlinje som er vilkårsprøvd.

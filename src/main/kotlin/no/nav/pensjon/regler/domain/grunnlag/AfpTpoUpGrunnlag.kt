@@ -2,6 +2,7 @@ package no.nav.pensjon.regler.domain.grunnlag
 
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class AfpTpoUpGrunnlag : Serializable {
     /**
@@ -12,6 +13,8 @@ class AfpTpoUpGrunnlag : Serializable {
     /**
      * Dato som beløpet ovenfor var gyldig
      */
+    @Deprecated("Use virkFomLd instead")
     var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
 
 }

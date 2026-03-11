@@ -6,6 +6,7 @@ import no.nav.pensjon.regler.domain.enum.AvtaletypeEnum
 import no.nav.pensjon.regler.domain.enum.LandkodeEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class Trygdeavtale : Serializable {
     /**
@@ -38,5 +39,7 @@ class Trygdeavtale : Serializable {
     /**
      * Dato for kravdato i avtale
      */
+    @Deprecated("Use kravDatoIAvtalelandLd instead")
     var kravDatoIAvtaleland: Date? = null
+    var kravDatoIAvtalelandLd: LocalDate? = null
 }

@@ -3,6 +3,7 @@ package no.nav.pensjon.regler.to
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Requestobjekt for BEF2001 Identifiser regelendringer.
@@ -29,10 +30,14 @@ class IdentifiserRegelendringerRequest : ServiceRequest() {
     /**
      * Fra og med dato for regelendringer.
      */
+    @Deprecated("Use fomLd instead")
     var fom: Date? = null
+    var fomLd: LocalDate? = null
 
     /**
      * Til og med dato for regelendringer. Ved uviss tom-dato kan dagens dato benyttes.
      */
+    @Deprecated("Use tomLd instead")
     var tom: Date? = null
+    var tomLd: LocalDate? = null
 }

@@ -2,6 +2,7 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class LonnsvekstInformasjon : Serializable {
     /**
@@ -12,7 +13,9 @@ class LonnsvekstInformasjon : Serializable {
     /**
      * @param reguleringsDato the reguleringsDato to set
      */
+    @Deprecated("Use reguleringsDatoLd instead")
     var reguleringsDato: Date? = null
+    var reguleringsDatoLd: LocalDate? = null
 
     /**
      * @param uttaksgradVedRegulering the uttaksgradVedRegulering to set

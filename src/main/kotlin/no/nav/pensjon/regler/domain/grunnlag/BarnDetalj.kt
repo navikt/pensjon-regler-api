@@ -3,6 +3,7 @@ package no.nav.pensjon.regler.domain.grunnlag
 import no.nav.pensjon.regler.domain.PenPerson
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class BarnDetalj : Serializable {
     /**
@@ -19,12 +20,16 @@ class BarnDetalj : Serializable {
     /**
      * Fra-og-med dato for når barnet bor sammen med begge foreldrene.
      */
+    @Deprecated("Use borFomDatoLd instead")
     var borFomDato: Date? = null
+    var borFomDatoLd: LocalDate? = null
 
     /**
      * Til-og-med dato for når barnet bor sammen med begge foreldrene.
      */
+    @Deprecated("Use borTomDatoLd instead")
     var borTomDato: Date? = null
+    var borTomDatoLd: LocalDate? = null
 
     /**
      * Angir om barnet har hatt inntekt over 1G.
