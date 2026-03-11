@@ -18,6 +18,9 @@ class FremskrivingsDetaljer : Serializable, IFremskriving {
         if (frem.justeringTomDato != null) {
             justeringTomDato = frem.justeringTomDato!!.clone() as Date
         }
+        if(frem.justeringTomDatoLd != null) {
+            justeringTomDatoLd = frem.justeringTomDatoLd
+        }
         justeringsfaktor = frem.justeringsfaktor
         teller = frem.teller
         nevner = frem.nevner

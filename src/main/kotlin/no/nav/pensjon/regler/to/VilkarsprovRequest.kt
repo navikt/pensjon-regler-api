@@ -18,11 +18,21 @@ class VilkarsprovRequest : ServiceRequest {
     var vilkarsvedtakliste: List<VilkarsVedtak> = mutableListOf()
 
     constructor()
+
+    @Deprecated("Use fomLd/tomLd constructor instead")
     constructor(kravhode: Kravhode?, sisteBeregning: SisteBeregning?, fom: Date?, tom: Date?) {
         this.kravhode = kravhode
         this.sisteBeregning = sisteBeregning
         this.fom = fom
         this.tom = tom
+        this.vilkarsvedtakliste = mutableListOf()
+    }
+
+    constructor(kravhode: Kravhode?, sisteBeregning: SisteBeregning?, fom: LocalDate?, tom: LocalDate?) {
+        this.kravhode = kravhode
+        this.sisteBeregning = sisteBeregning
+        this.fomLd = fom
+        this.tomLd = tom
         this.vilkarsvedtakliste = mutableListOf()
     }
 }

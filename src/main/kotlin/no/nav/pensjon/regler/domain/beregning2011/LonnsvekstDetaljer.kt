@@ -17,6 +17,9 @@ class LonnsvekstDetaljer : Serializable, ILonnsvekst {
         if (lvd.justeringTomDato != null) {
             justeringTomDato = lvd.justeringTomDato!!.clone() as Date
         }
+        if(lvd.justeringTomDatoLd != null) {
+            justeringTomDatoLd = lvd.justeringTomDatoLd
+        }
         justeringsfaktor = lvd.justeringsfaktor
         lonnsvekst = lvd.lonnsvekst
     }
