@@ -6,6 +6,7 @@ import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Simulering
@@ -25,7 +26,9 @@ class Simulering : Serializable {
     /**
      * Dato for når bruker ønsker å simulere uttak av pensjon fra.
      */
+    @Deprecated("Use uttaksdatoLd instead")
     var uttaksdato: Date? = null
+    var uttaksdatoLd: LocalDate? = null
 
     /**
      * Liste av tilknyttede personer.

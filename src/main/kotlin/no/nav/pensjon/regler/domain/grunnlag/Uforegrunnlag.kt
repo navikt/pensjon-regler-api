@@ -3,6 +3,7 @@ package no.nav.pensjon.regler.domain.grunnlag
 import no.nav.pensjon.regler.domain.enum.YrkeEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class Uforegrunnlag : Serializable {
     /**
@@ -13,12 +14,16 @@ class Uforegrunnlag : Serializable {
     /**
      * Dato for uføretidspunktet.
      */
+    @Deprecated("Use uftLd instead")
     var uft: Date? = null
+    var uftLd: LocalDate? = null
 
     /**
      * Virkningstidspunkt for hendelsen Uforegrunnlaget representerer.
      */
+    @Deprecated("Use uftVirkLd instead")
     var uftVirk: Date? = null
+    var uftVirkLd: LocalDate? = null
 
     /**
      * Inntekt før uførhet.Normalinntekten personen ville hatt på
@@ -40,7 +45,9 @@ class Uforegrunnlag : Serializable {
     /**
      * Dato for rett til friinntekt.
      */
+    @Deprecated("Use friinntektsDatoLd instead")
     var friinntektsDato: Date? = null
+    var friinntektsDatoLd: LocalDate? = null
 
     /**
      * Om tilfellet er en reaktivisering- f.eks har forsøkt å jobbe, men forsøket feilet.
@@ -94,7 +101,9 @@ class Uforegrunnlag : Serializable {
     /*
        * Alternativt uføretidspunkt ung ufør ved krav før 36 år.
        */
+    @Deprecated("Use altUftUngUforLd instead")
     var altUftUngUfor: Date? = null
+    var altUftUngUforLd: LocalDate? = null
 
     /**
      * Hele eller deler av uførheten skyldes yrkesskade.

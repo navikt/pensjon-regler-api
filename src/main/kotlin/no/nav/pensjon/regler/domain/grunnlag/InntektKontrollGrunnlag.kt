@@ -3,6 +3,7 @@ package no.nav.pensjon.regler.domain.grunnlag
 import no.nav.pensjon.regler.domain.beregning2011.BeregnetUtbetalingsperiode
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class InntektKontrollGrunnlag : Serializable {
     /** Inneholder faktiske inntekter mottatt av bruker hittil i år.  */
@@ -30,6 +31,8 @@ class InntektKontrollGrunnlag : Serializable {
     var beregnetUtbetalingsperiodeEPSListe: List<BeregnetUtbetalingsperiode> = mutableListOf()
 
     /** Angir hvilken måned som kontrolleres.  */
+    @Deprecated("Use kontrolldatoLd instead")
     var kontrolldato: Date? = null
+    var kontrolldatoLd: LocalDate? = null
 
 }

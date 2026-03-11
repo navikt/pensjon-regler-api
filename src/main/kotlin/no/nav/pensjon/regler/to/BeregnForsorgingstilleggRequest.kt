@@ -7,6 +7,7 @@ import no.nav.pensjon.regler.domain.grunnlag.EtteroppgjorGrunnlag
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Objektet inneholder requesten for tjenesten BeregnForsorgingstillegg
@@ -99,5 +100,7 @@ class BeregnForsorgingstilleggRequest : ServiceRequest() {
     /**
      * Virkningstidspunkt for beregning av forsørgingstillegg.
      */
+    @Deprecated("Use virkLd instead")
     var virk: Date? = null
+    var virkLd: LocalDate? = null
 }

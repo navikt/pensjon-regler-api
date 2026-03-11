@@ -6,13 +6,16 @@ import no.nav.pensjon.regler.domain.grunnlag.InfoPavirkendeYtelse
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
+import java.time.LocalDate
 
 class RevurderingAlderspensjon2016Request : ServiceRequest() {
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: List<VilkarsVedtak> = Vector()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var epsMottarPensjon = false
+    @Deprecated("Use virkFomLd instead")
     var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
     var forrigeAldersBeregning: SisteAldersberegning2016? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
 }

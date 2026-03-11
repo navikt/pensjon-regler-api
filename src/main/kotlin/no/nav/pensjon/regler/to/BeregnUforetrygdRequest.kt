@@ -6,12 +6,17 @@ import no.nav.pensjon.regler.domain.grunnlag.EtteroppgjorGrunnlag
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
+import java.time.LocalDate
 
 class BeregnUforetrygdRequest : ServiceRequest() {
     var kravhode: Kravhode? = null
     var vilkarsvedtaksliste = Vector<VilkarsVedtak>()
+    @Deprecated("Use virkFomLd instead")
     var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
+    @Deprecated("Use virkTomLd instead")
     var virkTom: Date? = null
+    var virkTomLd: LocalDate? = null
     var forrigeGjenlevendetillegg: Gjenlevendetillegg? = null
 
     /**

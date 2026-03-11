@@ -5,6 +5,7 @@ import no.nav.pensjon.regler.domain.enum.ProRataBeregningTypeEnum
 import no.nav.pensjon.regler.domain.enum.UforetypeEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class BeregningUforeperiode : Serializable {
     /**
@@ -17,7 +18,9 @@ class BeregningUforeperiode : Serializable {
      * Dato for uføretidspunktet.
      */
     @JvmField
+    @Deprecated("Use uftLd instead")
     var uft: Date? = null
+    var uftLd: LocalDate? = null
 
     /**
      * Angir om Uføregraden er ren Uføre,inneholder delvis yrke eller bare yrke.
@@ -64,25 +67,33 @@ class BeregningUforeperiode : Serializable {
      * Dato for virkningsåret for denne Uføreperioden.
      */
     @JvmField
+    @Deprecated("Use virkLd instead")
     var virk: Date? = null
+    var virkLd: LocalDate? = null
 
     /**
      * Dato for når Uføreperioden avsluttes.
      */
     @JvmField
+    @Deprecated("Use uftTomLd instead")
     var uftTom: Date? = null
+    var uftTomLd: LocalDate? = null
 
     /**
      * Dato for når Uføregraden starter.
      */
     @JvmField
+    @Deprecated("Use ufgFomLd instead")
     var ufgFom: Date? = null
+    var ufgFomLd: LocalDate? = null
 
     /**
      * Dato for når Uføregraden avsluttes.
      */
     @JvmField
+    @Deprecated("Use ufgTomLd instead")
     var ufgTom: Date? = null
+    var ufgTomLd: LocalDate? = null
 
     /**
      * Fødselsår for yngste barn.
@@ -218,7 +229,9 @@ class BeregningUforeperiode : Serializable {
      * Det uføretidspunkt som er angitt for perioden, men ikke nødvendigvis anvendt.
      * **/
     @JvmField
+    @Deprecated("Use angittUforetidspunktLd instead")
     var angittUforetidspunkt: Date? = null
+    var angittUforetidspunktLd: LocalDate? = null
 
     /**
      * Antatt årlig inntekt før uføretidspunktet (brukes i fastsettelse av opptjening til alderspensjon etter kapittel 19).

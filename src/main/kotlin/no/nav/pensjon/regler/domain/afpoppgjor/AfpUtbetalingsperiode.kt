@@ -3,17 +3,22 @@ package no.nav.pensjon.regler.domain.afpoppgjor
 import no.nav.pensjon.regler.domain.grunnlag.AfpTpoUpGrunnlag
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class AfpUtbetalingsperiode : Serializable {
     /**
      * Periodens fradato - not null
      */
+    @Deprecated("Use virkFomLd instead")
     var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
 
     /**
      * Periodens tildato
      */
+    @Deprecated("Use virkTomLd instead")
     var virkTom: Date? = null
+    var virkTomLd: LocalDate? = null
 
     /**
      * Brutto månedlig AFP i perioden

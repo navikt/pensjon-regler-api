@@ -6,6 +6,7 @@ import no.nav.pensjon.regler.domain.enum.RegelverkTypeEnum
 import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.grunnlag.Uttaksgrad
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Dataoverføringsobjekt, inndata, for tjenesten fastsettTrygdetid.
@@ -14,17 +15,23 @@ class TrygdetidRequest : ServiceRequest() {
     /**
      * Virkningstidspunktets fom. for ønsket ytelse.
      */
+    @Deprecated("Use virkFomLd instead")
     var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
 
     /**
      * Tom for trygdetiden som skal beregnes. Kun for AP2011, AP2016 og AP2025.
      */
+    @Deprecated("Use virkTomLd instead")
     var virkTom: Date? = null
+    var virkTomLd: LocalDate? = null
 
     /**
      * Første virkningstidspunkt,denne må være satt dersom personen er SOKER i persongrunnlaget.
      */
+    @Deprecated("Use brukerForsteVirkLd instead")
     var brukerForsteVirk: Date? = null
+    var brukerForsteVirkLd: LocalDate? = null
 
     /**
      * Type ytelse (AP,UP osv)

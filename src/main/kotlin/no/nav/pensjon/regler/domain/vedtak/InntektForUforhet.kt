@@ -2,6 +2,7 @@ package no.nav.pensjon.regler.domain.vedtak
 
 import no.nav.pensjon.regler.domain.enum.MinimumIfuTypeEnum
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Angir inntekt før uførhet (IFU) og hvorvidt inntekten er minimumsgrense eller ikke.
@@ -27,7 +28,9 @@ class InntektForUforhet : AbstraktBeregningsvilkar() {
     /**
      * Dato for den kroneverdi inntekt er oppgitt i.
      */
+    @Deprecated("Use ifuDatoLd instead")
     var ifuDato: Date? = null
+    var ifuDatoLd: LocalDate? = null
 
     /**
      * Den inntekt før uførhet som er angitt av saksbehandler. Ikke justert for minimumsIFU.

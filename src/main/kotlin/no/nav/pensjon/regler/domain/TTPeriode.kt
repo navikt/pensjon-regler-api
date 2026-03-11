@@ -4,17 +4,22 @@ import no.nav.pensjon.regler.domain.enum.GrunnlagkildeEnum
 import no.nav.pensjon.regler.domain.enum.LandkodeEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 open class TTPeriode : Serializable {
     /**
      * Fra-og-med dato for perioden.
      */
+    @Deprecated("Use fomLd instead")
     var fom: Date? = null
+    var fomLd: LocalDate? = null
 
     /**
      * Til-og-med dato for perioden.
      */
+    @Deprecated("Use tomLd instead")
     var tom: Date? = null
+    var tomLd: LocalDate? = null
 
     /**
      * Skal bruker ha poeng for hele året i fom-datoen

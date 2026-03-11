@@ -9,6 +9,7 @@ import no.nav.pensjon.regler.domain.beregning2011.UtbetalingsgradUT
 import no.nav.pensjon.regler.domain.enum.LandkodeEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Persongrunnlag inneholder nødvendige data knyttet til en bestemt person.
@@ -25,13 +26,17 @@ class Persongrunnlag() : Serializable {
      * søkers Fødselsdato,brukes kun ved simuleringer.Da benyttes ikke reelle
      * personer.
      */
+    @Deprecated("Use fodselsdatoLd instead")
     var fodselsdato: Date? = null
+    var fodselsdatoLd: LocalDate? = null
 
     /**
      * Personens eventuelle dødsdato, brukes ved beregning av ytelser til
      * gjenlevende ektefelle og barn.
      */
+    @Deprecated("Use dodsdatoLd instead")
     var dodsdato: Date? = null
+    var dodsdatoLd: LocalDate? = null
 
     /**
      * Personens statsborgerskap.
@@ -58,7 +63,9 @@ class Persongrunnlag() : Serializable {
     /**
      * Dato for sist innmeldt i Folketrygden- for fremtidig trygdetid.
      */
+    @Deprecated("Use sistMedlITrygdenLd instead")
     var sistMedlITrygden: Date? = null
+    var sistMedlITrygdenLd: LocalDate? = null
 
     /**
      * Siste gyldige år for opptjening som benyttes for alderspensjon2011/2016/2025 og AFP Privat.
@@ -313,7 +320,9 @@ class Persongrunnlag() : Serializable {
      * Støttefelt for virk_ikke_ufor-hacket. Feltet er ikke forventet populert.
      */
     @JsonIgnore
+    @Deprecated("Use forsteVirkLd instead")
     var forsteVirk: Date? = null
+    var forsteVirkLd: LocalDate? = null
 
     /**
      * Representerer grunnlaget for normert pensjonsalder
