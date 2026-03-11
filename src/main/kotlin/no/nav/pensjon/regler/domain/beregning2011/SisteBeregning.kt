@@ -7,6 +7,7 @@ import no.nav.pensjon.regler.domain.enum.ResultattypeEnum
 import no.nav.pensjon.regler.domain.enum.SivilstandEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Felles grensesnitt for Siste beregninger slik som SisteBeregning1967, SisteAldersberegning2011, SisteGjenlevendeberegning
@@ -18,7 +19,9 @@ import java.util.*
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 abstract class SisteBeregning protected constructor() : Serializable {
+    @Deprecated("Use virkDatoLd instead")
     var virkDato: Date? = null
+    var virkDatoLd: LocalDate? = null
     var tt_anv = 0
     var resultatTypeEnum: ResultattypeEnum? = null
     var sivilstandTypeEnum: SivilstandEnum? = null

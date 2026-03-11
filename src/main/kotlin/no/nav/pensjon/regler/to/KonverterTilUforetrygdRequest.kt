@@ -5,13 +5,16 @@ import no.nav.pensjon.regler.domain.grunnlag.EtteroppgjorGrunnlag
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
+import java.time.LocalDate
 
 class KonverterTilUforetrygdRequest : ServiceRequest() {
     var kravhode: Kravhode? = null
     var sisteUforepensjonBeregning: SisteUforepensjonBeregning? = null
     var sisteUforepensjonBeregningTilRevurdering: SisteUforepensjonBeregning? = null
     var vilkarsvedtaksliste = Vector<VilkarsVedtak>()
+    @Deprecated("Use virkFomLd instead")
     var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
 
     // Brukes til å si om en beregning skal faktorkonverteres eller ikke
     var faktorkonvertering = false

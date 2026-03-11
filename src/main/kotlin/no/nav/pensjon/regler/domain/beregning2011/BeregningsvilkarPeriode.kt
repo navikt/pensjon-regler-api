@@ -3,6 +3,7 @@ package no.nav.pensjon.regler.domain.beregning2011
 import no.nav.pensjon.regler.domain.vedtak.*
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Husk at når du legger til nye "smarte metoder" som f.eks set/getInntektEtterUforhet(), at dette må gjøres også i VilkarsVedtak som da
@@ -13,12 +14,16 @@ class BeregningsvilkarPeriode : Serializable {
      * Fom dato for perioden de angitte beregningsvilkår og vilkår gjelder for
      */
     @JvmField
+    @Deprecated("Use fomDatoLd instead")
     var fomDato: Date? = null
+    var fomDatoLd: LocalDate? = null
     /**
      * Tom dato for perioden de angitte beregningsvilkår og vilkår gjelder for
      */
     @JvmField
+    @Deprecated("Use tomDatoLd instead")
     var tomDato: Date? = null
+    var tomDatoLd: LocalDate? = null
 
     /**
      * Liste av beregningsvilkår til bruk ved beregning av uføretrygd.

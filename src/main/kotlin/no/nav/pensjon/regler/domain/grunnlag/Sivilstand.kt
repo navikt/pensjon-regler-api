@@ -5,6 +5,7 @@ import no.nav.pensjon.regler.domain.enum.GrunnlagkildeEnum
 import no.nav.pensjon.regler.domain.enum.SivilstandEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class Sivilstand : Serializable {
     /**
@@ -15,12 +16,16 @@ class Sivilstand : Serializable {
     /**
      * Sivilstandens gyldighet fra-og-med dato.
      */
+    @Deprecated("Use fomLd instead")
     var fom: Date? = null
+    var fomLd: LocalDate? = null
 
     /**
      * Sivilstandens gyldighet til-og-med dato
      */
+    @Deprecated("Use tomLd instead")
     var tom: Date? = null
+    var tomLd: LocalDate? = null
 
     /**
      * Person sivilstanden refererer seg til, for eksempel ektefellen hvis *sivilstandType*="Ektefelle"

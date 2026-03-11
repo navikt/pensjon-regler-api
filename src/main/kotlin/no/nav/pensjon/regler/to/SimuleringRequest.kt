@@ -2,10 +2,13 @@ package no.nav.pensjon.regler.to
 
 import no.nav.pensjon.regler.domain.simulering.Simulering
 import java.util.*
+import java.time.LocalDate
 
 class SimuleringRequest() : ServiceRequest() {
     var simulering: Simulering? = null
+    @Deprecated("Use fomLd instead")
     var fom: Date? = null
+    var fomLd: LocalDate? = null
     var ektefelleMottarPensjon = false
     var beregnForsorgingstillegg = false
     var beregnInstitusjonsopphold = false

@@ -5,6 +5,7 @@ import no.nav.pensjon.regler.domain.enum.JustertPeriodeEnum
 import no.nav.pensjon.regler.domain.enum.YtelseVedDodEnum
 import no.nav.pensjon.regler.domain.trygdetid.Brok
 import java.util.*
+import java.time.LocalDate
 
 class Uforetrygdberegning : Beregning2011() {
     var bruttoPerAr = 0
@@ -13,11 +14,15 @@ class Uforetrygdberegning : Beregning2011() {
     var minsteytelse: Minsteytelse? = null
     var prorataBrok: Brok? = null
     var uforegrad = 0
+    @Deprecated("Use uforetidspunktLd instead")
     var uforetidspunkt: Date? = null
+    var uforetidspunktLd: LocalDate? = null
     var egenopptjentUforetrygd: EgenopptjentUforetrygd? = null
     var egenopptjentUforetrygdBest = false
     var yrkesskadegrad = 0
+    @Deprecated("Use yrkesskadetidspunktLd instead")
     var yrkesskadetidspunkt: Date? = null
+    var yrkesskadetidspunktLd: LocalDate? = null
     var mottarMinsteytelse = false
 
     /* Bygger opp årsakskoder som viser hvorfor personen mottar minsteytelse */

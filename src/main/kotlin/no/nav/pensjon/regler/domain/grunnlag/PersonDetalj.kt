@@ -7,6 +7,7 @@ import no.nav.pensjon.regler.domain.enum.GrunnlagsrolleEnum
 import no.nav.pensjon.regler.domain.enum.SivilstandEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 /**
  * PersonDetalj inneholder persondetaljer som er relevante for fastsettelse av vedtak i Pensjonsløsningen,
@@ -22,12 +23,16 @@ open class PersonDetalj : Serializable {
     /**
      * Fra-og-med dato for rollens gyldighet.
      */
+    @Deprecated("Use rolleFomDatoLd instead")
     var rolleFomDato: Date? = null
+    var rolleFomDatoLd: LocalDate? = null
 
     /**
      * Til-og-med dato for rollens gyldighet.
      */
+    @Deprecated("Use rolleTomDatoLd instead")
     var rolleTomDato: Date? = null
+    var rolleTomDatoLd: LocalDate? = null
 
     /**
      * Representerer personens sivilstand i henhold til TPS.

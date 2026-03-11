@@ -2,6 +2,7 @@ package no.nav.pensjon.regler.domain.grunnlag
 
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class PersonOpptjeningsgrunnlag : Serializable {
     /**
@@ -18,5 +19,7 @@ class PersonOpptjeningsgrunnlag : Serializable {
     /**
      * Brukers Fødselsdato
      */
+    @Deprecated("Use fodselsdatoLd instead")
     var fodselsdato: Date? = null
+    var fodselsdatoLd: LocalDate? = null
 }

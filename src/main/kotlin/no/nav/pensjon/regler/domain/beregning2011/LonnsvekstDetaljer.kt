@@ -2,9 +2,12 @@ package no.nav.pensjon.regler.domain.beregning2011
 
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class LonnsvekstDetaljer : Serializable, ILonnsvekst {
+    @Deprecated("Use justeringTomDatoLd instead")
     override var justeringTomDato: Date? = null
+    override var justeringTomDatoLd: LocalDate? = null
     override var justeringsfaktor = 0.0
     override var lonnsvekst = 0.0
 

@@ -4,12 +4,17 @@ import no.nav.pensjon.regler.domain.beregning2011.SisteBeregning
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
+import java.time.LocalDate
 
 class VilkarsprovRequest : ServiceRequest {
     var kravhode: Kravhode? = null
     var sisteBeregning: SisteBeregning? = null
+    @Deprecated("Use fomLd instead")
     var fom: Date? = null
+    var fomLd: LocalDate? = null
+    @Deprecated("Use tomLd instead")
     var tom: Date? = null
+    var tomLd: LocalDate? = null
     var vilkarsvedtakliste: List<VilkarsVedtak> = mutableListOf()
 
     constructor()

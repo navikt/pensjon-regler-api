@@ -4,6 +4,7 @@ import no.nav.pensjon.regler.domain.enum.YtelseVedDodEnum
 import no.nav.pensjon.regler.domain.trygdetid.AnvendtTrygdetid
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class GjenlevendetilleggInformasjon : Serializable {
     /**
@@ -19,12 +20,16 @@ class GjenlevendetilleggInformasjon : Serializable {
     /**
      * dødsdato.
      */
+    @Deprecated("Use dodstidspunktLd instead")
     var dodstidspunkt: Date? = null
+    var dodstidspunktLd: LocalDate? = null
 
     /**
      * Hvis ufør ved død er dette gjeldende uføretidspunkt.
      */
+    @Deprecated("Use uforetidspunktLd instead")
     var uforetidspunkt: Date? = null
+    var uforetidspunktLd: LocalDate? = null
 
     /**
      * Hvilken ytelse avdød mottok ved sin død.
@@ -64,7 +69,9 @@ class GjenlevendetilleggInformasjon : Serializable {
     /**
      * Skadetidspunkt ved yrkesskade.
      */
+    @Deprecated("Use skadetidspunktLd instead")
     var skadetidspunkt: Date? = null
+    var skadetidspunktLd: LocalDate? = null
 
     /**
      * Avdødes yrkesskadegrad.
