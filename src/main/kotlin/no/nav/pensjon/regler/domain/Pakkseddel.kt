@@ -25,6 +25,7 @@ class Pakkseddel : Serializable {
     /**
      * Er 'true' dersom ingen feilmeldinger er vedlagt pakkseddelen (merknadslisten er tom).
      */
+    @Deprecated("Ikke lenger i bruk.")
     @get:JsonGetter
     val annenTjenesteOk: Boolean
         get() = merknadListe.isEmpty()
