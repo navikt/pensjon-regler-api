@@ -9,7 +9,13 @@ class AvkortingsinformasjonUT : AbstraktAvkortingsinformasjon(), Serializable {
     /**
      * beløpsgrense.
      */
+    @Deprecated("PL-8188 Erstattes av fribeløp", ReplaceWith("fribeløp"))
     var belopsgrense = 0
+
+    /**
+     * beløpsgrense.
+     */
+    var fribeløp = 0
 
     /**
      * Sum av inntektskomponentene som ble lagt til grunn.
@@ -19,17 +25,24 @@ class AvkortingsinformasjonUT : AbstraktAvkortingsinformasjon(), Serializable {
     /**
      * Inntekt under denne grensen gir ikke utslag i avkorting.
      */
+    @Deprecated("PL-8188 Erstattes av bunnfradrag", ReplaceWith("bunnfradrag"))
     var inntektsgrense = 0
+
     /**
-     * @return the inntektsgrenseNesteAr
+     * Inntekt under denne grensen gir ikke utslag i avkorting.
      */
-    /**
-     * @param inntektsgrenseNesteAr the inntektsgrenseNesteAr to set
-     */
+    var bunnfradrag = 0
+
     /**
      * Inntektsgrense nest år settes når neste års inntektsgrense beregnes
      */
+    @Deprecated("PL-8188 Erstattes av bunnfradragNesteAr", ReplaceWith("bunnfradragNesteAr"))
     var inntektsgrenseNesteAr = 0
+
+    /**
+     * Inntektsgrense nest år settes når neste års inntektsgrense beregnes
+     */
+    var bunnfradragNesteAr = 0
 
     /**
      * Inntektstaket for påfålgende år fastsatt på bakgrunn av siste gjeldende OIFU i året. Feltet er kun angitt dersom inntektstak neste år avviker fra gjeldende inntektstak.
@@ -39,7 +52,13 @@ class AvkortingsinformasjonUT : AbstraktAvkortingsinformasjon(), Serializable {
     /**
      * Angir dekningsgrad av tapt arbeidsevne.
      */
+    @Deprecated("PL-8188 Erstattes av kompensasjonsgrad", ReplaceWith("kompensasjonsgrad"))
     var kompensasjonsgrad = 0.0
+
+    /**
+     * Angir dekningsgrad av tapt arbeidsevne.
+     */
+    var reduksjonsprosent = 0.0
 
     /**
      * Oppjustert inntekt etter uførhet.
