@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.to
 
+import com.fasterxml.jackson.annotation.JsonAlias
 import no.nav.pensjon.regler.domain.beregning2011.SisteBeregning
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
@@ -9,29 +10,32 @@ import java.time.LocalDate
 class VilkarsprovRequest : ServiceRequest {
     var kravhode: Kravhode? = null
     var sisteBeregning: SisteBeregning? = null
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
-    var fomLd: LocalDate? = null
+    @Deprecated("Use virkLd instead")
+    @JsonAlias("fom")
+    var virk: Date? = null
+    @JsonAlias("fomLd")
+    var virkLd: LocalDate? = null
     @Deprecated("Use tomLd instead")
+    @JsonAlias("tom")
     var tom: Date? = null
     var tomLd: LocalDate? = null
     var vilkarsvedtakliste: List<VilkarsVedtak> = mutableListOf()
 
     constructor()
 
-    @Deprecated("Use fomLd/tomLd constructor instead")
-    constructor(kravhode: Kravhode?, sisteBeregning: SisteBeregning?, fom: Date?, tom: Date?) {
+    @Deprecated("Use virkLd/tomLd constructor instead")
+    constructor(kravhode: Kravhode?, sisteBeregning: SisteBeregning?, virk: Date?, tom: Date?) {
         this.kravhode = kravhode
         this.sisteBeregning = sisteBeregning
-        this.fom = fom
+        this.virk = virk
         this.tom = tom
         this.vilkarsvedtakliste = mutableListOf()
     }
 
-    constructor(kravhode: Kravhode?, sisteBeregning: SisteBeregning?, fom: LocalDate?, tom: LocalDate?) {
+    constructor(kravhode: Kravhode?, sisteBeregning: SisteBeregning?, virk: LocalDate?, tom: LocalDate?) {
         this.kravhode = kravhode
         this.sisteBeregning = sisteBeregning
-        this.fomLd = fom
+        this.virkLd = virk
         this.tomLd = tom
         this.vilkarsvedtakliste = mutableListOf()
     }

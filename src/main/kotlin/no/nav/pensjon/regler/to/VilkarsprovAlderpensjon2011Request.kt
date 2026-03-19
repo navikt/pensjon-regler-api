@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.to
 
+import com.fasterxml.jackson.annotation.JsonAlias
 import no.nav.pensjon.regler.domain.beregning2011.AfpPrivatLivsvarig
 import no.nav.pensjon.regler.domain.beregning2011.SisteAldersberegning2011
 import no.nav.pensjon.regler.domain.krav.Kravhode
@@ -9,11 +10,14 @@ import java.util.*
 class VilkarsprovAlderpensjon2011Request : ServiceRequest() {
     var kravhode: Kravhode? = null
 
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
-    var fomLd: LocalDate? = null
+    @Deprecated("Use virkLd instead")
+    @JsonAlias("fom")
+    var virk: Date? = null
+    @JsonAlias("fomLd")
+    var virkLd: LocalDate? = null
 
-    @Deprecated("Use tomLd instead")
+    @Deprecated("Use tomLd instead. Tom er ikke i bruk for denne tjenesten.")
+    @JsonAlias("tom")
     var tom: Date? = null
     var tomLd: LocalDate? = null
 

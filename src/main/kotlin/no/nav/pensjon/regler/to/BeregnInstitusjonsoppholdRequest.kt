@@ -1,5 +1,6 @@
 package no.nav.pensjon.regler.to
 
+import com.fasterxml.jackson.annotation.JsonAlias
 import no.nav.pensjon.regler.domain.beregning.Beregning
 import no.nav.pensjon.regler.domain.beregning2011.*
 import no.nav.pensjon.regler.domain.krav.Kravhode
@@ -8,9 +9,11 @@ import java.util.*
 import java.time.LocalDate
 
 class BeregnInstitusjonsoppholdRequest : ServiceRequest() {
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
-    var fomLd: LocalDate? = null
+    @Deprecated("Use virkLd instead")
+    @JsonAlias("fom")
+    var virk: Date? = null
+    @JsonAlias("fomLd")
+    var virkLd: LocalDate? = null
 
     // bruker1 beregning1967
     var bruker1Beregning: Beregning? = null
