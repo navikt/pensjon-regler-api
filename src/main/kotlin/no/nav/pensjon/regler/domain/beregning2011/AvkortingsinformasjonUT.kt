@@ -13,7 +13,7 @@ class AvkortingsinformasjonUT : AbstraktAvkortingsinformasjon(), Serializable {
     var belopsgrense = 0
 
     /**
-     * beløpsgrense.
+     * fribeløp.
      */
     var fribeløp = 0
 
@@ -52,7 +52,7 @@ class AvkortingsinformasjonUT : AbstraktAvkortingsinformasjon(), Serializable {
     /**
      * Angir dekningsgrad av tapt arbeidsevne.
      */
-    @Deprecated("PL-8188 Erstattes av kompensasjonsgrad", ReplaceWith("kompensasjonsgrad"))
+    @Deprecated("PL-8188 Erstattes av reduksjonsprosent", ReplaceWith("kompensasjonsgrad"))
     var kompensasjonsgrad = 0.0
 
     /**
