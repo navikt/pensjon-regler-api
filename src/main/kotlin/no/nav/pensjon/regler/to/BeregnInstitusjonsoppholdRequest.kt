@@ -1,19 +1,42 @@
 package no.nav.pensjon.regler.to
 
-import com.fasterxml.jackson.annotation.JsonAlias
+import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.annotation.JsonProperty
 import no.nav.pensjon.regler.domain.beregning.Beregning
-import no.nav.pensjon.regler.domain.beregning2011.*
+import no.nav.pensjon.regler.domain.beregning2011.AbstraktBeregningsResultat
+import no.nav.pensjon.regler.domain.beregning2011.AfpPrivatLivsvarig
+import no.nav.pensjon.regler.domain.beregning2011.BeregningsresultatUforetrygd
+import no.nav.pensjon.regler.domain.beregning2011.SisteAldersberegning2011
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
-import java.util.*
 import java.time.LocalDate
+import java.util.*
 
 class BeregnInstitusjonsoppholdRequest : ServiceRequest() {
-    @Deprecated("Use virkLd instead")
-    @JsonAlias("fom")
-    var virk: Date? = null
-    @JsonAlias("fomLd")
-    var virkLd: LocalDate? = null
+    var virk: LocalDate? = null
+
+    @Deprecated(
+        "Bruk virk i stedet",
+        ReplaceWith("virk"),
+        level = DeprecationLevel.WARNING)
+    @set:JsonProperty("fom")
+    @get:JsonIgnore
+    var fom: Any? // Any fordi gammel fom kunne være Long (Date)
+        get() = virk
+        set(value) { /* Verdien mappes via MixIn i mottaker-systemet */ }
+
+    @Deprecated(
+        "Bruk virk i stedet",
+        ReplaceWith("virk"),
+        level = DeprecationLevel.WARNING
+    )
+    @set:JsonProperty("fomLd")
+    @get:JsonIgnore
+    var fomLd: LocalDate?
+        get() = virk
+        set(value) {
+            virk = value
+        }
 
     // bruker1 beregning1967
     var bruker1Beregning: Beregning? = null
