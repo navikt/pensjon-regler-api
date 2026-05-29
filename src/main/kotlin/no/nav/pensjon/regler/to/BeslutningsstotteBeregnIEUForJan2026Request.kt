@@ -12,6 +12,6 @@ class BeslutningsstotteBeregnIEUForJan2026Request(
     val virk: LocalDate,
     val uføregrad: Uforegrad,
     val inntektEtterUførhet: InntektEtterUforhet,
-    val innUngUfør: UngUfor,
+    val ungUfør: UngUfor,
     val benyttetSivilstand: BorMedTypeEnum,
 ) : ServiceRequest()
