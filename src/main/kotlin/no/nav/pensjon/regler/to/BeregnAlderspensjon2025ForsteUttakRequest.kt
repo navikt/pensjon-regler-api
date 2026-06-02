@@ -14,6 +14,7 @@ class BeregnAlderspensjon2025ForsteUttakRequest : ServiceRequest() {
     var virkFomLd: LocalDate? = null
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: List<VilkarsVedtak> = Vector()
+    @Deprecated("Felt er ikke i bruk.")
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var epsMottarPensjon = false
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
