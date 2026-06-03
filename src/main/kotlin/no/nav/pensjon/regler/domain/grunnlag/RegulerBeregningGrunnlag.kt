@@ -9,8 +9,6 @@ import java.time.LocalDate
 
 class RegulerBeregningGrunnlag : Serializable {
     var beregning1967: Beregning? = null
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
     var uttaksgradListe: List<Uttaksgrad> = mutableListOf()
     var brukersVilkarsvedtakListe: List<VilkarsVedtak> = mutableListOf()

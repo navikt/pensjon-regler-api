@@ -39,7 +39,5 @@ class Trygdeavtale : Serializable {
     /**
      * Dato for kravdato i avtale
      */
-    @Deprecated("Use kravDatoIAvtalelandLd instead")
-    var kravDatoIAvtaleland: Date? = null
     var kravDatoIAvtalelandLd: LocalDate? = null
 }

@@ -8,8 +8,6 @@ class ArbeidsforholdEtterUforgrunnlag : Serializable {
     /**
      * Fom date for arbeidsforholdet.
      */
-    @Deprecated("Use fomDatoLd instead")
-    var fomDato: Date? = null
     var fomDatoLd: LocalDate? = null
 
     /**

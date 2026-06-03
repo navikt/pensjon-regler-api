@@ -100,7 +100,5 @@ class BeregnForsorgingstilleggRequest : ServiceRequest() {
     /**
      * Virkningstidspunkt for beregning av forsørgingstillegg.
      */
-    @Deprecated("Use virkLd instead")
-    var virk: Date? = null
     var virkLd: LocalDate? = null
 }

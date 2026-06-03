@@ -6,7 +6,7 @@ import java.time.LocalDate
 
 class FremskrivingsDetaljer : Serializable, IFremskriving {
     @Deprecated("Use justeringTomDatoLd instead")
-    override var justeringTomDato: Date? = null
+    // override var justeringTomDato: Date? = null
     override var justeringTomDatoLd: LocalDate? = null
     override var justeringsfaktor = 0.0
     override var teller = 0.0
@@ -15,9 +15,9 @@ class FremskrivingsDetaljer : Serializable, IFremskriving {
 
     constructor()
     constructor(frem: FremskrivingsDetaljer) : this() {
-        if (frem.justeringTomDato != null) {
-            justeringTomDato = frem.justeringTomDato!!.clone() as Date
-        }
+//        if (frem.justeringTomDato != null) {
+//            justeringTomDato = frem.justeringTomDato!!.clone() as Date
+//        }
         if(frem.justeringTomDatoLd != null) {
             justeringTomDatoLd = frem.justeringTomDatoLd
         }

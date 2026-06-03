@@ -11,8 +11,6 @@ class BeregnAlderspensjon2016ForsteUttakRequest : ServiceRequest() {
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: List<VilkarsVedtak> = Vector()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
     var epsMottarPensjon = false
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null

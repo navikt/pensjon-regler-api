@@ -9,8 +9,6 @@ import java.util.*
 import java.time.LocalDate
 
 class BeregnAlderspensjon2025ForsteUttakRequest : ServiceRequest() {
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: List<VilkarsVedtak> = Vector()

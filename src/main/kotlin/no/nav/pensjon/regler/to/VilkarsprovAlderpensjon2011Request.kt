@@ -9,16 +9,10 @@ import java.util.*
 class VilkarsprovAlderpensjon2011Request : ServiceRequest() {
     var kravhode: Kravhode? = null
 
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
     var fomLd: LocalDate? = null
 
-    @Deprecated("Use tomLd instead")
-    var tom: Date? = null
     var tomLd: LocalDate? = null
 
-    @Deprecated("Use afpVirkFomLd instead")
-    var afpVirkFom: Date? = null
     var afpVirkFomLd: LocalDate? = null
 
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null

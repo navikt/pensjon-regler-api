@@ -41,15 +41,11 @@ class Inntektsgrunnlag() : Serializable {
     /**
      * fra-og-med dato for gyldigheten av inntektsgrunnlaget.
      */
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
     var fomLd: LocalDate? = null
 
     /**
      * til-og-med dato for gyldigheten av inntektsgrunnlaget.
      */
-    @Deprecated("Use tomLd instead")
-    var tom: Date? = null
     var tomLd: LocalDate? = null
 
     /**

@@ -18,8 +18,6 @@ class BeregningUforeperiode : Serializable {
      * Dato for uføretidspunktet.
      */
     @JvmField
-    @Deprecated("Use uftLd instead")
-    var uft: Date? = null
     var uftLd: LocalDate? = null
 
     /**
@@ -67,32 +65,24 @@ class BeregningUforeperiode : Serializable {
      * Dato for virkningsåret for denne Uføreperioden.
      */
     @JvmField
-    @Deprecated("Use virkLd instead")
-    var virk: Date? = null
     var virkLd: LocalDate? = null
 
     /**
      * Dato for når Uføreperioden avsluttes.
      */
     @JvmField
-    @Deprecated("Use uftTomLd instead")
-    var uftTom: Date? = null
     var uftTomLd: LocalDate? = null
 
     /**
      * Dato for når Uføregraden starter.
      */
     @JvmField
-    @Deprecated("Use ufgFomLd instead")
-    var ufgFom: Date? = null
     var ufgFomLd: LocalDate? = null
 
     /**
      * Dato for når Uføregraden avsluttes.
      */
     @JvmField
-    @Deprecated("Use ufgTomLd instead")
-    var ufgTom: Date? = null
     var ufgTomLd: LocalDate? = null
 
     /**
@@ -229,8 +219,6 @@ class BeregningUforeperiode : Serializable {
      * Det uføretidspunkt som er angitt for perioden, men ikke nødvendigvis anvendt.
      * **/
     @JvmField
-    @Deprecated("Use angittUforetidspunktLd instead")
-    var angittUforetidspunkt: Date? = null
     var angittUforetidspunktLd: LocalDate? = null
 
     /**

@@ -9,8 +9,6 @@ class AFPEtteroppgjorgrunnlag(
     /**
      * Personens Fødselsdato
      */
-    @Deprecated("Use fodselsdatoLd instead")
-    var fodselsdato: Date? = null,
     var fodselsdatoLd: LocalDate? = null,
 
     /**
@@ -43,15 +41,11 @@ class AFPEtteroppgjorgrunnlag(
      * Pensjonsgivende inntekt i preioden (fra SKD)
      */
     var pgi: Int = 0,
-    @Deprecated("Use uttaksdatoLd instead")
-    var uttaksdato: Date? = null,
     var uttaksdatoLd: LocalDate? = null,
 
     /**
      * Hvis pensjonen opphørte midt i oppgjørsåret skal denne settes til opphørsdato
      */
-    @Deprecated("Use opphorsdatoLd instead")
-    var opphorsdato: Date? = null,
     var opphorsdatoLd: LocalDate? = null,
 
     /**

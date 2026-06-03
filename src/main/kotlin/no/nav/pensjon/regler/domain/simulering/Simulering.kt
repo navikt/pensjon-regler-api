@@ -26,8 +26,6 @@ class Simulering : Serializable {
     /**
      * Dato for når bruker ønsker å simulere uttak av pensjon fra.
      */
-    @Deprecated("Use uttaksdatoLd instead")
-    var uttaksdato: Date? = null
     var uttaksdatoLd: LocalDate? = null
 
     /**

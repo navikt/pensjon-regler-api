@@ -26,16 +26,12 @@ class Persongrunnlag() : Serializable {
      * søkers Fødselsdato,brukes kun ved simuleringer.Da benyttes ikke reelle
      * personer.
      */
-    @Deprecated("Use fodselsdatoLd instead")
-    var fodselsdato: Date? = null
     var fodselsdatoLd: LocalDate? = null
 
     /**
      * Personens eventuelle dødsdato, brukes ved beregning av ytelser til
      * gjenlevende ektefelle og barn.
      */
-    @Deprecated("Use dodsdatoLd instead")
-    var dodsdato: Date? = null
     var dodsdatoLd: LocalDate? = null
 
     /**
@@ -63,8 +59,6 @@ class Persongrunnlag() : Serializable {
     /**
      * Dato for sist innmeldt i Folketrygden- for fremtidig trygdetid.
      */
-    @Deprecated("Use sistMedlITrygdenLd instead")
-    var sistMedlITrygden: Date? = null
     var sistMedlITrygdenLd: LocalDate? = null
 
     /**
@@ -320,8 +314,6 @@ class Persongrunnlag() : Serializable {
      * Støttefelt for virk_ikke_ufor-hacket. Feltet er ikke forventet populert.
      */
     @JsonIgnore
-    @Deprecated("Use forsteVirkLd instead")
-    var forsteVirk: Date? = null
     var forsteVirkLd: LocalDate? = null
 
     /**

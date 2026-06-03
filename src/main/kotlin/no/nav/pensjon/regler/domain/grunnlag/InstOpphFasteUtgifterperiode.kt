@@ -21,15 +21,11 @@ class InstOpphFasteUtgifterperiode : Serializable {
     /**
      * Dato bruker ble innlagt
      */
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
     var fomLd: LocalDate? = null
 
     /**
      * Dato bruker ble skrevet ut
      */
-    @Deprecated("Use tomLd instead")
-    var tom: Date? = null
     var tomLd: LocalDate? = null
 
     /**

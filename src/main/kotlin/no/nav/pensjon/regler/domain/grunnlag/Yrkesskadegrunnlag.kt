@@ -15,8 +15,6 @@ class Yrkesskadegrunnlag : Serializable {
     /**
      * Dato for skadetidspunkt.
      */
-    @Deprecated("Use ystLd instead")
-    var yst: Date? = null
     var ystLd: LocalDate? = null
 
     /**

@@ -6,11 +6,7 @@ import java.time.LocalDate
 
 class GarantiTrygdetid : Serializable {
     var trygdetid_garanti = 0
-    @Deprecated("Use fomDatoLd instead")
-    var fomDato: Date? = null
     var fomDatoLd: LocalDate? = null
-    @Deprecated("Use tomDatoLd instead")
-    var tomDato: Date? = null
     var tomDatoLd: LocalDate? = null
 
 }

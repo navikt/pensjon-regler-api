@@ -9,8 +9,6 @@ class UforetrygdEtteroppgjorDetalj : Serializable {
     /**
      * Angir gyldighetsperioden for detaljen. Avgrenset av Uføreperioden og året som etteroppgjørsgrunnlaget gjelder for.
      */
-    @Deprecated("Use fomDatoLd instead")
-    var fomDato: Date? = null
     var fomDatoLd: LocalDate? = null
 
     /**
@@ -31,8 +29,6 @@ class UforetrygdEtteroppgjorDetalj : Serializable {
     /**
      * Angir gyldighetsperioden for detaljen. Avgrenset av Uføreperioden og året som etteroppgjørsgrunnlaget gjelder for.
      */
-    @Deprecated("Use tomDatoLd instead")
-    var tomDato: Date? = null
     var tomDatoLd: LocalDate? = null
 
 }

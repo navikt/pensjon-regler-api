@@ -24,8 +24,6 @@ class Simuleringsresultat : Serializable {
     /**
      * Virkningstidspunkt
      */
-    @Deprecated("Use virkLd instead")
-    var virk: Date? = null
     var virkLd: LocalDate? = null
 
     /**

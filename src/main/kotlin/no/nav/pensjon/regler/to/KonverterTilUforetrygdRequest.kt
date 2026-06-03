@@ -12,8 +12,6 @@ class KonverterTilUforetrygdRequest : ServiceRequest() {
     var sisteUforepensjonBeregning: SisteUforepensjonBeregning? = null
     var sisteUforepensjonBeregningTilRevurdering: SisteUforepensjonBeregning? = null
     var vilkarsvedtaksliste = Vector<VilkarsVedtak>()
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
 
     // Brukes til å si om en beregning skal faktorkonverteres eller ikke

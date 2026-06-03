@@ -9,15 +9,11 @@ class BeregnetUtbetalingsperiode() : Serializable {
     /**
      * Periodens startdato.
      */
-    @Deprecated("Use fomDatoLd instead")
-    var fomDato: Date? = null
     var fomDatoLd: LocalDate? = null
 
     /**
      * Periodens sluttdato.
      */
-    @Deprecated("Use tomDatoLd instead")
-    var tomDato: Date? = null
     var tomDatoLd: LocalDate? = null
 
     /**

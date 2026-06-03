@@ -8,8 +8,6 @@ import java.util.*
 import java.time.LocalDate
 
 class BeregnInstitusjonsoppholdRequest : ServiceRequest() {
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
     var fomLd: LocalDate? = null
 
     // bruker1 beregning1967

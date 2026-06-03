@@ -8,12 +8,8 @@ import java.time.LocalDate
 
 class VilkarsprovAlderpensjonOvergangskullRequest : ServiceRequest() {
     var kravHode: Kravhode? = null
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
-    @Deprecated("Use afpVirkFomLd instead")
-    var afpVirkFom: Date? = null
     var afpVirkFomLd: LocalDate? = null
     var sisteBeregning: SisteAldersberegning2011? = null
 

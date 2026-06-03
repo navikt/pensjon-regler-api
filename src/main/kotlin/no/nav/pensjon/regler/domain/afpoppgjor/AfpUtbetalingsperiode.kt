@@ -9,15 +9,11 @@ class AfpUtbetalingsperiode : Serializable {
     /**
      * Periodens fradato - not null
      */
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
 
     /**
      * Periodens tildato
      */
-    @Deprecated("Use virkTomLd instead")
-    var virkTom: Date? = null
     var virkTomLd: LocalDate? = null
 
     /**

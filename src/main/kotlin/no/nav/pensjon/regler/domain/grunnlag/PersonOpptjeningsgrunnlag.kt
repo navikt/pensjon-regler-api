@@ -19,7 +19,5 @@ class PersonOpptjeningsgrunnlag : Serializable {
     /**
      * Brukers Fødselsdato
      */
-    @Deprecated("Use fodselsdatoLd instead")
-    var fodselsdato: Date? = null
     var fodselsdatoLd: LocalDate? = null
 }
