@@ -3,12 +3,13 @@ package no.nav.pensjon.regler.domain.afpoppgjor
 import no.nav.pensjon.regler.domain.enum.AFPtypeEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class AFPEtteroppgjorgrunnlag(
     /**
      * Personens Fødselsdato
      */
-    var fodselsdato: Date? = null,
+    var fodselsdatoLd: LocalDate? = null,
 
     /**
      * AFPordningen personen er eller var medlem av
@@ -40,12 +41,12 @@ class AFPEtteroppgjorgrunnlag(
      * Pensjonsgivende inntekt i preioden (fra SKD)
      */
     var pgi: Int = 0,
-    var uttaksdato: Date? = null,
+    var uttaksdatoLd: LocalDate? = null,
 
     /**
      * Hvis pensjonen opphørte midt i oppgjørsåret skal denne settes til opphørsdato
      */
-    var opphorsdato: Date? = null,
+    var opphorsdatoLd: LocalDate? = null,
 
     /**
      * Beskriver hvilken kategori etteroppgjøret er, samt inntektene som ble beregnet.

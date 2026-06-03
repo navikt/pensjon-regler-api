@@ -1,6 +1,7 @@
 package no.nav.pensjon.regler.domain.vedtak
 
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Angir inntekt etter uførhet (IEU).
@@ -14,6 +15,6 @@ class InntektEtterUforhet : AbstraktBeregningsvilkar() {
     /**
      * Virkningstidspunktet for inntekt etter uførhet.
      */
-    var ieuDato: Date? = null
+    var ieuDatoLd: LocalDate? = null
 
 }

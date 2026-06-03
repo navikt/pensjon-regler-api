@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import no.nav.pensjon.regler.domain.trygdetid.Brok
 import java.io.Serializable
-import java.util.*
+import java.time.LocalDate
 
 @JsonSubTypes(
     JsonSubTypes.Type(value = TidligereBarnetilleggperiode::class),
@@ -16,12 +16,12 @@ abstract class AbstraktBarnetilleggperiode : Serializable {
     /**
      * Start for periode med et antall barn.
      */
-    var fomDato: Date? = null
+    var fomDatoLd: LocalDate? = null
 
     /**
      * Stopp for periode med et antall barn.
      */
-    var tomDato: Date? = null
+    var tomDatoLd: LocalDate? = null
 
     /**
      * Periodens lengde i antall måneder.

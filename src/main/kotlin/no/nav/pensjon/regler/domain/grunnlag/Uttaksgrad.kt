@@ -1,18 +1,19 @@
 package no.nav.pensjon.regler.domain.grunnlag
 
 import java.io.Serializable
+import java.time.LocalDate
 import java.util.*
 
 // TODO Skriv om compare-funksjonen
 class Uttaksgrad : Serializable, Comparable<Uttaksgrad> {
-    var fomDato: Date? = null
-    var tomDato: Date? = null
+    var fomDatoLd: LocalDate? = null
+
+    var tomDatoLd: LocalDate? = null
     var uttaksgrad = 0
 
     override fun compareTo(other: Uttaksgrad): Int {
-        return DateCompareUtil.compareTo(fomDato, other.fomDato)
+        return DateCompareUtil.compareTo(fomDatoLd, other.fomDatoLd)
     }
-
 }
 
 object DateCompareUtil {
@@ -27,7 +28,8 @@ object DateCompareUtil {
      * @param second - dato fra argument til compareTo
      * @return
      */
-    fun compareTo(first: Date?, second: Date?): Int {
+
+    fun compareTo(first: LocalDate?, second: LocalDate?): Int {
         // null sorteres foran
         if (first == null) {
             return if (second == null) {

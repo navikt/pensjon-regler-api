@@ -2,6 +2,7 @@ package no.nav.pensjon.regler.domain.grunnlag
 
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class UforetrygdEtteroppgjor : Serializable {
     /**
@@ -12,21 +13,21 @@ class UforetrygdEtteroppgjor : Serializable {
     /**
      * Angir start av arbeidsforsøk.
      */
-    var arbeidsforsokFom: Date? = null
+    var arbeidsforsokFomLd: LocalDate? = null
 
     /**
      * Angir slutt av arbeidsforsøk.
      */
-    var arbeidsforsokTom: Date? = null
+    var arbeidsforsokTomLd: LocalDate? = null
     var detaljer: List<UforetrygdEtteroppgjorDetalj> = mutableListOf()
 
     /**
      * Angir start av uføretrygd i etteroppgjørsåret.
      */
-    var periodeFom: Date? = null
+    var periodeFomLd: LocalDate? = null
 
     /**
      * Angir slutt av uføretrygd i etteroppgjørsåret.
      */
-    var periodeTom: Date? = null
+    var periodeTomLd: LocalDate? = null
 }

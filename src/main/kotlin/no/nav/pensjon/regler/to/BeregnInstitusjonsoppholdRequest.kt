@@ -5,9 +5,10 @@ import no.nav.pensjon.regler.domain.beregning2011.*
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
+import java.time.LocalDate
 
 class BeregnInstitusjonsoppholdRequest : ServiceRequest() {
-    var fom: Date? = null
+    var fomLd: LocalDate? = null
 
     // bruker1 beregning1967
     var bruker1Beregning: Beregning? = null

@@ -6,6 +6,7 @@ import no.nav.pensjon.regler.domain.grunnlag.EtteroppgjorGrunnlag
 import no.nav.pensjon.regler.domain.grunnlag.Persongrunnlag
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
+import java.time.LocalDate
 
 class InntektsavkortningUforetrygdRequest : ServiceRequest() {
     /**
@@ -26,12 +27,12 @@ class InntektsavkortningUforetrygdRequest : ServiceRequest() {
     /**
      * Virkningstidspunkt for beregning av ny inntektsavkortning.
      */
-    var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
 
     /**
      * Virkningstidspunkt for beregning av ny inntektsavkortning.
      */
-    var virkTom: Date? = null
+    var virkTomLd: LocalDate? = null
 
     /**
      * Angir om inntektsavkortingen skal gjøres på bakgrunn av reglene for etteroppgjør.

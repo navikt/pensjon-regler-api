@@ -18,6 +18,7 @@ import no.nav.pensjon.regler.domain.enum.SivilstandEnum
 import no.nav.pensjon.regler.domain.grunnlag.EosEkstra
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Beregning er resultatet fra en beregning i pensjon-regler.
@@ -32,12 +33,12 @@ class Beregning : Serializable {
     /**
      * Virkningstidspunktet ytelsen kan utbetales fra.
      */
-    var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
 
     /**
      * Virkningstidspunktet ytelsen kan utbetales til.
      */
-    var virkTom: Date? = null
+    var virkTomLd: LocalDate? = null
 
     /**
      * beløp før avkorting.
@@ -364,14 +365,14 @@ class Beregning : Serializable {
      * Anvendt uføretidspunkt. Hentes normalt fra Uføregrunnlag men kan være hentet fra Uførehistorikk ved
      * lønnsomhetsberegning.
      */
-    var uft: Date? = null
+    var uftLd: LocalDate? = null
 
     /**
      * Intern pensjon-regler variabel.
      * Anvendt yrkesskadetidspunkt. Hentes normalt fra yrkesskadegrunnlag men kan være hentet fra yrkesskadehistorikk
      * ved lønnsomhetsberegning.
      */
-    var yst: Date? = null
+    var ystLd: LocalDate? = null
 
     /**
      * Liste av merknader - forklaringer,unntak og avvisningsgrunner fra regelmotoren.

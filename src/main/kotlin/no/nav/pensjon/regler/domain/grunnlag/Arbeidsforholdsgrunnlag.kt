@@ -2,17 +2,18 @@ package no.nav.pensjon.regler.domain.grunnlag
 
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class Arbeidsforholdsgrunnlag : Serializable {
     /**
      * Fom dato for arbeidsforholdet.
      */
-    var fomDato: Date? = null
+    var fomDatoLd: LocalDate? = null
 
     /**
      * Tom dato for arbeidsforholdet.
      */
-    var tomDato: Date? = null
+    var tomDatoLd: LocalDate? = null
 
     /**
      * Stillingsandel i prosent.

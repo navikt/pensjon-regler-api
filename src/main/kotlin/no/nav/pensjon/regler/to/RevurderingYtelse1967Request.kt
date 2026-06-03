@@ -5,9 +5,10 @@ import no.nav.pensjon.regler.domain.grunnlag.InfoPavirkendeYtelse
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
+import java.time.LocalDate
 
 class RevurderingYtelse1967Request : ServiceRequest() {
-    var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: Vector<VilkarsVedtak> = Vector()
     var sisteBeregning1967: SisteBeregning1967? = null

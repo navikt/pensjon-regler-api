@@ -5,6 +5,7 @@ import no.nav.pensjon.regler.domain.enum.ProRataBeregningTypeEnum
 import no.nav.pensjon.regler.domain.enum.UforetypeEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class Uforeperiode : Serializable {
     /**
@@ -15,7 +16,7 @@ class Uforeperiode : Serializable {
     /**
      * Dato for uføretidspunktet.
      */
-    var uft: Date? = null
+    var uftLd: LocalDate? = null
 
     /**
      * Angir om Uføregraden er ren Uføre,inneholder delvis yrke eller bare yrke.
@@ -55,22 +56,22 @@ class Uforeperiode : Serializable {
     /**
      * Dato for virkningsåret for denne Uføreperioden.
      */
-    var virk: Date? = null
+    var virkLd: LocalDate? = null
 
     /**
      * Dato for når Uføreperioden avsluttes.
      */
-    var uftTom: Date? = null
+    var uftTomLd: LocalDate? = null
 
     /**
      * Dato for når Uføregraden starter.
      */
-    var ufgFom: Date? = null
+    var ufgFomLd: LocalDate? = null
 
     /**
      * Dato for når Uføregraden avsluttes.
      */
-    var ufgTom: Date? = null
+    var ufgTomLd: LocalDate? = null
 
     /**
      * Fødselsår for yngste barn.
@@ -190,7 +191,7 @@ class Uforeperiode : Serializable {
     /*
           * Det uføretidspunkt som er angitt for perioden, men ikke nødvendigvis anvendt.
           */
-    var angittUforetidspunkt: Date? = null
+    var angittUforetidspunktLd: LocalDate? = null
 
     /**
      * Antatt årlig inntekt før uføretidspunktet (brukes i fastsettelse av opptjening til alderspensjon etter kapittel 19).

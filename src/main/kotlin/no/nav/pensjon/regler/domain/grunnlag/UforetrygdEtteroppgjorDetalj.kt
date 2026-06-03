@@ -3,12 +3,13 @@ package no.nav.pensjon.regler.domain.grunnlag
 import no.nav.pensjon.regler.domain.enum.GrunnlagsrolleEnum
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 class UforetrygdEtteroppgjorDetalj : Serializable {
     /**
      * Angir gyldighetsperioden for detaljen. Avgrenset av Uføreperioden og året som etteroppgjørsgrunnlaget gjelder for.
      */
-    var fomDato: Date? = null
+    var fomDatoLd: LocalDate? = null
 
     /**
      * Liste over inntektsfratrekk for etteroppgjøret (for perioder uten uføretrygd og andre registrerte fradrag).
@@ -28,6 +29,6 @@ class UforetrygdEtteroppgjorDetalj : Serializable {
     /**
      * Angir gyldighetsperioden for detaljen. Avgrenset av Uføreperioden og året som etteroppgjørsgrunnlaget gjelder for.
      */
-    var tomDato: Date? = null
+    var tomDatoLd: LocalDate? = null
 
 }

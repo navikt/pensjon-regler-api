@@ -4,11 +4,12 @@ import no.nav.pensjon.regler.domain.enum.GrunnlagsrolleEnum
 import no.nav.pensjon.regler.domain.krav.Kravhode
 import no.nav.pensjon.regler.domain.vedtak.VilkarsVedtak
 import java.util.*
+import java.time.LocalDate
 
 class VilkarsprovHalvpensjonRequest : ServiceRequest() {
     var kravhode: Kravhode? = null
-    var fom: Date? = null
-    var tom: Date? = null
+    var fomLd: LocalDate? = null
+    var tomLd: LocalDate? = null
     var grunnlagsrolleEnum: GrunnlagsrolleEnum? = null
 
     /**

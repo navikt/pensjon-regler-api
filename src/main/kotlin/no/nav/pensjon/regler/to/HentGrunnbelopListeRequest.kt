@@ -1,8 +1,9 @@
 package no.nav.pensjon.regler.to
 
 import java.util.*
+import java.time.LocalDate
 
 class HentGrunnbelopListeRequest : ServiceRequest() {
-    var fom: Date? = null
-    var tom: Date? = null
+    var fomLd: LocalDate? = null
+    var tomLd: LocalDate? = null
 }

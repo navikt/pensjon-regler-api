@@ -6,13 +6,14 @@ import no.nav.pensjon.regler.domain.beregning2011.AfpPrivatLivsvarig
 import no.nav.pensjon.regler.domain.grunnlag.NormertPensjonsalderGrunnlag
 import no.nav.pensjon.regler.domain.grunnlag.Uttaksgrad
 import java.util.*
+import java.time.LocalDate
 
 class RegulerBeregning2011Request : ServiceRequest() {
-    var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
     var beregningsResultat: AbstraktBeregningsResultat? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     var uttaksgradListe: ArrayList<Uttaksgrad> = ArrayList()
-    var fodselsdato: Date? = null
+    var fodselsdatoLd: LocalDate? = null
 
     /**
      * Representerer grunnlaget for normert pensjonsalder

@@ -2,18 +2,18 @@ package no.nav.pensjon.regler.domain.afpoppgjor
 
 import no.nav.pensjon.regler.domain.BatchStatus
 import java.io.Serializable
-import java.util.*
+import java.time.LocalDate
 
 class AFPetteroppgjor(
     /**
      * Datoen for uttak av AFP - hvis dette skjedde i oppgjørsperioden
      */
-    var uttaksdato: Date? = null,
+    var uttaksdatoLd: LocalDate? = null,
 
     /**
      * Datoen for opphår av AFP - hvis dette skjedde i oppgjørsperioden
      */
-    var opphorsdato: Date? = null,
+    var opphorsdatoLd: LocalDate? = null,
 
     /**
      * Full AFP pensjon i perioden

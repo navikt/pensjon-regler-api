@@ -6,6 +6,7 @@ import no.nav.pensjon.regler.domain.enum.UtfallEnum
 import no.nav.pensjon.regler.domain.grunnlag.AntallArMndDag
 import java.io.Serializable
 import java.util.*
+import java.time.LocalDate
 
 /**
  * Trygdetid - framtidig trygdetid
@@ -46,7 +47,7 @@ class Trygdetid : Serializable {
     /**
      * Dato fremtidig trygdetid regnes fra.
      */
-    var ftt_fom: Date? = null
+    var ftt_fomLd: LocalDate? = null
 
     /**
      * Faktiske trygdetidsmåneder. Brukes etter EØS og land med bilaterale
@@ -136,11 +137,11 @@ class Trygdetid : Serializable {
     /**
      * Trygdetidens virkningsdato fom. Brukes ved fastsettelse av periodisert trygdetid for AP2011/AP2016 og AP2025
      */
-    var virkFom: Date? = null
+    var virkFomLd: LocalDate? = null
 
     /**
      * Trygdetidens virkningsdato tom. Brukes ved fastsettelse av periodisert trygdetid for AP2011/AP2016 og AP2025
      */
-    var virkTom: Date? = null
+    var virkTomLd: LocalDate? = null
     var anvendtFlyktningEnum: UtfallEnum? = null
 }
