@@ -65,12 +65,6 @@ class VilkarsVedtak : Serializable {
     var kravlinjeForsteVirkLd: LocalDate? = null
 
     /**
-     * Kravlinje som er vilkårsprøvd.
-     */
-    @Deprecated("Redundant, finnes som penPerson, kravlinjeTypeEnum og for hovedkrav, se kravlinjeListe i kravhode")
-    var kravlinje: Kravlinje? = null
-
-    /**
      * Id for personen
      */
     var penPerson: PenPerson? = null
