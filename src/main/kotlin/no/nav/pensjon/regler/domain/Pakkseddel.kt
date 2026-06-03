@@ -23,14 +23,6 @@ class Pakkseddel : Serializable {
         get() = merknadListe.isEmpty()
 
     /**
-     * Er 'true' dersom ingen feilmeldinger er vedlagt pakkseddelen (merknadslisten er tom).
-     */
-    @Deprecated("Ikke lenger i bruk.")
-    @get:JsonGetter
-    val annenTjenesteOk: Boolean
-        get() = merknadListe.isEmpty()
-
-    /**
      * Liste av merknader. Beskriver hvordan pensjon-regler kom frem til `kontrollTjenesteOk`.
      */
     var merknadListe: List<Merknad> = mutableListOf()
