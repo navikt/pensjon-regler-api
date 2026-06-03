@@ -254,6 +254,11 @@ class Beregning : Serializable {
     var afpPensjonsgrad = 0
 
     /**
+     * Toleransebeløpet anvendt ved vurdering av inntektsavkorting av AFP
+     */
+    var toleransebeløpInntektsavkortingAfp: Int? = null
+
+    /**
      * Fribeløpet en pensjonist kan ha før vilkårene for å få ytelsen blir avkortet (AP = 2G, GJP = 0,5G etc).
      */
     var fribelop = 0
