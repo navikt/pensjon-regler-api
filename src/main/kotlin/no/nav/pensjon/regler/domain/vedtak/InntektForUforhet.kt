@@ -28,8 +28,6 @@ class InntektForUforhet : AbstraktBeregningsvilkar() {
     /**
      * Dato for den kroneverdi inntekt er oppgitt i.
      */
-    @Deprecated("Use ifuDatoLd instead")
-    var ifuDato: Date? = null
     var ifuDatoLd: LocalDate? = null
 
     /**

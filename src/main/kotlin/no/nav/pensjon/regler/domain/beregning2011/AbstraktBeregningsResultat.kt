@@ -7,7 +7,6 @@ import no.nav.pensjon.regler.domain.enum.Beregningsarsak
 import no.nav.pensjon.regler.domain.enum.BorMedTypeEnum
 import no.nav.pensjon.regler.domain.enum.SivilstandEnum
 import java.io.Serializable
-import java.util.*
 import java.time.LocalDate
 
 @JsonSubTypes(
@@ -19,8 +18,6 @@ import java.time.LocalDate
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 abstract class AbstraktBeregningsResultat protected constructor() : Serializable {
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
     var pensjonUnderUtbetaling: PensjonUnderUtbetaling? = null
     var uttaksgrad = 0

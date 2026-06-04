@@ -9,8 +9,6 @@ class Regelendring : Serializable {
     /**
      * Datoen en regel- eller satsendring har virkningsdato.
      */
-    @Deprecated("Use endringsdatoLd instead")
-    var endringsdato: Date? = null
     var endringsdatoLd: LocalDate? = null
 
     /**

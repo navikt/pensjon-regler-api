@@ -13,8 +13,6 @@ class KonverterAP1967TilAP2011Request : ServiceRequest() {
     var vilkarsvedtakListe: List<VilkarsVedtak> = Vector()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var beregning: Beregning? = null
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
     var epsMottarPensjon = false
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null

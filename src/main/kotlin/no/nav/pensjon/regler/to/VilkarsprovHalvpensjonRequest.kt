@@ -8,11 +8,7 @@ import java.time.LocalDate
 
 class VilkarsprovHalvpensjonRequest : ServiceRequest() {
     var kravhode: Kravhode? = null
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
     var fomLd: LocalDate? = null
-    @Deprecated("Use tomLd instead")
-    var tom: Date? = null
     var tomLd: LocalDate? = null
     var grunnlagsrolleEnum: GrunnlagsrolleEnum? = null
 

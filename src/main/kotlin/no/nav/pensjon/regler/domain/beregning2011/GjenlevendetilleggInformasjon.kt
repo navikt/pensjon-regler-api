@@ -20,15 +20,11 @@ class GjenlevendetilleggInformasjon : Serializable {
     /**
      * dødsdato.
      */
-    @Deprecated("Use dodstidspunktLd instead")
-    var dodstidspunkt: Date? = null
     var dodstidspunktLd: LocalDate? = null
 
     /**
      * Hvis ufør ved død er dette gjeldende uføretidspunkt.
      */
-    @Deprecated("Use uforetidspunktLd instead")
-    var uforetidspunkt: Date? = null
     var uforetidspunktLd: LocalDate? = null
 
     /**
@@ -69,8 +65,6 @@ class GjenlevendetilleggInformasjon : Serializable {
     /**
      * Skadetidspunkt ved yrkesskade.
      */
-    @Deprecated("Use skadetidspunktLd instead")
-    var skadetidspunkt: Date? = null
     var skadetidspunktLd: LocalDate? = null
 
     /**

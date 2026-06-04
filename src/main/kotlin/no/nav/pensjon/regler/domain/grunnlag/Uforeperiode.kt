@@ -16,8 +16,6 @@ class Uforeperiode : Serializable {
     /**
      * Dato for uføretidspunktet.
      */
-    @Deprecated("Use uftLd instead")
-    var uft: Date? = null
     var uftLd: LocalDate? = null
 
     /**
@@ -58,29 +56,21 @@ class Uforeperiode : Serializable {
     /**
      * Dato for virkningsåret for denne Uføreperioden.
      */
-    @Deprecated("Use virkLd instead")
-    var virk: Date? = null
     var virkLd: LocalDate? = null
 
     /**
      * Dato for når Uføreperioden avsluttes.
      */
-    @Deprecated("Use uftTomLd instead")
-    var uftTom: Date? = null
     var uftTomLd: LocalDate? = null
 
     /**
      * Dato for når Uføregraden starter.
      */
-    @Deprecated("Use ufgFomLd instead")
-    var ufgFom: Date? = null
     var ufgFomLd: LocalDate? = null
 
     /**
      * Dato for når Uføregraden avsluttes.
      */
-    @Deprecated("Use ufgTomLd instead")
-    var ufgTom: Date? = null
     var ufgTomLd: LocalDate? = null
 
     /**
@@ -201,8 +191,6 @@ class Uforeperiode : Serializable {
     /*
           * Det uføretidspunkt som er angitt for perioden, men ikke nødvendigvis anvendt.
           */
-    @Deprecated("Use angittUforetidspunktLd instead")
-    var angittUforetidspunkt: Date? = null
     var angittUforetidspunktLd: LocalDate? = null
 
     /**

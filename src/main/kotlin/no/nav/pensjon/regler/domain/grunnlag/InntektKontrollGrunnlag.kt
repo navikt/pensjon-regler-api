@@ -31,8 +31,6 @@ class InntektKontrollGrunnlag : Serializable {
     var beregnetUtbetalingsperiodeEPSListe: List<BeregnetUtbetalingsperiode> = mutableListOf()
 
     /** Angir hvilken måned som kontrolleres.  */
-    @Deprecated("Use kontrolldatoLd instead")
-    var kontrolldato: Date? = null
     var kontrolldatoLd: LocalDate? = null
 
 }

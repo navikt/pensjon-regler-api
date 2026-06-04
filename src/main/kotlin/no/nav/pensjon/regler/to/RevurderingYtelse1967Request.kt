@@ -8,8 +8,6 @@ import java.util.*
 import java.time.LocalDate
 
 class RevurderingYtelse1967Request : ServiceRequest() {
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
     var kravhode: Kravhode? = null
     var vilkarsvedtakListe: Vector<VilkarsVedtak> = Vector()

@@ -15,8 +15,6 @@ class InntektEtterUforhet : AbstraktBeregningsvilkar() {
     /**
      * Virkningstidspunktet for inntekt etter uførhet.
      */
-    @Deprecated("Use ieuDatoLd instead")
-    var ieuDato: Date? = null
     var ieuDatoLd: LocalDate? = null
 
 }

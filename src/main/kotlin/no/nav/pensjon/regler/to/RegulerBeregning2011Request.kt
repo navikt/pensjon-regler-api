@@ -9,18 +9,11 @@ import java.util.*
 import java.time.LocalDate
 
 class RegulerBeregning2011Request : ServiceRequest() {
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
     var beregningsResultat: AbstraktBeregningsResultat? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null
     var uttaksgradListe: ArrayList<Uttaksgrad> = ArrayList()
-    @Deprecated("Use fodselsdatoLd instead")
-    var fodselsdato: Date? = null
     var fodselsdatoLd: LocalDate? = null
-
-    @Deprecated("Felt ikke i bruk. AfpOffentligLivsvarig er forventet satt på beregningsResultat")
-    var afpOffentligLivsvarigGrunnlag: AfpOffentligLivsvarigGrunnlag? = null
 
     /**
      * Representerer grunnlaget for normert pensjonsalder

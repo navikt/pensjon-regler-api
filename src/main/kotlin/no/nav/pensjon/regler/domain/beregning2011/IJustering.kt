@@ -12,7 +12,5 @@ import java.time.LocalDate
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 interface IJustering {
     var justeringsfaktor: Double
-    @Deprecated("Use justeringTomDatoLd instead")
-    var justeringTomDato: Date?
     var justeringTomDatoLd: LocalDate?
 }

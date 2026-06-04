@@ -12,15 +12,11 @@ class PoengarManuell : Serializable {
     /**
      * Poengåret fra og med dato.
      */
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
     var fomLd: LocalDate? = null
 
     /**
      * Poengåret til og med dato.
      */
-    @Deprecated("Use tomLd instead")
-    var tom: Date? = null
     var tomLd: LocalDate? = null
 
     /**

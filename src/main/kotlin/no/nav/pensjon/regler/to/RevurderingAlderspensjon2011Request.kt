@@ -13,11 +13,7 @@ class RevurderingAlderspensjon2011Request : ServiceRequest() {
     var vilkarsvedtakListe: Vector<VilkarsVedtak> = Vector()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var epsMottarPensjon = false
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
-    @Deprecated("Use virkTomLd instead")
-    var virkTom: Date? = null
     var virkTomLd: LocalDate? = null
     var forrigeAldersBeregning: SisteAldersberegning2011? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null

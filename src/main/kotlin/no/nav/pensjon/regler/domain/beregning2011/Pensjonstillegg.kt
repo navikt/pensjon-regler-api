@@ -12,8 +12,6 @@ import no.nav.pensjon.regler.domain.enum.YtelseskomponentTypeEnum
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 open class Pensjonstillegg : Ytelseskomponent {
-    @Deprecated("Avvikles.", replaceWith = ReplaceWith("forholdstallVedNormertPensjonsalder"))
-    var forholdstall67 = 0.0
     var forholdstallVedNormertPensjonsalder = 0.0
     var minstepensjonsnivaSats = 0.0
     var minstepensjonsnivaSatsTypeEnum: MinstePensjonsnivaSatsEnum? = null
@@ -26,7 +24,6 @@ open class Pensjonstillegg : Ytelseskomponent {
     }
 
     constructor(pt: Pensjonstillegg) : super(pt) {
-        forholdstall67 = pt.forholdstall67
         forholdstallVedNormertPensjonsalder = pt.forholdstallVedNormertPensjonsalder
         minstepensjonsnivaSats = pt.minstepensjonsnivaSats
         if (pt.minstepensjonsnivaSatsTypeEnum != null) {

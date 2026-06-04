@@ -27,15 +27,11 @@ class InntektsavkortningUforetrygdRequest : ServiceRequest() {
     /**
      * Virkningstidspunkt for beregning av ny inntektsavkortning.
      */
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
 
     /**
      * Virkningstidspunkt for beregning av ny inntektsavkortning.
      */
-    @Deprecated("Use virkTomLd instead")
-    var virkTom: Date? = null
     var virkTomLd: LocalDate? = null
 
     /**

@@ -30,14 +30,10 @@ class IdentifiserRegelendringerRequest : ServiceRequest() {
     /**
      * Fra og med dato for regelendringer.
      */
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
     var fomLd: LocalDate? = null
 
     /**
      * Til og med dato for regelendringer. Ved uviss tom-dato kan dagens dato benyttes.
      */
-    @Deprecated("Use tomLd instead")
-    var tom: Date? = null
     var tomLd: LocalDate? = null
 }

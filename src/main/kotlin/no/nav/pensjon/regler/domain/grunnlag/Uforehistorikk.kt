@@ -24,8 +24,6 @@ class Uforehistorikk() : Serializable {
      * Dato for sist innmeldt i Folketrygden- for fremtidig trygdetid.
      * Lagt inn ifm PENPORT-2222
      */
-    @Deprecated("Use sistMedlITrygdenLd instead")
-    var sistMedlITrygden: Date? = null
     var sistMedlITrygdenLd: LocalDate? = null
 
 }

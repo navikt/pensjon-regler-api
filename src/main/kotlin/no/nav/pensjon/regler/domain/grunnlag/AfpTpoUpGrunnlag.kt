@@ -13,8 +13,6 @@ class AfpTpoUpGrunnlag : Serializable {
     /**
      * Dato som beløpet ovenfor var gyldig
      */
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
 
 }

@@ -23,15 +23,11 @@ open class PersonDetalj : Serializable {
     /**
      * Fra-og-med dato for rollens gyldighet.
      */
-    @Deprecated("Use rolleFomDatoLd instead")
-    var rolleFomDato: Date? = null
     var rolleFomDatoLd: LocalDate? = null
 
     /**
      * Til-og-med dato for rollens gyldighet.
      */
-    @Deprecated("Use rolleTomDatoLd instead")
-    var rolleTomDato: Date? = null
     var rolleTomDatoLd: LocalDate? = null
 
     /**

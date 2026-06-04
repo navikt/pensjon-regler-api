@@ -10,15 +10,11 @@ open class TTPeriode : Serializable {
     /**
      * Fra-og-med dato for perioden.
      */
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
     var fomLd: LocalDate? = null
 
     /**
      * Til-og-med dato for perioden.
      */
-    @Deprecated("Use tomLd instead")
-    var tom: Date? = null
     var tomLd: LocalDate? = null
 
     /**

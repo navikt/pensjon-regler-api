@@ -46,12 +46,6 @@ class BeregnForsorgingstilleggRequest : ServiceRequest() {
     var beregningsResultatAfpPrivatTilstotende: BeregningsResultatAfpPrivat? = null
 
     /**
-     * AfpOffentligLivsvarigGrunnlag for tilstøtende
-     */
-    @Deprecated("Felt ikke i bruk. AfpOffentligLivsvarig er forventet satt på beregningsResultatAlderspensjonTilstotende")
-    var afpOffentligLivsvarigGrunnlagTilstotende: AfpOffentligLivsvarigGrunnlag? = null
-
-    /**
      * Beregningen ved virkningstidspunkt. Vil inneholde en AldersberegningKapittel19,
      * som igjen inneholder MinstePensjonsnivå, Basispensjon, Restpensjon, PensjonUnderUtbetaling
      * og BeregningsInformasjon.
@@ -100,7 +94,5 @@ class BeregnForsorgingstilleggRequest : ServiceRequest() {
     /**
      * Virkningstidspunkt for beregning av forsørgingstillegg.
      */
-    @Deprecated("Use virkLd instead")
-    var virk: Date? = null
     var virkLd: LocalDate? = null
 }

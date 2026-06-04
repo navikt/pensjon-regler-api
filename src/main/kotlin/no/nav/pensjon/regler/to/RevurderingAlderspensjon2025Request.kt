@@ -14,8 +14,6 @@ class RevurderingAlderspensjon2025Request : ServiceRequest() {
     var vilkarsvedtakListe: ArrayList<VilkarsVedtak> = ArrayList()
     var infoPavirkendeYtelse: InfoPavirkendeYtelse? = null
     var epsMottarPensjon = false
-    @Deprecated("Use virkFomLd instead")
-    var virkFom: Date? = null
     var virkFomLd: LocalDate? = null
     var sisteAldersBeregning2011: SisteAldersberegning2011? = null
     var afpPrivatLivsvarig: AfpPrivatLivsvarig? = null

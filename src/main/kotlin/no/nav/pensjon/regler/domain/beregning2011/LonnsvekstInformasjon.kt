@@ -13,8 +13,6 @@ class LonnsvekstInformasjon : Serializable {
     /**
      * @param reguleringsDato the reguleringsDato to set
      */
-    @Deprecated("Use reguleringsDatoLd instead")
-    var reguleringsDato: Date? = null
     var reguleringsDatoLd: LocalDate? = null
 
     /**

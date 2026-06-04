@@ -16,15 +16,11 @@ class Sivilstand : Serializable {
     /**
      * Sivilstandens gyldighet fra-og-med dato.
      */
-    @Deprecated("Use fomLd instead")
-    var fom: Date? = null
     var fomLd: LocalDate? = null
 
     /**
      * Sivilstandens gyldighet til-og-med dato
      */
-    @Deprecated("Use tomLd instead")
-    var tom: Date? = null
     var tomLd: LocalDate? = null
 
     /**

@@ -14,15 +14,11 @@ class Uforegrunnlag : Serializable {
     /**
      * Dato for uføretidspunktet.
      */
-    @Deprecated("Use uftLd instead")
-    var uft: Date? = null
     var uftLd: LocalDate? = null
 
     /**
      * Virkningstidspunkt for hendelsen Uforegrunnlaget representerer.
      */
-    @Deprecated("Use uftVirkLd instead")
-    var uftVirk: Date? = null
     var uftVirkLd: LocalDate? = null
 
     /**
@@ -45,8 +41,6 @@ class Uforegrunnlag : Serializable {
     /**
      * Dato for rett til friinntekt.
      */
-    @Deprecated("Use friinntektsDatoLd instead")
-    var friinntektsDato: Date? = null
     var friinntektsDatoLd: LocalDate? = null
 
     /**
@@ -101,8 +95,6 @@ class Uforegrunnlag : Serializable {
     /*
        * Alternativt uføretidspunkt ung ufør ved krav før 36 år.
        */
-    @Deprecated("Use altUftUngUforLd instead")
-    var altUftUngUfor: Date? = null
     var altUftUngUforLd: LocalDate? = null
 
     /**

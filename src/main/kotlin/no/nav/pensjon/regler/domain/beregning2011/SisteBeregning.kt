@@ -19,8 +19,6 @@ import java.time.LocalDate
 )
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 abstract class SisteBeregning protected constructor() : Serializable {
-    @Deprecated("Use virkDatoLd instead")
-    var virkDato: Date? = null
     var virkDatoLd: LocalDate? = null
     var tt_anv = 0
     var resultatTypeEnum: ResultattypeEnum? = null
