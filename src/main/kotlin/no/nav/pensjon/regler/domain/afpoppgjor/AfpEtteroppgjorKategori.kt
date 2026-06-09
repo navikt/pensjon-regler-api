@@ -46,5 +46,11 @@ class AfpEtteroppgjorKategori(
     /**
      * Status fra pensjon-regler per element
      */
-    var status: BatchStatus? = null
+    var status: BatchStatus? = null,
+
+    /**
+     * Toleransebeløp
+     */
+    var toleransebeløp: Int = 0
+
 ) : Serializable
