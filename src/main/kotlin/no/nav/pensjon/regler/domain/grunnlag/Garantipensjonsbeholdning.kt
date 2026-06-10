@@ -20,6 +20,12 @@ class Garantipensjonsbeholdning() : Beholdning() {
     var sats = 0.0
 
     /**
+     * Har ektefelle inntekt over 2G ved virk.
+     * Bidrar til å avgjøre [satsTypeEnum]
+     */
+    var ektefelleInntektOver2G: Boolean = false
+
+    /**
      * Garantipensjonsnivå justert for trygdetid
      */
     var garPN_tt_anv = 0.0
