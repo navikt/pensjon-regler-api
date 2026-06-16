@@ -16,8 +16,15 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+      - name: Get version from pom.xml
+        id: pom_version
+        run: |
+          VERSION=$(grep -m1 '<version>' pom.xml | sed 's/[[:space:]]*<version>\(.*\)<\/version>/\1/')
+          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
       - uses: release-drafter/release-drafter@v7.3.0
         with:
           commitish: master
+          version: ${{ steps.pom_version.outputs.VERSION }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
