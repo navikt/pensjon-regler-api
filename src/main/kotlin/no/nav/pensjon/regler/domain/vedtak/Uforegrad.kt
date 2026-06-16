@@ -11,4 +11,9 @@ class Uforegrad : AbstraktBeregningsvilkar() {
      */
     var erGarantigrad = false
 
+    /**
+     * Angir om uføregrad har økt uten at restarbeidsevne er vurdert
+     */
+    var øktUføregradUtenVurderingAvRestarbeidsevne = false
+
 }
