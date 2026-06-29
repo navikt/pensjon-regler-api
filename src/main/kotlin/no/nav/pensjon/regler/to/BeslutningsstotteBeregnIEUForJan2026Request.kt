@@ -7,6 +7,7 @@ import no.nav.pensjon.regler.domain.vedtak.Uforegrad
 import no.nav.pensjon.regler.domain.vedtak.UngUfor
 import java.time.LocalDate
 
+@Deprecated("Ikke lenger i bruk")
 class BeslutningsstotteBeregnIEUForJan2026Request(
     val inntektFørUførhet: InntektForUforhet,
     val virk: LocalDate,
