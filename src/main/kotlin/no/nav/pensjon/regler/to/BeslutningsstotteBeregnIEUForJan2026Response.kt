@@ -23,6 +23,7 @@ import no.nav.pensjon.regler.domain.vedtak.InntektForUforhet
  * @property inntektEtterUførhet Inntekt etter uførhet – se klassedokumentasjonen for mulige tilstander.
  * @property inntektFørUførhet Inntekt før uførhet – enten uendret fra input eller fastsatt på nytt og oppjustert til virk.
  */
+@Deprecated("Ikke lenger i bruk")
 class BeslutningsstotteBeregnIEUForJan2026Response(
     val ieuBeregnet: Boolean,
     val ieuOppjustertTilVirk: Boolean,
