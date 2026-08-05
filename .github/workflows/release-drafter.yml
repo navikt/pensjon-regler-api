@@ -22,7 +22,7 @@ jobs:
         run: |
           VERSION=$(grep -m1 '<version>' pom.xml | sed 's/[[:space:]]*<version>\(.*\)<\/version>/\1/')
           echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
-      - uses: release-drafter/release-drafter@v7.3.0
+      - uses: release-drafter/release-drafter@v7.7.0
         with:
           commitish: master
           version: ${{ steps.pom_version.outputs.VERSION }}
