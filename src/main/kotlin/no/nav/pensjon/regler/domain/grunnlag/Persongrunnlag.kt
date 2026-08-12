@@ -74,24 +74,28 @@ class Persongrunnlag() : Serializable {
      * ved beregnings/vilkårsprøvingstjenester. Ved tjenesten
      * KontrollerInformasjonsgrunnlag vil det være flere elementer.
      */
+    @Deprecated("hentetPopp brukes ikke, fjernes fra API etter hvert")
     var hentetPopp: Boolean? = null
 
     /**
      * Angir om informasjonen om inntektsinformasjon er hentet fra
      * Inntektsregisteret og registrert som grunnlag på kravet.
      */
+    @Deprecated("hentetInnt brukes ikke, fjernes fra API etter hvert")
     var hentetInnt: Boolean? = null
 
     /**
      * Angir om informasjonen om institusjonsopphold er hentet fra
      * Institusjonsoppholdsregisteret og registrert som grunnlag på kravet.
      */
+    @Deprecated("hentetInst brukes ikke, fjernes fra API etter hvert")
     var hentetInst: Boolean? = null
 
     /**
      * Angir om trygdetidsinformasjon er hentet inn og registrert som grunnlag
      * på kravet.
      */
+    @Deprecated("hentetTT brukes ikke, fjernes fra API etter hvert")
     var hentetTT: Boolean? = null
 
     /**
