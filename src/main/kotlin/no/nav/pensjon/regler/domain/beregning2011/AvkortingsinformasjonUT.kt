@@ -18,6 +18,16 @@ class AvkortingsinformasjonUT : AbstraktAvkortingsinformasjon(), Serializable {
     var fribeløp = 0
 
     /**
+     * Fribeløpet kan ikke overstige dette beløpet
+     */
+    var maksFribeløp = 0
+
+    /**
+     * Kartlegger virkår med hvilke perioder som har bidro faktor og grunnbeløp til fribeløp.
+     */
+    val fribeløpPeriodeListe: MutableList<FribeløpPeriode> = mutableListOf()
+
+    /**
      * Sum av inntektskomponentene som ble lagt til grunn.
      */
     var forventetInntekt = 0
