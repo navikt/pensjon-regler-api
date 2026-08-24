@@ -25,7 +25,7 @@ class AvkortingsinformasjonUT : AbstraktAvkortingsinformasjon(), Serializable {
     /**
      * Kartlegger virkår med hvilke perioder som har bidro faktor og grunnbeløp til fribeløp.
      */
-    val fribeløpPeriodeListe: MutableList<FribeløpPeriode> = mutableListOf()
+    var fribeløpPeriodeListe: MutableList<FribeløpPeriode> = mutableListOf()
 
     /**
      * Sum av inntektskomponentene som ble lagt til grunn.
