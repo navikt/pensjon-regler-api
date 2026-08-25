@@ -32,4 +32,9 @@ class Pakkseddel : Serializable {
      */
     var satstabell: String? = null
 
+    /**
+     * Viser hvilke toggles som var aktuelle ved kjøretid.
+     */
+    var unleashToggleStatusMap: Map<String, Boolean> = mapOf()
+
 }
