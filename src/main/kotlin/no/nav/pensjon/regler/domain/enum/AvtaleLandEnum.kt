@@ -4,6 +4,7 @@ enum class AvtaleLandEnum {
     AUS,
     BEL,
     BGR,
+    BRA,
     CAN,
     CHL,
     DNK,
