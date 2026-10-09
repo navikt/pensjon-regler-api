@@ -12,5 +12,6 @@ enum class BeregningsmetodeEnum  {
     QUEBEC,
     SVEITS,
     INDIA,
-    SOR_KOREA;
+    SOR_KOREA,
+    BRASIL;
 }

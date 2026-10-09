@@ -6,6 +6,7 @@ enum class EksportlandEnum {
     BEL,
     BGR,
     BIH,
+    BRA,
     CAN,
     CHE,
     CHL,

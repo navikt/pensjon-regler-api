@@ -4,6 +4,7 @@ enum class AvtaletypeEnum {
     EOS_NOR,
     NOR_KONV,
     AUS,
+    BRA,
     CAN,
     CHL,
     FRA,
