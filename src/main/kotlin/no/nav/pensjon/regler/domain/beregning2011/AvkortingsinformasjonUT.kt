@@ -29,9 +29,14 @@ class AvkortingsinformasjonUT : AbstraktAvkortingsinformasjon(), Serializable {
     var fribeløpPeriodeListe: MutableList<FribeløpPeriode> = mutableListOf()
 
     /**
-     * Kartlegger virkår med hvilke perioder som har bidro faktor og grunnbeløp til fribeløp.
+     * Kartlegger virkår med perioder som beskriver fribeløp-faktor, grunnbeløp og oieu.
      */
     var bunnfradragPeriodeListe: MutableList<BunnfradragPeriode> = mutableListOf()
+
+    /**
+     * Kartlegger neste virkår med perioder som beskriver fribeløp-faktor, grunnbeløp og oieu.
+     */
+    var bunnfradragPeriodeNesteÅrListe: MutableList<BunnfradragPeriode> = mutableListOf()
 
     /**
      * Sum av inntektskomponentene som ble lagt til grunn.
