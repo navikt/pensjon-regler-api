@@ -25,7 +25,13 @@ class AvkortingsinformasjonUT : AbstraktAvkortingsinformasjon(), Serializable {
     /**
      * Kartlegger virkår med hvilke perioder som har bidro faktor og grunnbeløp til fribeløp.
      */
+    @Deprecated("PER-1 Erstattes av bunnfradragPeriodeListe", ReplaceWith("bunnfradragPeriodeListe"))
     var fribeløpPeriodeListe: MutableList<FribeløpPeriode> = mutableListOf()
+
+    /**
+     * Kartlegger virkår med hvilke perioder som har bidro faktor og grunnbeløp til fribeløp.
+     */
+    var bunnfradragPeriodeListe: MutableList<BunnfradragPeriode> = mutableListOf()
 
     /**
      * Sum av inntektskomponentene som ble lagt til grunn.
